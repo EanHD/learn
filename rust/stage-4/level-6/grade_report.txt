@@ -1,0 +1,48 @@
+STUDENT GRADE ANALYSIS REPORT
+Generated: SystemTime { tv_sec: 1761713735, tv_nsec: 687510545 }
+================================
+
+CLASS SUMMARY
+-------------
+Total Students: 5
+Class Average GPA: 2.40
+
+Grade Distribution:
+  A: 1 students (20.0%)
+  B: 1 students (20.0%)
+  C: 2 students (40.0%)
+  D: 1 students (20.0%)
+  F: 0 students (0.0%)
+
+INDIVIDUAL REPORTS
+------------------
+
+Student: Alice Johnson (ID: 1001)
+Grades: Math:95, History:96, Science:92, English:98
+Average: 95.25% (A)
+GPA: 4.00
+Status: Excellent performance!
+
+Student: Bob Smith (ID: 1002)
+Grades: Science:89, History:88, English:85, Math:87
+Average: 87.25% (B)
+GPA: 3.00
+Status: Good performance!
+
+Student: Carol Davis (ID: 1003)
+Grades: History:80, English:75, Math:78, Science:82
+Average: 78.75% (C)
+GPA: 2.00
+Status: Satisfactory performance.
+
+Student: David Wilson (ID: 1004)
+Grades: Science:68, English:70, History:75, Math:72
+Average: 71.25% (C)
+GPA: 2.00
+Status: Satisfactory performance.
+
+Student: Eve Garcia (ID: 1005)
+Grades: English:68, Science:70, History:72, Math:65
+Average: 68.75% (D)
+GPA: 1.00
+Status: Needs improvement.

@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# User workspaces (local only)
+.local/
+
+# Progress tracking (local only)
+.learn-progress
+.learn-progress.json
+
+# Backup files
+*.bak
+*.tmp
+*.temp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files
+test_*.sh
+*_test.py
+
+# Logs
+*.log

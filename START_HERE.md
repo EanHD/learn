@@ -1,0 +1,171 @@
+# Get Started Learning to Code
+
+Learn programming through **hands-on lessons** in **14 programming languages**.
+
+**490 lessons** across **5 stages**. Start coding in **under 5 minutes**.
+
+## 🚀 Quick Start
+
+### Option 1: Interactive Mode (Recommended)
+
+```bash
+learn
+```
+
+Launches an **interactive menu** to browse lessons, check progress, and start learning.
+
+### Option 2: Jump to a Specific Lesson
+
+```bash
+learn c++ 1              # C++ Stage 1, Level 1
+learn python 2           # Python Stage 1, Level 2
+learn typescript 1       # TypeScript Stage 1, Level 1
+learn kotlin 1           # Kotlin Stage 1, Level 1
+```
+
+### Option 3: First Time? Run the Setup Wizard
+
+```bash
+learn --init
+```
+
+This checks your system, installs dependencies, and creates your workspace.
+
+## 📋 Common Commands
+
+| Command | What It Does |
+|---------|-------------|
+| `learn` | Interactive menu |
+| `learn c++ 1` | Open C++ Stage 1, Level 1 |
+| `learn --list` | See all 490 lessons |
+| `learn --progress` | View your progress |
+| `learn --next` | Continue where you left off |
+| `learn --doctor` | Check system dependencies |
+| `learn --help` | Full command reference |
+
+## 🎯 What You'll Learn
+
+| Stage | What It Is |
+|-------|-----------|
+| 1 | Copy working code, learn syntax |
+| 2 | Turn pseudocode into real code |
+| 3 | Design solutions to small problems |
+| 4 | Build full projects from scratch |
+| 5 | Create your own capstone |
+
+**Languages available:** C++, Rust, Python, JavaScript, TypeScript, Go, Lua, Dart, Swift, Kotlin, SQL, C#, Shell, PowerShell
+
+**7 lessons per stage** × **5 stages** × **14 languages** = **490 total lessons**
+
+## 🎮 Choose Your Editor
+
+By default, lessons open in **Neovim** with split-screen view (lesson on left, code on right).
+
+**Or pick your favorite:**
+
+```bash
+learn c++ 1 --vim        # Neovim split-screen (default)
+learn c++ 1 --vscode     # VS Code
+learn c++ 1 --terminal   # Read-only terminal view
+```
+
+**Vim Instructions:**
+When you launch Vim, you'll see language-specific compile/run commands:
+
+```text
+Compile/Run (in code window):
+    :!make run         -> C++ (compile + run)
+```
+
+For other languages:
+
+- **Rust:** `:!cargo run`
+- **Python:** `:!python3 %`
+- **JavaScript:** `:!node %`
+- **Go:** `:!go run %`
+- **Lua:** `:!lua %`
+
+## ⚠️ System Check
+
+If something doesn't work, run:
+
+```bash
+learn --doctor
+```
+
+This checks for missing tools (Neovim, compilers, LSP servers) and shows you how to fix them.
+
+## 💡 Pro Tips
+
+- **First time?** Start with: `learn --init`
+- **Stuck?** Read the lesson again. Solutions are at the bottom.
+- **Fast learner?** Jump ahead: `learn c++ 5` or `learn c++ 1 --stage 3`
+- **Check progress:** `learn --progress`
+- **Next lesson:** `learn --next`
+- **Mark as complete:** `learn --complete c++ 1 1`
+
+## 📖 Documentation
+
+- **Full tutorial:** Read `README.md`
+- **Command help:** Run `learn --help`
+- **Vim/Neovim tips:** See `.docs/VIM_CHEATSHEET.md`
+- **Troubleshooting:** See `.docs/SETUP_DEV.md`
+- **Contributing:** See `CONTRIBUTING.md`
+
+## Your Learning Journey
+
+Learn → Practice → Build → Master
+
+### Week 1: Foundations (Stage 1)
+
+```bash
+learn c++ 1    # Variables, syntax, basics
+```
+
+### Week 2: Logic (Stage 2)
+
+```bash
+learn c++ 1 --stage 2    # Conditionals, loops, functions
+```
+
+### Week 3-4: Problem Solving (Stages 3-4)
+
+```bash
+learn c++ 1 --stage 3    # Design and build
+```
+
+### Week 5-6: Mastery (Stage 5)
+
+```bash
+learn c++ 1 --stage 5    # Your own project
+```
+
+## 🎓 By the End, You'll Have
+
+- Written 35+ programs
+- Learned fundamentals of your chosen language(s)
+- Built real projects from scratch
+- Developed problem-solving skills
+- A foundation to continue learning independently
+
+## Ready to Start?
+
+```bash
+learn --init
+```
+
+Then:
+
+```bash
+learn c++ 1
+```
+
+You've got this. Start now.
+
+---
+
+**Questions?** Run `learn --help` or see `README.md`
+
+**Found a bug?** File an issue on GitHub with details
+
+**Want to contribute?** See `CONTRIBUTING.md`

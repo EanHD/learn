@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python linters
+        run: |
+          pip install ruff black
+
+      - name: Install system tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+
+      - name: Lint Python
+        run: |
+          ruff check CLI/ || true
+          black --check CLI/ || true
+
+      - name: Lint shell scripts
+        run: |
+          shellcheck CLI/*.sh setup-dev.sh || true
+
+      - name: Test CLI help
+        run: |
+          python3 -m py_compile CLI/learn_cli.py
+          ./CLI/learn --help
+
+      - name: Dry-run doctor
+        run: |
+          ./CLI/learn --doctor || true
+
+  markdown-lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Lint markdown
+        uses: articulate/actions-markdownlint@v1
+        with:
+          config: .markdownlint.json
+          ignore: node_modules
+          files: '**/*.md'

@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+"""
+learn - Enhanced CLI Tool for Learning Programming
+
+Usage:
+  learn                          # Interactive mode (recommended)
+  learn c++ 1                    # Open C++ Stage 1, Level 1
+  learn rust 2 --stage 2         # Open Rust Stage 2, Level 2
+  learn --list                   # List all available lessons
+  learn --progress               # Show your progress
+  learn --next                   # Continue where you left off
+  learn --help                   # Show help
+"""
+
+import os
+import sys
+from pathlib import Path
+
+# Import the new CLI
+sys.path.insert(0, str(Path(__file__).parent))
+from learn_cli import main
+
+if __name__ == "__main__":
+    main()

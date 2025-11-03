@@ -1,0 +1,9 @@
+# Student Grade Data File
+# Format: ID,Name,Subject1:Score,Subject2:Score,...
+# This file contains sample student data for automated processing
+
+1001,Alice Johnson,Math:95,Science:92,English:98,History:96
+1002,Bob Smith,Math:87,Science:89,English:85,History:88
+1003,Carol Davis,Math:78,Science:82,English:75,History:80
+1004,David Wilson,Math:72,Science:68,English:70,History:75
+1005,Eve Garcia,Math:65,Science:70,English:68,History:72

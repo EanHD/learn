@@ -1,0 +1,424 @@
+# Level 3: Mathematical Pseudocode
+## Stage 2: Pseudocode to Code
+
+### Today's Mission
+
+Welcome to Level 3! Today we're focusing on mathematical operations in pseudocode. You'll learn to translate complex mathematical formulas and calculations from pseudocode into working Lua code, and understand operator precedence in algorithmic calculations.
+
+---
+
+### Learning Goals
+
+- Understand how to represent mathematical operations in pseudocode
+- Learn to translate complex mathematical formulas from pseudocode
+- Practice operator precedence in algorithmic calculations
+- Create programs that perform complex mathematical computations
+- Develop awareness of precision and rounding in calculations
+
+---
+
+### Mathematical Operations in Pseudocode
+
+Mathematical expressions in pseudocode follow standard notation:
+
+**Basic operations:**
+```
+SET result TO 5 + 3
+SET result TO 10 - 4
+SET result TO 6 * 7
+SET result TO 15 / 3
+SET remainder TO 17 MOD 5
+```
+
+**Complex expressions:**
+```
+SET area TO length * width
+SET volume TO length * width * height
+SET average TO (num1 + num2 + num3) / 3
+SET tax TO price * 0.08
+SET discount TO original_price * discount_rate
+```
+
+**Order of operations:**
+```
+SET result TO 2 + 3 * 4     // result = 14 (not 20), multiplication first
+SET result TO (2 + 3) * 4   // result = 20, parentheses override
+SET result TO 10 / 2 + 3    // result = 8, division first
+```
+
+**Mathematical functions:**
+```
+SET result TO POWER(2, 3)    // 2 to the power of 3
+SET result TO SQRT(16)       // square root of 16
+SET result TO ROUND(3.7)     // round to nearest integer
+```
+
+---
+
+### Your Task
+
+**For each pseudocode algorithm below, translate it into working Lua code. Pay special attention to operator precedence and mathematical formula accuracy.**
+
+---
+
+## Algorithm 1: Complex Arithmetic Expression
+
+**Pseudocode:**
+```
+Algorithm: Evaluate Complex Expression
+1. SET a TO 10
+2. SET b TO 5
+3. SET c TO 2
+4. SET result TO (a + b) * c - a / c
+5. DISPLAY "Result: " + result
+6. SET result2 TO a + b * c - a / c
+7. DISPLAY "Result without parentheses: " + result2
+8. SET result3 TO ((a + b) * c - a) / c
+9. DISPLAY "Result with different grouping: " + result3
+```
+
+**Your Task:** Create a Lua program that evaluates complex arithmetic expressions.
+
+---
+
+## Algorithm 2: Quadratic Formula Calculator
+
+**Pseudocode:**
+```
+Algorithm: Solve Quadratic Equation
+1. SET a TO 1
+2. SET b TO -5
+3. SET c TO 6
+4. SET discriminant TO b * b - 4 * a * c
+5. SET sqrt_discriminant TO SQRT(discriminant)
+6. SET root1 TO (-b + sqrt_discriminant) / (2 * a)
+7. SET root2 TO (-b - sqrt_discriminant) / (2 * a)
+8. DISPLAY "Root 1: " + root1
+9. DISPLAY "Root 2: " + root2
+```
+
+**Your Task:** Create a Lua program that solves quadratic equations using the quadratic formula.
+
+---
+
+## Algorithm 3: Compound Interest Calculator
+
+**Pseudocode:**
+```
+Algorithm: Calculate Compound Interest
+1. SET principal TO 1000
+2. SET rate TO 0.05
+3. SET time TO 10
+4. SET compounds_per_year TO 12
+5. SET amount TO principal * POWER(1 + rate / compounds_per_year, compounds_per_year * time)
+6. SET interest TO amount - principal
+7. DISPLAY "Principal: $" + principal
+8. DISPLAY "Final Amount: $" + amount
+9. DISPLAY "Interest Earned: $" + interest
+```
+
+**Your Task:** Create a Lua program that calculates compound interest.
+
+---
+
+## Algorithm 4: Geometric Calculations
+
+**Pseudocode:**
+```
+Algorithm: Calculate Geometric Properties
+1. SET radius TO 5
+2. SET side TO 4
+3. SET base TO 6
+4. SET height TO 8
+5. SET circle_area TO PI * radius * radius
+6. SET circle_circumference TO 2 * PI * radius
+7. SET square_area TO side * side
+8. SET square_perimeter TO 4 * side
+9. SET triangle_area TO 0.5 * base * height
+10. DISPLAY "Circle - Area: " + circle_area + ", Circumference: " + circle_circumference
+11. DISPLAY "Square - Area: " + square_area + ", Perimeter: " + square_perimeter
+12. DISPLAY "Triangle - Area: " + triangle_area
+```
+
+**Your Task:** Create a Lua program that calculates geometric properties.
+
+---
+
+## Algorithm 5: Physics Formula Calculator
+
+**Pseudocode:**
+```
+Algorithm: Physics Calculations
+1. SET mass TO 5.5
+2. SET velocity TO 10
+3. SET acceleration TO 9.8
+4. SET time TO 3
+5. SET kinetic_energy TO 0.5 * mass * velocity * velocity
+6. SET force TO mass * acceleration
+7. SET distance TO velocity * time + 0.5 * acceleration * time * time
+8. SET momentum TO mass * velocity
+9. DISPLAY "Kinetic Energy: " + kinetic_energy
+10. DISPLAY "Force: " + force
+11. DISPLAY "Distance: " + distance
+12. DISPLAY "Momentum: " + momentum
+```
+
+**Your Task:** Create a Lua program that calculates physics formulas.
+
+---
+
+## Algorithm 6: Temperature Conversion with Multiple Formulas
+
+**Pseudocode:**
+```
+Algorithm: Multiple Temperature Conversions
+1. SET celsius TO 25
+2. SET fahrenheit TO celsius * 9 / 5 + 32
+3. SET kelvin TO celsius + 273.15
+4. SET celsius_from_f TO (fahrenheit - 32) * 5 / 9
+5. SET celsius_from_k TO kelvin - 273.15
+6. DISPLAY "Celsius: " + celsius
+7. DISPLAY "Fahrenheit: " + fahrenheit
+8. DISPLAY "Kelvin: " + kelvin
+9. DISPLAY "F to C: " + celsius_from_f
+10. DISPLAY "K to C: " + celsius_from_k
+```
+
+**Your Task:** Create a Lua program that performs multiple temperature conversions.
+
+---
+
+## Algorithm 7: Statistical Calculations
+
+**Pseudocode:**
+```
+Algorithm: Calculate Statistics for Three Numbers
+1. SET num1 TO 10
+2. SET num2 TO 20
+3. SET num3 TO 30
+4. SET sum TO num1 + num2 + num3
+5. SET average TO sum / 3
+6. SET range TO num3 - num1  // assuming num3 is largest, num1 is smallest
+7. SET sum_of_squares TO num1 * num1 + num2 * num2 + num3 * num3
+8. SET mean_of_squares TO sum_of_squares / 3
+9. SET variance TO mean_of_squares - average * average
+10. SET std_deviation TO SQRT(variance)
+11. DISPLAY "Sum: " + sum
+12. DISPLAY "Average: " + average
+13. DISPLAY "Range: " + range
+14. DISPLAY "Variance: " + variance
+15. DISPLAY "Standard Deviation: " + std_deviation
+```
+
+**Your Task:** Create a Lua program that calculates statistical measures.
+
+---
+
+### Key Concepts for Mathematical Operations
+
+**Operator Precedence in Lua:**
+- Parentheses `()`
+- Exponentiation `^`
+- Multiplication `*`, Division `/`, Modulus `%` (left to right)
+- Addition `+`, Subtraction `-` (left to right)
+
+**Mathematical Functions:**
+- `math.sqrt(x)` - Square root
+- `math.pow(base, exponent)` or `base^exponent` - Power
+- `math.floor(x)` - Round down
+- `math.ceil(x)` - Round up
+- `math.pi` - Pi constant
+
+---
+
+### Success Checklist
+
+**For Each Algorithm:**
+- [ ] Mathematical formulas correctly translated from pseudocode
+- [ ] Operator precedence properly observed
+- [ ] Program runs without errors
+- [ ] Output matches expected mathematical results
+- [ ] Calculations are accurate
+
+**Overall Progress:**
+- [ ] Completed all 7 algorithms
+- [ ] All programs work correctly
+- [ ] Mathematical computations are accurate
+
+---
+
+### Try This (Optional Challenges)
+
+1. **Enhance Algorithm 2**: Add complex number handling for cases where the discriminant is negative
+2. **Enhance Algorithm 3**: Add monthly contribution calculations to compound interest
+3. **Enhance Algorithm 7**: Calculate standard deviation for any number of inputs using tables
+4. **Create Your Own**: Write pseudocode for calculating the volume of a cylinder and cone
+
+---
+
+<div style="page-break-after: always;"></div>
+
+---
+
+## ANSWER KEY (No peeking until you've tried!)
+
+### Algorithm 1: Complex Arithmetic Expression
+
+```lua
+-- Algorithm: Evaluate Complex Expression
+local a = 10
+local b = 5
+local c = 2
+
+local result = (a + b) * c - a / c
+print("Result: " .. result)
+
+local result2 = a + b * c - a / c
+print("Result without parentheses: " .. result2)
+
+local result3 = ((a + b) * c - a) / c
+print("Result with different grouping: " .. result3)
+```
+
+### Algorithm 2: Quadratic Formula Calculator
+
+```lua
+-- Algorithm: Solve Quadratic Equation
+local a = 1
+local b = -5
+local c = 6
+
+local discriminant = b * b - 4 * a * c
+local sqrt_discriminant = math.sqrt(discriminant)
+local root1 = (-b + sqrt_discriminant) / (2 * a)
+local root2 = (-b - sqrt_discriminant) / (2 * a)
+
+print("Root 1: " .. root1)
+print("Root 2: " .. root2)
+```
+
+### Algorithm 3: Compound Interest Calculator
+
+```lua
+-- Algorithm: Calculate Compound Interest
+local principal = 1000
+local rate = 0.05
+local time = 10
+local compounds_per_year = 12
+
+local amount = principal * math.pow(1 + rate / compounds_per_year, compounds_per_year * time)
+local interest = amount - principal
+
+print("Principal: $" .. principal)
+print("Final Amount: $" .. string.format("%.2f", amount))
+print("Interest Earned: $" .. string.format("%.2f", interest))
+```
+
+### Algorithm 4: Geometric Calculations
+
+```lua
+-- Algorithm: Calculate Geometric Properties
+local radius = 5
+local side = 4
+local base = 6
+local height = 8
+
+local circle_area = math.pi * radius * radius
+local circle_circumference = 2 * math.pi * radius
+local square_area = side * side
+local square_perimeter = 4 * side
+local triangle_area = 0.5 * base * height
+
+print("Circle - Area: " .. string.format("%.2f", circle_area) .. ", Circumference: " .. string.format("%.2f", circle_circumference))
+print("Square - Area: " .. square_area .. ", Perimeter: " .. square_perimeter)
+print("Triangle - Area: " .. triangle_area)
+```
+
+### Algorithm 5: Physics Formula Calculator
+
+```lua
+-- Algorithm: Physics Calculations
+local mass = 5.5
+local velocity = 10
+local acceleration = 9.8
+local time = 3
+
+local kinetic_energy = 0.5 * mass * velocity * velocity
+local force = mass * acceleration
+local distance = velocity * time + 0.5 * acceleration * time * time
+local momentum = mass * velocity
+
+print("Kinetic Energy: " .. kinetic_energy)
+print("Force: " .. force)
+print("Distance: " .. distance)
+print("Momentum: " .. momentum)
+```
+
+### Algorithm 6: Temperature Conversion with Multiple Formulas
+
+```lua
+-- Algorithm: Multiple Temperature Conversions
+local celsius = 25
+local fahrenheit = celsius * 9 / 5 + 32
+local kelvin = celsius + 273.15
+local celsius_from_f = (fahrenheit - 32) * 5 / 9
+local celsius_from_k = kelvin - 273.15
+
+print("Celsius: " .. celsius)
+print("Fahrenheit: " .. fahrenheit)
+print("Kelvin: " .. kelvin)
+print("F to C: " .. celsius_from_f)
+print("K to C: " .. celsius_from_k)
+```
+
+### Algorithm 7: Statistical Calculations
+
+```lua
+-- Algorithm: Calculate Statistics for Three Numbers
+local num1 = 10
+local num2 = 20
+local num3 = 30
+
+local sum = num1 + num2 + num3
+local average = sum / 3
+local range = num3 - num1 -- assuming num3 is largest, num1 is smallest
+local sum_of_squares = num1 * num1 + num2 * num2 + num3 * num3
+local mean_of_squares = sum_of_squares / 3
+local variance = mean_of_squares - average * average
+local std_deviation = math.sqrt(variance)
+
+print("Sum: " .. sum)
+print("Average: " .. average)
+print("Range: " .. range)
+print("Variance: " .. variance)
+print("Standard Deviation: " .. string.format("%.2f", std_deviation))
+```
+
+### Mathematical Operation Translation Patterns
+
+| Pseudocode | Lua |
+|------------|-----|
+| `SET result TO a + b` | `result = a + b` |
+| `SET result TO a - b` | `result = a - b` |
+| `SET result TO a * b` | `result = a * b` |
+| `SET result TO a / b` | `result = a / b` |
+| `SET result TO POWER(a, b)` | `result = math.pow(a, b)` or `result = a^b` |
+| `SET result TO SQRT(a)` | `result = math.sqrt(a)` |
+| `SET result TO ROUND(a)` | `result = math.floor(a + 0.5)` or use `string.format("%.0f", a)` |
+| `USE PI` | `math.pi` |
+
+### Important Notes
+
+**Operator Precedence**: Lua follows the standard mathematical order of operations with exponentiation having higher precedence than multiplication/division.
+
+**No Built-in Round Function**: Lua doesn't have a built-in round function, but you can use `math.floor(x + 0.5)` to round to the nearest integer.
+
+**String Formatting**: Use `string.format()` to format numbers with specific decimal places.
+
+**Math Library**: Lua's math library provides many useful mathematical functions for complex calculations.
+
+---
+
+ **Excellent work! You've mastered translating mathematical operations from pseudocode to Lua!** 
+
+*Next up: Input/Output operations in pseudocode!*

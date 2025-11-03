@@ -1,0 +1,177 @@
+# Level 2: Variables in Pseudocode
+## Stage 2: Pseudocode to Code
+
+### Today's Mission
+
+Variables are essential for storing and manipulating data. In this lesson, you'll translate pseudocode that uses variables into working Rust code.
+
+---
+
+### Learning Goals
+
+- Understand how variables work in pseudocode
+- Practice declaring and using variables in Rust
+- Learn to track variable values through a program
+- Master variable assignment and display
+
+---
+
+### Your Task
+
+**Read the pseudocode below, then write the equivalent Rust code in a file called `variables_translation.rs`**
+
+### Pseudocode:
+```
+START PROGRAM
+    DECLARE name AS TEXT
+    SET name TO "Alice"
+    
+    DECLARE age AS NUMBER
+    SET age TO 25
+    
+    DECLARE is_student AS BOOLEAN
+    SET is_student TO TRUE
+    
+    DISPLAY "Name: " + name
+    DISPLAY "Age: " + age
+    DISPLAY "Is student: " + is_student
+END PROGRAM
+```
+
+**Your task:** Create a Rust program that implements this pseudocode exactly.
+
+---
+
+### How to Create Your Solution
+
+1. **Navigate to your working directory**:
+   ```bash
+   cd /path/to/your/folder
+   ```
+2. **Create your code file**:
+   ```bash
+   touch variables_translation.rs
+   ```
+3. **Write the Rust code** that matches the pseudocode
+4. **Compile and test**:
+   ```bash
+   rustc variables_translation.rs -o variables_translation
+   ./variables_translation
+   ```
+
+**Expected output:**
+```
+Name: Alice
+Age: 25
+Is student: true
+```
+
+---
+
+### Success Checklist
+
+- [ ] Created `variables_translation.rs` file
+- [ ] Declared variables for name, age, and is_student
+- [ ] Assigned appropriate values to each variable
+- [ ] Displayed all variables with labels
+- [ ] Program compiles and runs correctly
+
+---
+
+### What Did You Learn?
+
+Variables in pseudocode map directly to Rust variables, but the syntax is different.
+
+**Key Translation Points:**
+- `DECLARE x AS TEXT` → `let x = "value";`
+- `DECLARE x AS NUMBER` → `let x = 42;`
+- `DECLARE x AS BOOLEAN` → `let x = true;`
+- `SET x TO value` → `let x = value;` (or `x = value;` if mutable)
+- `DISPLAY "text" + variable` → `println!("text {}", variable);`
+
+---
+
+### Try This (Optional Challenges)
+
+1. Add another variable for favorite programming language
+2. Change the values and see how output changes
+3. Try displaying variables in different orders
+
+---
+
+## Need Help with Vim?
+
+Check the `VIM_CHEATSHEET.md` for editing commands!
+
+---
+
+<div style="page-break-after: always;"></div>
+
+---
+
+## ANSWER KEY (No cheating until you've tried!)
+
+### Step-by-Step Translation
+
+**Pseudocode:**
+```
+START PROGRAM
+    DECLARE name AS TEXT
+    SET name TO "Alice"
+    
+    DECLARE age AS NUMBER
+    SET age TO 25
+    
+    DECLARE is_student AS BOOLEAN
+    SET is_student TO TRUE
+    
+    DISPLAY "Name: " + name
+    DISPLAY "Age: " + age
+    DISPLAY "Is student: " + is_student
+END PROGRAM
+```
+
+**Rust Code:**
+```rust
+fn main() {
+    let name = "Alice";
+    let age = 25;
+    let is_student = true;
+    
+    println!("Name: {}", name);
+    println!("Age: {}", age);
+    println!("Is student: {}", is_student);
+}
+```
+
+### Translation Guide
+
+| Pseudocode | Rust Code | Explanation |
+|------------|-----------|-------------|
+| `DECLARE x AS TEXT` | `let x = "value";` | String variable |
+| `DECLARE x AS NUMBER` | `let x = 42;` | Integer variable |
+| `DECLARE x AS BOOLEAN` | `let x = true;` | Boolean variable |
+| `SET x TO value` | `let x = value;` | Assignment |
+| `DISPLAY a + b` | `println!("{} {}", a, b);` | String concatenation |
+
+### Common Mistakes & Solutions
+
+| Common Error | Why It Happens | Solution |
+|--------------|----------------|----------|
+| `let name: String = "Alice";` | Over-complicating types | Use `let name = "Alice";` (type inference) |
+| `println!("Name: " + name);` | Can't add &str + &str | Use `println!("Name: {}", name);` |
+| `let age = "25";` | Wrong type | Use `let age = 25;` for numbers |
+| `let is_student = "true";` | Wrong type | Use `let is_student = true;` for booleans |
+
+### Bonus Knowledge
+
+- **Type Inference**: Rust figures out types automatically
+- **String Literals**: `&str` vs `String` (we use `&str` here)
+- **Display Trait**: `println!` uses `{}` for any displayable type
+- **Variable Naming**: Use descriptive names (snake_case in Rust)
+
+---
+
+ **Excellent! You can now work with variables in pseudocode!** 
+
+*Next: Mathematical Pseudocode!*

@@ -1,0 +1,168 @@
+# LEARN: Programming in 14 Languages
+
+**490 hands-on lessons.** Fourteen languages. Five stages. Real projects.
+
+Start coding in **5 minutes**.
+
+## Quick Start
+
+**Fastest way to your first lesson:**
+
+```bash
+learn
+```
+
+This launches an **interactive menu** where you can browse lessons, track progress, and start learning immediately.
+
+### Or jump straight to a lesson
+
+```bash
+learn c++ 1                # Open C++ Stage 1, Level 1
+learn rust 1               # Open Rust Stage 1, Level 1
+learn python 1             # Open Python Stage 1, Level 1
+```
+
+### Choose your editor
+
+```bash
+learn c++ 1 --vim          # Neovim (default, split-screen)
+learn c++ 1 --vscode       # VS Code
+learn c++ 1 --terminal     # Terminal (read-only)
+```
+
+**Need to install?** Run: `bash CLI/install.sh`
+
+## What You'll Learn
+
+| Stage | What It Is | Time |
+|-------|-----------|------|
+| 1 | Copy working code, learn syntax | Week 1 |
+| 2 | Turn pseudocode into real code | Week 2 |
+| 3 | Design solutions to small problems | Week 3 |
+| 4 | Build full projects from scratch | Weeks 4-5 |
+| 5 | Create your own capstone project | Week 6 |
+
+**14 languages supported:**
+
+- Backend: C++, Rust, Python, Go, Lua
+- Backend & Web: JavaScript, TypeScript, C#
+- Systems & Scripting: Shell, PowerShell
+- Mobile: Dart, Swift, Kotlin
+- Databases: SQL
+
+**7 lessons per stage** × **5 stages** = **35 lessons per language**
+
+**Total: 490 lessons** across all 14 languages
+
+## How to Navigate
+
+| Command | What It Does |
+|---------|-------------|
+| `learn` | **Interactive menu** (recommended!) |
+| `learn c++ 1` | Open C++ Stage 1, Level 1 |
+| `learn python 1` | Open Python Stage 1, Level 1 |
+| `learn typescript 1` | Open TypeScript Stage 1, Level 1 |
+| `learn --list` | See all 490 lessons |
+| `learn --progress` | Check your progress with stats |
+| `learn --next` | Continue where you left off |
+
+### Jump Around
+
+```bash
+learn python 1           # Start Python
+learn c++ 5 --stage 2    # Jump to Stage 2, Level 5
+learn javascript 1       # Switch to JavaScript
+learn go 3              # Try Go
+```
+
+## Three Ways to Use This
+
+### I'm Learning to Code
+
+1. Start: `learn` (interactive mode)
+2. Select a language and lesson
+3. Read the lesson and write code
+4. Mark complete: `learn --complete <lang> 1 1`
+5. Continue: `learn --next`
+6. Track progress: `learn --progress`
+
+### I'm Learning a New Language
+
+1. Pick from 14 languages:
+   - Backend: C++, Rust, Python, Go, Lua
+   - Web: JavaScript, TypeScript, C#
+   - Systems & Scripting: Shell, PowerShell, Dart
+   - Mobile: Swift, Kotlin
+   - Databases: SQL
+2. Start: `learn python 1` (or use interactive mode)
+3. Lessons get progressively harder (Stage 1 → Stage 5)
+4. Complete at your own pace
+5. Learn multiple languages simultaneously to spot patterns!
+
+### I'm Teaching Others
+
+All 490 lessons are organized by language:
+`c-c++/`, `rust/`, `python/`, `javascript/`, `typescript/`, `go/`, `lua/`,
+`dart/`, `swift/`, `kotlin/`, `sql/`, `csharp/`, `shell/`, `powershell/`
+
+Each lesson includes:
+
+- Clear learning objectives
+- Step-by-step instructions
+- Language-specific code examples
+- Success checklists
+- Additional explanations
+- Progressive difficulty
+
+Students can track their own progress with the built-in progress system!
+
+## Need Help?
+
+| Problem | Solution |
+|---------|----------|
+| Command not found | Run: `bash CLI/install.sh` |
+| Need help? | Run: `learn --help` |
+| Using Vim? | Guide: [VIM_CHEATSHEET.md](VIM_CHEATSHEET.md) |
+| Enhanced CLI guide | Read: [CLI/ENHANCED_README.md](CLI/ENHANCED_README.md) |
+| Original CLI docs | See: [CLI/README.md](CLI/README.md) |
+
+## Tips
+
+- **Use interactive mode** (`learn`) for the best experience
+- **Start with Python or C++** if you're new (most forgiving)
+- **Try Rust or Go** for systems programming
+- **JavaScript/TypeScript for web**, **Dart for mobile**
+- **Shell for DevOps**, **SQL for databases**
+- **Kotlin for Android**, **Swift for iOS**
+- **Stuck?** Read the lesson materials carefully
+- **Bored?** Jump to any language or stage
+- **Track progress** with `learn --progress`
+- **Learn multiple languages** to see programming patterns
+
+## What's Next?
+
+```bash
+learn
+```
+
+Launch the interactive menu and start your learning journey!
+
+Or jump straight in:
+
+```bash
+Or jump straight in:
+```bash
+learn c++ 1      # C++
+learn python 1   # Python
+learn typescript 1  # TypeScript
+learn kotlin 1   # Kotlin
+learn sql 1      # SQL
+```
+
+```
+
+Everything you need is built into the CLI.
+
+---
+
+**Want to understand the system?** See [INSTRUCTIONS.md](INSTRUCTIONS.md) for technical details.

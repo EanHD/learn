@@ -1,0 +1,42 @@
+name: Lesson Content Issue
+description: Report incorrect lesson content or suggest improvements
+title: "[Lesson]: "
+labels: ["content"]
+body:
+  - type: input
+    id: lesson
+    attributes:
+      label: Lesson Reference
+      description: Which lesson? (e.g., C++ Stage 1 Level 3)
+      placeholder: "C++ Stage 1 Level 3"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      options:
+        - Incorrect information
+        - Typo or grammar
+        - Missing explanation
+        - Confusing instructions
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What's wrong or what could be improved?
+      placeholder: "The explanation of pointers is unclear because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Fix
+      description: How would you improve this lesson?
+      placeholder: "Consider adding an example that shows..."

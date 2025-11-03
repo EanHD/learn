@@ -1,0 +1,24 @@
+1
+1
+The Rust Programming Language
+Steve Klabnik
+978-1593278281
+1
+Clean Code
+Robert C. Martin
+978-0132350884
+1
+Design Patterns
+Gang of Four
+978-0201633610
+2
+1
+Alice Johnson
+alice@example.com
+2
+1
+Bob Smith
+bob@example.com
+4
+1
+5

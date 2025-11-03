@@ -1,0 +1,67 @@
+name: Bug Report
+description: Report a problem or unexpected behavior
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out this form completely.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, shell, Neovim/VS Code version
+      placeholder: "Ubuntu 22.04, bash 5.1, Neovim 0.10"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Provide exact commands and steps
+      placeholder: |
+        1. Run `learn c++ 1`
+        2. Press Ctrl-h
+        3. Error appears
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen?
+      placeholder: "Lesson should open in split-screen"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened? Include error messages
+      placeholder: "Paste error messages and output here"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Additional Context
+      description: Screenshots, logs, or other relevant information
+      placeholder: "Output of `learn --doctor` or relevant logs"
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues
+          required: true
+        - label: I have run `learn --doctor` and included output
+          required: false
+        - label: I have read the troubleshooting guide
+          required: false
