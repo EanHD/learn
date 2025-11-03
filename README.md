@@ -23,53 +23,53 @@ Start coding in **5 minutes** with our **professional IDE setup**.
 
 ### One-line install (Linux/Mac)
 
-\`\`\`bash
+```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/EanHD/learn/main/install.sh)
-\`\`\`
+```
 
 ### Windows (PowerShell)
 
-\`\`\`powershell
+```powershell
 irm https://raw.githubusercontent.com/EanHD/learn/main/install.ps1 | iex
-\`\`\`
+```
 
 This installs everything: CLI, Neovim config, and all dependencies.
 
 ### Update anytime
 
 **Linux/Mac:**
-\`\`\`bash
+```bash
 bash ~/LEARN/install.sh --update
-\`\`\`
+```
 
 **Windows:**
-\`\`\`powershell
+```powershell
 powershell -File ~\LEARN\install.ps1 -Update
-\`\`\`
+```
 
 ### Launch
 
-\`\`\`bash
+```bash
 learn
-\`\`\`
+```
 
 This opens an **interactive menu** where you can browse lessons, track progress, and start learning immediately.
 
 ### Or jump straight to a lesson
 
-\`\`\`bash
+```bash
 learn c++ 1                # Open C++ Stage 1, Level 1
 learn rust 1               # Open Rust Stage 1, Level 1
 learn python 1             # Open Python Stage 1, Level 1
-\`\`\`
+```
 
 ### Choose your editor
 
-\`\`\`bash
+```bash
 learn c++ 1 --vim          # Neovim (default, enhanced IDE)
 learn c++ 1 --vscode       # VS Code
 learn c++ 1 --terminal     # Terminal (read-only)
-\`\`\`
+```
 
 ---
 
@@ -111,12 +111,12 @@ learn c++ 1 --terminal     # Terminal (read-only)
 
 ### Jump Around
 
-\`\`\`bash
+```bash
 learn python 1           # Start Python
 learn c++ 5 --stage 2    # Jump to Stage 2, Level 5
 learn javascript 1       # Switch to JavaScript
 learn go 3              # Try Go
-\`\`\`
+```
 
 ---
 
@@ -299,21 +299,21 @@ Students can track their own progress with the built-in progress system!
 
 ## 🚀 What's Next?
 
-\`\`\`bash
+```bash
 learn
-\`\`\`
+```
 
 Launch the interactive menu and start your learning journey!
 
 Or jump straight in:
 
-\`\`\`bash
+```bash
 learn c++ 1          # C++
 learn python 1       # Python
 learn typescript 1   # TypeScript
 learn kotlin 1       # Kotlin
 learn sql 1          # SQL
-\`\`\`
+```
 
 Everything you need is built into the CLI and IDE.
 

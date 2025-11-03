@@ -20,16 +20,16 @@ When you run \`learn c++ 1\`, you get a full IDE experience:
 
 ## 🚀 Quick Start
 
-\`\`\`bash
+```bash
 # Open any lesson
 learn c++ 1
 learn python 1
 learn rust 1
-\`\`\`
+```
 
 **You'll see:**
 
-\`\`\`
+```
 ╔═══════════════════╦═══════════════════╗
 ║   lesson.md       ║   main.cpp        ║
 ║   (left)          ║   (right)         ║
@@ -43,7 +43,7 @@ learn rust 1
 ║                   ║                   ║
 ║  (read-only)      ║  (editable)       ║
 ╚═══════════════════╩═══════════════════╝
-\`\`\`
+```
 
 ---
 
@@ -129,12 +129,12 @@ Lessons display beautifully:
 
 ### Help Comments
 Every new code file starts with:
-\`\`\`cpp
+```cpp
 // Press <Esc> <Space> h for help.
 
 
 ▊  // Your cursor starts here (line 4)
-\`\`\`
+```
 
 ### Auto-Positioning
 When you open a code file with a help comment, your cursor automatically starts on line 4, ready to code.
@@ -190,9 +190,9 @@ Press \`<Space>xz\` for distraction-free writing/reading. Perfect for focusing o
 ### Your First Lesson
 
 1. **Open a lesson**:
-   \`\`\`bash
+   ```bash
    learn c++ 1
-   \`\`\`
+   ```
 
 2. **Read the lesson** (left pane):
    - Use \`j/k\` to scroll
