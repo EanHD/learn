@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# LEARN Platform - One-Shot Installer
+# LEARN Platform - One-Shot Installer (Linux/Mac)
+# For Windows, use: install.ps1
 # Installs CLI, Neovim config, and all dependencies
 
 set -e
@@ -14,6 +15,14 @@ echo "║  • Neovim configuration (learning mode)                      ║"
 echo "║  • Required dependencies                                     ║"
 echo "╚══════════════════════════════════════════════════════════════╝"
 echo ""
+
+# Parse arguments
+UPDATE_MODE=false
+if [ "$1" == "--update" ] || [ "$1" == "-u" ]; then
+    UPDATE_MODE=true
+    echo "🔄 Running in UPDATE mode"
+    echo ""
+fi
 
 # Check if running with sudo
 if [ "$EUID" -eq 0 ]; then
@@ -66,16 +75,23 @@ echo ""
 # Clone or update repository
 LEARN_DIR="$HOME/LEARN"
 if [ -d "$LEARN_DIR" ]; then
-    echo "📁 LEARN directory exists, updating..."
-    cd "$LEARN_DIR"
-    git pull
+    if [ "$UPDATE_MODE" = true ]; then
+        echo "� Updating LEARN repository..."
+        cd "$LEARN_DIR"
+        git pull
+        echo "✅ Repository updated"
+    else
+        echo "�📁 LEARN directory exists"
+        echo "   Run with --update to pull latest changes"
+        cd "$LEARN_DIR"
+    fi
 else
     echo "📥 Cloning LEARN repository..."
     git clone https://github.com/EanHD/learn.git "$LEARN_DIR"
     cd "$LEARN_DIR"
+    echo "✅ Repository cloned"
 fi
 
-echo "✅ Repository ready"
 echo ""
 
 # Install CLI
@@ -130,24 +146,40 @@ else
 fi
 
 echo ""
-echo "╔══════════════════════════════════════════════════════════════╗"
-echo "║                   🎉 Installation Complete!                 ║"
-echo "╚══════════════════════════════════════════════════════════════╝"
-echo ""
-echo "🚀 Quick Start:"
-echo ""
-echo "   1. Restart your terminal (or run: source ~/.bashrc)"
-echo "   2. Type: learn"
-echo "   3. Select a language and start learning!"
-echo ""
-echo "📖 Documentation:"
-echo "   • README: $LEARN_DIR/README.md"
-echo "   • Features: $LEARN_DIR/FEATURES.md"
-echo "   • Vim Guide: $LEARN_DIR/MODE_VIM/README.md"
-echo ""
-echo "💡 Tips:"
-echo "   • Press <Space> in Neovim to see all commands"
-echo "   • Press <Space>h for essential shortcuts"
-echo "   • Press <Space>g for quick navigation guide"
+if [ "$UPDATE_MODE" = true ]; then
+    echo "╔══════════════════════════════════════════════════════════════╗"
+    echo "║                   🎉 Update Complete!                       ║"
+    echo "╚══════════════════════════════════════════════════════════════╝"
+    echo ""
+    echo "✨ What's New:"
+    echo "   • Check CHANGELOG.md for latest updates"
+    echo "   • New lessons and improvements"
+    echo ""
+    echo "🔄 To update again later, run:"
+    echo "   bash ~/LEARN/install.sh --update"
+else
+    echo "╔══════════════════════════════════════════════════════════════╗"
+    echo "║                   🎉 Installation Complete!                 ║"
+    echo "╚══════════════════════════════════════════════════════════════╝"
+    echo ""
+    echo "🚀 Quick Start:"
+    echo ""
+    echo "   1. Restart your terminal (or run: source ~/.bashrc)"
+    echo "   2. Type: learn"
+    echo "   3. Select a language and start learning!"
+    echo ""
+    echo "📖 Documentation:"
+    echo "   • README: $LEARN_DIR/README.md"
+    echo "   • Features: $LEARN_DIR/FEATURES.md"
+    echo "   • Vim Guide: $LEARN_DIR/MODE_VIM/README.md"
+    echo ""
+    echo "💡 Tips:"
+    echo "   • Press <Space> in Neovim to see all commands"
+    echo "   • Press <Space>h for essential shortcuts"
+    echo "   • Press <Space>g for quick navigation guide"
+    echo ""
+    echo "🔄 To update later, run:"
+    echo "   bash ~/LEARN/install.sh --update"
+fi
 echo ""
 echo "Happy Learning! 🎓"

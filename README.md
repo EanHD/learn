@@ -21,15 +21,33 @@ Start coding in **5 minutes** with our **professional IDE setup**.
 
 ## 🚀 Quick Start
 
-**One-line install:**
+### One-line install (Linux/Mac)
 
 \`\`\`bash
 bash <(curl -fsSL https://raw.githubusercontent.com/EanHD/learn/main/install.sh)
 \`\`\`
 
+### Windows (PowerShell)
+
+\`\`\`powershell
+irm https://raw.githubusercontent.com/EanHD/learn/main/install.ps1 | iex
+\`\`\`
+
 This installs everything: CLI, Neovim config, and all dependencies.
 
-Then launch:
+### Update anytime
+
+**Linux/Mac:**
+\`\`\`bash
+bash ~/LEARN/install.sh --update
+\`\`\`
+
+**Windows:**
+\`\`\`powershell
+powershell -File ~\LEARN\install.ps1 -Update
+\`\`\`
+
+### Launch
 
 \`\`\`bash
 learn
@@ -222,14 +240,28 @@ Students can track their own progress with the built-in progress system!
 
 ## 🆘 Need Help?
 
+### Platform Support
+
+| Platform | Status | Installer |
+|----------|--------|-----------|
+| 🐧 **Linux** | ✅ Fully Supported | \`install.sh\` |
+| 🍎 **macOS** | ✅ Fully Supported | \`install.sh\` |
+| 🪟 **Windows** | ✅ Fully Supported | \`install.ps1\` |
+
+**All platforms include:** One-shot install, auto-update, CLI, and full Neovim IDE.
+
+### Common Issues
+
 | Problem | Solution |
 |---------|----------|
-| Command not found | Run: \`bash install.sh\` |
+| Command not found | Linux/Mac: \`bash install.sh\` • Windows: Run \`install.ps1\` |
+| Need to update | Linux/Mac: \`bash ~/LEARN/install.sh --update\` |
+|  | Windows: \`powershell -File ~\LEARN\install.ps1 -Update\` |
 | Neovim issues | See: [MODE_VIM/README.md](MODE_VIM/README.md) |
 | CLI help | Run: \`learn --help\` |
 | Vim basics | Read: [VIM_CHEATSHEET.md](VIM_CHEATSHEET.md) |
 
-### Common Issues
+### Feature Questions
 
 **"Which-key menu is cluttered"**
 - It's been cleaned up! Only essential commands show now
@@ -244,6 +276,10 @@ Students can track their own progress with the built-in progress system!
 - Press \`<Space>\` and wait - which-key shows everything
 - Press \`<Space>h\` for essential shortcuts popup
 - Press \`<Space>g\` for quick navigation guide
+
+**"Can I use this on Windows?"**
+- Yes! Full Windows support via PowerShell installer
+- Same features as Linux/Mac
 
 ---
 
