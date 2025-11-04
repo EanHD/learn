@@ -26,14 +26,14 @@ Welcome to Level 5! Today we're focusing on decision-making operations in pseudo
 Decision expressions in pseudocode follow these patterns:
 
 **Simple if statements:**
-```
+```javascript
 IF condition THEN
    DO something
 ENDIF
 ```
 
 **If-else statements:**
-```
+```javascript
 IF condition THEN
    DO something
 ELSE
@@ -42,7 +42,7 @@ ENDIF
 ```
 
 **Multiple conditions:**
-```
+```javascript
 IF condition1 THEN
    DO something
 ELSE IF condition2 THEN
@@ -53,7 +53,7 @@ ENDIF
 ```
 
 **Complex conditions:**
-```
+```javascript
 IF (age >= 18) AND (has_license) THEN
    OUTPUT "Can drive"
 ELSE
@@ -62,7 +62,7 @@ ENDIF
 ```
 
 **Nested conditions:**
-```
+```javascript
 IF weather = "sunny" THEN
    IF temperature > 80 THEN
       OUTPUT "Hot and sunny - beach time!"
@@ -82,10 +82,23 @@ ENDIF
 
 ---
 
+
+### How to Run
+
+1. **Run the code**:
+   ```bash
+   node hello.js
+   ```
+
+**Expected output:**
+```
+Hello, World!
+```
+
 ## Algorithm 1: Simple Age Check
 
 **Pseudocode:**
-```
+```javascript
 Algorithm: Determine Life Stage
 1. INPUT age
 2. IF age < 13 THEN
@@ -106,7 +119,7 @@ Algorithm: Determine Life Stage
 ## Algorithm 2: Grade Determination
 
 **Pseudocode:**
-```
+```javascript
 Algorithm: Assign Letter Grade
 1. INPUT numeric_grade
 2. IF numeric_grade >= 97 THEN
@@ -144,7 +157,7 @@ Algorithm: Assign Letter Grade
 ## Algorithm 3: Shopping Discount Calculator
 
 **Pseudocode:**
-```
+```javascript
 Algorithm: Calculate Shopping Discount
 1. INPUT total_amount
 2. INPUT customer_type  // "regular", "premium", "vip"
@@ -184,7 +197,7 @@ Algorithm: Calculate Shopping Discount
 ## Algorithm 4: Weather Advisory
 
 **Pseudocode:**
-```
+```javascript
 Algorithm: Weather Advisory System
 1. INPUT temperature
 2. INPUT is_raining
@@ -224,7 +237,7 @@ Algorithm: Weather Advisory System
 ## Algorithm 5: Password Validator
 
 **Pseudocode:**
-```
+```javascript
 Algorithm: Validate Password Strength
 1. INPUT password
 2. SET has_uppercase TO FALSE
@@ -277,7 +290,7 @@ Algorithm: Validate Password Strength
 ## Algorithm 6: Transportation Advisor
 
 **Pseudocode:**
-```
+```javascript
 Algorithm: Recommend Transportation
 1. INPUT distance  // in miles
 2. INPUT weather_condition  // "good", "bad", "severe"
@@ -307,7 +320,7 @@ Algorithm: Recommend Transportation
 ## Algorithm 7: Complex Business Logic
 
 **Pseudocode:**
-```
+```javascript
 Algorithm: Process Order
 1. INPUT order_amount
 2. INPUT customer_type  // "new", "returning", "loyal"

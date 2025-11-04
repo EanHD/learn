@@ -26,7 +26,7 @@ Welcome to Level 4! Today we're focusing on input/output operations in pseudocod
 Input/Output expressions in pseudocode follow these patterns:
 
 **Input operations:**
-```
+```javascript
 INPUT user_name
 INPUT age
 SET email TO INPUT("Enter your email: ")
@@ -43,7 +43,7 @@ PRINT formatted_output
 ```
 
 **Combined I/O:**
-```
+```javascript
 OUTPUT "Enter your name: "
 INPUT name
 IF name IS EMPTY THEN
@@ -61,10 +61,23 @@ ENDIF
 
 ---
 
+
+### How to Run
+
+1. **Run the code**:
+   ```bash
+   node hello.js
+   ```
+
+**Expected output:**
+```
+Hello, World!
+```
+
 ## Algorithm 1: Simple Input Validation
 
 **Pseudocode:**
-```
+```javascript
 Algorithm: Validate User Age
 1. OUTPUT "Please enter your age: "
 2. INPUT age
@@ -82,7 +95,7 @@ Algorithm: Validate User Age
 ## Algorithm 2: User Information Form
 
 **Pseudocode:**
-```
+```javascript
 Algorithm: Collect User Information
 1. OUTPUT "User Information Form"
 2. OUTPUT "==================="
@@ -110,7 +123,7 @@ Algorithm: Collect User Information
 ## Algorithm 3: Number Validation Loop
 
 **Pseudocode:**
-```
+```javascript
 Algorithm: Get Valid Number
 1. SET valid_input TO FALSE
 2. WHILE NOT valid_input DO
@@ -132,7 +145,7 @@ Algorithm: Get Valid Number
 ## Algorithm 4: Grade Calculator with Input
 
 **Pseudocode:**
-```
+```javascript
 Algorithm: Calculate Letter Grade
 1. OUTPUT "Grade Calculator"
 2. OUTPUT "==============="
@@ -159,7 +172,7 @@ Algorithm: Calculate Letter Grade
 ## Algorithm 5: Temperature Converter with Menu
 
 **Pseudocode:**
-```
+```javascript
 Algorithm: Temperature Converter Menu
 1. OUTPUT "Temperature Converter"
 2. OUTPUT "1. Celsius to Fahrenheit"
@@ -188,7 +201,7 @@ Algorithm: Temperature Converter Menu
 ## Algorithm 6: Input Validation with Multiple Fields
 
 **Pseudocode:**
-```
+```javascript
 Algorithm: Validate Contact Information
 1. SET is_valid TO TRUE
 2. OUTPUT "Contact Information Form"
@@ -224,7 +237,7 @@ Algorithm: Validate Contact Information
 ## Algorithm 7: Calculator with User Interaction
 
 **Pseudocode:**
-```
+```javascript
 Algorithm: Interactive Calculator
 1. OUTPUT "Simple Calculator"
 2. OUTPUT "Enter first number: "
