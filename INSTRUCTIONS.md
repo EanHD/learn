@@ -179,7 +179,49 @@ Complete CLI documentation in `CLI/`:
 - `TROUBLESHOOTING.md` - Problem solutions
 - `INDEX.md` - Navigation guide
 
-## Vim Mode - Tab & Indentation Configuration
+## Vim Mode - Enhanced Features
+
+### Quick Compile & Run: `<Space>r`
+
+**NEW FEATURE:** Students can now compile and run code with a single keystroke!
+
+**How It Works:**
+
+1. Student presses `<Space>r` in any code file
+2. Neovim auto-detects language from file extension
+3. Runs appropriate compile/run command
+4. Shows output in terminal
+
+**Supported:**
+
+- **C**: `gcc % -o main && ./main`
+- **C++**: `g++ % -o main && ./main`
+- **Rust**: `rustc % -o main && ./main`
+- **Python**: `python3 %`
+- **JavaScript**: `node %`
+- **TypeScript**: `ts-node %`
+- **Go**: `go run %`
+- **Lua**: `lua %`
+- **Dart**: `dart %`
+- **Swift**: `swift %`
+- **Kotlin**: `kotlinc % -include-runtime -d main.jar && java -jar main.jar`
+- **SQL**: `sqlite3 < %`
+- **C#**: `csc % && mono %.exe`
+- **Shell**: `bash %`
+- **PowerShell**: `powershell -File %`
+
+**Dynamic Help (`<Space>h`):**
+
+The help popup now shows the CORRECT command for the current language:
+
+- Detects file extension automatically
+- Shows `<Space>r` as primary method
+- Shows manual Vim command as alternative
+- Updates based on current file
+
+**No More Broken Commands!** The old `:!make run` commands have been replaced with working, language-specific commands.
+
+### Tab & Indentation Configuration
 
 The `.vimrc` file at the repository root configures Vim for all lessons with language-specific tab settings.
 
@@ -344,46 +386,108 @@ mapping = {
 
 ##### 3b. Compile/Run Command Mapping
 
-**CRITICAL:** Add to `_get_compile_command()` in `LessonExecutor`:
+**CRITICAL:** Add language to TWO places for compile/run support:
+
+**1. CLI Terminal Output** (`CLI/learn_cli.py` - `_get_compile_command()`):
 
 ```python
 def _get_compile_command(self, language: str) -> Tuple[str, str]:
     """Get compile/run command for language
 
-    Returns: (description, vim_command)
+    Returns: (description, command)
 
     IMPORTANT: When adding a new language, add entry here so students
-    see the correct compile command in their Vim instructions.
+    see the correct compile command in their terminal instructions.
+
+    Use <Space>r as the primary method, then show manual command.
     """
     commands = {
-        "c-c++": ("C++ (compile + run)", ":!make run"),
-        "rust": ("Rust", ":!cargo run"),
-        "python": ("Python", ":!python3 %"),
-        "javascript": ("JavaScript", ":!node %"),
-        "go": ("Go", ":!go run %"),
-        "lua": ("Lua", ":!lua %"),
-        "dart": ("Dart", ":!dart %"),
-        "swift": ("Swift", ":!swift %"),
-        "kotlin": ("Kotlin", ":!kotlinc % -include-runtime -d main.jar && java -jar main.jar"),
-        "sql": ("SQL", ":!sqlite3 < %"),
-        "c#": ("C#", ":!csc % && ./%.exe"),
-        "csharp": ("C#", ":!csc % && ./%.exe"),
-        "shell": ("Shell", ":!bash %"),
-        "powershell": ("PowerShell", ":!powershell -File %"),
-        "typescript": ("TypeScript", ":!ts-node %")
+        "c-c++": ("C/C++ (compile + run)", "<Space>r or :!g++ % -o main && ./main"),
+        "rust": ("Rust", "<Space>r or :!rustc % -o main && ./main"),
+        "python": ("Python", "<Space>r or :!python3 %"),
+        "javascript": ("JavaScript", "<Space>r or :!node %"),
+        "typescript": ("TypeScript", "<Space>r or :!ts-node %"),
+        "go": ("Go", "<Space>r or :!go run %"),
+        "lua": ("Lua", "<Space>r or :!lua %"),
+        "dart": ("Dart", "<Space>r or :!dart %"),
+        "swift": ("Swift", "<Space>r or :!swift %"),
+        "kotlin": ("Kotlin", "<Space>r or :!kotlinc % -include-runtime -d main.jar && java -jar main.jar"),
+        "sql": ("SQL", "<Space>r or :!sqlite3 < %"),
+        "c#": ("C#", "<Space>r or :!csc % && mono %.exe"),
+        "csharp": ("C#", "<Space>r or :!csc % && mono %.exe"),
+        "shell": ("Shell", "<Space>r or :!bash %"),
+        "powershell": ("PowerShell", "<Space>r or :!powershell -File %"),
     }
     lang_desc, cmd = commands.get(language, ("Unknown", ":!echo 'Language not configured'"))
     return lang_desc, cmd
 ```
 
-This ensures that when users launch Vim for your language, they see:
+**2. Neovim Dynamic Detection** (`MODE_VIM/CONFIG/init-learning.lua` - `get_compile_command()`):
 
-```text
-Compile/Run (in code window):
-    :<command>  -> <Language Name>
+```lua
+-- Get compile/run command based on file extension
+local function get_compile_command()
+  local current_file = vim.fn.expand("%:t")  -- Current file name
+  local workspace_path = vim.fn.getcwd()
+  
+  -- Try to detect the code file if we're in lesson
+  local code_file = current_file
+  if current_file == "lesson.md" or current_file == "" then
+    local possible_files = {
+      "main.cpp", "main.c", "main.cc", "solution.cpp",
+      "main.rs", "solution.rs",
+      "main.py", "solution.py",
+      "main.js", "solution.js",
+      "main.ts", "solution.ts",
+      "main.go", "solution.go",
+      "main.lua", "solution.lua",
+      "main.dart", "solution.dart",
+      "main.swift", "solution.swift",
+      "main.kt", "solution.kt",
+      "main.sql", "solution.sql",
+      "main.cs", "solution.cs",
+      "main.sh", "solution.sh",
+      "main.ps1", "solution.ps1",
+      "main.<EXT>", "solution.<EXT>"  -- ADD YOUR NEW EXTENSION
+    }
+    for _, file in ipairs(possible_files) do
+      if vim.fn.filereadable(workspace_path .. "/" .. file) == 1 then
+        code_file = file
+        break
+      end
+    end
+  end
+  
+  -- Detect language and return proper compile/run command
+  if code_file:match("%.cpp$") or code_file:match("%.cc$") then
+    return ":!g++ % -o main && ./main", "C++"
+  elseif code_file:match("%.c$") then
+    return ":!gcc % -o main && ./main", "C"
+  -- ... existing languages ...
+  elseif code_file:match("%.<EXT>$") then  -- ADD YOUR NEW LANGUAGE
+    return ":!<COMPILER> % -o main && ./main", "<LANGUAGE>"
+  else
+    return ":!echo 'Unknown file type'", "Unknown"
+  end
+end
 ```
 
-Only showing the command for their current language (not all languages).
+**IMPORTANT:** Both functions must be updated! This ensures:
+
+1. CLI shows correct command in terminal before Vim opens
+2. Neovim `<Space>h` popup dynamically shows language-specific command
+3. `<Space>r` keybinding works automatically for the language
+
+**Testing Your Addition:**
+
+```bash
+# Test that <Space>r works:
+learn <language> 1
+# In Vim:
+# 1. Press <Space>r to compile/run
+# 2. Press <Space>h to see language-specific help
+# Both should show your language, not generic commands!
+```
 
 ##### 3c. Workspace Template Creation
 
