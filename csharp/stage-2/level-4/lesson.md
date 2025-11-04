@@ -1,63 +1,201 @@
-# Level 4: Pseudocode to Csharp
+# Level 4: Input/Output Algorithms
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
-
+> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window**. The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 2: Pseudocode to Code
 
 ### Today's Mission
 
-You're progressing! Now you'll take more complex pseudocode and translate it into Csharp code. This level focuses on taking user input.
+You've mastered the basics! Now you'll learn to translate written algorithms (pseudocode) into working C# code. This is how professional programmers plan before coding.
 
-### Learning Goals
-
-- Translate pseudocode involving taking user input
-- Understand how different programming constructs work
-- Practice problem decomposition
-- Build your Csharp vocabulary
-
-### Your Task
-
-Here's some pseudocode:
-
-```
-[Pseudocode will be specific to the level]
-```
-
-**Your mission**: Translate this into Csharp code in `main.csharp.csharp`.
-
-### How to Run
-
-```bash
-cd ~/.local/share/learn/workspaces/csharp/stage-2/level-4
-```
-
-Then run your program.
-
-### Success Checklist
-
-- [ ] Translated all pseudocode statements
-- [ ] Program runs without errors
-- [ ] Output matches expected output
-- [ ] Code is clean and readable
-
-### Hints for Success
-
-1. Read the pseudocode carefully - understand what it's trying to do
-2. Break it down into smaller steps
-3. Implement each step in Csharp, one at a time
-4. Test as you go
-
-### What's Next?
-
-Each level in Stage 2 builds on the previous one. You're learning to think like a programmer!
+**The Process:**
+1. Read and understand the pseudocode algorithm
+2. Identify the programming concepts needed
+3. Translate each step into C# syntax
+4. Test and verify the implementation
 
 ---
 
-## Need Help with Vim?
+### Learning Goals
 
-Check the `VIM_CHEATSHEET.md` for basic Vim commands!
+- Master the translation of pseudocode to C#
+- Understand algorithm design patterns
+- Practice with common programming patterns
+- Build confidence in problem decomposition
+- Learn to spot and fix logic errors
+
+---
+
+### Your Task
+
+**Study the pseudocode algorithm below, then implement it in C#:**
+
+```csharp
+ALGORITHM: Input/Output Algorithms
+
+BEGIN
+    // Read the pseudocode carefully
+    // Identify the data structures needed
+    // Translate step by step into C#
+    // Test with sample inputs
+END
+```
+
+**Implementation Steps:**
+1. Analyze what the algorithm does
+2. Identify variables and data types needed
+3. Translate the logic into C# syntax
+4. Add input/output as needed
+5. Test thoroughly
+
+---
+
+
+### How to Compile and Run
+
+1. **Compile the code**:
+   ```bash
+   csc hello.cs
+   ```
+
+2. **Run your program**:
+   ```bash
+   mono hello
+   ```
+
+**Expected output:**
+```
+Hello, World!
+```
+
+### How to Approach This
+
+**Step 1: Understand**
+- Read all requirements carefully
+- Identify inputs, outputs, and constraints
+- Ask yourself: "What is the core problem?"
+
+**Step 2: Plan**
+- Sketch out your approach on paper
+- List the steps needed
+- Identify potential challenges
+
+**Step 3: Implement**
+- Start with a basic version
+- Add features incrementally
+- Test after each addition
+
+**Step 4: Test**
+- Try normal cases
+- Try edge cases (empty, max, min)
+- Try invalid inputs
+- Verify all requirements met
+
+**Step 5: Refine**
+- Review your code
+- Add comments
+- Optimize if needed
+- Ensure it's readable
+
+---
+
+### Success Checklist
+
+- [ ] Understood the problem/requirements completely
+- [ ] Designed a solution approach
+- [ ] Implemented in C# correctly
+- [ ] Tested with multiple scenarios
+- [ ] Code is clean and well-commented
+- [ ] All requirements met
+- [ ] Program runs without errors
+
+---
+
+### Key Concepts
+
+**Pseudocode Translation:**
+- Pseudocode is language-independent
+- Focus on logic, not syntax
+- One pseudocode line may become multiple code lines
+- Test your understanding before coding
+
+**Common Patterns:**
+- Loops for repetition
+- Conditionals for decisions
+- Variables for data storage
+- Functions for organization
+
+---
+
+### Try This (Optional Challenges)
+
+1. Extend the solution with additional features
+2. Handle more edge cases
+3. Optimize for performance
+4. Add a user interface
+5. Write unit tests
+
+---
+
+### Helpful Resources
+
+- Review previous lessons for syntax help
+- Check WORKSPACE_INSTRUCTIONS.md for setup
+- Use `<Space>h` in Vim for keyboard shortcuts
+- Test frequently to catch errors early
 
 ---
 
 <div style="page-break-after: always;"></div>
+
+---
+
+## ANSWER KEY (Study after attempting!)
+
+### Solution Approach
+
+**Pseudocode to Code Translation:**
+
+The key is understanding what each pseudocode statement represents in C#:
+
+1. **Assignment**: `SET x TO 5` → `x = 5` (or similar)
+2. **Input**: `READ value` → Use input methods
+3. **Output**: `PRINT value` → Use output methods
+4. **Loops**: `REPEAT` or `WHILE` → for/while loops
+5. **Conditions**: `IF...THEN...ELSE` → if/else statements
+
+**Example Translation:**
+```csharp
+PSEUDOCODE:
+    READ number
+    IF number > 0 THEN
+        PRINT "Positive"
+    ELSE
+        PRINT "Not positive"
+    END IF
+```
+
+This becomes structured C# code following the language syntax.
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Logic error | Algorithm design flaw | Review pseudocode, trace by hand |
+| Syntax error | Language rules violated | Check language documentation |
+| Runtime error | Invalid operation | Add validation, handle edge cases |
+| Wrong output | Misunderstanding requirements | Re-read problem carefully |
+
+### Next Steps
+
+1. Review your solution critically
+2. Compare with best practices
+3. Optimize if needed
+4. Move to next level when ready
+5. Keep practicing!
+
+---
+
+**Excellent work on this advanced challenge!**
+
+*Continue building your skills - you're doing great!*
