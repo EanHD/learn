@@ -66,7 +66,7 @@ else:
 4. **Provide input** when prompted!
 
 **Example interaction:**
-```
+```python
 How old are you? 25
 What is the temperature in Celsius? 22
 

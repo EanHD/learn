@@ -49,7 +49,7 @@ END
 
 If you enter 20:
 
-```
+```python
 How old are you?
 20
 You are an adult
@@ -57,7 +57,7 @@ You are an adult
 
 If you enter 15:
 
-```
+```python
 How old are you?
 15
 You are a minor

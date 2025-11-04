@@ -22,7 +22,7 @@ Write a program that:
 
 Example: User enters "Alice" and "blue"
 
-```
+```python
 Hi Alice, I like blue too!
 ```
 

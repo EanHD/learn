@@ -49,7 +49,7 @@ END
 
 Expected output:
 
-```
+```python
 Hello, Alice!
 Hello, Bob!
 ```

@@ -119,7 +119,7 @@ def get_temperature_input(prompt):
 
 ### Program Structure
 
-```
+```python
 main.py
 ├── Import statements (if needed)
 ├── Helper functions
@@ -142,12 +142,12 @@ main.py
 ### Temperature Conversion Formulas
 
 **Celsius to Fahrenheit:**
-```
+```python
 °F = (°C × 9/5) + 32
 ```
 
 **Fahrenheit to Celsius:**
-```
+```python
 °C = (°F - 32) × 5/9
 ```
 

@@ -25,7 +25,7 @@ Now that you know the basics, it's time to think like a programmer! You'll take 
 
 Here's some pseudocode that describes a simple program:
 
-```
+```python
 START
     print "Welcome to the program!"
     print "This is my first real program"
@@ -61,7 +61,7 @@ Hints:
 
 **Expected output:**
 
-```
+```python
 Welcome to the program!
 This is my first real program
 I'm learning to code!
@@ -148,7 +148,7 @@ Each line of pseudocode translates directly:
 
 **3. Pseudocode to Code Mapping**
 
-```
+```python
 Pseudocode:  print "message"
 Code:        print("message")
                    ↑        ↑

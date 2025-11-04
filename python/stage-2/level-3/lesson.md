@@ -56,7 +56,7 @@ END
 
 **Expected output:**
 
-```
+```python
 15
 5
 50

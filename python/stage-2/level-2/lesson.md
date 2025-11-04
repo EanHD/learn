@@ -63,7 +63,7 @@ Hints:
 
 **Expected output:**
 
-```
+```python
 Alice
 25
 ```
@@ -162,7 +162,7 @@ Without quotes, Python looks up the variable and uses its value.
 
 ### How Variables Work
 
-```
+```python
 Step 1: name = "Alice"
         Memory: [name] → "Alice"
 

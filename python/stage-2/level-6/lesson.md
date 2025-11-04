@@ -44,7 +44,7 @@ END
 
 Expected output:
 
-```
+```python
 1
 2
 3
@@ -95,7 +95,7 @@ for i in range(1, 6):
 
 **Why range(1, 6) for "1 to 5"?**
 
-```
+```python
 range(1, 6) = [1, 2, 3, 4, 5]
               ↑           ↑
             start      stop (exclusive)

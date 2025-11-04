@@ -53,7 +53,7 @@ print(f"Nice to meet you, {name}!")
 4. **Follow the prompts** - type your answers when asked!
 
 **Example interaction:**
-```
+```python
 What is your name? Alice
 How old are you? 25
 What is your favorite color? Blue

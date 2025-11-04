@@ -42,7 +42,7 @@ The Personal Finance Manager demonstrates full-stack application development:
 - **Automated Processing**: Report generation and budget alert checking
 
 **Data Flow:**
-```
+```python
 User Input → Validation → Business Logic → Data Storage → UI Feedback
 ```
 
@@ -109,3 +109,29 @@ This project successfully combines:
 - Implement cloud backup and sync
 - Add mobile-responsive web interface
 - Integrate with financial APIs for real data
+
+---
+
+<div style="page-break-after: always;"></div>
+
+---
+
+## ANSWER KEY (No cheating until you've tried!)
+
+### Code Breakdown
+
+> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+
+### Key Concepts
+
+- Review the code structure specific to Python
+- Understand the execution flow
+- Learn common pitfalls and solutions
+
+### Next Steps
+
+Practice the code and experiment with variations!
+
+---
+
+**Congratulations! Keep coding!**
