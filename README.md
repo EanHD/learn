@@ -1,5 +1,12 @@
 # LEARN: Programming in 14 Languages
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-blue)](https://github.com/EanHD/learn)
+[![Devcontainer](https://img.shields.io/badge/Devcontainer-Ready-green)](https://github.com/EanHD/learn/blob/main/.devcontainer/devcontainer.json)
+[![Made with Neovim](https://img.shields.io/badge/Made%20with-Neovim-57A143?logo=neovim)](https://neovim.io)
+[![Languages](https://img.shields.io/badge/Languages-14-orange)](https://github.com/EanHD/learn#-what-youll-learn)
+[![Lessons](https://img.shields.io/badge/Lessons-490-blueviolet)](https://github.com/EanHD/learn#-what-youll-learn)
+
 **490 hands-on lessons.** Fourteen languages. Five stages. Real projects.
 
 Start coding in **5 minutes** with our **professional IDE setup**.
@@ -20,6 +27,16 @@ Start coding in **5 minutes** with our **professional IDE setup**.
 ---
 
 ## 🚀 Quick Start
+
+> **New to the platform?** Check out **[📖 START_HERE.md](START_HERE.md)** for a complete beginner's guide!
+
+<!-- TODO: Add 10-second demo GIF showing:
+     - Terminal launching `learn`
+     - Interactive menu navigation
+     - Lesson opening in split view (lesson left, code right)
+     - Neovim with syntax highlighting and which-key popup
+     Record with: asciinema + agg, or terminalizer
+     Dimensions: 1200x600px for GitHub README -->
 
 ### One-line install (Linux/Mac)
 
@@ -99,24 +116,56 @@ learn c++ 1 --terminal     # Terminal (read-only)
 
 ## 🎮 How to Navigate
 
-| Command | What It Does |
-|---------|-------------|
-| \`learn\` | **Interactive menu** (recommended!) |
-| \`learn c++ 1\` | Open C++ Stage 1, Level 1 |
-| \`learn python 1\` | Open Python Stage 1, Level 1 |
-| \`learn typescript 1\` | Open TypeScript Stage 1, Level 1 |
-| \`learn --list\` | See all 490 lessons |
-| \`learn --progress\` | Check your progress with stats |
-| \`learn --next\` | Continue where you left off |
-
-### Jump Around
+### Interactive Menu (Recommended)
 
 ```bash
-learn python 1           # Start Python
+learn
+```
+
+Browse all lessons, track progress, and jump between languages.
+
+### Jump to a Lesson
+
+```bash
+learn c++ 1              # Open C++ Stage 1, Level 1
+learn python 1           # Open Python Stage 1, Level 1
+learn typescript 1       # Open TypeScript Stage 1, Level 1
 learn c++ 5 --stage 2    # Jump to Stage 2, Level 5
 learn javascript 1       # Switch to JavaScript
-learn go 3              # Try Go
+learn go 3               # Try Go
 ```
+
+### View All Lessons
+
+```bash
+learn --list
+```
+
+See all 490 lessons organized by language and stage.
+
+### Check Progress
+
+```bash
+learn --progress
+```
+
+View completion stats and track your learning journey.
+
+### Continue Learning
+
+```bash
+learn --next
+```
+
+Automatically open the next lesson based on your progress.
+
+### Get Help
+
+```bash
+learn --help
+```
+
+Show all available commands and options.
 
 ---
 
