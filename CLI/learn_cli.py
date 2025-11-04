@@ -639,21 +639,21 @@ class LessonExecutor:
         Returns: (description, command)
         """
         commands = {
-            "c-c++": ("C++ (compile + run)", ":!make run"),
-            "rust": ("Rust", ":!cargo run"),
-            "python": ("Python", ":!python3 %"),
-            "javascript": ("JavaScript", ":!node %"),
-            "go": ("Go", ":!go run %"),
-            "lua": ("Lua", ":!lua %"),
-            "dart": ("Dart", ":!dart %"),
-            "swift": ("Swift", ":!swift %"),
-            "kotlin": ("Kotlin", ":!kotlinc % -include-runtime -d main.jar && java -jar main.jar"),
-            "sql": ("SQL", ":!sqlite3 < %"),
-            "c#": ("C#", ":!csc % && ./%.exe"),
-            "csharp": ("C#", ":!csc % && ./%.exe"),
-            "shell": ("Shell", ":!bash %"),
-            "powershell": ("PowerShell", ":!powershell -File %"),
-            "typescript": ("TypeScript", ":!ts-node %")
+            "c-c++": ("C/C++ (compile + run)", "<Space>r or :!g++ % -o main && ./main"),
+            "rust": ("Rust", "<Space>r or :!rustc % -o main && ./main"),
+            "python": ("Python", "<Space>r or :!python3 %"),
+            "javascript": ("JavaScript", "<Space>r or :!node %"),
+            "typescript": ("TypeScript", "<Space>r or :!ts-node %"),
+            "go": ("Go", "<Space>r or :!go run %"),
+            "lua": ("Lua", "<Space>r or :!lua %"),
+            "dart": ("Dart", "<Space>r or :!dart %"),
+            "swift": ("Swift", "<Space>r or :!swift %"),
+            "kotlin": ("Kotlin", "<Space>r or :!kotlinc % -include-runtime -d main.jar && java -jar main.jar"),
+            "sql": ("SQL", "<Space>r or :!sqlite3 < %"),
+            "c#": ("C#", "<Space>r or :!csc % && mono %.exe"),
+            "csharp": ("C#", "<Space>r or :!csc % && mono %.exe"),
+            "shell": ("Shell", "<Space>r or :!bash %"),
+            "powershell": ("PowerShell", "<Space>r or :!powershell -File %"),
         }
         lang_desc, cmd = commands.get(language, ("Unknown", ":!echo 'Language not configured'"))
         return lang_desc, cmd

@@ -337,8 +337,8 @@ require("lazy").setup({
         { "<leader>fb", desc = "Buffers" },
         { "<leader>fh", desc = "Help tags" },
 
-        -- Refactor/Rename group
-        { "<leader>r", group = "Refactor" },
+        -- Run & Refactor group
+        { "<leader>r", desc = "🚀 Run/Compile code" },
         { "<leader>rn", desc = "Rename symbol" },
         { "<leader>ro", desc = "Toggle read-only" },
 
@@ -912,40 +912,78 @@ map("n", "<leader>i", function()
   end
 end, { desc = "Show lesson info" })
 
--- Essential shortcuts popup (like <Space>g but with basics)
-map("n", "<leader>h", function()
-  -- Get the current workspace path
+-- Get compile/run command based on file extension
+local function get_compile_command()
+  local current_file = vim.fn.expand("%:t")  -- Current file name
   local workspace_path = vim.fn.getcwd()
-  local code_file = workspace_path .. "/main.cpp" -- Default
-
-  -- Try to detect the actual code file
-  local possible_files = {
-    "main.cpp", "main.c", "main.rs", "main.py", "main.js",
-    "main.go", "main.lua", "main.dart", "main.swift", "main.kt"
-  }
-  for _, file in ipairs(possible_files) do
-    if vim.fn.filereadable(workspace_path .. "/" .. file) == 1 then
-      code_file = workspace_path .. "/" .. file
-      break
+  
+  -- Try to detect the code file if we're in lesson
+  local code_file = current_file
+  if current_file == "lesson.md" or current_file == "" then
+    local possible_files = {
+      "main.cpp", "main.c", "main.cc", "solution.cpp",
+      "main.rs", "solution.rs",
+      "main.py", "solution.py",
+      "main.js", "solution.js",
+      "main.ts", "solution.ts",
+      "main.go", "solution.go",
+      "main.lua", "solution.lua",
+      "main.dart", "solution.dart",
+      "main.swift", "solution.swift",
+      "main.kt", "solution.kt",
+      "main.sql", "solution.sql",
+      "main.cs", "solution.cs",
+      "main.sh", "solution.sh",
+      "main.ps1", "solution.ps1"
+    }
+    for _, file in ipairs(possible_files) do
+      if vim.fn.filereadable(workspace_path .. "/" .. file) == 1 then
+        code_file = file
+        break
+      end
     end
   end
-
-  -- Detect language and get compile command
-  local compile_cmd = ":!make run"
-  local lang_name = "C++"
-  if code_file:match("%.rs$") then
-    compile_cmd = ":!cargo run"
-    lang_name = "Rust"
+  
+  -- Detect language and return proper compile/run command
+  if code_file:match("%.cpp$") or code_file:match("%.cc$") then
+    return ":!g++ % -o main && ./main", "C++"
+  elseif code_file:match("%.c$") then
+    return ":!gcc % -o main && ./main", "C"
+  elseif code_file:match("%.rs$") then
+    return ":!rustc % -o main && ./main", "Rust"
   elseif code_file:match("%.py$") then
-    compile_cmd = ":!python3 %"
-    lang_name = "Python"
+    return ":!python3 %", "Python"
   elseif code_file:match("%.js$") then
-    compile_cmd = ":!node %"
-    lang_name = "JavaScript"
+    return ":!node %", "JavaScript"
+  elseif code_file:match("%.ts$") then
+    return ":!ts-node %", "TypeScript"
   elseif code_file:match("%.go$") then
-    compile_cmd = ":!go run %"
-    lang_name = "Go"
+    return ":!go run %", "Go"
+  elseif code_file:match("%.lua$") then
+    return ":!lua %", "Lua"
+  elseif code_file:match("%.dart$") then
+    return ":!dart %", "Dart"
+  elseif code_file:match("%.swift$") then
+    return ":!swift %", "Swift"
+  elseif code_file:match("%.kt$") then
+    return ":!kotlinc % -include-runtime -d main.jar && java -jar main.jar", "Kotlin"
+  elseif code_file:match("%.sql$") then
+    return ":!sqlite3 < %", "SQL"
+  elseif code_file:match("%.cs$") then
+    return ":!csc % && mono %.exe", "C#"
+  elseif code_file:match("%.sh$") then
+    return ":!bash %", "Shell"
+  elseif code_file:match("%.ps1$") then
+    return ":!powershell -File %", "PowerShell"
+  else
+    return ":!echo 'Unknown file type'", "Unknown"
   end
+end
+
+-- Essential shortcuts popup (like <Space>g but with basics)
+map("n", "<leader>h", function()
+  -- Get compile command dynamically
+  local compile_cmd, lang_name = get_compile_command()
 
   -- Create popup content
   local content = {
@@ -969,11 +1007,12 @@ map("n", "<leader>h", function()
     "   :w               →  Save file",
     "   :q               →  Quit",
     "   <Space>h         →  Open this menu",
-    "   <Spage>g         →  Open quick guide",
+    "   <Space>g         →  Open quick guide",
     "   <Space>t         →  Toggle terminal",
     "",
-    "🔧 COMPILE/RUN (in code window):",
-    "   " .. compile_cmd .. string.rep(" ", 17 - #compile_cmd) .. "→  " .. lang_name .. " (compile + run)",
+    "🔧 COMPILE/RUN (" .. lang_name .. "):",
+    "   <Space>r         →  Compile & run (auto-detect)",
+    "   " .. compile_cmd .. string.rep(" ", 17 - #compile_cmd) .. "→  Manual command",
     "",
     "💡 TIP: Lesson is on the LEFT, your code is on the RIGHT",
     "═════════════════════════════════════════════════════════════════════════",
@@ -1057,6 +1096,25 @@ map("n", "<leader>g", function()
     _G.LearnGuide.toggle_guide()
   end
 end, { desc = "Toggle Quick Guide popup" })
+
+-- Run/Compile current file (dynamically detects language)
+map("n", "<leader>r", function()
+  local compile_cmd, lang_name = get_compile_command()
+  if compile_cmd == ":!echo 'Unknown file type'" then
+    vim.notify("⚠️  Cannot compile/run: Unknown file type", vim.log.levels.WARN)
+    return
+  end
+  
+  -- Show what we're doing
+  vim.notify("🔨 Compiling/Running " .. lang_name .. " code...", vim.log.levels.INFO)
+  
+  -- Save file first
+  vim.cmd("write")
+  
+  -- Execute the command (remove :! prefix for vim.cmd)
+  local cmd = compile_cmd:gsub("^:!", "!")
+  vim.cmd(cmd)
+end, { desc = "Compile and run current file" })
 
 -- ========== STARTUP MESSAGE ==========
 
