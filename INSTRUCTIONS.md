@@ -429,7 +429,7 @@ def _get_compile_command(self, language: str) -> Tuple[str, str]:
 local function get_compile_command()
   local current_file = vim.fn.expand("%:t")  -- Current file name
   local workspace_path = vim.fn.getcwd()
-  
+
   -- Try to detect the code file if we're in lesson
   local code_file = current_file
   if current_file == "lesson.md" or current_file == "" then
@@ -457,7 +457,7 @@ local function get_compile_command()
       end
     end
   end
-  
+
   -- Detect language and return proper compile/run command
   if code_file:match("%.cpp$") or code_file:match("%.cc$") then
     return ":!g++ % -o main && ./main", "C++"

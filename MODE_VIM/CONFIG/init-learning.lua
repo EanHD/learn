@@ -916,7 +916,7 @@ end, { desc = "Show lesson info" })
 local function get_compile_command()
   local current_file = vim.fn.expand("%:t")  -- Current file name
   local workspace_path = vim.fn.getcwd()
-  
+
   -- Try to detect the code file if we're in lesson
   local code_file = current_file
   if current_file == "lesson.md" or current_file == "" then
@@ -943,7 +943,7 @@ local function get_compile_command()
       end
     end
   end
-  
+
   -- Detect language and return proper compile/run command
   if code_file:match("%.cpp$") or code_file:match("%.cc$") then
     return ":!g++ % -o main && ./main", "C++"
@@ -1104,13 +1104,13 @@ map("n", "<leader>r", function()
     vim.notify("⚠️  Cannot compile/run: Unknown file type", vim.log.levels.WARN)
     return
   end
-  
+
   -- Show what we're doing
   vim.notify("🔨 Compiling/Running " .. lang_name .. " code...", vim.log.levels.INFO)
-  
+
   -- Save file first
   vim.cmd("write")
-  
+
   -- Execute the command (remove :! prefix for vim.cmd)
   local cmd = compile_cmd:gsub("^:!", "!")
   vim.cmd(cmd)
