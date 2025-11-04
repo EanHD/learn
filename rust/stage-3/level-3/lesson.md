@@ -1,6 +1,6 @@
 # Level 3: Mathematical Problems
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 3: Problem to Pseudocode
@@ -25,22 +25,22 @@ Mathematical problems often require careful analysis of formulas and algorithms.
 **Read the problem below, then write pseudocode to solve it. Create a file called `mathematical_problems.md` with your pseudocode solution.**
 
 
-### How to Compile and Run
+### How to Run
 
 1. **Compile the code**:
    ```bash
    rustc hello.rs -o hello hello.rs
-   ```
+   ```rust
 
 2. **Run your program**:
    ```bash
    ./hello hello
-   ```
+   ```rust
 
 **Expected output:**
-```
+```rust
 Hello, World!
-```
+```rust
 
 ### Problem: Compound Interest Calculator
 
@@ -57,7 +57,7 @@ Create a program that calculates compound interest for savings accounts. The pro
 **Compound Interest Formula:**
 ```rust
 A = P(1 + r/n)^(nt)
-```
+```rust
 Where:
 - A = Final amount
 - P = Principal amount
@@ -90,7 +90,7 @@ Years: 3
 Compounding: Quarterly
 Final Amount: $1161.54
 Total Interest: $161.54
-```
+```rust
 
 ---
 
@@ -99,11 +99,11 @@ Total Interest: $161.54
 1. **Navigate to your working directory**:
    ```bash
    cd /path/to/your/folder
-   ```
+   ```rust
 2. **Create your pseudocode file**:
    ```bash
    touch mathematical_problems.md
-   ```
+   ```rust
 3. **Break down the formula** - Understand each component
 4. **Plan input validation** - Ensure reasonable values
 5. **Design calculations** - Step-by-step mathematical operations
@@ -164,7 +164,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 ```rust
 A = P(1 + r/n)^(nt)
 Total Interest = A - P
-```
+```rust
 
 ### Sample Pseudocode Solution
 
@@ -221,7 +221,7 @@ START PROGRAM
     DISPLAY "Final Amount: $" + final_amount
     DISPLAY "Total Interest: $" + total_interest
 END PROGRAM
-```
+```rust
 
 ### Analysis Breakdown
 
@@ -263,3 +263,59 @@ END PROGRAM
  **Great! You analyzed a complex mathematical problem!** 
 
 *Next: Interactive Problems!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```rs
+fn main() {
+    println!("Hello, World!");
+}
+
+```rs
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard rust conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

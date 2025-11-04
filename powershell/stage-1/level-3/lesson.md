@@ -1,59 +1,52 @@
-# Level 3: Basic Math
+# Level 3: Basic Math Operations
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
-
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.ps1` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 1: Copying Code
 
 ### Today's Mission
 
-Now that you've learned the basics, let's explore mathematical operations! This fundamental concept is used in almost every program you'll write.
+Master arithmetic operations and use the language as your calculator.
+
+---
 
 ### Learning Goals
 
-- Understand how to use basic math in Powershell
-- Learn the syntax specific to Powershell
-- Practice implementing basic math
-- See real-world use cases
+- Learn all basic arithmetic operators (+, -, *, /, %)
+- Understand operator precedence (order of operations)
+- Practice mathematical expressions
+- Work with both integers and floating-point numbers
+
+---
 
 ### Your Task
 
-We'll focus on understanding how basic math works in Powershell. For now, copy the provided code and run it to see the results. Don't worry if you don't understand every detail yet - that comes with practice!
+**Copy the following code EXACTLY as shown below into `main.ps1`**
 
-### Important Note
+```powershell
+$a = 15
+$b = 4
 
-At this stage, we focus on copying and understanding. You'll start writing your own code in Stage 2 (Pseudocode to Code).
+Write-Host "Addition: $a + $b = $($a + $b)"
+Write-Host "Subtraction: $a - $b = $($a - $b)"
+Write-Host "Multiplication: $a × $b = $($a * $b)"
+Write-Host "Division: $a / $b = $($a / $b)"
+Write-Host "Remainder: $a % $b = $($a % $b)"
 
-### How to Execute
-
-```bash
-powershell program.ps1
+$x = 15.0
+$y = 4.0
+Write-Host "Precise Division: $x / $y = $($x / $y)"
 ```
+
+---
 
 ### Success Checklist
 
-- [ ] Created the file
+- [ ] Created a file named `main.ps1`
 - [ ] Copied the code exactly as shown
-- [ ] Program executed without errors
-- [ ] Understood what the output represents
-
----
-
-### What's Next?
-
-In Stage 2, you'll take what you learned here and start translating logic into code. The progression is:
-
-1. **Stage 1 (Copying)** - Get familiar with syntax
-2. **Stage 2 (Pseudocode→Code)** - Translate plain English to code
-3. **Stage 3 (Problem→Pseudocode)** - Write the logic first
-4. **Stage 4 (Full Problem Solving)** - Complete independence
-5. **Stage 5 (Capstone)** - Real-world projects
-
----
-
-## Need Help with Vim?
-
-Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim commands!
+- [ ] Ran the program successfully
+- [ ] Understood the basic concepts
+- [ ] Experimented with small modifications
 
 ---
 
@@ -61,23 +54,65 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ---
 
-## ANSWER KEY (No cheating until you've tried!)
+## ANSWER KEY (Study after attempting!)
 
-### Code Breakdown
+### The Complete Code
 
-> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+```powershell
+$a = 15
+$b = 4
+
+Write-Host "Addition: $a + $b = $($a + $b)"
+Write-Host "Subtraction: $a - $b = $($a - $b)"
+Write-Host "Multiplication: $a × $b = $($a * $b)"
+Write-Host "Division: $a / $b = $($a / $b)"
+Write-Host "Remainder: $a % $b = $($a % $b)"
+
+$x = 15.0
+$y = 4.0
+Write-Host "Precise Division: $x / $y = $($x / $y)"
+```
+
+### What This Code Does
+
+This program demonstrates basic math operations in PowerShell.
 
 ### Key Concepts
 
-- Review the code structure specific to Powershell
-- Understand the execution flow
-- Learn common pitfalls and solutions
+- **Arithmetic Operators**: `+`, `-`, `*`, `/`, `%`
+- **Integer Division**: Division with whole numbers
+- **Floating-Point Division**: Division with decimals for precise results
+- **Operator Precedence**: Order of operations (PEMDAS)
 
-### Next Steps
+### Line-by-Line Breakdown
 
-Practice the code and experiment with variations!
+The code performs basic mathematical operations:
+
+1. **Variable Declaration**: Store two numbers to work with
+2. **Addition**: Adding two numbers together
+3. **Subtraction**: Finding the difference between numbers
+4. **Multiplication**: Multiplying numbers
+5. **Division**: Dividing numbers (integer division)
+6. **Remainder/Modulus**: Finding the remainder after division
+7. **Precise Division**: Using decimals for accurate results
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Syntax error | Typo in code | Double-check spelling and punctuation |
+| Type error | Wrong data type | Ensure variables are correct type |
+| Runtime error | Code runs but crashes | Check your logic and data flow |
+
+### Bonus Knowledge
+
+- The modulus operator (%) is useful for checking if numbers are even or odd
+- Integer division truncates (removes) decimal places
+- Always use floating-point numbers when precision matters
+- Order of operations: Parentheses → Multiply/Divide → Add/Subtract
 
 ---
 
-**Congratulations! Keep coding!**
+**Excellent work! You've mastered basic math operations!**
 
+*Continue to the next level to keep building your skills!*

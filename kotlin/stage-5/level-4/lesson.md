@@ -1,6 +1,6 @@
 # Level 4: Data Visualization
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window**. The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window**. The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 5: Advanced Projects
 
@@ -55,22 +55,22 @@ Create a production-ready Data Visualization using Kotlin with:
 ---
 
 
-### How to Compile and Run
+### How to Run
 
 1. **Compile the code**:
    ```bash
    kotlinc hello.kt
-   ```
+   ```kotlin
 
 2. **Run your program**:
    ```bash
    kotlin hello
-   ```
+   ```kotlin
 
 **Expected output:**
-```
+```kotlin
 Hello, World!
-```
+```kotlin
 
 ### How to Approach This
 
@@ -210,3 +210,59 @@ Remember: Good code is code that others (including future you) can understand an
 **Excellent work on this advanced challenge!**
 
 *Continue building your skills - you're doing great!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```kt
+fun main() {
+    println("Hello, World!")
+}
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard kotlin conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

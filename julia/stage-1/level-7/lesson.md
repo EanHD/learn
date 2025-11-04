@@ -1,6 +1,6 @@
 # Level 7: Functions
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.jl` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.jl` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 1: Copying Code
 
@@ -50,7 +50,7 @@ sum_result = add(5, 3)
 println("5 + 3 = $sum_result")
 
 println("5! = $(factorial_calc(5))")
-```
+```julia
 
 ---
 
@@ -59,17 +59,17 @@ println("5! = $(factorial_calc(5))")
 **Method 1 (Vim - Recommended):**
 ```julia
 <Space>r
-```
+```julia
 
 **Method 2 (Terminal):**
 ```bash
 julia main.jl
-```
+```julia
 
 **Expected output:**
-```
+```julia
 Result: 15
-```
+```julia
 
 
 ---

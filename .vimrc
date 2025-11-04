@@ -72,6 +72,16 @@ syntax on               " Enable syntax highlighting
 set background=dark     " Dark background
 
 " ============================================================================
+" TERMINAL OUTPUT & SHELL SETTINGS
+" ============================================================================
+
+" Ensure proper terminal output flushing for shell commands
+set shell=/bin/bash
+set shellcmdflag=-ic
+set shellredir=>
+set term=xterm-256color
+
+" ============================================================================
 " SPLIT WINDOW CONFIGURATION (FOR VIM LESSON MODE)
 " ============================================================================
 
@@ -102,3 +112,105 @@ function! DisplayLearningTips()
   echo "   • gg / G       → Jump to top/bottom"
   echo ""
 endfunction
+
+" ============================================================================
+" LANGUAGE-SPECIFIC RUN COMMANDS
+" ============================================================================
+
+function! DetectLanguage()
+    let current_file = expand('%:p')
+    if &filetype != ''
+        return &filetype
+    endif
+    if current_file =~ '/python/'
+        return 'python'
+    elseif current_file =~ '/java/'
+        return 'java'
+    elseif current_file =~ '/javascript/'
+        return 'javascript'
+    elseif current_file =~ '/c-c++/'
+        return 'cpp'
+    elseif current_file =~ '/shell/'
+        return 'bash'
+    elseif current_file =~ '/sql/'
+        return 'sql'
+    elseif current_file =~ '/go/'
+        return 'go'
+    elseif current_file =~ '/rust/'
+        return 'rust'
+    elseif current_file =~ '/php/'
+        return 'php'
+    elseif current_file =~ '/r/'
+        return 'r'
+    elseif current_file =~ '/julia/'
+        return 'julia'
+    elseif current_file =~ '/typescript/'
+        return 'typescript'
+    elseif current_file =~ '/lua/'
+        return 'lua'
+    elseif current_file =~ '/powershell/'
+        return 'powershell'
+    elseif current_file =~ '/zig/'
+        return 'zig'
+    elseif current_file =~ '/nosql/'
+        return 'nosql'
+    elseif current_file =~ '/csharp/'
+        return 'csharp'
+    elseif current_file =~ '/dart/'
+        return 'dart'
+    elseif current_file =~ '/kotlin/'
+        return 'kotlin'
+    elseif current_file =~ '/swift/'
+        return 'swift'
+    endif
+    return 'unknown'
+endfunction
+
+function! GetRunCommand()
+    let lang = DetectLanguage()
+    let commands = {
+        \ 'python': 'python3 main.py',
+        \ 'java': 'javac Main.java && java Main',
+        \ 'javascript': 'node main.js',
+        \ 'cpp': 'make run',
+        \ 'c': 'make run',
+        \ 'bash': 'bash main.sh',
+        \ 'sh': 'bash main.sh',
+        \ 'sql': 'sqlite3 < main.sql',
+        \ 'go': 'go run main.go',
+        \ 'rust': 'cargo run --release',
+        \ 'php': 'php main.php',
+        \ 'r': 'Rscript main.r',
+        \ 'julia': 'julia main.jl',
+        \ 'typescript': 'ts-node main.ts',
+        \ 'lua': 'lua main.lua',
+        \ 'powershell': 'pwsh ./main.ps1',
+        \ 'zig': 'zig build run',
+        \ 'nosql': 'mongo < main.js',
+        \ 'csharp': 'dotnet run',
+        \ 'dart': 'dart main.dart',
+        \ 'kotlin': 'kotlin -J-Xms128m -J-Xmx768m MainKt',
+        \ 'swift': 'swift main.swift',
+        \ }
+    return get(commands, lang, 'echo "No run command defined"')
+endfunction
+
+function! ShowDynamicHelp()
+    let run_cmd = GetRunCommand()
+    let lang = DetectLanguage()
+    echo ""
+    echo "=== " . toupper(lang) . " LESSON HELP ==="
+    echo ""
+    echo "RUN CODE: :!" . run_cmd
+    echo "or use:   <Space>r"
+    echo ""
+    echo "NAVIGATION:"
+    echo "  <Space>n/p    - Next/Previous lesson"
+    echo "  <Space>h      - Show this help"
+    echo "  Ctrl+h/l      - Switch windows"
+    echo ""
+endfunction
+
+" Run command mapping
+nnoremap <leader>r :execute '!'.GetRunCommand()<CR>
+nnoremap <leader>h :call ShowDynamicHelp()<CR>

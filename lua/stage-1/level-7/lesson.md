@@ -1,6 +1,6 @@
 # Level 7: Functions - Code Organization
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -248,7 +248,7 @@ print("Counter 1: " .. counter1())  -- 2
 print("Counter 2: " .. counter2())  -- 1 (independent counter)
 print("Counter 1: " .. counter1())  -- 3
 print("Counter 2: " .. counter2())  -- 2
-```
+```lua
 
 ---
 
@@ -257,10 +257,10 @@ print("Counter 2: " .. counter2())  -- 2
 1. **Run your program**:
    ```bash
    lua functions.lua
-   ```
+   ```lua
 
 **Expected output:**
-```
+```lua
 === Basic Function Definition ===
 Hello! Welcome to the wonderful world of functions!
 Hello! Welcome to the wonderful world of functions!
@@ -318,7 +318,7 @@ Counter 1: 2
 Counter 2: 1
 Counter 1: 3
 Counter 2: 2
-```
+```lua
 
 ---
 
@@ -374,7 +374,7 @@ Counter 2: 2
 function greet_user()
     print("Hello! Welcome to the wonderful world of functions!")
 end
-```
+```lua
 - **`function`** = Keyword to declare a function
 - **`greet_user`** = Function name (follows variable naming rules)
 - **`()`** = Parameters (empty because no parameters needed)
@@ -385,14 +385,14 @@ end
 function greet_by_name(name)
     print("Hello, " .. name .. "! Nice to meet you!")
 end
-```
+```lua
 - **`name`** = Parameter (variable that receives the argument value)
 - **Parameters** = Variables defined in function declaration
 - **Arguments** = Actual values passed when calling the function
 
 ```lua
 local result1 = add_numbers(5, 3)
-```
+```lua
 - **`add_numbers(5, 3)`** = Function call with arguments
 - **`5` and `3`** = Arguments passed to the function
 - **Return value** = Value that function sends back
@@ -406,7 +406,7 @@ function add(a, b)
     return a + b
 end
 -- Can be called before or after the declaration
-```
+```lua
 
 **Function Expression:**
 ```lua
@@ -414,7 +414,7 @@ local add = function(a, b)
     return a + b
 end
 -- Must be defined before calling
-```
+```lua
 
 ### Multiple Return Values
 
@@ -427,7 +427,7 @@ end
 
 local x, y, z = get_coordinates()
 print(x, y, z)  -- Output: 10 20 30
-```
+```lua
 
 ### Function Parameters
 
@@ -437,7 +437,7 @@ function greet(name, greeting)
     greeting = greeting or "Hello"  -- Use "Hello" if greeting is nil
     print(greeting .. ", " .. name .. "!")
 end
-```
+```lua
 
 **Variadic parameters** (...):
 ```lua
@@ -449,14 +449,14 @@ function sum_all(...)
     end
     return total
 end
-```
+```lua
 
 ### Function Scope
 
 **Global scope:**
 ```lua
 local global_var = "I'm accessible in functions"
-```
+```lua
 
 **Local scope:**
 ```lua
@@ -465,7 +465,7 @@ function my_function()
     -- Can access both global_var and local_var
 end
 -- Can access global_var but NOT local_var
-```
+```lua
 
 **Important:** In Lua, variables are global by default unless declared `local`:
 
@@ -479,7 +479,7 @@ end
 function set_local()
     local intentionally_local = "This is local!"
 end
-```
+```lua
 
 ### Return Values
 
@@ -489,7 +489,7 @@ function say_hello()
     print("Hello!")
 end
 -- Returns 'nil' implicitly
-```
+```lua
 
 **Functions with return:**
 ```lua
@@ -497,7 +497,7 @@ function get_hello()
     return "Hello!"
 end
 -- Returns "Hello!" which can be stored in a variable
-```
+```lua
 
 **Multiple returns:**
 ```lua
@@ -506,7 +506,7 @@ function divide_with_remainder(a, b)
 end
 
 local quotient, remainder = divide_with_remainder(17, 5)  -- 3, 2
-```
+```lua
 
 ### Closures
 
@@ -524,7 +524,7 @@ local triple = create_multiplier(3)
 
 print(double(5))  -- Output: 10
 print(triple(5))  -- Output: 15
-```
+```lua
 
 ### Higher-Order Functions
 
@@ -542,7 +542,7 @@ function say_hello()
 end
 
 execute_twice(say_hello)  -- Will output "Hello!" twice
-```
+```lua
 
 ### Pure vs Impure Functions
 
@@ -553,7 +553,7 @@ execute_twice(say_hello)  -- Will output "Hello!" twice
 function add(a, b)
     return a + b  -- Pure function
 end
-```
+```lua
 
 **Impure function:**
 - May have side effects or depend on external state
@@ -563,7 +563,7 @@ function increment()
     count = count + 1  -- Modifies external variable
     return count
 end  -- Impure function
-```
+```lua
 
 ### Common Errors & Solutions
 
@@ -587,7 +587,7 @@ function send_notification(message) ... end
 -- Avoid - vague names
 function do_stuff() ... end
 function process() ... end
-```
+```lua
 
 **Use local variables:**
 ```lua
@@ -600,7 +600,7 @@ function calculate_total(items)
     end
     return total
 end
-```
+```lua
 
 **Function size:**
 - Keep functions focused on a single task
@@ -621,7 +621,7 @@ function process_order(order)
     -- ... other processing
     return total
 end
-```
+```lua
 
 ### Advanced Challenge (For the Brave!)
 
@@ -722,10 +722,71 @@ check_balance(taylor_account)
 
 print()
 get_transaction_history(alex_account)
-```
+```lua
 
 ---
 
  **Excellent work! You now understand how to organize code using functions - a fundamental skill for all programmers!** 
 
 *This completes Stage 1 of Lua learning! You've mastered the fundamentals of Lua programming. Great job!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```lua
+print("Hello, World!")
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard lua conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

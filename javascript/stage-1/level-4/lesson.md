@@ -1,6 +1,6 @@
 # Level 4: User Input
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -27,7 +27,7 @@ Now let's make our programs interactive! Today you'll learn how to get input fro
 
 ```bash
 npm install readline-sync
-```
+```javascript
 
 **Then copy the following code into a new file called `input.js`**
 
@@ -97,7 +97,7 @@ if (index > -1) {
 } else {
     console.log("You didn't select anything!");
 }
-```
+```javascript
 
 **Note:** If you don't want to install readline-sync, you can create a simpler version that demonstrates the concept without user interaction by replacing the input with preset values. Create an alternate version in `simple_input.js`:
 
@@ -151,7 +151,7 @@ if (answer.toLowerCase() === "paris") {
 } else {
     console.log("Not quite! The answer is Paris.");
 }
-```
+```javascript
 
 ---
 
@@ -161,17 +161,17 @@ if (answer.toLowerCase() === "paris") {
 1. **Install readline-sync** (if not already installed):
    ```bash
    npm install readline-sync
-   ```
+   ```java
 2. **Run your program**:
    ```bash
    node input.js
-   ```
+   ```java
 
 **For the simplified version (no installation needed):**
 1. **Run your program**:
    ```bash
    node simple_input.js
-   ```
+   ```java
 
 ---
 
@@ -229,7 +229,7 @@ if (answer.toLowerCase() === "paris") {
 
 ```javascript
 const readlineSync = require('readline-sync');
-```
+```javascript
 - **`const`** = Declares a constant (value that won't change)
 - **`require()`** = Imports external module functionality
 - **`'readline-sync'`** = The module name we want to import
@@ -237,14 +237,14 @@ const readlineSync = require('readline-sync');
 
 ```javascript
 let name = readlineSync.question("What's your name? ");
-```
+```javascript
 - **`readlineSync.question()`** = Method to get text input from user
 - **`"What's your name? "`** = Prompt message shown to user
 - **Returns a string** containing whatever the user typed
 
 ```javascript
 let num1 = parseFloat(readlineSync.question("Enter first number: "));
-```
+```javascript
 - **`parseFloat()`** = Converts string to floating-point number
 - **Necessary** because `readlineSync.question()` returns a string, but we want to do math
 - **`parseInt()`** = For integers (whole numbers only)
@@ -263,14 +263,14 @@ let num1 = parseFloat(readlineSync.question("Enter first number: "));
   </script>
 </body>
 </html>
-```
+```javascript
 
 **Command Line Arguments:**
 ```javascript
 // Access arguments passed to node: `node program.js arg1 arg2`
 let name = process.argv[2];  // First argument after filename
 console.log("Hello, " + name + "!");
-```
+```javascript
 
 ### Data Type Conversion
 
@@ -286,7 +286,7 @@ console.log(str1 + str2);  // Output: "53" (not 8!)
 let num1 = parseFloat("5");
 let num2 = parseFloat("3");
 console.log(num1 + num2);  // Output: 8
-```
+```javascript
 
 ### Error Handling for Input
 
@@ -301,7 +301,7 @@ if (isNaN(number)) {  // Check if it's Not-a-Number
 } else {
     console.log("You entered: " + number);
 }
-```
+```javascript
 
 ### readline-sync Methods
 
@@ -312,7 +312,7 @@ let name = readlineSync.question("Name: ");
 
 // Get text with masking (good for passwords)
 let password = readlineSync.question("Password: ", {hideEchoBack: true});
-```
+```javascript
 
 **Yes/No Questions:**
 ```javascript
@@ -323,7 +323,7 @@ if (continue) {
 } else {
     console.log("Exiting...");
 }
-```
+```javascript
 
 **Multiple Choice:**
 ```javascript
@@ -333,7 +333,7 @@ let index = readlineSync.keyInSelect(colors, 'Choose a color: ');
 if (index > -1) {  // -1 means no selection
     console.log("You chose: " + colors[index]);
 }
-```
+```javascript
 
 ### Date and Time in JavaScript
 
@@ -346,7 +346,7 @@ console.log(now);  // Full date/time
 let currentYear = now.getFullYear();  // 2025 (or current year)
 let currentMonth = now.getMonth() + 1;  // 0-11, so add 1 for 1-12
 let currentDay = now.getDate();  // 1-31
-```
+```javascript
 
 ### Common Errors & Solutions
 
@@ -371,7 +371,7 @@ if (isNaN(age) || age < 0 || age > 150) {
 } else {
     console.log("You are " + age + " years old");
 }
-```
+```javascript
 
 **Handle different string cases:**
 ```javascript
@@ -379,7 +379,7 @@ let answer = readlineSync.question("Yes or No? ");
 if (answer.toLowerCase() === "yes" || answer.toLowerCase() === "y") {
     console.log("You said yes!");
 }
-```
+```javascript
 
 ### Security Considerations
 
@@ -424,10 +424,71 @@ if (remaining > 0) {
 } else {
     console.log("You're spending more than you earn. Consider reducing expenses.");
 }
-```
+```javascript
 
 ---
 
  **Excellent work! You now know how to make interactive programs that respond to user input!** 
 
 *Ready for the next challenge? Let's make programs that make decisions!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```js
+console.log("Hello, World!");
+
+```js
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard javascript conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

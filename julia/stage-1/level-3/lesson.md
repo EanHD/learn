@@ -1,6 +1,6 @@
 # Level 3: Basic Math Operations
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.jl` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.jl` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 1: Copying Code
 
@@ -33,7 +33,7 @@ println("Multiplication: ", a * b)
 println("Division: ", a / b)
 println("Integer division: ", a ÷ b)
 println("Modulus: ", a % b)
-```
+```julia
 
 ---
 
@@ -42,20 +42,20 @@ println("Modulus: ", a % b)
 **Method 1 (Vim - Recommended):**
 ```julia
 <Space>r
-```
+```julia
 
 **Method 2 (Terminal):**
 ```bash
 julia main.jl
-```
+```julia
 
 **Expected output:**
-```
+```julia
 Sum: 13
 Difference: 7
 Product: 30
 Quotient: 3.33
-```
+```julia
 
 
 ---

@@ -1,6 +1,6 @@
 # Level 7: Capstone Project
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 4: Full Problem Solving
@@ -21,13 +21,13 @@
 
 ### Learning Goals
 
-- Comprehensive application development
-- System architecture and design patterns
-- Feature integration and modular design
-- Professional code organization
-- Advanced error handling and validation
-- User experience optimization
-- Documentation and maintenance
+- [ ] Comprehensive application development
+- [ ] System architecture and design patterns
+- [ ] Feature integration and modular design
+- [ ] Professional code organization
+- [ ] Advanced error handling and validation
+- [ ] User experience optimization
+- [ ] Documentation and maintenance
 
 ---
 
@@ -50,24 +50,24 @@
 ## Application Requirements
 
 ### Core Features
-- **Account Management**: Multi-account support with real-time balance tracking
-- **Transaction Intelligence**: Automatic categorization, duplicate detection, reconciliation
-- **Budget Intelligence**: AI-powered budget recommendations, variance alerts, forecasting
-- **Goal Management**: Complex financial goals with milestone tracking and visualization
-- **Financial Analytics**: Advanced trend analysis, predictive modeling, risk assessment
-- **Reporting Suite**: Custom report builder, automated distribution, historical analysis
-- **Data Integration**: CSV/QIF import, API connectivity, cloud synchronization
-- **Automation Engine**: Scheduled tasks, automated alerts, recurring transaction management
-- **Investment Suite**: Portfolio tracking, performance metrics, rebalancing alerts
-- **Tax Center**: Tax calculation engine, deduction optimizer, filing assistance
+- [ ] **Account Management**: Multi-account support with real-time balance tracking
+- [ ] **Transaction Intelligence**: Automatic categorization, duplicate detection, reconciliation
+- [ ] **Budget Intelligence**: AI-powered budget recommendations, variance alerts, forecasting
+- [ ] **Goal Management**: Complex financial goals with milestone tracking and visualization
+- [ ] **Financial Analytics**: Advanced trend analysis, predictive modeling, risk assessment
+- [ ] **Reporting Suite**: Custom report builder, automated distribution, historical analysis
+- [ ] **Data Integration**: CSV/QIF import, API connectivity, cloud synchronization
+- [ ] **Automation Engine**: Scheduled tasks, automated alerts, recurring transaction management
+- [ ] **Investment Suite**: Portfolio tracking, performance metrics, rebalancing alerts
+- [ ] **Tax Center**: Tax calculation engine, deduction optimizer, filing assistance
 
 ### Technical Requirements
-- Modular architecture with clean separation of concerns
-- Comprehensive data validation and error recovery
-- Efficient algorithms for large datasets
-- Secure data handling and privacy protection
-- Scalable design for future enhancements
-- Professional user interface with accessibility features
+- [ ] Modular architecture with clean separation of concerns
+- [ ] Comprehensive data validation and error recovery
+- [ ] Efficient algorithms for large datasets
+- [ ] Secure data handling and privacy protection
+- [ ] Scalable design for future enhancements
+- [ ] Professional user interface with accessibility features
 
 ---
 
@@ -101,7 +101,7 @@ typedef struct {
     AlertSystem *alerts;
     ImportExport *data_handler;
 } FinanceApplication;
-```
+```cpp
 
 ### Key Data Structures
 ```c
@@ -195,7 +195,7 @@ typedef struct {
     double alert_price_high;
     double alert_price_low;
 } Investment;
-```
+```cpp
 
 ### Advanced Features Structure
 ```c
@@ -232,7 +232,7 @@ typedef struct {
     RecurringTransaction recurring[100];
     int recurring_count;
 } AutomationRules;
-```
+```cpp
 
 ---
 
@@ -385,7 +385,7 @@ int validate_date(const char *date);
 void format_currency(char *buffer, double amount);
 
 # endif
-```
+```cpp
 
 ### Core Implementation File (finance_manager.c)
 ```c
@@ -394,7 +394,7 @@ void format_currency(char *buffer, double amount);
 // Account management functions
 int add_account(FinanceData *data, const char *name, AccountType type, const char *institution) {
     if (data->account_count >= MAX_ACCOUNTS) {
-        printf(" Maximum number of accounts reached!\n");
+        std::cout << " Maximum number of accounts reached!\n");
         return 0;
     }
 
@@ -408,7 +408,7 @@ int add_account(FinanceData *data, const char *name, AccountType type, const cha
     get_current_date(account->last_updated);
 
     data->account_count++;
-    printf(" Account '%s' added successfully!\n", name);
+    std::cout << " Account '%s' added successfully!\n", name);
     return 1;
 }
 
@@ -428,10 +428,10 @@ int update_account_balance(FinanceData *data, int account_id, double amount, Tra
 }
 
 void display_accounts(const FinanceData *data) {
-    printf("\n ACCOUNTS OVERVIEW\n");
-    printf("═══════════════════════════════════════════════════════════════\n");
-    printf("%-3s %-20s %-12s %-15s %-15s\n", "ID", "Name", "Type", "Balance", "Institution");
-    printf("───────────────────────────────────────────────────────────────\n");
+    std::cout << "\n ACCOUNTS OVERVIEW\n");
+    std::cout << "═══════════════════════════════════════════════════════════════\n");
+    std::cout << "%-3s %-20s %-12s %-15s %-15s\n", "ID", "Name", "Type", "Balance", "Institution");
+    std::cout << "───────────────────────────────────────────────────────────────\n");
 
     for (int i = 0; i < data->account_count; i++) {
         const Account *acc = &data->accounts[i];
@@ -444,7 +444,7 @@ void display_accounts(const FinanceData *data) {
         char balance_str[20];
         format_currency(balance_str, acc->balance);
         
-        printf("%-3d %-20s %-12s %-15s %-15s\n",
+        std::cout << "%-3d %-20s %-12s %-15s %-15s\n",
                acc->id, acc->name, type_str, balance_str, acc->institution);
     }
 }
@@ -453,7 +453,7 @@ void display_accounts(const FinanceData *data) {
 int add_transaction(FinanceData *data, const char *date, const char *description,
                    TransactionType type, double amount, int account_id, int category_id) {
     if (data->transaction_count >= MAX_TRANSACTIONS) {
-        printf(" Maximum number of transactions reached!\n");
+        std::cout << " Maximum number of transactions reached!\n");
         return 0;
     }
 
@@ -478,24 +478,24 @@ int add_transaction(FinanceData *data, const char *date, const char *description
     }
 
     data->transaction_count++;
-    printf(" Transaction added successfully!\n");
+    std::cout << " Transaction added successfully!\n");
     return 1;
 }
 
 void display_transactions(const FinanceData *data, int limit) {
     if (data->transaction_count == 0) {
-        printf(" No transactions found.\n");
+        std::cout << " No transactions found.\n");
         return;
     }
 
     int display_count = (limit > 0 && limit < data->transaction_count) ?
                        limit : data->transaction_count;
 
-    printf("\n RECENT TRANSACTIONS (showing %d of %d)\n", display_count, data->transaction_count);
-    printf("═══════════════════════════════════════════════════════════════════════════════\n");
-    printf("%-3s %-12s %-25s %-10s %-12s %-15s\n",
+    std::cout << "\n RECENT TRANSACTIONS (showing %d of %d)\n", display_count, data->transaction_count);
+    std::cout << "═══════════════════════════════════════════════════════════════════════════════\n");
+    std::cout << "%-3s %-12s %-25s %-10s %-12s %-15s\n",
            "ID", "Date", "Description", "Type", "Amount", "Account");
-    printf("───────────────────────────────────────────────────────────────────────────────\n");
+    std::cout << "───────────────────────────────────────────────────────────────────────────────\n");
 
     for (int i = data->transaction_count - display_count; i < data->transaction_count; i++) {
         const Transaction *trans = &data->transactions[i];
@@ -515,7 +515,7 @@ void display_transactions(const FinanceData *data, int limit) {
             }
         }
 
-        printf("%-3d %-12s %-25s %-10s %-12s %-15s\n",
+        std::cout << "%-3d %-12s %-25s %-10s %-12s %-15s\n",
                trans->id, trans->date, trans->description, type_str, amount_str, account_name);
     }
 }
@@ -532,7 +532,7 @@ double calculate_account_balance(const FinanceData *data, int account_id) {
 // Budget management functions
 int create_budget(FinanceData *data, const char *name, double amount, const char *period, int category_id) {
     if (data->budget_count >= MAX_BUDGETS) {
-        printf(" Maximum number of budgets reached!\n");
+        std::cout << " Maximum number of budgets reached!\n");
         return 0;
     }
 
@@ -548,7 +548,7 @@ int create_budget(FinanceData *data, const char *name, double amount, const char
     budget->rollover_unused = 0;
 
     data->budget_count++;
-    printf(" Budget '%s' created successfully!\n", name);
+    std::cout << " Budget '%s' created successfully!\n", name);
     return 1;
 }
 
@@ -572,14 +572,14 @@ void update_budget_spending(FinanceData *data) {
 
 void display_budget_status(const FinanceData *data) {
     if (data->budget_count == 0) {
-        printf(" No budgets created yet.\n");
+        std::cout << " No budgets created yet.\n");
         return;
     }
 
-    printf("\n BUDGET STATUS\n");
-    printf("═══════════════════════════════════════════════════════════════\n");
-    printf("%-20s %-12s %-12s %-12s %-10s\n", "Budget", "Allocated", "Spent", "Remaining", "Status");
-    printf("───────────────────────────────────────────────────────────────\n");
+    std::cout << "\n BUDGET STATUS\n");
+    std::cout << "═══════════════════════════════════════════════════════════════\n");
+    std::cout << "%-20s %-12s %-12s %-12s %-10s\n", "Budget", "Allocated", "Spent", "Remaining", "Status");
+    std::cout << "───────────────────────────────────────────────────────────────\n");
 
     for (int i = 0; i < data->budget_count; i++) {
         const Budget *budget = &data->budgets[i];
@@ -593,7 +593,7 @@ void display_budget_status(const FinanceData *data) {
         const char *status = (percent_used > 100.0) ? " Over" :
                            (percent_used > budget->alert_threshold) ? "  Warning" : " Good";
 
-        printf("%-20s %-12s %-12s %-12s %-10s\n",
+        std::cout << "%-20s %-12s %-12s %-12s %-10s\n",
                budget->name, allocated_str, spent_str, remaining_str, status);
     }
 }
@@ -601,7 +601,7 @@ void display_budget_status(const FinanceData *data) {
 // Goal management functions
 int add_goal(FinanceData *data, const char *name, double target, const char *target_date, double monthly) {
     if (data->goal_count >= MAX_GOALS) {
-        printf(" Maximum number of goals reached!\n");
+        std::cout << " Maximum number of goals reached!\n");
         return 0;
     }
 
@@ -618,7 +618,7 @@ int add_goal(FinanceData *data, const char *name, double target, const char *tar
     goal->achieved = 0;
 
     data->goal_count++;
-    printf(" Goal '%s' added successfully!\n", name);
+    std::cout << " Goal '%s' added successfully!\n", name);
     return 1;
 }
 
@@ -632,7 +632,7 @@ void update_goal_progress(FinanceData *data, int goal_id, double amount) {
             if (data->goals[i].current_amount >= data->goals[i].target_amount && !data->goals[i].achieved) {
                 data->goals[i].achieved = 1;
                 get_current_date(data->goals[i].achieved_date);
-                printf(" Goal '%s' achieved!\n", data->goals[i].name);
+                std::cout << " Goal '%s' achieved!\n", data->goals[i].name);
             }
             break;
         }
@@ -641,15 +641,15 @@ void update_goal_progress(FinanceData *data, int goal_id, double amount) {
 
 void display_goals(const FinanceData *data) {
     if (data->goal_count == 0) {
-        printf(" No goals set yet.\n");
+        std::cout << " No goals set yet.\n");
         return;
     }
 
-    printf("\n FINANCIAL GOALS\n");
-    printf("═══════════════════════════════════════════════════════════════════════════════\n");
-    printf("%-25s %-12s %-12s %-10s %-12s %-10s\n", 
+    std::cout << "\n FINANCIAL GOALS\n");
+    std::cout << "═══════════════════════════════════════════════════════════════════════════════\n");
+    std::cout << "%-25s %-12s %-12s %-10s %-12s %-10s\n", 
            "Goal", "Target", "Current", "Progress", "Monthly", "Status");
-    printf("───────────────────────────────────────────────────────────────────────────────\n");
+    std::cout << "───────────────────────────────────────────────────────────────────────────────\n");
 
     for (int i = 0; i < data->goal_count; i++) {
         const Goal *goal = &data->goals[i];
@@ -660,7 +660,7 @@ void display_goals(const FinanceData *data) {
 
         const char *status = goal->achieved ? " Achieved" : "⏳ In Progress";
 
-        printf("%-25s %-12s %-12s %6.1f%%    %-12s %-10s\n",
+        std::cout << "%-25s %-12s %-12s %6.1f%%    %-12s %-10s\n",
                goal->name, target_str, current_str, goal->progress_percentage, 
                monthly_str, status);
     }
@@ -670,7 +670,7 @@ void display_goals(const FinanceData *data) {
 int add_investment(FinanceData *data, const char *symbol, const char *name,
                   double shares, double avg_cost, double current_price) {
     if (data->investment_count >= MAX_INVESTMENTS) {
-        printf(" Maximum number of investments reached!\n");
+        std::cout << " Maximum number of investments reached!\n");
         return 0;
     }
 
@@ -689,21 +689,21 @@ int add_investment(FinanceData *data, const char *symbol, const char *name,
     inv->alerts_enabled = 0;
 
     data->investment_count++;
-    printf(" Investment '%s' added successfully!\n", name);
+    std::cout << " Investment '%s' added successfully!\n", name);
     return 1;
 }
 
 void display_portfolio(const FinanceData *data) {
     if (data->investment_count == 0) {
-        printf(" No investments in portfolio.\n");
+        std::cout << " No investments in portfolio.\n");
         return;
     }
 
-    printf("\n INVESTMENT PORTFOLIO\n");
-    printf("═══════════════════════════════════════════════════════════════════════════════\n");
-    printf("%-8s %-20s %-8s %-12s %-12s %-10s %-10s\n",
+    std::cout << "\n INVESTMENT PORTFOLIO\n");
+    std::cout << "═══════════════════════════════════════════════════════════════════════════════\n");
+    std::cout << "%-8s %-20s %-8s %-12s %-12s %-10s %-10s\n",
            "Symbol", "Name", "Shares", "Avg Cost", "Curr Price", "Value", "Gain/Loss");
-    printf("───────────────────────────────────────────────────────────────────────────────\n");
+    std::cout << "───────────────────────────────────────────────────────────────────────────────\n");
 
     double total_value = 0.0, total_gain_loss = 0.0;
 
@@ -715,7 +715,7 @@ void display_portfolio(const FinanceData *data) {
         format_currency(value_str, inv->current_value);
         format_currency(gain_str, inv->gain_loss);
 
-        printf("%-8s %-20s %6.2f   %-12s %-12s %-10s %-10s\n",
+        std::cout << "%-8s %-20s %6.2f   %-12s %-12s %-10s %-10s\n",
                inv->symbol, inv->name, inv->shares_owned, cost_str, price_str, 
                value_str, gain_str);
 
@@ -723,20 +723,20 @@ void display_portfolio(const FinanceData *data) {
         total_gain_loss += inv->gain_loss;
     }
 
-    printf("───────────────────────────────────────────────────────────────────────────────\n");
+    std::cout << "───────────────────────────────────────────────────────────────────────────────\n");
     char total_value_str[20], total_gain_str[20];
     format_currency(total_value_str, total_value);
     format_currency(total_gain_str, total_gain_loss);
-    printf("%-49s %-10s %-10s\n", "TOTALS:", total_value_str, total_gain_str);
+    std::cout << "%-49s %-10s %-10s\n", "TOTALS:", total_value_str, total_gain_str);
 }
 
 // Analysis and reporting functions
 void generate_financial_report(const FinanceData *data) {
-    printf(" Generating Comprehensive Financial Report...\n");
+    std::cout << " Generating Comprehensive Financial Report...\n");
 
     FILE *report = fopen("financial_report.txt", "w");
     if (report == NULL) {
-        printf(" Could not create report file\n");
+        std::cout << " Could not create report file\n");
         return;
     }
 
@@ -807,12 +807,12 @@ void generate_financial_report(const FinanceData *data) {
     }
 
     fclose(report);
-    printf(" Comprehensive financial report generated: financial_report.txt\n");
+    std::cout << " Comprehensive financial report generated: financial_report.txt\n");
 }
 
 void analyze_spending_patterns(const FinanceData *data) {
-    printf("\n SPENDING PATTERN ANALYSIS\n");
-    printf("═══════════════════════════════\n");
+    std::cout << "\n SPENDING PATTERN ANALYSIS\n");
+    std::cout << "═══════════════════════════════\n");
 
     // Calculate monthly spending trends
     double monthly_totals[12] = {0};
@@ -834,13 +834,13 @@ void analyze_spending_patterns(const FinanceData *data) {
         }
     }
 
-    printf("Monthly Spending Summary:\n");
+    std::cout << "Monthly Spending Summary:\n");
     const char *months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
                            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
     
     for (int i = 0; i < 12; i++) {
         if (transaction_counts[i] > 0) {
-            printf("%s: $%.2f (%d transactions)\n", 
+            std::cout << "%s: $%.2f (%d transactions)\n", 
                    months[i], monthly_totals[i], transaction_counts[i]);
         }
     }
@@ -857,15 +857,15 @@ void analyze_spending_patterns(const FinanceData *data) {
     
     if (months_with_data > 0) {
         avg_monthly /= months_with_data;
-        printf("\nAverage Monthly Spending: $%.2f\n", avg_monthly);
+        std::cout << "\nAverage Monthly Spending: $%.2f\n", avg_monthly);
         
         // Simple personality analysis
         if (avg_monthly < 1000) {
-            printf(" Spending Personality: Conservative spender\n");
+            std::cout << " Spending Personality: Conservative spender\n");
         } else if (avg_monthly < 3000) {
-            printf(" Spending Personality: Moderate spender\n");
+            std::cout << " Spending Personality: Moderate spender\n");
         } else {
-            printf(" Spending Personality: High spender\n");
+            std::cout << " Spending Personality: High spender\n");
         }
     }
 }
@@ -874,7 +874,7 @@ void analyze_spending_patterns(const FinanceData *data) {
 int save_financial_data(const FinanceData *data) {
     FILE *file = fopen(data->data_file, "wb");
     if (file == NULL) {
-        printf(" Error saving data!\n");
+        std::cout << " Error saving data!\n");
         return 0;
     }
 
@@ -901,14 +901,14 @@ int save_financial_data(const FinanceData *data) {
     fwrite(data->investments, sizeof(Investment), data->investment_count, file);
 
     fclose(file);
-    printf(" Financial data saved successfully!\n");
+    std::cout << " Financial data saved successfully!\n");
     return 1;
 }
 
 int load_financial_data(FinanceData *data) {
     FILE *file = fopen(data->data_file, "rb");
     if (file == NULL) {
-        printf(" No existing data found. Starting fresh!\n");
+        std::cout << " No existing data found. Starting fresh!\n");
         return 0;
     }
 
@@ -935,32 +935,32 @@ int load_financial_data(FinanceData *data) {
     fread(data->investments, sizeof(Investment), data->investment_count, file);
 
     fclose(file);
-    printf(" Financial data loaded successfully!\n");
+    std::cout << " Financial data loaded successfully!\n");
     return 1;
 }
 
 // User interface functions
 void display_main_menu(void) {
     clear_screen();
-    printf("╔══════════════════════════════════════════════╗\n");
-    printf("║       COMPREHENSIVE FINANCE MANAGER        ║\n");
-    printf("╠══════════════════════════════════════════════╣\n");
-    printf("║ 1.  Dashboard                             ║\n");
-    printf("║ 2.  Account Management                    ║\n");
-    printf("║ 3.  Transaction Tracking                  ║\n");
-    printf("║ 4.  Budget Planning                       ║\n");
-    printf("║ 5.  Goal Setting                          ║\n");
-    printf("║ 6.  Investment Portfolio                  ║\n");
-    printf("║ 7.  Reports & Analytics                   ║\n");
-    printf("║ 8.  Data Management                       ║\n");
-    printf("║ 9.  Exit                                  ║\n");
-    printf("╚══════════════════════════════════════════════╝\n");
-    printf("Enter your choice (1-9): ");
+    std::cout << "╔══════════════════════════════════════════════╗\n");
+    std::cout << "║       COMPREHENSIVE FINANCE MANAGER        ║\n");
+    std::cout << "╠══════════════════════════════════════════════╣\n");
+    std::cout << "║ 1.  Dashboard                             ║\n");
+    std::cout << "║ 2.  Account Management                    ║\n");
+    std::cout << "║ 3.  Transaction Tracking                  ║\n");
+    std::cout << "║ 4.  Budget Planning                       ║\n");
+    std::cout << "║ 5.  Goal Setting                          ║\n");
+    std::cout << "║ 6.  Investment Portfolio                  ║\n");
+    std::cout << "║ 7.  Reports & Analytics                   ║\n");
+    std::cout << "║ 8.  Data Management                       ║\n");
+    std::cout << "║ 9.  Exit                                  ║\n");
+    std::cout << "╚══════════════════════════════════════════════╝\n");
+    std::cout << "Enter your choice (1-9): ");
 }
 
 void display_dashboard(const FinanceData *data) {
-    printf("\n FINANCIAL DASHBOARD\n");
-    printf("════════════════════════\n");
+    std::cout << "\n FINANCIAL DASHBOARD\n");
+    std::cout << "════════════════════════\n");
 
     // Calculate key metrics
     double total_balance = 0.0, total_debt = 0.0;
@@ -976,16 +976,16 @@ void display_dashboard(const FinanceData *data) {
     char net_worth_str[20];
     format_currency(net_worth_str, net_worth);
 
-    printf("Net Worth: %s\n", net_worth_str);
-    printf("Total Accounts: %d\n", data->account_count);
-    printf("Active Budgets: %d\n", data->budget_count);
-    printf("Financial Goals: %d\n", data->goal_count);
-    printf("Investments: %d\n", data->investment_count);
-    printf("Total Transactions: %d\n", data->transaction_count);
+    std::cout << "Net Worth: %s\n", net_worth_str);
+    std::cout << "Total Accounts: %d\n", data->account_count);
+    std::cout << "Active Budgets: %d\n", data->budget_count);
+    std::cout << "Financial Goals: %d\n", data->goal_count);
+    std::cout << "Investments: %d\n", data->investment_count);
+    std::cout << "Total Transactions: %d\n", data->transaction_count);
 
     // Quick insights
-    printf("\n QUICK INSIGHTS\n");
-    printf("═══════════════════\n");
+    std::cout << "\n QUICK INSIGHTS\n");
+    std::cout << "═══════════════════\n");
     
     if (data->budget_count > 0) {
         int budgets_on_track = 0;
@@ -994,7 +994,7 @@ void display_dashboard(const FinanceData *data) {
                                                     data->budgets[i].budgeted_amount);
             if (utilization <= 100.0) budgets_on_track++;
         }
-        printf("• %d/%d budgets on track\n", budgets_on_track, data->budget_count);
+        std::cout << "• %d/%d budgets on track\n", budgets_on_track, data->budget_count);
     }
 
     if (data->goal_count > 0) {
@@ -1002,13 +1002,13 @@ void display_dashboard(const FinanceData *data) {
         for (int i = 0; i < data->goal_count; i++) {
             if (data->goals[i].achieved) goals_achieved++;
         }
-        printf("• %d/%d goals achieved\n", goals_achieved, data->goal_count);
+        std::cout << "• %d/%d goals achieved\n", goals_achieved, data->goal_count);
     }
 
     if (net_worth > 0) {
-        printf("• Positive net worth! \n");
+        std::cout << "• Positive net worth! \n");
     } else {
-        printf("• Working towards positive net worth \n");
+        std::cout << "• Working towards positive net worth \n");
     }
 }
 
@@ -1053,7 +1053,7 @@ void format_currency(char *buffer, double amount) {
         sprintf(buffer, "$%.2f", amount);
     }
 }
-```
+```cpp
 
 ### Main Program (main.c)
 ```c
@@ -1073,9 +1073,9 @@ int main() {
     // Load existing data
     load_financial_data(&finance_data);
 
-    printf(" Comprehensive Personal Finance Manager\n");
-    printf("==========================================\n");
-    printf("Welcome to your complete financial management solution!\n\n");
+    std::cout << " Comprehensive Personal Finance Manager\n");
+    std::cout << "==========================================\n");
+    std::cout << "Welcome to your complete financial management solution!\n\n");
 
     int running = 1;
     while (running) {
@@ -1085,25 +1085,25 @@ int main() {
         switch (choice) {
             case 1: { // Dashboard
                 display_dashboard(&finance_data);
-                printf("\nPress Enter to continue...");
+                std::cout << "\nPress Enter to continue...");
                 getchar(); getchar();
                 break;
             }
 
             case 2: { // Account Management
-                printf("\n Account Management\n");
-                printf("1. Add Account\n");
-                printf("2. View Accounts\n");
-                printf("Enter choice: ");
+                std::cout << "\n Account Management\n");
+                std::cout << "1. Add Account\n");
+                std::cout << "2. View Accounts\n");
+                std::cout << "Enter choice: ");
                 int acc_choice = get_user_choice();
 
                 if (acc_choice == 1) {
                     char name[100], institution[100];
                     int type_choice;
                     
-                    printf("Enter account name: ");
+                    std::cout << "Enter account name: ");
                     scanf(" %[^\n]", name);
-                    printf("Account type (1-Checking, 2-Savings, 3-Credit Card, 4-Investment, 5-Loan, 6-Retirement): ");
+                    std::cout << "Account type (1-Checking, 2-Savings, 3-Credit Card, 4-Investment, 5-Loan, 6-Retirement): ");
                     scanf("%d", &type_choice);
                     
                     AccountType type;
@@ -1114,10 +1114,10 @@ int main() {
                         case 4: type = INVESTMENT; break;
                         case 5: type = LOAN; break;
                         case 6: type = RETIREMENT; break;
-                        default: printf("Invalid type!\n"); continue;
+                        default: std::cout << "Invalid type!\n"); continue;
                     }
                     
-                    printf("Enter institution: ");
+                    std::cout << "Enter institution: ");
                     scanf(" %[^\n]", institution);
                     
                     add_account(&finance_data, name, type, institution);
@@ -1125,16 +1125,16 @@ int main() {
                     display_accounts(&finance_data);
                 }
                 
-                printf("\nPress Enter to continue...");
+                std::cout << "\nPress Enter to continue...");
                 getchar(); getchar();
                 break;
             }
 
             case 3: { // Transaction Tracking
-                printf("\n Transaction Management\n");
-                printf("1. Add Transaction\n");
-                printf("2. View Transactions\n");
-                printf("Enter choice: ");
+                std::cout << "\n Transaction Management\n");
+                std::cout << "1. Add Transaction\n");
+                std::cout << "2. View Transactions\n");
+                std::cout << "Enter choice: ");
                 int trans_choice = get_user_choice();
 
                 if (trans_choice == 1) {
@@ -1142,19 +1142,19 @@ int main() {
                     int type_choice, account_id, category_id;
                     double amount;
                     
-                    printf("Enter date (YYYY-MM-DD): ");
+                    std::cout << "Enter date (YYYY-MM-DD): ");
                     scanf("%s", date);
-                    printf("Enter description: ");
+                    std::cout << "Enter description: ");
                     scanf(" %[^\n]", description);
-                    printf("Transaction type (1-Income, 2-Expense, 3-Transfer): ");
+                    std::cout << "Transaction type (1-Income, 2-Expense, 3-Transfer): ");
                     scanf("%d", &type_choice);
                     
                     TransactionType type = (type_choice == 1) ? INCOME : 
                                           (type_choice == 2) ? EXPENSE : TRANSFER;
                     
-                    printf("Enter amount: $");
+                    std::cout << "Enter amount: $");
                     scanf("%lf", &amount);
-                    printf("Enter account ID: ");
+                    std::cout << "Enter account ID: ");
                     scanf("%d", &account_id);
                     
                     // For simplicity, use category_id = 1 (would have category management)
@@ -1162,22 +1162,22 @@ int main() {
                     
                     add_transaction(&finance_data, date, description, type, amount, account_id, category_id);
                 } else if (trans_choice == 2) {
-                    printf("Enter number of transactions to view (0 for all): ");
+                    std::cout << "Enter number of transactions to view (0 for all): ");
                     int limit;
                     scanf("%d", &limit);
                     display_transactions(&finance_data, limit);
                 }
                 
-                printf("\nPress Enter to continue...");
+                std::cout << "\nPress Enter to continue...");
                 getchar(); getchar();
                 break;
             }
 
             case 4: { // Budget Planning
-                printf("\n Budget Management\n");
-                printf("1. Create Budget\n");
-                printf("2. View Budget Status\n");
-                printf("Enter choice: ");
+                std::cout << "\n Budget Management\n");
+                std::cout << "1. Create Budget\n");
+                std::cout << "2. View Budget Status\n");
+                std::cout << "Enter choice: ");
                 int budget_choice = get_user_choice();
 
                 if (budget_choice == 1) {
@@ -1185,11 +1185,11 @@ int main() {
                     double amount;
                     int category_id;
                     
-                    printf("Enter budget name: ");
+                    std::cout << "Enter budget name: ");
                     scanf(" %[^\n]", name);
-                    printf("Enter budgeted amount: $");
+                    std::cout << "Enter budgeted amount: $");
                     scanf("%lf", &amount);
-                    printf("Enter period (Monthly/Weekly): ");
+                    std::cout << "Enter period (Monthly/Weekly): ");
                     scanf("%s", period);
                     
                     // For simplicity, use category_id = 1
@@ -1201,71 +1201,71 @@ int main() {
                     display_budget_status(&finance_data);
                 }
                 
-                printf("\nPress Enter to continue...");
+                std::cout << "\nPress Enter to continue...");
                 getchar(); getchar();
                 break;
             }
 
             case 5: { // Goal Setting
-                printf("\n Goal Management\n");
-                printf("1. Add Goal\n");
-                printf("2. View Goals\n");
-                printf("3. Update Goal Progress\n");
-                printf("Enter choice: ");
+                std::cout << "\n Goal Management\n");
+                std::cout << "1. Add Goal\n");
+                std::cout << "2. View Goals\n");
+                std::cout << "3. Update Goal Progress\n");
+                std::cout << "Enter choice: ");
                 int goal_choice = get_user_choice();
 
                 if (goal_choice == 1) {
                     char name[200], target_date[11];
                     double target, monthly;
                     
-                    printf("Enter goal name: ");
+                    std::cout << "Enter goal name: ");
                     scanf(" %[^\n]", name);
-                    printf("Enter target amount: $");
+                    std::cout << "Enter target amount: $");
                     scanf("%lf", &target);
-                    printf("Enter target date (YYYY-MM-DD): ");
+                    std::cout << "Enter target date (YYYY-MM-DD): ");
                     scanf("%s", target_date);
-                    printf("Enter monthly contribution: $");
+                    std::cout << "Enter monthly contribution: $");
                     scanf("%lf", &monthly);
                     
                     add_goal(&finance_data, name, target, target_date, monthly);
                 } else if (goal_choice == 2) {
                     display_goals(&finance_data);
                 } else if (goal_choice == 3) {
-                    printf("Enter goal ID: ");
+                    std::cout << "Enter goal ID: ");
                     int goal_id;
                     scanf("%d", &goal_id);
-                    printf("Enter amount to add: $");
+                    std::cout << "Enter amount to add: $");
                     double amount;
                     scanf("%lf", &amount);
                     
                     update_goal_progress(&finance_data, goal_id, amount);
                 }
                 
-                printf("\nPress Enter to continue...");
+                std::cout << "\nPress Enter to continue...");
                 getchar(); getchar();
                 break;
             }
 
             case 6: { // Investment Portfolio
-                printf("\n Investment Management\n");
-                printf("1. Add Investment\n");
-                printf("2. View Portfolio\n");
-                printf("Enter choice: ");
+                std::cout << "\n Investment Management\n");
+                std::cout << "1. Add Investment\n");
+                std::cout << "2. View Portfolio\n");
+                std::cout << "Enter choice: ");
                 int inv_choice = get_user_choice();
 
                 if (inv_choice == 1) {
                     char symbol[10], name[100];
                     double shares, avg_cost, current_price;
                     
-                    printf("Enter symbol: ");
+                    std::cout << "Enter symbol: ");
                     scanf("%s", symbol);
-                    printf("Enter name: ");
+                    std::cout << "Enter name: ");
                     scanf(" %[^\n]", name);
-                    printf("Enter shares owned: ");
+                    std::cout << "Enter shares owned: ");
                     scanf("%lf", &shares);
-                    printf("Enter average cost per share: $");
+                    std::cout << "Enter average cost per share: $");
                     scanf("%lf", &avg_cost);
-                    printf("Enter current price per share: $");
+                    std::cout << "Enter current price per share: $");
                     scanf("%lf", &current_price);
                     
                     add_investment(&finance_data, symbol, name, shares, avg_cost, current_price);
@@ -1273,16 +1273,16 @@ int main() {
                     display_portfolio(&finance_data);
                 }
                 
-                printf("\nPress Enter to continue...");
+                std::cout << "\nPress Enter to continue...");
                 getchar(); getchar();
                 break;
             }
 
             case 7: { // Reports & Analytics
-                printf("\n Reports & Analytics\n");
-                printf("1. Generate Financial Report\n");
-                printf("2. Analyze Spending Patterns\n");
-                printf("Enter choice: ");
+                std::cout << "\n Reports & Analytics\n");
+                std::cout << "1. Generate Financial Report\n");
+                std::cout << "2. Analyze Spending Patterns\n");
+                std::cout << "Enter choice: ");
                 int report_choice = get_user_choice();
 
                 if (report_choice == 1) {
@@ -1291,17 +1291,17 @@ int main() {
                     analyze_spending_patterns(&finance_data);
                 }
                 
-                printf("\nPress Enter to continue...");
+                std::cout << "\nPress Enter to continue...");
                 getchar(); getchar();
                 break;
             }
 
             case 8: { // Data Management
-                printf("\n Data Management\n");
-                printf("1. Save Data\n");
-                printf("2. Load Data\n");
-                printf("3. Export to CSV\n");
-                printf("Enter choice: ");
+                std::cout << "\n Data Management\n");
+                std::cout << "1. Save Data\n");
+                std::cout << "2. Load Data\n");
+                std::cout << "3. Export to CSV\n");
+                std::cout << "Enter choice: ");
                 int data_choice = get_user_choice();
 
                 if (data_choice == 1) {
@@ -1312,30 +1312,30 @@ int main() {
                     export_to_csv(&finance_data, "finance_export.csv");
                 }
                 
-                printf("\nPress Enter to continue...");
+                std::cout << "\nPress Enter to continue...");
                 getchar(); getchar();
                 break;
             }
 
             case 9: { // Exit
                 save_financial_data(&finance_data);
-                printf("\n Thank you for using Comprehensive Finance Manager!\n");
-                printf("Your financial data has been saved.\n");
-                printf("Remember: Financial freedom starts with financial awareness! \n");
+                std::cout << "\n Thank you for using Comprehensive Finance Manager!\n");
+                std::cout << "Your financial data has been saved.\n");
+                std::cout << "Remember: Financial freedom starts with financial awareness! \n");
                 running = 0;
                 break;
             }
 
             default:
-                printf(" Invalid choice! Please select 1-9.\n");
-                printf("\nPress Enter to continue...");
+                std::cout << " Invalid choice! Please select 1-9.\n");
+                std::cout << "\nPress Enter to continue...");
                 getchar(); getchar();
         }
     }
 
     return 0;
 }
-```
+```cpp
 
 ---
 
@@ -1344,11 +1344,11 @@ int main() {
 ### Compilation Instructions
 ```bash
 # Compile the program
-gcc -o finance_manager main.c finance_manager.c
+g++ -o finance_manager main.c finance_manager.c
 
 # Run the program
 ./finance_manager
-```
+```cpp
 
 ### Test Scenarios
 1. **Setup**: Add checking and savings accounts
@@ -1360,7 +1360,7 @@ gcc -o finance_manager main.c finance_manager.c
 7. **Data**: Save and reload financial data
 
 ### Sample Usage Flow
-```
+```cpp
 === Main Menu ===
 1.  Dashboard
 ...
@@ -1374,7 +1374,7 @@ Enter account name: My Checking
 Account type (1-Checking, 2-Savings, 3-Credit Card, 4-Investment, 5-Loan, 6-Retirement): 1
 Enter institution: Bank of America
  Account 'My Checking' added successfully!
-```
+```cpp
 
 ---
 
@@ -1383,55 +1383,55 @@ Enter institution: Bank of America
 ### Key Features Implemented
 
 **Comprehensive Account Management:**
-- Multiple account types with different characteristics
-- Real-time balance tracking and updates
-- Account-specific features (credit limits, etc.)
+- [ ] Multiple account types with different characteristics
+- [ ] Real-time balance tracking and updates
+- [ ] Account-specific features (credit limits, etc.)
 
 **Advanced Transaction Processing:**
-- Smart categorization and tagging
-- Recurring transaction support
-- Transaction history and search
-- Automatic account balance updates
+- [ ] Smart categorization and tagging
+- [ ] Recurring transaction support
+- [ ] Transaction history and search
+- [ ] Automatic account balance updates
 
 **Intelligent Budgeting System:**
-- Multi-period budget support
-- Real-time spending tracking
-- Budget variance analysis
-- Automated budget alerts
+- [ ] Multi-period budget support
+- [ ] Real-time spending tracking
+- [ ] Budget variance analysis
+- [ ] Automated budget alerts
 
 **Goal Achievement Engine:**
-- Complex financial goal setting
-- Progress tracking and visualization
-- Achievement notifications
-- Goal prioritization
+- [ ] Complex financial goal setting
+- [ ] Progress tracking and visualization
+- [ ] Achievement notifications
+- [ ] Goal prioritization
 
 **Investment Portfolio Management:**
-- Multi-asset portfolio tracking
-- Performance calculation and analysis
-- Gain/loss tracking
-- Portfolio rebalancing alerts
+- [ ] Multi-asset portfolio tracking
+- [ ] Performance calculation and analysis
+- [ ] Gain/loss tracking
+- [ ] Portfolio rebalancing alerts
 
 ---
 
 ## Advanced Features Demonstrated
 
 ### Professional Architecture
-- **Modular Design**: Clean separation of concerns
-- **Data Persistence**: Binary file storage with recovery
-- **Error Handling**: Comprehensive validation and recovery
-- **Scalable Structure**: Designed for future enhancements
+- [ ] **Modular Design**: Clean separation of concerns
+- [ ] **Data Persistence**: Binary file storage with recovery
+- [ ] **Error Handling**: Comprehensive validation and recovery
+- [ ] **Scalable Structure**: Designed for future enhancements
 
 ### Financial Intelligence
-- **Trend Analysis**: Spending pattern recognition
-- **Predictive Modeling**: Future expense forecasting
-- **Risk Assessment**: Financial health evaluation
-- **Automated Insights**: AI-powered recommendations
+- [ ] **Trend Analysis**: Spending pattern recognition
+- [ ] **Predictive Modeling**: Future expense forecasting
+- [ ] **Risk Assessment**: Financial health evaluation
+- [ ] **Automated Insights**: AI-powered recommendations
 
 ### Enterprise Features
-- **Audit Trail**: Complete transaction history
-- **Data Export**: Multiple export formats
-- **Backup Systems**: Automated data protection
-- **Reporting Engine**: Custom report generation
+- [ ] **Audit Trail**: Complete transaction history
+- [ ] **Data Export**: Multiple export formats
+- [ ] **Backup Systems**: Automated data protection
+- [ ] **Reporting Engine**: Custom report generation
 
 ---
 
@@ -1464,49 +1464,49 @@ Enter institution: Bank of America
 ## Learning Outcomes
 
 **Technical Mastery:**
-- Large-scale application development
-- Complex system architecture design
-- Advanced data structures and algorithms
-- Professional code organization and documentation
-- Comprehensive error handling and validation
-- Scalable and maintainable software design
+- [ ] Large-scale application development
+- [ ] Complex system architecture design
+- [ ] Advanced data structures and algorithms
+- [ ] Professional code organization and documentation
+- [ ] Comprehensive error handling and validation
+- [ ] Scalable and maintainable software design
 
 **Domain Expertise:**
-- Financial systems and algorithms
-- Business logic implementation
-- User experience optimization
-- Data modeling and persistence
-- System integration and testing
-- Performance optimization
+- [ ] Financial systems and algorithms
+- [ ] Business logic implementation
+- [ ] User experience optimization
+- [ ] Data modeling and persistence
+- [ ] System integration and testing
+- [ ] Performance optimization
 
 **Professional Skills:**
-- Project planning and execution
-- Feature prioritization and implementation
-- Code quality and standards
-- Documentation and maintenance
-- User-centered design principles
-- Quality assurance and testing
+- [ ] Project planning and execution
+- [ ] Feature prioritization and implementation
+- [ ] Code quality and standards
+- [ ] Documentation and maintenance
+- [ ] User-centered design principles
+- [ ] Quality assurance and testing
 
 ---
 
 ## Code Walkthrough
 
 ### System Architecture Flow
-```
+```cpp
 User Interface Layer → Business Logic Layer → Data Access Layer → Persistence Layer
       ↓                        ↓                      ↓                    ↓
 Menu Navigation        Financial         Data Structures       File I/O
 & Input Handling     Calculations      & Memory Management   & Backup
-```
+```cpp
 
 ### Financial Processing Pipeline
-```
+```cpp
 Transaction Input → Validation → Categorization → Account Update → Budget Check → Goal Update → Analytics Update
       ↓                ↓            ↓              ↓              ↓            ↓            ↓
 Data Entry       Rule Validation  Smart Tagging  Balance Calc   Variance      Progress     Trend Analysis
 & Capture       & Constraint     & Learning     & Synchronization Analysis   Tracking    & Forecasting
 Checking       Enforcement      Algorithms     & Persistence                & Alerts
-```
+```cpp
 
 ---
 
@@ -1517,24 +1517,24 @@ Checking       Enforcement      Algorithms     & Persistence                & Al
 ## Implementation Notes
 
 ### Design Philosophy
-- **User-Centric**: Every feature designed around user needs
-- **Data Integrity**: Robust validation and consistency checks
-- **Scalability**: Architecture supports future growth
-- **Maintainability**: Clean, documented, modular code
-- **Reliability**: Comprehensive error handling and recovery
-- **Performance**: Efficient algorithms and data structures
+- [ ] **User-Centric**: Every feature designed around user needs
+- [ ] **Data Integrity**: Robust validation and consistency checks
+- [ ] **Scalability**: Architecture supports future growth
+- [ ] **Maintainability**: Clean, documented, modular code
+- [ ] **Reliability**: Comprehensive error handling and recovery
+- [ ] **Performance**: Efficient algorithms and data structures
 
 ### Financial Accuracy
-- **Precision Handling**: Careful floating-point calculations
-- **Currency Formatting**: Professional financial display
-- **Date Management**: Proper temporal data handling
-- **Audit Compliance**: Complete transaction traceability
+- [ ] **Precision Handling**: Careful floating-point calculations
+- [ ] **Currency Formatting**: Professional financial display
+- [ ] **Date Management**: Proper temporal data handling
+- [ ] **Audit Compliance**: Complete transaction traceability
 
 ### Enterprise Considerations
-- **Security**: Data protection and privacy considerations
-- **Backup Systems**: Multiple recovery mechanisms
-- **Logging**: Comprehensive activity tracking
-- **Monitoring**: System health and performance metrics
+- [ ] **Security**: Data protection and privacy considerations
+- [ ] **Backup Systems**: Multiple recovery mechanisms
+- [ ] **Logging**: Comprehensive activity tracking
+- [ ] **Monitoring**: System health and performance metrics
 
 ---
 
@@ -1547,3 +1547,81 @@ Checking       Enforcement      Algorithms     & Persistence                & Al
 **Your journey doesn't end here - continue learning, building projects, and pushing the boundaries of what you can create!** 
 
 *Remember: The best programmers are those who never stop learning and never stop creating!* 
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- [ ] Review each function
+- [ ] Understand the flow
+- [ ] Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- [ ] Main function: Entry point
+- [ ] Helper functions: Support logic
+
+
+### <div style="page-break-after: always;"></div>
+
+Answer Key
+
+Expected implementation provided.
+
+<div style="page-break-after: always;"></div>
+
+---
+
+## Answer Key
+
+### Complete Solution
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard C++ conventions with proper imports and main function
+2. **Output**: Uses std::cout to print messages to the console
+3. **Standard Library**: Includes iostream for input/output operations
+4. **Return Value**: Returns 0 to indicate successful execution
+5. **Best Practices**: Code is readable and uses C++ idioms
+
+### Testing Your Solution
+
+1. **Compile**: `g++ hello.cpp -o hello`
+2. **Run**: `./hello`
+3. **Expected Output**: `Hello, World!`
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
+| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+
+### Tips for Learning
+
+- C++ is a superset of C with additional features
+- `std::cout` is the C++ way to print (replaces `printf`)
+- `std::endl` adds a newline and flushes the buffer
+- The `std::` prefix means these are from the "standard" namespace

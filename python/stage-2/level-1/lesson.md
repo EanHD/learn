@@ -1,8 +1,6 @@
 # Level 1: Basic Pseudocode Translation
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
-
-
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 ## Stage 2: Pseudocode to Code
 
@@ -27,11 +25,11 @@ Here's some pseudocode that describes a simple program:
 
 ```python
 START
-    print "Welcome to the program!"
-    print "This is my first real program"
-    print "I'm learning to code!"
+ print "Welcome to the program!"
+ print "This is my first real program"
+ print "I'm learning to code!"
 END
-```
+```python
 
 **Your mission**: Translate this pseudocode into Python code.
 
@@ -43,21 +41,21 @@ Hints:
 
 ---
 
-### How to Compile and Run
+### How to Run
 
 1. **Open your terminal**
 2. **Navigate to your workspace folder**:
 
-    ```bash
-    cd ~/.local/share/learn/workspaces/python/stage-2/level-1
-    ```
+ ```bash
+ cd ~/.local/share/learn/workspaces/python/stage-2/level-1
+ ```bash
 
 3. **Edit main.py** with your translated code
 4. **Run your program**:
 
-    ```bash
-    python3 main.py
-    ```
+ ```bash
+ python3 main.py
+ ```python
 
 **Expected output:**
 
@@ -65,7 +63,7 @@ Hints:
 Welcome to the program!
 This is my first real program
 I'm learning to code!
-```
+```python
 
 ---
 
@@ -120,7 +118,7 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 print("Welcome to the program!")
 print("This is my first real program")
 print("I'm learning to code!")
-```
+```python
 
 ### Explanation
 
@@ -149,11 +147,11 @@ Each line of pseudocode translates directly:
 **3. Pseudocode to Code Mapping**
 
 ```python
-Pseudocode:  print "message"
-Code:        print("message")
-                   ↑        ↑
-                Syntax to use in real Python
-```
+Pseudocode: print "message"
+Code: print("message")
+ ↑ ↑
+ Syntax to use in real Python
+```python
 
 ### Common Mistakes & Solutions
 
@@ -168,9 +166,9 @@ Code:        print("message")
 
 You've now:
 
-- ✓ Understood pseudocode
-- ✓ Translated to Python
-- ✓ Run your code
+- Understood pseudocode
+- Translated to Python
+- Run your code
 
 **Pattern Recognition**: Notice how each pseudocode line became one Python line. This pattern holds for more complex programs too!
 
@@ -179,3 +177,55 @@ You've now:
 **Great job! You're thinking like a programmer now!**
 
 *Next up: Variables - storing and using data!*
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```py
+print("Hello, World!")
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard python conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

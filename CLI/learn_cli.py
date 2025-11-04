@@ -14,6 +14,23 @@ from datetime import datetime
 from typing import Dict, List, Optional, Tuple
 import argparse
 
+# Import new modules for modernization
+try:
+    from CLI import languages
+    from CLI import utils
+    from CLI import config as cfg_module
+except ImportError:
+    # Fallback for development
+    try:
+        import languages
+        import utils
+        import config as cfg_module
+    except ImportError:
+        print("Warning: Could not import modernization modules")
+        languages = None
+        utils = None
+        cfg_module = None
+
 
 class SystemChecker:
     """Checks system dependencies and provides fix commands"""
@@ -195,7 +212,10 @@ class InitWizard:
         self._step_completion()
 
     def _clear_screen(self):
-        os.system('clear' if os.name != 'nt' else 'cls')
+        if utils:
+            utils.clear_screen()
+        else:
+            os.system('clear' if os.name != 'nt' else 'cls')
 
     def _step_system_check(self):
         """Check system dependencies"""
@@ -531,7 +551,8 @@ class LessonManager:
             "csharp": "cs",
             "shell": "sh",
             "powershell": "ps1",
-            "typescript": "ts"
+            "typescript": "ts",
+            "zig": "zig"
         }
         return extensions.get(language, "txt")
 
@@ -601,6 +622,10 @@ class LessonExecutor:
             main_file = workspace_dir / "main.js"
             if needs_help_comment(main_file):
                 self._create_js_workspace(workspace_dir)
+        elif language == "zig":
+            main_file = workspace_dir / "main.zig"
+            if needs_help_comment(main_file):
+                self._create_zig_workspace(workspace_dir)
         else:
             ext = self.lesson_manager.get_lesson_file_extension(language)
             main_file = workspace_dir / f"main.{ext}"
@@ -629,7 +654,8 @@ class LessonExecutor:
             "csharp": "csharp",
             "shell": "shell",
             "powershell": "powershell",
-            "typescript": "typescript"
+            "typescript": "typescript",
+            "zig": "zig"
         }
         return mapping.get(language, language)
 
@@ -654,6 +680,7 @@ class LessonExecutor:
             "csharp": ("C#", "<Space>r or :!csc % && mono %.exe"),
             "shell": ("Shell", "<Space>r or :!bash %"),
             "powershell": ("PowerShell", "<Space>r or :!powershell -File %"),
+            "zig": ("Zig", "<Space>r or :!zig build-exe % && ./main"),
         }
         lang_desc, cmd = commands.get(language, ("Unknown", ":!echo 'Language not configured'"))
         return lang_desc, cmd
@@ -676,6 +703,7 @@ class LessonExecutor:
             "csharp": "// Press <Esc> <Space> h for help.\n\n\n",
             "shell": "# Press <Esc> <Space> h for help.\n\n\n",
             "powershell": "# Press <Esc> <Space> h for help.\n\n\n",
+            "zig": "// Press <Esc> <Space> h for help.\n\n\n",
         }
         return templates.get(language, "// Press <Esc> <Space> h for help.\n\n\n")
 
@@ -745,6 +773,11 @@ edition = "2021"
   }
 }
 """)
+
+    def _create_zig_workspace(self, workspace_dir: Path):
+        """Create Zig workspace with blank main.zig file"""
+        main_zig = workspace_dir / "main.zig"
+        main_zig.write_text(self._get_help_comment("zig"))
 
     def _show_vim_instructions(self, workspace: Dict, language: str):
         """Show quick instructions before launching Vim"""
@@ -839,7 +872,10 @@ class InteractiveTutorial:
             self.current_step += 1
 
     def _clear_screen(self):
-        os.system('clear' if os.name != 'nt' else 'cls')
+        if utils:
+            utils.clear_screen()
+        else:
+            os.system('clear' if os.name != 'nt' else 'cls')
 
     def _intro(self):
         print("=" * 70)
@@ -1040,7 +1076,10 @@ class InteractiveCLI:
 
     def _clear_screen(self):
         """Clear terminal screen"""
-        os.system('clear' if os.name != 'nt' else 'cls')
+        if utils:
+            utils.clear_screen()
+        else:
+            os.system('clear' if os.name != 'nt' else 'cls')
 
     def _print_header(self):
         """Print CLI header"""

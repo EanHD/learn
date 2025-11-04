@@ -1,6 +1,6 @@
 # Level 6: Innovation Project
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.jl` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.jl` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 5: Capstone - Creative Solution
 
@@ -239,7 +239,7 @@ Follow these stages:
 // - User interface
 // - File operations
 // - Main program loop
-```
+```julia
 
 **Recommended Organization:**
 1. Separate data structures from logic

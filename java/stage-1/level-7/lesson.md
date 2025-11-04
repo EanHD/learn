@@ -1,6 +1,6 @@
 # Level 7: Functions
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 1: Copying Code
 
@@ -54,7 +54,7 @@ public class Main {
         System.out.println("5! = " + factorial(5));
     }
 }
-```
+```java
 
 ---
 
@@ -63,18 +63,18 @@ public class Main {
 **Method 1 (Vim - Recommended):**
 ```java
 <Space>r
-```
+```java
 
 **Method 2 (Terminal):**
 ```bash
 javac Main.java
 java Main
-```
+```java
 
 **Expected output:**
-```
+```java
 Result: 15
-```
+```java
 
 
 ---

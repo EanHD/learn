@@ -1,6 +1,6 @@
 # Level 2: Text Analysis Tool
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window**. The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window**. The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 4: Full Problem Solving
 
@@ -61,9 +61,9 @@ Build a complete Text Analysis Tool application that:
    ```
 
 **Expected output:**
-```
+```java
 Hello, World!
-```
+```java
 
 ### How to Approach This
 
@@ -169,7 +169,7 @@ A complete application has these components:
 // Helper functions
 // Error handlers
 // Testing/verification
-```
+```java
 
 Build incrementally - get one feature working before adding the next.
 

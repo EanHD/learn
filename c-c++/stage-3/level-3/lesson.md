@@ -1,6 +1,6 @@
 # Level 3: Mathematical Problems
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 3: Problem to Pseudocode
@@ -22,38 +22,38 @@
 
 ### Learning Goals
 
-- Apply mathematical formulas in programming
-- Work with sequences and series
-- Handle mathematical edge cases
-- Design efficient calculation algorithms
-- Validate mathematical inputs and outputs
+- [ ] Apply mathematical formulas in programming
+- [ ] Work with sequences and series
+- [ ] Handle mathematical edge cases
+- [ ] Design efficient calculation algorithms
+- [ ] Validate mathematical inputs and outputs
 
 ---
 
 ### Mathematical Problem Framework
 
 **STEP 1: Understand the Mathematics**
-- What mathematical concept is involved?
-- What is the formula or sequence?
-- What are the input constraints?
-- What are the mathematical limitations?
+- [ ] What mathematical concept is involved?
+- [ ] What is the formula or sequence?
+- [ ] What are the input constraints?
+- [ ] What are the mathematical limitations?
 
 **STEP 2: Plan the Algorithm**
-- How to implement the formula step-by-step?
-- What variables track intermediate results?
-- How to handle special cases (zero, negative numbers, etc.)?
-- What precision is needed for calculations?
+- [ ] How to implement the formula step-by-step?
+- [ ] What variables track intermediate results?
+- [ ] How to handle special cases (zero, negative numbers, etc.)?
+- [ ] What precision is needed for calculations?
 
 **STEP 3: Write Mathematical Pseudocode**
-- Break down complex formulas into steps
-- Handle mathematical operations carefully
-- Consider overflow and precision issues
-- Validate inputs mathematically
+- [ ] Break down complex formulas into steps
+- [ ] Handle mathematical operations carefully
+- [ ] Consider overflow and precision issues
+- [ ] Validate inputs mathematically
 
 **STEP 4: Test and Validate**
-- Test with known mathematical results
-- Verify edge cases mathematically
-- Check for calculation accuracy
+- [ ] Test with known mathematical results
+- [ ] Verify edge cases mathematically
+- [ ] Check for calculation accuracy
 
 ---
 
@@ -73,17 +73,17 @@
 
 **Problem Description:**
 Create a program that calculates the nth Fibonacci number. The Fibonacci sequence is defined as:
-- F(0) = 0
-- F(1) = 1
-- F(n) = F(n-1) + F(n-2) for n > 1
+- [ ] F(0) = 0
+- [ ] F(1) = 1
+- [ ] F(n) = F(n-1) + F(n-2) for n > 1
 
 The program should ask for n and display the nth Fibonacci number.
 
 **Example:**
-```
+```cpp
 Enter n: 8
 Fibonacci number 8 is: 21
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for Fibonacci calculation
@@ -98,15 +98,15 @@ Fibonacci number 8 is: 21
 Create a program that determines if a given number is prime. A prime number is a positive integer greater than 1 that has no positive divisors other than 1 and itself.
 
 **Example:**
-```
+```cpp
 Enter a number: 17
 17 is a prime number.
-```
+```cpp
 
-```
+```cpp
 Enter a number: 15
 15 is not a prime number.
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for primality testing
@@ -119,15 +119,15 @@ Enter a number: 15
 
 **Problem Description:**
 Create a program that calculates the factorial of a given number. Factorial of n (n!) is the product of all positive integers less than or equal to n:
-- 0! = 1
-- 1! = 1
-- n! = n × (n-1) × (n-2) × ... × 1
+- [ ] 0! = 1
+- [ ] 1! = 1
+- [ ] n! = n × (n-1) × (n-2) × ... × 1
 
 **Example:**
-```
+```cpp
 Enter n: 5
 5! = 120
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for factorial calculation
@@ -143,14 +143,14 @@ Create a program that calculates compound interest. The formula is:
 A = P(1 + r/n)^(nt)
 
 Where:
-- A = final amount
-- P = principal amount
-- r = annual interest rate (decimal)
-- n = number of times interest is compounded per year
-- t = time in years
+- [ ] A = final amount
+- [ ] P = principal amount
+- [ ] r = annual interest rate (decimal)
+- [ ] n = number of times interest is compounded per year
+- [ ] t = time in years
 
 **Example:**
-```
+```cpp
 Enter principal amount: 1000
 Enter annual interest rate (decimal): 0.05
 Enter compounding frequency per year: 12
@@ -158,7 +158,7 @@ Enter time in years: 2
 
 Final amount: $1104.54
 Interest earned: $104.54
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for compound interest calculation
@@ -174,20 +174,20 @@ Create a program that calculates the sum of an arithmetic series. An arithmetic 
 
 The sum formula is: S = n/2 × (2a + (n-1)d)
 Where:
-- S = sum of series
-- a = first term
-- d = common difference
-- n = number of terms
+- [ ] S = sum of series
+- [ ] a = first term
+- [ ] d = common difference
+- [ ] n = number of terms
 
 **Example:**
-```
+```cpp
 Enter first term: 3
 Enter common difference: 2
 Enter number of terms: 5
 
 Series: 3, 5, 7, 9, 11
 Sum: 35
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for arithmetic series sum
@@ -204,11 +204,11 @@ Create a program that determines if a number is perfect. A perfect number is a p
 Example: 6 is perfect because 1 + 2 + 3 = 6
 
 **Example:**
-```
+```cpp
 Enter a number: 28
 28 is a perfect number.
 Divisors: 1, 2, 4, 7, 14 (sum = 28)
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for perfect number checking
@@ -220,24 +220,24 @@ Divisors: 1, 2, 4, 7, 14 (sum = 28)
 ### Mathematical Pseudocode Guidelines
 
 **Formula Implementation:**
-```
+```cpp
 Algorithm: Formula Calculator
 1. Identify all variables in the formula
 2. Determine the order of operations
 3. Handle special cases (division by zero, etc.)
 4. Calculate step by step
 5. Display results with appropriate precision
-```
+```cpp
 
 **Sequence Generation:**
-```
+```cpp
 Algorithm: Sequence Generator
 1. Initialize first terms
 2. Use loop to generate subsequent terms
 3. Apply the sequence rule
 4. Store or display terms as needed
 5. Handle termination conditions
-```
+```cpp
 
 ---
 
@@ -272,22 +272,22 @@ Algorithm: Sequence Generator
 ## Mathematical Analysis Framework
 
 ### Step 1: Mathematical Understanding
-- **Formula**: What is the exact mathematical formula?
-- **Variables**: What do each variable represent?
-- **Domain**: What are the valid input ranges?
-- **Range**: What are the expected output values?
+- [ ] **Formula**: What is the exact mathematical formula?
+- [ ] **Variables**: What do each variable represent?
+- [ ] **Domain**: What are the valid input ranges?
+- [ ] **Range**: What are the expected output values?
 
 ### Step 2: Algorithm Design
-- **Steps**: How to break down the calculation?
-- **Order**: What order to perform operations?
-- **Precision**: How to handle floating-point calculations?
-- **Efficiency**: How to optimize for performance?
+- [ ] **Steps**: How to break down the calculation?
+- [ ] **Order**: What order to perform operations?
+- [ ] **Precision**: How to handle floating-point calculations?
+- [ ] **Efficiency**: How to optimize for performance?
 
 ### Step 3: Implementation Considerations
-- **Data Types**: int vs float vs double?
-- **Libraries**: Need math.h for advanced functions?
-- **Error Handling**: How to handle invalid mathematical inputs?
-- **Output Format**: How to display results clearly?
+- [ ] **Data Types**: int vs float vs double?
+- [ ] **Libraries**: Need math.h for advanced functions?
+- [ ] **Error Handling**: How to handle invalid mathematical inputs?
+- [ ] **Output Format**: How to display results clearly?
 
 ---
 
@@ -300,13 +300,13 @@ Algorithm: Sequence Generator
 ### Problem 1: Fibonacci Sequence Calculator
 
 **Analysis:**
-- Input: n (non-negative integer)
-- Processing: Iterative or recursive calculation
-- Edge cases: n = 0, n = 1
-- Efficiency: Iterative approach for large n
+- [ ] Input: n (non-negative integer)
+- [ ] Processing: Iterative or recursive calculation
+- [ ] Edge cases: n = 0, n = 1
+- [ ] Efficiency: Iterative approach for large n
 
 **Sample Pseudocode:**
-```
+```cpp
 Algorithm: Fibonacci Calculator
 1. Display "Enter n: "
 2. Get n from user
@@ -321,48 +321,48 @@ Algorithm: Fibonacci Calculator
       ii. Set a = b
       iii. Set b = temp
    c. Display "Fibonacci number " + n + " is: " + b
-```
+```cpp
 
 ---
 
 ### Problem 2: Prime Number Checker
 
 **Analysis:**
-- Input: positive integer > 1
-- Processing: Check divisibility from 2 to sqrt(n)
-- Edge cases: 1, 2, even numbers > 2
-- Optimization: Check 2 separately, then odd numbers only
+- [ ] Input: positive integer > 1
+- [ ] Processing: Check divisibility from 2 to sqrt(n)
+- [ ] Edge cases: 1, 2, even numbers > 2
+- [ ] Optimization: Check 2 separately, then odd numbers only
 
 **Key Algorithm:**
-- If n <= 1: not prime
-- If n == 2: prime
-- If n is even: not prime
-- Check odd divisors from 3 to sqrt(n)
+- [ ] If n <= 1: not prime
+- [ ] If n == 2: prime
+- [ ] If n is even: not prime
+- [ ] Check odd divisors from 3 to sqrt(n)
 
 ---
 
 ### Problem 3: Factorial Calculator
 
 **Analysis:**
-- Input: non-negative integer
-- Processing: Iterative multiplication
-- Edge cases: 0! = 1, 1! = 1
-- Limitation: Factorial grows very quickly
+- [ ] Input: non-negative integer
+- [ ] Processing: Iterative multiplication
+- [ ] Edge cases: 0! = 1, 1! = 1
+- [ ] Limitation: Factorial grows very quickly
 
 **Implementation Notes:**
-- Use long long for larger factorials
-- Handle overflow gracefully
-- Consider recursive vs iterative approach
+- [ ] Use long long for larger factorials
+- [ ] Handle overflow gracefully
+- [ ] Consider recursive vs iterative approach
 
 ---
 
 ### Problem 4: Compound Interest Calculator
 
 **Analysis:**
-- Formula: A = P(1 + r/n)^(nt)
-- Inputs: P, r, n, t
-- Processing: Power calculation, careful with floating-point
-- Edge cases: r = 0, n = 0, t = 0
+- [ ] Formula: A = P(1 + r/n)^(nt)
+- [ ] Inputs: P, r, n, t
+- [ ] Processing: Power calculation, careful with floating-point
+- [ ] Edge cases: r = 0, n = 0, t = 0
 
 **Calculation Steps:**
 1. Get all inputs
@@ -376,24 +376,24 @@ Algorithm: Fibonacci Calculator
 ### Problem 5: Arithmetic Series Sum
 
 **Analysis:**
-- Formula: S = n/2 × (2a + (n-1)d)
-- Alternative: S = n/2 × (first + last)
-- Inputs: a, d, n
-- Processing: Use formula or loop summation
+- [ ] Formula: S = n/2 × (2a + (n-1)d)
+- [ ] Alternative: S = n/2 × (first + last)
+- [ ] Inputs: a, d, n
+- [ ] Processing: Use formula or loop summation
 
 **Two Approaches:**
-- Direct formula application
-- Loop: sum = sum + (a + (i-1)*d) for i=1 to n
+- [ ] Direct formula application
+- [ ] Loop: sum = sum + (a + (i-1)*d) for i=1 to n
 
 ---
 
 ### Problem 6: Perfect Number Checker
 
 **Analysis:**
-- Definition: Sum of proper divisors equals the number
-- Processing: Find all divisors from 1 to n/2
-- Edge cases: Perfect numbers are rare
-- Known perfect numbers: 6, 28, 496, 8128
+- [ ] Definition: Sum of proper divisors equals the number
+- [ ] Processing: Find all divisors from 1 to n/2
+- [ ] Edge cases: Perfect numbers are rare
+- [ ] Known perfect numbers: 6, 28, 496, 8128
 
 **Algorithm:**
 1. Initialize sum = 0
@@ -407,22 +407,100 @@ Algorithm: Fibonacci Calculator
 ### Mathematical Best Practices
 
 **Precision Handling:**
-- Use double for floating-point calculations
-- Be aware of floating-point precision limits
-- Consider integer arithmetic when possible
+- [ ] Use double for floating-point calculations
+- [ ] Be aware of floating-point precision limits
+- [ ] Consider integer arithmetic when possible
 
 **Performance Considerations:**
-- Avoid unnecessary calculations
-- Use efficient algorithms for large inputs
-- Consider memory usage for large sequences
+- [ ] Avoid unnecessary calculations
+- [ ] Use efficient algorithms for large inputs
+- [ ] Consider memory usage for large sequences
 
 **Error Prevention:**
-- Check for division by zero
-- Validate input ranges
-- Handle overflow conditions
+- [ ] Check for division by zero
+- [ ] Validate input ranges
+- [ ] Handle overflow conditions
 
 ---
 
  **Congratulations! You've mastered mathematical algorithms!** 
 
 *Next: Interactive problems with user interfaces and menus! *
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- [ ] Review each function
+- [ ] Understand the flow
+- [ ] Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- [ ] Main function: Entry point
+- [ ] Helper functions: Support logic
+
+
+### <div style="page-break-after: always;"></div>
+
+Answer Key
+
+Expected implementation provided.
+
+<div style="page-break-after: always;"></div>
+
+---
+
+## Answer Key
+
+### Complete Solution
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard C++ conventions with proper imports and main function
+2. **Output**: Uses std::cout to print messages to the console
+3. **Standard Library**: Includes iostream for input/output operations
+4. **Return Value**: Returns 0 to indicate successful execution
+5. **Best Practices**: Code is readable and uses C++ idioms
+
+### Testing Your Solution
+
+1. **Compile**: `g++ hello.cpp -o hello`
+2. **Run**: `./hello`
+3. **Expected Output**: `Hello, World!`
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
+| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+
+### Tips for Learning
+
+- C++ is a superset of C with additional features
+- `std::cout` is the C++ way to print (replaces `printf`)
+- `std::endl` adds a newline and flushes the buffer
+- The `std::` prefix means these are from the "standard" namespace

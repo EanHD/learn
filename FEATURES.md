@@ -7,10 +7,10 @@ Last updated: November 2025
 ## 📚 Core Platform
 
 ### Content
-- **490 Total Lessons** across 14 programming languages
+- **490 Total Lessons** across 20 programming languages
 - **5 Progressive Stages** from copying code to building projects
 - **35 Lessons per Language** (7 levels × 5 stages)
-- **14 Languages**: C++, Rust, Python, JavaScript, TypeScript, Go, Lua, Dart, Swift, Kotlin, SQL, C#, Shell, PowerShell
+- **20 Languages**: C/C++, Rust, Go, Zig, JavaScript, TypeScript, Python, PHP, Dart, Swift, Kotlin, SQL, NoSQL, R, Julia, Shell, PowerShell, Lua, Java, C#
 
 ### Learning Methodology
 - **Stage 1**: Copy working code, learn syntax
@@ -25,11 +25,13 @@ Last updated: November 2025
 
 ### Core Commands
 - `learn` - Interactive menu system
-- `learn <language> <level>` - Direct lesson access
-- `learn --list` - Browse all 490 lessons
-- `learn --progress` - View learning statistics
-- `learn --next` - Smart lesson suggestions
-- `learn --complete <lang> <stage> <level>` - Mark lessons complete
+- `learn browse` - Browse languages by category (core, web, mobile, data, scripting, enterprise) ⭐ NEW
+- `learn tip` - Get random programming tips and facts ⭐ NEW
+- `learn open <language> <stage> <level>` - Direct lesson access
+- `learn list` - Browse all 490 lessons
+- `learn progress` - View learning statistics
+- `learn next` - Smart lesson suggestions
+- `learn complete <lang> <stage> <level>` - Mark lessons complete
 
 ### Editor Integration
 - **Neovim Mode** (default) - Enhanced IDE experience
@@ -48,6 +50,8 @@ Last updated: November 2025
 - Visual progress indicators
 - Keyboard navigation
 - Stage/level browser
+- Category-based browsing (new)
+- Guided mode with tips (new)
 - Quick mode switching
 
 ---
@@ -295,7 +299,7 @@ All presets disabled for clean interface.
 
 ### File Management
 - **Smart File Detection** - Automatically finds lesson and code files
-- **Extension Mapping** - Correct file extensions for all 14 languages
+- **Extension Mapping** - Correct file extensions for all 20 languages
 - **Template System** - Language-specific code templates
 - **Help Comment Injection** - Automatic help text in all new files
 
@@ -326,16 +330,16 @@ All presets disabled for clean interface.
 7. **Zero Configuration** - Works out of the box
 8. **Offline-First** - All lessons locally available
 9. **Progress Tracking** - Know where you are and where you've been
-10. **Multi-Language** - Learn patterns across 14 languages
+10. **Multi-Language** - Learn patterns across 20 languages
 
 ---
 
 ## 📊 Statistics
 
 - **490 Total Lessons**
-- **14 Languages**
+- **20 Languages**
 - **19 Neovim Plugins**
-- **7 LSP Servers**
+- **10+ LSP Servers**
 - **~1100 Lines** of Neovim configuration
 - **~1500 Lines** of Python CLI code
 - **Zero Cost** - Completely free and open source

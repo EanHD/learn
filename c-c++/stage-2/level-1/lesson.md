@@ -1,6 +1,6 @@
 # Level 1: Basic Pseudocode Translation
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -13,11 +13,11 @@ Welcome to Stage 2!  You've mastered copying code - now it's time to think like 
 
 ### Learning Goals
 
-- Understand what pseudocode is and why it's useful
-- Learn to read and interpret algorithmic descriptions
-- Practice translating simple algorithms into C code
-- Develop logical thinking for programming
-- Create working programs from written instructions
+- [ ] Understand what pseudocode is and why it's useful
+- [ ] Learn to read and interpret algorithmic descriptions
+- [ ] Practice translating simple algorithms into C code
+- [ ] Develop logical thinking for programming
+- [ ] Create working programs from written instructions
 
 ---
 
@@ -26,7 +26,7 @@ Welcome to Stage 2!  You've mastered copying code - now it's time to think like 
 **Pseudocode** is a way to write programming logic in plain English (or your native language) before writing actual code. It's like writing a recipe or instructions for a task.
 
 **Example:**
-```
+```bash
 Algorithm: Make a sandwich
 1. Get bread from pantry
 2. Get peanut butter from fridge
@@ -35,7 +35,7 @@ Algorithm: Make a sandwich
 5. Spread jelly on the other bread slice
 6. Put slices together
 7. Enjoy your sandwich!
-```
+```bash
 
 This is much easier to understand than trying to write code first!
 
@@ -50,13 +50,13 @@ This is much easier to understand than trying to write code first!
 ## Algorithm 1: Greeting Program
 
 **Pseudocode:**
-```
+```bash
 Algorithm: Display Personal Greeting
 1. Display "Hello! What's your name?" to the user
 2. Get the user's name from input
 3. Display "Nice to meet you, " followed by the user's name
 4. Display "Welcome to programming!"
-```
+```bash
 
 **Your Task:** Create a C program that follows these exact steps.
 
@@ -65,7 +65,7 @@ Algorithm: Display Personal Greeting
 ## Algorithm 2: Simple Calculator
 
 **Pseudocode:**
-```
+```bash
 Algorithm: Add Two Numbers
 1. Ask user for first number
 2. Get first number from user
@@ -73,7 +73,7 @@ Algorithm: Add Two Numbers
 4. Get second number from user
 5. Calculate sum of the two numbers
 6. Display "The sum is: " followed by the sum
-```
+```bash
 
 **Your Task:** Create a C program that implements this calculator.
 
@@ -82,14 +82,14 @@ Algorithm: Add Two Numbers
 ## Algorithm 3: Age Calculator
 
 **Pseudocode:**
-```
+```bash
 Algorithm: Calculate Age in Days
 1. Display "Enter your age in years: "
 2. Get age in years from user
 3. Calculate days = age × 365
 4. Display "You are approximately " + days + " days old"
 5. Display "That's a lot of days! "
-```
+```bash
 
 **Your Task:** Create a program that calculates approximate age in days.
 
@@ -98,7 +98,7 @@ Algorithm: Calculate Age in Days
 ## Algorithm 4: Temperature Converter
 
 **Pseudocode:**
-```
+```bash
 Algorithm: Celsius to Fahrenheit Converter
 1. Display "Enter temperature in Celsius: "
 2. Get temperature in Celsius from user
@@ -107,7 +107,7 @@ Algorithm: Celsius to Fahrenheit Converter
 5. Display "°C = "
 6. Display the Fahrenheit temperature
 7. Display "°F"
-```
+```bash
 
 **Your Task:** Create a temperature conversion program.
 
@@ -116,7 +116,7 @@ Algorithm: Celsius to Fahrenheit Converter
 ## Algorithm 5: Rectangle Area Calculator
 
 **Pseudocode:**
-```
+```bash
 Algorithm: Calculate Rectangle Area
 1. Display "Rectangle Area Calculator"
 2. Display "Enter length: "
@@ -127,7 +127,7 @@ Algorithm: Calculate Rectangle Area
 7. Calculate perimeter = 2 × (length + width)
 8. Display "Area: " + area
 9. Display "Perimeter: " + perimeter
-```
+```bash
 
 **Your Task:** Create a program that calculates both area and perimeter.
 
@@ -136,7 +136,7 @@ Algorithm: Calculate Rectangle Area
 ## Algorithm 6: Simple Interest Calculator
 
 **Pseudocode:**
-```
+```bash
 Algorithm: Calculate Simple Interest
 1. Display "Simple Interest Calculator"
 2. Display "Enter principal amount: $"
@@ -150,7 +150,7 @@ Algorithm: Calculate Simple Interest
 10. Display "Principal: $" + principal
 11. Display "Interest: $" + interest
 12. Display "Total: $" + total
-```
+```bash
 
 **Your Task:** Implement the complete interest calculation.
 
@@ -165,7 +165,7 @@ Algorithm: Calculate Simple Interest
 3. **Identify Outputs**: What should the program display?
 4. **Identify Calculations**: What math is needed?
 5. **Plan the Code Structure**:
-   - `#include <stdio.h>`
+   - `#include <iostream>`
    - `int main() {`
    - Variable declarations
    - Input statements
@@ -175,10 +175,10 @@ Algorithm: Calculate Simple Interest
    - `}`
 
 **Example Planning for Algorithm 1:**
-- **Inputs**: User's name (string)
-- **Outputs**: Greeting messages
-- **No calculations needed**
-- **Structure**: Simple input/output program
+- [ ] **Inputs**: User's name (string)
+- [ ] **Outputs**: Greeting messages
+- [ ] **No calculations needed**
+- [ ] **Structure**: Simple input/output program
 
 ---
 
@@ -211,7 +211,7 @@ Algorithm: Calculate Simple Interest
 ## Pseudocode Best Practices
 
 ### Good Pseudocode
-```
+```bash
 Algorithm: Process User Data
 1. Get user's name
 2. Get user's age
@@ -220,18 +220,18 @@ Algorithm: Process User Data
 Else
    Display "Minor user"
 4. Display "Data processed"
-```
+```bash
 
 ### Bad Pseudocode (Too Vague)
-```
+```bash
 Algorithm: Do stuff
 1. Get things
 2. Calculate something
 3. Show results
-```
+```bash
 
 ### Good Pseudocode (Clear and Specific)
-```
+```bash
 Algorithm: Calculate BMI
 1. Display "BMI Calculator"
 2. Display "Enter weight in kg: "
@@ -240,7 +240,7 @@ Algorithm: Calculate BMI
 5. Get height from user
 6. Calculate BMI = weight ÷ (height × height)
 7. Display "Your BMI is: " + BMI
-```
+```bash
 
 ---
 
@@ -258,20 +258,20 @@ Algorithm: Calculate BMI
 int main() {
     char name[50];
     
-    printf("Hello! What's your name? ");
+    std::cout << "Hello! What's your name? ");
     scanf("%s", name);
     
-    printf("Nice to meet you, %s\n", name);
-    printf("Welcome to programming!\n");
+    std::cout << "Nice to meet you, %s\n", name);
+    std::cout << "Welcome to programming!\n");
     
     return 0;
 }
-```
+```bash
 
 **Key Concepts:**
-- `char name[50];` - String variable to store the name
-- `scanf("%s", name);` - Read string input
-- `printf("Nice to meet you, %s\n", name);` - Display with variable
+- [ ] `char name[50];` - String variable to store the name
+- [ ] `scanf("%s", name);` - Read string input
+- [ ] `std::cout << "Nice to meet you, %s\n", name);` - Display with variable
 
 ---
 
@@ -283,24 +283,24 @@ int main() {
 int main() {
     int num1, num2, sum;
     
-    printf("Enter first number: ");
+    std::cout << "Enter first number: ");
     scanf("%d", &num1);
     
-    printf("Enter second number: ");
+    std::cout << "Enter second number: ");
     scanf("%d", &num2);
     
     sum = num1 + num2;
     
-    printf("The sum is: %d\n", sum);
+    std::cout << "The sum is: %d\n", sum);
     
     return 0;
 }
-```
+```bash
 
 **Key Concepts:**
-- Multiple variables: `num1`, `num2`, `sum`
-- Arithmetic operation: `sum = num1 + num2;`
-- Clear input prompts for each value
+- [ ] Multiple variables: `num1`, `num2`, `sum`
+- [ ] Arithmetic operation: `sum = num1 + num2;`
+- [ ] Clear input prompts for each value
 
 ---
 
@@ -312,22 +312,22 @@ int main() {
 int main() {
     int age_years, age_days;
     
-    printf("Enter your age in years: ");
+    std::cout << "Enter your age in years: ");
     scanf("%d", &age_years);
     
     age_days = age_years * 365;
     
-    printf("You are approximately %d days old\n", age_days);
-    printf("That's a lot of days! \n");
+    std::cout << "You are approximately %d days old\n", age_days);
+    std::cout << "That's a lot of days! \n");
     
     return 0;
 }
-```
+```bash
 
 **Key Concepts:**
-- Simple multiplication: `age_days = age_years * 365;`
-- Clear variable naming: `age_years`, `age_days`
-- Fun output message with emoji
+- [ ] Simple multiplication: `age_days = age_years * 365;`
+- [ ] Clear variable naming: `age_years`, `age_days`
+- [ ] Fun output message with emoji
 
 ---
 
@@ -339,21 +339,21 @@ int main() {
 int main() {
     float celsius, fahrenheit;
     
-    printf("Enter temperature in Celsius: ");
+    std::cout << "Enter temperature in Celsius: ");
     scanf("%f", &celsius);
     
     fahrenheit = (celsius * 9.0/5.0) + 32;
     
-    printf("%.1f°C = %.1f°F\n", celsius, fahrenheit);
+    std::cout << "%.1f°C = %.1f°F\n", celsius, fahrenheit);
     
     return 0;
 }
-```
+```bash
 
 **Key Concepts:**
-- `float` variables for decimal temperatures
-- Complex formula: `(celsius * 9.0/5.0) + 32`
-- Formatted output with degree symbols: `%.1f°C`
+- [ ] `float` variables for decimal temperatures
+- [ ] Complex formula: `(celsius * 9.0/5.0) + 32`
+- [ ] Formatted output with degree symbols: `%.1f°C`
 
 ---
 
@@ -365,27 +365,27 @@ int main() {
 int main() {
     float length, width, area, perimeter;
     
-    printf("Rectangle Area Calculator\n");
-    printf("Enter length: ");
+    std::cout << "Rectangle Area Calculator\n");
+    std::cout << "Enter length: ");
     scanf("%f", &length);
     
-    printf("Enter width: ");
+    std::cout << "Enter width: ");
     scanf("%f", &width);
     
     area = length * width;
     perimeter = 2 * (length + width);
     
-    printf("Area: %.2f\n", area);
-    printf("Perimeter: %.2f\n", perimeter);
+    std::cout << "Area: %.2f\n", area);
+    std::cout << "Perimeter: %.2f\n", perimeter);
     
     return 0;
 }
-```
+```bash
 
 **Key Concepts:**
-- Multiple calculations: area and perimeter
-- Parentheses for order: `2 * (length + width)`
-- Descriptive output labels
+- [ ] Multiple calculations: area and perimeter
+- [ ] Parentheses for order: `2 * (length + width)`
+- [ ] Descriptive output labels
 
 ---
 
@@ -397,31 +397,31 @@ int main() {
 int main() {
     float principal, rate, time, interest, total;
     
-    printf("Simple Interest Calculator\n");
-    printf("Enter principal amount: $");
+    std::cout << "Simple Interest Calculator\n");
+    std::cout << "Enter principal amount: $");
     scanf("%f", &principal);
     
-    printf("Enter interest rate (%%): ");
+    std::cout << "Enter interest rate (%%): ");
     scanf("%f", &rate);
     
-    printf("Enter time in years: ");
+    std::cout << "Enter time in years: ");
     scanf("%f", &time);
     
     interest = (principal * rate * time) / 100;
     total = principal + interest;
     
-    printf("Principal: $%.2f\n", principal);
-    printf("Interest: $%.2f\n", interest);
-    printf("Total: $%.2f\n", total);
+    std::cout << "Principal: $%.2f\n", principal);
+    std::cout << "Interest: $%.2f\n", interest);
+    std::cout << "Total: $%.2f\n", total);
     
     return 0;
 }
-```
+```bash
 
 **Key Concepts:**
-- Complex formula: `(principal * rate * time) / 100`
-- Dollar sign formatting: `$%.2f`
-- Multiple output lines with clear labels
+- [ ] Complex formula: `(principal * rate * time) / 100`
+- [ ] Dollar sign formatting: `$%.2f`
+- [ ] Multiple output lines with clear labels
 
 ---
 
@@ -429,73 +429,143 @@ int main() {
 
 | Pseudocode Pattern | C Code Equivalent |
 |-------------------|-------------------|
-| `Display "message"` | `printf("message\n");` |
+| `Display "message"` | `std::cout << "message\n");` |
 | `Get variable from user` | `scanf("%d", &variable);` |
 | `Calculate result = a + b` | `result = a + b;` |
 | `If condition then` | `if (condition) {` |
-| `Display variable` | `printf("%d\n", variable);` |
+| `Display variable` | `std::cout << "%d\n", variable);` |
 
 ### Debugging Tips
 
 **"Program doesn't compile":**
-- Check semicolons at end of statements
-- Verify variable declarations
-- Ensure proper braces `{ }`
+- [ ] Check semicolons at end of statements
+- [ ] Verify variable declarations
+- [ ] Ensure proper braces `{ }`
 
 **"Wrong output":**
-- Check variable names match (case-sensitive)
-- Verify scanf format specifiers (`%d` for int, `%f` for float)
-- Check mathematical formulas
+- [ ] Check variable names match (case-sensitive)
+- [ ] Verify scanf format specifiers (`%d` for int, `%f` for float)
+- [ ] Check mathematical formulas
 
 **"Program crashes":**
-- Make sure variables are declared before use
-- Check array sizes for strings
-- Verify scanf has `&` for non-string variables
+- [ ] Make sure variables are declared before use
+- [ ] Check array sizes for strings
+- [ ] Verify scanf has `&` for non-string variables
 
 ### Variable Naming Best Practices
 
 **Good Names:**
-- `user_age` (clear what it stores)
-- `temperature_celsius` (descriptive)
-- `rectangle_area` (specific purpose)
+- [ ] `user_age` (clear what it stores)
+- [ ] `temperature_celsius` (descriptive)
+- [ ] `rectangle_area` (specific purpose)
 
 **Bad Names:**
-- `x` (too vague)
-- `temp` (unclear what kind of temperature)
-- `var1` (meaningless)
+- [ ] `x` (too vague)
+- [ ] `temp` (unclear what kind of temperature)
+- [ ] `var1` (meaningless)
 
 ### Input/Output Patterns
 
 **Getting Numbers:**
 ```c
 int age;
-printf("Enter age: ");
+std::cout << "Enter age: ");
 scanf("%d", &age);
-```
+```bash
 
 **Getting Decimals:**
 ```c
 float price;
-printf("Enter price: $");
+std::cout << "Enter price: $");
 scanf("%f", &price);
-```
+```bash
 
 **Getting Text:**
 ```c
 char name[50];
-printf("Enter name: ");
+std::cout << "Enter name: ");
 scanf("%s", name);
-```
+```bash
 
 **Displaying Results:**
 ```c
-printf("Result: %d\n", result);
-printf("Price: $%.2f\n", price);
-printf("Hello, %s!\n", name);
-```
+std::cout << "Result: %d\n", result);
+std::cout << "Price: $%.2f\n", price);
+std::cout << "Hello, %s!\n", name);
+```bash
 
 ---
 
  **Congratulations! You've translated your first pseudocode algorithms into working C programs!** 
 
 *This is a major milestone - you're now thinking like a programmer! Next up: Variables in pseudocode! *
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- [ ] Review each function
+- [ ] Understand the flow
+- [ ] Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- [ ] Main function: Entry point
+- [ ] Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard C++ conventions with proper imports and main function
+2. **Output**: Uses std::cout to print messages to the console
+3. **Standard Library**: Includes iostream for input/output operations
+4. **Return Value**: Returns 0 to indicate successful execution
+5. **Best Practices**: Code is readable and uses C++ idioms
+
+### Testing Your Solution
+
+1. **Compile**: `g++ hello.cpp -o hello`
+2. **Run**: `./hello`
+3. **Expected Output**: `Hello, World!`
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
+| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+
+### Tips for Learning
+
+- C++ is a superset of C with additional features
+- `std::cout` is the C++ way to print (replaces `printf`)
+- `std::endl` adds a newline and flushes the buffer
+- The `std::` prefix means these are from the "standard" namespace

@@ -1,6 +1,6 @@
 # Level 1: Hello World
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 1: Copying Code
 
@@ -29,7 +29,7 @@ public class Main {
         System.out.println("Hello, World!");
     }
 }
-```
+```java
 
 ---
 
@@ -38,18 +38,18 @@ public class Main {
 **Method 1 (Vim - Recommended):**
 ```java
 <Space>r
-```
+```java
 
 **Method 2 (Terminal):**
 ```bash
 javac main.java
 java Main
-```
+```java
 
 **Expected output:**
-```
+```java
 Hello, World!
-```
+```java
 
 ---
 
@@ -104,7 +104,7 @@ public class Main {
         System.out.println("Hello, World!");
     }
 }
-```
+```java
 
 - **`public class Main`** = Class declaration (public = accessible everywhere)
 - **`main`** = Special method where Java starts execution

@@ -1,6 +1,6 @@
 # Level 2: Variables in Pseudocode
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -30,21 +30,21 @@ Variables in pseudocode follow simple patterns:
 SET name TO "John"
 SET age TO 25
 SET is_student TO TRUE
-```
+```go
 
 **Reassignment:**
 ```go
 SET age TO age + 1
 SET total TO total + new_value
 SET is_student TO FALSE
-```
+```go
 
 **Calculations with variables:**
 ```go
 SET area TO length * width
 SET average TO (num1 + num2 + num3) / 3
 SET is_adult TO age >= 18
-```
+```go
 
 ---
 
@@ -60,12 +60,12 @@ SET is_adult TO age >= 18
 1. **Run the code**:
    ```bash
    go run hello.go
-   ```
+   ```go
 
 **Expected output:**
-```
+```go
 Hello, World!
-```
+```go
 
 ## Algorithm 1: Simple Variable Swapping
 
@@ -79,7 +79,7 @@ Algorithm: Swap Two Variables
 5. SET first_number TO second_number
 6. SET second_number TO temp
 7. DISPLAY "After swap: first=" + first_number + ", second=" + second_number
-```
+```go
 
 **Your Task:** Create a Go program that demonstrates variable swapping.
 
@@ -105,7 +105,7 @@ Algorithm: Calculate Running Total
 13. DISPLAY "Total: " + total
 14. DISPLAY "Count: " + count
 15. DISPLAY "Average: " + average
-```
+```go
 
 **Your Task:** Create a Go program that calculates a running total and average.
 
@@ -136,7 +136,7 @@ Algorithm: Track Temperature Readings
 13. IF current_temp > max_temp THEN
    SET max_temp TO current_temp
 14. DISPLAY "Current: " + current_temp + ", Min: " + min_temp + ", Max: " + max_temp
-```
+```go
 
 **Your Task:** Create a Go program that tracks min/max temperatures.
 
@@ -160,7 +160,7 @@ Algorithm: Track Bank Account Balance
 11. SET transaction_amount TO 150.25
 12. SET account_balance TO account_balance + transaction_amount
 13. DISPLAY "Balance after deposit: $" + account_balance
-```
+```go
 
 **Your Task:** Create a Go program that tracks account balance changes.
 
@@ -195,7 +195,7 @@ Algorithm: Calculate Student Grade
 22. DISPLAY "Possible Points: " + possible_points
 23. DISPLAY "Percentage: " + percentage
 24. DISPLAY "Letter Grade: " + letter_grade
-```
+```go
 
 **Your Task:** Create a Go program that calculates student grades.
 
@@ -221,7 +221,7 @@ Algorithm: Different Counter Patterns
    13. DISPLAY "Odd: " + odd_counter
    14. SET odd_counter TO odd_counter + 2
 15. END WHILE
-```
+```go
 
 **Your Task:** Create a Go program that demonstrates different counting patterns.
 
@@ -252,7 +252,7 @@ Algorithm: Calculate Statistics
 18. DISPLAY "Count: " + count
 19. DISPLAY "Product: " + product
 20. DISPLAY "Average: " + average
-```
+```go
 
 **Your Task:** Create a Go program that demonstrates accumulator patterns.
 
@@ -327,7 +327,7 @@ func main() {
 
     fmt.Println("After swap: first=" + fmt.Sprintf("%d", first_number) + ", second=" + fmt.Sprintf("%d", second_number))
 }
-```
+```go
 
 ### Algorithm 2: Running Total Calculator
 
@@ -359,7 +359,7 @@ func main() {
     fmt.Println("Count: " + fmt.Sprintf("%d", count))
     fmt.Println("Average: " + fmt.Sprintf("%f", average))
 }
-```
+```go
 
 ### Algorithm 3: Temperature Tracker
 
@@ -400,7 +400,7 @@ func main() {
     }
     fmt.Println("Current: " + fmt.Sprintf("%d", current_temp) + ", Min: " + fmt.Sprintf("%d", min_temp) + ", Max: " + fmt.Sprintf("%d", max_temp))
 }
-```
+```go
 
 ### Algorithm 4: Account Balance Tracker
 
@@ -429,7 +429,7 @@ func main() {
     account_balance = account_balance + transaction_amount
     fmt.Println("Balance after deposit: $" + fmt.Sprintf("%.2f", account_balance))
 }
-```
+```go
 
 ### Algorithm 5: Student Grade Calculator
 
@@ -476,7 +476,7 @@ func main() {
     fmt.Println("Percentage: " + fmt.Sprintf("%.2f", percentage))
     fmt.Println("Letter Grade: " + letter_grade)
 }
-```
+```go
 
 ### Algorithm 6: Counter Patterns
 
@@ -505,7 +505,7 @@ func main() {
         odd_counter = odd_counter + 2
     }
 }
-```
+```go
 
 ### Algorithm 7: Accumulator Pattern
 
@@ -542,7 +542,7 @@ func main() {
     fmt.Println("Product: " + fmt.Sprintf("%d", product))
     fmt.Println("Average: " + fmt.Sprintf("%.2f", average))
 }
-```
+```go
 
 ### Variable Translation Patterns
 
@@ -568,3 +568,63 @@ func main() {
  **Excellent work! You've mastered handling variables in pseudocode-to-code translation!** 
 
 *Next up: Mathematical operations in pseudocode!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard go conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

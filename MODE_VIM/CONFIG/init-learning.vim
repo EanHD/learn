@@ -46,38 +46,122 @@ set noundofile                  " Don't create undo files
 
 " ========== CUSTOM FUNCTIONS ==========
 
-" Function to show quick navigation help
+" Function to detect language from file type or path
+function! DetectLanguage()
+    let current_file = expand('%:p')
+    " Check file type
+    if &filetype != ''
+        return &filetype
+    endif
+    " Try to detect from path
+    if current_file =~ '/python/'
+        return 'python'
+    elseif current_file =~ '/java/'
+        return 'java'
+    elseif current_file =~ '/javascript/'
+        return 'javascript'
+    elseif current_file =~ '/c-c++/'
+        return 'cpp'
+    elseif current_file =~ '/shell/'
+        return 'bash'
+    elseif current_file =~ '/sql/'
+        return 'sql'
+    elseif current_file =~ '/go/'
+        return 'go'
+    elseif current_file =~ '/rust/'
+        return 'rust'
+    elseif current_file =~ '/php/'
+        return 'php'
+    elseif current_file =~ '/r/'
+        return 'r'
+    elseif current_file =~ '/julia/'
+        return 'julia'
+    elseif current_file =~ '/typescript/'
+        return 'typescript'
+    elseif current_file =~ '/lua/'
+        return 'lua'
+    elseif current_file =~ '/powershell/'
+        return 'powershell'
+    elseif current_file =~ '/zig/'
+        return 'zig'
+    elseif current_file =~ '/nosql/'
+        return 'nosql'
+    elseif current_file =~ '/csharp/'
+        return 'csharp'
+    elseif current_file =~ '/dart/'
+        return 'dart'
+    elseif current_file =~ '/kotlin/'
+        return 'kotlin'
+    elseif current_file =~ '/swift/'
+        return 'swift'
+    endif
+    return 'unknown'
+endfunction
+
+" Function to get run command for current language
+function! GetRunCommand()
+    let lang = DetectLanguage()
+    let commands = {
+        \ 'python': 'python3 main.py',
+        \ 'java': 'javac Main.java && java Main',
+        \ 'javascript': 'node main.js',
+        \ 'cpp': 'make run',
+        \ 'c': 'make run',
+        \ 'bash': 'bash main.sh',
+        \ 'sh': 'bash main.sh',
+        \ 'sql': 'sqlite3 < main.sql',
+        \ 'go': 'go run main.go',
+        \ 'rust': 'cargo run --release',
+        \ 'php': 'php main.php',
+        \ 'r': 'Rscript main.r',
+        \ 'julia': 'julia main.jl',
+        \ 'typescript': 'ts-node main.ts',
+        \ 'lua': 'lua main.lua',
+        \ 'powershell': 'pwsh ./main.ps1',
+        \ 'zig': 'zig build run',
+        \ 'nosql': 'mongo < main.js',
+        \ 'csharp': 'dotnet run',
+        \ 'dart': 'dart main.dart',
+        \ 'kotlin': 'kotlin -J-Xms128m -J-Xmx768m MainKt',
+        \ 'swift': 'swift main.swift',
+        \ }
+    return get(commands, lang, 'No run command defined for this language')
+endfunction
+
+" Function to show quick navigation help (dynamic based on language)
 function! ShowLessonHelp()
+    let run_cmd = GetRunCommand()
+    let lang = DetectLanguage()
     let help = [
-        \ "=== LESSON NAVIGATION ===",
+        \ "=== " . toupper(lang) . " LESSON NAVIGATION ===",
+        \ "",
+        \ "RUN CODE:",
+        \ "  <Space>r      - Run: " . run_cmd,
+        \ "",
         \ "Window Movement:",
         \ "  C-h / C-l     - Left/Right windows",
         \ "  C-j / C-k     - Down/Up windows",
         \ "  C-= / C-+ / C-- - Resize windows",
         \ "",
         \ "Lesson Navigation:",
+        \ "  <Space>n      - Next lesson (switches to code)",
+        \ "  <Space>p      - Previous lesson (switches to code)",
         \ "  gg            - Top of lesson",
         \ "  G             - Bottom of lesson",
         \ "  /text         - Search forward",
         \ "  ?text         - Search backward",
-        \ "  n / N         - Next/prev match",
-        \ "",
-        \ "Marks & Jumps:",
-        \ "  ma            - Mark position 'a'",
-        \ "  'a            - Jump to mark 'a'",
         \ "",
         \ "Editing (code window):",
         \ "  i / a / o     - Insert/append/new line",
         \ "  dd            - Delete line",
         \ "  p             - Paste",
-        \ "  :w            - Save file",
+        \ "  <Space>w      - Save file",
         \ "",
-        \ "Terminal:",
-        \ "  C-z           - Shell background",
-        \ "  C-l           - New terminal",
-        \ "  C-]           - Back to editing",
+        \ "Other:",
+        \ "  <Space>i      - Lesson info",
+        \ "  <Space>m      - Mark complete",
         \ ]
-    call popup_create(help, {'line': 5, 'col': 10, 'border': [], 'highlight': 'Normal', 'maxwidth': 60})
+    call popup_create(help, {'line': 3, 'col': 5, 'border': [], 'highlight': 'Normal', 'maxwidth': 70})
 endfunction
 
 " Function to jump to next level
@@ -90,7 +174,8 @@ function! NextLesson()
             let next_file = substitute(current_file, 'level-' . level . '/', 'level-' . next_level . '/', '')
             if filereadable(next_file)
                 execute 'edit ' . next_file
-                echo 'Moved to Level ' . next_level
+                wincmd l                " Switch to code window
+                echo 'Moved to Level ' . next_level . ' - Code window active'
             else
                 echo 'No next level found'
             endif
@@ -112,7 +197,8 @@ function! PrevLesson()
             let prev_file = substitute(current_file, 'level-' . level . '/', 'level-' . prev_level . '/', '')
             if filereadable(prev_file)
                 execute 'edit ' . prev_file
-                echo 'Moved to Level ' . prev_level
+                wincmd l                " Switch to code window
+                echo 'Moved to Level ' . prev_level . ' - Code window active'
             else
                 echo 'No previous level found'
             endif
@@ -168,7 +254,11 @@ nnoremap <C-_> <C-w><           " Narrower
 nnoremap <leader>n :call NextLesson()<CR>
 nnoremap <leader>p :call PrevLesson()<CR>
 nnoremap <leader>i :call LessonInfo()<CR>
+nnoremap <leader>h :call ShowLessonHelp()<CR>
 nnoremap <leader>? :call ShowLessonHelp()<CR>
+
+" Run current code
+nnoremap <leader>r :execute '!'.GetRunCommand()<CR>
 
 " Toggle read-only mode
 nnoremap <leader>ro :call ToggleReadOnly()<CR>

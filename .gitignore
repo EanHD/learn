@@ -42,3 +42,35 @@ test_*.sh
 
 # Logs
 *.log
+
+# AI/Internal helper scripts (not for end users)
+audit_*.py
+fix_*.py
+generate_*.py
+test_*.py
+analyze_*.py
+detect_*.py
+populate_*.py
+assess_*.py
+create_*.py
+quick_fixes.py
+
+# Internal reports and audits
+*PRODUCTION*.md
+*AUDIT*.md
+*FIX*.md
+*REPORT*.md
+*CLEANUP*.md
+audit_report.txt
+content_issues_detailed.txt
+cpp_lesson_check_report.txt
+cpp_quality_summary.md
+reports/
+ACTION_PLAN.md
+INSTRUCTIONS.md
+TASK_COMPLETION_REPORT.md
+VIM_RUN_SCRIPTS_GUIDE.md
+FIX_SUMMARY.txt
+
+# Compiled binaries
+main

@@ -1,6 +1,6 @@
 # Level 3: Mathematical Pseudocode
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`Main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`Main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -53,9 +53,9 @@ Mathematics is the language of algorithms! Today you'll translate mathematical c
    ```
 
 **Expected output:**
-```
+```java
 Hello, World!
-```
+```java
 
 ## Algorithm 1: Geometry Calculator
 
@@ -72,7 +72,7 @@ Algorithm: Calculate Circle Properties
 8. Display "Diameter: " + diameter
 9. Display "Area: " + area
 10. Display "Circumference: " + circumference
-```
+```java
 
 **Mathematical Notes:**
 - π (pi) ≈ 3.14159 (or use `Math.PI`)
@@ -101,7 +101,7 @@ Algorithm: Solve Right Triangle
 11. Display "Hypotenuse: " + hypotenuse
 12. Display "Area: " + area
 13. Display "Perimeter: " + perimeter
-```
+```java
 
 **Mathematical Notes:**
 - Pythagorean theorem: c² = a² + b² (where c is hypotenuse)
@@ -134,7 +134,7 @@ Algorithm: Calculate Compound Interest
 15. Display "Principal: $" + principal
 16. Display "Final Amount: $" + finalAmount
 17. Display "Total Interest: $" + totalInterest
-```
+```java
 
 **Mathematical Notes:**
 - Compound interest formula: A = P(1 + r/n)^(nt)
@@ -169,7 +169,7 @@ Algorithm: Solve Quadratic Equation
 12. Else:
    a. Display "No real roots (complex solutions)"
 13. Display "Discriminant: " + discriminant
-```
+```java
 
 **Mathematical Notes:**
 - Quadratic formula: x = [-b ± √(b² - 4ac)] / 2a
@@ -203,7 +203,7 @@ Algorithm: Generate Fibonacci Sequence
    d. Set second = next
    e. Add 1 to count
 11. Display "Sequence complete"
-```
+```java
 
 **Mathematical Notes:**
 - Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
@@ -243,7 +243,7 @@ Algorithm: Calculate Statistics
    g. Display "Standard Deviation: " + standardDeviation
 8. Else:
    a. Display "No numbers entered"
-```
+```java
 
 **Mathematical Notes:**
 - Mean (average): μ = Σx / n
@@ -276,7 +276,7 @@ Algorithm: Calculate Distance Between Points
 15. Display "Point 1: (" + x1 + ", " + y1 + ")"
 16. Display "Point 2: (" + x2 + ", " + y2 + ")"
 17. Display "Distance: " + distance
-```
+```java
 
 **Mathematical Notes:**
 - Distance formula: d = √[(x₂ - x₁)² + (y₂ - y₁)²]
@@ -382,7 +382,7 @@ public class Main {
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - `Math.PI` constant for π
@@ -423,7 +423,7 @@ public class Main {
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - `Math.sqrt()` for square root function
@@ -469,7 +469,7 @@ public class Main {
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Complex compound interest formula
@@ -518,7 +518,7 @@ public class Main {
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Discriminant determines number of roots
@@ -569,7 +569,7 @@ public class Main {
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Iterative Fibonacci calculation
@@ -627,7 +627,7 @@ public class Main {
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Statistical formulas implementation
@@ -675,7 +675,7 @@ public class Main {
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Distance formula in coordinate geometry
@@ -695,21 +695,21 @@ public class Main {
 **Integer Division:**
 ```java
 int result = 5 / 2;  // Result: 2 (not 2.5!)
-double result = 5.0 / 2;  // Result: 2.5 ✓
-```
+double result = 5.0 / 2;  // Result: 2.5 
+```java
 
 **Parentheses Matter:**
 ```java
 double wrong = 1 + 2 * 3;  // 7 (multiplication first)
 double right = (1 + 2) * 3;  // 9 (parentheses first)
-```
+```java
 
 **Power vs Multiplication:**
 ```java
 double wrong = x * 2;  // This is x × 2, not x²
 double right = x * x;  // This is x²
 double alsoRight = Math.pow(x, 2);  // Also x²
-```
+```java
 
 ---
 
@@ -739,7 +739,7 @@ Math.min(3, 7)   // 3 (minimum)
 Math.sin(x)
 Math.cos(x)
 Math.tan(x)
-```
+```java
 
 ---
 

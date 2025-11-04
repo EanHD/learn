@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+"""
+LEARN — The all-in-one coding mentor
+Unified CLI with automatic legacy compatibility
+"""
+
+import sys
+from pathlib import Path
+
+# Add CLI directory to path
+cli_dir = Path(__file__).parent / "CLI"
+sys.path.insert(0, str(cli_dir))
+
+
+def main():
+    """Main entry point - unified CLI with legacy translation"""
+    from CLI.legacy_shim import translate_legacy_argv
+    from CLI.modern_cli import ModernCLI
+
+    # Translate legacy invocations to modern subcommands
+    sys.argv = translate_legacy_argv(sys.argv)
+
+    # Always run the modern CLI
+    learn_dir = Path(__file__).parent
+    cli = ModernCLI(learn_dir)
+    cli.run()
+
+
+if __name__ == "__main__":
+    main()

@@ -1,6 +1,6 @@
 # Level 6: Loop Pseudocode
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`Main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`Main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -59,9 +59,9 @@ Loops are the workhorses of programming! Today you'll master algorithms that use
    ```
 
 **Expected output:**
-```
+```java
 Hello, World!
-```
+```java
 
 ## Algorithm 1: Sales Data Analyzer
 
@@ -89,7 +89,7 @@ Algorithm: Analyze Monthly Sales Data
       v. If dailySale < lowestSale:
          i. Set lowestSale to dailySale
    e. Else:
-      i. Display "❌ Invalid sale amount! Please enter positive number."
+      i. Display " Invalid sale amount! Please enter positive number."
 9. If salesCount > 0:
    a. Calculate averageSale = totalSales ÷ salesCount
    b. Display "=== Sales Summary ==="
@@ -103,7 +103,7 @@ Algorithm: Analyze Monthly Sales Data
       i. Display "Day " + (i + 1) + ": $" + sales[i]
 10. Else:
    a. Display "No sales data entered."
-```
+```java
 
 **Loop Logic:**
 - Input loop with validation
@@ -140,18 +140,18 @@ Algorithm: Track Class Attendance
 11. Display "Absent: " + (numStudents - presentCount)
 12. Display "Attendance rate: " + attendancePercentage + "%"
 13. If attendancePercentage >= 90:
-   a. Display "✓ Excellent attendance!"
+   a. Display " Excellent attendance!"
 14. Else if attendancePercentage >= 75:
-   a. Display "✓ Satisfactory attendance"
+   a. Display " Satisfactory attendance"
 15. Else:
-   a. Display "⚠ Poor attendance - follow up required"
+   a. Display " Poor attendance - follow up required"
 16. Display "=== Individual Status ==="
 17. For student from 1 to numStudents:
    a. If attendance[student-1] is true:
-      i. Display "Student " + student + ": ✓ Present"
+      i. Display "Student " + student + ":  Present"
    b. Else:
-      i. Display "Student " + student + ": ❌ Absent"
-```
+      i. Display "Student " + student + ":  Absent"
+```java
 
 **Loop Logic:**
 - Fixed iteration for known number of students
@@ -192,11 +192,11 @@ Algorithm: Manage Store Inventory
             i. Store newItemName in itemNames array
             ii. Store newQuantity in itemQuantities array
             iii. Add 1 to itemCount
-            iv. Display "✓ Item added successfully!"
+            iv. Display " Item added successfully!"
          vi. Else:
-            i. Display "❌ Invalid quantity!"
+            i. Display " Invalid quantity!"
       ii. Else:
-         i. Display "⚠ Inventory is full!"
+         i. Display " Inventory is full!"
    e. Else if choice is 2:
       i. If itemCount > 0:
          i. Display "Enter item name to update: "
@@ -209,11 +209,11 @@ Algorithm: Manage Store Inventory
                iii. Get newQuantity from user
                iv. If newQuantity >= 0:
                   i. Set itemQuantities[i] to newQuantity
-                  ii. Display "✓ Quantity updated!"
+                  ii. Display " Quantity updated!"
                   iii. Set found to true
                   iv. Break out of loop
          v. If found is false:
-            i. Display "❌ Item not found!"
+            i. Display " Item not found!"
       ii. Else:
          i. Display "ℹ No items in inventory."
    f. Else if choice is 3:
@@ -229,18 +229,18 @@ Algorithm: Manage Store Inventory
          ii. Initialize lowStockCount to 0
          iii. For i from 0 to itemCount - 1:
             i. If itemQuantities[i] <= 5:
-               i. Display itemNames[i] + ": " + itemQuantities[i] + " units ⚠"
+               i. Display itemNames[i] + ": " + itemQuantities[i] + " units "
                ii. Add 1 to lowStockCount
          iv. If lowStockCount is 0:
-            i. Display "✓ All items have sufficient stock."
+            i. Display " All items have sufficient stock."
       ii. Else:
          i. Display "ℹ No items to check."
    h. Else if choice is 5:
       i. Set isRunning to false
    i. Else:
-      i. Display "❌ Invalid choice!"
-7. Display "Thank you for using Inventory Management System! 👋"
-```
+      i. Display " Invalid choice!"
+7. Display "Thank you for using Inventory Management System! "
+```java
 
 **Loop Logic:**
 - Menu-driven interface with multiple operations
@@ -312,7 +312,7 @@ Algorithm: Calculate Final Grades
 23. Display "C grades: " + gradeRanges[2]
 24. Display "D grades: " + gradeRanges[3]
 25. Display "F grades: " + gradeRanges[4]
-```
+```java
 
 **Loop Logic:**
 - 2D array processing (nested loops)
@@ -333,7 +333,7 @@ Algorithm: Generate Secure Passwords
 2. Display "Enter desired password length (8-20): "
 3. Get passwordLength from user
 4. While passwordLength < 8 or passwordLength > 20:
-   a. Display "⚠ Length must be between 8-20 characters!"
+   a. Display " Length must be between 8-20 characters!"
    b. Display "Enter desired password length (8-20): "
    c. Get passwordLength from user
 5. Display "Include uppercase letters? (y/n): "
@@ -359,13 +359,13 @@ Algorithm: Generate Secure Passwords
 19. Display "Password length: " + passwordLength
 20. Display "Character sets used:"
 21. If includeUpper is "y":
-   a. Display "✓ Uppercase letters"
+   a. Display " Uppercase letters"
 22. If includeNumbers is "y":
-   a. Display "✓ Numbers"
+   a. Display " Numbers"
 23. If includeSpecial is "y":
-   a. Display "✓ Special characters"
-24. Display "✓ Lowercase letters (always included)"
-```
+   a. Display " Special characters"
+24. Display " Lowercase letters (always included)"
+```java
 
 **Loop Logic:**
 - Input validation loop
@@ -399,7 +399,7 @@ Algorithm: Conduct Election Voting
    h. If choice >= 1 and choice <= 3:
       i. Add 1 to votes[choice - 1]
       ii. Add 1 to totalVotes
-      iii. Display "✓ Vote recorded for " + candidateNames[choice - 1]
+      iii. Display " Vote recorded for " + candidateNames[choice - 1]
    i. Else if choice is 4:
       i. Display "=== Current Results ==="
       ii. Display "Total votes: " + totalVotes
@@ -409,7 +409,7 @@ Algorithm: Conduct Election Voting
    j. Else if choice is 5:
       i. Set votingActive to false
    k. Else:
-      i. Display "❌ Invalid choice!"
+      i. Display " Invalid choice!"
 7. If totalVotes > 0:
    a. Display "=== Final Election Results ==="
    b. Initialize winnerIndex to 0
@@ -418,14 +418,14 @@ Algorithm: Conduct Election Voting
       i. If votes[i] > maxVotes:
          i. Set maxVotes to votes[i]
          ii. Set winnerIndex to i
-   e. Display "🏆 Winner: " + candidateNames[winnerIndex] + " with " + maxVotes + " votes!"
+   e. Display " Winner: " + candidateNames[winnerIndex] + " with " + maxVotes + " votes!"
    f. Display "Total votes cast: " + totalVotes
    g. For i from 0 to 2:
       i. Calculate percentage = (votes[i] ÷ totalVotes) × 100
       ii. Display candidateNames[i] + ": " + votes[i] + " votes (" + percentage + "%)"
 8. Else:
    a. Display "No votes were cast."
-```
+```java
 
 **Loop Logic:**
 - Menu-driven voting interface
@@ -489,7 +489,7 @@ While getting values:
     Get nextValue
     Add nextValue to total
 Display "Total: " + total
-```
+```java
 
 ### Counting Pattern
 ```java
@@ -498,7 +498,7 @@ For each item:
     If item meets criteria:
         Add 1 to count
 Display "Count: " + count
-```
+```java
 
 ### Search Pattern
 ```java
@@ -512,7 +512,7 @@ If found:
     Display "Found at location"
 Else:
     Display "Not found"
-```
+```java
 
 ### Validation Pattern
 ```java
@@ -524,7 +524,7 @@ While not isValid:
     Else:
         Display error message
 Process valid input
-```
+```java
 
 ---
 
@@ -567,7 +567,7 @@ public class SalesAnalyzer {
                     lowestSale = dailySale;
                 }
             } else {
-                System.out.println("❌ Invalid sale amount! Please enter positive number.");
+                System.out.println(" Invalid sale amount! Please enter positive number.");
             }
         }
         
@@ -592,7 +592,7 @@ public class SalesAnalyzer {
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Array storage for sales data
@@ -651,26 +651,26 @@ public class AttendanceTracker {
         System.out.printf("Attendance rate: %.1f%%\n", attendancePercentage);
         
         if (attendancePercentage >= 90) {
-            System.out.println("✓ Excellent attendance!");
+            System.out.println(" Excellent attendance!");
         } else if (attendancePercentage >= 75) {
-            System.out.println("✓ Satisfactory attendance");
+            System.out.println(" Satisfactory attendance");
         } else {
-            System.out.println("⚠ Poor attendance - follow up required");
+            System.out.println(" Poor attendance - follow up required");
         }
         
         System.out.println("\n=== Individual Status ===");
         for (int student = 1; student <= numStudents; student++) {
             if (attendance[student - 1]) {
-                System.out.println("Student " + student + ": ✓ Present");
+                System.out.println("Student " + student + ":  Present");
             } else {
-                System.out.println("Student " + student + ": ❌ Absent");
+                System.out.println("Student " + student + ":  Absent");
             }
         }
         
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Fixed iteration for known number of students (for loop)
@@ -729,12 +729,12 @@ public class InventoryManager {
                             itemNames[itemCount] = newItemName;
                             itemQuantities[itemCount] = newQuantity;
                             itemCount++;
-                            System.out.println("✓ Item added successfully!");
+                            System.out.println(" Item added successfully!");
                         } else {
-                            System.out.println("❌ Invalid quantity!");
+                            System.out.println(" Invalid quantity!");
                         }
                     } else {
-                        System.out.println("⚠ Inventory is full!");
+                        System.out.println(" Inventory is full!");
                     }
                     break;
                 }
@@ -753,17 +753,17 @@ public class InventoryManager {
                                 
                                 if (newQuantity >= 0) {
                                     itemQuantities[i] = newQuantity;
-                                    System.out.println("✓ Quantity updated!");
+                                    System.out.println(" Quantity updated!");
                                     found = true;
                                 } else {
-                                    System.out.println("❌ Invalid quantity!");
+                                    System.out.println(" Invalid quantity!");
                                 }
                                 break;
                             }
                         }
                         
                         if (!found) {
-                            System.out.println("❌ Item not found!");
+                            System.out.println(" Item not found!");
                         }
                     } else {
                         System.out.println("ℹ No items in inventory.");
@@ -787,13 +787,13 @@ public class InventoryManager {
                         
                         for (int i = 0; i < itemCount; i++) {
                             if (itemQuantities[i] <= 5) {
-                                System.out.println(itemNames[i] + ": " + itemQuantities[i] + " units ⚠");
+                                System.out.println(itemNames[i] + ": " + itemQuantities[i] + " units ");
                                 lowStockCount++;
                             }
                         }
                         
                         if (lowStockCount == 0) {
-                            System.out.println("✓ All items have sufficient stock.");
+                            System.out.println(" All items have sufficient stock.");
                         }
                     } else {
                         System.out.println("ℹ No items to check.");
@@ -803,16 +803,16 @@ public class InventoryManager {
                     isRunning = false;
                     break;
                 default:
-                    System.out.println("❌ Invalid choice!");
+                    System.out.println(" Invalid choice!");
                     break;
             }
         }
         
-        System.out.println("Thank you for using Inventory Management System! 👋");
+        System.out.println("Thank you for using Inventory Management System! ");
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Parallel arrays (itemNames and itemQuantities at same indices)
@@ -928,7 +928,7 @@ public class GradeBook {
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - 2D array processing with nested loops (rows=students, cols=assignments)
@@ -974,7 +974,7 @@ public class PasswordGenerator {
         scanner.nextLine(); // Consume newline
         
         while (passwordLength < 8 || passwordLength > 20) {
-            System.out.println("⚠ Length must be between 8-20 characters!");
+            System.out.println(" Length must be between 8-20 characters!");
             System.out.print("Enter desired password length (8-20): ");
             passwordLength = scanner.nextInt();
             scanner.nextLine();
@@ -1023,20 +1023,20 @@ public class PasswordGenerator {
         System.out.println("Password length: " + passwordLength);
         System.out.println("Character sets used:");
         if (includeUpper.equalsIgnoreCase("y")) {
-            System.out.println("✓ Uppercase letters");
+            System.out.println(" Uppercase letters");
         }
         if (includeNumbers.equalsIgnoreCase("y")) {
-            System.out.println("✓ Numbers");
+            System.out.println(" Numbers");
         }
         if (includeSpecial.equalsIgnoreCase("y")) {
-            System.out.println("✓ Special characters");
+            System.out.println(" Special characters");
         }
-        System.out.println("✓ Lowercase letters (always included)");
+        System.out.println(" Lowercase letters (always included)");
         
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Input validation loop (while with compound condition)
@@ -1093,7 +1093,7 @@ public class VotingSystem {
             if (choice >= 1 && choice <= 3) {
                 votes[choice - 1]++;
                 totalVotes++;
-                System.out.println("✓ Vote recorded for " + candidateNames[choice - 1]);
+                System.out.println(" Vote recorded for " + candidateNames[choice - 1]);
             } else if (choice == 4) {
                 System.out.println("=== Current Results ===");
                 System.out.println("Total votes: " + totalVotes);
@@ -1110,7 +1110,7 @@ public class VotingSystem {
             } else if (choice == 5) {
                 votingActive = false;
             } else {
-                System.out.println("❌ Invalid choice!");
+                System.out.println(" Invalid choice!");
             }
         }
         
@@ -1128,7 +1128,7 @@ public class VotingSystem {
                 }
             }
             
-            System.out.println("🏆 Winner: " + candidateNames[winnerIndex] + 
+            System.out.println(" Winner: " + candidateNames[winnerIndex] + 
                              " with " + maxVotes + " votes!");
             System.out.println("Total votes cast: " + totalVotes);
             
@@ -1144,7 +1144,7 @@ public class VotingSystem {
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Menu-driven voting interface with while loop
@@ -1188,7 +1188,7 @@ for (int i = 0; i < size; i++) {
 for (int i = 0; i < size; i++) {
     if (array[i] > max) max = array[i];
 }
-```
+```java
 
 **Early Termination:**
 ```java
@@ -1199,7 +1199,7 @@ for (int i = 0; i < size; i++) {
         break; // Don't continue searching
     }
 }
-```
+```java
 
 **Enhanced For Loop:**
 ```java
@@ -1212,10 +1212,10 @@ for (String name : studentNames) {
 for (int i = 0; i < studentNames.length; i++) {
     System.out.println((i + 1) + ". " + studentNames[i]);
 }
-```
+```java
 
 ---
 
-✅ **Fantastic! You've mastered loop-based algorithms!** 
+ **Fantastic! You've mastered loop-based algorithms!** 
 
-*Loops are the engines of computation. Next: Function pseudocode for modular programming! 🚀*
+*Loops are the engines of computation. Next: Function pseudocode for modular programming! *

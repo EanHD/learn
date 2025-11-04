@@ -1,6 +1,6 @@
 # Level 4: User Input
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.jl` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.jl` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 1: Copying Code
 
@@ -32,7 +32,7 @@ age = parse(Int, readline())
 
 println("Hello, $name!")
 println("You are $age years old.")
-```
+```julia
 
 ---
 
@@ -41,17 +41,17 @@ println("You are $age years old.")
 **Method 1 (Vim - Recommended):**
 ```julia
 <Space>r
-```
+```julia
 
 **Method 2 (Terminal):**
 ```bash
 julia main.jl
-```
+```julia
 
 **Expected output:**
-```
+```julia
 [Interactive - output varies based on user input]
-```
+```julia
 
 
 ---

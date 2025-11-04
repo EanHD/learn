@@ -1,6 +1,6 @@
 # Level 3: Mathematical Pseudocode
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -13,23 +13,23 @@ Mathematics is the language of algorithms! Today you'll translate mathematical c
 
 ### Learning Goals
 
-- Translate mathematical formulas into C code
-- Understand order of operations in algorithms
-- Implement geometric calculations (area, volume, perimeter)
-- Create financial calculation programs
-- Work with mathematical series and sequences
-- Handle complex mathematical expressions
+- [ ] Translate mathematical formulas into C code
+- [ ] Understand order of operations in algorithms
+- [ ] Implement geometric calculations (area, volume, perimeter)
+- [ ] Create financial calculation programs
+- [ ] Work with mathematical series and sequences
+- [ ] Handle complex mathematical expressions
 
 ---
 
 ### Mathematical Concepts in Programming
 
 **Common Mathematical Operations:**
-- **Arithmetic**: +, -, ×, ÷, exponents, roots
-- **Geometry**: Area, perimeter, volume, surface area
-- **Finance**: Interest, loans, investments
-- **Statistics**: Average, percentage, ratios
-- **Sequences**: Series, patterns, progressions
+- [ ] **Arithmetic**: +, -, ×, ÷, exponents, roots
+- [ ] **Geometry**: Area, perimeter, volume, surface area
+- [ ] **Finance**: Interest, loans, investments
+- [ ] **Statistics**: Average, percentage, ratios
+- [ ] **Sequences**: Series, patterns, progressions
 
 ---
 
@@ -42,7 +42,7 @@ Mathematics is the language of algorithms! Today you'll translate mathematical c
 ## Algorithm 1: Geometry Calculator
 
 **Pseudocode:**
-```
+```cpp
 Algorithm: Calculate Circle Properties
 1. Display "Circle Calculator"
 2. Display "Enter radius: "
@@ -54,13 +54,13 @@ Algorithm: Calculate Circle Properties
 8. Display "Diameter: " + diameter
 9. Display "Area: " + area
 10. Display "Circumference: " + circumference
-```
+```cpp
 
 **Mathematical Notes:**
-- π (pi) ≈ 3.14159
-- Area formula: A = πr²
-- Circumference formula: C = 2πr
-- Use `3.14159` for π in calculations
+- [ ] π (pi) ≈ 3.14159
+- [ ] Area formula: A = πr²
+- [ ] Circumference formula: C = 2πr
+- [ ] Use `3.14159` for π in calculations
 
 **Your Task:** Create a circle geometry calculator.
 
@@ -69,7 +69,7 @@ Algorithm: Calculate Circle Properties
 ## Algorithm 2: Right Triangle Solver
 
 **Pseudocode:**
-```
+```cpp
 Algorithm: Solve Right Triangle
 1. Display "Right Triangle Calculator"
 2. Display "Enter side A: "
@@ -84,12 +84,12 @@ Algorithm: Solve Right Triangle
 11. Display "Hypotenuse: " + hypotenuse
 12. Display "Area: " + area
 13. Display "Perimeter: " + perimeter
-```
+```cpp
 
 **Mathematical Notes:**
-- Pythagorean theorem: c² = a² + b² (where c is hypotenuse)
-- Area formula: A = (ab)/2
-- Need square root function: `sqrt()` from `<math.h>`
+- [ ] Pythagorean theorem: c² = a² + b² (where c is hypotenuse)
+- [ ] Area formula: A = (ab)/2
+- [ ] Need square root function: `sqrt()` from `<math.h>`
 
 **Your Task:** Build a right triangle calculator.
 
@@ -98,7 +98,7 @@ Algorithm: Solve Right Triangle
 ## Algorithm 3: Compound Interest Calculator
 
 **Pseudocode:**
-```
+```cpp
 Algorithm: Calculate Compound Interest
 1. Display "Compound Interest Calculator"
 2. Display "Enter principal amount: $"
@@ -117,12 +117,12 @@ Algorithm: Calculate Compound Interest
 15. Display "Principal: $" + principal
 16. Display "Final Amount: $" + final_amount
 17. Display "Total Interest: $" + total_interest
-```
+```cpp
 
 **Mathematical Notes:**
-- Compound interest formula: A = P(1 + r/n)^(nt)
-- Where: P = principal, r = rate, n = frequency, t = years
-- Need power function: `pow()` from `<math.h>`
+- [ ] Compound interest formula: A = P(1 + r/n)^(nt)
+- [ ] Where: P = principal, r = rate, n = frequency, t = years
+- [ ] Need power function: `pow()` from `<math.h>`
 
 **Your Task:** Create a compound interest calculator.
 
@@ -131,7 +131,7 @@ Algorithm: Calculate Compound Interest
 ## Algorithm 4: Quadratic Equation Solver
 
 **Pseudocode:**
-```
+```cpp
 Algorithm: Solve Quadratic Equation
 1. Display "Quadratic Equation Solver"
 2. Display "For equation ax² + bx + c = 0"
@@ -152,12 +152,12 @@ Algorithm: Solve Quadratic Equation
 12. Else:
    a. Display "No real roots (complex solutions)"
 13. Display "Discriminant: " + discriminant
-```
+```cpp
 
 **Mathematical Notes:**
-- Quadratic formula: x = [-b ± √(b² - 4ac)] / 2a
-- Discriminant D = b² - 4ac determines number of roots
-- D > 0: Two real roots, D = 0: One root, D < 0: Complex roots
+- [ ] Quadratic formula: x = [-b ± √(b² - 4ac)] / 2a
+- [ ] Discriminant D = b² - 4ac determines number of roots
+- [ ] D > 0: Two real roots, D = 0: One root, D < 0: Complex roots
 
 **Your Task:** Build a quadratic equation solver.
 
@@ -166,7 +166,7 @@ Algorithm: Solve Quadratic Equation
 ## Algorithm 5: Fibonacci Sequence Generator
 
 **Pseudocode:**
-```
+```cpp
 Algorithm: Generate Fibonacci Sequence
 1. Display "Fibonacci Sequence Generator"
 2. Display "Enter number of terms: "
@@ -186,12 +186,12 @@ Algorithm: Generate Fibonacci Sequence
    d. Set second = next
    e. Add 1 to count
 11. Display "Sequence complete"
-```
+```cpp
 
 **Mathematical Notes:**
-- Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
-- Each term is sum of previous two terms
-- F(0) = 0, F(1) = 1, F(n) = F(n-1) + F(n-2)
+- [ ] Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+- [ ] Each term is sum of previous two terms
+- [ ] F(0) = 0, F(1) = 1, F(n) = F(n-1) + F(n-2)
 
 **Your Task:** Create a Fibonacci sequence generator.
 
@@ -200,7 +200,7 @@ Algorithm: Generate Fibonacci Sequence
 ## Algorithm 6: Statistical Calculator
 
 **Pseudocode:**
-```
+```cpp
 Algorithm: Calculate Statistics
 1. Display "Statistical Calculator"
 2. Initialize sum = 0
@@ -226,13 +226,13 @@ Algorithm: Calculate Statistics
    g. Display "Standard Deviation: " + standard_deviation
 8. Else:
    a. Display "No numbers entered"
-```
+```cpp
 
 **Mathematical Notes:**
-- Mean (average): μ = Σx / n
-- Variance: σ² = (Σx² / n) - μ²
-- Standard deviation: σ = √variance
-- Need square root function for standard deviation
+- [ ] Mean (average): μ = Σx / n
+- [ ] Variance: σ² = (Σx² / n) - μ²
+- [ ] Standard deviation: σ = √variance
+- [ ] Need square root function for standard deviation
 
 **Your Task:** Build a statistical calculator.
 
@@ -241,7 +241,7 @@ Algorithm: Calculate Statistics
 ## Algorithm 7: Distance Calculator (Coordinate Geometry)
 
 **Pseudocode:**
-```
+```cpp
 Algorithm: Calculate Distance Between Points
 1. Display "Distance Between Two Points"
 2. Display "Enter coordinates for point 1:"
@@ -260,12 +260,12 @@ Algorithm: Calculate Distance Between Points
 15. Display "Point 1: (" + x1 + ", " + y1 + ")"
 16. Display "Point 2: (" + x2 + ", " + y2 + ")"
 17. Display "Distance: " + distance
-```
+```cpp
 
 **Mathematical Notes:**
-- Distance formula: d = √[(x₂ - x₁)² + (y₂ - y₁)²]
-- Works for any two points in 2D coordinate plane
-- Can be extended to 3D: d = √[(x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²]
+- [ ] Distance formula: d = √[(x₂ - x₁)² + (y₂ - y₁)²]
+- [ ] Works for any two points in 2D coordinate plane
+- [ ] Can be extended to 3D: d = √[(x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²]
 
 **Your Task:** Create a coordinate distance calculator.
 
@@ -277,14 +277,14 @@ Algorithm: Calculate Distance Between Points
 ```c
 # include <stdio.h>
 # include <math.h>  // For mathematical functions
-```
+```cpp
 
 **Common Math Functions:**
-- `sqrt(x)` - Square root
-- `pow(x, y)` - Power (x^y)
-- `fabs(x)` - Absolute value (float)
-- `ceil(x)` - Ceiling (round up)
-- `floor(x)` - Floor (round down)
+- [ ] `sqrt(x)` - Square root
+- [ ] `pow(x, y)` - Power (x^y)
+- [ ] `fabs(x)` - Absolute value (float)
+- [ ] `ceil(x)` - Ceiling (round up)
+- [ ] `floor(x)` - Floor (round down)
 
 ---
 
@@ -355,27 +355,27 @@ int main() {
     float radius, area, circumference, diameter;
     const float PI = 3.14159;
     
-    printf("Circle Calculator\n");
-    printf("Enter radius: ");
+    std::cout << "Circle Calculator\n");
+    std::cout << "Enter radius: ");
     scanf("%f", &radius);
     
     area = PI * radius * radius;
     circumference = 2 * PI * radius;
     diameter = 2 * radius;
     
-    printf("Radius: %.2f\n", radius);
-    printf("Diameter: %.2f\n", diameter);
-    printf("Area: %.2f\n", area);
-    printf("Circumference: %.2f\n", circumference);
+    std::cout << "Radius: %.2f\n", radius);
+    std::cout << "Diameter: %.2f\n", diameter);
+    std::cout << "Area: %.2f\n", area);
+    std::cout << "Circumference: %.2f\n", circumference);
     
     return 0;
 }
-```
+```cpp
 
 **Key Concepts:**
-- Constant PI defined as `const float`
-- Order of operations: multiplication before addition
-- Float precision for decimal results
+- [ ] Constant PI defined as `const float`
+- [ ] Order of operations: multiplication before addition
+- [ ] Float precision for decimal results
 
 ---
 
@@ -388,30 +388,30 @@ int main() {
 int main() {
     float side_a, side_b, hypotenuse, area, perimeter;
     
-    printf("Right Triangle Calculator\n");
-    printf("Enter side A: ");
+    std::cout << "Right Triangle Calculator\n");
+    std::cout << "Enter side A: ");
     scanf("%f", &side_a);
-    printf("Enter side B: ");
+    std::cout << "Enter side B: ");
     scanf("%f", &side_b);
     
     hypotenuse = sqrt(side_a * side_a + side_b * side_b);
     area = (side_a * side_b) / 2;
     perimeter = side_a + side_b + hypotenuse;
     
-    printf("Side A: %.2f\n", side_a);
-    printf("Side B: %.2f\n", side_b);
-    printf("Hypotenuse: %.2f\n", hypotenuse);
-    printf("Area: %.2f\n", area);
-    printf("Perimeter: %.2f\n", perimeter);
+    std::cout << "Side A: %.2f\n", side_a);
+    std::cout << "Side B: %.2f\n", side_b);
+    std::cout << "Hypotenuse: %.2f\n", hypotenuse);
+    std::cout << "Area: %.2f\n", area);
+    std::cout << "Perimeter: %.2f\n", perimeter);
     
     return 0;
 }
-```
+```cpp
 
 **Key Concepts:**
-- `#include <math.h>` for `sqrt()` function
-- Pythagorean theorem implementation
-- Proper parentheses for order of operations
+- [ ] `#include <math.h>` for `sqrt()` function
+- [ ] Pythagorean theorem implementation
+- [ ] Proper parentheses for order of operations
 
 ---
 
@@ -425,14 +425,14 @@ int main() {
     float principal, rate, years, frequency;
     float rate_decimal, total_compounds, compound_rate, final_amount, total_interest;
     
-    printf("Compound Interest Calculator\n");
-    printf("Enter principal amount: $");
+    std::cout << "Compound Interest Calculator\n");
+    std::cout << "Enter principal amount: $");
     scanf("%f", &principal);
-    printf("Enter annual interest rate (%%): ");
+    std::cout << "Enter annual interest rate (%%): ");
     scanf("%f", &rate);
-    printf("Enter number of years: ");
+    std::cout << "Enter number of years: ");
     scanf("%f", &years);
-    printf("Enter compounding frequency (1=annual, 12=monthly): ");
+    std::cout << "Enter compounding frequency (1=annual, 12=monthly): ");
     scanf("%f", &frequency);
     
     rate_decimal = rate / 100;
@@ -442,18 +442,18 @@ int main() {
     final_amount = principal * pow(1 + compound_rate, total_compounds);
     total_interest = final_amount - principal;
     
-    printf("Principal: $%.2f\n", principal);
-    printf("Final Amount: $%.2f\n", final_amount);
-    printf("Total Interest: $%.2f\n", total_interest);
+    std::cout << "Principal: $%.2f\n", principal);
+    std::cout << "Final Amount: $%.2f\n", final_amount);
+    std::cout << "Total Interest: $%.2f\n", total_interest);
     
     return 0;
 }
-```
+```cpp
 
 **Key Concepts:**
-- Complex compound interest formula
-- `pow()` function for exponentiation
-- Multiple intermediate calculations
+- [ ] Complex compound interest formula
+- [ ] `pow()` function for exponentiation
+- [ ] Multiple intermediate calculations
 
 ---
 
@@ -466,38 +466,38 @@ int main() {
 int main() {
     float a, b, c, discriminant, root1, root2, root;
     
-    printf("Quadratic Equation Solver\n");
-    printf("For equation ax² + bx + c = 0\n");
-    printf("Enter coefficient a: ");
+    std::cout << "Quadratic Equation Solver\n");
+    std::cout << "For equation ax² + bx + c = 0\n");
+    std::cout << "Enter coefficient a: ");
     scanf("%f", &a);
-    printf("Enter coefficient b: ");
+    std::cout << "Enter coefficient b: ");
     scanf("%f", &b);
-    printf("Enter coefficient c: ");
+    std::cout << "Enter coefficient c: ");
     scanf("%f", &c);
     
     discriminant = b * b - 4 * a * c;
     
-    printf("Discriminant: %.2f\n", discriminant);
+    std::cout << "Discriminant: %.2f\n", discriminant);
     
     if (discriminant > 0) {
         root1 = (-b + sqrt(discriminant)) / (2 * a);
         root2 = (-b - sqrt(discriminant)) / (2 * a);
-        printf("Two real roots: %.2f and %.2f\n", root1, root2);
+        std::cout << "Two real roots: %.2f and %.2f\n", root1, root2);
     } else if (discriminant == 0) {
         root = -b / (2 * a);
-        printf("One real root: %.2f\n", root);
+        std::cout << "One real root: %.2f\n", root);
     } else {
-        printf("No real roots (complex solutions)\n");
+        std::cout << "No real roots (complex solutions)\n");
     }
     
     return 0;
 }
-```
+```cpp
 
 **Key Concepts:**
-- Discriminant determines number of roots
-- Proper handling of three cases
-- Careful with parentheses in quadratic formula
+- [ ] Discriminant determines number of roots
+- [ ] Proper handling of three cases
+- [ ] Careful with parentheses in quadratic formula
 
 ---
 
@@ -509,38 +509,38 @@ int main() {
 int main() {
     int n, first = 0, second = 1, next, count = 3;
     
-    printf("Fibonacci Sequence Generator\n");
-    printf("Enter number of terms: ");
+    std::cout << "Fibonacci Sequence Generator\n");
+    std::cout << "Enter number of terms: ");
     scanf("%d", &n);
     
-    printf("Fibonacci sequence:\n");
+    std::cout << "Fibonacci sequence:\n");
     
     if (n >= 1) {
-        printf("%d ", first);
+        std::cout << "%d ", first);
     }
     if (n >= 2) {
-        printf("%d ", second);
+        std::cout << "%d ", second);
     }
     
     while (count <= n) {
         next = first + second;
-        printf("%d ", next);
+        std::cout << "%d ", next);
         
         first = second;
         second = next;
         count++;
     }
     
-    printf("\nSequence complete\n");
+    std::cout << "\nSequence complete\n");
     
     return 0;
 }
-```
+```cpp
 
 **Key Concepts:**
-- Iterative Fibonacci calculation
-- Variable swapping technique
-- Handling edge cases (n >= 1, n >= 2)
+- [ ] Iterative Fibonacci calculation
+- [ ] Variable swapping technique
+- [ ] Handling edge cases (n >= 1, n >= 2)
 
 ---
 
@@ -554,10 +554,10 @@ int main() {
     float sum = 0, sum_squares = 0, number, mean, variance, std_dev;
     int count = 0, has_more = 1;
     
-    printf("Statistical Calculator\n");
+    std::cout << "Statistical Calculator\n");
     
     while (has_more) {
-        printf("Enter number %d (or 0 to finish): ", count + 1);
+        std::cout << "Enter number %d (or 0 to finish): ", count + 1);
         scanf("%f", &number);
         
         if (number == 0) {
@@ -574,22 +574,22 @@ int main() {
         variance = (sum_squares / count) - (mean * mean);
         std_dev = sqrt(variance);
         
-        printf("Count: %d\n", count);
-        printf("Sum: %.2f\n", sum);
-        printf("Mean: %.2f\n", mean);
-        printf("Standard Deviation: %.2f\n", std_dev);
+        std::cout << "Count: %d\n", count);
+        std::cout << "Sum: %.2f\n", sum);
+        std::cout << "Mean: %.2f\n", mean);
+        std::cout << "Standard Deviation: %.2f\n", std_dev);
     } else {
-        printf("No numbers entered\n");
+        std::cout << "No numbers entered\n");
     }
     
     return 0;
 }
-```
+```cpp
 
 **Key Concepts:**
-- Statistical formulas implementation
-- Accumulation of sum and sum of squares
-- Variance and standard deviation calculations
+- [ ] Statistical formulas implementation
+- [ ] Accumulation of sum and sum of squares
+- [ ] Variance and standard deviation calculations
 
 ---
 
@@ -602,35 +602,35 @@ int main() {
 int main() {
     float x1, y1, x2, y2, delta_x, delta_y, distance;
     
-    printf("Distance Between Two Points\n");
-    printf("Enter coordinates for point 1:\n");
-    printf("X1: ");
+    std::cout << "Distance Between Two Points\n");
+    std::cout << "Enter coordinates for point 1:\n");
+    std::cout << "X1: ");
     scanf("%f", &x1);
-    printf("Y1: ");
+    std::cout << "Y1: ");
     scanf("%f", &y1);
     
-    printf("Enter coordinates for point 2:\n");
-    printf("X2: ");
+    std::cout << "Enter coordinates for point 2:\n");
+    std::cout << "X2: ");
     scanf("%f", &x2);
-    printf("Y2: ");
+    std::cout << "Y2: ");
     scanf("%f", &y2);
     
     delta_x = x2 - x1;
     delta_y = y2 - y1;
     distance = sqrt(delta_x * delta_x + delta_y * delta_y);
     
-    printf("Point 1: (%.2f, %.2f)\n", x1, y1);
-    printf("Point 2: (%.2f, %.2f)\n", x2, y2);
-    printf("Distance: %.2f\n", distance);
+    std::cout << "Point 1: (%.2f, %.2f)\n", x1, y1);
+    std::cout << "Point 2: (%.2f, %.2f)\n", x2, y2);
+    std::cout << "Distance: %.2f\n", distance);
     
     return 0;
 }
-```
+```cpp
 
 **Key Concepts:**
-- Distance formula implementation
-- Delta calculations (differences)
-- Pythagorean distance in 2D plane
+- [ ] Distance formula implementation
+- [ ] Delta calculations (differences)
+- [ ] Pythagorean distance in 2D plane
 
 ---
 
@@ -641,12 +641,12 @@ int main() {
 const float PI = 3.14159265359;
 const float E = 2.71828182846;
 const float GRAVITY = 9.80665;
-```
+```cpp
 
 **Precision Considerations:**
-- Use `double` for high-precision calculations
-- Be aware of floating-point limitations
-- Consider significant digits in output
+- [ ] Use `double` for high-precision calculations
+- [ ] Be aware of floating-point limitations
+- [ ] Consider significant digits in output
 
 ### Common Mathematical Errors
 
@@ -657,7 +657,7 @@ result = 2 + 3 * 4;
 
 // Correct: (2 + 3) * 4 = 20 (parentheses force addition first)
 result = (2 + 3) * 4;
-```
+```cpp
 
 **Integer Division:**
 ```c
@@ -666,7 +666,7 @@ float result = 5 / 2;
 
 // Correct: 5.0 / 2 = 2.5 (float division)
 float result = 5.0 / 2;
-```
+```cpp
 
 **Power Operations:**
 ```c
@@ -675,10 +675,80 @@ result = 2 ^ 3;  // Bitwise XOR, not power!
 
 // Correct: Use pow() function
 result = pow(2, 3);  // 2^3 = 8
-```
+```cpp
 
 ---
 
  **Fantastic! You've mastered mathematical algorithms in code!** 
 
 *Mathematics and programming are perfect partners. Next: Input/Output operations in pseudocode! *
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- [ ] Review each function
+- [ ] Understand the flow
+- [ ] Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- [ ] Main function: Entry point
+- [ ] Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard C++ conventions with proper imports and main function
+2. **Output**: Uses std::cout to print messages to the console
+3. **Standard Library**: Includes iostream for input/output operations
+4. **Return Value**: Returns 0 to indicate successful execution
+5. **Best Practices**: Code is readable and uses C++ idioms
+
+### Testing Your Solution
+
+1. **Compile**: `g++ hello.cpp -o hello`
+2. **Run**: `./hello`
+3. **Expected Output**: `Hello, World!`
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
+| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+
+### Tips for Learning
+
+- C++ is a superset of C with additional features
+- `std::cout` is the C++ way to print (replaces `printf`)
+- `std::endl` adds a newline and flushes the buffer
+- The `std::` prefix means these are from the "standard" namespace

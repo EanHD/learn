@@ -1,6 +1,6 @@
 # Level 2: Variables and Data Types
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -85,7 +85,7 @@ print("=== Table Example ===")
 print("Person name: " .. person.name)
 print("Person age: " .. person.age)
 print("First hobby: " .. person.hobbies[1])
-```
+```lua
 
 ---
 
@@ -94,10 +94,10 @@ print("First hobby: " .. person.hobbies[1])
 1. **Run your program**:
    ```bash
    lua variables.lua
-   ```
+   ```lua
 
 **Expected output:**
-```
+```lua
 === Personal Info ===
 Name: Alex
 City: New York
@@ -123,7 +123,7 @@ Empty variable: nil
 Person name: Sam
 Person age: 30
 First hobby: reading
-```
+```lua
 
 ---
 
@@ -181,7 +181,7 @@ Lua has several important concepts about variables:
 ```lua
 -- String variables (text)
 name = "Alex"
-```
+```lua
 - **`--`** = Single-line comment (ignored by computer)
 - **`name`** = Variable name (no declaration keyword needed in Lua)
 - **`=`** = Assignment operator (stores value on right into variable on left)
@@ -190,20 +190,20 @@ name = "Alex"
 
 ```lua
 age = 25
-```
+```lua
 - **`age`** = Variable name (numeric variable)
 - **`25`** = Number value (no quotes needed for numbers)
 - Lua treats integers and decimals as the same "number" type
 
 ```lua
 is_student = true
-```
+```lua
 - **`is_student`** = Boolean variable name (descriptive naming)
 - **`true`** = Boolean value (one of only two possible values: true or false)
 
 ```lua
 print("Name: " .. name)
-```
+```lua
 - **`..`** = String concatenation operator (joins strings together)
 - The variable `name` gets its value inserted into the output string
 
@@ -219,7 +219,7 @@ age = 25
 -- Local variables (only accessible in current scope)
 local local_name = "Local"
 local local_age = 30
-```
+```lua
 
 ### Variable Naming Rules
 
@@ -258,7 +258,7 @@ print(type(dynamic))  -- Output: "number"
 
 dynamic = true  -- Now it's a boolean
 print(type(dynamic))  -- Output: "boolean"
-```
+```lua
 
 ### String Concatenation
 
@@ -275,7 +275,7 @@ print("Full name: " .. full_name)
 -- Note: You can't directly concatenate numbers and strings without conversion
 -- This will cause an error: print("Age: " .. 25)
 -- Instead, convert the number to string: print("Age: " .. tostring(25))
-```
+```lua
 
 ### Tables - Lua's Powerhouse
 
@@ -293,7 +293,7 @@ print(person.name)  -- Output: "Alex"
 -- Mixed table
 mixed = {name = "Bob", years = {2020, 2021, 2022}}
 print(mixed.years[2])  -- Output: 2021
-```
+```lua
 
 ### Common Errors & Solutions
 
@@ -339,10 +339,71 @@ person = {name = "Alice", age = 28}
 person.job = "Engineer"  -- Add new field
 person.age = person.age + 1  -- Update field
 print(person.name .. " is " .. person.age .. " years old and works as " .. person.job)
-```
+```lua
 
 ---
 
  **Excellent work! You now understand variables - the foundation of all programming!** 
 
 *Ready for the next challenge? Let's do some math with our variables!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```lua
+print("Hello, World!")
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard lua conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

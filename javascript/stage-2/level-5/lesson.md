@@ -1,6 +1,6 @@
 # Level 5: Decision Pseudocode
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -30,7 +30,7 @@ Decision expressions in pseudocode follow these patterns:
 IF condition THEN
    DO something
 ENDIF
-```
+```javascript
 
 **If-else statements:**
 ```javascript
@@ -39,7 +39,7 @@ IF condition THEN
 ELSE
    DO something else
 ENDIF
-```
+```javascript
 
 **Multiple conditions:**
 ```javascript
@@ -50,7 +50,7 @@ ELSE IF condition2 THEN
 ELSE
    DO default action
 ENDIF
-```
+```javascript
 
 **Complex conditions:**
 ```javascript
@@ -59,7 +59,7 @@ IF (age >= 18) AND (has_license) THEN
 ELSE
    OUTPUT "Cannot drive"
 ENDIF
-```
+```javascript
 
 **Nested conditions:**
 ```javascript
@@ -72,7 +72,7 @@ IF weather = "sunny" THEN
 ELSE
    OUTPUT "Stay inside"
 ENDIF
-```
+```javascript
 
 ---
 
@@ -88,12 +88,12 @@ ENDIF
 1. **Run the code**:
    ```bash
    node hello.js
-   ```
+   ```java
 
 **Expected output:**
-```
+```javascript
 Hello, World!
-```
+```javascript
 
 ## Algorithm 1: Simple Age Check
 
@@ -110,7 +110,7 @@ Algorithm: Determine Life Stage
 8. ELSE
    9. OUTPUT "Senior"
 10. ENDIF
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that categorizes by age.
 
@@ -148,7 +148,7 @@ Algorithm: Assign Letter Grade
    24. SET letter_grade TO "F"
 25. ENDIF
 26. OUTPUT "Grade: " + letter_grade
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that determines letter grades.
 
@@ -188,7 +188,7 @@ Algorithm: Calculate Shopping Discount
 27. OUTPUT "Original: $" + total_amount
 28. OUTPUT "Discount: " + (discount_rate * 100) + "%"
 29. OUTPUT "Final: $" + final_amount
-```
+```javascript
 
 **Your Task:** Create a JavaScript program with nested decision logic for discounts.
 
@@ -228,7 +228,7 @@ Algorithm: Weather Advisory System
 27. IF wind_speed > 25 THEN
    28. OUTPUT "High winds - Secure loose objects"
 29. ENDIF
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that gives weather advisory.
 
@@ -281,7 +281,7 @@ Algorithm: Validate Password Strength
       40. OUTPUT "- Must contain special character"
    41. ENDIF
 42. ENDIF
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that validates password strength.
 
@@ -311,7 +311,7 @@ Algorithm: Recommend Transportation
 17. ELSE
    18. OUTPUT "Consider public transit or taxi"
 19. ENDIF
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that recommends transportation.
 
@@ -354,7 +354,7 @@ Algorithm: Process Order
 30. ELSE
    30. OUTPUT "Priority Processing: No"
 31. ENDIF
-```
+```javascript
 
 **Your Task:** Create a JavaScript program with complex business logic.
 
@@ -428,7 +428,7 @@ if (age < 13) {
 } else {
     console.log("Senior");
 }
-```
+```javascript
 
 ### Algorithm 2: Grade Determination
 
@@ -467,7 +467,7 @@ if (numeric_grade >= 97) {
 }
 
 console.log("Grade: " + letter_grade);
-```
+```javascript
 
 ### Algorithm 3: Shopping Discount Calculator
 
@@ -509,7 +509,7 @@ let final_amount = total_amount - discount_amount;
 console.log("Original: $" + total_amount.toFixed(2));
 console.log("Discount: " + (discount_rate * 100) + "%");
 console.log("Final: $" + final_amount.toFixed(2));
-```
+```javascript
 
 ### Algorithm 4: Weather Advisory
 
@@ -550,7 +550,7 @@ if (temperature > 90) {
 if (wind_speed > 25) {
     console.log("High winds - Secure loose objects");
 }
-```
+```javascript
 
 ### Algorithm 5: Password Validator
 
@@ -594,7 +594,7 @@ if (length_ok && has_uppercase && has_lowercase && has_digit && has_special) {
     if (!has_digit) console.log("- Must contain digit");
     if (!has_special) console.log("- Must contain special character");
 }
-```
+```javascript
 
 ### Algorithm 6: Transportation Advisor
 
@@ -624,7 +624,7 @@ if (purpose === "emergency") {
 } else {
     console.log("Consider public transit or taxi");
 }
-```
+```javascript
 
 ### Algorithm 7: Complex Business Logic
 
@@ -672,7 +672,7 @@ if (is_priority_processing) {
 } else {
     console.log("Priority Processing: No");
 }
-```
+```javascript
 
 ### Decision Operation Translation Patterns
 
@@ -703,3 +703,57 @@ if (is_priority_processing) {
  **Excellent work! You've mastered translating decision operations from pseudocode to JavaScript!** 
 
 *Next up: Loop pseudocode!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```js
+console.log("Hello, World!");
+
+```js
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard javascript conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

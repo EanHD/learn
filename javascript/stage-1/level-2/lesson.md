@@ -1,6 +1,6 @@
 # Level 2: Variables and Data Types
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -68,7 +68,7 @@ dynamicVar = 42;  // Now it's a number!
 console.log("Dynamic variable: " + dynamicVar);
 dynamicVar = true; // Now it's a boolean!
 console.log("Dynamic variable: " + dynamicVar);
-```
+```javascript
 
 ---
 
@@ -77,10 +77,10 @@ console.log("Dynamic variable: " + dynamicVar);
 1. **Run your program**:
    ```bash
    node variables.js
-   ```
+   ```java
 
 **Expected output:**
-```
+```javascript
 === Personal Info ===
 Name: Alex
 City: New York
@@ -100,7 +100,7 @@ Happy: true
 Dynamic variable: I'm a string
 Dynamic variable: 42
 Dynamic variable: true
-```
+```javascript
 
 ---
 
@@ -157,7 +157,7 @@ JavaScript has several important concepts about variables:
 ```javascript
 // String variables (text)
 let name = "Alex";
-```
+```javascript
 - **`//`** = Single-line comment (ignored by computer)
 - **`let`** = Keyword to declare a variable that can be reassigned
 - **`name`** = Variable name (follows naming rules)
@@ -167,20 +167,20 @@ let name = "Alex";
 
 ```javascript
 let age = 25;
-```
+```javascript
 - **`age`** = Variable name (numeric variable)
 - **`25`** = Number value (no quotes needed for numbers)
 - JavaScript treats integers and decimals the same way
 
 ```javascript
 let isStudent = true;
-```
+```javascript
 - **`isStudent`** = Boolean variable name (descriptive naming)
 - **`true`** = Boolean value (one of only two possible values: true or false)
 
 ```javascript
 console.log("Name: " + name);
-```
+```javascript
 - **`+`** = String concatenation operator (joins strings together)
 - The variable `name` gets its value inserted into the output string
 
@@ -201,7 +201,7 @@ let canChange = "This value can be updated later";
 
 // const (modern - for constants that won't change)
 const neverChanges = "This value cannot be changed";
-```
+```javascript
 
 ### Variable Naming Rules
 
@@ -240,7 +240,7 @@ console.log(typeof dynamic);  // Output: "number"
 
 dynamic = true;  // Now it's a boolean
 console.log(typeof dynamic);  // Output: "boolean"
-```
+```javascript
 
 This is different from statically typed languages like C/C++ where you must declare the type in advance.
 
@@ -260,7 +260,7 @@ console.log(`Full name: ${firstName} ${lastName}`);
 
 // Method 3: concat() method
 console.log("Full name: ".concat(firstName, " ", lastName));
-```
+```javascript
 
 ### Common Errors & Solutions
 
@@ -301,10 +301,71 @@ console.log("Full name: " + fullName);
 // JavaScript's type conversion
 console.log("Number and string: " + (5 + "3"));  // Output: "53"
 console.log("Number math: " + (5 + 3));          // Output: "8"
-```
+```javascript
 
 ---
 
  **Excellent work! You now understand variables - the foundation of all programming!** 
 
 *Ready for the next challenge? Let's do some math with our variables!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```js
+console.log("Hello, World!");
+
+```js
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard javascript conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

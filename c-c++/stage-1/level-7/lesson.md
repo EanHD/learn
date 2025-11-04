@@ -1,6 +1,6 @@
 # Level 7: Functions - Code Organization
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -13,12 +13,12 @@ Welcome to the pinnacle of Stage 1! Today you'll learn about functions - the bui
 
 ### Learning Goals
 
-- Understand what functions are and why they're essential
-- Learn function declaration, definition, and calling
-- Master parameters and return values
-- Practice function overloading concepts
-- Learn about scope and lifetime of variables
-- Create modular, organized programs
+- [ ] Understand what functions are and why they're essential
+- [ ] Learn function declaration, definition, and calling
+- [ ] Master parameters and return values
+- [ ] Practice function overloading concepts
+- [ ] Learn about scope and lifetime of variables
+- [ ] Create modular, organized programs
 
 ---
 
@@ -48,7 +48,7 @@ void generate_primes(int limit);
 int global_counter = 0;
 
 int main() {
-    printf("=== Functions: The Building Blocks of Code ===\n\n");
+    std::cout << "=== Functions: The Building Blocks of Code ===\n\n");
     
     // 1. Simple function calls
     print_welcome();
@@ -57,7 +57,7 @@ int main() {
     // 2. Functions with return values
     int num1 = 10, num2 = 20;
     int sum = add_numbers(num1, num2);
-    printf("Sum of %d and %d is: %d\n", num1, num2, sum);
+    std::cout << "Sum of %d and %d is: %d\n", num1, num2, sum);
     
     // 3. Functions with calculations
     int scores[] = {85, 92, 78, 96, 88};
@@ -68,7 +68,7 @@ int main() {
     }
     
     float average = calculate_average(total_scores, 5);
-    printf("Average score: %.1f%%\n", average);
+    std::cout << "Average score: %.1f%%\n", average);
     print_line('-', 30);
     
     // 4. Interactive menu system
@@ -81,63 +81,63 @@ int main() {
     
     // 5. Mathematical functions
     print_line('=', 50);
-    printf("=== Mathematical Functions ===\n");
+    std::cout << "=== Mathematical Functions ===\n");
     
     int fact_num;
-    printf("Enter a number to calculate factorial: ");
+    std::cout << "Enter a number to calculate factorial: ");
     scanf("%d", &fact_num);
     
     if (fact_num >= 0 && fact_num <= 12) {
         int result = factorial(fact_num);
-        printf("%d! = %d\n", fact_num, result);
+        std::cout << "%d! = %d\n", fact_num, result);
     } else {
-        printf("Please enter a number between 0 and 12.\n");
+        std::cout << "Please enter a number between 0 and 12.\n");
     }
     
     // 6. Pattern generation
-    printf("\n=== Number Patterns ===\n");
+    std::cout << "\n=== Number Patterns ===\n");
     int pattern_rows;
-    printf("How many rows for the pattern? ");
+    std::cout << "How many rows for the pattern? ");
     scanf("%d", &pattern_rows);
     print_number_pattern(pattern_rows);
     
     // 7. Functions with multiple parameters
-    printf("\n=== Finding Maximum Values ===\n");
+    std::cout << "\n=== Finding Maximum Values ===\n");
     int a, b, c;
-    printf("Enter three numbers: ");
+    std::cout << "Enter three numbers: ");
     scanf("%d %d %d", &a, &b, &c);
     
     int max = find_maximum(a, b, c);
-    printf("Maximum of %d, %d, %d is: %d\n", a, b, c, max);
+    std::cout << "Maximum of %d, %d, %d is: %d\n", a, b, c, max);
     
     // 8. Functions with pointers (advanced)
-    printf("\n=== Swapping Values ===\n");
+    std::cout << "\n=== Swapping Values ===\n");
     int x = 100, y = 200;
-    printf("Before swap: x = %d, y = %d\n", x, y);
+    std::cout << "Before swap: x = %d, y = %d\n", x, y);
     swap_values(&x, &y);
-    printf("After swap:  x = %d, y = %d\n", x, y);
+    std::cout << "After swap:  x = %d, y = %d\n", x, y);
     
     // 9. Prime number generator
-    printf("\n=== Prime Number Generator ===\n");
+    std::cout << "\n=== Prime Number Generator ===\n");
     int prime_limit;
-    printf("Generate primes up to what number? ");
+    std::cout << "Generate primes up to what number? ");
     scanf("%d", &prime_limit);
     
     if (prime_limit > 1 && prime_limit <= 1000) {
         generate_primes(prime_limit);
     } else {
-        printf("Please enter a number between 2 and 1000.\n");
+        std::cout << "Please enter a number between 2 and 1000.\n");
     }
     
     // 10. Global variable demonstration
-    printf("\n=== Global Variables Demo ===\n");
-    printf("Global counter starts at: %d\n", global_counter);
+    std::cout << "\n=== Global Variables Demo ===\n");
+    std::cout << "Global counter starts at: %d\n", global_counter);
     global_counter += 10;
-    printf("After adding 10: %d\n", global_counter);
+    std::cout << "After adding 10: %d\n", global_counter);
     
     print_line('=', 50);
-    printf(" Congratulations! You've mastered functions!\n");
-    printf("Your code is now organized, reusable, and maintainable!\n");
+    std::cout << " Congratulations! You've mastered functions!\n");
+    std::cout << "Your code is now organized, reusable, and maintainable!\n");
     
     return 0;
 }
@@ -145,15 +145,15 @@ int main() {
 // Function definitions
 
 void print_welcome() {
-    printf(" Welcome to the Functions Learning Program! \n");
-    printf("Functions help us organize code into reusable pieces.\n\n");
+    std::cout << " Welcome to the Functions Learning Program! \n");
+    std::cout << "Functions help us organize code into reusable pieces.\n\n");
 }
 
 void print_line(char symbol, int length) {
     for (int i = 0; i < length; i++) {
-        printf("%c", symbol);
+        std::cout << "%c", symbol);
     }
-    printf("\n");
+    std::cout << "\n");
 }
 
 int add_numbers(int a, int b) {
@@ -169,17 +169,17 @@ float calculate_average(int sum, int count) {
 }
 
 void display_menu() {
-    printf("\n=== MAIN MENU ===\n");
-    printf("1. Calculate area of circle\n");
-    printf("2. Convert temperature (C to F)\n");
-    printf("3. Check if number is even or odd\n");
-    printf("4. Generate random number\n");
-    printf("5. Exit\n");
+    std::cout << "\n=== MAIN MENU ===\n");
+    std::cout << "1. Calculate area of circle\n");
+    std::cout << "2. Convert temperature (C to F)\n");
+    std::cout << "3. Check if number is even or odd\n");
+    std::cout << "4. Generate random number\n");
+    std::cout << "5. Exit\n");
 }
 
 int get_user_choice() {
     int choice;
-    printf("Enter your choice (1-5): ");
+    std::cout << "Enter your choice (1-5): ");
     scanf("%d", &choice);
     return choice;
 }
@@ -188,28 +188,28 @@ void process_choice(int choice) {
     switch (choice) {
         case 1: {
             float radius;
-            printf("Enter radius: ");
+            std::cout << "Enter radius: ");
             scanf("%f", &radius);
             float area = 3.14159 * radius * radius;
-            printf("Area of circle: %.2f\n", area);
+            std::cout << "Area of circle: %.2f\n", area);
             break;
         }
         case 2: {
             float celsius;
-            printf("Enter temperature in Celsius: ");
+            std::cout << "Enter temperature in Celsius: ");
             scanf("%f", &celsius);
             float fahrenheit = (celsius * 9.0/5.0) + 32;
-            printf("%.1f°C = %.1f°F\n", celsius, fahrenheit);
+            std::cout << "%.1f°C = %.1f°F\n", celsius, fahrenheit);
             break;
         }
         case 3: {
             int num;
-            printf("Enter a number: ");
+            std::cout << "Enter a number: ");
             scanf("%d", &num);
             if (num % 2 == 0) {
-                printf("%d is even\n", num);
+                std::cout << "%d is even\n", num);
             } else {
-                printf("%d is odd\n", num);
+                std::cout << "%d is odd\n", num);
             }
             break;
         }
@@ -217,14 +217,14 @@ void process_choice(int choice) {
             // Simple pseudo-random number
             int random_num = (global_counter * 7 + 13) % 100;
             global_counter++;
-            printf("Random number: %d\n", random_num);
+            std::cout << "Random number: %d\n", random_num);
             break;
         }
         case 5:
-            printf("Goodbye!\n");
+            std::cout << "Goodbye!\n");
             break;
         default:
-            printf("Invalid choice! Please try again.\n");
+            std::cout << "Invalid choice! Please try again.\n");
             break;
     }
 }
@@ -245,15 +245,15 @@ void print_number_pattern(int rows) {
     for (int i = 1; i <= rows; i++) {
         // Print spaces
         for (int space = 1; space <= rows - i; space++) {
-            printf(" ");
+            std::cout << " ");
         }
         
         // Print numbers
         for (int num = 1; num <= i; num++) {
-            printf("%d ", num);
+            std::cout << "%d ", num);
         }
         
-        printf("\n");
+        std::cout << "\n");
     }
 }
 
@@ -284,39 +284,39 @@ int is_prime(int number) {
 }
 
 void generate_primes(int limit) {
-    printf("Prime numbers up to %d:\n", limit);
+    std::cout << "Prime numbers up to %d:\n", limit);
     int count = 0;
     
     for (int num = 2; num <= limit; num++) {
         if (is_prime(num)) {
-            printf("%d ", num);
+            std::cout << "%d ", num);
             count++;
             
             if (count % 10 == 0) { // New line every 10 primes
-                printf("\n");
+                std::cout << "\n");
             }
         }
     }
     
     if (count % 10 != 0) {
-        printf("\n");
+        std::cout << "\n");
     }
-    printf("Total primes found: %d\n", count);
+    std::cout << "Total primes found: %d\n", count);
 }
-```
+```bash
 
 ---
 
-### How to Compile and Run
+### How to Run
 
 1. **Compile the code**:
    ```bash
-   gcc functions.c -o functions
-   ```
+   g++ functions.c -o functions
+   ```bash
 2. **Run your program**:
    ```bash
    ./functions
-   ```
+   ```bash
 3. **Explore all the different function examples!**
 
 ---
@@ -379,19 +379,19 @@ void generate_primes(int limit) {
    add_numbers(int a, int b) { // WRONG - missing int!
        return a + b;
    }
-   ```
+   ```bash
 
 2. **Wrong parameter types**
    ```c
    void print_number(int num) {
-       printf("%f", num); // WRONG - %f for int!
+       std::cout << "%f", num); // WRONG - %f for int!
    }
-   ```
+   ```bash
 
 3. **Not calling the function**
    ```c
    int result = add_numbers; // WRONG - missing ()!
-   ```
+   ```bash
 
 ---
 
@@ -411,14 +411,14 @@ void print_welcome();
 
 // Definition - the actual implementation
 void print_welcome() {
-    printf(" Welcome to the Functions Learning Program! \n");
+    std::cout << " Welcome to the Functions Learning Program! \n");
 }
-```
+```bash
 
 **Why declarations?**
-- Allows functions to be defined after `main()`
-- Enables mutual recursion
-- Helps catch type mismatches
+- [ ] Allows functions to be defined after `main()`
+- [ ] Enables mutual recursion
+- [ ] Helps catch type mismatches
 
 #### 2. Function Parameters and Return Values
 
@@ -430,27 +430,27 @@ int add_numbers(int a, int b) {
 
 // Usage:
 int sum = add_numbers(10, 20); // sum = 30
-```
+```bash
 
 **Parameter Passing:**
-- **By value**: Copies are made (changes don't affect original)
-- **By reference**: Uses pointers (changes affect original)
+- [ ] **By value**: Copies are made (changes don't affect original)
+- [ ] **By reference**: Uses pointers (changes affect original)
 
 #### 3. Void Functions
 
 ```c
 void print_line(char symbol, int length) {
     for (int i = 0; i < length; i++) {
-        printf("%c", symbol);
+        std::cout << "%c", symbol);
     }
-    printf("\n");
+    std::cout << "\n");
 }
-```
+```bash
 
 **Characteristics:**
-- No return value
-- Used for actions (printing, modifying global state)
-- Can have parameters
+- [ ] No return value
+- [ ] Used for actions (printing, modifying global state)
+- [ ] Can have parameters
 
 #### 4. Functions with Calculations
 
@@ -461,24 +461,24 @@ float calculate_average(int sum, int count) {
     }
     return (float)sum / count; // Cast to float for decimal division
 }
-```
+```bash
 
 **Best Practices:**
-- Handle edge cases (division by zero, empty arrays)
-- Use appropriate return types
-- Document what the function does
+- [ ] Handle edge cases (division by zero, empty arrays)
+- [ ] Use appropriate return types
+- [ ] Document what the function does
 
 #### 5. Modular Menu System
 
 ```c
 void display_menu() {
-    printf("\n=== MAIN MENU ===\n");
+    std::cout << "\n=== MAIN MENU ===\n");
     // ... menu options
 }
 
 int get_user_choice() {
     int choice;
-    printf("Enter your choice (1-5): ");
+    std::cout << "Enter your choice (1-5): ");
     scanf("%d", &choice);
     return choice;
 }
@@ -490,12 +490,12 @@ void process_choice(int choice) {
         // ...
     }
 }
-```
+```bash
 
 **Benefits of modular design:**
-- Each function has a single responsibility
-- Easy to test individual components
-- Code is more readable and maintainable
+- [ ] Each function has a single responsibility
+- [ ] Easy to test individual components
+- [ ] Code is more readable and maintainable
 
 ### Advanced Function Concepts
 
@@ -508,12 +508,12 @@ int factorial_recursive(int n) {
     }
     return n * factorial_recursive(n - 1);
 }
-```
+```bash
 
 **Recursion vs Iteration:**
-- **Recursion**: Function calls itself, uses stack memory
-- **Iteration**: Uses loops, generally more efficient
-- **When to use recursion**: Natural recursive problems (trees, factorial)
+- [ ] **Recursion**: Function calls itself, uses stack memory
+- [ ] **Iteration**: Uses loops, generally more efficient
+- [ ] **When to use recursion**: Natural recursive problems (trees, factorial)
 
 #### Function Pointers
 
@@ -525,19 +525,19 @@ int main() {
     int (*operation)(int, int); // Function pointer
     
     operation = add;
-    printf("5 + 3 = %d\n", operation(5, 3));
+    std::cout << "5 + 3 = %d\n", operation(5, 3));
     
     operation = multiply;
-    printf("5 * 3 = %d\n", operation(5, 3));
+    std::cout << "5 * 3 = %d\n", operation(5, 3));
     
     return 0;
 }
-```
+```bash
 
 **Uses:**
-- Callbacks
-- Strategy patterns
-- Dynamic function selection
+- [ ] Callbacks
+- [ ] Strategy patterns
+- [ ] Dynamic function selection
 
 #### Variable Scope and Lifetime
 
@@ -555,13 +555,13 @@ int main() {
     // Cannot access local_var or static_var here
     return 0;
 }
-```
+```bash
 
 **Scope Rules:**
-- **Global**: Accessible everywhere in the file
-- **Local**: Only within the function/block
-- **Static**: Persists but scoped to function
-- **Block**: Within `{}` braces
+- [ ] **Global**: Accessible everywhere in the file
+- [ ] **Local**: Only within the function/block
+- [ ] **Static**: Persists but scoped to function
+- [ ] **Block**: Within `{}` braces
 
 #### Function Overloading (C++ concept, not C)
 
@@ -570,14 +570,14 @@ int main() {
 // int add(int a, int b);
 // float add(float a, float b);
 // char* add(char* a, char* b); // Concatenate strings
-```
+```bash
 
 **C equivalent:**
 ```c
 int add_int(int a, int b);
 float add_float(float a, float b);
 char* concat_strings(char* a, char* b);
-```
+```bash
 
 ### Best Practices for Functions
 
@@ -586,9 +586,9 @@ char* concat_strings(char* a, char* b);
 ```c
 // Good - one clear purpose
 void print_student_report(Student s) {
-    printf("Name: %s\n", s.name);
-    printf("Grade: %c\n", s.grade);
-    printf("GPA: %.2f\n", s.gpa);
+    std::cout << "Name: %s\n", s.name);
+    std::cout << "Grade: %c\n", s.grade);
+    std::cout << "GPA: %.2f\n", s.gpa);
 }
 
 // Bad - multiple responsibilities
@@ -598,7 +598,7 @@ void process_student(Student s) {
     // Save to file
     // Send email
 }
-```
+```bash
 
 #### 2. Meaningful Names
 
@@ -610,19 +610,19 @@ void validate_user_input(char* input, int max_length);
 // Bad
 int calc(float p, float r, int m);
 void check(char* i, int l);
-```
+```bash
 
 #### 3. Parameter Validation
 
 ```c
 int divide(int dividend, int divisor) {
     if (divisor == 0) {
-        printf("Error: Division by zero!\n");
+        std::cout << "Error: Division by zero!\n");
         return 0;
     }
     return dividend / divisor;
 }
-```
+```bash
 
 #### 4. Documentation
 
@@ -638,7 +638,7 @@ float calculate_circle_area(float radius) {
     }
     return 3.14159f * radius * radius;
 }
-```
+```bash
 
 ### Common Function Patterns
 
@@ -651,7 +651,7 @@ float multiply(float a, float b) { return a + b; }
 float divide(float a, float b) {
     return (b != 0) ? a / b : 0;
 }
-```
+```bash
 
 #### Validation Functions
 
@@ -664,7 +664,7 @@ int is_valid_email(char* email) {
 int is_valid_age(int age) {
     return age >= 0 && age <= 150;
 }
-```
+```bash
 
 #### Utility Functions
 
@@ -678,10 +678,10 @@ void clear_screen() {
 }
 
 void pause_program() {
-    printf("Press Enter to continue...");
+    std::cout << "Press Enter to continue...");
     getchar();
 }
-```
+```bash
 
 ### Debugging Functions
 
@@ -689,28 +689,28 @@ void pause_program() {
 
 ```c
 void debug_enter(const char* function_name) {
-    printf("DEBUG: Entering %s()\n", function_name);
+    std::cout << "DEBUG: Entering %s()\n", function_name);
 }
 
 void debug_exit(const char* function_name) {
-    printf("DEBUG: Exiting %s()\n", function_name);
+    std::cout << "DEBUG: Exiting %s()\n", function_name);
 }
 
 int add_with_debug(int a, int b) {
     debug_enter("add_with_debug");
     int result = a + b;
-    printf("DEBUG: %d + %d = %d\n", a, b, result);
+    std::cout << "DEBUG: %d + %d = %d\n", a, b, result);
     debug_exit("add_with_debug");
     return result;
 }
-```
+```bash
 
 #### Parameter Validation
 
 ```c
 # define ASSERT(condition, message) \
     if (!(condition)) { \
-        printf("ASSERTION FAILED: %s\n", message); \
+        std::cout << "ASSERTION FAILED: %s\n", message); \
         return; \
     }
 
@@ -719,7 +719,7 @@ void process_data(int* data, int size) {
     ASSERT(size > 0, "size must be positive");
     // ... rest of function
 }
-```
+```bash
 
 ### Performance Considerations
 
@@ -729,11 +729,11 @@ void process_data(int* data, int size) {
 inline int max(int a, int b) {
     return (a > b) ? a : b;
 }
-```
+```bash
 
 **Benefits:**
-- Eliminates function call overhead
-- Good for small, frequently called functions
+- [ ] Eliminates function call overhead
+- [ ] Good for small, frequently called functions
 
 #### Function Call Overhead
 
@@ -747,7 +747,7 @@ for (int i = 0; i < 1000000; i++) {
 for (int i = 0; i < 1000000; i++) {
     result += i + 1;
 }
-```
+```bash
 
 ### Real-World Function Examples
 
@@ -764,7 +764,7 @@ int load_config(const char* filename, Config* config) {
     fclose(file);
     return 1;
 }
-```
+```bash
 
 #### Error Handling
 
@@ -791,7 +791,7 @@ ErrorCode process_file(const char* filename) {
     fclose(file);
     return ERROR_NONE;
 }
-```
+```bash
 
 ---
 
@@ -804,13 +804,13 @@ ErrorCode process_file(const char* filename) {
 ### STAGE 1 COMPLETE! 
 
 **What you've learned:**
--  Basic program structure
--  Variables and data types  
--  Mathematical operations
--  User input and output
--  Decision making with conditionals
--  Repetition with loops
--  Code organization with functions
+- [ ]  Basic program structure
+- [ ]  Variables and data types  
+- [ ]  Mathematical operations
+- [ ]  User input and output
+- [ ]  Decision making with conditionals
+- [ ]  Repetition with loops
+- [ ]  Code organization with functions
 
 **Next Steps:**
 1. Practice these concepts by redoing lessons
@@ -818,3 +818,66 @@ ErrorCode process_file(const char* filename) {
 3. Start thinking about problems before coding solutions
 
 *Keep coding! Your programming journey has just begun! *
+
+### Additional Content
+
+Understand the key concepts:
+
+- [ ] Review each function
+- [ ] Understand the flow
+- [ ] Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- [ ] Main function: Entry point
+- [ ] Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard C++ conventions with proper imports and main function
+2. **Output**: Uses std::cout to print messages to the console
+3. **Standard Library**: Includes iostream for input/output operations
+4. **Return Value**: Returns 0 to indicate successful execution
+5. **Best Practices**: Code is readable and uses C++ idioms
+
+### Testing Your Solution
+
+1. **Compile**: `g++ hello.cpp -o hello`
+2. **Run**: `./hello`
+3. **Expected Output**: `Hello, World!`
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
+| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+
+### Tips for Learning
+
+- C++ is a superset of C with additional features
+- `std::cout` is the C++ way to print (replaces `printf`)
+- `std::endl` adds a newline and flushes the buffer
+- The `std::` prefix means these are from the "standard" namespace

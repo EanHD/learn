@@ -1,59 +1,63 @@
 # Level 7: Functions
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
-
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.kt` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 1: Copying Code
 
 ### Today's Mission
 
-Now that you've learned the basics, let's explore writing reusable code with functions! This fundamental concept is used in almost every program you'll write.
+Organize your code into reusable functions/methods.
+
+---
 
 ### Learning Goals
 
-- Understand how to use functions in Kotlin
-- Learn the syntax specific to Kotlin
-- Practice implementing functions
-- See real-world use cases
+- Understand function concepts and modularity
+- Learn to define and call functions
+- Practice with parameters and return values
+- Create organized, maintainable code
+
+---
 
 ### Your Task
 
-We'll focus on understanding how functions works in Kotlin. For now, copy the provided code and run it to see the results. Don't worry if you don't understand every detail yet - that comes with practice!
+**Copy the following code EXACTLY as shown below into `main.kt`**
 
-### Important Note
+```kotlin
+fun greet(name: String) {
+    println("Hello, $name!")
+}
 
-At this stage, we focus on copying and understanding. You'll start writing your own code in Stage 2 (Pseudocode to Code).
+fun add(a: Int, b: Int): Int {
+    return a + b
+}
 
-### How to Execute
+fun factorial(n: Int): Int {
+    if (n <= 1) return 1
+    return n * factorial(n - 1)
+}
 
-```bash
-kotlinc program.kt
-```
+fun main() {
+    greet("Alice")
+    greet("Bob")
+    
+    val sum = add(15, 7)
+    println("15 + 7 = $sum")
+    
+    val fact = factorial(5)
+    println("5! = $fact")
+}
+```kotlin
+
+---
 
 ### Success Checklist
 
-- [ ] Created the file
+- [ ] Created a file named `main.kt`
 - [ ] Copied the code exactly as shown
-- [ ] Program executed without errors
-- [ ] Understood what the output represents
-
----
-
-### What's Next?
-
-In Stage 2, you'll take what you learned here and start translating logic into code. The progression is:
-
-1. **Stage 1 (Copying)** - Get familiar with syntax
-2. **Stage 2 (Pseudocode→Code)** - Translate plain English to code
-3. **Stage 3 (Problem→Pseudocode)** - Write the logic first
-4. **Stage 4 (Full Problem Solving)** - Complete independence
-5. **Stage 5 (Capstone)** - Real-world projects
-
----
-
-## Need Help with Vim?
-
-Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim commands!
+- [ ] Ran the program successfully
+- [ ] Understood the basic concepts
+- [ ] Experimented with small modifications
 
 ---
 
@@ -61,23 +65,139 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ---
 
-## ANSWER KEY (No cheating until you've tried!)
+## ANSWER KEY (Study after attempting!)
 
-### Code Breakdown
+### The Complete Code
 
-> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+```kotlin
+fun greet(name: String) {
+    println("Hello, $name!")
+}
+
+fun add(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun factorial(n: Int): Int {
+    if (n <= 1) return 1
+    return n * factorial(n - 1)
+}
+
+fun main() {
+    greet("Alice")
+    greet("Bob")
+    
+    val sum = add(15, 7)
+    println("15 + 7 = $sum")
+    
+    val fact = factorial(5)
+    println("5! = $fact")
+}
+```kotlin
+
+### What This Code Does
+
+This program demonstrates functions in Kotlin.
 
 ### Key Concepts
 
-- Review the code structure specific to Kotlin
-- Understand the execution flow
-- Learn common pitfalls and solutions
+- **Functions**: Reusable blocks of code
+- **Function Definition**: Creating a function with parameters
+- **Function Calls**: Using a function by calling its name
+- **Return Values**: Functions that give back a result
+- **Recursion**: Functions that call themselves
 
-### Next Steps
+### Line-by-Line Breakdown
 
-Practice the code and experiment with variations!
+The code organizes logic into functions:
+
+1. **Greet Function**: Takes a name, displays greeting
+2. **Add Function**: Takes two numbers, returns their sum
+3. **Factorial Function**: Recursive function for factorial calculation
+4. **Call Functions**: Use the functions in the main program
+5. **Display Results**: Show the outputs of function calls
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Syntax error | Typo in code | Double-check spelling and punctuation |
+| Type error | Wrong data type | Ensure variables are correct type |
+| Runtime error | Code runs but crashes | Check your logic and data flow |
+
+### Bonus Knowledge
+
+- Functions make code more organized and reusable
+- Parameters pass data into functions
+- Return values send data back from functions
+- Recursive functions must have a base case to stop
+- Good function names describe what they do
 
 ---
 
-**Congratulations! Keep coding!**
+**Excellent work! You've mastered functions!**
 
+*Continue to the next level to keep building your skills!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```kt
+fun main() {
+    println("Hello, World!")
+}
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard kotlin conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

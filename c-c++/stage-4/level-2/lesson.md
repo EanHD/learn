@@ -1,6 +1,6 @@
 # Level 2: Data Processing Application
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 4: Full Problem Solving
@@ -21,12 +21,12 @@
 
 ### Learning Goals
 
-- Advanced file I/O operations
-- CSV parsing and data validation
-- Statistical data analysis
-- Report generation and formatting
-- Data filtering and searching
-- Memory management for large datasets
+- [ ] Advanced file I/O operations
+- [ ] CSV parsing and data validation
+- [ ] Statistical data analysis
+- [ ] Report generation and formatting
+- [ ] Data filtering and searching
+- [ ] Memory management for large datasets
 
 ---
 
@@ -45,19 +45,19 @@
 ## Application Requirements
 
 ### Core Features
-- **CSV Processing**: Parse sales data (date, product, quantity, price)
-- **Data Validation**: Check for errors and missing data
-- **Statistical Calculations**: Totals, averages, best/worst performers
-- **Time-based Analysis**: Daily, weekly, monthly summaries
-- **Product Analysis**: Best-selling items, revenue by product
-- **Report Export**: Save analysis results to files
+- [ ] **CSV Processing**: Parse sales data (date, product, quantity, price)
+- [ ] **Data Validation**: Check for errors and missing data
+- [ ] **Statistical Calculations**: Totals, averages, best/worst performers
+- [ ] **Time-based Analysis**: Daily, weekly, monthly summaries
+- [ ] **Product Analysis**: Best-selling items, revenue by product
+- [ ] **Report Export**: Save analysis results to files
 
 ### Technical Requirements
-- Handle CSV files with proper parsing
-- Dynamic memory allocation for variable data sizes
-- Date parsing and manipulation
-- Floating-point precision handling
-- Efficient data structures for analysis
+- [ ] Handle CSV files with proper parsing
+- [ ] Dynamic memory allocation for variable data sizes
+- [ ] Date parsing and manipulation
+- [ ] Floating-point precision handling
+- [ ] Efficient data structures for analysis
 
 ---
 
@@ -93,14 +93,14 @@ typedef struct {
     char top_product[MAX_PRODUCT_NAME];
     float top_product_revenue;
 } SalesStats;
-```
+```cpp
 
 ### Function Modules
-- **File Operations**: `load_csv()`, `save_report()`
-- **Data Processing**: `parse_record()`, `validate_data()`
-- **Analysis**: `calculate_stats()`, `analyze_by_date()`, `analyze_by_product()`
-- **Reporting**: `generate_summary()`, `export_data()`
-- **User Interface**: `display_menu()`, `handle_user_input()`
+- [ ] **File Operations**: `load_csv()`, `save_report()`
+- [ ] **Data Processing**: `parse_record()`, `validate_data()`
+- [ ] **Analysis**: `calculate_stats()`, `analyze_by_date()`, `analyze_by_product()`
+- [ ] **Reporting**: `generate_summary()`, `export_data()`
+- [ ] **User Interface**: `display_menu()`, `handle_user_input()`
 
 ---
 
@@ -163,7 +163,7 @@ int get_user_choice(void);
 void display_records(const SalesData *data, int limit);
 
 # endif
-```
+```cpp
 
 ### Implementation File (sales_analyzer.c)
 ```c
@@ -173,7 +173,7 @@ void display_records(const SalesData *data, int limit);
 void initialize_sales_data(SalesData *data, const char *filename) {
     data->records = malloc(INITIAL_CAPACITY * sizeof(SaleRecord));
     if (data->records == NULL) {
-        printf("Error: Memory allocation failed.\n");
+        std::cout << "Error: Memory allocation failed.\n");
         exit(1);
     }
     data->count = 0;
@@ -195,7 +195,7 @@ int resize_sales_data(SalesData *data) {
     SaleRecord *new_records = realloc(data->records, new_capacity * sizeof(SaleRecord));
 
     if (new_records == NULL) {
-        printf("Error: Memory reallocation failed.\n");
+        std::cout << "Error: Memory reallocation failed.\n");
         return 0;
     }
 
@@ -208,7 +208,7 @@ int resize_sales_data(SalesData *data) {
 int load_csv(SalesData *data) {
     FILE *file = fopen(data->filename, "r");
     if (file == NULL) {
-        printf("Error: Could not open file '%s'\n", data->filename);
+        std::cout << "Error: Could not open file '%s'\n", data->filename);
         return 0;
     }
 
@@ -218,7 +218,7 @@ int load_csv(SalesData *data) {
 
     // Skip header line
     if (fgets(line, sizeof(line), file) == NULL) {
-        printf("Error: Empty file or read error.\n");
+        std::cout << "Error: Empty file or read error.\n");
         fclose(file);
         return 0;
     }
@@ -245,15 +245,15 @@ int load_csv(SalesData *data) {
                 data->count++;
                 valid_records++;
             } else {
-                printf("Warning: Invalid data on line %d, skipping.\n", line_number);
+                std::cout << "Warning: Invalid data on line %d, skipping.\n", line_number);
             }
         } else {
-            printf("Warning: Parse error on line %d, skipping.\n", line_number);
+            std::cout << "Warning: Parse error on line %d, skipping.\n", line_number);
         }
     }
 
     fclose(file);
-    printf("Loaded %d valid records from %s\n", valid_records, data->filename);
+    std::cout << "Loaded %d valid records from %s\n", valid_records, data->filename);
     return valid_records;
 }
 
@@ -377,15 +377,15 @@ void calculate_statistics(const SalesData *data, SalesStats *stats) {
 
 // Display menu
 void display_menu(void) {
-    printf("\n=== Sales Data Analyzer ===\n");
-    printf("1. Load Sales Data\n");
-    printf("2. View Records\n");
-    printf("3. Generate Statistics\n");
-    printf("4. Analyze by Date\n");
-    printf("5. Analyze by Product\n");
-    printf("6. Generate Report\n");
-    printf("7. Exit\n");
-    printf("Enter your choice (1-7): ");
+    std::cout << "\n=== Sales Data Analyzer ===\n");
+    std::cout << "1. Load Sales Data\n");
+    std::cout << "2. View Records\n");
+    std::cout << "3. Generate Statistics\n");
+    std::cout << "4. Analyze by Date\n");
+    std::cout << "5. Analyze by Product\n");
+    std::cout << "6. Generate Report\n");
+    std::cout << "7. Exit\n");
+    std::cout << "Enter your choice (1-7): ");
 }
 
 // Get user choice
@@ -398,19 +398,19 @@ int get_user_choice(void) {
 // Display records with limit
 void display_records(const SalesData *data, int limit) {
     if (data->count == 0) {
-        printf("No data loaded.\n");
+        std::cout << "No data loaded.\n");
         return;
     }
 
     int display_count = (limit > 0 && limit < data->count) ? limit : data->count;
 
-    printf("\n=== Sales Records (showing %d of %d) ===\n", display_count, data->count);
-    printf("%-12s %-15s %8s %10s %10s\n", "Date", "Product", "Qty", "Unit Price", "Total");
-    printf("------------------------------------------------------------\n");
+    std::cout << "\n=== Sales Records (showing %d of %d) ===\n", display_count, data->count);
+    std::cout << "%-12s %-15s %8s %10s %10s\n", "Date", "Product", "Qty", "Unit Price", "Total");
+    std::cout << "------------------------------------------------------------\n");
 
     for (int i = 0; i < display_count; i++) {
         const SaleRecord *record = &data->records[i];
-        printf("%-12s %-15s %8d %10.2f %10.2f\n",
+        std::cout << "%-12s %-15s %8d %10.2f %10.2f\n",
                record->date, record->product, record->quantity,
                record->unit_price, record->total_amount);
     }
@@ -418,19 +418,19 @@ void display_records(const SalesData *data, int limit) {
 
 // Generate summary report
 void generate_summary_report(const SalesData *data, const SalesStats *stats) {
-    printf("\n=== Sales Summary Report ===\n");
-    printf("Total Records: %d\n", data->count);
-    printf("Total Revenue: $%.2f\n", stats->total_revenue);
-    printf("Average Sale: $%.2f\n", stats->average_sale);
-    printf("Best Day: %s ($%.2f)\n", stats->best_day, stats->best_day_revenue);
-    printf("Top Product: %s ($%.2f)\n", stats->top_product, stats->top_product_revenue);
+    std::cout << "\n=== Sales Summary Report ===\n");
+    std::cout << "Total Records: %d\n", data->count);
+    std::cout << "Total Revenue: $%.2f\n", stats->total_revenue);
+    std::cout << "Average Sale: $%.2f\n", stats->average_sale);
+    std::cout << "Best Day: %s ($%.2f)\n", stats->best_day, stats->best_day_revenue);
+    std::cout << "Top Product: %s ($%.2f)\n", stats->top_product, stats->top_product_revenue);
 }
 
 // Save report to file
 int save_report(const char *filename, const SalesData *data, const SalesStats *stats) {
     FILE *file = fopen(filename, "w");
     if (file == NULL) {
-        printf("Error: Could not create report file.\n");
+        std::cout << "Error: Could not create report file.\n");
         return 0;
     }
 
@@ -455,21 +455,21 @@ int save_report(const char *filename, const SalesData *data, const SalesStats *s
     }
 
     fclose(file);
-    printf("Report saved to %s\n", filename);
+    std::cout << "Report saved to %s\n", filename);
     return 1;
 }
 
 // Analyze by date
 void analyze_by_date(const SalesData *data) {
     if (data->count == 0) {
-        printf("No data to analyze.\n");
+        std::cout << "No data to analyze.\n");
         return;
     }
 
     // Simple date analysis - group by date
-    printf("\n=== Sales by Date ===\n");
-    printf("%-12s %8s %12s\n", "Date", "Sales", "Revenue");
-    printf("------------------------------\n");
+    std::cout << "\n=== Sales by Date ===\n");
+    std::cout << "%-12s %8s %12s\n", "Date", "Sales", "Revenue");
+    std::cout << "------------------------------\n");
 
     char current_date[MAX_DATE_LENGTH] = "";
     int date_sales = 0;
@@ -481,7 +481,7 @@ void analyze_by_date(const SalesData *data) {
         if (strcmp(current_date, record->date) != 0) {
             // Print previous date if exists
             if (strlen(current_date) > 0) {
-                printf("%-12s %8d %12.2f\n", current_date, date_sales, date_revenue);
+                std::cout << "%-12s %8d %12.2f\n", current_date, date_sales, date_revenue);
             }
 
             // Start new date
@@ -496,20 +496,20 @@ void analyze_by_date(const SalesData *data) {
 
     // Print last date
     if (strlen(current_date) > 0) {
-        printf("%-12s %8d %12.2f\n", current_date, date_sales, date_revenue);
+        std::cout << "%-12s %8d %12.2f\n", current_date, date_sales, date_revenue);
     }
 }
 
 // Analyze by product
 void analyze_by_product(const SalesData *data) {
     if (data->count == 0) {
-        printf("No data to analyze.\n");
+        std::cout << "No data to analyze.\n");
         return;
     }
 
-    printf("\n=== Sales by Product ===\n");
-    printf("%-15s %8s %12s %8s\n", "Product", "Sales", "Revenue", "Avg Price");
-    printf("--------------------------------------------------\n");
+    std::cout << "\n=== Sales by Product ===\n");
+    std::cout << "%-15s %8s %12s %8s\n", "Product", "Sales", "Revenue", "Avg Price");
+    std::cout << "--------------------------------------------------\n");
 
     char current_product[MAX_PRODUCT_NAME] = "";
     int product_sales = 0;
@@ -523,7 +523,7 @@ void analyze_by_product(const SalesData *data) {
             // Print previous product if exists
             if (strlen(current_product) > 0) {
                 float avg_price = product_revenue / total_quantity;
-                printf("%-15s %8d %12.2f %8.2f\n",
+                std::cout << "%-15s %8d %12.2f %8.2f\n",
                        current_product, product_sales, product_revenue, avg_price);
             }
 
@@ -542,11 +542,11 @@ void analyze_by_product(const SalesData *data) {
     // Print last product
     if (strlen(current_product) > 0) {
         float avg_price = product_revenue / total_quantity;
-        printf("%-15s %8d %12.2f %8.2f\n",
+        std::cout << "%-15s %8d %12.2f %8.2f\n",
                current_product, product_sales, product_revenue, avg_price);
     }
 }
-```
+```cpp
 
 ### Main Program (main.c)
 ```c
@@ -559,8 +559,8 @@ int main() {
 
     initialize_sales_data(&data, "sales_data.csv");
 
-    printf("Sales Data Analyzer\n");
-    printf("===================\n");
+    std::cout << "Sales Data Analyzer\n");
+    std::cout << "===================\n");
 
     int running = 1;
     while (running) {
@@ -571,20 +571,20 @@ int main() {
             case 1: { // Load Sales Data
                 if (load_csv(&data) > 0) {
                     data_loaded = 1;
-                    printf("Data loaded successfully.\n");
+                    std::cout << "Data loaded successfully.\n");
                 } else {
-                    printf("Failed to load data.\n");
+                    std::cout << "Failed to load data.\n");
                 }
                 break;
             }
 
             case 2: { // View Records
                 if (!data_loaded) {
-                    printf("Please load data first.\n");
+                    std::cout << "Please load data first.\n");
                     break;
                 }
                 int limit;
-                printf("Enter number of records to display (0 for all): ");
+                std::cout << "Enter number of records to display (0 for all): ");
                 scanf("%d", &limit);
                 display_records(&data, limit);
                 break;
@@ -592,7 +592,7 @@ int main() {
 
             case 3: { // Generate Statistics
                 if (!data_loaded) {
-                    printf("Please load data first.\n");
+                    std::cout << "Please load data first.\n");
                     break;
                 }
                 calculate_statistics(&data, &stats);
@@ -602,7 +602,7 @@ int main() {
 
             case 4: { // Analyze by Date
                 if (!data_loaded) {
-                    printf("Please load data first.\n");
+                    std::cout << "Please load data first.\n");
                     break;
                 }
                 analyze_by_date(&data);
@@ -611,7 +611,7 @@ int main() {
 
             case 5: { // Analyze by Product
                 if (!data_loaded) {
-                    printf("Please load data first.\n");
+                    std::cout << "Please load data first.\n");
                     break;
                 }
                 analyze_by_product(&data);
@@ -620,7 +620,7 @@ int main() {
 
             case 6: { // Generate Report
                 if (!data_loaded) {
-                    printf("Please load data first.\n");
+                    std::cout << "Please load data first.\n");
                     break;
                 }
                 calculate_statistics(&data, &stats);
@@ -629,20 +629,20 @@ int main() {
             }
 
             case 7: { // Exit
-                printf("Goodbye!\n");
+                std::cout << "Goodbye!\n");
                 running = 0;
                 break;
             }
 
             default:
-                printf("Invalid choice. Please try again.\n");
+                std::cout << "Invalid choice. Please try again.\n");
         }
     }
 
     free_sales_data(&data);
     return 0;
 }
-```
+```cpp
 
 ---
 
@@ -659,16 +659,16 @@ Date,Product,Quantity,UnitPrice
 2024-01-03,Monitor,1,299.99
 2024-01-04,Laptop,3,999.99
 2024-01-04,Mouse,4,25.50
-```
+```cpp
 
 ### Compilation Instructions
 ```bash
 # Compile the program
-gcc -o sales_analyzer main.c sales_analyzer.c -lm
+g++ -o sales_analyzer main.c sales_analyzer.c -lm
 
 # Run the program
 ./sales_analyzer
-```
+```cpp
 
 ### Test Scenarios
 1. **Load Data**: Import the sample CSV file
@@ -685,24 +685,24 @@ gcc -o sales_analyzer main.c sales_analyzer.c -lm
 ### Key Features Implemented
 
 **CSV Processing:**
-- Robust CSV parsing with error handling
-- Dynamic memory allocation for variable data sizes
-- Data validation and error reporting
+- [ ] Robust CSV parsing with error handling
+- [ ] Dynamic memory allocation for variable data sizes
+- [ ] Data validation and error reporting
 
 **Statistical Analysis:**
-- Revenue calculations with floating-point precision
-- Grouping and aggregation by date and product
-- Summary statistics generation
+- [ ] Revenue calculations with floating-point precision
+- [ ] Grouping and aggregation by date and product
+- [ ] Summary statistics generation
 
 **File I/O Operations:**
-- CSV reading with proper error handling
-- Text report generation and export
-- Memory-efficient data loading
+- [ ] CSV reading with proper error handling
+- [ ] Text report generation and export
+- [ ] Memory-efficient data loading
 
 **Data Structures:**
-- Dynamic arrays for variable-sized datasets
-- Structured data organization
-- Efficient memory management
+- [ ] Dynamic arrays for variable-sized datasets
+- [ ] Structured data organization
+- [ ] Efficient memory management
 
 ---
 
@@ -746,37 +746,37 @@ gcc -o sales_analyzer main.c sales_analyzer.c -lm
 ## Learning Outcomes
 
 **Technical Skills:**
-- Advanced file I/O and CSV parsing
-- Dynamic memory allocation and management
-- Statistical data analysis algorithms
-- Report generation and formatting
-- Data validation and error handling
+- [ ] Advanced file I/O and CSV parsing
+- [ ] Dynamic memory allocation and management
+- [ ] Statistical data analysis algorithms
+- [ ] Report generation and formatting
+- [ ] Data validation and error handling
 
 **Problem-Solving Skills:**
-- Data processing pipeline design
-- Memory-efficient data structures
-- Algorithm optimization for large datasets
-- User experience considerations for data tools
+- [ ] Data processing pipeline design
+- [ ] Memory-efficient data structures
+- [ ] Algorithm optimization for large datasets
+- [ ] User experience considerations for data tools
 
 ---
 
 ## Code Walkthrough
 
 ### Data Processing Pipeline
-```
+```cpp
 CSV File → Parse Records → Validate Data → Store in Memory
       ↓           ↓            ↓           ↓
    Error     Clean Data    Validated    In-Memory
   Handling   Extraction    Records      Database
-```
+```cpp
 
 ### Analysis Workflow
-```
+```cpp
 Raw Data → Statistical Calculations → Grouping Operations → Report Generation
      ↓               ↓                      ↓              ↓
 Data Loading    Summary Stats        Date/Product     Formatted Output
 Validation      & Averages           Analysis         & File Export
-```
+```cpp
 
 ---
 
@@ -787,25 +787,103 @@ Validation      & Averages           Analysis         & File Export
 ## Implementation Notes
 
 ### Design Decisions
-- **Dynamic Arrays**: Allow processing of any size dataset
-- **Simple CSV Format**: Focus on core functionality over complex parsing
-- **In-Memory Processing**: Fast analysis for reasonable dataset sizes
-- **Text-Based Reports**: Human-readable output format
+- [ ] **Dynamic Arrays**: Allow processing of any size dataset
+- [ ] **Simple CSV Format**: Focus on core functionality over complex parsing
+- [ ] **In-Memory Processing**: Fast analysis for reasonable dataset sizes
+- [ ] **Text-Based Reports**: Human-readable output format
 
 ### Performance Considerations
-- **Memory Efficiency**: Resize arrays only when needed
-- **Linear Processing**: Single-pass algorithms where possible
-- **Limited Aggregation**: Fixed-size arrays for grouping operations
-- **File I/O Optimization**: Read once, process in memory
+- [ ] **Memory Efficiency**: Resize arrays only when needed
+- [ ] **Linear Processing**: Single-pass algorithms where possible
+- [ ] **Limited Aggregation**: Fixed-size arrays for grouping operations
+- [ ] **File I/O Optimization**: Read once, process in memory
 
 ### Error Handling Strategy
-- **File Operations**: Check all file open/close operations
-- **Memory Allocation**: Verify malloc/realloc success
-- **Data Validation**: Comprehensive input checking
-- **User Feedback**: Clear error messages and recovery options
+- [ ] **File Operations**: Check all file open/close operations
+- [ ] **Memory Allocation**: Verify malloc/realloc success
+- [ ] **Data Validation**: Comprehensive input checking
+- [ ] **User Feedback**: Clear error messages and recovery options
 
 ---
 
  **Congratulations! You've built a powerful data processing application!** 
 
 *Next: Mathematical applications with advanced formula implementations! *
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- [ ] Review each function
+- [ ] Understand the flow
+- [ ] Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- [ ] Main function: Entry point
+- [ ] Helper functions: Support logic
+
+
+### <div style="page-break-after: always;"></div>
+
+Answer Key
+
+Expected implementation provided.
+
+<div style="page-break-after: always;"></div>
+
+---
+
+## Answer Key
+
+### Complete Solution
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard C++ conventions with proper imports and main function
+2. **Output**: Uses std::cout to print messages to the console
+3. **Standard Library**: Includes iostream for input/output operations
+4. **Return Value**: Returns 0 to indicate successful execution
+5. **Best Practices**: Code is readable and uses C++ idioms
+
+### Testing Your Solution
+
+1. **Compile**: `g++ hello.cpp -o hello`
+2. **Run**: `./hello`
+3. **Expected Output**: `Hello, World!`
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
+| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+
+### Tips for Learning
+
+- C++ is a superset of C with additional features
+- `std::cout` is the C++ way to print (replaces `printf`)
+- `std::endl` adds a newline and flushes the buffer
+- The `std::` prefix means these are from the "standard" namespace

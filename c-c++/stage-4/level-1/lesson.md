@@ -1,6 +1,6 @@
 # Level 1: Simple Application
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 4: Full Problem Solving
@@ -21,12 +21,12 @@
 
 ### Learning Goals
 
-- Build complete, working applications
-- Implement full program lifecycles
-- Handle file I/O operations
-- Create user-friendly interfaces
-- Manage application state
-- Write production-ready code
+- [ ] Build complete, working applications
+- [ ] Implement full program lifecycles
+- [ ] Handle file I/O operations
+- [ ] Create user-friendly interfaces
+- [ ] Manage application state
+- [ ] Write production-ready code
 
 ---
 
@@ -45,18 +45,18 @@
 ## Application Requirements
 
 ### Core Features
-- **Student Registration**: Add students with ID and name
-- **Grade Recording**: Add grades for assignments/quizzes/exams
-- **Grade Calculations**: Calculate averages and GPA
-- **Data Persistence**: Save/load data from files
-- **Reports**: Display student information and statistics
+- [ ] **Student Registration**: Add students with ID and name
+- [ ] **Grade Recording**: Add grades for assignments/quizzes/exams
+- [ ] **Grade Calculations**: Calculate averages and GPA
+- [ ] **Data Persistence**: Save/load data from files
+- [ ] **Reports**: Display student information and statistics
 
 ### Technical Requirements
-- Use structs for data organization
-- Implement file I/O for data persistence
-- Create modular functions
-- Include proper error handling
-- Provide clear user interface
+- [ ] Use structs for data organization
+- [ ] Implement file I/O for data persistence
+- [ ] Create modular functions
+- [ ] Include proper error handling
+- [ ] Provide clear user interface
 
 ---
 
@@ -81,14 +81,14 @@ typedef struct {
     int student_count;
     char filename[100];
 } GradeBook;
-```
+```cpp
 
 ### Function Modules
-- **File Operations**: `save_data()`, `load_data()`
-- **Student Management**: `add_student()`, `find_student()`, `remove_student()`
-- **Grade Management**: `add_grade()`, `calculate_average()`
-- **User Interface**: `display_menu()`, `get_user_choice()`
-- **Reports**: `display_student()`, `display_all_students()`
+- [ ] **File Operations**: `save_data()`, `load_data()`
+- [ ] **Student Management**: `add_student()`, `find_student()`, `remove_student()`
+- [ ] **Grade Management**: `add_grade()`, `calculate_average()`
+- [ ] **User Interface**: `display_menu()`, `get_user_choice()`
+- [ ] **Reports**: `display_student()`, `display_all_students()`
 
 ---
 
@@ -135,7 +135,7 @@ void display_menu(void);
 int get_user_choice(void);
 
 # endif
-```
+```cpp
 
 ### Implementation File (gradebook.c)
 ```c
@@ -151,13 +151,13 @@ void initialize_gradebook(GradeBook *book, const char *filename) {
 // Add a new student
 int add_student(GradeBook *book, int id, const char *name) {
     if (book->student_count >= MAX_STUDENTS) {
-        printf("Error: Maximum number of students reached.\n");
+        std::cout << "Error: Maximum number of students reached.\n");
         return 0;
     }
 
     // Check if student ID already exists
     if (find_student(book, id) != -1) {
-        printf("Error: Student ID %d already exists.\n", id);
+        std::cout << "Error: Student ID %d already exists.\n", id);
         return 0;
     }
 
@@ -168,7 +168,7 @@ int add_student(GradeBook *book, int id, const char *name) {
     student->gpa = 0.0;
 
     book->student_count++;
-    printf("Student %s (ID: %d) added successfully.\n", name, id);
+    std::cout << "Student %s (ID: %d) added successfully.\n", name, id);
     return 1;
 }
 
@@ -186,18 +186,18 @@ int find_student(const GradeBook *book, int id) {
 int add_grade(GradeBook *book, int student_id, float grade) {
     int index = find_student(book, student_id);
     if (index == -1) {
-        printf("Error: Student ID %d not found.\n", student_id);
+        std::cout << "Error: Student ID %d not found.\n", student_id);
         return 0;
     }
 
     Student *student = &book->students[index];
     if (student->grade_count >= MAX_GRADES) {
-        printf("Error: Maximum grades reached for student.\n");
+        std::cout << "Error: Maximum grades reached for student.\n");
         return 0;
     }
 
     if (grade < 0.0 || grade > 100.0) {
-        printf("Error: Grade must be between 0.0 and 100.0.\n");
+        std::cout << "Error: Grade must be between 0.0 and 100.0.\n");
         return 0;
     }
 
@@ -205,7 +205,7 @@ int add_grade(GradeBook *book, int student_id, float grade) {
     student->grade_count++;
     calculate_gpa(student);
 
-    printf("Grade %.2f added to %s.\n", grade, student->name);
+    std::cout << "Grade %.2f added to %s.\n", grade, student->name);
     return 1;
 }
 
@@ -225,33 +225,33 @@ void calculate_gpa(Student *student) {
 
 // Display single student information
 void display_student(const Student *student) {
-    printf("\n=== Student Information ===\n");
-    printf("ID: %d\n", student->id);
-    printf("Name: %s\n", student->name);
-    printf("Number of grades: %d\n", student->grade_count);
-    printf("GPA: %.2f\n", student->gpa);
+    std::cout << "\n=== Student Information ===\n");
+    std::cout << "ID: %d\n", student->id);
+    std::cout << "Name: %s\n", student->name);
+    std::cout << "Number of grades: %d\n", student->grade_count);
+    std::cout << "GPA: %.2f\n", student->gpa);
 
     if (student->grade_count > 0) {
-        printf("Grades: ");
+        std::cout << "Grades: ");
         for (int i = 0; i < student->grade_count; i++) {
-            printf("%.2f", student->grades[i]);
-            if (i < student->grade_count - 1) printf(", ");
+            std::cout << "%.2f", student->grades[i]);
+            if (i < student->grade_count - 1) std::cout << ", ");
         }
-        printf("\n");
+        std::cout << "\n");
     }
 }
 
 // Display all students
 void display_all_students(const GradeBook *book) {
     if (book->student_count == 0) {
-        printf("No students in the gradebook.\n");
+        std::cout << "No students in the gradebook.\n");
         return;
     }
 
-    printf("\n=== All Students ===\n");
+    std::cout << "\n=== All Students ===\n");
     for (int i = 0; i < book->student_count; i++) {
         const Student *student = &book->students[i];
-        printf("%d. %s (ID: %d) - GPA: %.2f\n",
+        std::cout << "%d. %s (ID: %d) - GPA: %.2f\n",
                i + 1, student->name, student->id, student->gpa);
     }
 }
@@ -260,7 +260,7 @@ void display_all_students(const GradeBook *book) {
 int save_data(const GradeBook *book) {
     FILE *file = fopen(book->filename, "w");
     if (file == NULL) {
-        printf("Error: Could not open file for writing.\n");
+        std::cout << "Error: Could not open file for writing.\n");
         return 0;
     }
 
@@ -276,7 +276,7 @@ int save_data(const GradeBook *book) {
     }
 
     fclose(file);
-    printf("Data saved to %s\n", book->filename);
+    std::cout << "Data saved to %s\n", book->filename);
     return 1;
 }
 
@@ -284,7 +284,7 @@ int save_data(const GradeBook *book) {
 int load_data(GradeBook *book) {
     FILE *file = fopen(book->filename, "r");
     if (file == NULL) {
-        printf("No existing data file found. Starting fresh.\n");
+        std::cout << "No existing data file found. Starting fresh.\n");
         return 0;
     }
 
@@ -309,20 +309,20 @@ int load_data(GradeBook *book) {
     }
 
     fclose(file);
-    printf("Data loaded from %s\n", book->filename);
+    std::cout << "Data loaded from %s\n", book->filename);
     return 1;
 }
 
 // Display menu
 void display_menu(void) {
-    printf("\n=== Grade Management System ===\n");
-    printf("1. Add Student\n");
-    printf("2. Add Grade\n");
-    printf("3. View Student\n");
-    printf("4. View All Students\n");
-    printf("5. Save Data\n");
-    printf("6. Exit\n");
-    printf("Enter your choice (1-6): ");
+    std::cout << "\n=== Grade Management System ===\n");
+    std::cout << "1. Add Student\n");
+    std::cout << "2. Add Grade\n");
+    std::cout << "3. View Student\n");
+    std::cout << "4. View All Students\n");
+    std::cout << "5. Save Data\n");
+    std::cout << "6. Exit\n");
+    std::cout << "Enter your choice (1-6): ");
 }
 
 // Get user choice
@@ -331,7 +331,7 @@ int get_user_choice(void) {
     scanf("%d", &choice);
     return choice;
 }
-```
+```cpp
 
 ### Main Program (main.c)
 ```c
@@ -351,9 +351,9 @@ int main() {
                 int id;
                 char name[MAX_NAME_LENGTH];
 
-                printf("Enter student ID: ");
+                std::cout << "Enter student ID: ");
                 scanf("%d", &id);
-                printf("Enter student name: ");
+                std::cout << "Enter student name: ");
                 scanf(" %[^\n]", name); // Read entire line including spaces
 
                 add_student(&book, id, name);
@@ -364,9 +364,9 @@ int main() {
                 int student_id;
                 float grade;
 
-                printf("Enter student ID: ");
+                std::cout << "Enter student ID: ");
                 scanf("%d", &student_id);
-                printf("Enter grade (0-100): ");
+                std::cout << "Enter grade (0-100): ");
                 scanf("%f", &grade);
 
                 add_grade(&book, student_id, grade);
@@ -375,14 +375,14 @@ int main() {
 
             case 3: { // View Student
                 int student_id;
-                printf("Enter student ID: ");
+                std::cout << "Enter student ID: ");
                 scanf("%d", &student_id);
 
                 int index = find_student(&book, student_id);
                 if (index != -1) {
                     display_student(&book.students[index]);
                 } else {
-                    printf("Student not found.\n");
+                    std::cout << "Student not found.\n");
                 }
                 break;
             }
@@ -399,19 +399,19 @@ int main() {
 
             case 6: { // Exit
                 save_data(&book); // Auto-save on exit
-                printf("Goodbye!\n");
+                std::cout << "Goodbye!\n");
                 running = 0;
                 break;
             }
 
             default:
-                printf("Invalid choice. Please try again.\n");
+                std::cout << "Invalid choice. Please try again.\n");
         }
     }
 
     return 0;
 }
-```
+```cpp
 
 ---
 
@@ -420,11 +420,11 @@ int main() {
 ### Compilation Instructions
 ```bash
 # Compile the program
-gcc -o gradebook main.c gradebook.c
+g++ -o gradebook main.c gradebook.c
 
 # Run the program
 ./gradebook
-```
+```cpp
 
 ### Test Scenarios
 1. **Add Students**: Try adding 2-3 students with different IDs
@@ -434,7 +434,7 @@ gcc -o gradebook main.c gradebook.c
 5. **Error Handling**: Test invalid IDs, out-of-range grades
 
 ### Sample Usage
-```
+```cpp
 === Grade Management System ===
 1. Add Student
 2. Add Grade
@@ -461,7 +461,7 @@ Name: Alice Johnson
 Number of grades: 1
 GPA: 95.50
 Grades: 95.50
-```
+```cpp
 
 ---
 
@@ -470,24 +470,24 @@ Grades: 95.50
 ### Key Features Implemented
 
 **Data Management:**
-- Struct-based data organization
-- Dynamic GPA calculation
-- Array-based storage with size limits
+- [ ] Struct-based data organization
+- [ ] Dynamic GPA calculation
+- [ ] Array-based storage with size limits
 
 **File I/O:**
-- Text file storage for persistence
-- Load on startup, save on demand
-- Structured data format
+- [ ] Text file storage for persistence
+- [ ] Load on startup, save on demand
+- [ ] Structured data format
 
 **Error Handling:**
-- Input validation for grades and IDs
-- Duplicate ID prevention
-- File operation error checking
+- [ ] Input validation for grades and IDs
+- [ ] Duplicate ID prevention
+- [ ] File operation error checking
 
 **User Interface:**
-- Clear menu system
-- Informative prompts
-- Formatted output display
+- [ ] Clear menu system
+- [ ] Informative prompts
+- [ ] Formatted output display
 
 ---
 
@@ -531,17 +531,17 @@ Grades: 95.50
 ## Learning Outcomes
 
 **Technical Skills:**
-- Complete application development lifecycle
-- File I/O operations in C
-- Struct-based data management
-- Modular program design
-- User input validation and error handling
+- [ ] Complete application development lifecycle
+- [ ] File I/O operations in C
+- [ ] Struct-based data management
+- [ ] Modular program design
+- [ ] User input validation and error handling
 
 **Problem-Solving Skills:**
-- Application architecture design
-- Feature prioritization and implementation
-- Data persistence strategies
-- User experience considerations
+- [ ] Application architecture design
+- [ ] Feature prioritization and implementation
+- [ ] Data persistence strategies
+- [ ] User experience considerations
 
 ---
 
@@ -555,12 +555,12 @@ Grades: 95.50
 5. **Cleanup**: Proper resource management
 
 ### Data Flow
-```
+```cpp
 User Input → Validation → Processing → Storage → Display
               ↓           ↓         ↓        ↓
          Error Messages  Business  File I/O  UI Updates
          and Recovery   Logic     Operations  Feedback
-```
+```cpp
 
 ---
 
@@ -571,25 +571,103 @@ User Input → Validation → Processing → Storage → Display
 ## Implementation Notes
 
 ### Design Decisions
-- **Fixed Arrays**: Used for simplicity, could be dynamic in advanced version
-- **Text File Storage**: Human-readable format for debugging
-- **Simple GPA**: Basic average, could be weighted in enhancements
-- **ID-based Lookup**: Fast searching with integer keys
+- [ ] **Fixed Arrays**: Used for simplicity, could be dynamic in advanced version
+- [ ] **Text File Storage**: Human-readable format for debugging
+- [ ] **Simple GPA**: Basic average, could be weighted in enhancements
+- [ ] **ID-based Lookup**: Fast searching with integer keys
 
 ### Potential Improvements
-- **Memory Management**: Use dynamic allocation for unlimited students
-- **Database Integration**: Replace file I/O with SQLite
-- **GUI Interface**: Add graphical user interface
-- **Network Features**: Multi-user support with server
+- [ ] **Memory Management**: Use dynamic allocation for unlimited students
+- [ ] **Database Integration**: Replace file I/O with SQLite
+- [ ] **GUI Interface**: Add graphical user interface
+- [ ] **Network Features**: Multi-user support with server
 
 ### Best Practices Demonstrated
-- **Separation of Concerns**: UI, business logic, and data access separated
-- **Error Handling**: Comprehensive validation and user feedback
-- **Code Organization**: Modular functions with clear responsibilities
-- **Documentation**: Inline comments and function documentation
+- [ ] **Separation of Concerns**: UI, business logic, and data access separated
+- [ ] **Error Handling**: Comprehensive validation and user feedback
+- [ ] **Code Organization**: Modular functions with clear responsibilities
+- [ ] **Documentation**: Inline comments and function documentation
 
 ---
 
  **Congratulations! You've built your first complete application!** 
 
 *This is a major milestone - you can now create fully functional programs from scratch! Next: Data processing applications with advanced file operations! *
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- [ ] Review each function
+- [ ] Understand the flow
+- [ ] Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- [ ] Main function: Entry point
+- [ ] Helper functions: Support logic
+
+
+### <div style="page-break-after: always;"></div>
+
+Answer Key
+
+Expected implementation provided.
+
+<div style="page-break-after: always;"></div>
+
+---
+
+## Answer Key
+
+### Complete Solution
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard C++ conventions with proper imports and main function
+2. **Output**: Uses std::cout to print messages to the console
+3. **Standard Library**: Includes iostream for input/output operations
+4. **Return Value**: Returns 0 to indicate successful execution
+5. **Best Practices**: Code is readable and uses C++ idioms
+
+### Testing Your Solution
+
+1. **Compile**: `g++ hello.cpp -o hello`
+2. **Run**: `./hello`
+3. **Expected Output**: `Hello, World!`
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
+| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+
+### Tips for Learning
+
+- C++ is a superset of C with additional features
+- `std::cout` is the C++ way to print (replaces `printf`)
+- `std::endl` adds a newline and flushes the buffer
+- The `std::` prefix means these are from the "standard" namespace

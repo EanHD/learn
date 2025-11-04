@@ -1,6 +1,6 @@
 # Level 7: Functions - Code Organization
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -55,33 +55,33 @@ fn main() {
     let total = add(calculate_area(2, 3), add(1, 2));
     println!("Complex calculation: (2*3) + (1+2) = {}", total);
 }
-```
+```rust
 
 ---
 
-### How to Compile and Run
+### How to Run
 
 1. **Navigate to your working directory**:
    ```bash
    cd /path/to/your/folder
-   ```
+   ```rust
 2. **Compile the code**:
    ```bash
    rustc functions.rs -o functions
-   ```
+   ```rust
 3. **Run your program**:
    ```bash
    ./functions
-   ```
+   ```rust
 
 **Expected output:**
-```
+```rust
 Hello, World!
 Hello, Rust!
 5 + 3 = 8
 Area of 10x5 rectangle = 50
 Complex calculation: (2*3) + (1+2) = 11
-```
+```rust
 
 ---
 
@@ -135,7 +135,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 fn greet(name: &str) {
     println!("Hello, {}!", name);
 }
-```
+```rust
 - **`fn greet`** = Function declaration
 - **`(name: &str)`** = Parameter: `name` of type string slice
 - **`{ ... }`** = Function body
@@ -145,7 +145,7 @@ fn greet(name: &str) {
 fn add(a: i32, b: i32) -> i32 {
     a + b
 }
-```
+```rust
 - **`-> i32`** = Returns 32-bit integer
 - **Last expression** `a + b` is returned (no semicolon!)
 - **Parameters** `a` and `b` are both `i32`
@@ -154,21 +154,21 @@ fn add(a: i32, b: i32) -> i32 {
 fn calculate_area(length: i32, width: i32) -> i32 {
     length * width
 }
-```
+```rust
 - **Same pattern** as `add` function
 - **Multiplication** instead of addition
 
 ```rust
     let sum = add(5, 3);
     println!("5 + 3 = {}", sum);
-```
+```rust
 - **Function call** `add(5, 3)` returns `8`
 - **Store result** in `sum` variable
 - **Print result**
 
 ```rust
     let total = add(calculate_area(2, 3), add(1, 2));
-```
+```rust
 - **Nested calls**: Functions can call other functions
 - **Evaluation order**: Innermost calls first
 - **Result**: `add(6, 3)` → `add(6, 3)` → `9`
@@ -203,3 +203,59 @@ fn calculate_area(length: i32, width: i32) -> i32 {
  **Congratulations! You've completed Stage 1: Copying Code!** 
 
 *You've learned the fundamentals of Rust programming. Great job! Next stages will build on these concepts.*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```rs
+fn main() {
+    println!("Hello, World!");
+}
+
+```rs
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard rust conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

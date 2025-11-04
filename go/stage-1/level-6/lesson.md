@@ -1,6 +1,6 @@
 # Level 6: Loops and Repetition
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -43,7 +43,7 @@ func main() {
     for i := 10; i >= 1; i-- {
         fmt.Println("Countdown:", i)
     }
-    fmt.Println("Blast off! 🚀")
+    fmt.Println("Blast off! ")
 
     fmt.Println()
     fmt.Println("=== For Loop - Even Numbers ===")
@@ -172,7 +172,7 @@ func main() {
         }
     }
 }
-```
+```go
 
 ---
 
@@ -182,15 +182,15 @@ func main() {
    ```bash
    mkdir loops-example && cd loops-example
    go mod init loops
-   ```
+   ```go
 2. **Copy the code into `loops.go`**
 3. **Run your program**:
    ```bash
    go run loops.go
-   ```
+   ```bash
 
 **Expected output:**
-```
+```go
 === For Loop - Counting ===
 Count: 1
 Count: 2
@@ -209,7 +209,7 @@ Countdown: 4
 Countdown: 3
 Countdown: 2
 Countdown: 1
-Blast off! 🚀
+Blast off! 
 
 === For Loop - Even Numbers ===
 Even number: 2
@@ -297,7 +297,7 @@ Infinite loop iteration 1
 Infinite loop iteration 2
 Infinite loop iteration 3
 Breaking out of infinite loop
-```
+```go
 
 ---
 
@@ -352,7 +352,7 @@ Breaking out of infinite loop
 for i := 1; i <= 5; i++ {
     fmt.Println("Count:", i)
 }
-```
+```go
 - **`for`** = Loop keyword (Go's only loop type)
 - **`i := 1`** = Initialization: set up the counter variable
 - **`i <= 5`** = Condition: keep looping while this is true
@@ -365,7 +365,7 @@ for count <= 5 {
     fmt.Println("While count:", count)
     count++
 }
-```
+```go
 - **Go doesn't have** while loops, but this for loop acts like one
 - **No initialization or increment part** - just the condition
 - **Condition checked first** before each iteration
@@ -390,7 +390,7 @@ for {
     // ... some condition
     // if someCondition { break }
 }
-```
+```go
 
 ### Range Loop
 
@@ -417,7 +417,7 @@ text := "Go"
 for i, char := range text {
     fmt.Printf("Position %d: %c\n", i, char)
 }
-```
+```go
 
 **Using blank identifier (`_`)** to ignore the index:
 ```go
@@ -425,7 +425,7 @@ for _, value := range collection {
     // Only care about values, not indices
     fmt.Println(value)
 }
-```
+```go
 
 ### Break and Continue
 
@@ -437,7 +437,7 @@ for i := 1; i <= 10; i++ {
     }
     fmt.Println(i)  // Prints: 1, 2, 3, 4
 }
-```
+```go
 
 **`continue`** = Skips the rest of current iteration:
 ```go
@@ -447,7 +447,7 @@ for i := 1; i <= 5; i++ {
     }
     fmt.Println(i)  // Prints: 1, 2, 4, 5 (skips 3)
 }
-```
+```go
 
 ### Nested Loops
 
@@ -457,9 +457,9 @@ for i := 1; i <= 3; i++ {          // Outer loop
         fmt.Printf("i=%d, j=%d\n", i, j)
     }
 }
-```
+```go
 **Output:**
-```
+```go
 i=1, j=1
 i=1, j=2
 i=1, j=3
@@ -469,7 +469,7 @@ i=2, j=3
 i=3, j=1
 i=3, j=2
 i=3, j=3
-```
+```go
 - **Inner loop** completes all iterations for each outer loop iteration
 - **Total iterations**: 3 × 3 = 9
 
@@ -482,7 +482,7 @@ text := "Hello"
 for i, char := range text {
     fmt.Printf("Index: %d, Character: %c, Rune: %d\n", i, char, char)
 }
-```
+```go
 
 ### Loop Performance Considerations
 
@@ -500,7 +500,7 @@ n := len(items)  // Calculate once
 for i := 0; i < n; i++ {  // Use pre-calculated value
     fmt.Println(items[i])
 }
-```
+```go
 
 **Prefer range loops for collections:**
 ```go
@@ -508,7 +508,7 @@ for i := 0; i < n; i++ {  // Use pre-calculated value
 for _, item := range items {
     fmt.Println(item)
 }
-```
+```go
 
 ### Common Errors & Solutions
 
@@ -608,10 +608,77 @@ func main() {
         fmt.Println(row)
     }
 }
-```
+```go
 
 ---
 
  **Excellent work! You now understand how to repeat actions efficiently with loops!** 
 
 *Ready for the next challenge? Let's learn about functions - the building blocks of reusable code!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard go conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

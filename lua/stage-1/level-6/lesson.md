@@ -1,6 +1,6 @@
 # Level 6: Loops and Repetition
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -39,7 +39,7 @@ print("=== Numeric For Loop - Countdown ===")
 for i = 10, 1, -1 do
     print("Countdown: " .. i)
 end
-print("Blast off! 🚀")
+print("Blast off! ")
 
 print()
 print("=== Numeric For Loop - Even Numbers ===")
@@ -182,7 +182,7 @@ for i, num in ipairs(numbers) do
 end
 
 print("Total sum: " .. total)
-```
+```lua
 
 ---
 
@@ -191,10 +191,10 @@ print("Total sum: " .. total)
 1. **Run your program**:
    ```bash
    lua loops.lua
-   ```
+   ```lua
 
 **Expected output:**
-```
+```lua
 === Numeric For Loop - Counting ===
 Count: 1
 Count: 2
@@ -213,7 +213,7 @@ Countdown: 4
 Countdown: 3
 Countdown: 2
 Countdown: 1
-Blast off! 🚀
+Blast off! 
 
 === Numeric For Loop - Even Numbers ===
 Even number: 2
@@ -304,7 +304,7 @@ Processing number 3: 30
 Processing number 4: 40
 Processing number 5: 50
 Total sum: 150
-```
+```lua
 *Note: Random numbers will vary each time you run the program*
 
 ---
@@ -360,7 +360,7 @@ Total sum: 150
 for i = 1, 5 do
     print("Count: " .. i)
 end
-```
+```lua
 - **`for`** = Loop keyword
 - **`i = 1, 5`** = Loop variable starts at 1, ends at 5 (inclusive)
 - **`, 1`** = Step is optional, defaults to 1
@@ -372,7 +372,7 @@ end
 for i = 10, 1, -1 do
     print("Countdown: " .. i)
 end
-```
+```lua
 - **`10, 1, -1`** = Start at 10, stop at 1, step by -1 (counting backwards)
 
 ```lua
@@ -380,7 +380,7 @@ while count <= 5 do
     print("While count: " .. count)
     count = count + 1  -- Critical: must update the counter!
 end
-```
+```lua
 - **`while`** = Loop that continues while condition is true
 - **Condition checked first** before each iteration
 - **`count = count + 1`** = Must update counter inside the loop or it runs forever!
@@ -389,7 +389,7 @@ end
 repeat
     print("Menu attempt #" .. tries .. ": Option " .. menu_choice)
 until menu_choice == 3
-```
+```lua
 - **`repeat`** = Code block executes first
 - **`until`** = Then condition is checked
 - **Result**: Block runs at least once regardless of condition
@@ -410,7 +410,7 @@ end
 for i = 10, 1, -1 do     -- i: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
     print(i)
 end
-```
+```lua
 
 ### Table Iteration Methods
 
@@ -427,7 +427,7 @@ local t = {name = "Alex", age = 25, [1] = "first"}
 for k, v in pairs(t) do
     print(k, v)  -- Could print in any order
 end
-```
+```lua
 
 ### Loop Control
 
@@ -439,7 +439,7 @@ for i = 1, 10 do
     end
     print(i)  -- Prints: 1, 2, 3, 4
 end
-```
+```lua
 
 Lua doesn't have a continue keyword, but you can achieve similar effects with if-then-else:
 ```lua
@@ -450,7 +450,7 @@ for i = 1, 5 do
         print("Skipped " .. i)
     end
 end
-```
+```lua
 
 ### Nested Loops
 
@@ -460,9 +460,9 @@ for i = 1, 3 do          -- Outer loop
         print("i=" .. i .. ", j=" .. j)
     end
 end
-```
+```lua
 **Output:**
-```
+```lua
 i=1, j=1
 i=1, j=2
 i=1, j=3
@@ -472,7 +472,7 @@ i=2, j=3
 i=3, j=1
 i=3, j=2
 i=3, j=3
-```
+```lua
 - **Inner loop** completes all iterations for each outer loop iteration
 - **Total iterations**: 3 × 3 = 9
 
@@ -483,7 +483,7 @@ local arr = {"apple", "banana", "orange"}
 for i = 1, #arr do        -- #arr returns 3
     print(arr[i])
 end
-```
+```lua
 **Note**: The `#` operator only works predictably on sequences (arrays with consecutive integer keys starting from 1).
 
 ### Common Errors & Solutions
@@ -577,10 +577,71 @@ for i = 1, 5 do
     end
     print(row)
 end
-```
+```lua
 
 ---
 
  **Excellent work! You now understand how to repeat actions efficiently with loops!** 
 
 *Ready for the next challenge? Let's learn about functions - the building blocks of reusable code!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```lua
+print("Hello, World!")
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard lua conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

@@ -1,6 +1,6 @@
 # Level 6: Loops
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`Main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`Main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 1: Copying Code
 
@@ -50,7 +50,7 @@ public class Main {
         for (int i = 10; i >= 1; i--) {
             System.out.println(i);
         }
-        System.out.println("Blastoff! 🚀");
+        System.out.println("Blastoff! ");
 
         // Example 4: Multiplication table
         System.out.print("\n=== Multiplication Table ===\nEnter a number: ");
@@ -181,29 +181,29 @@ public class Main {
         input.close();
     }
 }
-```
+```java
 
 ---
 
 
 
 **Expected output:**
-```
+```java
 1 2 3 4 5 6 7 8 9 10
-```
+```java
 
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
 ```java
 <Space>r
-```
+```java
 
 **Method 2 (Terminal):**
 ```bash
 javac Main.java
 java Main
-```
+```java
 
 **Follow the prompts** and see loops in action!
 
@@ -272,7 +272,7 @@ You learned the power of repetition! Here's what makes loops essential:
 for (int i = 1; i <= 5; i++) {
     System.out.println("Count: " + i);
 }
-```
+```java
 - **`for`** = Loop keyword
 - **`int i = 1`** = Initialization (runs once at start)
 - **`i <= 5`** = Condition (checked before each iteration)
@@ -290,7 +290,7 @@ for (int i = 1; i <= 5; i++) {
 while (guess != secretNumber) {
     // Code here runs while condition is true
 }
-```
+```java
 - **`while`** = Loop keyword
 - **`guess != secretNumber`** = Condition (checked before each iteration)
 - **No initialization or update** = You manage these yourself
@@ -300,7 +300,7 @@ while (guess != secretNumber) {
 do {
     // Code here runs at least once
 } while (choice != 4);
-```
+```java
 - **`do`** = Loop keyword
 - **Body runs first** = Before checking condition
 - **`while (choice != 4)`** = Condition checked after body
@@ -310,7 +310,7 @@ do {
 if (i % 7 == 0) {
     break;  // Exit loop immediately
 }
-```
+```java
 - **`break`** = Exits the innermost loop
 - **All remaining iterations** = Skipped
 - **Use when** = Found what you're looking for
@@ -319,7 +319,7 @@ if (i % 7 == 0) {
 if (i % 3 == 0) {
     continue;  // Skip rest of this iteration
 }
-```
+```java
 - **`continue`** = Jumps to next iteration
 - **Remaining code in loop** = Skipped for this iteration
 - **Loop continues** = Not terminated, just this iteration skipped
@@ -338,7 +338,7 @@ for (int i = 0; i < 10; i++) {
 //   └───────────────────── Loop keyword
     System.out.println(i);
 }
-```
+```java
 
 ### Loop Variations
 
@@ -346,19 +346,19 @@ for (int i = 0; i < 10; i++) {
 ```java
 for (int i = 0; i < 10; i++)     // 0,1,2,3,4,5,6,7,8,9
 for (int i = 1; i <= 10; i++)    // 1,2,3,4,5,6,7,8,9,10
-```
+```java
 
 **Count down:**
 ```java
 for (int i = 10; i > 0; i--)     // 10,9,8,7,6,5,4,3,2,1
 for (int i = 10; i >= 1; i--)    // 10,9,8,7,6,5,4,3,2,1
-```
+```java
 
 **Custom increment:**
 ```java
 for (int i = 0; i < 20; i += 2)  // 0,2,4,6,8,10,12,14,16,18
 for (int i = 0; i < 50; i += 5)  // 0,5,10,15,20,25,30,35,40,45
-```
+```java
 
 **Infinite loop:**
 ```java
@@ -369,7 +369,7 @@ for (;;) {  // No initialization, condition, or update
 while (true) {
     // Also runs forever
 }
-```
+```java
 
 ### Nested Loops
 
@@ -380,14 +380,14 @@ for (int row = 1; row <= 3; row++) {      // Outer loop: rows
     }
     System.out.println();  // New line after each row
 }
-```
+```java
 
 **Output:**
-```
+```java
 ****
 ****
 ****
-```
+```java
 
 **How it works:**
 - Outer loop runs 3 times (3 rows)
@@ -403,7 +403,7 @@ for (int i = 1; i <= 10; i++) {
     sum += i;
 }
 double average = (double)sum / 10;
-```
+```java
 
 **2. Find maximum:**
 ```java
@@ -413,7 +413,7 @@ for (int i = 1; i < array.length; i++) {
         max = array[i];
     }
 }
-```
+```java
 
 **3. Count occurrences:**
 ```java
@@ -423,7 +423,7 @@ for (int i = 0; i < length; i++) {
         count++;
     }
 }
-```
+```java
 
 **4. Search:**
 ```java
@@ -434,7 +434,7 @@ for (int i = 0; i < array.length; i++) {
         break;
     }
 }
-```
+```java
 
 ### Common Errors & Solutions
 
@@ -462,7 +462,7 @@ for (int i = 0; i < len; i++) { }
 
 // FASTEST: Enhanced for loop (Java 5+)
 for (int value : array) { }
-```
+```java
 
 ### Enhanced For Loop (For-Each)
 
@@ -478,7 +478,7 @@ for (int i = 0; i < numbers.length; i++) {
 for (int number : numbers) {
     System.out.println(number);
 }
-```
+```java
 
 **Advantages:**
 - Cleaner syntax

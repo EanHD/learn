@@ -1,6 +1,6 @@
 # Level 7: Functions - Code Organization
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -63,7 +63,7 @@ print()
 print("Person information:")
 display_info("Alice", 25, "New York")
 display_info("Bob", 30, "London")
-```
+```python
 
 ---
 
@@ -73,14 +73,14 @@ display_info("Bob", 30, "London")
 2. **Navigate to where you saved your file**:
     ```bash
     cd /path/to/your/folder
-    ```
+    ```python
 3. **Run the code**:
     ```bash
     python3 functions.py
-    ```
+    ```bash
 
 **Expected output:**
-```
+```python
 Hello, Alice!
 Hello, Bob!
 
@@ -102,7 +102,7 @@ Name: Bob
 Age: 30
 City: London
 --------------------
-```
+```python
 
 ---
 
@@ -154,7 +154,7 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 def greet(name):
     """Return a personalized greeting."""
     return f"Hello, {name}!"
-```
+```python
 
 - **`def greet(name):`** = Define function named `greet` with parameter `name`
 - **`"""Return a personalized greeting."""`** = Docstring (documentation)
@@ -164,7 +164,7 @@ def greet(name):
 def calculate_area(length, width):
     """Calculate the area of a rectangle."""
     return length * width
-```
+```python
 
 - **Two parameters** = `length` and `width`
 - **Returns calculation** = Result of multiplication
@@ -174,7 +174,7 @@ def calculate_area(length, width):
 def is_even(number):
     """Check if a number is even."""
     return number % 2 == 0
-```
+```python
 
 - **Boolean return** = Returns `True` or `False`
 - **`number % 2 == 0`** = Even if remainder when divided by 2 is 0
@@ -186,7 +186,7 @@ def display_info(name, age, city):
     print(f"Age: {age}")
     print(f"City: {city}")
     print("-" * 20)
-```
+```python
 
 - **No return value** = Function prints directly (returns `None`)
 - **Multiple statements** = Can contain many lines of code
@@ -232,3 +232,57 @@ def display_info(name, age, city):
  **Congratulations! You've mastered Python functions!** 
 
 *You've completed Stage 1: Copying Code! Time to move to Stage 2: Pseudocode to Code!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```py
+print("Hello, World!")
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard python conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

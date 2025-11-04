@@ -1,6 +1,6 @@
 # Level 5: Conditionals and Decision Making
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -13,12 +13,12 @@ Welcome to the power of decision-making in programming! Today you'll learn how t
 
 ### Learning Goals
 
-- Master if, if-else, and if-else-if statements
-- Learn comparison operators (==, !=, <, >, <=, >=)
-- Understand logical operators (&&, ||, !)
-- Practice nested conditionals
-- Learn the switch statement for multiple choices
-- Create programs that respond differently to different situations
+- [ ] Master if, if-else, and if-else-if statements
+- [ ] Learn comparison operators (==, !=, <, >, <=, >=)
+- [ ] Understand logical operators (&&, ||, !)
+- [ ] Practice nested conditionals
+- [ ] Learn the switch statement for multiple choices
+- [ ] Create programs that respond differently to different situations
 
 ---
 
@@ -40,180 +40,180 @@ int main() {
     bool is_student;
     bool has_discount_code;
     
-    printf("=== Intelligent Decision Making Program ===\n\n");
+    std::cout << "=== Intelligent Decision Making Program ===\n\n");
     
     // 1. Simple if statement
-    printf("--- Age Verification ---\n");
-    printf("Enter your age: ");
+    std::cout << "--- Age Verification ---\n");
+    std::cout << "Enter your age: ");
     scanf("%d", &age);
     
     if (age >= 18) {
-        printf(" You are an adult! Welcome!\n");
-        printf("You can vote, sign contracts, and drive (if licensed).\n");
+        std::cout << " You are an adult! Welcome!\n");
+        std::cout << "You can vote, sign contracts, and drive (if licensed).\n");
     }
     
     if (age < 18) {
-        printf(" You are a minor! Stay in school!\n");
-        printf("Focus on learning and growing!\n");
+        std::cout << " You are a minor! Stay in school!\n");
+        std::cout << "Focus on learning and growing!\n");
     }
     
     // 2. If-else statement
-    printf("\n--- Score Evaluation ---\n");
-    printf("Enter your test score (0-100): ");
+    std::cout << "\n--- Score Evaluation ---\n");
+    std::cout << "Enter your test score (0-100): ");
     scanf("%d", &score);
     
     if (score >= 60) {
-        printf(" Congratulations! You passed!\n");
+        std::cout << " Congratulations! You passed!\n");
     } else {
-        printf(" You didn't pass. Study more and try again!\n");
+        std::cout << " You didn't pass. Study more and try again!\n");
     }
     
     // 3. If-else-if chain
-    printf("\n--- Grade Calculator ---\n");
-    printf("Enter your numerical grade (0-100): ");
+    std::cout << "\n--- Grade Calculator ---\n");
+    std::cout << "Enter your numerical grade (0-100): ");
     scanf("%d", &score);
     
     if (score >= 90) {
         grade = 'A';
-        printf("Grade: A (Excellent! )\n");
+        std::cout << "Grade: A (Excellent! )\n");
     } else if (score >= 80) {
         grade = 'B';
-        printf("Grade: B (Good job! )\n");
+        std::cout << "Grade: B (Good job! )\n");
     } else if (score >= 70) {
         grade = 'C';
-        printf("Grade: C (Satisfactory )\n");
+        std::cout << "Grade: C (Satisfactory )\n");
     } else if (score >= 60) {
         grade = 'D';
-        printf("Grade: D (Needs improvement )\n");
+        std::cout << "Grade: D (Needs improvement )\n");
     } else {
         grade = 'F';
-        printf("Grade: F (Failing - Please seek help )\n");
+        std::cout << "Grade: F (Failing - Please seek help )\n");
     }
     
     // 4. Logical operators (AND, OR, NOT)
-    printf("\n--- Temperature Alert System ---\n");
-    printf("Enter current temperature (°F): ");
+    std::cout << "\n--- Temperature Alert System ---\n");
+    std::cout << "Enter current temperature (°F): ");
     scanf("%f", &temperature);
     
     // AND operator - all conditions must be true
     if (temperature > 80 && temperature < 100) {
-        printf(" Hot weather warning! Stay hydrated!\n");
+        std::cout << " Hot weather warning! Stay hydrated!\n");
     }
     
     // OR operator - at least one condition must be true
     if (temperature < 32 || temperature > 100) {
-        printf(" Extreme temperature alert! Be careful!\n");
+        std::cout << " Extreme temperature alert! Be careful!\n");
     }
     
     // NOT operator - reverses the condition
     bool is_freezing = temperature <= 32;
     if (!is_freezing) {
-        printf("No freezing conditions. Good!\n");
+        std::cout << "No freezing conditions. Good!\n");
     }
     
     // 5. Nested conditionals
-    printf("\n--- Complex Eligibility Checker ---\n");
-    printf("Are you a student? (1 for yes, 0 for no): ");
+    std::cout << "\n--- Complex Eligibility Checker ---\n");
+    std::cout << "Are you a student? (1 for yes, 0 for no): ");
     scanf("%d", &is_student);
     
     if (is_student) {
-        printf("Enter your GPA (0.0-4.0): ");
+        std::cout << "Enter your GPA (0.0-4.0): ");
         float gpa;
         scanf("%f", &gpa);
         
         if (gpa >= 3.5) {
-            printf(" Dean's List eligible!\n");
+            std::cout << " Dean's List eligible!\n");
             if (gpa == 4.0) {
-                printf(" Perfect GPA! Outstanding achievement!\n");
+                std::cout << " Perfect GPA! Outstanding achievement!\n");
             }
         } else if (gpa >= 2.0) {
-            printf(" Academic standing is good.\n");
+            std::cout << " Academic standing is good.\n");
         } else {
-            printf(" Academic probation warning!\n");
+            std::cout << " Academic probation warning!\n");
         }
     } else {
-        printf("Student status not detected.\n");
+        std::cout << "Student status not detected.\n");
     }
     
     // 6. Switch statement
-    printf("\n--- Day of the Week Analyzer ---\n");
-    printf("Enter day number (1-7): ");
+    std::cout << "\n--- Day of the Week Analyzer ---\n");
+    std::cout << "Enter day number (1-7): ");
     scanf("%d", &day_of_week);
     
     switch (day_of_week) {
         case 1:
-            printf("Monday: Start of the work week! \n");
+            std::cout << "Monday: Start of the work week! \n");
             break;
         case 2:
-            printf("Tuesday: Productivity day! \n");
+            std::cout << "Tuesday: Productivity day! \n");
             break;
         case 3:
-            printf("Wednesday: Hump day! \n");
+            std::cout << "Wednesday: Hump day! \n");
             break;
         case 4:
-            printf("Thursday: Almost there! \n");
+            std::cout << "Thursday: Almost there! \n");
             break;
         case 5:
-            printf("Friday: TGIF! \n");
+            std::cout << "Friday: TGIF! \n");
             break;
         case 6:
-            printf("Saturday: Weekend fun! \n");
+            std::cout << "Saturday: Weekend fun! \n");
             break;
         case 7:
-            printf("Sunday: Rest & recharge! \n");
+            std::cout << "Sunday: Rest & recharge! \n");
             break;
         default:
-            printf("Invalid day number! Please enter 1-7.\n");
+            std::cout << "Invalid day number! Please enter 1-7.\n");
             break;
     }
     
     // 7. Multiple conditions example
-    printf("\n--- Bank Account Status ---\n");
-    printf("Enter your account balance: $");
+    std::cout << "\n--- Bank Account Status ---\n");
+    std::cout << "Enter your account balance: $");
     scanf("%f", &account_balance);
     
-    printf("Do you have a student discount code? (1 for yes, 0 for no): ");
+    std::cout << "Do you have a student discount code? (1 for yes, 0 for no): ");
     scanf("%d", &has_discount_code);
     
     if (account_balance >= 10000) {
-        printf(" VIP Status: Premium banking benefits!\n");
+        std::cout << " VIP Status: Premium banking benefits!\n");
     } else if (account_balance >= 5000 && account_balance < 10000) {
         if (has_discount_code) {
-            printf(" Gold Status with student discount: Good benefits!\n");
+            std::cout << " Gold Status with student discount: Good benefits!\n");
         } else {
-            printf(" Gold Status: Standard benefits!\n");
+            std::cout << " Gold Status: Standard benefits!\n");
         }
     } else if (account_balance >= 1000) {
-        printf(" Regular account: Basic banking services.\n");
+        std::cout << " Regular account: Basic banking services.\n");
     } else if (account_balance >= 0) {
-        printf("ℹ Low balance: Consider monitoring your spending.\n");
+        std::cout << "ℹ Low balance: Consider monitoring your spending.\n");
     } else {
-        printf(" OVERDRAFT WARNING: Negative balance!\n");
+        std::cout << " OVERDRAFT WARNING: Negative balance!\n");
     }
     
     // 8. Conditional operator (ternary)
-    printf("\n--- Quick Decision Demo ---\n");
+    std::cout << "\n--- Quick Decision Demo ---\n");
     int number;
-    printf("Enter a number: ");
+    std::cout << "Enter a number: ");
     scanf("%d", &number);
     
     // Ternary operator: condition ? value_if_true : value_if_false
     char* message = (number > 0) ? "positive" : 
                    (number < 0) ? "negative" : "zero";
     
-    printf("The number is %s.\n", message);
+    std::cout << "The number is %s.\n", message);
     
     // 9. Complex real-world scenario
-    printf("\n--- Movie Ticket Calculator ---\n");
+    std::cout << "\n--- Movie Ticket Calculator ---\n");
     int age_person;
     bool is_vip_member;
     int show_time; // 24-hour format
     
-    printf("Person's age: ");
+    std::cout << "Person's age: ");
     scanf("%d", &age_person);
-    printf("VIP member? (1 for yes, 0 for no): ");
+    std::cout << "VIP member? (1 for yes, 0 for no): ");
     scanf("%d", &is_vip_member);
-    printf("Show time (24-hour, e.g., 14 for 2 PM): ");
+    std::cout << "Show time (24-hour, e.g., 14 for 2 PM): ");
     scanf("%d", &show_time);
     
     float ticket_price = 12.00; // Base price
@@ -221,19 +221,19 @@ int main() {
     // Age discounts
     if (age_person < 12) {
         ticket_price *= 0.5; // 50% off for children
-        printf("Child discount applied (50%% off)\n");
+        std::cout << "Child discount applied (50%% off)\n");
     } else if (age_person >= 65) {
         ticket_price *= 0.7; // 30% off for seniors
-        printf("Senior discount applied (30%% off)\n");
+        std::cout << "Senior discount applied (30%% off)\n");
     } else if (age_person >= 18 && age_person <= 25) {
         ticket_price *= 0.9; // 10% off for young adults
-        printf("Young adult discount applied (10%% off)\n");
+        std::cout << "Young adult discount applied (10%% off)\n");
     }
     
     // VIP member benefit
     if (is_vip_member) {
         ticket_price -= 3.00; // $3 off
-        printf("VIP member discount ($3.00 off)\n");
+        std::cout << "VIP member discount ($3.00 off)\n");
     }
     
     // Time-based pricing
@@ -242,32 +242,32 @@ int main() {
     
     if (is_matinee) {
         ticket_price *= 0.8; // 20% off matinee
-        printf("Matinee discount applied (20%% off)\n");
+        std::cout << "Matinee discount applied (20%% off)\n");
     } else if (is_late_show) {
         ticket_price *= 1.1; // 10% extra for late shows
-        printf("Late show surcharge (10%% extra)\n");
+        std::cout << "Late show surcharge (10%% extra)\n");
     }
     
-    printf("Final ticket price: $%.2f\n", ticket_price);
+    std::cout << "Final ticket price: $%.2f\n", ticket_price);
     
-    printf("\n Program complete! You've mastered decision making!\n");
+    std::cout << "\n Program complete! You've mastered decision making!\n");
     
     return 0;
 }
-```
+```bash
 
 ---
 
-### How to Compile and Run
+### How to Run
 
 1. **Compile the code**:
    ```bash
-   gcc conditionals.c -o conditionals
-   ```
+   g++ conditionals.c -o conditionals
+   ```bash
 2. **Run your program**:
    ```bash
    ./conditionals
-   ```
+   ```bash
 3. **Test different scenarios** with various inputs!
 
 ---
@@ -330,19 +330,19 @@ int main() {
    ```c
    if (age = 18) { // WRONG - assigns 18 to age!
    if (age == 18) { // CORRECT - compares age to 18
-   ```
+   ```bash
 
 2. **Forgotten semicolons**
    ```c
    if (x > 5); { // WRONG - semicolon ends the if!
    if (x > 5) {   // CORRECT
-   ```
+   ```bash
 
 3. **Wrong operator for ranges**
    ```c
    if (12 < age < 18) // WRONG - doesn't work in C!
    if (age > 12 && age < 18) // CORRECT
-   ```
+   ```bash
 
 ---
 
@@ -358,71 +358,71 @@ int main() {
 
 ```c
 if (age >= 18) {
-    printf(" You are an adult! Welcome!\n");
+    std::cout << " You are an adult! Welcome!\n");
 }
 
 if (age < 18) {
-    printf(" You are a minor! Stay in school!\n");
+    std::cout << " You are a minor! Stay in school!\n");
 }
-```
+```bash
 
 **Key Points:**
-- Each `if` statement stands alone
-- Both conditions are checked independently
-- Braces `{}` group the code that belongs to each if
+- [ ] Each `if` statement stands alone
+- [ ] Both conditions are checked independently
+- [ ] Braces `{}` group the code that belongs to each if
 
 **Best Practice:** Always use braces, even for single-line conditions:
 ```c
 if (x > 5)
-    printf("Hello"); // Bad - confusing
+    std::cout << "Hello"); // Bad - confusing
 
 if (x > 5) {
-    printf("Hello"); // Good - clear structure
+    std::cout << "Hello"); // Good - clear structure
 }
-```
+```bash
 
 #### 2. if-else Structure
 
 ```c
 if (score >= 60) {
-    printf(" Congratulations! You passed!\n");
+    std::cout << " Congratulations! You passed!\n");
 } else {
-    printf(" You didn't pass. Study more and try again!\n");
+    std::cout << " You didn't pass. Study more and try again!\n");
 }
-```
+```bash
 
 **Understanding Control Flow:**
-- If condition is true → execute first block, skip the else
-- If condition is false → skip first block, execute else block
-- Exactly one block will always execute
+- [ ] If condition is true → execute first block, skip the else
+- [ ] If condition is false → skip first block, execute else block
+- [ ] Exactly one block will always execute
 
 #### 3. if-else-if Chain
 
 ```c
 if (score >= 90) {
     grade = 'A';
-    printf("Grade: A (Excellent! )\n");
+    std::cout << "Grade: A (Excellent! )\n");
 } else if (score >= 80) {
     grade = 'B';
-    printf("Grade: B (Good job! )\n");
+    std::cout << "Grade: B (Good job! )\n");
 } else if (score >= 70) {
     grade = 'C';
-    printf("Grade: C (Satisfactory )\n");
+    std::cout << "Grade: C (Satisfactory )\n");
 }
-```
+```bash
 
 **Important Concept:** Conditions are checked in order, so:
-- Score 85 → fails `>= 90`, passes `>= 80` → Grade: B
-- Once a condition matches, the rest are skipped
-- Final `else` catches everything that didn't match
+- [ ] Score 85 → fails `>= 90`, passes `>= 80` → Grade: B
+- [ ] Once a condition matches, the rest are skipped
+- [ ] Final `else` catches everything that didn't match
 
 #### 4. Logical Operators
 
 ```c
 if (temperature > 80 && temperature < 100) {
-    printf(" Hot weather warning! Stay hydrated!\n");
+    std::cout << " Hot weather warning! Stay hydrated!\n");
 }
-```
+```bash
 
 **AND (&&) Truth Table:**
 | A | B | A && B |
@@ -450,18 +450,18 @@ if (temperature > 80 && temperature < 100) {
 
 ```c
 if (is_student) {
-    printf("Enter your GPA (0.0-4.0): ");
+    std::cout << "Enter your GPA (0.0-4.0): ");
     float gpa;
     scanf("%f", &gpa);
     
     if (gpa >= 3.5) {
-        printf(" Dean's List eligible!\n");
+        std::cout << " Dean's List eligible!\n");
         if (gpa == 4.0) {
-            printf(" Perfect GPA! Outstanding achievement!\n");
+            std::cout << " Perfect GPA! Outstanding achievement!\n");
         }
     }
 }
-```
+```bash
 
 **Why Nest?** Sometimes you need to check conditions only when previous conditions are met.
 
@@ -470,40 +470,40 @@ if (is_student) {
 ```c
 switch (day_of_week) {
     case 1:
-        printf("Monday: Start of the work week! \n");
+        std::cout << "Monday: Start of the work week! \n");
         break;
     case 2:
-        printf("Tuesday: Productivity day! \n");
+        std::cout << "Tuesday: Productivity day! \n");
         break;
     default:
-        printf("Invalid day number! Please enter 1-7.\n");
+        std::cout << "Invalid day number! Please enter 1-7.\n");
         break;
 }
-```
+```bash
 
 **Critical Concept - The `break` statement:**
-- Without `break`, execution "falls through" to the next case
-- This is actually sometimes useful, but can be a source of bugs
+- [ ] Without `break`, execution "falls through" to the next case
+- [ ] This is actually sometimes useful, but can be a source of bugs
 
 **Fall-through example (useful):**
 ```c
 case 1:
 case 2:
 case 3:
-    printf("You chose a low number\n");
+    std::cout << "You chose a low number\n");
     break;
 case 4:
 case 5:
-    printf("You chose a medium number\n");
+    std::cout << "You chose a medium number\n");
     break;
-```
+```bash
 
 #### 7. Ternary Operator
 
 ```c
 char* message = (number > 0) ? "positive" : 
                (number < 0) ? "negative" : "zero";
-```
+```bash
 
 **Understanding Nested Ternary:**
 ```c
@@ -517,7 +517,7 @@ if (number > 0) {
         message = "zero";
     }
 }
-```
+```bash
 
 ### Advanced Conditional Concepts
 
@@ -533,7 +533,7 @@ if (x != 0 && y > 10) {
 if (x != 0 && y / x > 10) {
     // Safe because y/x is only evaluated if x ≠ 0
 }
-```
+```bash
 
 #### De Morgan's Laws
 
@@ -549,14 +549,14 @@ Instead of:
 if (age >= 0 && age <= 120) {
     // valid age
 }
-```
+```bash
 
 You could write:
 ```c
 if (age >= 0 && age <= 120) { // This is actually the clearest way
     // Keep it simple and readable!
 }
-```
+```bash
 
 ### Real-World Conditional Patterns
 
@@ -569,15 +569,15 @@ bool validate_input(int value, int min, int max) {
 
 void get_number(int* value, const char* prompt, int min, int max) {
     do {
-        printf("%s (%d-%d): ", prompt, min, max);
+        std::cout << "%s (%d-%d): ", prompt, min, max);
         scanf("%d", value);
         
         if (!validate_input(*value, min, max)) {
-            printf("Invalid input! Try again.\n");
+            std::cout << "Invalid input! Try again.\n");
         }
     } while (!validate_input(*value, min, max));
 }
-```
+```bash
 
 #### State Machine Pattern
 
@@ -606,7 +606,7 @@ void update_game(GameState* state, int input) {
             break;
     }
 }
-```
+```bash
 
 ### Performance Considerations
 
@@ -622,7 +622,7 @@ if (expensive_calculation() && simple_check()) {
 if (simple_check() && expensive_calculation()) {
     // ...
 }
-```
+```bash
 
 #### Switch vs if-else-if
 
@@ -642,7 +642,7 @@ switch (day) {
     case 3: /* Wednesday */ break;
     // ... more cases
 }
-```
+```bash
 
 ### Debugging Conditionals
 
@@ -650,33 +650,96 @@ switch (day) {
 
 ```c
 int age = 25;
-printf("Debug: age = %d\n", age);
-printf("Debug: age >= 18 is %s\n", age >= 18 ? "true" : "false");
+std::cout << "Debug: age = %d\n", age);
+std::cout << "Debug: age >= 18 is %s\n", age >= 18 ? "true" : "false");
 
 if (age >= 18) {
-    printf("Debug: Entered adult branch\n");
-    printf(" You are an adult! Welcome!\n");
+    std::cout << "Debug: Entered adult branch\n");
+    std::cout << " You are an adult! Welcome!\n");
 }
-```
+```bash
 
 #### Conditional Tracing
 
 ```c
 if (condition1) {
-    printf("Step 1: condition1 was true\n");
+    std::cout << "Step 1: condition1 was true\n");
     if (condition2) {
-        printf("Step 2: condition2 was true\n");
+        std::cout << "Step 2: condition2 was true\n");
         // do something
     } else {
-        printf("Step 2: condition2 was false\n");
+        std::cout << "Step 2: condition2 was false\n");
     }
 } else {
-    printf("Step 1: condition1 was false\n");
+    std::cout << "Step 1: condition1 was false\n");
 }
-```
+```bash
 
 ---
 
  **Incredible! You now have the power to make intelligent decisions in your programs!** 
 
 *Your programs can now think and respond like a real AI! Next up: Loops for repeated actions! *
+
+### Additional Content
+
+Understand the key concepts:
+
+- [ ] Review each function
+- [ ] Understand the flow
+- [ ] Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- [ ] Main function: Entry point
+- [ ] Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard C++ conventions with proper imports and main function
+2. **Output**: Uses std::cout to print messages to the console
+3. **Standard Library**: Includes iostream for input/output operations
+4. **Return Value**: Returns 0 to indicate successful execution
+5. **Best Practices**: Code is readable and uses C++ idioms
+
+### Testing Your Solution
+
+1. **Compile**: `g++ hello.cpp -o hello`
+2. **Run**: `./hello`
+3. **Expected Output**: `Hello, World!`
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
+| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+
+### Tips for Learning
+
+- C++ is a superset of C with additional features
+- `std::cout` is the C++ way to print (replaces `printf`)
+- `std::endl` adds a newline and flushes the buffer
+- The `std::` prefix means these are from the "standard" namespace

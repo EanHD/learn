@@ -1,6 +1,6 @@
 # Level 3: Mastery Through Specialized Domains
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 5: Capstone - Domain-Specific Expert Project
@@ -14,11 +14,11 @@ You've built foundational and advanced projects. Now **specialize** by creating 
 ### Learning Goals
 
 By the end of this level:
-- Become an **expert in your chosen domain**
-- Implement **domain-specific algorithms**
-- Create **intuitive domain-specific tools**
-- Apply **domain knowledge creatively**
-- Build **projects that matter to real people**
+- [ ] Become an **expert in your chosen domain**
+- [ ] Implement **domain-specific algorithms**
+- [ ] Create **intuitive domain-specific tools**
+- [ ] Apply **domain knowledge creatively**
+- [ ] Build **projects that matter to real people**
 
 ---
 
@@ -35,16 +35,16 @@ By the end of this level:
 
 Choose a domain where you have **genuine interest or expertise**:
 
-- **Music**: Music composition, playlist manager, rhythm trainer
-- **Gaming**: Game development, strategy simulator, difficulty balancer
-- **Science**: Physics simulator, chemistry calculator, astronomy tool
-- **Sports**: Statistics tracker, performance analyzer, training planner
-- **Health**: Fitness tracker, nutrition planner, wellness monitor
-- **Writing**: Story builder, poetry generator, character developer
-- **Finance**: Investment analyzer, tax calculator, portfolio manager
-- **Education**: Curriculum builder, adaptive learning system, tutor assistant
-- **Art/Design**: Color palette generator, ASCII art tools, design visualizer
-- **Other**: Whatever fascinates you!
+- [ ] **Music**: Music composition, playlist manager, rhythm trainer
+- [ ] **Gaming**: Game development, strategy simulator, difficulty balancer
+- [ ] **Science**: Physics simulator, chemistry calculator, astronomy tool
+- [ ] **Sports**: Statistics tracker, performance analyzer, training planner
+- [ ] **Health**: Fitness tracker, nutrition planner, wellness monitor
+- [ ] **Writing**: Story builder, poetry generator, character developer
+- [ ] **Finance**: Investment analyzer, tax calculator, portfolio manager
+- [ ] **Education**: Curriculum builder, adaptive learning system, tutor assistant
+- [ ] **Art/Design**: Color palette generator, ASCII art tools, design visualizer
+- [ ] **Other**: Whatever fascinates you!
 
 ---
 
@@ -101,10 +101,10 @@ Choose a domain where you have **genuine interest or expertise**:
 
 ### Success Indicators
 
-- Could you use this tool professionally in your domain?
-- Does it solve real problems for domain practitioners?
-- Would someone in that domain want to use this?
-- Does it demonstrate expertise in the domain?
+- [ ] Could you use this tool professionally in your domain?
+- [ ] Does it solve real problems for domain practitioners?
+- [ ] Would someone in that domain want to use this?
+- [ ] Does it demonstrate expertise in the domain?
 
 ---
 
@@ -119,3 +119,88 @@ Choose a domain where you have **genuine interest or expertise**:
 
 **Ready to become a domain expert?** 
 
+
+
+### Your Task
+
+1. Review the code structure
+2. Implement the required functionality
+3. Test your solution
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Success Checklist
+
+- [ ] Code compiles without errors
+- [ ] Output matches expected result
+- [ ] All functions work correctly
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- [ ] Review each function
+- [ ] Understand the flow
+- [ ] Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- [ ] Main function: Entry point
+- [ ] Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+### Answer Key
+
+### Complete Solution
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard C++ conventions with proper imports and main function
+2. **Output**: Uses std::cout to print messages to the console
+3. **Standard Library**: Includes iostream for input/output operations
+4. **Return Value**: Returns 0 to indicate successful execution
+5. **Best Practices**: Code is readable and uses C++ idioms
+
+### Testing Your Solution
+
+1. **Compile**: `g++ hello.cpp -o hello`
+2. **Run**: `./hello`
+3. **Expected Output**: `Hello, World!`
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
+| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+
+### Tips for Learning
+
+- C++ is a superset of C with additional features
+- `std::cout` is the C++ way to print (replaces `printf`)
+- `std::endl` adds a newline and flushes the buffer
+- The `std::` prefix means these are from the "standard" namespace

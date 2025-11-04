@@ -1,6 +1,6 @@
 # Level 3: Basic Math Operations
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -184,7 +184,7 @@ func importMathExample() {
     }
     fmt.Println("2^3 (manual):", result)
 }
-```
+```go
 
 Actually, let me fix the above code as we can't import inside functions in Go. Here's the corrected version:
 
@@ -351,7 +351,7 @@ func main() {
     fmt.Println("intNum + floatNum (with conversion):", result1)
     fmt.Println("intNum + int(floatNum) (truncated):", result2)
 }
-```
+```go
 
 ---
 
@@ -361,15 +361,15 @@ func main() {
    ```bash
    mkdir math-example && cd math-example
    go mod init math
-   ```
+   ```go
 2. **Copy the code into `math.go`**
 3. **Run your program**:
    ```bash
    go run math.go
-   ```
+   ```bash
 
 **Expected output:**
-```
+```go
 === Basic Arithmetic ===
 5 + 3 = 8
 10 - 4 = 6
@@ -419,7 +419,7 @@ Max int8 + 1 (overflow): -128
 === Type Conversion in Math ===
 intNum + floatNum (with conversion): 13.5
 intNum + int(floatNum) (truncated): 13
-```
+```go
 
 ---
 
@@ -478,7 +478,7 @@ In Go math, you saw some operators:
 ```go
 sum := 5 + 3
 fmt.Println("5 + 3 =", sum)
-```
+```go
 - **`:=`** = Short variable declaration (declare and initialize)
 - **`+`** = Addition operator (performs arithmetic addition)
 - **Variable declaration** happens at the same time as initialization
@@ -486,7 +486,7 @@ fmt.Println("5 + 3 =", sum)
 ```go
 remainder := 17 % 5
 fmt.Println("17 % 5 =", remainder, "(remainder)")
-```
+```go
 - **`%`** = Modulo operator (returns the remainder after division)
 - 17 ÷ 5 = 3 remainder 2, so 17 % 5 = 2
 - Useful for checking if numbers are even (n % 2 == 0) or cycling through values
@@ -499,7 +499,7 @@ In Go, when both operands in division are integers, the result is truncated to a
 result := 7 / 2      // Result is 3 (integer truncated)
 result := 7.0 / 2.0  // Result is 3.5 (float division)
 result := 7 / 2.0    // Result is 3.5 (mixed, converted to float)
-```
+```go
 
 ### Order of Operations (PEMDAS)
 
@@ -516,7 +516,7 @@ result := 10 + 5 * 2  // = 10 + 10 = 20 (not 30!)
 
 // With parentheses: Addition before multiplication
 result := (10 + 5) * 2  // = 15 * 2 = 30
-```
+```go
 
 ### Go's Math Package
 
@@ -542,7 +542,7 @@ math.Pow(2, 3)    // 2 to the power of 3: 8.0
 // Constants
 math.Pi   // π: 3.141592653589793
 math.E    // e: 2.718281828459045
-```
+```go
 
 ### Increment and Decrement Operators
 
@@ -555,7 +555,7 @@ count--  // OK: decrements count by 1
 
 // NOT OK in Go (unlike C/C++/Java):
 // result := count++  // Syntax error! Can't use as expression
-```
+```go
 
 ### Compound Assignment Operators
 
@@ -568,7 +568,7 @@ value -= 3  // Same as: value = value - 3
 value *= 2  // Same as: value = value * 2
 value /= 4  // Same as: value = value / 4
 value %= 3  // Same as: value = value % 3
-```
+```go
 
 ### Important Go Math Notes
 
@@ -576,14 +576,14 @@ value %= 3  // Same as: value = value % 3
 
 ```go
 result := math.Pow(2, 3)  // 2^3 = 8
-```
+```go
 
 **Integer overflow**: Go has types of different sizes. When you exceed the limit of a type, it wraps around:
 
 ```go
 var small int8 = 127  // Maximum for int8
 small = small + 1     // Now small becomes -128 (overflow)
-```
+```go
 
 **Type conversions**: In Go, you must explicitly convert between numeric types:
 
@@ -597,7 +597,7 @@ var floatVal float64 = 2.5
 // Must convert explicitly:
 result1 := float64(intVal) + floatVal  // Convert int to float64
 result2 := intVal + int(floatVal)      // Convert float64 to int (truncates)
-```
+```go
 
 ### Common Errors & Solutions
 
@@ -652,10 +652,77 @@ func main() {
     fmt.Println("Max int32:", counter)
     fmt.Println("Max int32 + 1:", counter + 1)  // This will overflow to negative
 }
-```
+```go
 
 ---
 
  **Excellent work! You're becoming a mathematical wizard in Go!** 
 
 *Ready for the next challenge? Let's learn how to get input from users!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard go conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

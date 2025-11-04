@@ -1,6 +1,6 @@
 # Level 5: Conditionals and Decision Making
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -188,7 +188,7 @@ local test_nil = nil
 local test_false = false
 if not test_nil then print("- nil is falsy") end
 if not test_false then print("- false is falsy") end
-```
+```lua
 
 ---
 
@@ -197,10 +197,10 @@ if not test_false then print("- false is falsy") end
 1. **Run your program**:
    ```bash
    lua conditionals.lua
-   ```
+   ```lua
 
 **Expected output:**
-```
+```lua
 === Simple Age Check ===
 You are an adult (18 or older)
 
@@ -239,7 +239,7 @@ These values are truthy (evaluate to true in conditionals):
 Only these are falsy:
 - nil is falsy
 - false is falsy
-```
+```lua
 
 ---
 
@@ -305,7 +305,7 @@ if age >= 18 then
 else
     print("You are a minor (under 18)")
 end
-```
+```lua
 - **`if`** = Start of conditional statement
 - **`age >= 18`** = Condition that evaluates to true or false
 - **`then`** = Keyword required after condition
@@ -322,7 +322,7 @@ elseif grade >= 70 then
 else
     print("Grade: F (below 60)")
 end
-```
+```lua
 - **`elseif`** = Additional condition to check if the first was false
 - **Execution order** matters: Lua checks each condition in order and executes the first true one
 - **Only one block** executes, not multiple blocks
@@ -333,7 +333,7 @@ if username == "admin" and password == "secret123" then
 else
     print("Login failed! Invalid username or password.")
 end
-```
+```lua
 - **`and`** = Logical AND operator (both conditions must be true)
 - **`==`** = Equality comparison operator
 - **Security** considerations: Never hardcode credentials in real programs
@@ -347,7 +347,7 @@ if username = "admin" then  -- ERROR: Should be ==
 
 -- Correct! This compares values
 if username == "admin" then  -- OK: Comparison
-```
+```lua
 
 ### Logical Operators
 
@@ -380,7 +380,7 @@ local is_logged_in = false
 if not is_logged_in then
     print("Please log in first")
 end
-```
+```lua
 
 ### Nested Conditionals
 
@@ -394,7 +394,7 @@ if number > 0 then
         end
     end
 end
-```
+```lua
 - **Inner condition** only evaluated if outer condition is true
 - **Be careful** with nesting - too deep can be hard to read
 
@@ -419,7 +419,7 @@ if -1 then print("-1 is truthy in Lua!") end         -- This prints!
 -- Only nil and false are falsy
 if not nil then print("nil is falsy in Lua") end      -- This prints!
 if not false then print("false is falsy in Lua") end  -- This prints!
-```
+```lua
 
 **This is different from JavaScript, Python, C++, etc. where 0 and empty strings are falsy!**
 
@@ -433,7 +433,7 @@ local result = true and print("This will print")
 -- Useful patterns
 local name = user_input or "Anonymous"  -- Use default if user_input is nil
 local value = some_condition and "yes" or "no"  -- Ternary-like operation
-```
+```lua
 
 ### Switch Alternative with Tables
 
@@ -450,7 +450,7 @@ local action = actions[element]
 if action then
     action()  -- Execute the fire attack function
 end
-```
+```lua
 
 ### Common Errors & Solutions
 
@@ -473,7 +473,7 @@ if is_valid_email then ... end
 -- Avoid
 if x then ... end
 if flag then ... end
-```
+```lua
 
 **Keep conditions simple:**
 ```lua
@@ -483,7 +483,7 @@ if can_vote then ... end
 
 -- Avoid - hard to read
 if age >= 18 and is_citizen and not is_in_prison then ... end
-```
+```lua
 
 **Consider table lookup vs if/elseif:**
 - Use `if/elseif` for complex conditions and ranges
@@ -561,10 +561,71 @@ elseif overall_score >= 60 then
 else
     print("Not eligible for graduation, must repeat course")
 end
-```
+```lua
 
 ---
 
  **Excellent work! You now understand how to make your programs make intelligent decisions!** 
 
 *Ready for the next challenge? Let's learn about loops and repetition!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```lua
+print("Hello, World!")
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard lua conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

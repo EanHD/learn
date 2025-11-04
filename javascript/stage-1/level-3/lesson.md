@@ -1,6 +1,6 @@
 # Level 3: Basic Math Operations
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -116,7 +116,7 @@ console.log("After *= 2: " + value);
 
 value /= 4;  // Same as: value = value / 4
 console.log("After /= 4: " + value);
-```
+```javascript
 
 ---
 
@@ -125,10 +125,10 @@ console.log("After /= 4: " + value);
 1. **Run your program**:
    ```bash
    node math.js
-   ```
+   ```java
 
 **Expected output:**
-```
+```javascript
 === Basic Arithmetic ===
 5 + 3 = 8
 10 - 4 = 6
@@ -160,7 +160,7 @@ After += 5: 15
 After -= 3: 12
 After *= 2: 24
 After /= 4: 6
-```
+```javascript
 
 ---
 
@@ -224,7 +224,7 @@ In JavaScript math, you saw some operators:
 ```javascript
 let sum = 5 + 3;
 console.log("5 + 3 = " + sum);
-```
+```javascript
 - **`=`** = Assignment operator (stores the result of 5 + 3 into variable 'sum')
 - **`+`** = Addition operator (performs arithmetic addition)
 - **String concatenation**: The `+` operator also joins strings when one operand is a string
@@ -232,7 +232,7 @@ console.log("5 + 3 = " + sum);
 ```javascript
 let remainder = 17 % 5;
 console.log("17 % 5 = " + remainder + " (remainder)");
-```
+```javascript
 - **`%`** = Modulo operator (returns the remainder after division)
 - 17 ÷ 5 = 3 remainder 2, so 17 % 5 = 2
 - Useful for checking if numbers are even (n % 2 === 0) or cycling through values
@@ -240,7 +240,7 @@ console.log("17 % 5 = " + remainder + " (remainder)");
 ```javascript
 let power = 2 ** 3;
 console.log("2 ** 3 = " + power + " (2 to the power of 3)");
-```
+```javascript
 - **`**`** = Exponentiation operator (new in ES2016)
 - 2 ** 3 = 2 to the power of 3 = 2 × 2 × 2 = 8
 - Alternative to Math.pow(2, 3)
@@ -261,7 +261,7 @@ Examples:
 
 // With parentheses: Addition before multiplication
 (10 + 5) * 2;  // = 15 * 2 = 30
-```
+```javascript
 
 ### Increment/Decrement Operators
 
@@ -277,7 +277,7 @@ console.log(++x);  // Prints: 6 (x is now 6)
 let y = 5;
 console.log(y++);  // Prints: 5 (y is now 6)
 console.log(y);    // Prints: 6
-```
+```javascript
 
 ### Compound Assignment Operators
 
@@ -291,14 +291,14 @@ value -= 3;  // Same as: value = value - 3;  // value is now 12
 value *= 2;  // Same as: value = value * 2;  // value is now 24
 value /= 4;  // Same as: value = value / 4;  // value is now 6
 value %= 3;  // Same as: value = value % 3;  // value is now 0
-```
+```javascript
 
 ### Important JavaScript Math Notes
 
 **Floating Point Precision:**
 ```javascript
 console.log(0.1 + 0.2);  // Output: 0.30000000000000004 (not exactly 0.3!)
-```
+```javascript
 This is due to how JavaScript (and most programming languages) store decimal numbers internally.
 
 **Division by Zero:**
@@ -306,7 +306,7 @@ This is due to how JavaScript (and most programming languages) store decimal num
 console.log(5 / 0);     // Output: Infinity
 console.log(-5 / 0);    // Output: -Infinity
 console.log(0 / 0);     // Output: NaN (Not a Number)
-```
+```javascript
 
 **Mathematical Functions:**
 For more complex math, JavaScript has a built-in Math object:
@@ -318,7 +318,7 @@ Math.round(4.7);   // Round: 5
 Math.floor(4.7);   // Floor: 4
 Math.ceil(4.2);    // Ceiling: 5
 Math.PI;           // Pi: 3.141592653589793
-```
+```javascript
 
 ### Common Errors & Solutions
 
@@ -360,10 +360,71 @@ let original = 100;
 let newAmount = 125;
 let percentageChange = ((newAmount - original) / original) * 100;
 console.log("Percentage change from " + original + " to " + newAmount + ": " + percentageChange + "%");
-```
+```javascript
 
 ---
 
  **Excellent work! You're becoming a mathematical wizard in JavaScript!** 
 
 *Ready for the next challenge? Let's learn how to get input from users!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```js
+console.log("Hello, World!");
+
+```js
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard javascript conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

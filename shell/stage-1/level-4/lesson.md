@@ -1,59 +1,48 @@
 # Level 4: User Input
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
-
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.sh` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 1: Copying Code
 
 ### Today's Mission
 
-Now that you've learned the basics, let's explore reading user input and processing it! This fundamental concept is used in almost every program you'll write.
+Make your programs interactive by reading input from users.
+
+---
 
 ### Learning Goals
 
-- Understand how to use user input in Shell
-- Learn the syntax specific to Shell
-- Practice implementing user input
-- See real-world use cases
+- Learn how to read user input
+- Understand input/output operations
+- Practice with different data types from user
+- Create interactive programs that respond to users
+
+---
 
 ### Your Task
 
-We'll focus on understanding how user input works in Shell. For now, copy the provided code and run it to see the results. Don't worry if you don't understand every detail yet - that comes with practice!
-
-### Important Note
-
-At this stage, we focus on copying and understanding. You'll start writing your own code in Stage 2 (Pseudocode to Code).
-
-### How to Execute
+**Copy the following code EXACTLY as shown below into `main.sh`**
 
 ```bash
-bash program.sh
+#!/bin/bash
+
+read -p "Enter your name: " name
+read -p "Enter your age: " age
+
+echo "Hello, $name!"
+echo "You are $age years old."
+echo "Next year you'll be $((age + 1))."
 ```
+
+---
 
 ### Success Checklist
 
-- [ ] Created the file
+- [ ] Created a file named `main.sh`
 - [ ] Copied the code exactly as shown
-- [ ] Program executed without errors
-- [ ] Understood what the output represents
-
----
-
-### What's Next?
-
-In Stage 2, you'll take what you learned here and start translating logic into code. The progression is:
-
-1. **Stage 1 (Copying)** - Get familiar with syntax
-2. **Stage 2 (Pseudocode→Code)** - Translate plain English to code
-3. **Stage 3 (Problem→Pseudocode)** - Write the logic first
-4. **Stage 4 (Full Problem Solving)** - Complete independence
-5. **Stage 5 (Capstone)** - Real-world projects
-
----
-
-## Need Help with Vim?
-
-Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim commands!
+- [ ] Ran the program successfully
+- [ ] Understood the basic concepts
+- [ ] Experimented with small modifications
 
 ---
 
@@ -61,23 +50,61 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ---
 
-## ANSWER KEY (No cheating until you've tried!)
+## ANSWER KEY (Study after attempting!)
 
-### Code Breakdown
+### The Complete Code
 
-> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+```bash
+#!/bin/bash
+
+read -p "Enter your name: " name
+read -p "Enter your age: " age
+
+echo "Hello, $name!"
+echo "You are $age years old."
+echo "Next year you'll be $((age + 1))."
+```
+
+### What This Code Does
+
+This program demonstrates user input in Bash/Shell.
 
 ### Key Concepts
 
-- Review the code structure specific to Shell
-- Understand the execution flow
-- Learn common pitfalls and solutions
+- **User Input**: Reading data from the user
+- **Input Methods**: Language-specific ways to get user input
+- **Type Conversion**: Converting string input to numbers
+- **String Concatenation**: Combining text with variables
 
-### Next Steps
+### Line-by-Line Breakdown
 
-Practice the code and experiment with variations!
+The code creates an interactive program:
+
+1. **Prompt for Name**: Ask the user for their name
+2. **Read Name**: Store the user's input
+3. **Prompt for Age**: Ask the user for their age
+4. **Read Age**: Store and convert the age to a number
+5. **Greet User**: Display personalized greeting
+6. **Show Age**: Display the age back to the user
+7. **Calculate**: Show age + 1 (next year's age)
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Syntax error | Typo in code | Double-check spelling and punctuation |
+| Type error | Wrong data type | Ensure variables are correct type |
+| Runtime error | Code runs but crashes | Check your logic and data flow |
+
+### Bonus Knowledge
+
+- Always validate user input in production code
+- Different languages have different input methods
+- Type conversion can fail if user enters invalid data
+- Consider what happens if user enters unexpected input
 
 ---
 
-**Congratulations! Keep coding!**
+**Excellent work! You've mastered user input!**
 
+*Continue to the next level to keep building your skills!*

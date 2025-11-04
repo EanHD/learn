@@ -1,6 +1,6 @@
 # Level 1: Hello World
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -33,7 +33,7 @@ import "fmt"
 func main() {
     fmt.Println("Hello, World!")
 }
-```
+```go
 
 ---
 
@@ -43,20 +43,20 @@ func main() {
 2. **Navigate to where you saved your file**:
    ```bash
    cd /path/to/your/folder
-   ```
+   ```go
 3. **Create a Go module** (if this is your first program in the directory):
    ```bash
    go mod init hello
-   ```
+   ```go
 4. **Run your program**:
    ```bash
    go run hello.go
-   ```
+   ```go
 
 **Expected output:**
-```
+```go
 Hello, World!
-```
+```go
 
 ---
 
@@ -90,7 +90,7 @@ If you're feeling brave, try these small changes:
 
 1. Change the message to "Hello, Go Programming!"
 2. Add another `fmt.Println()` line with your name
-3. Try with different punctuation or emojis: `"Hello, World! 😊"`
+3. Try with different punctuation or emojis: `"Hello, World! "`
 
 ---
 
@@ -110,14 +110,14 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ```go
 package main
-```
+```go
 - **`package`** = Keyword that defines a package
 - **`main`** = Special package name that indicates an executable program
 - Every Go program must belong to a package
 
 ```go
 import "fmt"
-```
+```go
 - **`import`** = Keyword to include other packages
 - **`"fmt"`** = Format package that provides functions for formatted I/O
 - **Needed for** `fmt.Println()` function
@@ -126,7 +126,7 @@ import "fmt"
 func main() {
     fmt.Println("Hello, World!")
 }
-```
+```go
 - **`func`** = Keyword to define a function
 - **`main`** = Special function name that's the entry point of every Go program
 - **`()`** = Parameters list (empty means no inputs needed)
@@ -145,7 +145,7 @@ Go modules manage dependencies and versions:
 ```bash
 go mod init hello        # Creates go.mod file
 go mod tidy             # Downloads required dependencies
-```
+```go
 
 ### Common Errors & Solutions
 
@@ -169,3 +169,70 @@ go mod tidy             # Downloads required dependencies
  **Congratulations! You've written your first Go program!** 
 
 *Keep moving forward - next up: Variables!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard go conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

@@ -1,6 +1,6 @@
 # Level 3: Basic Math Operations
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -162,7 +162,7 @@ end
 if not nil and not false then
     print("Only nil and false are considered false")
 end
-```
+```lua
 
 ---
 
@@ -171,10 +171,10 @@ end
 1. **Run your program**:
    ```bash
    lua math.lua
-   ```
+   ```lua
 
 **Expected output:**
-```
+```lua
 === Basic Arithmetic ===
 5 + 3 = 8
 10 - 4 = 6
@@ -223,7 +223,7 @@ Negative number: -25
 === Boolean Logic with Numbers ===
 In Lua, 0 is considered true in boolean context
 Only nil and false are considered false
-```
+```lua
 
 *Note: Random numbers will vary each time you run the program*
 
@@ -285,7 +285,7 @@ In Lua math, you saw some operators:
 ```lua
 sum = 5 + 3
 print("5 + 3 = " .. sum)
-```
+```lua
 - **`=`** = Assignment operator (stores the result of 5 + 3 into variable 'sum')
 - **`+`** = Addition operator (performs arithmetic addition)
 - **String concatenation**: The `..` operator joins strings and numbers (number automatically converted)
@@ -293,7 +293,7 @@ print("5 + 3 = " .. sum)
 ```lua
 remainder = 17 % 5
 print("17 % 5 = " .. remainder .. " (remainder)")
-```
+```lua
 - **`%`** = Modulo operator (returns the remainder after division)
 - 17 ÷ 5 = 3 remainder 2, so 17 % 5 = 2
 - Useful for checking if numbers are even (n % 2 == 0) or cycling through values
@@ -301,7 +301,7 @@ print("17 % 5 = " .. remainder .. " (remainder)")
 ```lua
 power = 2 ^ 3
 print("2 ^ 3 = " .. power .. " (2 to the power of 3)")
-```
+```lua
 - **`^`** = Exponentiation operator (raises left number to power of right number)
 - 2 ^ 3 = 2 to the power of 3 = 2 × 2 × 2 = 8
 
@@ -322,7 +322,7 @@ result = 10 + 5 * 2  -- = 10 + 10 = 20 (not 30!)
 
 -- With parentheses: Addition before multiplication
 result = (10 + 5) * 2  -- = 15 * 2 = 30
-```
+```lua
 
 ### Lua's Math Library
 
@@ -347,7 +347,7 @@ math.cos(0)          -- Cosine of 0: 1
 -- Constants
 math.pi     -- π: 3.141592653589793
 math.huge   -- Infinity
-```
+```lua
 
 ### Random Number Generation
 
@@ -363,7 +363,7 @@ random_float = math.random()  -- 0.0 to 1.0
 
 -- Random integer between 1 and N
 random_single = math.random(10)  -- Random 1-10
-```
+```lua
 
 ### Important Lua Math Notes
 
@@ -374,21 +374,21 @@ integer_val = 42      -- Stored as number
 float_val = 3.14      -- Also stored as number
 print(type(integer_val))  -- Output: "number"
 print(type(float_val))    -- Output: "number"
-```
+```lua
 
 **Division Results**: Division always returns a float:
 
 ```lua
 print(6 / 3)     -- Output: 2.0 (not 2)
 print(5 / 2)     -- Output: 2.5
-```
+```lua
 
 **Division by Zero**: In Lua, dividing by zero results in inf (infinity):
 
 ```lua
 print(5 / 0)     -- Output: inf
 print(-5 / 0)    -- Output: -inf
-```
+```lua
 
 ### Comparison with Other Languages
 
@@ -400,13 +400,13 @@ value = value + 5
 
 -- Instead of: count++
 count = count + 1
-```
+```lua
 
 **No integer division**: Lua doesn't have a special integer division operator like Python's `//`. Use math.floor for integer division:
 
 ```lua
 result = math.floor(7 / 2)  -- Result: 3 (integer division)
-```
+```lua
 
 ### Common Errors & Solutions
 
@@ -455,10 +455,71 @@ side_a = 3
 side_b = 4
 hypotenuse = math.sqrt(side_a^2 + side_b^2)
 print("Right triangle with sides " .. side_a .. " and " .. side_b .. " has hypotenuse: " .. hypotenuse)
-```
+```lua
 
 ---
 
  **Excellent work! You're becoming a mathematical wizard in Lua!** 
 
 *Ready for the next challenge? Let's learn how to get input from users!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```lua
+print("Hello, World!")
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard lua conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

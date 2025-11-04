@@ -1,6 +1,6 @@
 # Level 2: Variables and Data Types
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.java`). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.java`). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window.
 
 ## Stage 1: Copying Code
 
@@ -35,7 +35,7 @@ public class Main {
         System.out.println("Height: " + height);
     }
 }
-```
+```java
 
 ---
 
@@ -47,14 +47,14 @@ public class Main {
 ```bash
 javac main.java
 java Main
-```
+```java
 
 **Expected output:**
-```
+```java
 Name: Alex
 Age: 25
 Price: $29.99
-```
+```java
 
 ---
 
@@ -79,7 +79,7 @@ You just used **three different data types** in Java:
 Each line follows this pattern:
 ```java
 [type] [variableName] = [value];
-```
+```java
 
 When you use `+` between strings and variables, Java converts them to text and joins them together!
 
@@ -105,7 +105,7 @@ When you use `+` between strings and variables, Java converts them to text and j
 String name = "Alice";     // Text variable
 int age = 25;              // Whole number variable
 double height = 5.7;       // Decimal number variable
-```
+```java
 
 Each variable has:
 - **Type**: What kind of data (String, int, double)
@@ -116,7 +116,7 @@ Each variable has:
 
 ```java
 System.out.println("Name: " + name);
-```
+```java
 
 The `+` operator concatenates (joins) strings and converts variables to text!
 

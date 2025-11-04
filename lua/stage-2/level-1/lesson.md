@@ -1,6 +1,6 @@
 # Level 1: Basic Pseudocode Translation
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -35,7 +35,7 @@ Algorithm: Make a sandwich
 5. Spread jelly on the other bread slice
 6. Put slices together
 7. Enjoy your sandwich!
-```
+```lua
 
 This is much easier to understand than trying to write code first!
 
@@ -53,12 +53,12 @@ This is much easier to understand than trying to write code first!
 1. **Run the code**:
    ```bash
    lua hello.lua
-   ```
+   ```lua
 
 **Expected output:**
-```
+```lua
 Hello, World!
-```
+```lua
 
 ## Algorithm 1: Greeting Program
 
@@ -69,7 +69,7 @@ Algorithm: Display Personal Greeting
 2. Get the user's name from input
 3. Display "Nice to meet you, " followed by the user's name
 4. Display "Welcome to programming!"
-```
+```lua
 
 **Your Task:** Create a Lua program that follows these exact steps.
 
@@ -86,7 +86,7 @@ Algorithm: Add Two Numbers
 4. Get second number from user
 5. Calculate sum of the two numbers
 6. Display "The sum is: " followed by the sum
-```
+```lua
 
 **Your Task:** Create a Lua program that implements this calculator.
 
@@ -102,7 +102,7 @@ Algorithm: Calculate Age in Days
 3. Calculate days = age × 365
 4. Display "You are approximately " + days + " days old"
 5. Display "That's a lot of days!"
-```
+```lua
 
 **Your Task:** Create a program that calculates approximate age in days.
 
@@ -120,7 +120,7 @@ Algorithm: Celsius to Fahrenheit Converter
 5. Display "°C = "
 6. Display the Fahrenheit temperature
 7. Display "°F"
-```
+```lua
 
 **Your Task:** Create a temperature conversion program.
 
@@ -140,7 +140,7 @@ Algorithm: Calculate Rectangle Area
 7. Calculate perimeter = 2 × (length + width)
 8. Display "Area: " + area
 9. Display "Perimeter: " + perimeter
-```
+```lua
 
 **Your Task:** Create a program that calculates both area and perimeter.
 
@@ -163,7 +163,7 @@ Algorithm: Calculate Simple Interest
 10. Display "Principal: $" + principal
 11. Display "Interest: $" + interest
 12. Display "Total: $" + total
-```
+```lua
 
 **Your Task:** Implement the complete interest calculation.
 
@@ -189,7 +189,7 @@ Algorithm: Calculate Body Mass Index
    Display "Category: Overweight"
 11. Else
    Display "Category: Obesity"
-```
+```lua
 
 **Your Task:** Create a program that calculates BMI with categorization.
 
@@ -254,7 +254,7 @@ Algorithm: Process User Data
 Else
    Display "Minor user"
 4. Display "Data processed"
-```
+```lua
 
 ### Bad Pseudocode (Too Vague)
 ```lua
@@ -262,7 +262,7 @@ Algorithm: Do stuff
 1. Get things
 2. Calculate something
 3. Show results
-```
+```lua
 
 ### Good Pseudocode (Clear and Specific)
 ```lua
@@ -274,7 +274,7 @@ Algorithm: Calculate BMI
 5. Get height from user
 6. Calculate BMI = weight ÷ (height × height)
 7. Display "Your BMI is: " + BMI
-```
+```lua
 
 ---
 
@@ -298,7 +298,7 @@ print("Nice to meet you, " .. name)
 
 -- Display "Welcome to programming!"
 print("Welcome to programming!")
-```
+```lua
 
 ### Algorithm 2: Simple Calculator
 
@@ -318,7 +318,7 @@ local sum = first_num + second_num
 
 -- Display "The sum is: " followed by the sum
 print("The sum is: " .. sum)
-```
+```lua
 
 ### Algorithm 3: Age Calculator
 
@@ -335,7 +335,7 @@ local days = age * 365
 -- Display messages
 print("You are approximately " .. days .. " days old")
 print("That's a lot of days!")
-```
+```lua
 
 ### Algorithm 4: Temperature Converter
 
@@ -351,7 +351,7 @@ local fahrenheit = (celsius * 9/5) + 32
 
 -- Display the results
 print(celsius .. "°C = " .. fahrenheit .. "°F")
-```
+```lua
 
 ### Algorithm 5: Rectangle Area Calculator
 
@@ -375,7 +375,7 @@ local perimeter = 2 * (length + width)
 -- Display results
 print("Area: " .. area)
 print("Perimeter: " .. perimeter)
-```
+```lua
 
 ### Algorithm 6: Simple Interest Calculator
 
@@ -404,7 +404,7 @@ local total = principal + interest
 print("Principal: $" .. string.format("%.2f", principal))
 print("Interest: $" .. string.format("%.2f", interest))
 print("Total: $" .. string.format("%.2f", total))
-```
+```lua
 
 ### Algorithm 7: BMI Calculator
 
@@ -435,7 +435,7 @@ elseif bmi < 30 then
 else
     print("Category: Obesity")
 end
-```
+```lua
 
 ### Common Translation Patterns
 
@@ -483,23 +483,77 @@ end
 ```lua
 io.write("Enter age: ")
 local age = tonumber(io.read())
-```
+```lua
 
 **Getting Text:**
 ```lua
 io.write("Enter name: ")
 local name = io.read()
-```
+```lua
 
 **Displaying Results:**
 ```lua
 print("Result: " .. result)
 print("Price: $" .. string.format("%.2f", price))
 print("Hello, " .. name .. "!")
-```
+```lua
 
 ---
 
  **Congratulations! You've translated your first pseudocode algorithms into working Lua programs!** 
 
 *This is a major milestone - you're now thinking like a programmer! Next up: Variables in pseudocode!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```lua
+print("Hello, World!")
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard lua conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

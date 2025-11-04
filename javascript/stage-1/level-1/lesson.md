@@ -1,6 +1,6 @@
 # Level 1: Hello World
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -27,7 +27,7 @@ Welcome to your first step into JavaScript programming! Today, you'll learn how 
 
 ```javascript
 console.log("Hello, World!");
-```
+```javascript
 
 ---
 
@@ -37,16 +37,16 @@ console.log("Hello, World!");
 2. **Navigate to where you saved your file**:
    ```bash
    cd /path/to/your/folder
-   ```
+   ```java
 3. **Run your program**:
    ```bash
    node hello.js
-   ```
+   ```bash
 
 **Expected output:**
-```
+```javascript
 Hello, World!
-```
+```javascript
 
 ---
 
@@ -79,7 +79,7 @@ If you're feeling brave, try these small changes:
 
 1. Change the message to "Hello, JavaScript Programming!"
 2. Add another `console.log()` line with your name
-3. Try with different punctuation or emojis: `"Hello, World! 😊"`
+3. Try with different punctuation or emojis: `"Hello, World! "`
 
 ---
 
@@ -99,7 +99,7 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ```javascript
 console.log("Hello, World!");
-```
+```javascript
 - **`console`** = Built-in object that provides access to the browser's debugging console (or Node.js terminal)
 - **`.`** = Property accessor - accesses the log function inside console object
 - **`log`** = Method (function) that prints messages to the console
@@ -145,3 +145,64 @@ Today's lesson uses Node.js, which allows us to run JavaScript outside the brows
  **Congratulations! You've written your first JavaScript program!** 
 
 *Keep moving forward - next up: Variables!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```js
+console.log("Hello, World!");
+
+```js
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard javascript conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

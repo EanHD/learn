@@ -1,6 +1,6 @@
 # Level 1: Your First Independent Project
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 5: Capstone - Full Integration Project
@@ -10,10 +10,10 @@
 **Welcome to Stage 5!** 
 
 You've completed Stages 1-4 and learned to:
-- Copy and understand code (Stage 1)
-- Translate pseudocode to programs (Stage 2)
-- Analyze problems and design solutions (Stage 3)
-- Create problems and implement solutions independently (Stage 4)
+- [ ] Copy and understand code (Stage 1)
+- [ ] Translate pseudocode to programs (Stage 2)
+- [ ] Analyze problems and design solutions (Stage 3)
+- [ ] Create problems and implement solutions independently (Stage 4)
 
 **Now it's time for your CAPSTONE PROJECT!**
 
@@ -24,13 +24,13 @@ This is where you create something **meaningful, ambitious, and uniquely yours**
 ### Learning Goals
 
 By completing this capstone level, you will:
-- **Design** a complete application from scratch
-- **Plan** a multi-feature system with proper architecture
-- **Implement** production-ready code
-- **Test** thoroughly with edge cases
-- **Document** your work professionally
-- **Reflect** on your programming journey
-- Create a **portfolio-worthy project**
+- [ ] **Design** a complete application from scratch
+- [ ] **Plan** a multi-feature system with proper architecture
+- [ ] **Implement** production-ready code
+- [ ] **Test** thoroughly with edge cases
+- [ ] **Document** your work professionally
+- [ ] **Reflect** on your programming journey
+- [ ] Create a **portfolio-worthy project**
 
 ---
 
@@ -52,42 +52,42 @@ Your Level 1 Capstone should:
 Here are guiding questions to help you choose:
 
 #### Personal Interest
-- What problems do YOU want to solve?
-- What could you build that would be genuinely useful?
-- What excites you to code?
+- [ ] What problems do YOU want to solve?
+- [ ] What could you build that would be genuinely useful?
+- [ ] What excites you to code?
 
 #### Example Domains (Pick ONE or Choose Your Own)
 
 **1. Personal Data Management**
-- Student grade tracker with analytics
-- Personal finance manager with budgeting
-- Employee time tracking system
-- Book/movie collection manager with searching and sorting
-- Recipe collection with meal planning
+- [ ] Student grade tracker with analytics
+- [ ] Personal finance manager with budgeting
+- [ ] Employee time tracking system
+- [ ] Book/movie collection manager with searching and sorting
+- [ ] Recipe collection with meal planning
 
 **2. Educational Tool**
-- Quiz system with scoring and feedback
-- Math problem generator and solver
-- Language learning flashcard system with statistics
-- Programming concept visualizer
+- [ ] Quiz system with scoring and feedback
+- [ ] Math problem generator and solver
+- [ ] Language learning flashcard system with statistics
+- [ ] Programming concept visualizer
 
 **3. Productivity Tool**
-- Task management system with priorities and deadlines
-- Meeting scheduler with conflict detection
-- Note-taking application with organization
-- Habit tracker with progress visualization
+- [ ] Task management system with priorities and deadlines
+- [ ] Meeting scheduler with conflict detection
+- [ ] Note-taking application with organization
+- [ ] Habit tracker with progress visualization
 
 **4. Data Analysis**
-- CSV data processor with filtering and reporting
-- Survey analyzer with statistics
-- Log file analyzer with anomaly detection
-- Sales data analyzer with trend analysis
+- [ ] CSV data processor with filtering and reporting
+- [ ] Survey analyzer with statistics
+- [ ] Log file analyzer with anomaly detection
+- [ ] Sales data analyzer with trend analysis
 
 **5. Game or Simulation**
-- Text-based adventure game with inventory
-- Number guessing game with AI difficulty
-- Simple maze game with pathfinding
-- Simulation (traffic, weather, population growth)
+- [ ] Text-based adventure game with inventory
+- [ ] Number guessing game with AI difficulty
+- [ ] Simple maze game with pathfinding
+- [ ] Simulation (traffic, weather, population growth)
 
 ---
 
@@ -159,29 +159,29 @@ Follow these stages:
 Your capstone will be evaluated on:
 
 #### **Functionality** (40 points)
-- All required features work correctly
-- Data persists between sessions
-- User interface is intuitive
-- Error handling is graceful
+- [ ] All required features work correctly
+- [ ] Data persists between sessions
+- [ ] User interface is intuitive
+- [ ] Error handling is graceful
 
 #### **Code Quality** (30 points)
-- Code is well-organized and modular
-- Functions have clear purposes
-- Variable names are meaningful
-- Comments explain complex logic
-- No code duplication
+- [ ] Code is well-organized and modular
+- [ ] Functions have clear purposes
+- [ ] Variable names are meaningful
+- [ ] Comments explain complex logic
+- [ ] No code duplication
 
 #### **Completeness** (20 points)
-- Project is fully implemented (not partial)
-- Testing is documented
-- Documentation is thorough
-- Handles edge cases
+- [ ] Project is fully implemented (not partial)
+- [ ] Testing is documented
+- [ ] Documentation is thorough
+- [ ] Handles edge cases
 
 #### **Creativity** (10 points)
-- Project solves a real problem
-- Implementation shows thought and care
-- Features are well-integrated
-- Goes beyond minimum requirements
+- [ ] Project solves a real problem
+- [ ] Implementation shows thought and care
+- [ ] Features are well-integrated
+- [ ] Goes beyond minimum requirements
 
 ---
 
@@ -189,7 +189,7 @@ Your capstone will be evaluated on:
 
 Before coding, submit a proposal addressing:
 
-```
+```cpp
 PROJECT TITLE: [Name]
 DOMAIN: [Category - e.g., Personal Finance, Education]
 PURPOSE: [What problem does it solve?]
@@ -200,8 +200,8 @@ CORE FEATURES:
 3. [Feature 3 description]
 
 DATA STRUCTURES:
-- Struct 1: [What data does it hold?]
-- Struct 2: [What data does it hold?]
+- [ ] Struct 1: [What data does it hold?]
+- [ ] Struct 2: [What data does it hold?]
 
 MAIN OPERATIONS:
 1. [What can users do?]
@@ -217,7 +217,7 @@ USER INTERFACE:
 - [What menus or prompts?]
 
 ESTIMATED EFFORT: [X hours of work]
-```
+```cpp
 
 ---
 
@@ -303,11 +303,11 @@ From **Stage 3**: Functions, modularity, code organization
 From **Stage 4**: File I/O, data structures, system design 
 
 **Review as needed:**
-- String manipulation and parsing
-- File operations (reading/writing)
-- Data structure design
-- Algorithm efficiency
-- Error handling patterns
+- [ ] String manipulation and parsing
+- [ ] File operations (reading/writing)
+- [ ] Data structure design
+- [ ] Algorithm efficiency
+- [ ] Error handling patterns
 
 ---
 
@@ -321,33 +321,33 @@ From **Stage 4**: File I/O, data structures, system design
 5. Ask for code review from peers
 
 **Common Challenges:**
-- **"Too ambitious?"** → Start smaller, add features later
-- **"Data structure confusing?"** → Draw it on paper first
-- **"Performance issues?"** → Test with realistic data volumes
-- **"File I/O not working?"** → Test reading/writing separately
+- [ ] **"Too ambitious?"** → Start smaller, add features later
+- [ ] **"Data structure confusing?"** → Draw it on paper first
+- [ ] **"Performance issues?"** → Test with realistic data volumes
+- [ ] **"File I/O not working?"** → Test reading/writing separately
 
 ---
 
 ### Capstone Best Practices
 
  **DO:**
-- Start with clear planning
-- Write pseudocode first
-- Implement incrementally
-- Test frequently
-- Document as you go
-- Commit to version control
-- Get peer feedback
-- Refactor when needed
+- [ ] Start with clear planning
+- [ ] Write pseudocode first
+- [ ] Implement incrementally
+- [ ] Test frequently
+- [ ] Document as you go
+- [ ] Commit to version control
+- [ ] Get peer feedback
+- [ ] Refactor when needed
 
  **DON'T:**
-- Write 1000 lines before testing
-- Skip the planning phase
-- Ignore edge cases
-- Over-engineer early
-- Assume your code is obvious
-- Skip error handling
-- Forget to test thoroughly
+- [ ] Write 1000 lines before testing
+- [ ] Skip the planning phase
+- [ ] Ignore edge cases
+- [ ] Over-engineer early
+- [ ] Assume your code is obvious
+- [ ] Skip error handling
+- [ ] Forget to test thoroughly
 
 ---
 
@@ -387,15 +387,15 @@ From **Stage 4**: File I/O, data structures, system design
 **Essential Planning Steps:**
 
 1. **Write a Problem Statement**
- ```
+ ```cpp
  "My application solves [problem]
  by [approach]
  for [users]
  so that [outcome]."
- ```
+ ```cpp
 
 2. **Define Core Features** (3-5 minimum)
- ```
+ ```cpp
  MUST HAVE (critical):
  - Feature A
  - Feature B
@@ -406,7 +406,7 @@ From **Stage 4**: File I/O, data structures, system design
  
  NICE TO HAVE (bonus):
  - Feature E
- ```
+ ```cpp
 
 3. **Design Data Structures**
  ```c
@@ -421,10 +421,10 @@ From **Stage 4**: File I/O, data structures, system design
  int employee_count;
  // ... other fields
  };
- ```
+ ```cpp
 
 4. **Create Architecture Diagram**
- ```
+ ```cpp
  USER INPUT
  ↓
  MENU SYSTEM
@@ -434,10 +434,10 @@ From **Stage 4**: File I/O, data structures, system design
  DATA STORAGE (structs)
  ↓
  FILE I/O (persistence)
- ```
+ ```cpp
 
 5. **Write Pseudocode for Main Functions**
- ```
+ ```cpp
  Algorithm: AddNewRecord
  1. Get input from user
  2. Validate input
@@ -452,7 +452,7 @@ From **Stage 4**: File I/O, data structures, system design
  3. Check if record matches criteria
  4. Display matching records
  5. Ask if user wants to filter further
- ```
+ ```cpp
 
 ### Phase 3: Data Structure Design
 
@@ -499,7 +499,7 @@ void add_entity(EntityManager *manager);
 void view_entities(EntityManager *manager);
 void search_entities(EntityManager *manager);
 void delete_entity(EntityManager *manager);
-```
+```cpp
 
 ### Phase 4: Implementation Strategy
 
@@ -514,15 +514,15 @@ void delete_entity(EntityManager *manager);
 7. **Stage 7**: Polish + optimization
 
 **Test After Each Stage:**
-- Does the code compile?
-- Do core operations work?
-- Are edge cases handled?
+- [ ] Does the code compile?
+- [ ] Do core operations work?
+- [ ] Are edge cases handled?
 
 ### Phase 5: Testing Strategy
 
 **Create a Test Plan:**
 
-```
+```cpp
 TEST CASE 1: Add New Record
 Input: Valid record data
 Expected: Record added, saved to file
@@ -539,7 +539,7 @@ Expected: "No records found" message
 Result: PASS / FAIL
 
 ... (20-30 test cases minimum)
-```
+```cpp
 
 ### Phase 6: Code Quality Checklist
 
@@ -572,8 +572,8 @@ Result: PASS / FAIL
 
 3. **Compilation Instructions**
  ```bash
- gcc -o myapp main.c -lm
- ```
+ g++ -o myapp main.c -lm
+ ```cpp
 
 4. **Usage Guide**
  - How to run the program
@@ -596,10 +596,10 @@ Result: PASS / FAIL
  - What you learned
 
 **Code Comments Should:**
-- Explain complex algorithms
-- Document non-obvious design choices
-- Show input/output expectations for functions
-- Clarify any "clever" code
+- [ ] Explain complex algorithms
+- [ ] Document non-obvious design choices
+- [ ] Show input/output expectations for functions
+- [ ] Clarify any "clever" code
 
 ---
 
@@ -647,7 +647,7 @@ Result: PASS / FAIL
 ## Real-World Capstone Examples
 
 ### Example 1: Personal Finance Manager
-```
+```cpp
 PURPOSE: Help track personal spending and savings goals
 FEATURES: 
  - Add/categorize expenses
@@ -655,10 +655,10 @@ FEATURES:
  - Generate spending reports
  - Export to CSV for analysis
 COMPLEXITY: Moderate (5-7 hours)
-```
+```cpp
 
 ### Example 2: Quiz Application
-```
+```cpp
 PURPOSE: Interactive quiz system for learning
 FEATURES:
  - Load questions from file
@@ -666,10 +666,10 @@ FEATURES:
  - Provide instant feedback
  - Show statistics and progress
 COMPLEXITY: Moderate (6-8 hours)
-```
+```cpp
 
 ### Example 3: Data Processor
-```
+```cpp
 PURPOSE: Analyze CSV files and generate reports
 FEATURES:
  - Parse CSV files
@@ -678,7 +678,7 @@ FEATURES:
  - Generate reports
  - Export results
 COMPLEXITY: Moderate to Advanced (8-12 hours)
-```
+```cpp
 
 ---
 
@@ -688,3 +688,89 @@ You've completed your programming education journey. Now create something amazin
 
 *Your capstone project is your proof to the world that you can program.* 
 
+
+
+### Your Task
+
+1. Review the code structure
+2. Implement the required functionality
+3. Test your solution
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- [ ] Review each function
+- [ ] Understand the flow
+- [ ] Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- [ ] Main function: Entry point
+- [ ] Helper functions: Support logic
+
+
+### <div style="page-break-after: always;"></div>
+
+Answer Key
+
+Expected implementation provided.
+
+<div style="page-break-after: always;"></div>
+
+---
+
+## Answer Key
+
+### Complete Solution
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard C++ conventions with proper imports and main function
+2. **Output**: Uses std::cout to print messages to the console
+3. **Standard Library**: Includes iostream for input/output operations
+4. **Return Value**: Returns 0 to indicate successful execution
+5. **Best Practices**: Code is readable and uses C++ idioms
+
+### Testing Your Solution
+
+1. **Compile**: `g++ hello.cpp -o hello`
+2. **Run**: `./hello`
+3. **Expected Output**: `Hello, World!`
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
+| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+
+### Tips for Learning
+
+- C++ is a superset of C with additional features
+- `std::cout` is the C++ way to print (replaces `printf`)
+- `std::endl` adds a newline and flushes the buffer
+- The `std::` prefix means these are from the "standard" namespace

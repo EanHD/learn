@@ -1,6 +1,6 @@
 # Level 4: User Input
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -120,7 +120,7 @@ if number ~= nil and number > 0 then
 else
     print("Invalid input! That wasn't a positive number.")
 end
-```
+```lua
 
 ---
 
@@ -129,10 +129,10 @@ end
 1. **Run your program**:
    ```bash
    lua input.lua
-   ```
+   ```lua
 
 **Expected interaction:**
-```
+```lua
 === Interactive Greeting Program ===
 What's your name? [User types their name and presses Enter]
 Hello, [User's name]! Nice to meet you!
@@ -147,7 +147,7 @@ What year were you born? [User enters a year]
 [Age calculation is performed and shown]
 
 [Additional prompts will ask for input and respond accordingly...]
-```
+```lua
 
 ---
 
@@ -202,21 +202,21 @@ What year were you born? [User enters a year]
 
 ```lua
 local name = io.read()
-```
+```lua
 - **`io.read()`** = Function from the io library that reads from standard input
 - **Reads until** the user presses Enter
 - **Returns a string** containing whatever the user typed
 
 ```lua
 local num1 = tonumber(io.read())
-```
+```lua
 - **`tonumber()`** = Converts string to number
 - **Necessary** because `io.read()` returns a string, but we want to do math
 - **Returns nil** if conversion fails (input wasn't a valid number)
 
 ```lua
 io.write("What's your name? ")
-```
+```lua
 - **`io.write()`** = Outputs text to the console
 - **Doesn't add** a newline character (unlike print)
 - **Useful for** prompts where user types on same line
@@ -228,7 +228,7 @@ io.write("What's your name? ")
 -- Read multiple values on one line (space separated)
 local first, second = io.read("*number", "*number")
 print("First: " .. first .. ", Second: " .. second)
-```
+```lua
 
 **Reading with different modes:**
 ```lua
@@ -240,7 +240,7 @@ local content = io.read("*all")
 
 -- Read current line
 local line = io.read("*line")
-```
+```lua
 
 ### Important Input Considerations
 
@@ -254,7 +254,7 @@ if number == nil then
 else
     print("You entered: " .. number)
 end
-```
+```lua
 
 **Case sensitivity:**
 ```lua
@@ -267,7 +267,7 @@ end
 if string.lower(answer) == "paris" then  -- Works for any case
     -- This works regardless of case
 end
-```
+```lua
 
 ### String Manipulation
 
@@ -285,7 +285,7 @@ print(string.find(text, "ll"))  -- Output: 3 (position where "ll" starts)
 
 -- Replace text (pattern matching)
 local new_text = string.gsub(text, "H", "h")  -- "hello"
-```
+```lua
 
 ### Error Prevention with Input
 
@@ -306,7 +306,7 @@ end
 
 -- Usage
 local age = get_number("Enter your age: ")
-```
+```lua
 
 ### Date and Time in Lua
 
@@ -318,7 +318,7 @@ local day = tonumber(os.date("%d"))    -- Day (01-31)
 
 -- Get full date string
 local full_date = os.date("%Y-%m-%d")  -- e.g., "2025-10-30"
-```
+```lua
 
 ### Common Errors & Solutions
 
@@ -339,7 +339,7 @@ if age == nil or age < 0 or age > 150 then
 else
     print("You are " .. age .. " years old")
 end
-```
+```lua
 
 **Handle potential nil returns from tonumber:**
 ```lua
@@ -351,7 +351,7 @@ if number ~= nil then
 else
     print("Invalid input - not a number")
 end
-```
+```lua
 
 ### Security Considerations
 
@@ -402,10 +402,71 @@ if remaining > 0 then
 else
     print("You're spending more than you earn. Consider reducing expenses.")
 end
-```
+```lua
 
 ---
 
  **Excellent work! You now know how to make interactive programs that respond to user input!** 
 
 *Ready for the next challenge? Let's make programs that make decisions!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```lua
+print("Hello, World!")
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard lua conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

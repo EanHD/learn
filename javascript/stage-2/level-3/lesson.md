@@ -1,6 +1,6 @@
 # Level 3: Mathematical Pseudocode
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -32,7 +32,7 @@ SET result TO 10 - 4
 SET result TO 6 * 7
 SET result TO 15 / 3
 SET remainder TO 17 MOD 5
-```
+```javascript
 
 **Complex expressions:**
 ```javascript
@@ -41,21 +41,21 @@ SET volume TO length * width * height
 SET average TO (num1 + num2 + num3) / 3
 SET tax TO price * 0.08
 SET discount TO original_price * discount_rate
-```
+```javascript
 
 **Order of operations:**
 ```javascript
 SET result TO 2 + 3 * 4     // result = 14 (not 20), multiplication first
 SET result TO (2 + 3) * 4   // result = 20, parentheses override
 SET result TO 10 / 2 + 3    // result = 8, division first
-```
+```javascript
 
 **Mathematical functions:**
 ```javascript
 SET result TO POWER(2, 3)    // 2 to the power of 3
 SET result TO SQRT(16)       // square root of 16
 SET result TO ROUND(3.7)     // round to nearest integer
-```
+```javascript
 
 ---
 
@@ -71,12 +71,12 @@ SET result TO ROUND(3.7)     // round to nearest integer
 1. **Run the code**:
    ```bash
    node hello.js
-   ```
+   ```java
 
 **Expected output:**
-```
+```javascript
 Hello, World!
-```
+```javascript
 
 ## Algorithm 1: Complex Arithmetic Expression
 
@@ -92,7 +92,7 @@ Algorithm: Evaluate Complex Expression
 7. DISPLAY "Result without parentheses: " + result2
 8. SET result3 TO ((a + b) * c - a) / c
 9. DISPLAY "Result with different grouping: " + result3
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that evaluates complex arithmetic expressions.
 
@@ -112,7 +112,7 @@ Algorithm: Solve Quadratic Equation
 7. SET root2 TO (-b - sqrt_discriminant) / (2 * a)
 8. DISPLAY "Root 1: " + root1
 9. DISPLAY "Root 2: " + root2
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that solves quadratic equations using the quadratic formula.
 
@@ -132,7 +132,7 @@ Algorithm: Calculate Compound Interest
 7. DISPLAY "Principal: $" + principal
 8. DISPLAY "Final Amount: $" + amount
 9. DISPLAY "Interest Earned: $" + interest
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that calculates compound interest.
 
@@ -155,7 +155,7 @@ Algorithm: Calculate Geometric Properties
 10. DISPLAY "Circle - Area: " + circle_area + ", Circumference: " + circle_circumference
 11. DISPLAY "Square - Area: " + square_area + ", Perimeter: " + square_perimeter
 12. DISPLAY "Triangle - Area: " + triangle_area
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that calculates geometric properties.
 
@@ -178,7 +178,7 @@ Algorithm: Physics Calculations
 10. DISPLAY "Force: " + force
 11. DISPLAY "Distance: " + distance
 12. DISPLAY "Momentum: " + momentum
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that calculates physics formulas.
 
@@ -199,7 +199,7 @@ Algorithm: Multiple Temperature Conversions
 8. DISPLAY "Kelvin: " + kelvin
 9. DISPLAY "F to C: " + celsius_from_f
 10. DISPLAY "K to C: " + celsius_from_k
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that performs multiple temperature conversions.
 
@@ -225,7 +225,7 @@ Algorithm: Calculate Statistics for Three Numbers
 13. DISPLAY "Range: " + range
 14. DISPLAY "Variance: " + variance
 15. DISPLAY "Standard Deviation: " + std_deviation
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that calculates statistical measures.
 
@@ -296,7 +296,7 @@ console.log("Result without parentheses: " + result2);
 
 let result3 = ((a + b) * c - a) / c;
 console.log("Result with different grouping: " + result3);
-```
+```javascript
 
 ### Algorithm 2: Quadratic Formula Calculator
 
@@ -313,7 +313,7 @@ let root2 = (-b - sqrt_discriminant) / (2 * a);
 
 console.log("Root 1: " + root1);
 console.log("Root 2: " + root2);
-```
+```javascript
 
 ### Algorithm 3: Compound Interest Calculator
 
@@ -330,7 +330,7 @@ let interest = amount - principal;
 console.log("Principal: $" + principal);
 console.log("Final Amount: $" + amount.toFixed(2));
 console.log("Interest Earned: $" + interest.toFixed(2));
-```
+```javascript
 
 ### Algorithm 4: Geometric Calculations
 
@@ -350,7 +350,7 @@ let triangle_area = 0.5 * base * height;
 console.log("Circle - Area: " + circle_area.toFixed(2) + ", Circumference: " + circle_circumference.toFixed(2));
 console.log("Square - Area: " + square_area + ", Perimeter: " + square_perimeter);
 console.log("Triangle - Area: " + triangle_area);
-```
+```javascript
 
 ### Algorithm 5: Physics Formula Calculator
 
@@ -370,7 +370,7 @@ console.log("Kinetic Energy: " + kinetic_energy);
 console.log("Force: " + force);
 console.log("Distance: " + distance);
 console.log("Momentum: " + momentum);
-```
+```javascript
 
 ### Algorithm 6: Temperature Conversion with Multiple Formulas
 
@@ -387,7 +387,7 @@ console.log("Fahrenheit: " + fahrenheit);
 console.log("Kelvin: " + kelvin);
 console.log("F to C: " + celsius_from_f);
 console.log("K to C: " + celsius_from_k);
-```
+```javascript
 
 ### Algorithm 7: Statistical Calculations
 
@@ -410,7 +410,7 @@ console.log("Average: " + average);
 console.log("Range: " + range);
 console.log("Variance: " + variance);
 console.log("Standard Deviation: " + std_deviation.toFixed(2));
-```
+```javascript
 
 ### Mathematical Operation Translation Patterns
 
@@ -438,3 +438,57 @@ console.log("Standard Deviation: " + std_deviation.toFixed(2));
  **Excellent work! You've mastered translating mathematical operations from pseudocode to JavaScript!** 
 
 *Next up: Input/Output operations in pseudocode!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```js
+console.log("Hello, World!");
+
+```js
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard javascript conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

@@ -1,6 +1,6 @@
 # Level 2: Data Structure Planning
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window**. The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window**. The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 3: Problem to Pseudocode
 
@@ -56,9 +56,9 @@ Data Structure Planning - Design an algorithm to solve this problem, then implem
    ```
 
 **Expected output:**
-```
+```julia
 Hello, World!
-```
+```julia
 
 ### How to Approach This
 
@@ -169,7 +169,7 @@ BEGIN
         - Step 3
     4. Display results
 END
-```
+```julia
 
 Then translate this directly to Julia code.
 

@@ -1,6 +1,6 @@
 # Level 3: Basic Math Operations
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -37,7 +37,7 @@ print(f"Division: {a} / {b} = {a / b}")
 print(f"Integer Division: {a} // {b} = {a // b}")
 print(f"Modulus (Remainder): {a} % {b} = {a % b}")
 print(f"Exponentiation: {a} ** {b} = {a ** b}")
-```
+```python
 
 ---
 
@@ -47,14 +47,14 @@ print(f"Exponentiation: {a} ** {b} = {a ** b}")
 2. **Navigate to where you saved your file**:
     ```bash
     cd /path/to/your/folder
-    ```
+    ```python
 3. **Run the code**:
     ```bash
     python3 math.py
-    ```
+    ```bash
 
 **Expected output:**
-```
+```python
 Addition: 10 + 3 = 13
 Subtraction: 10 - 3 = 7
 Multiplication: 10 * 3 = 30
@@ -62,7 +62,7 @@ Division: 10 / 3 = 3.3333333333333335
 Integer Division: 10 // 3 = 3
 Modulus (Remainder): 10 % 3 = 1
 Exponentiation: 10 ** 3 = 1000
-```
+```python
 
 ---
 
@@ -117,7 +117,7 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 # Some numbers to work with
 a = 10
 b = 3
-```
+```python
 
 - **`a = 10`** = Store 10 in variable `a`
 - **`b = 3`** = Store 3 in variable `b`
@@ -131,7 +131,7 @@ print(f"Division: {a} / {b} = {a / b}")
 print(f"Integer Division: {a} // {b} = {a // b}")
 print(f"Modulus (Remainder): {a} % {b} = {a % b}")
 print(f"Exponentiation: {a} ** {b} = {a ** b}")
-```
+```python
 
 - **Each line** = Calculates and displays one operation
 - **`{a + b}`** = Performs calculation and inserts result
@@ -177,3 +177,57 @@ Use parentheses `()` to change order: `(2 + 3) * 4 = 20`
  **Excellent! You can now do math with Python!** 
 
 *Keep moving forward - next up: User Input!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```py
+print("Hello, World!")
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard python conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

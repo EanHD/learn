@@ -1,6 +1,6 @@
 # Level 2: Variables in Algorithms
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window**. The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window**. The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 2: Pseudocode to Code
 
@@ -39,7 +39,7 @@ BEGIN
     // Translate step by step into Julia
     // Test with sample inputs
 END
-```
+```julia
 
 **Implementation Steps:**
 1. Analyze what the algorithm does
@@ -59,9 +59,9 @@ END
    ```
 
 **Expected output:**
-```
+```julia
 Hello, World!
-```
+```julia
 
 ### How to Approach This
 
@@ -168,7 +168,7 @@ PSEUDOCODE:
     ELSE
         PRINT "Not positive"
     END IF
-```
+```julia
 
 This becomes structured Julia code following the language syntax.
 

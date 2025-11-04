@@ -1,6 +1,6 @@
 # Level 4: User Input
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -166,7 +166,7 @@ func main() {
         fmt.Println("That's not a positive number!")
     }
 }
-```
+```go
 
 ---
 
@@ -176,15 +176,15 @@ func main() {
    ```bash
    mkdir input-example && cd input-example
    go mod init input
-   ```
+   ```go
 2. **Copy the code into `input.go`**
 3. **Run your program**:
    ```bash
    go run input.go
-   ```
+   ```bash
 
 **Expected interaction:**
-```
+```go
 === Interactive Greeting Program ===
 What's your name? [User types their name and presses Enter]
 Hello, [User's name] ! Nice to meet you!
@@ -199,7 +199,7 @@ What year were you born? [User enters a year]
 [Age calculation is performed and shown]
 
 [Additional prompts will ask for input and respond accordingly...]
-```
+```go
 
 ---
 
@@ -255,21 +255,21 @@ What year were you born? [User enters a year]
 
 ```go
 reader := bufio.NewReader(os.Stdin)
-```
+```go
 - **`bufio.NewReader()`** = Creates a buffered reader for efficient input
 - **`os.Stdin`** = Standard input (keyboard)
 - **Buffered reader** = More efficient than direct input reading
 
 ```go
 name, _ := reader.ReadString('\n')
-```
+```go
 - **`reader.ReadString()`** = Reads input until specified delimiter
 - **`'\n'`** = Newline character (Enter key creates this)
 - **`_`** = Blank identifier to ignore error value (not ideal for production)
 
 ```go
 name = strings.TrimSpace(name)
-```
+```go
 - **`strings.TrimSpace()`** = Removes leading/trailing whitespace
 - **Important** because input includes the newline character
 - **Alternative**: `strings.TrimSuffix(name, "\n")`
@@ -289,7 +289,7 @@ number, err := strconv.Atoi(strings.TrimSpace(input))
 // Reading float
 input, _ := reader.ReadString('\n')
 number, err := strconv.ParseFloat(strings.TrimSpace(input), 64)
-```
+```go
 
 ### Error Handling
 
@@ -308,7 +308,7 @@ if err != nil {
     return
 }
 // Now you can safely use 'number'
-```
+```go
 
 ### String Manipulation
 
@@ -328,7 +328,7 @@ parts := strings.Split(input, " ")
 
 // Check if string contains substring
 if strings.Contains(input, "hello") { ... }
-```
+```go
 
 ### Converting Strings to Numbers
 
@@ -346,7 +346,7 @@ floatVal, err := strconv.ParseFloat("123.45", 64)  // float64
 
 // String to boolean
 boolVal, err := strconv.ParseBool("true")   // bool
-```
+```go
 
 ### Alternative Input Methods
 
@@ -356,7 +356,7 @@ var name string
 var age int
 fmt.Print("Enter name and age: ")
 fmt.Scanf("%s %d", &name, &age)  // Reads formatted input
-```
+```go
 
 **Note**: `fmt.Scanf` can be trickier to use reliably, so the bufio approach is often preferred.
 
@@ -365,7 +365,7 @@ fmt.Scanf("%s %d", &name, &age)  // Reads formatted input
 ```go
 fmt.Print("Press any key to continue: ")
 char, _, _ := reader.ReadRune()  // Read a single Unicode character
-```
+```go
 
 ### Common Errors & Solutions
 
@@ -400,7 +400,7 @@ if number < 0 || number > 100 {
     fmt.Println("Number must be between 0 and 100!")
     return
 }
-```
+```go
 
 **Handle errors properly:**
 ```go
@@ -411,7 +411,7 @@ if err != nil {
     fmt.Println("Invalid input:", err)
     return  // or continue with default value
 }
-```
+```go
 
 ### Security Considerations
 
@@ -506,10 +506,77 @@ func main() {
         fmt.Println("You're spending more than you earn. Consider reducing expenses.")
     }
 }
-```
+```go
 
 ---
 
  **Excellent work! You now know how to make interactive programs that respond to user input!** 
 
 *Ready for the next challenge? Let's make programs that make decisions!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard go conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

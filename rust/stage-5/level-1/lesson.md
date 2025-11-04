@@ -1,6 +1,6 @@
 # Level 1: Your First Independent Project
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 5: Capstone - Full Integration Project
@@ -221,7 +221,7 @@ USER INTERFACE:
 - [What menus or prompts?]
 
 ESTIMATED EFFORT: [X hours of work]
-```
+```rust
 
 ---
 
@@ -243,7 +243,7 @@ Plan the logic before implementing.
 ```bash
 cargo new my_capstone
 cd my_capstone
-```
+```rust
 
 **Step 6: Start Coding**
 Implement one feature at a time, testing as you go.
@@ -430,7 +430,7 @@ Practice the code and experiment with variations!
  by [approach]
  for [users]
  so that [outcome]."
- ```
+ ```rust
 
 2. **Define Core Features** (3-5 minimum)
 ```rust
@@ -444,7 +444,7 @@ Practice the code and experiment with variations!
  
  NICE TO HAVE (bonus):
  - Feature E
- ```
+ ```rust
 
 3. **Design Data Structures**
  ```rust
@@ -460,7 +460,7 @@ Practice the code and experiment with variations!
  pub name: String,
  // ... other fields
  }
- ```
+ ```rust
 
 4. **Create Architecture Diagram**
 ```rust
@@ -473,7 +473,7 @@ Practice the code and experiment with variations!
  DATA STORAGE (structs)
  ↓
  FILE I/O (persistence)
- ```
+ ```rust
 
 5. **Write Pseudocode for Main Functions**
 ```rust
@@ -489,7 +489,7 @@ Practice the code and experiment with variations!
  1. Filter collection by criteria
  2. Return matching records
  3. Handle no matches case
- ```
+ ```rust
 
 ### Phase 3: Data Structure Design
 
@@ -559,7 +559,7 @@ impl EntityManager {
  .collect()
  }
 }
-```
+```rust
 
 ### Phase 4: Implementation Strategy
 
@@ -602,7 +602,7 @@ Result: PASS / FAIL
 
 > **NEEDS_AUTHOR:** Removed placeholder - verify completeness
 
-```
+```rust
 
 **Unit Test Example:**
 
@@ -625,7 +625,7 @@ mod tests {
  assert_eq!(results.len(), 0);
  }
 }
-```
+```rust
 
 ### Phase 6: Code Quality Checklist
 
@@ -662,7 +662,7 @@ mod tests {
 3. **Building Instructions**
  ```bash
  cargo build --release
- ```
+ ```rust
 
 4. **Usage Guide**
  - How to run: `cargo run`
@@ -745,7 +745,7 @@ FEATURES:
  - Generate spending reports
  - Export to CSV for analysis
 COMPLEXITY: Moderate (5-7 hours)
-```
+```rust
 
 ### Example 2: Quiz Application
 ```rust
@@ -756,7 +756,7 @@ FEATURES:
  - Provide instant feedback
  - Show statistics and progress
 COMPLEXITY: Moderate (6-8 hours)
-```
+```rust
 
 ### Example 3: Data Processor
 ```rust
@@ -768,7 +768,7 @@ FEATURES:
  - Generate reports
  - Export results
 COMPLEXITY: Moderate to Advanced (8-12 hours)
-```
+```rust
 
 ---
 
@@ -778,3 +778,73 @@ You've completed your programming education journey. Now create something amazin
 
 *Your capstone project is your proof to the world that you can program.* 
 
+
+
+### Your Task
+
+1. Review the code structure
+2. Implement the required functionality
+3. Test your solution
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```rs
+fn main() {
+    println!("Hello, World!");
+}
+
+```rs
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard rust conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

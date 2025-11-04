@@ -1,6 +1,6 @@
 # Level 3: Mathematical Problems
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window**. The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window**. The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 3: Problem to Pseudocode
 
@@ -61,9 +61,9 @@ Mathematical Problems - Design an algorithm to solve this problem, then implemen
    ```
 
 **Expected output:**
-```
+```java
 Hello, World!
-```
+```java
 
 ### How to Approach This
 
@@ -174,7 +174,7 @@ BEGIN
         - Step 3
     4. Display results
 END
-```
+```java
 
 Then translate this directly to Java code.
 

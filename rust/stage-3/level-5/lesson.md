@@ -1,6 +1,6 @@
 # Level 5: Decision-Based Problems
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 3: Problem to Pseudocode
@@ -25,22 +25,22 @@ Decision-based problems require complex conditional logic and multiple decision 
 **Read the problem below, then write pseudocode to solve it. Create a file called `decision_based_problems.md` with your pseudocode solution.**
 
 
-### How to Compile and Run
+### How to Run
 
 1. **Compile the code**:
    ```bash
    rustc hello.rs -o hello hello.rs
-   ```
+   ```rust
 
 2. **Run your program**:
    ```bash
    ./hello hello
-   ```
+   ```rust
 
 **Expected output:**
-```
+```rust
 Hello, World!
-```
+```rust
 
 ### Problem: Travel Recommendation System
 
@@ -126,7 +126,7 @@ Based on your preferences (Medium budget, Warm climate, Relaxation, Week-long tr
    - Cost estimate: $1800-2500 total
    - Duration: 7-14 days recommended
    - Activities: Beach relaxation, optional light adventure
-```
+```rust
 
 ---
 
@@ -135,11 +135,11 @@ Based on your preferences (Medium budget, Warm climate, Relaxation, Week-long tr
 1. **Navigate to your working directory**:
    ```bash
    cd /path/to/your/folder
-   ```
+   ```rust
 2. **Create your pseudocode file**:
    ```bash
    touch decision_based_problems.md
-   ```
+   ```rust
 3. **Map decision combinations** - Consider all possible preference combinations
 4. **Design recommendation logic** - Match destinations to criteria
 5. **Plan output formatting** - Clear, informative recommendations
@@ -406,7 +406,7 @@ FUNCTION GET_COST_ESTIMATE(budget_level, destination)
     ELSE IF budget_level == 2 THEN RETURN "1500-2500"
     ELSE RETURN "3000-8000"
 END FUNCTION
-```
+```rust
 
 ### Analysis Breakdown
 
@@ -449,3 +449,59 @@ END FUNCTION
  **Great! You designed a complex travel recommendation system!** 
 
 *Next: Repetitive Problems!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```rs
+fn main() {
+    println!("Hello, World!");
+}
+
+```rs
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard rust conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

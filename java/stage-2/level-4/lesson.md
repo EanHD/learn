@@ -1,6 +1,6 @@
 # Level 4: Input/Output Pseudocode
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`Main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`Main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -42,9 +42,9 @@ User interaction is the heart of useful programs! Today you'll master the art of
    ```
 
 **Expected output:**
-```
+```java
 Hello, World!
-```
+```java
 
 ## Algorithm 1: Age Verification System
 
@@ -57,19 +57,19 @@ Algorithm: Verify User Age
    a. Display "Please enter your age (0-120): "
    b. Get ageInput from user
    c. If ageInput is not a valid number:
-      i. Display "❌ Invalid input! Please enter a number."
+      i. Display " Invalid input! Please enter a number."
    d. Else if ageInput < 0:
-      i. Display "❌ Age cannot be negative!"
+      i. Display " Age cannot be negative!"
    e. Else if ageInput > 120:
-      i. Display "❌ Age cannot be over 120!"
+      i. Display " Age cannot be over 120!"
    f. Else:
       i. Set isValidAge to true
-4. Display "✓ Age verified: " + ageInput + " years old"
+4. Display " Age verified: " + ageInput + " years old"
 5. If ageInput >= 18:
-   a. Display "✓ You are an adult!"
+   a. Display " You are an adult!"
 6. Else:
-   a. Display "✓ You are a minor."
-```
+   a. Display " You are a minor."
+```java
 
 **Input/Output Focus:**
 - Input validation (numeric, range checking)
@@ -100,28 +100,28 @@ Algorithm: Restaurant Ordering System
    c. Get choice from user
    d. If choice is 1:
       i. Add 3.50 to totalCost
-      ii. Display "✓ Coffee added to your order!"
+      ii. Display " Coffee added to your order!"
    e. Else if choice is 2:
       i. Add 8.75 to totalCost
-      ii. Display "✓ Sandwich added to your order!"
+      ii. Display " Sandwich added to your order!"
    f. Else if choice is 3:
       i. Add 6.25 to totalCost
-      ii. Display "✓ Salad added to your order!"
+      ii. Display " Salad added to your order!"
    g. Else if choice is 4:
       i. Add 4.00 to totalCost
-      ii. Display "✓ Dessert added to your order!"
+      ii. Display " Dessert added to your order!"
    h. Else if choice is 5:
       i. Set orderComplete to true
    i. Else:
-      i. Display "❌ Invalid choice! Please select 1-5."
+      i. Display " Invalid choice! Please select 1-5."
 5. Display "=== Order Summary ==="
 6. Display "Total cost: $" + totalCost
 7. Calculate tax = totalCost × 0.08
 8. Calculate finalTotal = totalCost + tax
 9. Display "Tax (8%): $" + tax
 10. Display "Final total: $" + finalTotal
-11. Display "Thank you for your order! 🙏"
-```
+11. Display "Thank you for your order! "
+```java
 
 **Input/Output Focus:**
 - Clear menu formatting
@@ -158,11 +158,11 @@ Algorithm: Student Grade Management
          iii. If newGrade is valid (0-100):
             i. Store newGrade in grades array
             ii. Add 1 to gradeCount
-            iii. Display "✓ Grade added: " + newGrade
+            iii. Display " Grade added: " + newGrade
          iv. Else:
-            i. Display "❌ Invalid grade! Must be 0-100."
+            i. Display " Invalid grade! Must be 0-100."
       ii. Else:
-         i. Display "⚠ Grade book is full!"
+         i. Display " Grade book is full!"
    e. Else if choice is 2:
       i. If gradeCount > 0:
          i. Display "=== All Grades ==="
@@ -176,7 +176,7 @@ Algorithm: Student Grade Management
          ii. For each grade in grades array:
             i. Add grade to sum
          iii. Calculate average = sum ÷ gradeCount
-         iv. Display "📊 Average: " + average + "%"
+         iv. Display " Average: " + average + "%"
       ii. Else:
          i. Display "ℹ No grades to average."
    g. Else if choice is 4:
@@ -193,9 +193,9 @@ Algorithm: Student Grade Management
    h. Else if choice is 5:
       i. Set isRunning to false
    i. Else:
-      i. Display "❌ Invalid choice! Please select 1-5."
-6. Display "Thank you for using Grade Manager! 👋"
-```
+      i. Display " Invalid choice! Please select 1-5."
+6. Display "Thank you for using Grade Manager! "
+```java
 
 **Input/Output Focus:**
 - Array data storage
@@ -264,9 +264,9 @@ Algorithm: Unit Conversion Calculator
    g. Else if conversionType is 4:
       i. Set isRunning to false
    h. Else:
-      i. Display "❌ Invalid conversion type!"
-4. Display "Thank you for using Unit Converter! 👋"
-```
+      i. Display " Invalid conversion type!"
+4. Display "Thank you for using Unit Converter! "
+```java
 
 **Input/Output Focus:**
 - Nested menu systems
@@ -302,9 +302,9 @@ Algorithm: Customer Satisfaction Survey
    k. Else if rating is valid (1-5):
       i. Store rating in responses array
       ii. Add 1 to responseCount
-      iii. Display "✓ Thank you for your feedback!"
+      iii. Display " Thank you for your feedback!"
    l. Else:
-      i. Display "❌ Invalid rating! Please enter 1-5 or 0 to finish."
+      i. Display " Invalid rating! Please enter 1-5 or 0 to finish."
 6. If responseCount > 0:
    a. Display "=== Survey Results ==="
    b. Display "Total responses: " + responseCount
@@ -318,8 +318,8 @@ Algorithm: Customer Satisfaction Survey
    g. Display "Average satisfaction: " + average + "/5.0"
 7. Else:
    a. Display "No survey responses collected."
-8. Display "Thank you for participating! 🙏"
-```
+8. Display "Thank you for participating! "
+```java
 
 **Input/Output Focus:**
 - Clear survey instructions
@@ -356,11 +356,11 @@ Algorithm: Library Book Management
          iii. If bookTitle is not empty:
             i. Store bookTitle in books array
             ii. Add 1 to bookCount
-            iii. Display "✓ Book added: '" + bookTitle + "'"
+            iii. Display " Book added: '" + bookTitle + "'"
          iv. Else:
-            i. Display "❌ Book title cannot be empty!"
+            i. Display " Book title cannot be empty!"
       ii. Else:
-         i. Display "⚠ Library is full!"
+         i. Display " Library is full!"
    e. Else if choice is 2:
       i. If bookCount > 0:
          i. Display "=== Library Collection ==="
@@ -375,7 +375,7 @@ Algorithm: Library Book Management
          iii. Initialize foundCount to 0
          iv. For each book in books array:
             i. If book contains searchTerm:
-               i. Display "📖 " + book
+               i. Display " " + book
                ii. Add 1 to foundCount
          v. If foundCount is 0:
             i. Display "ℹ No books found matching '" + searchTerm + "'"
@@ -389,17 +389,17 @@ Algorithm: Library Book Management
             i. Display "Removing: '" + books[bookNumber-1] + "'"
             ii. Shift remaining books left in array
             iii. Subtract 1 from bookCount
-            iv. Display "✓ Book removed successfully!"
+            iv. Display " Book removed successfully!"
          iv. Else:
-            i. Display "❌ Invalid book number!"
+            i. Display " Invalid book number!"
       ii. Else:
          i. Display "ℹ No books to remove."
    h. Else if choice is 5:
       i. Set isRunning to false
    i. Else:
-      i. Display "❌ Invalid choice!"
-6. Display "Thank you for using Library Book Tracker! 👋"
-```
+      i. Display " Invalid choice!"
+6. Display "Thank you for using Library Book Tracker! "
+```java
 
 **Input/Output Focus:**
 - String array management
@@ -421,7 +421,7 @@ if (input >= minValue && input <= maxValue) {
 } else {
     // Invalid input - show error
 }
-```
+```java
 
 **String Input Validation:**
 ```java
@@ -431,7 +431,7 @@ if (!inputString.isEmpty()) {
 } else {
     // Empty input - show error
 }
-```
+```java
 
 **Scanner Exception Handling:**
 ```java
@@ -444,7 +444,7 @@ try {
     scanner.nextLine(); // Clear invalid input
     System.out.println("Invalid input! Please enter a number.");
 }
-```
+```java
 
 ---
 
@@ -488,13 +488,13 @@ try {
 5. Exit          - Quit the program
 
 Enter choice (1-5):
-```
+```java
 
 ### Error Message Best Practices
 - **Be specific**: "Grade must be between 0-100" not "Invalid input"
 - **Be helpful**: Suggest correct input format
 - **Be consistent**: Use same error style throughout
-- **Use emojis**: ✓ for success, ❌ for errors, ⚠ for warnings
+- **Use emojis**:  for success,  for errors,  for warnings
 
 ### Input Prompt Guidelines
 - **Be descriptive**: "Enter your age in years:"
@@ -531,30 +531,30 @@ public class AgeVerification {
                 ageInput = scanner.nextInt();
                 
                 if (ageInput < 0) {
-                    System.out.println("❌ Age cannot be negative!");
+                    System.out.println(" Age cannot be negative!");
                 } else if (ageInput > 120) {
-                    System.out.println("❌ Age cannot be over 120!");
+                    System.out.println(" Age cannot be over 120!");
                 } else {
                     isValidAge = true;
                 }
             } catch (InputMismatchException e) {
                 scanner.nextLine(); // Clear invalid input
-                System.out.println("❌ Invalid input! Please enter a number.");
+                System.out.println(" Invalid input! Please enter a number.");
             }
         }
         
-        System.out.println("✓ Age verified: " + ageInput + " years old");
+        System.out.println(" Age verified: " + ageInput + " years old");
         
         if (ageInput >= 18) {
-            System.out.println("✓ You are an adult!");
+            System.out.println(" You are an adult!");
         } else {
-            System.out.println("✓ You are a minor.");
+            System.out.println(" You are a minor.");
         }
         
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Input validation with try-catch for InputMismatchException
@@ -595,25 +595,25 @@ public class RestaurantMenu {
             switch (choice) {
                 case 1:
                     totalCost += 3.50;
-                    System.out.println("✓ Coffee added to your order!");
+                    System.out.println(" Coffee added to your order!");
                     break;
                 case 2:
                     totalCost += 8.75;
-                    System.out.println("✓ Sandwich added to your order!");
+                    System.out.println(" Sandwich added to your order!");
                     break;
                 case 3:
                     totalCost += 6.25;
-                    System.out.println("✓ Salad added to your order!");
+                    System.out.println(" Salad added to your order!");
                     break;
                 case 4:
                     totalCost += 4.00;
-                    System.out.println("✓ Dessert added to your order!");
+                    System.out.println(" Dessert added to your order!");
                     break;
                 case 5:
                     orderComplete = true;
                     break;
                 default:
-                    System.out.println("❌ Invalid choice! Please select 1-5.");
+                    System.out.println(" Invalid choice! Please select 1-5.");
                     break;
             }
         }
@@ -626,12 +626,12 @@ public class RestaurantMenu {
         
         System.out.printf("Tax (8%%): $%.2f\n", tax);
         System.out.printf("Final total: $%.2f\n", finalTotal);
-        System.out.println("Thank you for your order! 🙏");
+        System.out.println("Thank you for your order! ");
         
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Switch statement for menu handling
@@ -685,12 +685,12 @@ public class GradeManager {
                         if (newGrade >= 0 && newGrade <= 100) {
                             grades[gradeCount] = newGrade;
                             gradeCount++;
-                            System.out.printf("✓ Grade added: %.1f\n", newGrade);
+                            System.out.printf(" Grade added: %.1f\n", newGrade);
                         } else {
-                            System.out.println("❌ Invalid grade! Must be 0-100.");
+                            System.out.println(" Invalid grade! Must be 0-100.");
                         }
                     } else {
-                        System.out.println("⚠ Grade book is full!");
+                        System.out.println(" Grade book is full!");
                     }
                     break;
                 }
@@ -711,7 +711,7 @@ public class GradeManager {
                             sum += grades[i];
                         }
                         double average = sum / gradeCount;
-                        System.out.printf("📊 Average: %.1f%%\n", average);
+                        System.out.printf(" Average: %.1f%%\n", average);
                     } else {
                         System.out.println("ℹ No grades to average.");
                     }
@@ -736,16 +736,16 @@ public class GradeManager {
                     isRunning = false;
                     break;
                 default:
-                    System.out.println("❌ Invalid choice! Please select 1-5.");
+                    System.out.println(" Invalid choice! Please select 1-5.");
                     break;
             }
         }
         
-        System.out.println("Thank you for using Grade Manager! 👋");
+        System.out.println("Thank you for using Grade Manager! ");
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Array storage for multiple grades
@@ -838,15 +838,15 @@ public class UnitConverter {
             } else if (conversionType == 4) {
                 isRunning = false;
             } else {
-                System.out.println("❌ Invalid conversion type!");
+                System.out.println(" Invalid conversion type!");
             }
         }
         
-        System.out.println("Thank you for using Unit Converter! 👋");
+        System.out.println("Thank you for using Unit Converter! ");
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Nested menu system (two levels of choices)
@@ -898,9 +898,9 @@ public class SurveyCollector {
             } else if (rating >= 1 && rating <= 5) {
                 responses[responseCount] = rating;
                 responseCount++;
-                System.out.println("✓ Thank you for your feedback!");
+                System.out.println(" Thank you for your feedback!");
             } else {
-                System.out.println("❌ Invalid rating! Please enter 1-5 or 0 to finish.");
+                System.out.println(" Invalid rating! Please enter 1-5 or 0 to finish.");
             }
         }
         
@@ -931,11 +931,11 @@ public class SurveyCollector {
             System.out.println("No survey responses collected.");
         }
         
-        System.out.println("Thank you for participating! 🙏");
+        System.out.println("Thank you for participating! ");
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Array storage for survey responses
@@ -991,12 +991,12 @@ public class LibraryTracker {
                         if (!bookTitle.isEmpty()) {
                             books[bookCount] = bookTitle;
                             bookCount++;
-                            System.out.println("✓ Book added: '" + bookTitle + "'");
+                            System.out.println(" Book added: '" + bookTitle + "'");
                         } else {
-                            System.out.println("❌ Book title cannot be empty!");
+                            System.out.println(" Book title cannot be empty!");
                         }
                     } else {
-                        System.out.println("⚠ Library is full!");
+                        System.out.println(" Library is full!");
                     }
                     break;
                 }
@@ -1018,7 +1018,7 @@ public class LibraryTracker {
                         int foundCount = 0;
                         for (int i = 0; i < bookCount; i++) {
                             if (books[i].toLowerCase().contains(searchTerm.toLowerCase())) {
-                                System.out.println("📖 " + books[i]);
+                                System.out.println(" " + books[i]);
                                 foundCount++;
                             }
                         }
@@ -1046,9 +1046,9 @@ public class LibraryTracker {
                             }
                             
                             bookCount--;
-                            System.out.println("✓ Book removed successfully!");
+                            System.out.println(" Book removed successfully!");
                         } else {
-                            System.out.println("❌ Invalid book number!");
+                            System.out.println(" Invalid book number!");
                         }
                     } else {
                         System.out.println("ℹ No books to remove.");
@@ -1059,16 +1059,16 @@ public class LibraryTracker {
                     isRunning = false;
                     break;
                 default:
-                    System.out.println("❌ Invalid choice!");
+                    System.out.println(" Invalid choice!");
                     break;
             }
         }
         
-        System.out.println("Thank you for using Library Book Tracker! 👋");
+        System.out.println("Thank you for using Library Book Tracker! ");
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - String array management
@@ -1103,12 +1103,12 @@ public class LibraryTracker {
 // After nextInt(), consume leftover newline
 scanner.nextInt();
 scanner.nextLine(); // Clears the '\n'
-```
+```java
 
 **Reading Full Lines Safely:**
 ```java
 String line = scanner.nextLine().trim(); // Remove leading/trailing whitespace
-```
+```java
 
 **Input Validation Patterns:**
 ```java
@@ -1130,7 +1130,7 @@ public static int getValidNumber(Scanner scanner, int min, int max) {
         }
     }
 }
-```
+```java
 
 **Scanner vs BufferedReader:**
 - Scanner: Easier for mixed types (nextInt, nextDouble, nextLine)
@@ -1138,6 +1138,6 @@ public static int getValidNumber(Scanner scanner, int min, int max) {
 
 ---
 
-✅ **Excellent! You've mastered user interaction and I/O operations!** 
+ **Excellent! You've mastered user interaction and I/O operations!** 
 
 *Programs that talk to users are much more useful. Next: Decision-making in pseudocode! ��*

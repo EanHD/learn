@@ -1,6 +1,6 @@
 # Level 3: Basic Math Operations
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -48,27 +48,27 @@ fn main() {
     let result = 2 + 3 * 4;  // Multiplication before addition
     println!("2 + 3 * 4 = {}", result);
 }
-```
+```rust
 
 ---
 
-### How to Compile and Run
+### How to Run
 
 1. **Navigate to your working directory**:
    ```bash
    cd /path/to/your/folder
-   ```
+   ```rust
 2. **Compile the code**:
    ```bash
    rustc math.rs -o math
-   ```
+   ```rust
 3. **Run your program**:
    ```bash
    ./math
-   ```
+   ```rust
 
 **Expected output:**
-```
+```rust
 a = 15
 b = 4
 a + b = 19
@@ -78,7 +78,7 @@ a / b = 3
 a % b = 3
 x / y = 3.75
 2 + 3 * 4 = 14
-```
+```rust
 
 ---
 
@@ -131,18 +131,18 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 ```rust
     let a = 15;
     let b = 4;
-```
+```rust
 - Declare integer variables for calculations
 
 ```rust
     println!("a + b = {}", a + b);
-```
+```rust
 - **`+`** = Addition operator
 - Combines values of `a` and `b`
 
 ```rust
     println!("a / b = {}", a / b);
-```
+```rust
 - **Integer division**: `15 / 4 = 3` (no decimal)
 - Rust truncates toward zero
 
@@ -150,14 +150,14 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
     let x = 15.0;
     let y = 4.0;
     println!("x / y = {}", x / y);
-```
+```rust
 - **Float division**: Keeps decimal precision
 - `15.0 / 4.0 = 3.75`
 
 ```rust
     let result = 2 + 3 * 4;
     println!("2 + 3 * 4 = {}", result);
-```
+```rust
 - **Operator precedence**: `*` before `+`
 - `3 * 4 = 12`, then `2 + 12 = 14`
 
@@ -190,3 +190,59 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
  **Excellent! You can now do math in Rust!** 
 
 *Next: User Input!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```rs
+fn main() {
+    println!("Hello, World!");
+}
+
+```rs
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard rust conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

@@ -1,6 +1,6 @@
 # Level 1: Simple Problem Analysis
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 3: Problem to Pseudocode
@@ -21,38 +21,38 @@
 
 ### Learning Goals
 
-- Analyze and understand problem requirements
-- Break complex problems into manageable steps
-- Design algorithms using pseudocode
-- Think logically about program flow
-- Create your own solutions from scratch
+- [ ] Analyze and understand problem requirements
+- [ ] Break complex problems into manageable steps
+- [ ] Design algorithms using pseudocode
+- [ ] Think logically about program flow
+- [ ] Create your own solutions from scratch
 
 ---
 
 ### Problem-Solving Framework
 
 **STEP 1: Understand the Problem**
-- What is the input?
-- What is the expected output?
-- What are the constraints?
-- What are the edge cases?
+- [ ] What is the input?
+- [ ] What is the expected output?
+- [ ] What are the constraints?
+- [ ] What are the edge cases?
 
 **STEP 2: Plan the Solution**
-- What are the main steps?
-- What data do I need to track?
-- What decisions need to be made?
-- What calculations are required?
+- [ ] What are the main steps?
+- [ ] What data do I need to track?
+- [ ] What decisions need to be made?
+- [ ] What calculations are required?
 
 **STEP 3: Write Pseudocode**
-- Use clear, simple language
-- Break down into small steps
-- Handle all cases
-- Test your logic mentally
+- [ ] Use clear, simple language
+- [ ] Break down into small steps
+- [ ] Handle all cases
+- [ ] Test your logic mentally
 
 **STEP 4: Implement and Test**
-- Translate pseudocode to C
-- Test with different inputs
-- Debug and refine
+- [ ] Translate pseudocode to C
+- [ ] Test with different inputs
+- [ ] Debug and refine
 
 ---
 
@@ -71,19 +71,19 @@
 
 **Problem Description:**
 Create a program that asks the user for a temperature in Fahrenheit and classifies it as:
-- "Freezing" if below 32°F
-- "Cold" if 32°F to 50°F
-- "Comfortable" if 51°F to 78°F
-- "Warm" if 79°F to 90°F
-- "Hot" if above 90°F
+- [ ] "Freezing" if below 32°F
+- [ ] "Cold" if 32°F to 50°F
+- [ ] "Comfortable" if 51°F to 78°F
+- [ ] "Warm" if 79°F to 90°F
+- [ ] "Hot" if above 90°F
 
 The program should display both the temperature and its classification.
 
 **Example:**
-```
+```cpp
 Enter temperature in Fahrenheit: 75
 Temperature: 75°F - Comfortable
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for this problem
@@ -96,20 +96,20 @@ Temperature: 75°F - Comfortable
 
 **Problem Description:**
 Create a program that simulates a vending machine selling snacks for $1.50 each. The program should:
-- Ask the user how many snacks they want
-- Calculate the total cost
-- Ask for payment amount
-- Calculate and display change (if any)
-- Handle cases where payment is insufficient
+- [ ] Ask the user how many snacks they want
+- [ ] Calculate the total cost
+- [ ] Ask for payment amount
+- [ ] Calculate and display change (if any)
+- [ ] Handle cases where payment is insufficient
 
 **Example:**
-```
+```cpp
 How many snacks would you like? 3
 Total cost: $4.50
 Enter payment amount: $5.00
 Change: $0.50
 Thank you for your purchase!
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for this vending machine
@@ -122,20 +122,20 @@ Thank you for your purchase!
 
 **Problem Description:**
 Create a program that asks for a person's age and determines their life stage category:
-- "Child" if under 13
-- "Teenager" if 13-19
-- "Young Adult" if 20-35
-- "Adult" if 36-64
-- "Senior" if 65 or older
+- [ ] "Child" if under 13
+- [ ] "Teenager" if 13-19
+- [ ] "Young Adult" if 20-35
+- [ ] "Adult" if 36-64
+- [ ] "Senior" if 65 or older
 
 Also display how many years until the next category (or "Final stage" if Senior).
 
 **Example:**
-```
+```cpp
 Enter age: 25
 Category: Young Adult
 Years until next category: 11
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for age categorization
@@ -148,16 +148,16 @@ Years until next category: 11
 
 **Problem Description:**
 Create a program that calculates movie ticket prices based on:
-- Base price: $12.00
-- Child (under 12): 50% discount
-- Senior (65+): 30% discount
-- Matinee (before 5 PM): additional 20% discount
-- Group (3+ tickets): additional 10% discount
+- [ ] Base price: $12.00
+- [ ] Child (under 12): 50% discount
+- [ ] Senior (65+): 30% discount
+- [ ] Matinee (before 5 PM): additional 20% discount
+- [ ] Group (3+ tickets): additional 10% discount
 
 The program should ask for age, show time (24-hour format), and number of tickets.
 
 **Example:**
-```
+```cpp
 Enter age: 70
 Enter show time (0-23): 14
 Enter number of tickets: 2
@@ -167,7 +167,7 @@ Senior discount: 30% off
 Matinee discount: 20% off
 Final price per ticket: $6.72
 Total for 2 tickets: $13.44
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for ticket price calculation
@@ -180,21 +180,21 @@ Total for 2 tickets: $13.44
 
 **Problem Description:**
 Create a program that asks the user for three numbers and:
-- Finds and displays the largest number
-- Finds and displays the smallest number
-- Calculates and displays the average
-- Determines if all three numbers are equal
-- Determines if the numbers form an increasing sequence
+- [ ] Finds and displays the largest number
+- [ ] Finds and displays the smallest number
+- [ ] Calculates and displays the average
+- [ ] Determines if all three numbers are equal
+- [ ] Determines if the numbers form an increasing sequence
 
 **Example:**
-```
+```cpp
 Enter three numbers: 5 8 3
 Largest: 8
 Smallest: 3
 Average: 5.33
 All equal: No
 Increasing sequence: No
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for number analysis
@@ -207,20 +207,20 @@ Increasing sequence: No
 
 **Problem Description:**
 Create a program that converts a numerical grade (0-100) to a letter grade:
-- 90-100: A
-- 80-89: B
-- 70-79: C
-- 60-69: D
-- 0-59: F
+- [ ] 90-100: A
+- [ ] 80-89: B
+- [ ] 70-79: C
+- [ ] 60-69: D
+- [ ] 0-59: F
 
 Also display a motivational message based on the grade.
 
 **Example:**
-```
+```cpp
 Enter numerical grade (0-100): 87
 Letter grade: B
 Message: Good job! Keep up the excellent work!
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for grade conversion
@@ -232,17 +232,17 @@ Message: Good job! Keep up the excellent work!
 ### Pseudocode Writing Guidelines
 
 **Good Pseudocode Structure:**
-```
+```cpp
 Algorithm: Problem Name
 1. Clear step-by-step instructions
 2. Handle all input/output
 3. Include decision points
 4. Handle edge cases
 5. End with clear output
-```
+```cpp
 
 **Example:**
-```
+```cpp
 Algorithm: Temperature Classifier
 1. Display "Enter temperature in Fahrenheit: "
 2. Get temperature from user
@@ -256,7 +256,7 @@ Algorithm: Temperature Classifier
    a. Display temperature + "°F - Warm"
 7. Else:
    a. Display temperature + "°F - Hot"
-```
+```cpp
 
 ---
 
@@ -290,25 +290,25 @@ Algorithm: Temperature Classifier
 ## Problem Analysis Framework
 
 ### Step 1: Read Carefully
-- **What?** What does the program need to do?
-- **Who?** Who will use it? What do they need?
-- **How?** What information is needed? What output is expected?
+- [ ] **What?** What does the program need to do?
+- [ ] **Who?** Who will use it? What do they need?
+- [ ] **How?** What information is needed? What output is expected?
 
 ### Step 2: Identify Components
-- **Inputs**: What data does the program need?
-- **Processing**: What calculations or decisions are needed?
-- **Outputs**: What should be displayed to the user?
+- [ ] **Inputs**: What data does the program need?
+- [ ] **Processing**: What calculations or decisions are needed?
+- [ ] **Outputs**: What should be displayed to the user?
 
 ### Step 3: Break Down the Problem
-- **Main Steps**: What are the high-level steps?
-- **Sub-steps**: What are the detailed actions?
-- **Decisions**: What choices need to be made?
-- **Loops**: Are there repetitive actions?
+- [ ] **Main Steps**: What are the high-level steps?
+- [ ] **Sub-steps**: What are the detailed actions?
+- [ ] **Decisions**: What choices need to be made?
+- [ ] **Loops**: Are there repetitive actions?
 
 ### Step 4: Consider Edge Cases
-- **Boundaries**: What happens at the limits?
-- **Invalid Input**: What if user enters wrong data?
-- **Special Cases**: Any unusual scenarios?
+- [ ] **Boundaries**: What happens at the limits?
+- [ ] **Invalid Input**: What if user enters wrong data?
+- [ ] **Special Cases**: Any unusual scenarios?
 
 ---
 
@@ -321,13 +321,13 @@ Algorithm: Temperature Classifier
 ### Problem 1: Temperature Classifier
 
 **Analysis:**
-- Input: Temperature in Fahrenheit (float)
-- Processing: Compare against temperature ranges
-- Output: Temperature + classification
-- Edge cases: Negative temperatures, very high temperatures
+- [ ] Input: Temperature in Fahrenheit (float)
+- [ ] Processing: Compare against temperature ranges
+- [ ] Output: Temperature + classification
+- [ ] Edge cases: Negative temperatures, very high temperatures
 
 **Sample Pseudocode:**
-```
+```cpp
 Algorithm: Temperature Classifier
 1. Display "Enter temperature in Fahrenheit: "
 2. Get temperature from user
@@ -341,27 +341,27 @@ Algorithm: Temperature Classifier
    a. Display temperature + "°F - Warm"
 7. Else:
    a. Display temperature + "°F - Hot"
-```
+```cpp
 
 **Test Cases:**
-- 25°F → Freezing
-- 45°F → Cold
-- 65°F → Comfortable
-- 85°F → Warm
-- 95°F → Hot
+- [ ] 25°F → Freezing
+- [ ] 45°F → Cold
+- [ ] 65°F → Comfortable
+- [ ] 85°F → Warm
+- [ ] 95°F → Hot
 
 ---
 
 ### Problem 2: Simple Vending Machine
 
 **Analysis:**
-- Inputs: Number of snacks, payment amount
-- Processing: Cost calculation, change calculation
-- Validation: Sufficient payment check
-- Constants: Snack price = $1.50
+- [ ] Inputs: Number of snacks, payment amount
+- [ ] Processing: Cost calculation, change calculation
+- [ ] Validation: Sufficient payment check
+- [ ] Constants: Snack price = $1.50
 
 **Sample Pseudocode:**
-```
+```cpp
 Algorithm: Vending Machine
 1. Set snack_price to 1.50
 2. Display "How many snacks would you like? "
@@ -377,34 +377,34 @@ Algorithm: Vending Machine
 9. Else:
    a. Calculate needed = total_cost - payment
    b. Display "Insufficient payment. You need $" + needed + " more."
-```
+```cpp
 
 ---
 
 ### Problem 3: Age Category Sorter
 
 **Analysis:**
-- Input: Age (integer)
-- Processing: Category determination + years to next category
-- Categories: Child (<13), Teen (13-19), Young Adult (20-35), Adult (36-64), Senior (65+)
-- Calculation: Years until next category boundary
+- [ ] Input: Age (integer)
+- [ ] Processing: Category determination + years to next category
+- [ ] Categories: Child (<13), Teen (13-19), Young Adult (20-35), Adult (36-64), Senior (65+)
+- [ ] Calculation: Years until next category boundary
 
 **Key Calculations:**
-- Child (under 13) → 13 - age years until Teen
-- Teen (13-19) → 20 - age years until Young Adult
-- Young Adult (20-35) → 36 - age years until Adult
-- Adult (36-64) → 65 - age years until Senior
-- Senior (65+) → "Final stage"
+- [ ] Child (under 13) → 13 - age years until Teen
+- [ ] Teen (13-19) → 20 - age years until Young Adult
+- [ ] Young Adult (20-35) → 36 - age years until Adult
+- [ ] Adult (36-64) → 65 - age years until Senior
+- [ ] Senior (65+) → "Final stage"
 
 ---
 
 ### Problem 4: Movie Ticket Calculator
 
 **Analysis:**
-- Inputs: Age, show time (0-23), number of tickets
-- Base price: $12.00
-- Discounts: Age-based, time-based, group-based
-- Order matters: Apply discounts sequentially
+- [ ] Inputs: Age, show time (0-23), number of tickets
+- [ ] Base price: $12.00
+- [ ] Discounts: Age-based, time-based, group-based
+- [ ] Order matters: Apply discounts sequentially
 
 **Discount Order:**
 1. Age discount (child/senior)
@@ -416,54 +416,54 @@ Algorithm: Vending Machine
 ### Problem 5: Number Comparison Tool
 
 **Analysis:**
-- Inputs: Three numbers (can be float for average)
-- Processing: Find min/max, calculate average, check equality, check sequence
-- Sequence check: num1 < num2 < num3
+- [ ] Inputs: Three numbers (can be float for average)
+- [ ] Processing: Find min/max, calculate average, check equality, check sequence
+- [ ] Sequence check: num1 < num2 < num3
 
 **Multiple Approaches:**
-- Use if-else chains for min/max
-- Use variables to track current min/max
-- Use boolean flags for equality and sequence checks
+- [ ] Use if-else chains for min/max
+- [ ] Use variables to track current min/max
+- [ ] Use boolean flags for equality and sequence checks
 
 ---
 
 ### Problem 6: Grade Calculator
 
 **Analysis:**
-- Input: Numerical grade (0-100)
-- Processing: Convert to letter grade using ranges
-- Output: Letter grade + motivational message
-- Validation: Ensure grade is within 0-100 range
+- [ ] Input: Numerical grade (0-100)
+- [ ] Processing: Convert to letter grade using ranges
+- [ ] Output: Letter grade + motivational message
+- [ ] Validation: Ensure grade is within 0-100 range
 
 **Grade Ranges:**
-- A: 90-100 (Excellent work!)
-- B: 80-89 (Good job!)
-- C: 70-79 (Satisfactory)
-- D: 60-69 (Needs improvement)
-- F: 0-59 (Keep trying!)
+- [ ] A: 90-100 (Excellent work!)
+- [ ] B: 80-89 (Good job!)
+- [ ] C: 70-79 (Satisfactory)
+- [ ] D: 60-69 (Needs improvement)
+- [ ] F: 0-59 (Keep trying!)
 
 ---
 
 ### Common Problem-Solving Patterns
 
 **Range Checking:**
-```
+```cpp
 If value >= min AND value <= max:
     Process valid value
 Else:
     Handle invalid value
-```
+```cpp
 
 **Sequential Processing:**
-```
+```cpp
 Step 1: Get input
 Step 2: Validate input
 Step 3: Process data
 Step 4: Display results
-```
+```cpp
 
 **Decision Trees:**
-```
+```cpp
 If condition A:
     If sub-condition A1:
         Action A1
@@ -473,30 +473,108 @@ Else if condition B:
     Action B
 Else:
     Default action
-```
+```cpp
 
 ---
 
 ### Implementation Tips
 
 **Start Simple:**
-- Implement basic functionality first
-- Add validation and error handling later
-- Test with normal cases before edge cases
+- [ ] Implement basic functionality first
+- [ ] Add validation and error handling later
+- [ ] Test with normal cases before edge cases
 
 **Debugging:**
-- Add printf statements to trace program flow
-- Test with known inputs and verify expected outputs
-- Check variable values at key points
+- [ ] Add printf statements to trace program flow
+- [ ] Test with known inputs and verify expected outputs
+- [ ] Check variable values at key points
 
 **Code Organization:**
-- Use meaningful variable names
-- Add comments explaining complex logic
-- Break long functions into smaller ones
-- Test incrementally as you build
+- [ ] Use meaningful variable names
+- [ ] Add comments explaining complex logic
+- [ ] Break long functions into smaller ones
+- [ ] Test incrementally as you build
 
 ---
 
  **Congratulations! You've created your first independent algorithms!** 
 
 *Problem analysis is the foundation of programming. Next: Data management problems! *
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- [ ] Review each function
+- [ ] Understand the flow
+- [ ] Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- [ ] Main function: Entry point
+- [ ] Helper functions: Support logic
+
+
+### <div style="page-break-after: always;"></div>
+
+Answer Key
+
+Expected implementation provided.
+
+<div style="page-break-after: always;"></div>
+
+---
+
+## Answer Key
+
+### Complete Solution
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard C++ conventions with proper imports and main function
+2. **Output**: Uses std::cout to print messages to the console
+3. **Standard Library**: Includes iostream for input/output operations
+4. **Return Value**: Returns 0 to indicate successful execution
+5. **Best Practices**: Code is readable and uses C++ idioms
+
+### Testing Your Solution
+
+1. **Compile**: `g++ hello.cpp -o hello`
+2. **Run**: `./hello`
+3. **Expected Output**: `Hello, World!`
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
+| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+
+### Tips for Learning
+
+- C++ is a superset of C with additional features
+- `std::cout` is the C++ way to print (replaces `printf`)
+- `std::endl` adds a newline and flushes the buffer
+- The `std::` prefix means these are from the "standard" namespace

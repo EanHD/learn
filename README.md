@@ -1,13 +1,13 @@
-# LEARN: Programming in 14 Languages
+# LEARN: Programming in 20 Languages
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-blue)](https://github.com/EanHD/learn)
 [![Devcontainer](https://img.shields.io/badge/Devcontainer-Ready-green)](https://github.com/EanHD/learn/blob/main/.devcontainer/devcontainer.json)
 [![Made with Neovim](https://img.shields.io/badge/Made%20with-Neovim-57A143?logo=neovim)](https://neovim.io)
-[![Languages](https://img.shields.io/badge/Languages-14-orange)](https://github.com/EanHD/learn#-what-youll-learn)
+[![Languages](https://img.shields.io/badge/Languages-20-orange)](https://github.com/EanHD/learn#-what-youll-learn)
 [![Lessons](https://img.shields.io/badge/Lessons-490-blueviolet)](https://github.com/EanHD/learn#-what-youll-learn)
 
-**490 hands-on lessons.** Fourteen languages. Five stages. Real projects.
+**490 hands-on lessons.** Twenty languages. Five stages. Real projects.
 
 Start coding in **5 minutes** with our **professional IDE setup**.
 
@@ -100,17 +100,18 @@ learn c++ 1 --terminal     # Terminal (read-only)
 | **4** | Build full projects from scratch | Weeks 4-5 |
 | **5** | Create your own capstone project | Week 6 |
 
-**14 languages supported:**
+**20 languages supported:**
 
-- **Backend:** C++, Rust, Python, Go, Lua
-- **Web:** JavaScript, TypeScript, C#
-- **Systems:** Shell, PowerShell
+- **Core:** C/C++, Rust, Go, Zig
+- **Web & Scripting:** JavaScript, TypeScript, Python, PHP
 - **Mobile:** Dart, Swift, Kotlin
-- **Database:** SQL
+- **Data & Databases:** SQL, NoSQL, R, Julia
+- **Scripting:** Shell, PowerShell, Lua
+- **Enterprise:** Java, C#
 
 **7 lessons per stage** × **5 stages** = **35 lessons per language**
 
-**Total: 490 lessons** across all 14 languages
+**Total: 490 lessons** across all 20 languages
 
 ---
 
@@ -129,10 +130,10 @@ Browse all lessons, track progress, and jump between languages.
 ```bash
 learn c++ 1              # Open C++ Stage 1, Level 1
 learn python 1           # Open Python Stage 1, Level 1
-learn typescript 1       # Open TypeScript Stage 1, Level 1
-learn c++ 5 --stage 2    # Jump to Stage 2, Level 5
-learn javascript 1       # Switch to JavaScript
-learn go 3               # Try Go
+learn java 1             # Open Java Stage 1, Level 1
+learn php 1              # Try PHP
+learn r 1                # Try R for data science
+learn zig 1              # Try Zig
 ```
 
 ### View All Lessons
@@ -169,9 +170,117 @@ Show all available commands and options.
 
 ---
 
-## 🛠️ Neovim IDE Features
+## � CLI Commands Reference
 
-When you open a lesson with Neovim (\`learn c++ 1\`), you get:
+> **New!** The CLI now supports modern subcommands for better discoverability.
+
+### 🎯 Core Commands
+
+**Interactive Menu (Default)**
+```bash
+learn
+```
+Launch the full interactive menu to browse all lessons.
+
+**Browse by Category** ⭐ NEW
+```bash
+learn browse               # Browse languages by category (core, web, mobile, data, scripting, enterprise)
+learn browse --category web    # Jump to web languages
+learn browse --guided      # Get extra tips and context
+```
+
+**Get Learning Tips** ⭐ NEW
+```bash
+learn tip                  # Random programming tip or fact
+```
+
+**Open a Lesson**
+```bash
+learn open python 1 1      # Python Stage 1, Level 1 (default editor)
+learn open rust 2 3        # Rust Stage 2, Level 3
+learn open cpp 1 1 --vim   # Force Neovim mode
+learn open js 1 1 --vscode # Open in VS Code
+learn open go 1 1 --terminal # Read-only terminal view
+```
+
+**List Lessons**
+```bash
+learn list                 # Show all 490 lessons
+learn list --language python  # Filter by language
+learn list --stage 2       # Filter by stage
+```
+
+**Track Progress**
+```bash
+learn progress             # View your learning stats
+learn progress --language rust  # Progress in specific language
+learn progress --export progress.json  # Export to file
+learn progress --reset     # Reset all progress (requires confirmation)
+```
+
+**Next Lesson**
+```bash
+learn next                 # Get next recommended lesson
+learn next --language python  # Next lesson in specific language
+```
+
+**Run Code**
+```bash
+learn run python 1 1       # Compile and run Python Stage 1, Level 1
+learn run cpp 1 1          # Compile and run C++ code
+learn run rust 2 3         # Compile and run Rust code
+```
+
+**Mark Complete**
+```bash
+learn complete python 1 1  # Mark Python S1L1 as done
+learn complete rust 2 3    # Mark Rust S2L3 as done
+```
+
+### 🏥 System Commands
+
+**Check Dependencies**
+```bash
+learn doctor               # Check all compilers and tools
+```
+
+**First-Time Setup**
+```bash
+learn init                 # Run setup wizard
+```
+
+**Configuration**
+```bash
+learn config --show        # View current settings
+learn config --editor vim  # Set default editor
+learn config --language python  # Set default language
+learn config --reset       # Reset to defaults
+```
+
+### 📖 Legacy Syntax (Still Supported)
+
+The old positional syntax still works for backward compatibility:
+
+```bash
+learn python 1             # Same as: learn open python 1 1
+learn --list               # Same as: learn list
+learn --progress           # Same as: learn progress
+learn --next               # Same as: learn next
+```
+
+### 🆘 Get Help
+
+```bash
+learn --help               # Show all commands
+learn open --help          # Help for specific command
+learn browse --help        # Help for browse command
+```
+
+---
+
+## �🛠️ Neovim IDE Features
+
+When you open a lesson with Neovim (`learn open cpp 1`), you get:
 
 ### 🎨 Beautiful Interface
 - **Nightfox theme** - Professional dark theme
@@ -249,7 +358,7 @@ When you open a lesson with Neovim (\`learn c++ 1\`), you get:
 
 ### 2️⃣ I'm Learning a New Language
 
-1. Pick from 14 languages
+1. Pick from 20 languages
 2. Start: \`learn python 1\` (or use interactive mode)
 3. Each file starts with help comment
 4. Press \`<Space>g\` for navigation guide
@@ -260,7 +369,8 @@ When you open a lesson with Neovim (\`learn c++ 1\`), you get:
 
 All 490 lessons are organized by language:
 \`c-c++/\`, \`rust/\`, \`python/\`, \`javascript/\`, \`typescript/\`, \`go/\`, \`lua/\`,
-\`dart/\`, \`swift/\`, \`kotlin/\`, \`sql/\`, \`csharp/\`, \`shell/\`, \`powershell/\`
+\`dart/\`, \`swift/\`, \`kotlin/\`, \`sql/\`, \`csharp/\`, \`shell/\`, \`powershell/\`,
+\`java/\`, \`php/\`, \`r/\`, \`julia/\`, \`zig/\`, \`nosql/\`
 
 Each lesson includes:
 

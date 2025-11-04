@@ -1,7 +1,6 @@
 # Level 6: Loops and Repetition
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
-
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 ## Stage 1: Copying Code
 
@@ -30,22 +29,22 @@ Time to make your programs repeat actions! Today you'll learn how to write code 
 console.log("=== For Loop - Counting ===");
 // Basic for loop: for (initialization; condition; increment)
 for (let i = 1; i <= 5; i++) {
-    console.log("Count: " + i);
+ console.log("Count: " + i);
 }
 
 console.log("");
 console.log("=== For Loop - Countdown ===");
 // Countdown from 10 to 1
 for (let i = 10; i >= 1; i--) {
-    console.log("Countdown: " + i);
+ console.log("Countdown: " + i);
 }
-console.log("Blast off! 🚀");
+console.log("Blast off! ");
 
 console.log("");
 console.log("=== For Loop - Even Numbers ===");
 // Print even numbers from 2 to 10
 for (let i = 2; i <= 10; i += 2) {
-    console.log("Even number: " + i);
+ console.log("Even number: " + i);
 }
 
 console.log("");
@@ -53,7 +52,7 @@ console.log("=== For Loop - Sum of Numbers ===");
 // Calculate sum of numbers 1 to 10
 let sum = 0;
 for (let i = 1; i <= 10; i++) {
-    sum += i;  // Same as: sum = sum + i
+ sum += i; // Same as: sum = sum + i
 }
 console.log("Sum of 1 to 10: " + sum);
 
@@ -62,8 +61,8 @@ console.log("=== While Loop - Counting ===");
 // Basic while loop: while (condition)
 let count = 1;
 while (count <= 5) {
-    console.log("While count: " + count);
-    count++;  // Important! Without this, infinite loop!
+ console.log("While count: " + count);
+ count++; // Important! Without this, infinite loop!
 }
 
 console.log("");
@@ -72,9 +71,9 @@ console.log("=== While Loop - Random Number Game ===");
 let roll;
 let rolls = 0;
 while (roll !== 6) {
-    roll = Math.floor(Math.random() * 6) + 1;  // Random 1-6
-    rolls++;
-    console.log("Roll #" + rolls + ": " + roll);
+ roll = Math.floor(Math.random() * 6) + 1; // Random 1-6
+ rolls++;
+ console.log("Roll #" + rolls + ": " + roll);
 }
 console.log("Got a 6 after " + rolls + " rolls!");
 
@@ -84,35 +83,35 @@ console.log("=== Do-While Loop - Menu ===");
 let menuChoice;
 let tries = 0;
 do {
-    tries++;
-    menuChoice = Math.floor(Math.random() * 4) + 1;  // Random 1-4
-    console.log("Menu attempt #" + tries + ": Option " + menuChoice);
-    
-    if (menuChoice === 3) {
-        console.log("Option 3 selected! Exiting menu.");
-    }
-} while (menuChoice !== 3 && tries < 10);  // Stop if option 3 or after 10 tries
+ tries++;
+ menuChoice = Math.floor(Math.random() * 4) + 1; // Random 1-4
+ console.log("Menu attempt #" + tries + ": Option " + menuChoice);
+ 
+ if (menuChoice === 3) {
+ console.log("Option 3 selected! Exiting menu.");
+ }
+} while (menuChoice !== 3 && tries < 10); // Stop if option 3 or after 10 tries
 
 console.log("");
 console.log("=== For Loop with Break ===");
 // Using break to exit a loop early
 for (let i = 1; i <= 10; i++) {
-    if (i === 7) {
-        console.log("Found 7, stopping the loop!");
-        break;  // Exit the loop completely
-    }
-    console.log("Number: " + i);
+ if (i === 7) {
+ console.log("Found 7, stopping the loop!");
+ break; // Exit the loop completely
+ }
+ console.log("Number: " + i);
 }
 
 console.log("");
 console.log("=== For Loop with Continue ===");
 // Using continue to skip an iteration
 for (let i = 1; i <= 10; i++) {
-    if (i % 2 === 0) {  // If even number
-        console.log(i + " is even - skipping");
-        continue;  // Skip the rest of this iteration
-    }
-    console.log("Odd number: " + i);
+ if (i % 2 === 0) { // If even number
+ console.log(i + " is even - skipping");
+ continue; // Skip the rest of this iteration
+ }
+ console.log("Odd number: " + i);
 }
 
 console.log("");
@@ -122,36 +121,36 @@ let fruits = ["apple", "banana", "orange", "grape", "mango"];
 
 // Traditional for loop with array
 for (let i = 0; i < fruits.length; i++) {
-    console.log("Fruit at index " + i + ": " + fruits[i]);
+ console.log("Fruit at index " + i + ": " + fruits[i]);
 }
 
 console.log("");
 console.log("=== For-Of Loop ===");
 // Modern for-of loop for arrays
 for (let fruit of fruits) {
-    console.log("Fruit: " + fruit);
+ console.log("Fruit: " + fruit);
 }
 
 console.log("");
 console.log("=== Nested Loops - Multiplication Table ===");
 // Create a multiplication table (3x3)
 for (let i = 1; i <= 3; i++) {
-    let row = "";
-    for (let j = 1; j <= 3; j++) {
-        row += (i * j) + "\t";  // \t is a tab character
-    }
-    console.log(row);
+ let row = "";
+ for (let j = 1; j <= 3; j++) {
+ row += (i * j) + "\t"; // \t is a tab character
+ }
+ console.log(row);
 }
 
 console.log("");
 console.log("=== Pattern - Stars ===");
 // Create a right triangle pattern
 for (let i = 1; i <= 5; i++) {
-    let pattern = "";
-    for (let j = 1; j <= i; j++) {
-        pattern += "* ";
-    }
-    console.log(pattern);
+ let pattern = "";
+ for (let j = 1; j <= i; j++) {
+ pattern += "* ";
+ }
+ console.log(pattern);
 }
 
 console.log("");
@@ -159,23 +158,23 @@ console.log("=== Looping with User Input Simulation ===");
 // Simulate processing multiple items
 let items = ["item1", "item2", "item3", "item4", "item5"];
 for (let i = 0; i < items.length; i++) {
-    console.log("Processing " + items[i] + "...");
-    // In a real program, we might do some work here
-    console.log("✓ " + items[i] + " processed");
+ console.log("Processing " + items[i] + "...");
+ // In a real program, we might do some work here
+ console.log(" " + items[i] + " processed");
 }
-```
+```javascript
 
 ---
 
 ### How to Execute
 
 1. **Run your program**:
-   ```bash
-   node loops.js
-   ```
+ ```bash
+ node loops.js
+ ```java
 
 **Expected output:**
-```
+```javascript
 === For Loop - Counting ===
 Count: 1
 Count: 2
@@ -194,7 +193,7 @@ Countdown: 4
 Countdown: 3
 Countdown: 2
 Countdown: 1
-Blast off! 🚀
+Blast off! 
 
 === For Loop - Even Numbers ===
 Even number: 2
@@ -274,16 +273,16 @@ Fruit: mango
 
 === Looping with User Input Simulation ===
 Processing item1...
-✓ item1 processed
+ item1 processed
 Processing item2...
-✓ item2 processed
+ item2 processed
 Processing item3...
-✓ item3 processed
+ item3 processed
 Processing item4...
-✓ item4 processed
+ item4 processed
 Processing item5...
-✓ item5 processed
-```
+ item5 processed
+```javascript
 
 ---
 
@@ -336,9 +335,9 @@ Processing item5...
 
 ```javascript
 for (let i = 1; i <= 5; i++) {
-    console.log("Count: " + i);
+ console.log("Count: " + i);
 }
-```
+```javascript
 - **`for`** = Loop keyword
 - **`let i = 1`** = Initialization: set up the counter variable
 - **`i <= 5`** = Condition: keep looping while this is true
@@ -348,19 +347,19 @@ for (let i = 1; i <= 5; i++) {
 
 ```javascript
 while (count <= 5) {
-    console.log("While count: " + count);
-    count++;  // Critical: must update the counter!
+ console.log("While count: " + count);
+ count++; // Critical: must update the counter!
 }
-```
+```javascript
 - **`while`** = Loop that continues while condition is true
 - **Condition checked first** before each iteration
 - **`count++`** = Must update counter inside the loop or it runs forever!
 
 ```javascript
 do {
-    console.log("Menu attempt #" + tries + ": Option " + menuChoice);
+ console.log("Menu attempt #" + tries + ": Option " + menuChoice);
 } while (menuChoice !== 3 && tries < 10);
-```
+```javascript
 - **`do`** = Code block executes first
 - **`while`** = Then condition is checked
 - **Result**: Block runs at least once regardless of condition
@@ -371,19 +370,19 @@ do {
 ```javascript
 // Count by 5s
 for (let i = 0; i <= 25; i += 5) {
-    console.log(i); // 0, 5, 10, 15, 20, 25
+ console.log(i); // 0, 5, 10, 15, 20, 25
 }
 
 // Count backwards
 for (let i = 10; i > 0; i--) {
-    console.log(i); // 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+ console.log(i); // 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
 }
 
 // Count with decimals
 for (let i = 0; i <= 1; i += 0.2) {
-    console.log(i); // 0, 0.2, 0.4, 0.6, 0.8, 1
+ console.log(i); // 0, 0.2, 0.4, 0.6, 0.8, 1
 }
-```
+```javascript
 
 ### Array Iteration Methods
 
@@ -392,19 +391,19 @@ let fruits = ["apple", "banana", "orange"];
 
 // Traditional for loop
 for (let i = 0; i < fruits.length; i++) {
-    console.log(fruits[i]);
+ console.log(fruits[i]);
 }
 
 // For-of loop (modern)
 for (let fruit of fruits) {
-    console.log(fruit);
+ console.log(fruit);
 }
 
 // For-each method (alternative)
 fruits.forEach(function(fruit) {
-    console.log(fruit);
+ console.log(fruit);
 });
-```
+```javascript
 
 **`array.length`** = Property that returns the number of elements in the array.
 
@@ -413,34 +412,34 @@ fruits.forEach(function(fruit) {
 **`break`** = Exits the loop completely:
 ```javascript
 for (let i = 1; i <= 10; i++) {
-    if (i === 5) {
-        break;  // Loop stops here
-    }
-    console.log(i);  // Prints: 1, 2, 3, 4
+ if (i === 5) {
+ break; // Loop stops here
+ }
+ console.log(i); // Prints: 1, 2, 3, 4
 }
-```
+```javascript
 
 **`continue`** = Skips the rest of current iteration:
 ```javascript
 for (let i = 1; i <= 5; i++) {
-    if (i === 3) {
-        continue;  // Skip to next iteration
-    }
-    console.log(i);  // Prints: 1, 2, 4, 5 (skips 3)
+ if (i === 3) {
+ continue; // Skip to next iteration
+ }
+ console.log(i); // Prints: 1, 2, 4, 5 (skips 3)
 }
-```
+```javascript
 
 ### Nested Loops
 
 ```javascript
-for (let i = 1; i <= 3; i++) {          // Outer loop
-    for (let j = 1; j <= 3; j++) {      // Inner loop
-        console.log("i=" + i + ", j=" + j);
-    }
+for (let i = 1; i <= 3; i++) { // Outer loop
+ for (let j = 1; j <= 3; j++) { // Inner loop
+ console.log("i=" + i + ", j=" + j);
+ }
 }
-```
+```javascript
 **Output:**
-```
+```javascript
 i=1, j=1
 i=1, j=2
 i=1, j=3
@@ -450,7 +449,7 @@ i=2, j=3
 i=3, j=1
 i=3, j=2
 i=3, j=3
-```
+```javascript
 - **Inner loop** completes all iterations for each outer loop iteration
 - **Total iterations**: 3 × 3 = 9
 
@@ -459,14 +458,14 @@ i=3, j=3
 ```javascript
 // Random integer between min and max (inclusive)
 function randomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+ return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // Examples:
-console.log(randomInt(1, 6));    // Random die roll
-console.log(randomInt(1, 100));  // Random number 1-100
-console.log(randomInt(10, 20));  // Random number 10-20
-```
+console.log(randomInt(1, 6)); // Random die roll
+console.log(randomInt(1, 100)); // Random number 1-100
+console.log(randomInt(10, 20)); // Random number 10-20
+```javascript
 
 ### Loop Performance Considerations
 
@@ -478,7 +477,7 @@ for (let i = 0; i < myArray.length; i++) { ... }
 // Do this (length calculated once):
 let len = myArray.length;
 for (let i = 0; i < len; i++) { ... }
-```
+```javascript
 
 ### Common Errors & Solutions
 
@@ -522,30 +521,30 @@ console.log("=== Advanced Loop Examples ===");
 // Prime number finder
 console.log("Prime numbers from 2 to 30:");
 for (let num = 2; num <= 30; num++) {
-    let isPrime = true;
-    
-    // Check if num is divisible by any number from 2 to sqrt(num)
-    for (let divisor = 2; divisor <= Math.sqrt(num); divisor++) {
-        if (num % divisor === 0) {
-            isPrime = false;
-            break;  // Found a divisor, not prime
-        }
-    }
-    
-    if (isPrime) {
-        console.log(num + " is prime");
-    }
+ let isPrime = true;
+ 
+ // Check if num is divisible by any number from 2 to sqrt(num)
+ for (let divisor = 2; divisor <= Math.sqrt(num); divisor++) {
+ if (num % divisor === 0) {
+ isPrime = false;
+ break; // Found a divisor, not prime
+ }
+ }
+ 
+ if (isPrime) {
+ console.log(num + " is prime");
+ }
 }
 
 console.log("");
 // Factorial calculator
 console.log("Factorials from 1 to 7:");
 for (let n = 1; n <= 7; n++) {
-    let factorial = 1;
-    for (let i = 1; i <= n; i++) {
-        factorial *= i;
-    }
-    console.log(n + "! = " + factorial);
+ let factorial = 1;
+ for (let i = 1; i <= n; i++) {
+ factorial *= i;
+ }
+ console.log(n + "! = " + factorial);
 }
 
 console.log("");
@@ -556,26 +555,84 @@ console.log("0: " + a);
 console.log("1: " + b);
 
 for (let i = 2; i < 10; i++) {
-    let next = a + b;
-    console.log(i + ": " + next);
-    a = b;
-    b = next;
+ let next = a + b;
+ console.log(i + ": " + next);
+ a = b;
+ b = next;
 }
 
 console.log("");
 // Multiplication table (1-10)
 console.log("Multiplication table (1-5):");
 for (let i = 1; i <= 5; i++) {
-    let row = i + " | ";
-    for (let j = 1; j <= 5; j++) {
-        row += (i * j).toString().padStart(3, " ") + " ";
-    }
-    console.log(row);
+ let row = i + " | ";
+ for (let j = 1; j <= 5; j++) {
+ row += (i * j).toString().padStart(3, " ") + " ";
+ }
+ console.log(row);
 }
-```
+```javascript
 
 ---
 
  **Excellent work! You now understand how to repeat actions efficiently with loops!** 
 
 *Ready for the next challenge? Let's learn about functions - the building blocks of reusable code!*
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```js
+console.log("Hello, World!");
+
+```js
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard javascript conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

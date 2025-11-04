@@ -1,6 +1,6 @@
 # Level 7: Functions - Code Organization
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -229,7 +229,7 @@ console.log("Doubled: " + doubled);
 // Process array using arrow function
 let squared = processArray(numbers, (x) => x * x);
 console.log("Squared: " + squared);
-```
+```javascript
 
 ---
 
@@ -238,10 +238,10 @@ console.log("Squared: " + squared);
 1. **Run your program**:
    ```bash
    node functions.js
-   ```
+   ```java
 
 **Expected output:**
-```
+```javascript
 === Basic Function Definition ===
 Hello! Welcome to the wonderful world of functions!
 Hello! Welcome to the wonderful world of functions!
@@ -296,7 +296,7 @@ Greeting: Hello, I'm Taylor
 Original: 1,2,3,4,5
 Doubled: 2,4,6,8,10
 Squared: 1,4,9,16,25
-```
+```javascript
 
 ---
 
@@ -353,7 +353,7 @@ Squared: 1,4,9,16,25
 function greetUser() {
     console.log("Hello! Welcome to the wonderful world of functions!");
 }
-```
+```javascript
 - **`function`** = Keyword to declare a function
 - **`greetUser`** = Function name (follows variable naming rules)
 - **`()`** = Parameters (empty because no parameters needed)
@@ -364,14 +364,14 @@ function greetUser() {
 function greetByName(name) {
     console.log("Hello, " + name + "! Nice to meet you!");
 }
-```
+```javascript
 - **`name`** = Parameter (variable that receives the argument value)
 - **Parameters** = Variables defined in function declaration
 - **Arguments** = Actual values passed when calling the function
 
 ```javascript
 let result1 = addNumbers(5, 3);
-```
+```javascript
 - **`addNumbers(5, 3)`** = Function call with arguments
 - **`5` and `3`** = Arguments passed to the function
 - **Return value** = Value that function sends back
@@ -385,7 +385,7 @@ function add(a, b) {
     return a + b;
 }
 // Can be called before or after the declaration due to hoisting
-```
+```javascript
 
 **Function Expression:**
 ```javascript
@@ -393,7 +393,7 @@ let add = function(a, b) {
     return a + b;
 };
 // Must be defined before calling (no hoisting)
-```
+```javascript
 
 ### Arrow Functions
 
@@ -402,14 +402,14 @@ let add = function(a, b) {
 let add = (a, b) => {
     return a + b;
 };
-```
+```javascript
 
 **Shortened syntax (implicit return):**
 ```javascript
 let add = (a, b) => a + b;  // Returns a + b automatically
 let square = x => x * x;    // Single parameter doesn't need parentheses
 let greet = () => "Hello!"; // No parameters need empty parentheses
-```
+```javascript
 
 ### Function Parameters
 
@@ -421,7 +421,7 @@ function greet(name, greeting = "Hello") {
 
 greet("Alex");           // "Hello, Alex!" (greeting uses default)
 greet("Taylor", "Hi");   // "Hi, Taylor!" (greeting overridden)
-```
+```javascript
 
 **Rest parameters (for multiple values):**
 ```javascript
@@ -435,14 +435,14 @@ function sum(...numbers) {
 
 console.log(sum(1, 2, 3));      // 6
 console.log(sum(1, 2, 3, 4, 5)); // 15
-```
+```javascript
 
 ### Function Scope
 
 **Global scope:**
 ```javascript
 let globalVar = "I'm accessible everywhere";
-```
+```javascript
 
 **Local scope:**
 ```javascript
@@ -451,7 +451,7 @@ function myFunction() {
     // Can access both globalVar and localVar
 }
 // Can access globalVar but NOT localVar
-```
+```javascript
 
 **Scope rules:**
 - Functions can access variables in their own scope
@@ -467,7 +467,7 @@ function sayHello() {
     console.log("Hello!");
 }
 // Returns 'undefined' implicitly
-```
+```javascript
 
 **Functions with return:**
 ```javascript
@@ -475,7 +475,7 @@ function getHello() {
     return "Hello!";
 }
 // Returns "Hello!" which can be stored in a variable
-```
+```javascript
 
 **Early return:**
 ```javascript
@@ -486,7 +486,7 @@ function divide(a, b) {
     }
     return a / b;
 }
-```
+```javascript
 
 ### Higher-Order Functions
 
@@ -504,7 +504,7 @@ function sayHello() {
 }
 
 executeTwice(sayHello);  // Will output "Hello!" twice
-```
+```javascript
 
 ### Pure vs Impure Functions
 
@@ -515,7 +515,7 @@ executeTwice(sayHello);  // Will output "Hello!" twice
 function add(a, b) {
     return a + b;  // Pure function
 }
-```
+```javascript
 
 **Impure function:**
 - May have side effects or depend on external state
@@ -525,7 +525,7 @@ function increment() {
     count++;  // Modifies external variable
     return count;
 }  // Impure function
-```
+```javascript
 
 ### Common Errors & Solutions
 
@@ -549,7 +549,7 @@ function sendNotification(message) { ... }
 // Avoid - vague names
 function doStuff() { ... }
 function process() { ... }
-```
+```javascript
 
 **Function size:**
 - Keep functions focused on a single task
@@ -570,7 +570,7 @@ function processOrder(order) {
     // ... other processing
     return total;
 }
-```
+```javascript
 
 ### Advanced Challenge (For the Brave!)
 
@@ -672,10 +672,71 @@ checkBalance(taylorAccount);
 
 console.log("");
 getTransactionHistory(alexAccount);
-```
+```javascript
 
 ---
 
  **Excellent work! You now understand how to organize code using functions - a fundamental skill for all programmers!** 
 
 *This completes Stage 1 of JavaScript learning! You've mastered the fundamentals of JavaScript programming. Great job!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```js
+console.log("Hello, World!");
+
+```js
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard javascript conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

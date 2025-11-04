@@ -1,6 +1,6 @@
 # Level 4: Input/Output Pseudocode
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -32,15 +32,15 @@ INPUT age
 SET email TO INPUT("Enter your email: ")
 SET number TO INPUT_INTEGER("Enter a number: ")
 SET choice TO INPUT_CHOICE("A, B, C")
-```
+```javascript
 
 **Output operations:**
-```
+```javascript
 OUTPUT "Hello, " + user_name
 OUTPUT "Your age is: " + age
 DISPLAY message
 PRINT formatted_output
-```
+```javascript
 
 **Combined I/O:**
 ```javascript
@@ -51,7 +51,7 @@ IF name IS EMPTY THEN
 ELSE
    OUTPUT "Hello, " + name + "!"
 ENDIF
-```
+```javascript
 
 ---
 
@@ -67,12 +67,12 @@ ENDIF
 1. **Run the code**:
    ```bash
    node hello.js
-   ```
+   ```java
 
 **Expected output:**
-```
+```javascript
 Hello, World!
-```
+```javascript
 
 ## Algorithm 1: Simple Input Validation
 
@@ -86,7 +86,7 @@ Algorithm: Validate User Age
    5. STOP
 5. ENDIF
 6. OUTPUT "Thank you! You are " + age + " years old."
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that validates user age input.
 
@@ -114,7 +114,7 @@ Algorithm: Collect User Information
 15. OUTPUT "Email: " + email
 16. OUTPUT "Favorite Color: " + color
 17. OUTPUT "Form submitted successfully!"
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that collects and displays user information.
 
@@ -136,7 +136,7 @@ Algorithm: Get Valid Number
       9. OUTPUT "Invalid! Please enter a positive number."
    10. ENDIF
 11. ENDWHILE
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that keeps asking for input until valid.
 
@@ -163,7 +163,7 @@ Algorithm: Calculate Letter Grade
 14. OUTPUT "Score: " + score + "/" + total_points
 15. OUTPUT "Percentage: " + percentage + "%"
 16. OUTPUT "Letter Grade: " + letter_grade
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that calculates grades from user input.
 
@@ -192,7 +192,7 @@ Algorithm: Temperature Converter Menu
 12. ELSE
    16. OUTPUT "Invalid choice! Please enter 1 or 2."
 17. ENDIF
-```
+```javascript
 
 **Your Task:** Create a JavaScript program with a menu-based temperature converter.
 
@@ -228,7 +228,7 @@ Algorithm: Validate Contact Information
 23. ELSE
    24. OUTPUT "Form has errors. Please fix and resubmit."
 25. ENDIF
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that validates multiple input fields.
 
@@ -265,7 +265,7 @@ Algorithm: Interactive Calculator
 24. IF NOT has_error THEN
    25. OUTPUT num1 + " " + operator + " " + num2 + " = " + result
 26. ENDIF
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that simulates a basic calculator with error handling.
 
@@ -336,7 +336,7 @@ if (age < 0 || age > 150) {
 } else {
     console.log("Thank you! You are " + age + " years old.");
 }
-```
+```javascript
 
 ### Algorithm 2: User Information Form
 
@@ -367,7 +367,7 @@ console.log("Age: " + age);
 console.log("Email: " + email);
 console.log("Favorite Color: " + color);
 console.log("Form submitted successfully!");
-```
+```javascript
 
 ### Algorithm 3: Number Validation Loop
 
@@ -389,7 +389,7 @@ while (!valid_input) {
         console.log("Invalid! Please enter a positive number.");
     }
 }
-```
+```javascript
 
 ### Algorithm 4: Grade Calculator with Input
 
@@ -423,7 +423,7 @@ if (percentage >= 90) {
 console.log("Score: " + score + "/" + total_points);
 console.log("Percentage: " + percentage.toFixed(2) + "%");
 console.log("Letter Grade: " + letter_grade);
-```
+```javascript
 
 ### Algorithm 5: Temperature Converter with Menu
 
@@ -452,7 +452,7 @@ if (choice === 1) {
 } else {
     console.log("Invalid choice! Please enter 1 or 2.");
 }
-```
+```javascript
 
 ### Algorithm 6: Input Validation with Multiple Fields
 
@@ -494,7 +494,7 @@ if (is_valid) {
 } else {
     console.log("Form has errors. Please fix and resubmit.");
 }
-```
+```javascript
 
 ### Algorithm 7: Calculator with User Interaction
 
@@ -538,7 +538,7 @@ if (operator === "+") {
 if (!has_error) {
     console.log(num1 + " " + operator + " " + num2 + " = " + result);
 }
-```
+```javascript
 
 ### I/O Operation Translation Patterns
 
@@ -567,3 +567,57 @@ if (!has_error) {
  **Excellent work! You've mastered translating input/output operations from pseudocode to JavaScript!** 
 
 *Next up: Decision pseudocode!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```js
+console.log("Hello, World!");
+
+```js
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard javascript conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

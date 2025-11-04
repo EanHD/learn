@@ -1,6 +1,6 @@
 # Level 7: Functions - Code Organization
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -189,7 +189,7 @@ func formatFullName(firstName, lastName string) string {
 func isNumberEven(number int) bool {
     return number%2 == 0
 }
-```
+```go
 
 ---
 
@@ -199,15 +199,15 @@ func isNumberEven(number int) bool {
    ```bash
    mkdir functions-example && cd functions-example
    go mod init functions
-   ```
+   ```go
 2. **Copy the code into `functions.go`**
 3. **Run your program**:
    ```bash
    go run functions.go
-   ```
+   ```bash
 
 **Expected output:**
-```
+```go
 === Basic Function Definition ===
 Hello! Welcome to the wonderful world of functions!
 Hello! Welcome to the wonderful world of functions!
@@ -251,7 +251,7 @@ Rectangle area (10 x 5): 50
 Circle area (radius 7): 153.94
 Full name: John Doe
 Is 12 even? true
-```
+```go
 
 ---
 
@@ -308,7 +308,7 @@ Is 12 even? true
 func greetUser() {
     fmt.Println("Hello! Welcome to the wonderful world of functions!")
 }
-```
+```go
 - **`func`** = Keyword to declare a function
 - **`greetUser`** = Function name (follows Go naming conventions)
 - **`()`** = Parameters (empty because no parameters needed)
@@ -319,7 +319,7 @@ func greetUser() {
 func greetByName(name string) {
     fmt.Printf("Hello, %s! Nice to meet you!\n", name)
 }
-```
+```go
 - **`name string`** = Parameter (name is the variable, string is the type)
 - **Parameters** = Variables defined in function signature with their types
 - **Arguments** = Actual values passed when calling the function
@@ -329,14 +329,14 @@ func addNumbers(a int, b int) int {
     sum := a + b
     return sum
 }
-```
+```go
 - **`a int, b int`** = Multiple parameters with types
 - **`int`** after parameters = Return type
 - **`return`** = Sends value back to caller
 
 ```go
 result1 := addNumbers(5, 3)
-```
+```go
 - **`addNumbers(5, 3)`** = Function call with arguments
 - **`5` and `3`** = Arguments passed to the function
 - **Return value** = Value that function sends back
@@ -350,14 +350,14 @@ func functionName(paramName paramType) returnType {
     // function body
     return value  // if function returns something
 }
-```
+```go
 
 **Multiple parameters of same type:**
 ```go
 func add(a, b int) int {  // a and b are both integers
     return a + b
 }
-```
+```go
 
 ### Multiple Return Values
 
@@ -373,12 +373,12 @@ func divide(a, b float64) (float64, float64) {
 
 // Usage
 quotient, remainder := divide(10, 3)
-```
+```go
 
 **Ignoring return values with blank identifier:**
 ```go
 onlyQuotient, _ := divide(10, 3)  // Ignore the remainder
-```
+```go
 
 ### Named Return Values
 
@@ -397,7 +397,7 @@ func calculate(a, b int) (int, int) {
     diff := a - b
     return sum, diff
 }
-```
+```go
 
 ### Variadic Functions
 
@@ -416,13 +416,13 @@ func sum(numbers ...int) int {  // ...int means 0 or more int arguments
 fmt.Println(sum(1, 2, 3))        // 6
 fmt.Println(sum(1, 2, 3, 4, 5))  // 15
 fmt.Println(sum())               // 0
-```
+```go
 
 **Passing a slice to variadic function:**
 ```go
 nums := []int{1, 2, 3, 4, 5}
 result := sum(nums...)  // Note the ... to unpack the slice
-```
+```go
 
 ### Function Scope
 
@@ -436,7 +436,7 @@ func myFunc() {
     fmt.Println(localVar)   // OK: Accessing local variable
 }
 // fmt.Println(localVar)   // Error: localVar is not accessible here
-```
+```go
 
 ### Anonymous Functions
 
@@ -453,7 +453,7 @@ result := multiply(5, 3)  // Use like a regular function
 result := func(x int) int {
     return x * 2
 }(5)  // Function is called immediately with argument 5
-```
+```go
 
 ### First-Class Functions
 
@@ -472,7 +472,7 @@ func process(numbers []int, operation func(int) int) []int {
 // Usage
 numbers := []int{1, 2, 3, 4, 5}
 doubled := process(numbers, func(n int) int { return n * 2 })
-```
+```go
 
 ### Error Handling Pattern
 
@@ -493,7 +493,7 @@ if err != nil {
     return
 }
 fmt.Println("Result:", result)
-```
+```go
 
 ### Common Errors & Solutions
 
@@ -516,7 +516,7 @@ func sendNotification(message string) error { ... }
 
 // Go naming conventions: use MixedCaps (camelCase starting with capital)
 func CalculateArea(length, width float64) float64 { ... }  // For exportable functions
-```
+```go
 
 **Function size:**
 - Keep functions focused on a single task
@@ -537,7 +537,7 @@ func processOrder(order Order) (float64, error) {
     // ... other processing
     return total, nil
 }
-```
+```go
 
 **Error handling in functions:**
 ```go
@@ -549,7 +549,7 @@ func divide(a, b float64) (float64, error) {
     }
     return a / b, nil
 }
-```
+```go
 
 ### Advanced Challenge (For the Brave!)
 
@@ -660,10 +660,77 @@ func transfer(fromAccount, toAccount *Account, amount float64) error {
                amount, fromAccount.Name, toAccount.Name)
     return nil
 }
-```
+```go
 
 ---
 
  **Excellent work! You now understand how to organize code using functions - a fundamental skill for all programmers!** 
 
 *This completes Stage 1 of Go learning! You've mastered the fundamentals of Go programming. Great job!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard go conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

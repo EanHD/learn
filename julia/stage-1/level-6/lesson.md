@@ -1,6 +1,6 @@
 # Level 6: Loops
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.jl` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.jl` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 1: Copying Code
 
@@ -46,7 +46,7 @@ println("\n$num times table:")
 for i in 1:10
     println("$num × $i = $(num * i)")
 end
-```
+```julia
 
 ---
 
@@ -55,17 +55,17 @@ end
 **Method 1 (Vim - Recommended):**
 ```julia
 <Space>r
-```
+```julia
 
 **Method 2 (Terminal):**
 ```bash
 julia main.jl
-```
+```julia
 
 **Expected output:**
-```
+```julia
 1 2 3 4 5 6 7 8 9 10
-```
+```julia
 
 
 ---

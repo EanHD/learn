@@ -1,6 +1,6 @@
 # Level 6: Loops and Repetition
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -60,27 +60,27 @@ fn main() {
         println!("Odd number: {}", i);
     }
 }
-```
+```rust
 
 ---
 
-### How to Compile and Run
+### How to Run
 
 1. **Navigate to your working directory**:
    ```bash
    cd /path/to/your/folder
-   ```
+   ```rust
 2. **Compile the code**:
    ```bash
    rustc loops.rs -o loops
-   ```
+   ```rust
 3. **Run your program**:
    ```bash
    ./loops
-   ```
+   ```rust
 
 **Expected output:**
-```
+```rust
 For loop counting:
 Count: 1
 Count: 2
@@ -106,7 +106,7 @@ Odd number: 3
 Odd number: 5
 Odd number: 7
 Odd number: 9
-```
+```rust
 
 ---
 
@@ -160,7 +160,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
     for i in 1..=5 {
         println!("Count: {}", i);
     }
-```
+```rust
 - **`for i in 1..=5`** = `i` takes values 1, 2, 3, 4, 5
 - **`..=`** = Inclusive range (includes 5)
 - **`i`** = Loop variable, different each iteration
@@ -171,7 +171,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
         println!("Count: {}", count);
         count = count + 1;
     }
-```
+```rust
 - **`mut count`** = Mutable variable for counting
 - **`while count <= 5`** = Continue while condition true
 - **`count = count + 1`** = Increment counter
@@ -184,7 +184,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
         }
         number = number + 1;
     }
-```
+```rust
 - **`loop`** = Infinite loop
 - **`break`** = Exit loop when condition met
 - **Must have break** or loop runs forever!
@@ -196,7 +196,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
         }
         println!("Odd number: {}", i);
     }
-```
+```rust
 - **`continue`** = Skip rest of iteration, go to next
 - **Even numbers** skipped, only odds printed
 
@@ -228,3 +228,59 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
  **Fantastic! You can now create repeating programs!** 
 
 *Next: Functions - Code Organization!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```rs
+fn main() {
+    println!("Hello, World!");
+}
+
+```rs
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard rust conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

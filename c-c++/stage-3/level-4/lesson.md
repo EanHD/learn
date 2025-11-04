@@ -1,6 +1,6 @@
 # Level 4: Interactive Problems
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 3: Problem to Pseudocode
@@ -22,40 +22,40 @@
 
 ### Learning Goals
 
-- Design intuitive menu systems
-- Handle user input validation
-- Create multi-step user workflows
-- Implement program loops and navigation
-- Provide clear user feedback
-- Handle exit conditions gracefully
+- [ ] Design intuitive menu systems
+- [ ] Handle user input validation
+- [ ] Create multi-step user workflows
+- [ ] Implement program loops and navigation
+- [ ] Provide clear user feedback
+- [ ] Handle exit conditions gracefully
 
 ---
 
 ### Interactive Design Framework
 
 **STEP 1: User Experience Design**
-- What tasks should the user be able to perform?
-- How should the menu be organized?
-- What is the user workflow for each feature?
-- How to provide clear instructions and feedback?
+- [ ] What tasks should the user be able to perform?
+- [ ] How should the menu be organized?
+- [ ] What is the user workflow for each feature?
+- [ ] How to provide clear instructions and feedback?
 
 **STEP 2: Program Structure**
-- What is the main menu structure?
-- How to handle user choices and navigation?
-- What data needs to be maintained between operations?
-- How to handle program exit?
+- [ ] What is the main menu structure?
+- [ ] How to handle user choices and navigation?
+- [ ] What data needs to be maintained between operations?
+- [ ] How to handle program exit?
 
 **STEP 3: Input Validation**
-- What inputs need validation?
-- How to handle invalid inputs gracefully?
-- What error messages to display?
-- How to allow users to retry?
+- [ ] What inputs need validation?
+- [ ] How to handle invalid inputs gracefully?
+- [ ] What error messages to display?
+- [ ] How to allow users to retry?
 
 **STEP 4: Interactive Pseudocode**
-- Design menu display logic
-- Plan input processing loops
-- Handle navigation between menus
-- Consider user experience flow
+- [ ] Design menu display logic
+- [ ] Plan input processing loops
+- [ ] Handle navigation between menus
+- [ ] Consider user experience flow
 
 ---
 
@@ -84,7 +84,7 @@ Create an interactive calculator program with a menu that allows users to:
 The program should display a menu, get user choice, perform the selected operation, and return to the menu until the user chooses to exit.
 
 **Example:**
-```
+```cpp
 === Calculator Menu ===
 1. Addition
 2. Subtraction
@@ -98,7 +98,7 @@ Enter second number: 5
 Result: 10 + 5 = 15
 
 Press Enter to continue...
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for menu-driven calculator
@@ -120,7 +120,7 @@ Create a banking system menu that allows users to:
 Maintain a balance and track transactions. Handle insufficient funds for withdrawals.
 
 **Example:**
-```
+```cpp
 === Banking Menu ===
 1. Check Balance
 2. Deposit
@@ -133,7 +133,7 @@ Enter deposit amount: 100
 Deposit successful! New balance: $100.00
 
 Press Enter to continue...
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for banking system
@@ -155,7 +155,7 @@ Create a student grade management system with menu options:
 Store up to 10 student names and grades. Handle cases where no grades are entered.
 
 **Example:**
-```
+```cpp
 === Grade Manager ===
 1. Add Student Grade
 2. View All Grades
@@ -169,7 +169,7 @@ Enter grade (0-100): 95
 Grade added successfully!
 
 Press Enter to continue...
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for grade management
@@ -192,7 +192,7 @@ Create a restaurant menu system with:
 Include at least 5 menu items with prices. Allow multiple items in one order.
 
 **Example:**
-```
+```cpp
 === Restaurant Menu ===
 1. View Menu
 2. Place Order
@@ -210,7 +210,7 @@ Enter choice: 1
 5. Dessert - $4.99
 
 Press Enter to continue...
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for restaurant ordering
@@ -233,7 +233,7 @@ Create a library book management system with:
 Track book availability and borrower names. Handle cases where books are not available.
 
 **Example:**
-```
+```cpp
 === Library System ===
 1. Add Book
 2. Search Books
@@ -248,7 +248,7 @@ Enter author: Kernighan & Ritchie
 Book added successfully!
 
 Press Enter to continue...
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for library system
@@ -270,7 +270,7 @@ Create a simple game menu system with:
 Include a number guessing game for "Start New Game". Track high scores and allow basic settings.
 
 **Example:**
-```
+```cpp
 === Game Menu ===
 1. Start New Game
 2. Load Game
@@ -287,7 +287,7 @@ Too low! Try again: 37
 Correct! You won in 3 guesses!
 
 Press Enter to continue...
-```
+```cpp
 
 **Your Task:**
 1. Write pseudocode for game menu system
@@ -299,7 +299,7 @@ Press Enter to continue...
 ### Interactive Pseudocode Guidelines
 
 **Menu System Structure:**
-```
+```cpp
 Algorithm: Menu System
 1. Display menu options clearly
 2. Get user choice
@@ -307,10 +307,10 @@ Algorithm: Menu System
 4. Process choice with appropriate action
 5. Return to menu or exit based on choice
 6. Handle invalid inputs gracefully
-```
+```cpp
 
 **Input Validation Loop:**
-```
+```cpp
 While input is invalid:
     Display prompt
     Get user input
@@ -320,7 +320,7 @@ While input is invalid:
     Else:
         Display error message
         Continue loop
-```
+```cpp
 
 ---
 
@@ -356,22 +356,22 @@ While input is invalid:
 ## Interactive Design Framework
 
 ### Step 1: User Workflow Analysis
-- **Tasks**: What can the user accomplish?
-- **Flow**: How does the user navigate the system?
-- **Data**: What information needs to be maintained?
-- **Feedback**: How to keep the user informed?
+- [ ] **Tasks**: What can the user accomplish?
+- [ ] **Flow**: How does the user navigate the system?
+- [ ] **Data**: What information needs to be maintained?
+- [ ] **Feedback**: How to keep the user informed?
 
 ### Step 2: Menu Structure Design
-- **Main Menu**: Primary options and organization
-- **Sub-menus**: Detailed options for complex features
-- **Navigation**: How users move between menus
-- **Exit Points**: Where users can leave the system
+- [ ] **Main Menu**: Primary options and organization
+- [ ] **Sub-menus**: Detailed options for complex features
+- [ ] **Navigation**: How users move between menus
+- [ ] **Exit Points**: Where users can leave the system
 
 ### Step 3: Input Handling
-- **Validation**: What constitutes valid input?
-- **Error Messages**: Clear, helpful error feedback
-- **Retry Logic**: Allow users to correct mistakes
-- **Default Values**: Sensible defaults where appropriate
+- [ ] **Validation**: What constitutes valid input?
+- [ ] **Error Messages**: Clear, helpful error feedback
+- [ ] **Retry Logic**: Allow users to correct mistakes
+- [ ] **Default Values**: Sensible defaults where appropriate
 
 ---
 
@@ -384,13 +384,13 @@ While input is invalid:
 ### Problem 1: Menu-Driven Calculator
 
 **Analysis:**
-- Menu with 5 options (4 operations + exit)
-- Input validation for menu choice
-- Operation-specific input for numbers
-- Loop until user chooses exit
+- [ ] Menu with 5 options (4 operations + exit)
+- [ ] Input validation for menu choice
+- [ ] Operation-specific input for numbers
+- [ ] Loop until user chooses exit
 
 **Menu Structure:**
-```
+```cpp
 While user hasn't chosen exit:
     Display menu
     Get choice
@@ -402,111 +402,189 @@ While user hasn't chosen exit:
         Exit program
     Else:
         Display invalid choice message
-```
+```cpp
 
 ---
 
 ### Problem 2: Simple Banking System
 
 **Analysis:**
-- Maintain balance variable
-- Track transactions (could use array or just last operation)
-- Validate withdrawal amounts
-- Menu-driven with 5 options
+- [ ] Maintain balance variable
+- [ ] Track transactions (could use array or just last operation)
+- [ ] Validate withdrawal amounts
+- [ ] Menu-driven with 5 options
 
 **Key Features:**
-- Balance starts at $0.00
-- Deposit: add to balance
-- Withdraw: check sufficient funds, subtract
-- History: display last few transactions
-- Input validation for amounts
+- [ ] Balance starts at $0.00
+- [ ] Deposit: add to balance
+- [ ] Withdraw: check sufficient funds, subtract
+- [ ] History: display last few transactions
+- [ ] Input validation for amounts
 
 ---
 
 ### Problem 3: Student Grade Manager
 
 **Analysis:**
-- Arrays for names and grades (up to 10)
-- Counter for number of students
-- Menu with 5 options
-- Handle empty list for statistics
+- [ ] Arrays for names and grades (up to 10)
+- [ ] Counter for number of students
+- [ ] Menu with 5 options
+- [ ] Handle empty list for statistics
 
 **Data Structure:**
-- char names[10][50]
-- float grades[10]
-- int student_count = 0
+- [ ] char names[10][50]
+- [ ] float grades[10]
+- [ ] int student_count = 0
 
 ---
 
 ### Problem 4: Restaurant Ordering System
 
 **Analysis:**
-- Menu items with prices (use arrays)
-- Current order tracking
-- Multiple items per order
-- Total calculation
+- [ ] Menu items with prices (use arrays)
+- [ ] Current order tracking
+- [ ] Multiple items per order
+- [ ] Total calculation
 
 **Order Structure:**
-- Item IDs array
-- Quantities array
-- Running total
-- Clear order option
+- [ ] Item IDs array
+- [ ] Quantities array
+- [ ] Running total
+- [ ] Clear order option
 
 ---
 
 ### Problem 5: Library Book System
 
 **Analysis:**
-- Book database (title, author, available, borrower)
-- Search functionality
-- Borrow/return logic
-- Availability checking
+- [ ] Book database (title, author, available, borrower)
+- [ ] Search functionality
+- [ ] Borrow/return logic
+- [ ] Availability checking
 
 **Book Structure:**
-- Title and author strings
-- Available flag
-- Borrower name (when borrowed)
+- [ ] Title and author strings
+- [ ] Available flag
+- [ ] Borrower name (when borrowed)
 
 ---
 
 ### Problem 6: Simple Game Menu
 
 **Analysis:**
-- Game menu with 5 options
-- Number guessing game implementation
-- High score tracking
-- Basic settings (difficulty?)
+- [ ] Game menu with 5 options
+- [ ] Number guessing game implementation
+- [ ] High score tracking
+- [ ] Basic settings (difficulty?)
 
 **Game Logic:**
-- Random number generation
-- Guess counter
-- Win/lose conditions
-- Score calculation
+- [ ] Random number generation
+- [ ] Guess counter
+- [ ] Win/lose conditions
+- [ ] Score calculation
 
 ---
 
 ### Interactive Programming Best Practices
 
 **User Experience:**
-- Clear, numbered menus
-- Consistent formatting
-- Helpful prompts and messages
-- Graceful error handling
+- [ ] Clear, numbered menus
+- [ ] Consistent formatting
+- [ ] Helpful prompts and messages
+- [ ] Graceful error handling
 
 **Program Structure:**
-- Main menu loop
-- Modular functions for each feature
-- Clear variable naming
-- Comments explaining complex logic
+- [ ] Main menu loop
+- [ ] Modular functions for each feature
+- [ ] Clear variable naming
+- [ ] Comments explaining complex logic
 
 **Input Handling:**
-- Validate all user inputs
-- Provide clear error messages
-- Allow users to retry
-- Handle unexpected inputs
+- [ ] Validate all user inputs
+- [ ] Provide clear error messages
+- [ ] Allow users to retry
+- [ ] Handle unexpected inputs
 
 ---
 
  **Congratulations! You've created interactive user interfaces!** 
 
 *Next: Decision-based problems with rule engines and eligibility systems! *
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- [ ] Review each function
+- [ ] Understand the flow
+- [ ] Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- [ ] Main function: Entry point
+- [ ] Helper functions: Support logic
+
+
+### <div style="page-break-after: always;"></div>
+
+Answer Key
+
+Expected implementation provided.
+
+<div style="page-break-after: always;"></div>
+
+---
+
+## Answer Key
+
+### Complete Solution
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard C++ conventions with proper imports and main function
+2. **Output**: Uses std::cout to print messages to the console
+3. **Standard Library**: Includes iostream for input/output operations
+4. **Return Value**: Returns 0 to indicate successful execution
+5. **Best Practices**: Code is readable and uses C++ idioms
+
+### Testing Your Solution
+
+1. **Compile**: `g++ hello.cpp -o hello`
+2. **Run**: `./hello`
+3. **Expected Output**: `Hello, World!`
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
+| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+
+### Tips for Learning
+
+- C++ is a superset of C with additional features
+- `std::cout` is the C++ way to print (replaces `printf`)
+- `std::endl` adds a newline and flushes the buffer
+- The `std::` prefix means these are from the "standard" namespace

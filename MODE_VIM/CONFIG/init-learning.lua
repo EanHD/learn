@@ -337,10 +337,8 @@ require("lazy").setup({
         { "<leader>fb", desc = "Buffers" },
         { "<leader>fh", desc = "Help tags" },
 
-        -- Run & Refactor group
+        -- Run command (standalone, no submenu)
         { "<leader>r", desc = "🚀 Run/Compile code" },
-        { "<leader>rn", desc = "Rename symbol" },
-        { "<leader>ro", desc = "Toggle read-only" },
 
         -- Code actions
         { "<leader>c", group = "Code" },
@@ -494,7 +492,7 @@ require("lazy").setup({
       { "K",  vim.lsp.buf.hover,        desc = "Hover docs" },
       { "gd", vim.lsp.buf.definition,   desc = "Go to definition" },
       { "gr", vim.lsp.buf.references,   desc = "Find references" },
-      { "<leader>rn", vim.lsp.buf.rename, desc = "Rename symbol" },
+      -- { "<leader>rn", vim.lsp.buf.rename, desc = "Rename symbol" },  -- Disabled to avoid conflict with <leader>r
       { "<leader>ca", vim.lsp.buf.code_action, desc = "Code action" },
     },
   },
@@ -821,12 +819,12 @@ map("n", "<leader>,", "<C-w><", { desc = "Narrower" })
 -- Quick save
 map("n", "<leader>w", ":w<CR>", { desc = "Save file" })
 
--- Toggle readonly
-map("n", "<leader>ro", function()
-  vim.opt_local.readonly = not vim.opt_local.readonly:get()
-  vim.opt_local.modifiable = not vim.opt_local.modifiable:get()
-  print("Readonly: " .. tostring(vim.opt_local.readonly:get()))
-end, { desc = "Toggle readonly" })
+-- Toggle readonly (disabled to avoid conflict with <leader>r for run/compile)
+-- map("n", "<leader>ro", function()
+--   vim.opt_local.readonly = not vim.opt_local.readonly:get()
+--   vim.opt_local.modifiable = not vim.opt_local.modifiable:get()
+--   print("Readonly: " .. tostring(vim.opt_local.readonly:get()))
+-- end, { desc = "Toggle readonly" })
 
 -- Clear search highlighting
 map("n", "<Esc>", ":noh<CR>", { silent = true, desc = "Clear search highlight" })
@@ -871,11 +869,12 @@ map("n", "<leader>n", function()
 
   if vim.fn.filereadable(next_path) == 1 then
     vim.cmd("edit " .. next_path)
-    print("Moved to Level " .. next_level)
+    vim.cmd("wincmd l")  -- Switch to right window (code window)
+    print("Moved to Level " .. next_level .. " - Code window active")
   else
     print("Next lesson not found")
   end
-end, { desc = "Next lesson" })
+end, { desc = "Next lesson (switches to code window)" })
 
 -- Jump to previous lesson
 map("n", "<leader>p", function()
@@ -896,11 +895,12 @@ map("n", "<leader>p", function()
 
   if vim.fn.filereadable(prev_path) == 1 then
     vim.cmd("edit " .. prev_path)
-    print("Moved to Level " .. prev_level)
+    vim.cmd("wincmd l")  -- Switch to right window (code window)
+    print("Moved to Level " .. prev_level .. " - Code window active")
   else
     print("Previous lesson not found")
   end
-end, { desc = "Previous lesson" })
+end, { desc = "Previous lesson (switches to code window)" })
 
 -- Show lesson info
 map("n", "<leader>i", function()
@@ -912,7 +912,66 @@ map("n", "<leader>i", function()
   end
 end, { desc = "Show lesson info" })
 
--- Get compile/run command based on file extension
+-- Function to detect language from file path
+local function detect_language()
+  local current_file = vim.fn.expand("%:p")
+  
+  if current_file:match("/python/") then return "python"
+  elseif current_file:match("/java/") then return "java"
+  elseif current_file:match("/javascript/") then return "javascript"
+  elseif current_file:match("/c%-c++/") then return "cpp"
+  elseif current_file:match("/shell/") then return "bash"
+  elseif current_file:match("/sql/") then return "sql"
+  elseif current_file:match("/go/") then return "go"
+  elseif current_file:match("/rust/") then return "rust"
+  elseif current_file:match("/php/") then return "php"
+  elseif current_file:match("/r/") then return "r"
+  elseif current_file:match("/julia/") then return "julia"
+  elseif current_file:match("/typescript/") then return "typescript"
+  elseif current_file:match("/lua/") then return "lua"
+  elseif current_file:match("/powershell/") then return "powershell"
+  elseif current_file:match("/zig/") then return "zig"
+  elseif current_file:match("/nosql/") then return "nosql"
+  elseif current_file:match("/csharp/") then return "csharp"
+  elseif current_file:match("/dart/") then return "dart"
+  elseif current_file:match("/kotlin/") then return "kotlin"
+  elseif current_file:match("/swift/") then return "swift"
+  else return "unknown" end
+end
+
+-- Get run command for current language
+local function get_run_command()
+  local lang = detect_language()
+  
+  local commands = {
+    python = "python3 main.py",
+    java = "javac Main.java && java Main",
+    javascript = "node main.js",
+    cpp = "make run",
+    c = "make run",
+    bash = "bash main.sh",
+    sh = "bash main.sh",
+    sql = "sqlite3 < main.sql",
+    go = "go run main.go",
+    rust = "cargo run --release",
+    php = "php main.php",
+    r = "Rscript main.r",
+    julia = "julia main.jl",
+    typescript = "ts-node main.ts",
+    lua = "lua main.lua",
+    powershell = "pwsh ./main.ps1",
+    zig = "zig build run",
+    nosql = "mongo < main.js",
+    csharp = "dotnet run",
+    dart = "dart main.dart",
+    kotlin = "kotlin -J-Xms128m -J-Xmx768m MainKt",
+    swift = "swift main.swift",
+  }
+  
+  return commands[lang] or "echo 'No run command defined'"
+end
+
+-- Get compile/run command based on file extension (fallback if language detection fails)
 local function get_compile_command()
   local current_file = vim.fn.expand("%:t")  -- Current file name
   local workspace_path = vim.fn.getcwd()
@@ -944,13 +1003,20 @@ local function get_compile_command()
     end
   end
 
-  -- Detect language and return proper compile/run command
+  -- First try to get from language detection
+  local lang = detect_language()
+  local run_cmd = get_run_command()
+  if run_cmd ~= "echo 'No run command defined'" then
+    return ":!" .. run_cmd, lang:upper()
+  end
+
+  -- Fallback to file extension detection
   if code_file:match("%.cpp$") or code_file:match("%.cc$") then
-    return ":!g++ % -o main && ./main", "C++"
+    return ":!make run", "C++"
   elseif code_file:match("%.c$") then
-    return ":!gcc % -o main && ./main", "C"
+    return ":!make run", "C"
   elseif code_file:match("%.rs$") then
-    return ":!rustc % -o main && ./main", "Rust"
+    return ":!cargo run --release", "Rust"
   elseif code_file:match("%.py$") then
     return ":!python3 %", "Python"
   elseif code_file:match("%.js$") then
@@ -984,11 +1050,15 @@ end
 map("n", "<leader>h", function()
   -- Get compile command dynamically
   local compile_cmd, lang_name = get_compile_command()
+  
+  -- Get language-specific run command
+  local run_cmd = get_run_command()
+  local current_lang = detect_language()
 
-  -- Create popup content
+  -- Create popup content with dynamic language info
   local content = {
     "╔══════════════════════════════════════════════════════════════════════╗",
-    "║                     ⚡ ESSENTIAL SHORTCUTS                           ║",
+    "║                 " .. current_lang:upper() .. " LESSON - ESSENTIAL SHORTCUTS                   ║",
     "╚══════════════════════════════════════════════════════════════════════╝",
     "   Press <Esc>, q, or <Space>h to close this menu",
     "",
@@ -997,22 +1067,17 @@ map("n", "<leader>h", function()
     "   Ctrl+w =         →  Balance window sizes",
     "",
     "📚 LESSON NAVIGATION:",
+    "   <Space>n / p     →  Next/Previous lesson (switches to code)",
     "   j / k            →  Scroll down/up",
-    "   Ctrl+d / Ctrl+u  →  Page down/up",
     "   gg / G           →  Jump to top/bottom",
     "",
     "✏️  EDITING (in code window):",
     "   i                →  Insert mode",
     "   Esc              →  Return to normal mode",
     "   :w               →  Save file",
-    "   :q               →  Quit",
-    "   <Space>h         →  Open this menu",
-    "   <Space>g         →  Open quick guide",
-    "   <Space>t         →  Toggle terminal",
     "",
-    "🔧 COMPILE/RUN (" .. lang_name .. "):",
-    "   <Space>r         →  Compile & run (auto-detect)",
-    "   " .. compile_cmd .. string.rep(" ", 17 - #compile_cmd) .. "→  Manual command",
+    "🔧 RUN COMMAND (" .. lang_name .. "):",
+    "   <Space>r         →  Run: " .. run_cmd,
     "",
     "💡 TIP: Lesson is on the LEFT, your code is on the RIGHT",
     "═════════════════════════════════════════════════════════════════════════",
@@ -1045,36 +1110,6 @@ map("n", "<leader>h", function()
 
   vim.api.nvim_win_set_option(win, "winblend", 10)
 
-  -- Highlighting
-  vim.api.nvim_set_hl(0, "EssentialTitle", { fg = "#61afef", bold = true, bg = "#2c313c" })
-  vim.api.nvim_set_hl(0, "EssentialSection", { fg = "#e5c07b", bold = true })
-  vim.api.nvim_set_hl(0, "EssentialKey", { fg = "#98c379", bold = true })
-  vim.api.nvim_set_hl(0, "EssentialDesc", { fg = "#abb2bf" })
-  vim.api.nvim_set_hl(0, "EssentialBorder", { fg = "#56b6c2" })
-  vim.api.nvim_set_hl(0, "EssentialTip", { fg = "#c678dd", italic = true })
-
-  -- Apply highlights
-  vim.api.nvim_buf_add_highlight(buf, -1, "EssentialBorder", 0, 0, -1)
-  vim.api.nvim_buf_add_highlight(buf, -1, "EssentialTitle", 1, 0, -1)
-  vim.api.nvim_buf_add_highlight(buf, -1, "EssentialBorder", 2, 0, -1)
-
-  for i = 1, #content do
-    local line = content[i]
-    if line:match("^[🪟📚✏️🔧📁💡]") then
-      vim.api.nvim_buf_add_highlight(buf, -1, "EssentialSection", i - 1, 0, -1)
-    elseif line:match("→") then
-      local arrow_pos = line:find("→")
-      if arrow_pos then
-        vim.api.nvim_buf_add_highlight(buf, -1, "EssentialKey", i - 1, 0, arrow_pos - 1)
-        vim.api.nvim_buf_add_highlight(buf, -1, "EssentialDesc", i - 1, arrow_pos + 2, -1)
-      end
-    elseif line:match("^💡") then
-      vim.api.nvim_buf_add_highlight(buf, -1, "EssentialTip", i - 1, 0, -1)
-    elseif line:match("^═+$") then
-      vim.api.nvim_buf_add_highlight(buf, -1, "EssentialBorder", i - 1, 0, -1)
-    end
-  end
-
   -- Close on Esc, Space+h, or q
   local close = function()
     if vim.api.nvim_win_is_valid(win) then
@@ -1088,7 +1123,7 @@ map("n", "<leader>h", function()
   vim.api.nvim_buf_set_keymap(buf, "n", "<Esc>", "", { callback = close, noremap = true, silent = true })
   vim.api.nvim_buf_set_keymap(buf, "n", "<leader>h", "", { callback = close, noremap = true, silent = true })
   vim.api.nvim_buf_set_keymap(buf, "n", "q", "", { callback = close, noremap = true, silent = true })
-end, { desc = "Essential shortcuts popup" })
+end, { desc = "Show dynamic help for current language" })
 
 -- Toggle Quick Navigation Guide Popup
 map("n", "<leader>g", function()

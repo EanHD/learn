@@ -1,6 +1,6 @@
 # Level 2: Variables and Data Types
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -95,7 +95,7 @@ func main() {
     // The following would cause an error:
     // var number int = "this won't work" // Type mismatch error
 }
-```
+```go
 
 ---
 
@@ -105,15 +105,15 @@ func main() {
    ```bash
    mkdir variables-example && cd variables-example
    go mod init variables
-   ```
+   ```go
 2. **Copy the code into `variables.go`**
 3. **Run your program**:
    ```bash
    go run variables.go
-   ```
+   ```bash
 
 **Expected output:**
-```
+```go
 === Personal Info ===
 Name: Alex
 City: New York
@@ -138,7 +138,7 @@ Happy: true
 === Multiple Declaration Example ===
 Full Name: John Doe
 Age: 35
-```
+```go
 
 ---
 
@@ -196,7 +196,7 @@ Go has several important concepts about variables:
 
 ```go
 var name string = "Alex"
-```
+```go
 - **`var`** = Keyword to declare a variable
 - **`name`** = Variable name (follows Go naming conventions)
 - **`string`** = Type declaration (Go is statically typed)
@@ -205,14 +205,14 @@ var name string = "Alex"
 
 ```go
 country := "USA"
-```
+```go
 - **`:=`** = Short variable declaration (declare and initialize)
 - **Available only** inside functions in Go
 - **Type inferred** by Go from the assigned value
 
 ```go
 fmt.Println("Name: " + name)
-```
+```go
 - **`+`** = String concatenation operator (joins strings together)
 - The variable `name` gets its value inserted into the output string
 
@@ -224,19 +224,19 @@ Go has three main ways to declare variables:
 ```go
 var name string = "Alex"
 var age int = 25
-```
+```go
 
 2. **Type omitted (inferred)**:
 ```go
 var name = "Alex"  // Type inferred as string
 var age = 25       // Type inferred as int
-```
+```go
 
 3. **Short declaration** (inside functions only):
 ```go
 name := "Alex"     // Type inferred as string
 age := 25          // Type inferred as int
-```
+```go
 
 ### Variable Naming Rules
 
@@ -277,7 +277,7 @@ var name string    // Zero value: ""
 var age int        // Zero value: 0
 var height float64 // Zero value: 0.0
 var isTrue bool    // Zero value: false
-```
+```go
 
 ### Multiple Variable Declarations
 
@@ -288,13 +288,13 @@ var (
     age  int    = 25
     city string = "New York"
 )
-```
+```go
 
 **Same type on one line**:
 ```go
 var name, city string = "Alex", "New York"
 var age1, age2 int = 25, 30
-```
+```go
 
 ### Static Typing
 
@@ -304,7 +304,7 @@ Go's static typing means you must be explicit about types, and type mismatches c
 var age int = 25
 // This will cause a compile error:
 // age = "twenty five"  // Cannot assign string to int variable
-```
+```go
 
 ### Common Errors & Solutions
 
@@ -364,10 +364,77 @@ func main() {
     fmt.Println("Is student AND not employed:", isStudent && !isEmployed)
     fmt.Println("Is employed OR retired:", isEmployed || isRetired)
 }
-```
+```go
 
 ---
 
  **Excellent work! You now understand variables - the foundation of all programming!** 
 
 *Ready for the next challenge? Let's do some math with our variables!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard go conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

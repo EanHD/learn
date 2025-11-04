@@ -1,6 +1,6 @@
 # Level 5: Conditionals and Decision Making
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -219,7 +219,7 @@ func ternary(condition bool, a string, b string) string {
     }
     return b
 }
-```
+```go
 
 ---
 
@@ -229,15 +229,15 @@ func ternary(condition bool, a string, b string) string {
    ```bash
    mkdir conditionals-example && cd conditionals-example
    go mod init conditionals
-   ```
+   ```go
 2. **Copy the code into `conditionals.go`**
 3. **Run your program**:
    ```bash
    go run conditionals.go
-   ```
+   ```bash
 
 **Expected output:**
-```
+```go
 === Simple Age Check ===
 You are an adult (18 or older)
 
@@ -270,7 +270,7 @@ Good job!
 === Switch with Expressions ===
 Grade: B+
 Score: 88, Result: Pass
-```
+```go
 
 ---
 
@@ -337,7 +337,7 @@ if age >= 18 {
 } else {
     fmt.Println("You are a minor (under 18)")
 }
-```
+```go
 - **`if`** = Start of conditional statement
 - **`age >= 18`** = Condition that evaluates to true or false
 - **`{}`** = Code block executed if condition is true
@@ -355,7 +355,7 @@ if grade >= 90 {
 } else {
     fmt.Println("Grade: F (below 60)")
 }
-```
+```go
 - **`else if`** = Additional condition to check if the first was false
 - **Execution order** matters: Go checks each condition in order and executes the first true one
 - **Only one block** executes, not multiple blocks
@@ -366,7 +366,7 @@ if username == "admin" && password == "secret123" {
 } else {
     fmt.Println("Login failed! Invalid username or password.")
 }
-```
+```go
 - **`&&`** = Logical AND operator (both conditions must be true)
 - **`==`** = Equality comparison operator
 - **Security** considerations: Never hardcode credentials in real programs
@@ -380,7 +380,7 @@ if username = "admin" {  // ERROR: Cannot use assignment in condition
 
 // Correct! This compares values
 if username == "admin" {  // OK: Equality comparison
-```
+```go
 
 ### Logical Operators
 
@@ -413,7 +413,7 @@ isLoggedIn := false
 if !isLoggedIn {
     fmt.Println("Please log in first")
 }
-```
+```go
 
 ### Nested Conditionals
 
@@ -427,7 +427,7 @@ if number > 0 {
         }
     }
 }
-```
+```go
 - **Inner condition** only evaluated if outer condition is true
 - **Be careful** with nesting - too deep can be hard to read
 
@@ -442,7 +442,7 @@ case 2:
 default:  // Executes if no case matches
     fmt.Println("Invalid day number")
 }
-```
+```go
 - **Alternative to long if/else if** chains
 - **Automatic break** after each case (no fallthrough by default)
 - **`default`** = Catch-all case when no others match
@@ -459,7 +459,7 @@ case "A", "A+", "A-":  // Multiple values
 case "B", "B+":
     fmt.Println("Good!")
 }
-```
+```go
 
 **Switch without expression (like if/else if):**
 ```go
@@ -474,7 +474,7 @@ case score >= 70:
 default:
     fmt.Println("F grade")
 }
-```
+```go
 
 ### Go's Logical Short-Circuiting
 
@@ -490,7 +490,7 @@ if x != 0 && 10/x > 2 {  // If x is 0, 10/x is never evaluated (no division by z
 if x == 0 || 10/x > 2 {  // If x is 0, 10/x is never evaluated
     fmt.Println("This is also safe!")
 }
-```
+```go
 
 ### No Ternary Operator in Go
 
@@ -512,7 +512,7 @@ func ternary(condition bool, a string, b string) string {
     }
     return b
 }
-```
+```go
 
 ### Common Errors & Solutions
 
@@ -547,7 +547,7 @@ if isValidEmail { ... }
 // Avoid
 if x { ... }
 if flag { ... }
-```
+```go
 
 **Keep conditions simple:**
 ```go
@@ -557,7 +557,7 @@ if canVote { ... }
 
 // Avoid - hard to read
 if age >= 18 && isCitizen && !isInPrison { ... }
-```
+```go
 
 **Consider switch vs if/else if:**
 - Use `switch` for exact value matching
@@ -640,10 +640,77 @@ func main() {
         fmt.Println("Not eligible for graduation, must repeat course")
     }
 }
-```
+```go
 
 ---
 
  **Excellent work! You now understand how to make your programs make intelligent decisions!** 
 
 *Ready for the next challenge? Let's learn about loops and repetition!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard go conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

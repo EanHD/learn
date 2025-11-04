@@ -1,6 +1,6 @@
 # Level 5: Decision Pseudocode
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`Main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`Main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -59,9 +59,9 @@ Decision-making is the intelligence of programs! Today you'll master complex con
    ```
 
 **Expected output:**
-```
+```java
 Hello, World!
-```
+```java
 
 ## Algorithm 1: Loan Approval System
 
@@ -107,15 +107,15 @@ Algorithm: Evaluate Loan Application
 18. Display "Credit score: " + creditScore
 19. Display "Loan requested: $" + loanAmount
 20. If approvalStatus equals "APPROVED":
-   a. Display "✓ LOAN APPROVED!"
+   a. Display " LOAN APPROVED!"
    b. Display "Maximum approved amount: $" + maxLoanAmount
 21. Else if approvalStatus equals "REQUIRES MANAGER APPROVAL":
-   a. Display "⚠ REQUIRES MANAGER APPROVAL"
+   a. Display " REQUIRES MANAGER APPROVAL"
    b. Display "Reason: High loan-to-income ratio"
 22. Else:
-   a. Display "❌ LOAN DENIED"
+   a. Display " LOAN DENIED"
    b. Display "Reason: " + approvalStatus
-```
+```java
 
 **Decision Logic:**
 - Age restrictions (18-70)
@@ -179,18 +179,18 @@ Algorithm: Assess Health Risk Factors
 32. Display "Risk points: " + riskPoints + "/12"
 33. Display "Risk level: " + riskLevel
 34. If riskLevel equals "HIGH":
-   a. Display "🔴 HIGH RISK - Consult doctor immediately"
+   a. Display " HIGH RISK - Consult doctor immediately"
    b. Display "Recommendations: Lifestyle changes, medical evaluation"
 35. Else if riskLevel equals "MODERATE":
-   a. Display "🟠 MODERATE RISK - Monitor health closely"
+   a. Display " MODERATE RISK - Monitor health closely"
    b. Display "Recommendations: Improve diet, start exercising"
 36. Else if riskLevel equals "ELEVATED":
    a. Display "�� ELEVATED RISK - Take preventive measures"
    b. Display "Recommendations: Regular check-ups, healthy habits"
 37. Else:
-   a. Display "🟢 LOW RISK - Maintain healthy lifestyle"
+   a. Display " LOW RISK - Maintain healthy lifestyle"
    b. Display "Recommendations: Continue current healthy habits"
-```
+```java
 
 **Decision Logic:**
 - Multi-factor risk assessment
@@ -250,12 +250,12 @@ Algorithm: Determine Academic Standing
 19. Display "Academic Standing: " + standing
 20. Display "Eligibility Status: " + eligibilityStatus
 21. If eligibilityStatus equals "ELIGIBLE":
-   a. Display "✓ Eligible for all academic activities"
+   a. Display " Eligible for all academic activities"
 22. Else if eligibilityStatus equals "RESTRICTED":
-   a. Display "⚠ Limited eligibility - Academic plan required"
+   a. Display " Limited eligibility - Academic plan required"
 23. Else:
-   a. Display "❌ Counseling required - Contact academic advisor"
-```
+   a. Display " Counseling required - Contact academic advisor"
+```java
 
 **Decision Logic:**
 - Multi-criteria academic evaluation
@@ -316,15 +316,15 @@ Algorithm: Calculate Insurance Premium
 32. Display "Risk Multiplier: " + riskMultiplier
 33. Display "Final Premium: $" + finalPremium
 34. If riskMultiplier > 2.0:
-   a. Display "🔴 HIGH RISK PROFILE"
+   a. Display " HIGH RISK PROFILE"
    b. Display "Consider defensive driving courses"
 35. Else if riskMultiplier > 1.5:
-   a. Display "🟠 MODERATE RISK PROFILE"
+   a. Display " MODERATE RISK PROFILE"
    b. Display "Safe driving discount may apply"
 36. Else:
-   a. Display "🟢 LOW RISK PROFILE"
+   a. Display " LOW RISK PROFILE"
    b. Display "Eligible for premium discounts"
-```
+```java
 
 **Decision Logic:**
 - Multi-factor risk assessment
@@ -356,16 +356,16 @@ Algorithm: Plan Travel Itinerary
 13. Initialize activityCount to 0
 14. If season is "summer":
    a. If destination contains "beach":
-      i. Display "🏖 Beach activities recommended"
+      i. Display " Beach activities recommended"
       ii. Add 50 to totalCost per day
       iii. Set activityCount to 5
    b. Else:
-      i. Display "⛰ Mountain activities recommended"
+      i. Display " Mountain activities recommended"
       ii. Add 40 to totalCost per day
       iii. Set activityCount to 4
 15. Else if season is "winter":
    a. If destination contains "mountain":
-      i. Display "⛷ Skiing activities recommended"
+      i. Display " Skiing activities recommended"
       ii. Add 80 to totalCost per day
       iii. Set activityCount to 3
    b. Else:
@@ -373,7 +373,7 @@ Algorithm: Plan Travel Itinerary
       ii. Add 30 to totalCost per day
       iii. Set activityCount to 4
 16. Else:
-   a. Display "🚴 Outdoor activities recommended"
+   a. Display " Outdoor activities recommended"
    b. Add 35 to totalCost per day
    c. Set activityCount to 4
 17. Calculate accommodationCost = dailyBudget × 0.4 × tripDays
@@ -385,7 +385,7 @@ Algorithm: Plan Travel Itinerary
 23. If groupSize > 4:
    a. Calculate groupDiscount = totalBudget × 0.1
    b. Subtract groupDiscount from totalBudget
-   c. Display "💰 Group discount applied: $" + groupDiscount
+   c. Display " Group discount applied: $" + groupDiscount
 24. Display "=== Travel Itinerary ==="
 25. Display "Destination: " + destination
 26. Display "Duration: " + tripDays + " days"
@@ -400,10 +400,10 @@ Algorithm: Plan Travel Itinerary
 35. Display "Miscellaneous: $" + miscellaneousCost
 36. Display "Total Estimated Cost: $" + totalBudget
 37. If totalBudget > dailyBudget × tripDays:
-   a. Display "⚠ Budget exceeded by $" + (totalBudget - dailyBudget × tripDays)
+   a. Display " Budget exceeded by $" + (totalBudget - dailyBudget × tripDays)
 38. Else:
-   a. Display "✓ Within budget - $" + (dailyBudget × tripDays - totalBudget) + " remaining"
-```
+   a. Display " Within budget - $" + (dailyBudget × tripDays - totalBudget) + " remaining"
+```java
 
 **Decision Logic:**
 - Seasonal activity recommendations
@@ -470,15 +470,15 @@ Algorithm: Evaluate Employee Performance
 27. Display "Performance Rating: " + performanceRating
 28. Display "Salary Adjustment: " + salaryAdjustment + "%"
 29. If performanceRating equals "OUTSTANDING":
-   a. Display "🏆 EMPLOYEE OF THE YEAR CANDIDATE"
+   a. Display " EMPLOYEE OF THE YEAR CANDIDATE"
    b. Display "Eligible for bonus and promotion consideration"
 30. Else if performanceRating equals "UNSATISFACTORY":
-   a. Display "❌ PERFORMANCE IMPROVEMENT PLAN REQUIRED"
+   a. Display " PERFORMANCE IMPROVEMENT PLAN REQUIRED"
    b. Display "Mandatory counseling and training"
 31. Else:
-   a. Display "✓ Performance review complete"
+   a. Display " Performance review complete"
    b. Display "Continue professional development"
-```
+```java
 
 **Decision Logic:**
 - Multi-criteria performance evaluation
@@ -501,7 +501,7 @@ If primaryCondition && secondaryCondition:
         DENY
 Else:
     DENY
-```
+```java
 
 **Risk Assessment:**
 ```java
@@ -510,7 +510,7 @@ For each riskFactor:
     If factorPresent:
         Add points to riskScore
 Categorize based on totalScore
-```
+```java
 
 **Multi-tier Classification:**
 ```java
@@ -523,7 +523,7 @@ Else if score >= thresholdB:
     CATEGORY_B
 Else:
     CATEGORY_C
-```
+```java
 
 ---
 
@@ -571,7 +571,7 @@ ApplicationState evaluateApplication(ApplicationData data) {
     if (data.income > 50000 && data.score > 700) return ApplicationState.APPROVED;
     return ApplicationState.PROCESSING;
 }
-```
+```java
 
 ### Rule Engine Pattern
 ```java
@@ -584,7 +584,7 @@ int evaluateRules(DataItem item, Rule[] rules) {
     }
     return score;
 }
-```
+```java
 
 ---
 
@@ -652,20 +652,20 @@ public class LoanApproval {
         System.out.printf("Loan requested: $%.2f\n", loanAmount);
         
         if (approvalStatus.equals("APPROVED")) {
-            System.out.println("✓ LOAN APPROVED!");
+            System.out.println(" LOAN APPROVED!");
             System.out.printf("Maximum approved amount: $%.2f\n", maxLoanAmount);
         } else if (approvalStatus.equals("REQUIRES MANAGER APPROVAL")) {
-            System.out.println("⚠ REQUIRES MANAGER APPROVAL");
+            System.out.println(" REQUIRES MANAGER APPROVAL");
             System.out.println("Reason: High loan-to-income ratio");
         } else {
-            System.out.println("❌ LOAN DENIED");
+            System.out.println(" LOAN DENIED");
             System.out.println("Reason: " + approvalStatus);
         }
         
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Complex nested conditional logic
@@ -741,23 +741,23 @@ public class HealthRiskAssessment {
         System.out.println("Risk level: " + riskLevel);
         
         if (riskLevel.equals("HIGH")) {
-            System.out.println("🔴 HIGH RISK - Consult doctor immediately");
+            System.out.println(" HIGH RISK - Consult doctor immediately");
             System.out.println("Recommendations: Lifestyle changes, medical evaluation");
         } else if (riskLevel.equals("MODERATE")) {
-            System.out.println("🟠 MODERATE RISK - Monitor health closely");
+            System.out.println(" MODERATE RISK - Monitor health closely");
             System.out.println("Recommendations: Improve diet, start exercising");
         } else if (riskLevel.equals("ELEVATED")) {
-            System.out.println("🟡 ELEVATED RISK - Take preventive measures");
+            System.out.println(" ELEVATED RISK - Take preventive measures");
             System.out.println("Recommendations: Regular check-ups, healthy habits");
         } else {
-            System.out.println("🟢 LOW RISK - Maintain healthy lifestyle");
+            System.out.println(" LOW RISK - Maintain healthy lifestyle");
             System.out.println("Recommendations: Continue current healthy habits");
         }
         
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Point-based risk assessment system
@@ -839,17 +839,17 @@ public class AcademicStanding {
         System.out.println("Eligibility Status: " + eligibilityStatus);
         
         if (eligibilityStatus.equals("ELIGIBLE")) {
-            System.out.println("✓ Eligible for all academic activities");
+            System.out.println(" Eligible for all academic activities");
         } else if (eligibilityStatus.equals("RESTRICTED")) {
-            System.out.println("⚠ Limited eligibility - Academic plan required");
+            System.out.println(" Limited eligibility - Academic plan required");
         } else {
-            System.out.println("❌ Counseling required - Contact academic advisor");
+            System.out.println(" Counseling required - Contact academic advisor");
         }
         
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Multi-criteria academic evaluation
@@ -924,20 +924,20 @@ public class InsurancePremium {
         System.out.printf("Final Premium: $%.2f\n", finalPremium);
         
         if (riskMultiplier > 2.0) {
-            System.out.println("🔴 HIGH RISK PROFILE");
+            System.out.println(" HIGH RISK PROFILE");
             System.out.println("Consider defensive driving courses");
         } else if (riskMultiplier > 1.5) {
-            System.out.println("🟠 MODERATE RISK PROFILE");
+            System.out.println(" MODERATE RISK PROFILE");
             System.out.println("Safe driving discount may apply");
         } else {
-            System.out.println("🟢 LOW RISK PROFILE");
+            System.out.println(" LOW RISK PROFILE");
             System.out.println("Eligible for premium discounts");
         }
         
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Cumulative risk multiplier system (*= operator)
@@ -986,26 +986,26 @@ public class TravelPlanner {
         // Seasonal activity planning
         if (season.equalsIgnoreCase("summer")) {
             if (destination.toLowerCase().contains("beach")) {
-                System.out.println("🏖 Beach activities recommended");
+                System.out.println(" Beach activities recommended");
                 totalCost += 50;
                 activityCount = 5;
             } else {
-                System.out.println("⛰ Mountain activities recommended");
+                System.out.println(" Mountain activities recommended");
                 totalCost += 40;
                 activityCount = 4;
             }
         } else if (season.equalsIgnoreCase("winter")) {
             if (destination.toLowerCase().contains("mountain")) {
-                System.out.println("⛷ Skiing activities recommended");
+                System.out.println(" Skiing activities recommended");
                 totalCost += 80;
                 activityCount = 3;
             } else {
-                System.out.println("🎭 Cultural activities recommended");
+                System.out.println(" Cultural activities recommended");
                 totalCost += 30;
                 activityCount = 4;
             }
         } else {
-            System.out.println("🚴 Outdoor activities recommended");
+            System.out.println(" Outdoor activities recommended");
             totalCost += 35;
             activityCount = 4;
         }
@@ -1022,7 +1022,7 @@ public class TravelPlanner {
         if (groupSize > 4) {
             double groupDiscount = totalBudget * 0.1;
             totalBudget -= groupDiscount;
-            System.out.printf("💰 Group discount applied: $%.2f\n", groupDiscount);
+            System.out.printf(" Group discount applied: $%.2f\n", groupDiscount);
         }
         
         System.out.println("\n=== Travel Itinerary ===");
@@ -1041,15 +1041,15 @@ public class TravelPlanner {
         
         double budgetLimit = dailyBudget * tripDays;
         if (totalBudget > budgetLimit) {
-            System.out.printf("⚠ Budget exceeded by $%.2f\n", totalBudget - budgetLimit);
+            System.out.printf(" Budget exceeded by $%.2f\n", totalBudget - budgetLimit);
         } else {
-            System.out.printf("✓ Within budget - $%.2f remaining\n", budgetLimit - totalBudget);
+            System.out.printf(" Within budget - $%.2f remaining\n", budgetLimit - totalBudget);
         }
         
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Seasonal activity recommendations (nested if for season + destination)
@@ -1139,20 +1139,20 @@ public class PerformanceReview {
         System.out.printf("Salary Adjustment: %.1f%%\n", salaryAdjustment);
         
         if (performanceRating.equals("OUTSTANDING")) {
-            System.out.println("🏆 EMPLOYEE OF THE YEAR CANDIDATE");
+            System.out.println(" EMPLOYEE OF THE YEAR CANDIDATE");
             System.out.println("Eligible for bonus and promotion consideration");
         } else if (performanceRating.equals("UNSATISFACTORY")) {
-            System.out.println("❌ PERFORMANCE IMPROVEMENT PLAN REQUIRED");
+            System.out.println(" PERFORMANCE IMPROVEMENT PLAN REQUIRED");
             System.out.println("Mandatory counseling and training");
         } else {
-            System.out.println("✓ Performance review complete");
+            System.out.println(" Performance review complete");
             System.out.println("Continue professional development");
         }
         
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Multi-criteria performance evaluation (three scores averaged)
@@ -1194,7 +1194,7 @@ if (age >= 18) {
         }
     }
 }
-```
+```java
 
 **Consistent Structure:**
 ```java
@@ -1206,7 +1206,7 @@ if (condition1) {
 } else {
     // handle default case
 }
-```
+```java
 
 **Early Returns (in methods):**
 ```java
@@ -1218,7 +1218,7 @@ public void processApplication(int age, double income) {
     }
     // continue with valid input
 }
-```
+```java
 
 **Enum for States:**
 ```java
@@ -1230,10 +1230,10 @@ RiskLevel level = RiskLevel.LOW;
 if (riskPoints >= 8) level = RiskLevel.HIGH;
 else if (riskPoints >= 5) level = RiskLevel.MODERATE;
 else if (riskPoints >= 3) level = RiskLevel.ELEVATED;
-```
+```java
 
 ---
 
-✅ **Brilliant! You've mastered complex decision-making in code!** 
+ **Brilliant! You've mastered complex decision-making in code!** 
 
-*Programs can now make intelligent decisions like real applications. Next: Loop algorithms in pseudocode! 🚀*
+*Programs can now make intelligent decisions like real applications. Next: Loop algorithms in pseudocode! *

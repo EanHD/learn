@@ -1,6 +1,6 @@
 # Level 5: Conditionals and Decision Making
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -66,33 +66,33 @@ fn main() {
         println!("a is less than or equal to b");
     }
 }
-```
+```rust
 
 ---
 
-### How to Compile and Run
+### How to Run
 
 1. **Navigate to your working directory**:
    ```bash
    cd /path/to/your/folder
-   ```
+   ```rust
 2. **Compile the code**:
    ```bash
    rustc conditionals.rs -o conditionals
-   ```
+   ```rust
 3. **Run your program**:
    ```bash
    ./conditionals
-   ```
+   ```rust
 
 **Expected output:**
-```
+```rust
 The number 7 is positive
 It's warm. 25°C
 a does not equal b
 a is less than b
 a is less than or equal to b
-```
+```rust
 
 ---
 
@@ -148,7 +148,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
     } else {
         println!("The number {} is not positive", number);
     }
-```
+```rust
 - **`if number > 0`** = Condition: is number greater than 0?
 - **`{ ... }`** = Code block executed if condition true
 - **`else`** = Executed if condition false
@@ -163,7 +163,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
     } else {
         println!("It's cold! {}°C", temperature);
     }
-```
+```rust
 - **Chain of conditions** checked in order
 - **First true condition** executes, others skipped
 - **else** catches any remaining cases
@@ -174,7 +174,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
     } else if a != b {
         println!("a does not equal b");
     }
-```
+```rust
 - **`==`** = Equality comparison
 - **`!=`** = Inequality comparison
 - Note: `=` is assignment, `==` is comparison
@@ -210,3 +210,59 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
  **Excellent! Your programs can now make decisions!** 
 
 *Next: Loops and Repetition!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```rs
+fn main() {
+    println!("Hello, World!");
+}
+
+```rs
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard rust conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

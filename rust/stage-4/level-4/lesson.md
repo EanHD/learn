@@ -1,6 +1,6 @@
 # Level 4: Interactive Application
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 4: Full Problem Solving
@@ -56,7 +56,7 @@ Choose an option:
 4. Exit
 
 Enter your choice (1-4):
-```
+```rust
 
 ---
 
@@ -65,7 +65,7 @@ Enter your choice (1-4):
 1. **Create the project structure**:
    ```bash
    cd /home/eanhd/LEARN/rust/stage-4-full-problem-solving/level-4-interactive-application
-   ```
+   ```rust
 
 2. **Create `main.rs`** with your Rust implementation
 
@@ -73,7 +73,7 @@ Enter your choice (1-4):
    ```bash
    rustc main.rs
    ./main
-   ```
+   ```rust
 
 4. **Create `README.md`** with usage instructions
 
@@ -176,7 +176,7 @@ Choose an option:
 Enter your choice (1-4): 4
 
 Thank you for using Simple Bank System!
-```
+```rust
 
 ### Sample Implementation
 
@@ -283,7 +283,7 @@ fn get_positive_amount() -> f64 {
         }
     }
 }
-```
+```rust
 
 ### Implementation Analysis
 
@@ -360,7 +360,7 @@ A Rust program that simulates basic banking operations with an interactive menu 
 
 ## Example Usage
 
-```
+```rust
 Simple Bank System
 ==================
 Current Balance: $1000.00
@@ -376,7 +376,7 @@ Enter deposit amount: $500
 
 Deposit successful! New balance: $1500.00
 ```rust
-```
+```rust
 
 ### Bonus Challenges
 
@@ -390,3 +390,157 @@ Deposit successful! New balance: $1500.00
  **Fantastic! You built an interactive banking application!** 
 
 *Next: Decision Support Application (Travel Recommendation System)!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```rs
+use std::io::{self, Write};
+
+fn main() {
+    let mut balance = 1000.0;
+    let mut running = true;
+
+    println!("Welcome to Simple Bank System!");
+
+    while running {
+        // Display menu with current balance
+        println!("\nSimple Bank System");
+        println!("==================");
+        println!("Current Balance: ${:.2}", balance);
+        println!();
+        println!("Choose an option:");
+        println!("1. Check Balance");
+        println!("2. Deposit Money");
+        println!("3. Withdraw Money");
+        println!("4. Exit");
+        println!();
+        print!("Enter your choice (1-4): ");
+        io::stdout().flush().unwrap();
+
+        let choice = get_valid_choice(1, 4);
+
+        match choice {
+            1 => {
+                // Check balance
+                println!("Your current balance is: ${:.2}", balance);
+            }
+            2 => {
+                // Deposit
+                print!("Enter deposit amount: $");
+                io::stdout().flush().unwrap();
+                let amount = get_positive_amount();
+
+                balance += amount;
+                println!("Deposit successful! New balance: ${:.2}", balance);
+            }
+            3 => {
+                // Withdraw
+                print!("Enter withdrawal amount: $");
+                io::stdout().flush().unwrap();
+                let amount = get_positive_amount();
+
+                if amount <= balance {
+                    balance -= amount;
+                    println!("Withdrawal successful! New balance: ${:.2}", balance);
+                } else {
+                    println!("Insufficient funds. Your balance is ${:.2}", balance);
+                }
+            }
+            4 => {
+                // Exit
+                running = false;
+                println!("Thank you for using Simple Bank System!");
+            }
+            _ => {
+                // This shouldn't happen due to validation, but just in case
+                println!("Invalid choice. Please select 1-4.");
+            }
+        }
+    }
+}
+
+fn get_valid_choice(min: u32, max: u32) -> u32 {
+    loop {
+        let mut input = String::new();
+        io::stdin().read_line(&mut input).unwrap();
+
+        match input.trim().parse::<u32>() {
+            Ok(choice) if choice >= min && choice <= max => return choice,
+            Ok(_) => {
+                print!("Please enter a number between {} and {}: ", min, max);
+                io::stdout().flush().unwrap();
+            }
+            Err(_) => {
+                print!("Please enter a valid number: ");
+                io::stdout().flush().unwrap();
+            }
+        }
+    }
+}
+
+fn get_positive_amount() -> f64 {
+    loop {
+        let mut input = String::new();
+        io::stdin().read_line(&mut input).unwrap();
+
+        match input.trim().parse::<f64>() {
+            Ok(amount) if amount > 0.0 => return amount,
+            Ok(_) => {
+                print!("Please enter a positive amount: $");
+                io::stdout().flush().unwrap();
+            }
+            Err(_) => {
+                print!("Please enter a valid number: $");
+                io::stdout().flush().unwrap();
+            }
+        }
+    }
+}
+```rs
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard rust conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

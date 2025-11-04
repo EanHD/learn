@@ -1,6 +1,6 @@
 # Level 3: Basic Math Operations
 
-> **📖 LESSON NOTE:** This lesson file is **read-only**. Your code goes in the **right window** (`main.java`).
+> ** LESSON NOTE:** This lesson file is **read-only**. Your code goes in the **right window** (`main.java`).
 
 ## Stage 1: Copying Code
 
@@ -36,7 +36,7 @@ public class Main {
         System.out.println("Modulo (remainder): " + (x % y));
     }
 }
-```
+```java
 
 ---
 
@@ -48,16 +48,16 @@ public class Main {
 ```bash
 javac main.java
 java Main
-```
+```java
 
 **Expected output:**
-```
+```java
 Addition: 13
 Subtraction: 7
 Multiplication: 30
 Division: 3
 Modulo (remainder): 1
-```
+```java
 
 ---
 
@@ -104,7 +104,7 @@ The parentheses `(x + y)` ensure the calculation happens before printing!
 int x = 10;
 int y = 3;
 System.out.println("Addition: " + (x + y));  // 10 + 3 = 13
-```
+```java
 
 The `(x + y)` happens first (operator precedence), then concatenates with the string.
 
@@ -123,7 +123,7 @@ The `(x + y)` happens first (operator precedence), then concatenates with the st
 ```java
 int a = 10 / 3;      // Result: 3 (not 3.33)
 double b = 10.0 / 3; // Result: 3.333...
-```
+```java
 
 Integer division truncates (cuts off) decimals!
 

@@ -1,6 +1,6 @@
 # Level 1: Simple Problem Analysis
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 3: Problem to Pseudocode
@@ -25,22 +25,22 @@ Welcome to Stage 3! Now you'll learn to analyze problems and design solutions be
 **Read the problem below, then write pseudocode to solve it. Create a file called `simple_analysis.md` with your pseudocode solution.**
 
 
-### How to Compile and Run
+### How to Run
 
 1. **Compile the code**:
    ```bash
    rustc hello.rs -o hello hello.rs
-   ```
+   ```rust
 
 2. **Run your program**:
    ```bash
    ./hello hello
-   ```
+   ```rust
 
 **Expected output:**
-```
+```rust
 Hello, World!
-```
+```rust
 
 ### Problem: Temperature Converter
 
@@ -64,7 +64,7 @@ What conversion do you want?
 Enter choice (1 or 2): 1
 Enter temperature in Celsius: 25
 25°C is equal to 77°F
-```
+```rust
 
 ---
 
@@ -73,11 +73,11 @@ Enter temperature in Celsius: 25
 1. **Navigate to your working directory**:
    ```bash
    cd /path/to/your/folder
-   ```
+   ```rust
 2. **Create your pseudocode file**:
    ```bash
    touch simple_analysis.md
-   ```
+   ```rust
 3. **Write pseudocode** that solves the problem step by step
 4. **Think about edge cases** (what if user enters invalid choice?)
 
@@ -166,7 +166,7 @@ START PROGRAM
         DISPLAY "Invalid choice. Please enter 1 or 2."
     END IF
 END PROGRAM
-```
+```rust
 
 ### Analysis Breakdown
 
@@ -202,3 +202,59 @@ END PROGRAM
  **Great job! You analyzed your first programming problem!** 
 
 *Next: Data Management Problems!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```rs
+fn main() {
+    println!("Hello, World!");
+}
+
+```rs
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard rust conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

@@ -1,6 +1,6 @@
 # Level 4: User Input
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -13,11 +13,11 @@ Get ready to make your programs interactive! Today you'll learn how to talk to y
 
 ### Learning Goals
 
-- Learn how to read user input with `scanf()`
-- Understand format specifiers for input
-- Practice with different data types (int, float, char, strings)
-- Learn input validation techniques
-- Create interactive programs that respond to user data
+- [ ] Learn how to read user input with `scanf()`
+- [ ] Understand format specifiers for input
+- [ ] Practice with different data types (int, float, char, strings)
+- [ ] Learn input validation techniques
+- [ ] Create interactive programs that respond to user data
 
 ---
 
@@ -35,101 +35,101 @@ int main() {
     char grade;
     char name[50];  // String for name (character array)
     
-    printf("=== Personal Information Form ===\n\n");
+    std::cout << "=== Personal Information Form ===\n\n");
     
     // Get user's name
-    printf("What's your first name? ");
+    std::cout << "What's your first name? ");
     scanf("%s", name);
     
     // Get user's age
-    printf("How old are you? ");
+    std::cout << "How old are you? ");
     scanf("%d", &age);
     
     // Get user's height
-    printf("What's your height in inches? ");
+    std::cout << "What's your height in inches? ");
     scanf("%f", &height);
     
     // Get user's grade
-    printf("What's your letter grade (A, B, C, D, F)? ");
+    std::cout << "What's your letter grade (A, B, C, D, F)? ");
     scanf(" %c", &grade);  // Note the space before %c!
     
-    printf("\n=== Your Information Summary ===\n");
-    printf("Name: %s\n", name);
-    printf("Age: %d years old\n", age);
-    printf("Height: %.1f inches\n", height);
-    printf("Grade: %c\n", grade);
+    std::cout << "\n=== Your Information Summary ===\n");
+    std::cout << "Name: %s\n", name);
+    std::cout << "Age: %d years old\n", age);
+    std::cout << "Height: %.1f inches\n", height);
+    std::cout << "Grade: %c\n", grade);
     
     // Calculate some interesting facts
-    printf("\n=== Interesting Facts ===\n");
+    std::cout << "\n=== Interesting Facts ===\n");
     
     // Height in centimeters
     float height_cm = height * 2.54;
-    printf("Height in centimeters: %.1f cm\n", height_cm);
+    std::cout << "Height in centimeters: %.1f cm\n", height_cm);
     
     // Age in different units
-    printf("Age in months: %d\n", age * 12);
-    printf("Age in days (approximately): %d\n", age * 365);
+    std::cout << "Age in months: %d\n", age * 12);
+    std::cout << "Age in days (approximately): %d\n", age * 365);
     
     // Grade analysis
-    printf("\n=== Grade Analysis ===\n");
+    std::cout << "\n=== Grade Analysis ===\n");
     if (grade == 'A' || grade == 'a') {
-        printf("Excellent work! You're doing great!\n");
+        std::cout << "Excellent work! You're doing great!\n");
     } else if (grade == 'B' || grade == 'b') {
-        printf("Good job! Keep up the good work!\n");
+        std::cout << "Good job! Keep up the good work!\n");
     } else if (grade == 'C' || grade == 'c') {
-        printf("Not bad, but there's room for improvement.\n");
+        std::cout << "Not bad, but there's room for improvement.\n");
     } else {
-        printf("Keep trying! You can do this!\n");
+        std::cout << "Keep trying! You can do this!\n");
     }
     
     // BMI calculation (simplified)
-    printf("\n=== Health Calculator ===\n");
+    std::cout << "\n=== Health Calculator ===\n");
     float weight_pounds;
-    printf("Enter your weight in pounds: ");
+    std::cout << "Enter your weight in pounds: ");
     scanf("%f", &weight_pounds);
     
     float bmi = (weight_pounds * 703) / (height * height);
-    printf("Your BMI: %.1f\n", bmi);
+    std::cout << "Your BMI: %.1f\n", bmi);
     
     if (bmi < 18.5) {
-        printf("Category: Underweight\n");
+        std::cout << "Category: Underweight\n");
     } else if (bmi < 25) {
-        printf("Category: Normal weight\n");
+        std::cout << "Category: Normal weight\n");
     } else if (bmi < 30) {
-        printf("Category: Overweight\n");
+        std::cout << "Category: Overweight\n");
     } else {
-        printf("Category: Obese\n");
+        std::cout << "Category: Obese\n");
     }
     
-    printf("\n=== Future Prediction ===\n");
+    std::cout << "\n=== Future Prediction ===\n");
     int future_years;
-    printf("How many years into the future should we predict? ");
+    std::cout << "How many years into the future should we predict? ");
     scanf("%d", &future_years);
     
-    printf("In %d years, you'll be %d years old!\n", future_years, age + future_years);
+    std::cout << "In %d years, you'll be %d years old!\n", future_years, age + future_years);
     
-    printf("\nThanks for using the personal info calculator, %s!\n", name);
+    std::cout << "\nThanks for using the personal info calculator, %s!\n", name);
     
     return 0;
 }
-```
+```bash
 
 ---
 
-### How to Compile and Run
+### How to Run
 
 1. **Compile the code**:
    ```bash
-   gcc user_input.c -o user_input
-   ```
+   g++ user_input.c -o user_input
+   ```bash
 2. **Run your program**:
    ```bash
    ./user_input
-   ```
+   ```bash
 3. **Follow the prompts** and enter your information when asked!
 
 **Example interaction:**
-```
+```bash
 === Personal Information Form ===
 
 What's your first name? Alex
@@ -161,7 +161,7 @@ How many years into the future should we predict? 10
 In 10 years, you'll be 35 years old!
 
 Thanks for using the personal info calculator, Alex!
-```
+```bash
 
 ---
 
@@ -178,10 +178,10 @@ Thanks for using the personal info calculator, Alex!
 
 ### Important New Concepts
 
-- **`scanf()`**: Function to read user input
-- **`&` operator**: Gets the memory address of a variable
-- **`%s`**: Format specifier for strings (character arrays)
-- **Space before `%c`**: Helps avoid issues with previous input
+- [ ] **`scanf()`**: Function to read user input
+- [ ] **`&` operator**: Gets the memory address of a variable
+- [ ] **`%s`**: Format specifier for strings (character arrays)
+- [ ] **Space before `%c`**: Helps avoid issues with previous input
 
 ---
 
@@ -204,9 +204,9 @@ Thanks for using the personal info calculator, Alex!
 | `%s` | String | `char[]` | `scanf("%s", name);` |
 
 **Pro Tips:**
-- Always use `&` with `scanf()` except for strings (arrays)
-- Use `" %c"` instead of `"%c"` for single characters to skip whitespace
-- Strings (`%s`) get stored in character arrays, not regular variables
+- [ ] Always use `&` with `scanf()` except for strings (arrays)
+- [ ] Use `" %c"` instead of `"%c"` for single characters to skip whitespace
+- [ ] Strings (`%s`) get stored in character arrays, not regular variables
 
 ---
 
@@ -216,19 +216,19 @@ Thanks for using the personal info calculator, Alex!
    ```c
    scanf("%d", age);    // WRONG!
    scanf("%d", &age);   // CORRECT
-   ```
+   ```bash
 
 2. **For characters, use a space:**
    ```c
    scanf("%c", &ch);   // Can cause problems
    scanf(" %c", &ch);  // Much safer
-   ```
+   ```bash
 
 3. **Strings don't need `&`:**
    ```c
    scanf("%s", &name);  // WRONG!
    scanf("%s", name);   // CORRECT
-   ```
+   ```bash
 
 ---
 
@@ -249,33 +249,33 @@ int main() {
     float height;
     char grade;
     char name[50];  // String for name (character array)
-```
-- We declare variables that will hold the user's input
-- **`char name[50]`** creates a character array that can hold up to 49 characters + '\0' (null terminator)
+```bash
+- [ ] We declare variables that will hold the user's input
+- [ ] **`char name[50]`** creates a character array that can hold up to 49 characters + '\0' (null terminator)
 
 ```c
-    printf("What's your first name? ");
+    std::cout << "What's your first name? ");
     scanf("%s", name);
-```
-- **`%s`** reads a string (sequence of characters)
-- **No `&`** for strings because arrays already represent addresses
-- **Note**: `scanf("%s", name)` stops reading at whitespace (spaces, tabs, newlines)
+```bash
+- [ ] **`%s`** reads a string (sequence of characters)
+- [ ] **No `&`** for strings because arrays already represent addresses
+- [ ] **Note**: `scanf("%s", name)` stops reading at whitespace (spaces, tabs, newlines)
 
 ```c
-    printf("How old are you? ");
+    std::cout << "How old are you? ");
     scanf("%d", &age);
-```
-- **`%d`** reads an integer
-- **`&age`** passes the memory address of the `age` variable
-- **`&`** is required because `scanf()` needs to know WHERE to store the data
+```bash
+- [ ] **`%d`** reads an integer
+- [ ] **`&age`** passes the memory address of the `age` variable
+- [ ] **`&`** is required because `scanf()` needs to know WHERE to store the data
 
 ```c
-    printf("What's your letter grade (A, B, C, D, F)? ");
+    std::cout << "What's your letter grade (A, B, C, D, F)? ");
     scanf(" %c", &grade);
-```
-- **`" %c"`** has a space before `%c`
-- This space tells `scanf()` to skip any whitespace (including the newline from previous input)
-- Without the space, you might read the newline character instead of the actual grade
+```bash
+- [ ] **`" %c"`** has a space before `%c`
+- [ ] This space tells `scanf()` to skip any whitespace (including the newline from previous input)
+- [ ] Without the space, you might read the newline character instead of the actual grade
 
 ### Understanding `scanf()` In Detail
 
@@ -286,9 +286,9 @@ int main() {
 4. Returns the number of items successfully read (useful for error checking)
 
 **Example**: `scanf("%d %f %c", &age, &height, &grade);`
-- User types: `25 70.5 B`
-- `age` gets `25`, `height` gets `70.5`, `grade` gets `'B'`
-- Returns `3` (three items successfully read)
+- [ ] User types: `25 70.5 B`
+- [ ] `age` gets `25`, `height` gets `70.5`, `grade` gets `'B'`
+- [ ] Returns `3` (three items successfully read)
 
 ### Memory and the `&` Operator
 
@@ -301,7 +301,7 @@ char name[50]; // Array, the array name represents the address of first element
 // scanf needs the address of where to store data:
 scanf("%d", &age);    // &age gets the memory address
 scanf("%s", name);    // name already IS the address (array name = &name[0])
-```
+```bash
 
 ### Input Validation: Making Programs Safer
 
@@ -309,13 +309,13 @@ scanf("%s", name);    // name already IS the address (array name = &name[0])
 ```c
 int result = scanf("%d", &age);
 if (result == 1) {
-    printf("Successfully read age: %d\n", age);
+    std::cout << "Successfully read age: %d\n", age);
 } else {
-    printf("Invalid input for age! Please enter a number.\n");
+    std::cout << "Invalid input for age! Please enter a number.\n");
     // Clear the input buffer
     while (getchar() != '\n');
 }
-```
+```bash
 
 **Better approach with error handling:**
 ```c
@@ -323,7 +323,7 @@ if (result == 1) {
 # include <stdbool.h>
 
 bool get_integer_input(const char* prompt, int* value) {
-    printf("%s", prompt);
+    std::cout << "%s", prompt);
     int result = scanf("%d", value);
     
     if (result != 1) {
@@ -338,34 +338,34 @@ int main() {
     int age;
     
     while (!get_integer_input("Enter your age: ", &age)) {
-        printf("Invalid input! Please try again.\n");
+        std::cout << "Invalid input! Please try again.\n");
     }
     
-    printf("Your age is: %d\n", age);
+    std::cout << "Your age is: %d\n", age);
     return 0;
 }
-```
+```bash
 
 ### Advanced Input Techniques
 
 **Reading multiple values at once:**
 ```c
 int day, month, year;
-printf("Enter date (DD MM YYYY): ");
+std::cout << "Enter date (DD MM YYYY): ");
 scanf("%d %d %d", &day, &month, &year);
-```
+```bash
 
 **Reading text with spaces (using fgets):**
 ```c
 char full_name[100];
-printf("Enter your full name: ");
+std::cout << "Enter your full name: ");
 getchar(); // Clear newline from previous input
 fgets(full_name, sizeof(full_name), stdin);
 
 // Remove trailing newline if present
 full_name[strcspn(full_name, "\n")] = '\0';
-printf("Hello, %s!\n", full_name);
-```
+std::cout << "Hello, %s!\n", full_name);
+```bash
 
 ### Common scanf Pitfalls and Solutions
 
@@ -381,11 +381,11 @@ printf("Hello, %s!\n", full_name);
 **Understanding the input buffer:**
 ```c
 char ch1, ch2;
-printf("Enter first character: ");
+std::cout << "Enter first character: ");
 scanf("%c", &ch1);
-printf("Enter second character: ");
+std::cout << "Enter second character: ");
 scanf(" %c", &ch2);  // Space consumes leftover newline
-```
+```bash
 
 **Clearing the entire input buffer:**
 ```c
@@ -393,7 +393,7 @@ void clear_input_buffer() {
     int ch;
     while ((ch = getchar()) != '\n' && ch != EOF);
 }
-```
+```bash
 
 ### Real-World Input Example
 
@@ -406,33 +406,33 @@ int main() {
     int birth_year;
     char city[50];
     
-    printf("=== Registration Form ===\n");
+    std::cout << "=== Registration Form ===\n");
     
-    printf("First name: ");
+    std::cout << "First name: ");
     scanf("%29s", first_name);  // %29s prevents buffer overflow
     
-    printf("Last name: ");
+    std::cout << "Last name: ");
     scanf("%29s", last_name);
     
-    printf("Birth year: ");
+    std::cout << "Birth year: ");
     while (scanf("%d", &birth_year) != 1) {
-        printf("Invalid year! Try again: ");
+        std::cout << "Invalid year! Try again: ");
         while (getchar() != '\n');  // Clear bad input
     }
     
-    printf("City: ");
+    std::cout << "City: ");
     getchar();  // Clear newline
     fgets(city, sizeof(city), stdin);
     city[strcspn(city, "\n")] = '\0';  // Remove newline
     
-    printf("\n=== Registration Complete ===\n");
-    printf("Name: %s %s\n", first_name, last_name);
-    printf("Age in 2024: %d\n", 2024 - birth_year);
-    printf("From: %s\n", city);
+    std::cout << "\n=== Registration Complete ===\n");
+    std::cout << "Name: %s %s\n", first_name, last_name);
+    std::cout << "Age in 2024: %d\n", 2024 - birth_year);
+    std::cout << "From: %s\n", city);
     
     return 0;
 }
-```
+```bash
 
 ### Security Considerations
 
@@ -440,24 +440,24 @@ int main() {
 ```c
 char username[20];
 scanf("%19s", username);  // One less than array size for null terminator
-```
+```bash
 
 **2. Input Length Limits:**
 ```c
 # define MAX_NAME_LEN 50
 char name[MAX_NAME_LEN];
 scanf("%49s", name);  // Always leave room for null terminator
-```
+```bash
 
 ### Debugging scanf Issues
 
 **Common debugging technique:**
 ```c
 int age;
-printf("Enter age: ");
+std::cout << "Enter age: ");
 int items_read = scanf("%d", &age);
-printf("scanf returned %d, age = %d\n", items_read, age);
-```
+std::cout << "scanf returned %d, age = %d\n", items_read, age);
+```bash
 
 This helps you see if `scanf` successfully read the input and what value was actually stored.
 
@@ -466,3 +466,66 @@ This helps you see if `scanf` successfully read the input and what value was act
  **Amazing! Your programs can now talk to users! You're building real interactive software!** 
 
 *Get ready for conditionals - making decisions in your programs!* 
+
+### Additional Content
+
+Understand the key concepts:
+
+- [ ] Review each function
+- [ ] Understand the flow
+- [ ] Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- [ ] Main function: Entry point
+- [ ] Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard C++ conventions with proper imports and main function
+2. **Output**: Uses std::cout to print messages to the console
+3. **Standard Library**: Includes iostream for input/output operations
+4. **Return Value**: Returns 0 to indicate successful execution
+5. **Best Practices**: Code is readable and uses C++ idioms
+
+### Testing Your Solution
+
+1. **Compile**: `g++ hello.cpp -o hello`
+2. **Run**: `./hello`
+3. **Expected Output**: `Hello, World!`
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
+| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+
+### Tips for Learning
+
+- C++ is a superset of C with additional features
+- `std::cout` is the C++ way to print (replaces `printf`)
+- `std::endl` adds a newline and flushes the buffer
+- The `std::` prefix means these are from the "standard" namespace

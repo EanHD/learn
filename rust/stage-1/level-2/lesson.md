@@ -1,6 +1,6 @@
 # Level 2: Variables
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -44,32 +44,32 @@ fn main() {
     println!("greeting = {}", greeting);
     println!("is_rust_fun = {}", is_rust_fun);
 }
-```
+```rust
 
 ---
 
-### How to Compile and Run
+### How to Run
 
 1. **Navigate to your working directory**:
    ```bash
    cd /path/to/your/folder
-   ```
+   ```rust
 2. **Compile the code**:
    ```bash
    rustc variables.rs -o variables
-   ```
+   ```rust
 3. **Run your program**:
    ```bash
    ./variables
-   ```
+   ```rust
 
 **Expected output:**
-```
+```rust
 x = 42
 pi = 3.14159
 greeting = Hello, Rust!
 is_rust_fun = true
-```
+```rust
 
 ---
 
@@ -122,13 +122,13 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 
 ```rust
 fn main() {
-```
+```rust
 - Same as before - entry point of the program
 
 ```rust
     // Integer variable
     let x = 42;
-```
+```rust
 - **`let`** = Variable declaration keyword
 - **`x`** = Variable name (identifier)
 - **`42`** = Integer literal value
@@ -137,27 +137,27 @@ fn main() {
 ```rust
     // Floating-point variable
     let pi = 3.14159;
-```
+```rust
 - **`pi`** = Variable name
 - **`3.14159`** = Floating-point literal (decimal number)
 
 ```rust
     // String variable
     let greeting = "Hello, Rust!";
-```
+```rust
 - **`"Hello, Rust!"`** = String literal (text)
 - Strings are enclosed in double quotes
 
 ```rust
     // Boolean variable
     let is_rust_fun = true;
-```
+```rust
 - **`true`** = Boolean literal (true/false values)
 
 ```rust
     // Print the variables
     println!("x = {}", x);
-```
+```rust
 - **`{}`** = Placeholder for variable value
 - **`x`** = Variable to insert at placeholder
 
@@ -190,3 +190,59 @@ fn main() {
  **Great job! You now understand variables in Rust!** 
 
 *Next: Basic Math Operations!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```rs
+fn main() {
+    println!("Hello, World!");
+}
+
+```rs
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard rust conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

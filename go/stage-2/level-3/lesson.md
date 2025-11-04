@@ -1,6 +1,6 @@
 # Level 3: Mathematical Pseudocode
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -32,7 +32,7 @@ SET result TO 10 - 4
 SET result TO 6 * 7
 SET result TO 15 / 3
 SET remainder TO 17 MOD 5
-```
+```go
 
 **Complex expressions:**
 ```go
@@ -41,21 +41,21 @@ SET volume TO length * width * height
 SET average TO (num1 + num2 + num3) / 3
 SET tax TO price * 0.08
 SET discount TO original_price * discount_rate
-```
+```go
 
 **Order of operations:**
 ```go
 SET result TO 2 + 3 * 4     // result = 14 (not 20), multiplication first
 SET result TO (2 + 3) * 4   // result = 20, parentheses override
 SET result TO 10 / 2 + 3    // result = 8, division first
-```
+```go
 
 **Mathematical functions:**
 ```go
 SET result TO POWER(2, 3)    // 2 to the power of 3
 SET result TO SQRT(16)       // square root of 16
 SET result TO ROUND(3.7)     // round to nearest integer
-```
+```go
 
 ---
 
@@ -71,12 +71,12 @@ SET result TO ROUND(3.7)     // round to nearest integer
 1. **Run the code**:
    ```bash
    go run hello.go
-   ```
+   ```go
 
 **Expected output:**
-```
+```go
 Hello, World!
-```
+```go
 
 ## Algorithm 1: Complex Arithmetic Expression
 
@@ -92,7 +92,7 @@ Algorithm: Evaluate Complex Expression
 7. DISPLAY "Result without parentheses: " + result2
 8. SET result3 TO ((a + b) * c - a) / c
 9. DISPLAY "Result with different grouping: " + result3
-```
+```go
 
 **Your Task:** Create a Go program that evaluates complex arithmetic expressions.
 
@@ -112,7 +112,7 @@ Algorithm: Solve Quadratic Equation
 7. SET root2 TO (-b - sqrt_discriminant) / (2 * a)
 8. DISPLAY "Root 1: " + root1
 9. DISPLAY "Root 2: " + root2
-```
+```go
 
 **Your Task:** Create a Go program that solves quadratic equations using the quadratic formula.
 
@@ -132,7 +132,7 @@ Algorithm: Calculate Compound Interest
 7. DISPLAY "Principal: $" + principal
 8. DISPLAY "Final Amount: $" + amount
 9. DISPLAY "Interest Earned: $" + interest
-```
+```go
 
 **Your Task:** Create a Go program that calculates compound interest.
 
@@ -155,7 +155,7 @@ Algorithm: Calculate Geometric Properties
 10. DISPLAY "Circle - Area: " + circle_area + ", Circumference: " + circle_circumference
 11. DISPLAY "Square - Area: " + square_area + ", Perimeter: " + square_perimeter
 12. DISPLAY "Triangle - Area: " + triangle_area
-```
+```go
 
 **Your Task:** Create a Go program that calculates geometric properties.
 
@@ -178,7 +178,7 @@ Algorithm: Physics Calculations
 10. DISPLAY "Force: " + force
 11. DISPLAY "Distance: " + distance
 12. DISPLAY "Momentum: " + momentum
-```
+```go
 
 **Your Task:** Create a Go program that calculates physics formulas.
 
@@ -199,7 +199,7 @@ Algorithm: Multiple Temperature Conversions
 8. DISPLAY "Kelvin: " + kelvin
 9. DISPLAY "F to C: " + celsius_from_f
 10. DISPLAY "K to C: " + celsius_from_k
-```
+```go
 
 **Your Task:** Create a Go program that performs multiple temperature conversions.
 
@@ -225,7 +225,7 @@ Algorithm: Calculate Statistics for Three Numbers
 13. DISPLAY "Range: " + range
 14. DISPLAY "Variance: " + variance
 15. DISPLAY "Standard Deviation: " + std_deviation
-```
+```go
 
 **Your Task:** Create a Go program that calculates statistical measures.
 
@@ -301,7 +301,7 @@ func main() {
     result3 := (float64(a+b)*float64(c) - float64(a)) / float64(c)
     fmt.Println("Result with different grouping: " + fmt.Sprintf("%f", result3))
 }
-```
+```go
 
 ### Algorithm 2: Quadratic Formula Calculator
 
@@ -327,7 +327,7 @@ func main() {
     fmt.Println("Root 1: " + fmt.Sprintf("%f", root1))
     fmt.Println("Root 2: " + fmt.Sprintf("%f", root2))
 }
-```
+```go
 
 ### Algorithm 3: Compound Interest Calculator
 
@@ -353,7 +353,7 @@ func main() {
     fmt.Println("Final Amount: $" + fmt.Sprintf("%.2f", amount))
     fmt.Println("Interest Earned: $" + fmt.Sprintf("%.2f", interest))
 }
-```
+```go
 
 ### Algorithm 4: Geometric Calculations
 
@@ -382,7 +382,7 @@ func main() {
     fmt.Println("Square - Area: " + fmt.Sprintf("%.2f", square_area) + ", Perimeter: " + fmt.Sprintf("%.2f", square_perimeter))
     fmt.Println("Triangle - Area: " + fmt.Sprintf("%.2f", triangle_area))
 }
-```
+```go
 
 ### Algorithm 5: Physics Formula Calculator
 
@@ -408,7 +408,7 @@ func main() {
     fmt.Println("Distance: " + fmt.Sprintf("%f", distance))
     fmt.Println("Momentum: " + fmt.Sprintf("%f", momentum))
 }
-```
+```go
 
 ### Algorithm 6: Temperature Conversion with Multiple Formulas
 
@@ -431,7 +431,7 @@ func main() {
     fmt.Println("F to C: " + fmt.Sprintf("%f", celsius_from_f))
     fmt.Println("K to C: " + fmt.Sprintf("%f", celsius_from_k))
 }
-```
+```go
 
 ### Algorithm 7: Statistical Calculations
 
@@ -463,7 +463,7 @@ func main() {
     fmt.Println("Variance: " + fmt.Sprintf("%f", variance))
     fmt.Println("Standard Deviation: " + fmt.Sprintf("%.2f", std_deviation))
 }
-```
+```go
 
 ### Mathematical Operation Translation Patterns
 
@@ -492,3 +492,63 @@ func main() {
  **Excellent work! You've mastered translating mathematical operations from pseudocode to Go!** 
 
 *Next up: Input/Output operations in pseudocode!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard go conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

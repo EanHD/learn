@@ -1,6 +1,6 @@
 # Level 7: Your Personal Journey & Reflection
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 5: Capstone - Mastery Achieved
@@ -13,11 +13,11 @@
 
 ### Learning Goals
 
-- **Reflect deeply** on what you've learned
-- **Document your journey** thoroughly
-- **Showcase your best work** professionally
-- **Plan your next chapter** as a developer
-- **Inspire others** with your story
+- [ ] **Reflect deeply** on what you've learned
+- [ ] **Document your journey** thoroughly
+- [ ] **Showcase your best work** professionally
+- [ ] **Plan your next chapter** as a developer
+- [ ] **Inspire others** with your story
 
 ---
 
@@ -72,26 +72,26 @@
 ### Reflection Prompts
 
 **Technical Growth:**
-- Which concept was hardest to master? How did you overcome it?
-- What algorithm or technique are you most proud of implementing?
-- How has your coding style evolved through these projects?
-- What would you do differently on your first project?
+- [ ] Which concept was hardest to master? How did you overcome it?
+- [ ] What algorithm or technique are you most proud of implementing?
+- [ ] How has your coding style evolved through these projects?
+- [ ] What would you do differently on your first project?
 
 **Problem Solving:**
-- Describe a bug that stumped you. How did you solve it?
-- What was your most creative solution to a challenging problem?
-- How do you approach debugging now vs. when you started?
+- [ ] Describe a bug that stumped you. How did you solve it?
+- [ ] What was your most creative solution to a challenging problem?
+- [ ] How do you approach debugging now vs. when you started?
 
 **Impact:**
-- Who could benefit from your projects?
-- Which project makes the most difference?
-- How could you improve lives with your programming skills?
+- [ ] Who could benefit from your projects?
+- [ ] Which project makes the most difference?
+- [ ] How could you improve lives with your programming skills?
 
 **Personal Development:**
-- What soft skills have you developed?
-- How has your confidence changed?
-- What does success mean to you as a programmer?
-- Who has helped you along the way?
+- [ ] What soft skills have you developed?
+- [ ] How has your confidence changed?
+- [ ] What does success mean to you as a programmer?
+- [ ] Who has helped you along the way?
 
 ---
 
@@ -125,48 +125,133 @@ Now that you've completed your capstone journey:
 
 You've completed a comprehensive programming education:
 
-- **Stage 1**: Learned syntax by copying
-- **Stage 2**: Translated logic to code
-- **Stage 3**: Analyzed and designed solutions
-- **Stage 4**: Created problems independently
-- **Stage 5**: Built capstone projects professionally
+- [ ] **Stage 1**: Learned syntax by copying
+- [ ] **Stage 2**: Translated logic to code
+- [ ] **Stage 3**: Analyzed and designed solutions
+- [ ] **Stage 4**: Created problems independently
+- [ ] **Stage 5**: Built capstone projects professionally
 
 **You are now a programmer.** 
 
 The journey doesn't end here—it's just beginning. Use your skills to:
-- Solve real problems
-- Build products people love
-- Contribute to open source
-- Mentor others
-- Change the world
+- [ ] Solve real problems
+- [ ] Build products people love
+- [ ] Contribute to open source
+- [ ] Mentor others
+- [ ] Change the world
 
 ---
 
 ### Resources for Continued Learning
 
 **Advanced Programming Topics:**
-- Object-Oriented Programming (OOP)
-- Design Patterns
-- System Design
-- Algorithms & Data Structures
-- Databases and SQL
+- [ ] Object-Oriented Programming (OOP)
+- [ ] Design Patterns
+- [ ] System Design
+- [ ] Algorithms & Data Structures
+- [ ] Databases and SQL
 
 **Specialized Tracks:**
-- Web Development (Frontend/Backend)
-- Mobile Development
-- Game Development
-- Data Science
-- Machine Learning
-- DevOps & Infrastructure
+- [ ] Web Development (Frontend/Backend)
+- [ ] Mobile Development
+- [ ] Game Development
+- [ ] Data Science
+- [ ] Machine Learning
+- [ ] DevOps & Infrastructure
 
 **Career Development:**
-- Technical interviewing
-- System design interviews
-- Soft skills for developers
-- Freelancing and entrepreneurship
-- Leadership and mentoring
+- [ ] Technical interviewing
+- [ ] System design interviews
+- [ ] Soft skills for developers
+- [ ] Freelancing and entrepreneurship
+- [ ] Leadership and mentoring
 
 ---
 
 **You did it! Now go build something amazing!** 
 
+
+
+### Your Task
+
+1. Review the code structure
+2. Implement the required functionality
+3. Test your solution
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Success Checklist
+
+- [ ] Code compiles without errors
+- [ ] Output matches expected result
+- [ ] All functions work correctly
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- [ ] Review each function
+- [ ] Understand the flow
+- [ ] Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- [ ] Main function: Entry point
+- [ ] Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+### Answer Key
+
+### Complete Solution
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard C++ conventions with proper imports and main function
+2. **Output**: Uses std::cout to print messages to the console
+3. **Standard Library**: Includes iostream for input/output operations
+4. **Return Value**: Returns 0 to indicate successful execution
+5. **Best Practices**: Code is readable and uses C++ idioms
+
+### Testing Your Solution
+
+1. **Compile**: `g++ hello.cpp -o hello`
+2. **Run**: `./hello`
+3. **Expected Output**: `Hello, World!`
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
+| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+
+### Tips for Learning
+
+- C++ is a superset of C with additional features
+- `std::cout` is the C++ way to print (replaces `printf`)
+- `std::endl` adds a newline and flushes the buffer
+- The `std::` prefix means these are from the "standard" namespace

@@ -1,6 +1,6 @@
 # Level 7: Function Pseudocode
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`Main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`Main.java` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -59,9 +59,9 @@ Functions (methods in Java) are the building blocks of organized code! Today you
    ```
 
 **Expected output:**
-```
+```java
 Hello, World!
-```
+```java
 
 ## Algorithm 1: Calculator Program with Methods
 
@@ -94,7 +94,7 @@ Method: performMultiplication(a, b)
 
 Method: performDivision(a, b)
     If b equals 0:
-        Display "❌ Error: Division by zero!"
+        Display " Error: Division by zero!"
         Return 0
     Else:
         Return a ÷ b
@@ -127,9 +127,9 @@ Main Algorithm:
    d. Else if choice is 5:
       i. Set running to false
    e. Else:
-      i. Display "❌ Invalid choice!"
-4. Display "Thank you for using the calculator! 👋"
-```
+      i. Display " Invalid choice!"
+4. Display "Thank you for using the calculator! "
+```java
 
 **Method Design:**
 - `displayMenu()`: Handles UI display
@@ -166,13 +166,13 @@ Method: addStudent(students, grades, count, scanner)
             Store name in students[count]
             Store grade in grades[count]
             Add 1 to count
-            Display "✓ Student added successfully!"
+            Display " Student added successfully!"
             Return count
         Else:
-            Display "❌ Invalid grade!"
+            Display " Invalid grade!"
             Return count
     Else:
-        Display "⚠ Student list is full!"
+        Display " Student list is full!"
         Return count
 
 Method: displayAllStudents(students, grades, count)
@@ -200,7 +200,7 @@ Method: findTopPerformer(students, grades, count)
             If grades[i] > maxGrade:
                 Set maxGrade to grades[i]
                 Set topStudent to students[i]
-        Display "🏆 Top Performer: " + topStudent + " (" + maxGrade + "%)"
+        Display " Top Performer: " + topStudent + " (" + maxGrade + "%)"
     Else:
         Display "ℹ No students in the system."
 
@@ -220,7 +220,7 @@ Main Algorithm:
    e. Else if choice is 3:
       i. Set average = calculateClassAverage(grades, studentCount)
       ii. If studentCount > 0:
-         i. Display "📊 Class Average: " + average + "%"
+         i. Display " Class Average: " + average + "%"
       iii. Else:
          i. Display "ℹ No students to average."
    f. Else if choice is 4:
@@ -228,9 +228,9 @@ Main Algorithm:
    g. Else if choice is 5:
       i. Set running to false
    h. Else:
-      i. Display "❌ Invalid choice!"
-7. Display "Thank you for using Grade Management System! 👋"
-```
+      i. Display " Invalid choice!"
+7. Display "Thank you for using Grade Management System! "
+```java
 
 **Method Design:**
 - `displayMainMenu()`: UI method
@@ -261,28 +261,28 @@ Method: displayBankMenu()
 Method: deposit(balance, amount)
     If amount > 0:
         Set newBalance = balance + amount
-        Display "✓ Deposited: $" + amount
+        Display " Deposited: $" + amount
         Display "New balance: $" + newBalance
         Return newBalance
     Else:
-        Display "❌ Invalid deposit amount!"
+        Display " Invalid deposit amount!"
         Return balance
 
 Method: withdraw(balance, amount)
     If amount > 0 and amount <= balance:
         Set newBalance = balance - amount
-        Display "✓ Withdrawn: $" + amount
+        Display " Withdrawn: $" + amount
         Display "New balance: $" + newBalance
         Return newBalance
     Else if amount > balance:
-        Display "❌ Insufficient funds!"
+        Display " Insufficient funds!"
         Return balance
     Else:
-        Display "❌ Invalid withdrawal amount!"
+        Display " Invalid withdrawal amount!"
         Return balance
 
 Method: displayBalance(balance)
-    Display "💰 Current Balance: $" + balance
+    Display " Current Balance: $" + balance
 
 Method: addTransaction(transactions, count, type, amount)
     If count < 100:
@@ -329,9 +329,9 @@ Main Algorithm:
    g. Else if choice is 5:
       i. Set running to false
    h. Else:
-      i. Display "❌ Invalid choice!"
-7. Display "Thank you for banking with us! 👋"
-```
+      i. Display " Invalid choice!"
+7. Display "Thank you for banking with us! "
+```java
 
 **Method Design:**
 - `displayBankMenu()`: UI method
@@ -366,10 +366,10 @@ Method: enterData(data, scanner)
         For i from 0 to count - 1:
             Display "Enter number " + (i + 1) + ": "
             Get data[i] from user
-        Display "✓ " + count + " numbers entered."
+        Display " " + count + " numbers entered."
         Return count
     Else:
-        Display "❌ Invalid count!"
+        Display " Invalid count!"
         Return 0
 
 Method: calculateMean(data, count)
@@ -431,17 +431,17 @@ Main Algorithm:
       i. Set dataCount = enterData(data, scanner)
    d. Else if choice is 2:
       i. If dataCount > 0:
-         i. Display "📊 Mean: " + calculateMean(data, dataCount)
+         i. Display " Mean: " + calculateMean(data, dataCount)
       ii. Else:
          i. Display "ℹ No data to calculate."
    e. Else if choice is 3:
       i. If dataCount > 0:
-         i. Display "📊 Median: " + calculateMedian(data, dataCount)
+         i. Display " Median: " + calculateMedian(data, dataCount)
       ii. Else:
          i. Display "ℹ No data to calculate."
    f. Else if choice is 4:
       i. If dataCount > 0:
-         i. Display "📊 Mode: " + calculateMode(data, dataCount)
+         i. Display " Mode: " + calculateMode(data, dataCount)
       ii. Else:
          i. Display "ℹ No data to calculate."
    g. Else if choice is 5:
@@ -449,9 +449,9 @@ Main Algorithm:
    h. Else if choice is 6:
       i. Set running to false
    i. Else:
-      i. Display "❌ Invalid choice!"
-6. Display "Thank you for using Statistics Calculator! 👋"
-```
+      i. Display " Invalid choice!"
+6. Display "Thank you for using Statistics Calculator! "
+```java
 
 **Method Design:**
 - `displayStatsMenu()`: UI method
@@ -483,7 +483,7 @@ Method: displayTextMenu()
 Method: enterText(scanner)
     Display "Enter text: "
     Get text from user
-    Display "✓ Text entered successfully!"
+    Display " Text entered successfully!"
     Return text
 
 Method: countWords(text)
@@ -533,22 +533,22 @@ Main Algorithm:
       i. Set text = enterText(scanner)
    d. Else if choice is 2:
       i. If text is not empty:
-         i. Display "📝 Word Count: " + countWords(text)
+         i. Display " Word Count: " + countWords(text)
       ii. Else:
          i. Display "ℹ No text entered yet."
    e. Else if choice is 3:
       i. If text is not empty:
-         i. Display "📝 Character Count: " + countCharacters(text)
+         i. Display " Character Count: " + countCharacters(text)
       ii. Else:
          i. Display "ℹ No text entered yet."
    f. Else if choice is 4:
       i. If text is not empty:
-         i. Display "📝 Vowel Count: " + countVowels(text)
+         i. Display " Vowel Count: " + countVowels(text)
       ii. Else:
          i. Display "ℹ No text entered yet."
    g. Else if choice is 5:
       i. If text is not empty:
-         i. Display "📝 Reversed: " + reverseText(text)
+         i. Display " Reversed: " + reverseText(text)
       ii. Else:
          i. Display "ℹ No text entered yet."
    h. Else if choice is 6:
@@ -556,9 +556,9 @@ Main Algorithm:
    i. Else if choice is 7:
       i. Set running to false
    j. Else:
-      i. Display "❌ Invalid choice!"
-5. Display "Thank you for using Text Analyzer! 👋"
-```
+      i. Display " Invalid choice!"
+5. Display "Thank you for using Text Analyzer! "
+```java
 
 **Method Design:**
 - `displayTextMenu()`: UI method
@@ -620,7 +620,7 @@ Main Algorithm:
 ## Method Design Patterns
 
 ### Input-Process-Output Pattern
-```
+```java
 Method: getUserInput(scanner, prompt)
     Display prompt
     Get and return input
@@ -631,7 +631,7 @@ Method: processData(data)
 
 Method: displayOutput(result)
     Format and display result
-```
+```java
 
 ### Validation Pattern
 ```java
@@ -645,7 +645,7 @@ Method: getValidInput(scanner, prompt, min, max)
         If isValid(input, min, max):
             Return input
         Display error message
-```
+```java
 
 ### Calculation with Helper Pattern
 ```java
@@ -657,7 +657,7 @@ Method: calculateTotal(items, count)
 
 Method: calculateItemValue(item)
     Return item.price * item.quantity
-```
+```java
 
 ---
 
@@ -703,7 +703,7 @@ public class ModularCalculator {
     
     public static double performDivision(double a, double b) {
         if (b == 0) {
-            System.out.println("❌ Error: Division by zero!");
+            System.out.println(" Error: Division by zero!");
             return 0;
         } else {
             return a / b;
@@ -750,15 +750,15 @@ public class ModularCalculator {
             } else if (choice == 5) {
                 running = false;
             } else {
-                System.out.println("❌ Invalid choice!");
+                System.out.println(" Invalid choice!");
             }
         }
         
-        System.out.println("Thank you for using the calculator! 👋");
+        System.out.println("Thank you for using the calculator! ");
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Static methods for utility functions (no instance needed)
@@ -807,14 +807,14 @@ public class GradeManagement {
             if (grade >= 0 && grade <= 100) {
                 students[count] = name;
                 grades[count] = grade;
-                System.out.println("✓ Student added successfully!");
+                System.out.println(" Student added successfully!");
                 return count + 1;
             } else {
-                System.out.println("❌ Invalid grade!");
+                System.out.println(" Invalid grade!");
                 return count;
             }
         } else {
-            System.out.println("⚠ Student list is full!");
+            System.out.println(" Student list is full!");
             return count;
         }
     }
@@ -854,7 +854,7 @@ public class GradeManagement {
                 }
             }
             
-            System.out.printf("🏆 Top Performer: %s (%.1f%%)\n", topStudent, maxGrade);
+            System.out.printf(" Top Performer: %s (%.1f%%)\n", topStudent, maxGrade);
         } else {
             System.out.println("ℹ No students in the system.");
         }
@@ -881,7 +881,7 @@ public class GradeManagement {
                 case 3:
                     if (studentCount > 0) {
                         double average = calculateClassAverage(grades, studentCount);
-                        System.out.printf("📊 Class Average: %.1f%%\n", average);
+                        System.out.printf(" Class Average: %.1f%%\n", average);
                     } else {
                         System.out.println("ℹ No students to average.");
                     }
@@ -893,16 +893,16 @@ public class GradeManagement {
                     running = false;
                     break;
                 default:
-                    System.out.println("❌ Invalid choice!");
+                    System.out.println(" Invalid choice!");
                     break;
             }
         }
         
-        System.out.println("Thank you for using Grade Management System! 👋");
+        System.out.println("Thank you for using Grade Management System! ");
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Methods modifying arrays (arrays passed by reference)
@@ -942,11 +942,11 @@ public class BankingSystem {
     public static double deposit(double balance, double amount) {
         if (amount > 0) {
             double newBalance = balance + amount;
-            System.out.printf("✓ Deposited: $%.2f\n", amount);
+            System.out.printf(" Deposited: $%.2f\n", amount);
             System.out.printf("New balance: $%.2f\n", newBalance);
             return newBalance;
         } else {
-            System.out.println("❌ Invalid deposit amount!");
+            System.out.println(" Invalid deposit amount!");
             return balance;
         }
     }
@@ -954,20 +954,20 @@ public class BankingSystem {
     public static double withdraw(double balance, double amount) {
         if (amount > 0 && amount <= balance) {
             double newBalance = balance - amount;
-            System.out.printf("✓ Withdrawn: $%.2f\n", amount);
+            System.out.printf(" Withdrawn: $%.2f\n", amount);
             System.out.printf("New balance: $%.2f\n", newBalance);
             return newBalance;
         } else if (amount > balance) {
-            System.out.println("❌ Insufficient funds!");
+            System.out.println(" Insufficient funds!");
             return balance;
         } else {
-            System.out.println("❌ Invalid withdrawal amount!");
+            System.out.println(" Invalid withdrawal amount!");
             return balance;
         }
     }
     
     public static void displayBalance(double balance) {
-        System.out.printf("💰 Current Balance: $%.2f\n", balance);
+        System.out.printf(" Current Balance: $%.2f\n", balance);
     }
     
     public static int addTransaction(String[] transactions, int count, String type, double amount) {
@@ -1032,16 +1032,16 @@ public class BankingSystem {
                     running = false;
                     break;
                 default:
-                    System.out.println("❌ Invalid choice!");
+                    System.out.println(" Invalid choice!");
                     break;
             }
         }
         
-        System.out.println("Thank you for banking with us! 👋");
+        System.out.println("Thank you for banking with us! ");
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Methods returning new balance (double)
@@ -1089,10 +1089,10 @@ public class StatisticsCalculator {
                 System.out.print("Enter number " + (i + 1) + ": ");
                 data[i] = scanner.nextDouble();
             }
-            System.out.println("✓ " + count + " numbers entered.");
+            System.out.println(" " + count + " numbers entered.");
             return count;
         } else {
-            System.out.println("❌ Invalid count!");
+            System.out.println(" Invalid count!");
             return 0;
         }
     }
@@ -1180,21 +1180,21 @@ public class StatisticsCalculator {
                     break;
                 case 2:
                     if (dataCount > 0) {
-                        System.out.printf("📊 Mean: %.2f\n", calculateMean(data, dataCount));
+                        System.out.printf(" Mean: %.2f\n", calculateMean(data, dataCount));
                     } else {
                         System.out.println("ℹ No data to calculate.");
                     }
                     break;
                 case 3:
                     if (dataCount > 0) {
-                        System.out.printf("📊 Median: %.2f\n", calculateMedian(data, dataCount));
+                        System.out.printf(" Median: %.2f\n", calculateMedian(data, dataCount));
                     } else {
                         System.out.println("ℹ No data to calculate.");
                     }
                     break;
                 case 4:
                     if (dataCount > 0) {
-                        System.out.printf("📊 Mode: %.2f\n", calculateMode(data, dataCount));
+                        System.out.printf(" Mode: %.2f\n", calculateMode(data, dataCount));
                     } else {
                         System.out.println("ℹ No data to calculate.");
                     }
@@ -1206,16 +1206,16 @@ public class StatisticsCalculator {
                     running = false;
                     break;
                 default:
-                    System.out.println("❌ Invalid choice!");
+                    System.out.println(" Invalid choice!");
                     break;
             }
         }
         
-        System.out.println("Thank you for using Statistics Calculator! 👋");
+        System.out.println("Thank you for using Statistics Calculator! ");
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - Statistical calculation methods
@@ -1258,7 +1258,7 @@ public class TextAnalyzer {
         scanner.nextLine(); // Consume newline
         System.out.print("Enter text: ");
         String text = scanner.nextLine();
-        System.out.println("✓ Text entered successfully!");
+        System.out.println(" Text entered successfully!");
         return text;
     }
     
@@ -1329,28 +1329,28 @@ public class TextAnalyzer {
                     break;
                 case 2:
                     if (!text.isEmpty()) {
-                        System.out.println("📝 Word Count: " + countWords(text));
+                        System.out.println(" Word Count: " + countWords(text));
                     } else {
                         System.out.println("ℹ No text entered yet.");
                     }
                     break;
                 case 3:
                     if (!text.isEmpty()) {
-                        System.out.println("📝 Character Count: " + countCharacters(text));
+                        System.out.println(" Character Count: " + countCharacters(text));
                     } else {
                         System.out.println("ℹ No text entered yet.");
                     }
                     break;
                 case 4:
                     if (!text.isEmpty()) {
-                        System.out.println("📝 Vowel Count: " + countVowels(text));
+                        System.out.println(" Vowel Count: " + countVowels(text));
                     } else {
                         System.out.println("ℹ No text entered yet.");
                     }
                     break;
                 case 5:
                     if (!text.isEmpty()) {
-                        System.out.println("📝 Reversed: " + reverseText(text));
+                        System.out.println(" Reversed: " + reverseText(text));
                     } else {
                         System.out.println("ℹ No text entered yet.");
                     }
@@ -1362,16 +1362,16 @@ public class TextAnalyzer {
                     running = false;
                     break;
                 default:
-                    System.out.println("❌ Invalid choice!");
+                    System.out.println(" Invalid choice!");
                     break;
             }
         }
         
-        System.out.println("Thank you for using Text Analyzer! 👋");
+        System.out.println("Thank you for using Text Analyzer! ");
         scanner.close();
     }
 }
-```
+```java
 
 **Key Concepts:**
 - String manipulation methods
@@ -1415,7 +1415,7 @@ public static int getValidInt(Scanner scanner, String prompt, int min, int max) 
         System.out.printf("Please enter a number between %d and %d\n", min, max);
     }
 }
-```
+```java
 
 **Array Processing Pattern:**
 ```java
@@ -1431,7 +1431,7 @@ private static double someOperation(double value) {
     // Helper method for complex operation
     return value * 2;
 }
-```
+```java
 
 **Menu-Driven Pattern:**
 ```java
@@ -1451,10 +1451,10 @@ public static void handleChoice(int choice, /* parameters */) {
         // etc.
     }
 }
-```
+```java
 
 ---
 
-✅ **Congratulations! You've mastered method-based programming in Java!** 
+ **Congratulations! You've mastered method-based programming in Java!** 
 
-*You've completed Stage 2! You can now translate pseudocode into well-organized, modular Java programs. Next stages will challenge you with problem-solving and algorithm design! 🎓*
+*You've completed Stage 2! You can now translate pseudocode into well-organized, modular Java programs. Next stages will challenge you with problem-solving and algorithm design! *

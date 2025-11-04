@@ -1,6 +1,6 @@
 # Level 5: Conditionals and Decision Making
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -175,7 +175,7 @@ let greeting = timeOfDay < 12 ? "Good morning!" :
                timeOfDay < 18 ? "Good afternoon!" : 
                "Good evening!";
 console.log("Time: " + timeOfDay + ":00, Greeting: " + greeting);
-```
+```javascript
 
 ---
 
@@ -184,10 +184,10 @@ console.log("Time: " + timeOfDay + ":00, Greeting: " + greeting);
 1. **Run your program**:
    ```bash
    node conditionals.js
-   ```
+   ```java
 
 **Expected output:**
-```
+```javascript
 === Simple Age Check ===
 You are an adult (18 or older)
 
@@ -217,7 +217,7 @@ Today is Wednesday - middle of the week
 === Ternary Operator Demo ===
 Score: 88, Result: Pass
 Time: 14:00, Greeting: Good afternoon!
-```
+```javascript
 
 ---
 
@@ -287,7 +287,7 @@ if (age >= 18) {
 } else {
     console.log("You are a minor (under 18)");
 }
-```
+```javascript
 - **`if`** = Start of conditional statement
 - **`(age >= 18)`** = Condition that evaluates to true or false
 - **`{}`** = Code block executed if condition is true
@@ -305,7 +305,7 @@ if (grade >= 90) {
 } else {
     console.log("Grade: F (below 60)");
 }
-```
+```javascript
 - **`else if`** = Additional condition to check if the first was false
 - **Execution order** matters: JavaScript checks each condition in order and executes the first true one
 - **Only one block** executes, not multiple blocks
@@ -316,7 +316,7 @@ if (username === "admin" && password === "secret123") {
 } else {
     console.log("Login failed! Invalid username or password.");
 }
-```
+```javascript
 - **`&&`** = Logical AND operator (both conditions must be true)
 - **`===`** = Strict equality (both value AND type must match)
 - **Security** considerations: Never hardcode credentials in real programs
@@ -329,7 +329,7 @@ console.log(5 == "5");   // true (values are the same after conversion)
 console.log(5 === "5");  // false (different types: number vs string)
 console.log(0 == false); // true (0 and false are both "falsy")
 console.log(0 === false); // false (different types)
-```
+```javascript
 
 **Best Practice**: Use `===` (strict equality) in most cases to avoid unexpected type conversions.
 
@@ -364,7 +364,7 @@ let isLoggedIn = false;
 if (!isLoggedIn) {
     console.log("Please log in first");
 }
-```
+```javascript
 
 ### Nested Conditionals
 
@@ -378,7 +378,7 @@ if (number > 0) {
         }
     }
 }
-```
+```javascript
 - **Inner condition** only evaluated if outer condition is true
 - **Be careful** with nesting - too deep can be hard to read
 
@@ -396,7 +396,7 @@ switch (dayOfWeek) {
         console.log("Invalid day number");
         break;
 }
-```
+```javascript
 - **Alternative to long if/else if** chains
 - **`break`** = Stops execution and exits switch
 - **Without break** = Falls through to next case ("fallthrough")
@@ -406,7 +406,7 @@ switch (dayOfWeek) {
 
 ```javascript
 let result = score >= 60 ? "Pass" : "Fail";
-```
+```javascript
 - **Syntax**: `condition ? valueIfTrue : valueIfFalse`
 - **Same as**:
 ```javascript
@@ -416,7 +416,7 @@ if (score >= 60) {
 } else {
     result = "Fail";
 }
-```
+```javascript
 
 **Chained Ternary (advanced):**
 ```javascript
@@ -424,7 +424,7 @@ let timeOfDay = 14;
 let greeting = timeOfDay < 12 ? "Good morning!" : 
                timeOfDay < 18 ? "Good afternoon!" : 
                "Good evening!";
-```
+```javascript
 
 ### Truthy and Falsy Values
 
@@ -461,7 +461,7 @@ if (isValidEmail) { ... }
 // Avoid
 if (x) { ... }
 if (flag) { ... }
-```
+```javascript
 
 **Keep conditions simple:**
 ```javascript
@@ -471,7 +471,7 @@ if (canVote) { ... }
 
 // Avoid - hard to read
 if (age >= 18 && isCitizen && !isInPrison) { ... }
-```
+```javascript
 
 **Consider switch vs if/else if:**
 - Use `switch` for exact value matching
@@ -547,10 +547,71 @@ if (overallScore >= 75 && participation) {
 } else {
     console.log("Not eligible for graduation, must repeat course");
 }
-```
+```javascript
 
 ---
 
  **Excellent work! You now understand how to make your programs make intelligent decisions!** 
 
 *Ready for the next challenge? Let's learn about loops and repetition!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```js
+console.log("Hello, World!");
+
+```js
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard javascript conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

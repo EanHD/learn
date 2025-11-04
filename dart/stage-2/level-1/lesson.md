@@ -1,6 +1,6 @@
 # Level 1: Pseudocode Translation
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -26,7 +26,7 @@ START
     print "This is my first real program"
     print "I'm learning to code!"
 END
-```
+```dart
 
 **Your mission**: Translate this pseudocode into Dart code and save it as `main.dart`.
 
@@ -36,12 +36,16 @@ Hints:
 - Text to print goes inside quotation marks
 - Each statement should be on its own line
 
+> ** Learning Tip:** This lesson introduces basic pseudocode. For more advanced examples with calculations and variables, see the c-c++ Stage 2 lessons which have additional practice problems.
+
+> ** Learning Tip:** This lesson introduces basic pseudocode. For more advanced examples with calculations and variables, see the c-c++ Stage 2 lessons which have additional practice problems.
+
 ### How to Run
 
 ```bash
 cd ~/.local/share/learn/workspaces/dart/stage-2/level-1
 dart main.dart
-```
+```dart
 
 Expected output:
 
@@ -49,7 +53,7 @@ Expected output:
 Welcome to the program!
 This is my first real program
 I'm learning to code!
-```
+```dart
 
 ### Success Checklist
 
@@ -59,7 +63,9 @@ I'm learning to code!
 - [ ] Output matches expected output exactly
 - [ ] All text is in quotation marks
 
-### Hint: Answer Key
+### Hint: <div style="page-break-after: always;"></div>
+
+Answer Key
 
 If you're stuck, here's what your code should look like (don't peek until you try!):
 
@@ -70,7 +76,7 @@ If you're stuck, here's what your code should look like (don't peek until you tr
 ## ANSWER KEY
 
 ```dart
-```
+```dart
 
 (Fill in based on language-specific syntax)
 
@@ -100,3 +106,20 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 ---
 
 <div style="page-break-after: always;"></div>
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic

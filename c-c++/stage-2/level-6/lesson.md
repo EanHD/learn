@@ -1,6 +1,6 @@
 # Level 6: Loop Pseudocode
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -13,11 +13,11 @@ Loops are the workhorses of programming! Today you'll master algorithms that use
 
 ### Learning Goals
 
-- Implement algorithms with counting and accumulation loops
-- Create nested loop structures for complex patterns
-- Use loops for data processing and validation
-- Master loop control and termination conditions
-- Develop iterative problem-solving approaches
+- [ ] Implement algorithms with counting and accumulation loops
+- [ ] Create nested loop structures for complex patterns
+- [ ] Use loops for data processing and validation
+- [ ] Master loop control and termination conditions
+- [ ] Develop iterative problem-solving approaches
 
 ---
 
@@ -32,10 +32,10 @@ Loops are the workhorses of programming! Today you'll master algorithms that use
 6. **Searching**: Look through data for specific items
 
 **Loop Control:**
-- **Initialization**: Set starting values
-- **Condition**: When to continue looping
-- **Update**: Change values each iteration
-- **Termination**: When to stop
+- [ ] **Initialization**: Set starting values
+- [ ] **Condition**: When to continue looping
+- [ ] **Update**: Change values each iteration
+- [ ] **Termination**: When to stop
 
 ---
 
@@ -48,7 +48,7 @@ Loops are the workhorses of programming! Today you'll master algorithms that use
 ## Algorithm 1: Sales Data Analyzer
 
 **Pseudocode:**
-```
+```cpp
 Algorithm: Analyze Monthly Sales Data
 1. Display "=== Sales Data Analyzer ==="
 2. Initialize sales array (can hold 30 values)
@@ -85,13 +85,13 @@ Algorithm: Analyze Monthly Sales Data
       i. Display "Day " + (i + 1) + ": $" + sales[i]
 10. Else:
    a. Display "No sales data entered."
-```
+```cpp
 
 **Loop Logic:**
-- Input loop with validation
-- Accumulation of sales data
-- Statistical calculations
-- Array iteration for display
+- [ ] Input loop with validation
+- [ ] Accumulation of sales data
+- [ ] Statistical calculations
+- [ ] Array iteration for display
 
 **Your Task:** Create a sales data analysis system.
 
@@ -100,7 +100,7 @@ Algorithm: Analyze Monthly Sales Data
 ## Algorithm 2: Student Attendance Tracker
 
 **Pseudocode:**
-```
+```cpp
 Algorithm: Track Class Attendance
 1. Display "=== Class Attendance Tracker ==="
 2. Display "Enter number of students: "
@@ -133,13 +133,13 @@ Algorithm: Track Class Attendance
       i. Display "Student " + student + ":  Present"
    b. Else:
       i. Display "Student " + student + ":  Absent"
-```
+```cpp
 
 **Loop Logic:**
-- Fixed iteration for known number of students
-- Array storage of attendance data
-- Percentage calculations
-- Conditional reporting based on attendance rate
+- [ ] Fixed iteration for known number of students
+- [ ] Array storage of attendance data
+- [ ] Percentage calculations
+- [ ] Conditional reporting based on attendance rate
 
 **Your Task:** Build a class attendance tracking system.
 
@@ -148,7 +148,7 @@ Algorithm: Track Class Attendance
 ## Algorithm 3: Inventory Management System
 
 **Pseudocode:**
-```
+```cpp
 Algorithm: Manage Store Inventory
 1. Display "=== Inventory Management System ==="
 2. Initialize item_names array (can hold 50 items)
@@ -222,13 +222,13 @@ Algorithm: Manage Store Inventory
    i. Else:
       i. Display " Invalid choice!"
 7. Display "Thank you for using Inventory Management System! "
-```
+```cpp
 
 **Loop Logic:**
-- Menu-driven interface with multiple operations
-- Array search and update operations
-- Inventory monitoring and alerts
-- Data validation and error handling
+- [ ] Menu-driven interface with multiple operations
+- [ ] Array search and update operations
+- [ ] Inventory monitoring and alerts
+- [ ] Data validation and error handling
 
 **Your Task:** Create a comprehensive inventory management system.
 
@@ -237,7 +237,7 @@ Algorithm: Manage Store Inventory
 ## Algorithm 4: Grade Book Calculator
 
 **Pseudocode:**
-```
+```cpp
 Algorithm: Calculate Final Grades
 1. Display "=== Grade Book Calculator ==="
 2. Display "Enter number of students: "
@@ -294,13 +294,13 @@ Algorithm: Calculate Final Grades
 23. Display "C grades: " + grade_ranges[2]
 24. Display "D grades: " + grade_ranges[3]
 25. Display "F grades: " + grade_ranges[4]
-```
+```cpp
 
 **Loop Logic:**
-- 2D array processing (nested loops)
-- Multiple statistical calculations
-- Grade distribution analysis
-- Complex data aggregation
+- [ ] 2D array processing (nested loops)
+- [ ] Multiple statistical calculations
+- [ ] Grade distribution analysis
+- [ ] Complex data aggregation
 
 **Your Task:** Build a comprehensive grade book system.
 
@@ -309,7 +309,7 @@ Algorithm: Calculate Final Grades
 ## Algorithm 5: Password Generator
 
 **Pseudocode:**
-```
+```cpp
 Algorithm: Generate Secure Passwords
 1. Display "=== Password Generator ==="
 2. Display "Enter desired password length (8-20): "
@@ -347,13 +347,13 @@ Algorithm: Generate Secure Passwords
 23. If include_special is "y":
    a. Display " Special characters"
 24. Display " Lowercase letters (always included)"
-```
+```cpp
 
 **Loop Logic:**
-- Input validation loop
-- Character set configuration
-- Password generation loop
-- Random character selection
+- [ ] Input validation loop
+- [ ] Character set configuration
+- [ ] Password generation loop
+- [ ] Random character selection
 
 **Your Task:** Create a customizable password generator.
 
@@ -362,7 +362,7 @@ Algorithm: Generate Secure Passwords
 ## Algorithm 6: Voting System
 
 **Pseudocode:**
-```
+```cpp
 Algorithm: Conduct Election Voting
 1. Display "=== Election Voting System ==="
 2. Initialize candidate_names array ["Alice", "Bob", "Charlie"]
@@ -407,13 +407,13 @@ Algorithm: Conduct Election Voting
       ii. Display candidate_names[i] + ": " + votes[i] + " votes (" + percentage + "%)"
 8. Else:
    a. Display "No votes were cast."
-```
+```cpp
 
 **Loop Logic:**
-- Menu-driven voting interface
-- Vote counting and storage
-- Real-time results display
-- Winner determination algorithm
+- [ ] Menu-driven voting interface
+- [ ] Vote counting and storage
+- [ ] Real-time results display
+- [ ] Winner determination algorithm
 
 **Your Task:** Build an election voting system.
 
@@ -422,17 +422,17 @@ Algorithm: Conduct Election Voting
 ### Loop Control Techniques
 
 **Loop Termination Conditions:**
-- **Counter-controlled**: Fixed number of iterations
-- **Sentinel-controlled**: Special value ends input
-- **Flag-controlled**: Boolean condition controls loop
-- **User-controlled**: User chooses to continue/stop
+- [ ] **Counter-controlled**: Fixed number of iterations
+- [ ] **Sentinel-controlled**: Special value ends input
+- [ ] **Flag-controlled**: Boolean condition controls loop
+- [ ] **User-controlled**: User chooses to continue/stop
 
 **Loop Best Practices:**
-- Initialize loop variables properly
-- Update loop variables in each iteration
-- Use meaningful variable names
-- Avoid infinite loops
-- Consider loop efficiency
+- [ ] Initialize loop variables properly
+- [ ] Update loop variables in each iteration
+- [ ] Use meaningful variable names
+- [ ] Avoid infinite loops
+- [ ] Consider loop efficiency
 
 ---
 
@@ -465,25 +465,25 @@ Algorithm: Conduct Election Voting
 ## Loop Algorithm Patterns
 
 ### Accumulation Pattern
-```
+```cpp
 Initialize total to 0
 While getting values:
     Get next_value
     Add next_value to total
 Display "Total: " + total
-```
+```cpp
 
 ### Counting Pattern
-```
+```cpp
 Initialize count to 0
 For each item:
     If item meets criteria:
         Add 1 to count
 Display "Count: " + count
-```
+```cpp
 
 ### Search Pattern
-```
+```cpp
 Initialize found to false
 For each item in collection:
     If item matches target:
@@ -494,10 +494,10 @@ If found:
     Display "Found at location"
 Else:
     Display "Not found"
-```
+```cpp
 
 ### Validation Pattern
-```
+```cpp
 Initialize is_valid to false
 While not is_valid:
     Get user_input
@@ -506,7 +506,7 @@ While not is_valid:
     Else:
         Display error message
 Process valid input
-```
+```cpp
 
 ---
 
@@ -526,11 +526,11 @@ int main() {
     int sales_count = 0;
     float total_sales = 0.0, highest_sale = 0.0, lowest_sale = 999999.0;
     
-    printf("=== Sales Data Analyzer ===\n");
-    printf("Enter daily sales (enter -1 to finish):\n");
+    std::cout << "=== Sales Data Analyzer ===\n");
+    std::cout << "Enter daily sales (enter -1 to finish):\n");
     
     while (sales_count < 30) {
-        printf("Day %d: $", sales_count + 1);
+        std::cout << "Day %d: $", sales_count + 1);
         float daily_sale;
         scanf("%f", &daily_sale);
         
@@ -548,37 +548,37 @@ int main() {
                 lowest_sale = daily_sale;
             }
         } else {
-            printf(" Invalid sale amount! Please enter positive number.\n");
+            std::cout << " Invalid sale amount! Please enter positive number.\n");
         }
     }
     
     if (sales_count > 0) {
         float average_sale = total_sales / sales_count;
         
-        printf("\n=== Sales Summary ===\n");
-        printf("Total days: %d\n", sales_count);
-        printf("Total sales: $%.2f\n", total_sales);
-        printf("Average daily sales: $%.2f\n", average_sale);
-        printf("Highest sale: $%.2f\n", highest_sale);
-        printf("Lowest sale: $%.2f\n", lowest_sale);
+        std::cout << "\n=== Sales Summary ===\n");
+        std::cout << "Total days: %d\n", sales_count);
+        std::cout << "Total sales: $%.2f\n", total_sales);
+        std::cout << "Average daily sales: $%.2f\n", average_sale);
+        std::cout << "Highest sale: $%.2f\n", highest_sale);
+        std::cout << "Lowest sale: $%.2f\n", lowest_sale);
         
-        printf("\n=== Daily Breakdown ===\n");
+        std::cout << "\n=== Daily Breakdown ===\n");
         for (int i = 0; i < sales_count; i++) {
-            printf("Day %d: $%.2f\n", i + 1, sales[i]);
+            std::cout << "Day %d: $%.2f\n", i + 1, sales[i]);
         }
     } else {
-        printf("No sales data entered.\n");
+        std::cout << "No sales data entered.\n");
     }
     
     return 0;
 }
-```
+```cpp
 
 **Key Concepts:**
-- Array storage for sales data
-- Loop with sentinel value (-1) for termination
-- Statistical calculations with accumulation
-- Input validation and error handling
+- [ ] Array storage for sales data
+- [ ] Loop with sentinel value (-1) for termination
+- [ ] Statistical calculations with accumulation
+- [ ] Input validation and error handling
 
 ---
 
@@ -592,15 +592,15 @@ int main() {
     int num_students, present_count = 0;
     char attendance_status[10];
     
-    printf("=== Class Attendance Tracker ===\n");
-    printf("Enter number of students: ");
+    std::cout << "=== Class Attendance Tracker ===\n");
+    std::cout << "Enter number of students: ");
     scanf("%d", &num_students);
     
     // Using array for attendance (1 = present, 0 = absent)
     int attendance[100]; // Assuming max 100 students
     
     for (int student = 1; student <= num_students; student++) {
-        printf("Student %d present? (y/n): ", student);
+        std::cout << "Student %d present? (y/n): ", student);
         scanf("%s", attendance_status);
         
         if (strcmp(attendance_status, "y") == 0 || strcmp(attendance_status, "Y") == 0) {
@@ -613,38 +613,38 @@ int main() {
     
     float attendance_percentage = (float)present_count / num_students * 100;
     
-    printf("\n=== Attendance Report ===\n");
-    printf("Total students: %d\n", num_students);
-    printf("Present: %d\n", present_count);
-    printf("Absent: %d\n", num_students - present_count);
-    printf("Attendance rate: %.1f%%\n", attendance_percentage);
+    std::cout << "\n=== Attendance Report ===\n");
+    std::cout << "Total students: %d\n", num_students);
+    std::cout << "Present: %d\n", present_count);
+    std::cout << "Absent: %d\n", num_students - present_count);
+    std::cout << "Attendance rate: %.1f%%\n", attendance_percentage);
     
     if (attendance_percentage >= 90) {
-        printf(" Excellent attendance!\n");
+        std::cout << " Excellent attendance!\n");
     } else if (attendance_percentage >= 75) {
-        printf(" Satisfactory attendance\n");
+        std::cout << " Satisfactory attendance\n");
     } else {
-        printf(" Poor attendance - follow up required\n");
+        std::cout << " Poor attendance - follow up required\n");
     }
     
-    printf("\n=== Individual Status ===\n");
+    std::cout << "\n=== Individual Status ===\n");
     for (int student = 1; student <= num_students; student++) {
         if (attendance[student - 1] == 1) {
-            printf("Student %d:  Present\n", student);
+            std::cout << "Student %d:  Present\n", student);
         } else {
-            printf("Student %d:  Absent\n", student);
+            std::cout << "Student %d:  Absent\n", student);
         }
     }
     
     return 0;
 }
-```
+```cpp
 
 **Key Concepts:**
-- Fixed iteration for known number of students
-- Array storage of boolean attendance data
-- Percentage calculations
-- Individual status reporting
+- [ ] Fixed iteration for known number of students
+- [ ] Array storage of boolean attendance data
+- [ ] Percentage calculations
+- [ ] Individual status reporting
 
 ---
 
@@ -661,15 +661,15 @@ int main() {
     int is_running = 1;
     int choice;
     
-    printf("=== Inventory Management System ===\n");
+    std::cout << "=== Inventory Management System ===\n");
     
     while (is_running) {
-        printf("\n1. Add Item\n");
-        printf("2. Update Quantity\n");
-        printf("3. Display Inventory\n");
-        printf("4. Find Low Stock Items\n");
-        printf("5. Exit\n");
-        printf("Choose option (1-5): ");
+        std::cout << "\n1. Add Item\n");
+        std::cout << "2. Update Quantity\n");
+        std::cout << "3. Display Inventory\n");
+        std::cout << "4. Find Low Stock Items\n");
+        std::cout << "5. Exit\n");
+        std::cout << "Choose option (1-5): ");
         scanf("%d", &choice);
         
         switch (choice) {
@@ -678,106 +678,106 @@ int main() {
                     char new_item_name[50];
                     int new_quantity;
                     
-                    printf("Enter item name: ");
+                    std::cout << "Enter item name: ");
                     scanf("%s", new_item_name);
-                    printf("Enter initial quantity: ");
+                    std::cout << "Enter initial quantity: ");
                     scanf("%d", &new_quantity);
                     
                     if (new_quantity >= 0) {
                         strcpy(item_names[item_count], new_item_name);
                         item_quantities[item_count] = new_quantity;
                         item_count++;
-                        printf(" Item added successfully!\n");
+                        std::cout << " Item added successfully!\n");
                     } else {
-                        printf(" Invalid quantity!\n");
+                        std::cout << " Invalid quantity!\n");
                     }
                 } else {
-                    printf(" Inventory is full!\n");
+                    std::cout << " Inventory is full!\n");
                 }
                 break;
             }
             case 2: {
                 if (item_count > 0) {
                     char search_name[50];
-                    printf("Enter item name to update: ");
+                    std::cout << "Enter item name to update: ");
                     scanf("%s", search_name);
                     
                     int found = 0;
                     for (int i = 0; i < item_count; i++) {
                         if (strcmp(item_names[i], search_name) == 0) {
-                            printf("Current quantity: %d\n", item_quantities[i]);
-                            printf("Enter new quantity: ");
+                            std::cout << "Current quantity: %d\n", item_quantities[i]);
+                            std::cout << "Enter new quantity: ");
                             int new_quantity;
                             scanf("%d", &new_quantity);
                             
                             if (new_quantity >= 0) {
                                 item_quantities[i] = new_quantity;
-                                printf(" Quantity updated!\n");
+                                std::cout << " Quantity updated!\n");
                                 found = 1;
                             } else {
-                                printf(" Invalid quantity!\n");
+                                std::cout << " Invalid quantity!\n");
                             }
                             break;
                         }
                     }
                     
                     if (!found) {
-                        printf(" Item not found!\n");
+                        std::cout << " Item not found!\n");
                     }
                 } else {
-                    printf(" No items in inventory.\n");
+                    std::cout << " No items in inventory.\n");
                 }
                 break;
             }
             case 3:
                 if (item_count > 0) {
-                    printf("=== Current Inventory ===\n");
+                    std::cout << "=== Current Inventory ===\n");
                     for (int i = 0; i < item_count; i++) {
-                        printf("%s: %d units\n", item_names[i], item_quantities[i]);
+                        std::cout << "%s: %d units\n", item_names[i], item_quantities[i]);
                     }
                 } else {
-                    printf(" Inventory is empty.\n");
+                    std::cout << " Inventory is empty.\n");
                 }
                 break;
             case 4:
                 if (item_count > 0) {
-                    printf("=== Low Stock Alert (≤5 units) ===\n");
+                    std::cout << "=== Low Stock Alert (≤5 units) ===\n");
                     int low_stock_count = 0;
                     
                     for (int i = 0; i < item_count; i++) {
                         if (item_quantities[i] <= 5) {
-                            printf("%s: %d units \n", item_names[i], item_quantities[i]);
+                            std::cout << "%s: %d units \n", item_names[i], item_quantities[i]);
                             low_stock_count++;
                         }
                     }
                     
                     if (low_stock_count == 0) {
-                        printf(" All items have sufficient stock.\n");
+                        std::cout << " All items have sufficient stock.\n");
                     }
                 } else {
-                    printf(" No items to check.\n");
+                    std::cout << " No items to check.\n");
                 }
                 break;
             case 5:
                 is_running = 0;
                 break;
             default:
-                printf(" Invalid choice!\n");
+                std::cout << " Invalid choice!\n");
                 break;
         }
     }
     
-    printf("Thank you for using Inventory Management System! \n");
+    std::cout << "Thank you for using Inventory Management System! \n");
     
     return 0;
 }
-```
+```cpp
 
 **Key Concepts:**
-- 2D array for string storage
-- Array search and update operations
-- Menu-driven interface
-- Inventory monitoring and alerts
+- [ ] 2D array for string storage
+- [ ] Array search and update operations
+- [ ] Menu-driven interface
+- [ ] Inventory monitoring and alerts
 
 ---
 
@@ -790,10 +790,10 @@ int main() {
 int main() {
     int num_students, num_assignments;
     
-    printf("=== Grade Book Calculator ===\n");
-    printf("Enter number of students: ");
+    std::cout << "=== Grade Book Calculator ===\n");
+    std::cout << "Enter number of students: ");
     scanf("%d", &num_students);
-    printf("Enter number of assignments: ");
+    std::cout << "Enter number of assignments: ");
     scanf("%d", &num_assignments);
     
     char student_names[50][50]; // Max 50 students, names up to 50 chars
@@ -801,23 +801,23 @@ int main() {
     
     // Input student data
     for (int student = 0; student < num_students; student++) {
-        printf("Enter name for student %d: ", student + 1);
+        std::cout << "Enter name for student %d: ", student + 1);
         scanf("%s", student_names[student]);
         
         float student_total = 0.0;
         for (int assignment = 0; assignment < num_assignments; assignment++) {
-            printf("Enter grade for %s assignment %d: ", 
+            std::cout << "Enter grade for %s assignment %d: ", 
                    student_names[student], assignment + 1);
             scanf("%f", &grades[student][assignment]);
             student_total += grades[student][assignment];
         }
         
         float student_average = student_total / num_assignments;
-        printf("%s's average: %.1f\n", student_names[student], student_average);
+        std::cout << "%s's average: %.1f\n", student_names[student], student_average);
     }
     
     // Calculate class statistics
-    printf("\n=== Class Statistics ===\n");
+    std::cout << "\n=== Class Statistics ===\n");
     float class_total = 0.0;
     float highest_average = 0.0;
     float lowest_average = 100.0;
@@ -840,12 +840,12 @@ int main() {
     }
     
     float class_average = class_total / num_students;
-    printf("Class average: %.1f\n", class_average);
-    printf("Highest student average: %.1f\n", highest_average);
-    printf("Lowest student average: %.1f\n", lowest_average);
+    std::cout << "Class average: %.1f\n", class_average);
+    std::cout << "Highest student average: %.1f\n", highest_average);
+    std::cout << "Lowest student average: %.1f\n", lowest_average);
     
     // Grade distribution
-    printf("\n=== Grade Distribution ===\n");
+    std::cout << "\n=== Grade Distribution ===\n");
     int grade_ranges[5] = {0, 0, 0, 0, 0}; // A, B, C, D, F
     
     for (int student = 0; student < num_students; student++) {
@@ -863,21 +863,21 @@ int main() {
         else grade_ranges[4]++;
     }
     
-    printf("A grades: %d\n", grade_ranges[0]);
-    printf("B grades: %d\n", grade_ranges[1]);
-    printf("C grades: %d\n", grade_ranges[2]);
-    printf("D grades: %d\n", grade_ranges[3]);
-    printf("F grades: %d\n", grade_ranges[4]);
+    std::cout << "A grades: %d\n", grade_ranges[0]);
+    std::cout << "B grades: %d\n", grade_ranges[1]);
+    std::cout << "C grades: %d\n", grade_ranges[2]);
+    std::cout << "D grades: %d\n", grade_ranges[3]);
+    std::cout << "F grades: %d\n", grade_ranges[4]);
     
     return 0;
 }
-```
+```cpp
 
 **Key Concepts:**
-- 2D array processing with nested loops
-- Multiple statistical calculations
-- Grade distribution analysis
-- Complex data aggregation
+- [ ] 2D array processing with nested loops
+- [ ] Multiple statistical calculations
+- [ ] Grade distribution analysis
+- [ ] Complex data aggregation
 
 ---
 
@@ -893,21 +893,21 @@ int main() {
     int password_length;
     char include_upper[10], include_numbers[10], include_special[10];
     
-    printf("=== Password Generator ===\n");
-    printf("Enter desired password length (8-20): ");
+    std::cout << "=== Password Generator ===\n");
+    std::cout << "Enter desired password length (8-20): ");
     scanf("%d", &password_length);
     
     while (password_length < 8 || password_length > 20) {
-        printf(" Length must be between 8-20 characters!\n");
-        printf("Enter desired password length (8-20): ");
+        std::cout << " Length must be between 8-20 characters!\n");
+        std::cout << "Enter desired password length (8-20): ");
         scanf("%d", &password_length);
     }
     
-    printf("Include uppercase letters? (y/n): ");
+    std::cout << "Include uppercase letters? (y/n): ");
     scanf("%s", include_upper);
-    printf("Include numbers? (y/n): ");
+    std::cout << "Include numbers? (y/n): ");
     scanf("%s", include_numbers);
-    printf("Include special characters? (y/n): ");
+    std::cout << "Include special characters? (y/n): ");
     scanf("%s", include_special);
     
     // Character sets
@@ -947,29 +947,29 @@ int main() {
     }
     password[password_length] = '\0'; // Null terminate
     
-    printf("Generated Password: %s\n", password);
-    printf("Password length: %d\n", password_length);
-    printf("Character sets used:\n");
+    std::cout << "Generated Password: %s\n", password);
+    std::cout << "Password length: %d\n", password_length);
+    std::cout << "Character sets used:\n");
     if (strcmp(include_upper, "y") == 0 || strcmp(include_upper, "Y") == 0) {
-        printf(" Uppercase letters\n");
+        std::cout << " Uppercase letters\n");
     }
     if (strcmp(include_numbers, "y") == 0 || strcmp(include_numbers, "Y") == 0) {
-        printf(" Numbers\n");
+        std::cout << " Numbers\n");
     }
     if (strcmp(include_special, "y") == 0 || strcmp(include_special, "Y") == 0) {
-        printf(" Special characters\n");
+        std::cout << " Special characters\n");
     }
-    printf(" Lowercase letters (always included)\n");
+    std::cout << " Lowercase letters (always included)\n");
     
     return 0;
 }
-```
+```cpp
 
 **Key Concepts:**
-- Input validation loop
-- Character set configuration
-- Random number generation
-- Array of string pointers
+- [ ] Input validation loop
+- [ ] Character set configuration
+- [ ] Random number generation
+- [ ] Array of string pointers
 
 ---
 
@@ -986,45 +986,45 @@ int main() {
     int voting_active = 1;
     int choice;
     
-    printf("=== Election Voting System ===\n");
+    std::cout << "=== Election Voting System ===\n");
     
     while (voting_active) {
-        printf("\n=== Vote Menu ===\n");
-        printf("Candidates:\n");
+        std::cout << "\n=== Vote Menu ===\n");
+        std::cout << "Candidates:\n");
         for (int i = 0; i < 3; i++) {
-            printf("%d. %s\n", i + 1, candidate_names[i]);
+            std::cout << "%d. %s\n", i + 1, candidate_names[i]);
         }
-        printf("4. Show Results\n");
-        printf("5. End Voting\n");
-        printf("Enter your choice (1-5): ");
+        std::cout << "4. Show Results\n");
+        std::cout << "5. End Voting\n");
+        std::cout << "Enter your choice (1-5): ");
         scanf("%d", &choice);
         
         if (choice >= 1 && choice <= 3) {
             votes[choice - 1]++;
             total_votes++;
-            printf(" Vote recorded for %s\n", candidate_names[choice - 1]);
+            std::cout << " Vote recorded for %s\n", candidate_names[choice - 1]);
         } else if (choice == 4) {
-            printf("=== Current Results ===\n");
-            printf("Total votes: %d\n", total_votes);
+            std::cout << "=== Current Results ===\n");
+            std::cout << "Total votes: %d\n", total_votes);
             
             if (total_votes > 0) {
                 for (int i = 0; i < 3; i++) {
                     float percentage = (float)votes[i] / total_votes * 100;
-                    printf("%s: %d votes (%.1f%%)\n", 
+                    std::cout << "%s: %d votes (%.1f%%)\n", 
                            candidate_names[i], votes[i], percentage);
                 }
             } else {
-                printf("No votes cast yet.\n");
+                std::cout << "No votes cast yet.\n");
             }
         } else if (choice == 5) {
             voting_active = 0;
         } else {
-            printf(" Invalid choice!\n");
+            std::cout << " Invalid choice!\n");
         }
     }
     
     if (total_votes > 0) {
-        printf("\n=== Final Election Results ===\n");
+        std::cout << "\n=== Final Election Results ===\n");
         
         // Find winner
         int winner_index = 0;
@@ -1037,28 +1037,28 @@ int main() {
             }
         }
         
-        printf(" Winner: %s with %d votes!\n", 
+        std::cout << " Winner: %s with %d votes!\n", 
                candidate_names[winner_index], max_votes);
-        printf("Total votes cast: %d\n", total_votes);
+        std::cout << "Total votes cast: %d\n", total_votes);
         
         for (int i = 0; i < 3; i++) {
             float percentage = (float)votes[i] / total_votes * 100;
-            printf("%s: %d votes (%.1f%%)\n", 
+            std::cout << "%s: %d votes (%.1f%%)\n", 
                    candidate_names[i], votes[i], percentage);
         }
     } else {
-        printf("No votes were cast.\n");
+        std::cout << "No votes were cast.\n");
     }
     
     return 0;
 }
-```
+```cpp
 
 **Key Concepts:**
-- Menu-driven voting interface
-- Vote counting and storage
-- Real-time results display
-- Winner determination algorithm
+- [ ] Menu-driven voting interface
+- [ ] Vote counting and storage
+- [ ] Real-time results display
+- [ ] Winner determination algorithm
 
 ---
 
@@ -1079,7 +1079,7 @@ for (int i = 0; i < size; i++) {
 for (int i = 0; i < size; i++) {
     if (array[i] > max) max = array[i];
 }
-```
+```cpp
 
 **Early Termination:**
 ```c
@@ -1090,10 +1090,80 @@ for (int i = 0; i < size; i++) {
         break; // Don't continue searching
     }
 }
-```
+```cpp
 
 ---
 
  **Fantastic! You've mastered loop-based algorithms!** 
 
 *Loops are the engines of computation. Next: Function pseudocode for modular programming! *
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- [ ] Review each function
+- [ ] Understand the flow
+- [ ] Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- [ ] Main function: Entry point
+- [ ] Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard C++ conventions with proper imports and main function
+2. **Output**: Uses std::cout to print messages to the console
+3. **Standard Library**: Includes iostream for input/output operations
+4. **Return Value**: Returns 0 to indicate successful execution
+5. **Best Practices**: Code is readable and uses C++ idioms
+
+### Testing Your Solution
+
+1. **Compile**: `g++ hello.cpp -o hello`
+2. **Run**: `./hello`
+3. **Expected Output**: `Hello, World!`
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
+| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+
+### Tips for Learning
+
+- C++ is a superset of C with additional features
+- `std::cout` is the C++ way to print (replaces `printf`)
+- `std::endl` adds a newline and flushes the buffer
+- The `std::` prefix means these are from the "standard" namespace

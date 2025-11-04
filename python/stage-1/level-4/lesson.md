@@ -1,6 +1,6 @@
 # Level 4: User Input
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -35,7 +35,7 @@ print(f"\nHello, {name}!")
 print(f"You are {age} years old.")
 print(f"Your favorite color is {favorite_color}.")
 print(f"Nice to meet you, {name}!")
-```
+```python
 
 ---
 
@@ -45,11 +45,11 @@ print(f"Nice to meet you, {name}!")
 2. **Navigate to where you saved your file**:
     ```bash
     cd /path/to/your/folder
-    ```
+    ```python
 3. **Run the code**:
     ```bash
     python3 input.py
-    ```
+    ```python
 4. **Follow the prompts** - type your answers when asked!
 
 **Example interaction:**
@@ -62,7 +62,7 @@ Hello, Alice!
 You are 25 years old.
 Your favorite color is Blue.
 Nice to meet you, Alice!
-```
+```python
 
 ---
 
@@ -115,7 +115,7 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 name = input("What is your name? ")
 age = int(input("How old are you? "))
 favorite_color = input("What is your favorite color? ")
-```
+```python
 
 - **`input("What is your name? ")`** = Displays prompt, gets text input
 - **`int(input("How old are you? "))`** = Gets input, converts to integer
@@ -127,7 +127,7 @@ print(f"\nHello, {name}!")
 print(f"You are {age} years old.")
 print(f"Your favorite color is {favorite_color}.")
 print(f"Nice to meet you, {name}!")
-```
+```python
 
 - **`f"\nHello, {name}!"`** = Newline then personalized greeting
 - **Uses stored variables** = Program remembers what user typed
@@ -166,3 +166,57 @@ print(f"Nice to meet you, {name}!")
  **Fantastic! Your programs can now talk to users!** 
 
 *Keep moving forward - next up: Conditionals and Decision Making!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```py
+print("Hello, World!")
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard python conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

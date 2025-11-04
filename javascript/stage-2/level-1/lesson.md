@@ -1,6 +1,6 @@
 # Level 1: Basic Pseudocode Translation
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -35,7 +35,7 @@ Algorithm: Make a sandwich
 5. Spread jelly on the other bread slice
 6. Put slices together
 7. Enjoy your sandwich!
-```
+```javascript
 
 This is much easier to understand than trying to write code first!
 
@@ -53,12 +53,12 @@ This is much easier to understand than trying to write code first!
 1. **Run the code**:
    ```bash
    node hello.js
-   ```
+   ```java
 
 **Expected output:**
-```
+```javascript
 Hello, World!
-```
+```javascript
 
 ## Algorithm 1: Greeting Program
 
@@ -69,7 +69,7 @@ Algorithm: Display Personal Greeting
 2. Get the user's name from input
 3. Display "Nice to meet you, " followed by the user's name
 4. Display "Welcome to programming!"
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that follows these exact steps.
 
@@ -86,7 +86,7 @@ Algorithm: Add Two Numbers
 4. Get second number from user
 5. Calculate sum of the two numbers
 6. Display "The sum is: " followed by the sum
-```
+```javascript
 
 **Your Task:** Create a JavaScript program that implements this calculator.
 
@@ -102,7 +102,7 @@ Algorithm: Calculate Age in Days
 3. Calculate days = age × 365
 4. Display "You are approximately " + days + " days old"
 5. Display "That's a lot of days!"
-```
+```javascript
 
 **Your Task:** Create a program that calculates approximate age in days.
 
@@ -120,7 +120,7 @@ Algorithm: Celsius to Fahrenheit Converter
 5. Display "°C = "
 6. Display the Fahrenheit temperature
 7. Display "°F"
-```
+```javascript
 
 **Your Task:** Create a temperature conversion program.
 
@@ -140,7 +140,7 @@ Algorithm: Calculate Rectangle Area
 7. Calculate perimeter = 2 × (length + width)
 8. Display "Area: " + area
 9. Display "Perimeter: " + perimeter
-```
+```javascript
 
 **Your Task:** Create a program that calculates both area and perimeter.
 
@@ -163,7 +163,7 @@ Algorithm: Calculate Simple Interest
 10. Display "Principal: $" + principal
 11. Display "Interest: $" + interest
 12. Display "Total: $" + total
-```
+```javascript
 
 **Your Task:** Implement the complete interest calculation.
 
@@ -189,7 +189,7 @@ Algorithm: Calculate Body Mass Index
    Display "Category: Overweight"
 11. Else
    Display "Category: Obesity"
-```
+```javascript
 
 **Your Task:** Create a program that calculates BMI with categorization.
 
@@ -254,7 +254,7 @@ Algorithm: Process User Data
 Else
    Display "Minor user"
 4. Display "Data processed"
-```
+```javascript
 
 ### Bad Pseudocode (Too Vague)
 ```javascript
@@ -262,7 +262,7 @@ Algorithm: Do stuff
 1. Get things
 2. Calculate something
 3. Show results
-```
+```javascript
 
 ### Good Pseudocode (Clear and Specific)
 ```javascript
@@ -274,7 +274,7 @@ Algorithm: Calculate BMI
 5. Get height from user
 6. Calculate BMI = weight ÷ (height × height)
 7. Display "Your BMI is: " + BMI
-```
+```javascript
 
 ---
 
@@ -300,7 +300,7 @@ console.log("Nice to meet you, " + name);
 
 // Display "Welcome to programming!"
 console.log("Welcome to programming!");
-```
+```javascript
 
 ### Algorithm 2: Simple Calculator
 
@@ -321,7 +321,7 @@ let sum = firstNum + secondNum;
 
 // Display "The sum is: " followed by the sum
 console.log("The sum is: " + sum);
-```
+```javascript
 
 ### Algorithm 3: Age Calculator
 
@@ -340,7 +340,7 @@ let days = age * 365;
 // Display messages
 console.log("You are approximately " + days + " days old");
 console.log("That's a lot of days!");
-```
+```javascript
 
 ### Algorithm 4: Temperature Converter
 
@@ -358,7 +358,7 @@ let fahrenheit = (celsius * 9/5) + 32;
 
 // Display the results
 console.log(celsius + "°C = " + fahrenheit + "°F");
-```
+```javascript
 
 ### Algorithm 5: Rectangle Area Calculator
 
@@ -383,7 +383,7 @@ let perimeter = 2 * (length + width);
 // Display results
 console.log("Area: " + area);
 console.log("Perimeter: " + perimeter);
-```
+```javascript
 
 ### Algorithm 6: Simple Interest Calculator
 
@@ -412,7 +412,7 @@ let total = principal + interest;
 console.log("Principal: $" + principal.toFixed(2));
 console.log("Interest: $" + interest.toFixed(2));
 console.log("Total: $" + total.toFixed(2));
-```
+```javascript
 
 ### Algorithm 7: BMI Calculator
 
@@ -444,7 +444,7 @@ if (bmi < 18.5) {
 } else {
     console.log("Category: Obesity");
 }
-```
+```javascript
 
 ### Common Translation Patterns
 
@@ -491,22 +491,76 @@ if (bmi < 18.5) {
 **Getting Numbers:**
 ```javascript
 let age = parseFloat(readlineSync.question("Enter age: "));
-```
+```javascript
 
 **Getting Text:**
 ```javascript
 let name = readlineSync.question("Enter name: ");
-```
+```javascript
 
 **Displaying Results:**
 ```javascript
 console.log("Result: " + result);
 console.log("Price: $" + price.toFixed(2));
 console.log("Hello, " + name + "!");
-```
+```javascript
 
 ---
 
  **Congratulations! You've translated your first pseudocode algorithms into working JavaScript programs!** 
 
 *This is a major milestone - you're now thinking like a programmer! Next up: Variables in pseudocode!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```js
+console.log("Hello, World!");
+
+```js
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard javascript conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

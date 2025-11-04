@@ -1,6 +1,6 @@
 # Level 5: Conditional Statements
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.jl` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.jl` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 1: Copying Code
 
@@ -38,7 +38,7 @@ elseif score >= 60
 else
     println("Grade: F - Study harder!")
 end
-```
+```julia
 
 ---
 
@@ -47,17 +47,17 @@ end
 **Method 1 (Vim - Recommended):**
 ```julia
 <Space>r
-```
+```julia
 
 **Method 2 (Terminal):**
 ```bash
 julia main.jl
-```
+```julia
 
 **Expected output:**
-```
+```julia
 [Output depends on conditions - varies based on input]
-```
+```julia
 
 
 ---

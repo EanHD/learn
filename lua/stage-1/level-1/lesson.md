@@ -1,6 +1,6 @@
 # Level 1: Hello World
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 1: Copying Code
@@ -27,7 +27,7 @@ Welcome to your first step into Lua programming! Today, you'll learn how to crea
 
 ```lua
 print("Hello, World!")
-```
+```lua
 
 ---
 
@@ -37,16 +37,16 @@ print("Hello, World!")
 2. **Navigate to where you saved your file**:
    ```bash
    cd /path/to/your/folder
-   ```
+   ```lua
 3. **Run your program**:
    ```bash
    lua hello.lua
-   ```
+   ```bash
 
 **Expected output:**
-```
+```lua
 Hello, World!
-```
+```lua
 
 ---
 
@@ -79,7 +79,7 @@ If you're feeling brave, try these small changes:
 
 1. Change the message to "Hello, Lua Programming!"
 2. Add another `print()` line with your name
-3. Try with different punctuation or emojis: `"Hello, World! 😊"`
+3. Try with different punctuation or emojis: `"Hello, World! "`
 
 ---
 
@@ -99,7 +99,7 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ```lua
 print("Hello, World!")
-```
+```lua
 - **`print`** = Built-in function that outputs text to the console
 - **`()`** = Function call operator - executes the function with arguments
 - **`"Hello, World!"`** = String argument passed to the print function
@@ -141,3 +141,64 @@ Lua can be run in several ways:
  **Congratulations! You've written your first Lua program!** 
 
 *Keep moving forward - next up: Variables!*
+
+
+### How to Run
+
+1. Open the code file
+2. Review and understand the implementation
+3. Execute using: `<Space>r` in Vim
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```lua
+print("Hello, World!")
+
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard lua conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

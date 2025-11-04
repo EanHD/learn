@@ -1,59 +1,60 @@
 # Level 6: Loops
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
-
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.sh` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 1: Copying Code
 
 ### Today's Mission
 
-Now that you've learned the basics, let's explore repeating code with loops! This fundamental concept is used in almost every program you'll write.
+Learn to repeat actions efficiently using loops.
+
+---
 
 ### Learning Goals
 
-- Understand how to use loops in Shell
-- Learn the syntax specific to Shell
-- Practice implementing loops
-- See real-world use cases
+- Understand loop concepts and iteration
+- Master for loops and while loops
+- Practice with loop control (break, continue)
+- Create programs that handle repetitive tasks
+
+---
 
 ### Your Task
 
-We'll focus on understanding how loops works in Shell. For now, copy the provided code and run it to see the results. Don't worry if you don't understand every detail yet - that comes with practice!
-
-### Important Note
-
-At this stage, we focus on copying and understanding. You'll start writing your own code in Stage 2 (Pseudocode to Code).
-
-### How to Execute
+**Copy the following code EXACTLY as shown below into `main.sh`**
 
 ```bash
-bash program.sh
+#!/bin/bash
+
+echo "Counting 1 to 10:"
+for i in {1..10}; do
+    echo -n "$i "
+done
+echo ""
+
+echo -e "\nMultiplication table for 7:"
+for i in {1..10}; do
+    echo "7 × $i = $((7 * i))"
+done
+
+echo -e "\nCountdown from 5:"
+count=5
+while [ $count -gt 0 ]; do
+    echo $count
+    ((count--))
+done
+echo "Liftoff!"
 ```
+
+---
 
 ### Success Checklist
 
-- [ ] Created the file
+- [ ] Created a file named `main.sh`
 - [ ] Copied the code exactly as shown
-- [ ] Program executed without errors
-- [ ] Understood what the output represents
-
----
-
-### What's Next?
-
-In Stage 2, you'll take what you learned here and start translating logic into code. The progression is:
-
-1. **Stage 1 (Copying)** - Get familiar with syntax
-2. **Stage 2 (Pseudocode→Code)** - Translate plain English to code
-3. **Stage 3 (Problem→Pseudocode)** - Write the logic first
-4. **Stage 4 (Full Problem Solving)** - Complete independence
-5. **Stage 5 (Capstone)** - Real-world projects
-
----
-
-## Need Help with Vim?
-
-Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim commands!
+- [ ] Ran the program successfully
+- [ ] Understood the basic concepts
+- [ ] Experimented with small modifications
 
 ---
 
@@ -61,23 +62,70 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ---
 
-## ANSWER KEY (No cheating until you've tried!)
+## ANSWER KEY (Study after attempting!)
 
-### Code Breakdown
+### The Complete Code
 
-> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+```bash
+#!/bin/bash
+
+echo "Counting 1 to 10:"
+for i in {1..10}; do
+    echo -n "$i "
+done
+echo ""
+
+echo -e "\nMultiplication table for 7:"
+for i in {1..10}; do
+    echo "7 × $i = $((7 * i))"
+done
+
+echo -e "\nCountdown from 5:"
+count=5
+while [ $count -gt 0 ]; do
+    echo $count
+    ((count--))
+done
+echo "Liftoff!"
+```
+
+### What This Code Does
+
+This program demonstrates loops in Bash/Shell.
 
 ### Key Concepts
 
-- Review the code structure specific to Shell
-- Understand the execution flow
-- Learn common pitfalls and solutions
+- **Loops**: Repeating code multiple times
+- **For Loops**: Loop with a counter (1 to 10)
+- **While Loops**: Loop while a condition is true
+- **Loop Control**: Managing when loops start and stop
 
-### Next Steps
+### Line-by-Line Breakdown
 
-Practice the code and experiment with variations!
+The code uses loops for repetition:
+
+1. **Counting Loop**: Count from 1 to 10 and display
+2. **Multiplication Table**: Use a loop to show 7 times table
+3. **Countdown Loop**: While loop that counts down
+4. **Display Each**: Print each number in the sequence
+
+### Common Errors & Solutions
+
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Syntax error | Typo in code | Double-check spelling and punctuation |
+| Type error | Wrong data type | Ensure variables are correct type |
+| Runtime error | Code runs but crashes | Check your logic and data flow |
+
+### Bonus Knowledge
+
+- For loops are best when you know how many iterations
+- While loops are best when condition-based looping is needed
+- Infinite loops occur when conditions never become false
+- Always ensure your loops will eventually terminate
 
 ---
 
-**Congratulations! Keep coding!**
+**Excellent work! You've mastered loops!**
 
+*Continue to the next level to keep building your skills!*

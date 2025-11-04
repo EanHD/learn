@@ -1,6 +1,6 @@
 # Level 1: Simple Application - Temperature Converter
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 4: Full Problem Solving
@@ -39,12 +39,12 @@ The temperature converter should:
 1. **Navigate to this level's directory**:
     ```bash
     cd python/stage-4-full-problem-solving/level-1-simple-application
-    ```
+    ```bash
 
 2. **Run the program**:
     ```bash
     python3 main.py
-    ```
+    ```bash
 
 3. **Test different conversions** and edge cases
 
@@ -94,7 +94,7 @@ Try these improvements to make the program even better:
 def celsius_to_fahrenheit(celsius):
     """Convert Celsius to Fahrenheit."""
     return (celsius * 9/5) + 32
-```
+```python
 
 - **Clear naming**: Function name describes exactly what it does
 - **Documentation**: Docstring explains the purpose
@@ -110,7 +110,7 @@ def get_temperature_input(prompt):
             return temp
         except ValueError:
             print(" Invalid input. Please enter a valid number.")
-```
+```python
 
 - **Input validation**: Uses try/except to handle invalid input
 - **User-friendly**: Clear error messages
@@ -129,7 +129,7 @@ main.py
 │   └── get_menu_choice()
 └── main() function
     └── Program logic and menu
-```
+```python
 
 ---
 
@@ -144,12 +144,12 @@ main.py
 **Celsius to Fahrenheit:**
 ```python
 °F = (°C × 9/5) + 32
-```
+```python
 
 **Fahrenheit to Celsius:**
 ```python
 °C = (°F - 32) × 5/9
-```
+```python
 
 ### Key Programming Concepts Demonstrated
 
@@ -198,3 +198,104 @@ main.py
  **Congratulations! You've built your first complete Python application!** 
 
 *This temperature converter demonstrates the full software development process. Next up: Data Processing Application!*
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+<div style="page-break-after: always;"></div>
+
+## Answer Key
+
+### Complete Solution
+
+```py
+#!/usr/bin/env python3
+"""
+Temperature Converter
+A simple Python program for converting between Celsius and Fahrenheit.
+"""
+
+def celsius_to_fahrenheit(celsius):
+    """Convert Celsius to Fahrenheit."""
+    return (celsius * 9/5) + 32
+
+def fahrenheit_to_celsius(fahrenheit):
+    """Convert Fahrenheit to Celsius."""
+    return (fahrenheit - 32) * 5/9
+
+def get_temperature_input(prompt):
+    """Get temperature input from user with validation."""
+    while True:
+        try:
+            temp = float(input(prompt))
+            return temp
+        except ValueError:
+            print("❌ Invalid input. Please enter a valid number.")
+
+def get_menu_choice():
+    """Get menu choice from user with validation."""
+    while True:
+        try:
+            choice = int(input("Enter choice (1 or 2): "))
+            if choice in [1, 2]:
+                return choice
+            else:
+                print("❌ Please enter 1 or 2.")
+        except ValueError:
+            print("❌ Invalid input. Please enter a number.")
+
+def main():
+    """Main program function."""
+    print("🌡️  Temperature Converter 🌡️")
+    print("=" * 30)
+    print("What conversion do you want?")
+    print("1. Celsius to Fahrenheit")
+    print("2. Fahrenheit to Celsius")
+
+    choice = get_menu_choice()
+
+    if choice == 1:
+        # Celsius to Fahrenheit
+        celsius = get_temperature_input("Enter temperature in Celsius: ")
+        fahrenheit = celsius_to_fahrenheit(celsius)
+        print(".1f")
+    elif choice == 2:
+        # Fahrenheit to Celsius
+        fahrenheit = get_temperature_input("Enter temperature in Fahrenheit: ")
+        celsius = fahrenheit_to_celsius(fahrenheit)
+        print(".1f")
+if __name__ == "__main__":
+    main()
+```
+
+### Code Breakdown
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Structure**: The program follows standard python conventions with proper imports and main function
+2. **Variables**: Data types are correctly declared and initialized
+3. **Logic**: The program implements the required functionality
+4. **Output**: Results are displayed clearly to the user
+5. **Best Practices**: Code is readable and follows naming conventions
+
+### Testing Your Solution
+
+Try these test cases to verify your code works correctly:
+
+1. **Basic Test**: Run the program with standard inputs
+2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
+3. **Error Handling**: Verify the program handles invalid inputs gracefully
+
+### Tips for Understanding
+
+- Review each section carefully
+- Try modifying values to see how output changes
+- Add your own printf/print statements to trace execution
+- Experiment with different inputs

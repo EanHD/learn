@@ -1,6 +1,6 @@
 # Level 1: Pseudocode Translation
 
-> **📖 LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -26,7 +26,7 @@ START
     print "This is my first real program"
     print "I'm learning to code!"
 END
-```
+```type
 
 **Your mission**: Translate this pseudocode into Typescript code and save it as `main.ts`.
 
@@ -41,7 +41,7 @@ Hints:
 ```bash
 cd ~/.local/share/learn/workspaces/typescript/stage-2/level-1
 ts-node main.ts
-```
+```type
 
 Expected output:
 
@@ -49,7 +49,7 @@ Expected output:
 Welcome to the program!
 This is my first real program
 I'm learning to code!
-```
+```type
 
 ### Success Checklist
 
@@ -59,7 +59,9 @@ I'm learning to code!
 - [ ] Output matches expected output exactly
 - [ ] All text is in quotation marks
 
-### Hint: Answer Key
+### Hint: <div style="page-break-after: always;"></div>
+
+Answer Key
 
 If you're stuck, here's what your code should look like (don't peek until you try!):
 
@@ -70,7 +72,7 @@ If you're stuck, here's what your code should look like (don't peek until you tr
 ## ANSWER KEY
 
 ```ts
-```
+```type
 
 (Fill in based on language-specific syntax)
 
@@ -100,3 +102,20 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 ---
 
 <div style="page-break-after: always;"></div>
+
+
+### Additional Content
+
+Understand the key concepts:
+
+- Review each function
+- Understand the flow
+- Learn the patterns used
+
+
+### Code Review
+
+Key functions and their purpose:
+
+- Main function: Entry point
+- Helper functions: Support logic
