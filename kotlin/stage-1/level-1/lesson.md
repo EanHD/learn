@@ -36,7 +36,7 @@ java -jar hello.jar
 
 Expected output:
 
-```
+```kotlin
 Hello, World!
 ```
 
@@ -50,3 +50,29 @@ Hello, World!
 ---
 
 **Kotlin interoperates seamlessly with Java and is fully interoperable with existing JVM code!**
+
+---
+
+<div style="page-break-after: always;"></div>
+
+---
+
+## ANSWER KEY (No cheating until you've tried!)
+
+### Code Breakdown
+
+> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+
+### Key Concepts
+
+- Review the code structure specific to Kotlin
+- Understand the execution flow
+- Learn common pitfalls and solutions
+
+### Next Steps
+
+Practice the code and experiment with variations!
+
+---
+
+**Congratulations! Keep coding!**

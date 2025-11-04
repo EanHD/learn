@@ -26,6 +26,24 @@ You're going to build a complete Kotlin application. This is a real project that
 - Error handling
 - Code organization
 
+
+### How to Compile and Run
+
+1. **Compile the code**:
+   ```bash
+   kotlinc hello.kt
+   ```
+
+2. **Run your program**:
+   ```bash
+   kotlin hello
+   ```
+
+**Expected output:**
+```
+Hello, World!
+```
+
 ### Project Requirements
 
 A complete Kotlin project must include:
@@ -96,3 +114,26 @@ Check the `VIM_CHEATSHEET.md` for basic Vim commands!
 ---
 
 <div style="page-break-after: always;"></div>
+
+---
+
+## ANSWER KEY (No cheating until you've tried!)
+
+### Code Breakdown
+
+> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+
+### Key Concepts
+
+- Review the code structure specific to Kotlin
+- Understand the execution flow
+- Learn common pitfalls and solutions
+
+### Next Steps
+
+Practice the code and experiment with variations!
+
+---
+
+**Congratulations! Keep coding!**
+
