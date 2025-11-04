@@ -61,10 +61,13 @@ learn rust 1
 ### Window Navigation
 | Key | Action |
 |-----|--------|
-| \`Ctrl+h\` | Move to left window (lesson) |
-| \`Ctrl+l\` | Move to right window (code) |
-| \`<Space>←\` | Alternative: move left |
-| \`<Space>→\` | Alternative: move right |
+| \`Ctrl+h\` | Move to left window |
+| \`Ctrl+j\` | Move to bottom window |
+| \`Ctrl+k\` | Move to top window |
+| \`Ctrl+l\` | Move to right window |
+| \`<Space>=\` | Equalize window sizes |
+| \`<Space>.\` | Make window wider |
+| \`<Space>,\` | Make window narrower |
 
 ### File Operations
 | Key | Action |
@@ -141,12 +144,13 @@ When you open a code file with a help comment, your cursor automatically starts 
 
 ### Which-Key Menu
 Press \`<Space>\` and wait - you'll see ALL available commands organized by category:
-- **Window Navigation**: \`←\` \`→\`
-- **Help & Guide**: \`g\` \`h\` \`t\` \`w\`
-- **Find**: \`ff\` \`fg\` \`fb\` \`fh\`
-- **Refactor**: \`rn\` \`ro\`
-- **Code**: \`ca\`
-- **View**: \`xx\` \`xz\` \`xt\`
+- **Help & Guide**: \`g\` (Quick Guide), \`h\` (Essential Shortcuts)
+- **Files**: \`w\` (Save), \`ff\` (Find), \`fg\` (Grep), \`fb\` (Buffers), \`fh\` (Help)
+- **Lesson Navigation**: \`n\` (Next), \`p\` (Previous), \`i\` (Info)
+- **Code**: \`r\` (Run/Compile), \`ca\` (Code Actions)
+- **Terminal**: \`t\` (Toggle)
+- **Diagnostics**: \`xx\` (Show), \`xz\` (Zen Mode)
+- **Window**: \`=\` (Equalize), \`.\` (Wider), \`,\` (Narrower)
 
 No more memorizing keybindings!
 

@@ -102,11 +102,11 @@ Last updated: November 2025
 ### Code Intelligence
 - Auto-completion as you type
 - Inline diagnostics and errors
-- Go to definition (gd)
-- Find references (gr)
-- Rename refactoring (<Space>rn)
-- Code actions (<Space>ca)
-- Hover documentation (K)
+- Go to definition (`gd`)
+- Find references (`gr`)
+- Code actions (`<Space>ca`)
+- Hover documentation (`K`)
+- Run/Compile current file (`<Space>r`)
 
 ### Navigation Features
 - **Flash Jump** - Press `s` to jump anywhere instantly
@@ -118,9 +118,10 @@ Last updated: November 2025
 - **Split Screen** - Lesson on left, code on right
 - **Auto Window Balance** - Optimal sizing on startup
 - **Smart Navigation**:
-  - `Ctrl+h` / `Ctrl+l` - Switch windows
-  - `<Space>←` / `<Space>→` - Alternative window switching
-  - `Ctrl+j` / `Ctrl+k` - Vertical navigation
+  - `Ctrl+h/j/k/l` - Move between windows (left/down/up/right)
+  - `<Space>=` - Equalize all windows
+  - `<Space>.` - Make current window wider
+  - `<Space>,` - Make current window narrower
 - **Terminal Toggle** - `<Space>t` for horizontal terminal
 
 ### Lesson Protection System

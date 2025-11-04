@@ -327,32 +327,47 @@ When you open a lesson with Neovim (`learn open cpp 1`), you get:
 
 ### ⚡ Key Bindings
 
-**In Neovim (after pressing Space):**
+**Leader key commands (press Space first):**
 
 | Key | Action |
 |-----|--------|
 | \`<Space>g\` | Quick Guide popup |
 | \`<Space>h\` | Essential Shortcuts popup |
+| \`<Space>r\` | Run/Compile current file |
 | \`<Space>t\` | Toggle terminal |
 | \`<Space>w\` | Save file |
-| \`<Space>←\` | Move to left window (lesson) |
-| \`<Space>→\` | Move to right window (code) |
-| \`<Space>ff\` | Find files |
+| \`<Space>n\` | Next lesson |
+| \`<Space>p\` | Previous lesson |
+| \`<Space>i\` | Show lesson info |
+| \`<Space>ff\` | Find files (Telescope) |
 | \`<Space>fg\` | Live grep search |
 | \`<Space>fb\` | Browse buffers |
-| \`<Space>xx\` | Show diagnostics |
+| \`<Space>fh\` | Help tags |
+| \`<Space>ca\` | Code actions (LSP) |
+| \`<Space>xx\` | Show diagnostics (Trouble) |
 | \`<Space>xz\` | Toggle Zen mode |
+| \`<Space>=\` | Equalize windows |
+| \`<Space>.\` | Make window wider |
+| \`<Space>,\` | Make window narrower |
 
 **Always available:**
 
 | Key | Action |
 |-----|--------|
 | \`Ctrl+h\` | Move to left window |
+| \`Ctrl+j\` | Move to bottom window |
+| \`Ctrl+k\` | Move to top window |
 | \`Ctrl+l\` | Move to right window |
+| \`Ctrl+d\` | Scroll down (centered) |
+| \`Ctrl+u\` | Scroll up (centered) |
 | \`s\` | Flash jump (even in lessons!) |
-| \`Ctrl+d/u\` | Page down/up |
-| \`:w\` | Save |
-| \`:q\` | Quit |
+| \`S\` | Flash treesitter selection |
+| \`gcc\` | Comment toggle current line |
+| \`gc\` | Comment toggle linewise |
+| \`K\` | Hover docs (LSP) |
+| \`gd\` | Go to definition (LSP) |
+| \`gr\` | Find references (LSP) |
+| \`Esc\` | Clear search highlight / Exit terminal mode |
 
 ---
 
