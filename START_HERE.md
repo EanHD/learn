@@ -17,16 +17,16 @@ Launches an **interactive menu** to browse lessons, check progress, and start le
 ### Option 2: Jump to a Specific Lesson
 
 ```bash
-learn c++ 1              # C++ Stage 1, Level 1
-learn python 2           # Python Stage 1, Level 2
-learn typescript 1       # TypeScript Stage 1, Level 1
-learn kotlin 1           # Kotlin Stage 1, Level 1
+learn open c++ 1 1       # C++ Stage 1, Level 1
+learn open python 1 2    # Python Stage 1, Level 2
+learn open typescript 1 1    # TypeScript Stage 1, Level 1
+learn open kotlin 1 1    # Kotlin Stage 1, Level 1
 ```
 
 ### Option 3: First Time? Run the Setup Wizard
 
 ```bash
-learn --init
+learn init
 ```
 
 This checks your system, installs dependencies, and creates your workspace.

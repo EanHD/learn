@@ -5,12 +5,13 @@ Keep this handy while learning!
 ## Open Lessons (CLI)
 
 ```
-learn c++ 1             Open C++ Level 1
-learn rust 2            Open Rust Level 2
-learn c++ 1 --stage 3   Open C++ Stage 3, Level 1
-learn --list            List all lessons
-learn --info            Show your progress
-learn --next            Get suggestion for next lesson
+learn open c++ 1 1      Open C++ Stage 1, Level 1
+learn open rust 1 2     Open Rust Stage 1, Level 2
+learn open c++ 3 1      Open C++ Stage 3, Level 1
+learn browse            Browse languages by category
+learn list              List all lessons
+learn progress          Show your progress
+learn next              Get suggestion for next lesson
 ```
 
 ## Window Navigation (Vim)
@@ -87,13 +88,13 @@ python3 solution.py     (Run Python)
 
 ## Typical Learning Session
 
-1. Open lesson:           `learn c++ 1`
+1. Open lesson:           `learn open c++ 1 1`
 2. Read lesson (left):    `gg`, `/`, `G`, `n`
 3. Switch to code (right):`C-l`
 4. Write solution:        `i`, type code, `Esc`, `:w`
 5. Open terminal:         `:terminal`
 6. Compile/run:           `gcc solution.c -o solution && ./solution`
-7. Next lesson:           `:call NextLesson()` or `learn c++ 2`
+7. Next lesson:           `learn next` or `learn open c++ 1 2`
 
 ---
 

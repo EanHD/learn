@@ -75,17 +75,17 @@ This opens an **interactive menu** where you can browse lessons, track progress,
 ### Or jump straight to a lesson
 
 ```bash
-learn c++ 1                # Open C++ Stage 1, Level 1
-learn rust 1               # Open Rust Stage 1, Level 1
-learn python 1             # Open Python Stage 1, Level 1
+learn open c++ 1 1         # C++ Stage 1, Level 1
+learn open rust 1 1        # Rust Stage 1, Level 1
+learn open python 1 1      # Python Stage 1, Level 1
 ```
 
 ### Choose your editor
 
 ```bash
-learn c++ 1 --vim          # Neovim (default, enhanced IDE)
-learn c++ 1 --vscode       # VS Code
-learn c++ 1 --terminal     # Terminal (read-only)
+learn open c++ 1 1 --vim       # Neovim (default, enhanced IDE)
+learn open c++ 1 1 --vscode    # VS Code
+learn open c++ 1 1 --terminal  # Terminal (read-only)
 ```
 
 ---
@@ -128,18 +128,31 @@ Browse all lessons, track progress, and jump between languages.
 ### Jump to a Lesson
 
 ```bash
-learn c++ 1              # Open C++ Stage 1, Level 1
-learn python 1           # Open Python Stage 1, Level 1
-learn java 1             # Open Java Stage 1, Level 1
-learn php 1              # Try PHP
-learn r 1                # Try R for data science
-learn zig 1              # Try Zig
+learn open c++ 1 1       # Open C++ Stage 1, Level 1
+learn open python 1 1    # Open Python Stage 1, Level 1
+learn open java 1 1      # Open Java Stage 1, Level 1
+learn open php 1 1       # Try PHP
+learn open r 1 1         # Try R for data science
+learn open zig 1 1       # Try Zig
+```
+
+### Browse by Category ⭐ NEW
+
+```bash
+learn browse             # Explore all language categories
+learn browse --category web    # Jump to web languages
+```
+
+### Get Inspired ⭐ NEW
+
+```bash
+learn tip                # Random programming wisdom
 ```
 
 ### View All Lessons
 
 ```bash
-learn --list
+learn list
 ```
 
 See all 490 lessons organized by language and stage.
@@ -147,7 +160,7 @@ See all 490 lessons organized by language and stage.
 ### Check Progress
 
 ```bash
-learn --progress
+learn progress
 ```
 
 View completion stats and track your learning journey.
@@ -155,7 +168,7 @@ View completion stats and track your learning journey.
 ### Continue Learning
 
 ```bash
-learn --next
+learn next
 ```
 
 Automatically open the next lesson based on your progress.
@@ -349,21 +362,23 @@ When you open a lesson with Neovim (`learn open cpp 1`), you get:
 
 1. Install: \`bash <(curl -fsSL https://raw.githubusercontent.com/EanHD/learn/main/install.sh)\`
 2. Start: \`learn\` (interactive mode)
-3. Select a language and lesson
-4. Read the lesson (left pane) and write code (right pane)
-5. Press \`<Space>h\` anytime for help
-6. Mark complete: \`learn --complete <lang> 1 1\`
-7. Continue: \`learn --next\`
-8. Track progress: \`learn --progress\`
+3. Browse categories: \`learn browse\`
+4. Select a language and lesson
+5. Read the lesson (left pane) and write code (right pane)
+6. Press \`<Space>h\` anytime for help
+7. Mark complete: \`learn complete <lang> 1 1\`
+8. Continue: \`learn next\`
+9. Track progress: \`learn progress\`
 
 ### 2️⃣ I'm Learning a New Language
 
-1. Pick from 20 languages
-2. Start: \`learn python 1\` (or use interactive mode)
-3. Each file starts with help comment
-4. Press \`<Space>g\` for navigation guide
-5. Lessons get progressively harder (Stage 1 → Stage 5)
-6. Learn multiple languages to spot patterns!
+1. Browse categories: \`learn browse\`
+2. Pick from 20 languages
+3. Start: \`learn open python 1 1\` (or use interactive mode)
+4. Each file starts with help comment
+5. Press \`<Space>g\` for navigation guide
+6. Lessons get progressively harder (Stage 1 → Stage 5)
+7. Learn multiple languages to spot patterns!
 
 ### 3️⃣ I'm Teaching Others
 
@@ -445,13 +460,15 @@ Students can track their own progress with the built-in progress system!
 ## 💡 Tips
 
 - **Use interactive mode** (\`learn\`) for the best experience
+- **Browse by category** (\`learn browse\`) to explore languages
+- **Get inspired** with \`learn tip\` for programming wisdom
 - **Start with Python or C++** if you're new (most forgiving)
 - **Try Rust or Go** for systems programming
 - **JavaScript/TypeScript for web**, **Dart for mobile**
 - **Shell for DevOps**, **SQL for databases**
 - **Kotlin for Android**, **Swift for iOS**
 - **Press \`<Space>h\` in Neovim** for instant help
-- **Track progress** with \`learn --progress\`
+- **Track progress** with \`learn progress\`
 - **Learn multiple languages** to see programming patterns
 
 ---
@@ -464,14 +481,15 @@ learn
 
 Launch the interactive menu and start your learning journey!
 
-Or jump straight in:
+Or browse and jump straight in:
 
 ```bash
-learn c++ 1          # C++
-learn python 1       # Python
-learn typescript 1   # TypeScript
-learn kotlin 1       # Kotlin
-learn sql 1          # SQL
+learn browse         # Explore categories
+learn open c++ 1 1   # C++
+learn open python 1 1    # Python
+learn open typescript 1 1    # TypeScript
+learn open kotlin 1 1    # Kotlin
+learn open sql 1 1       # SQL
 ```
 
 Everything you need is built into the CLI and IDE.
