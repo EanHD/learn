@@ -26,21 +26,21 @@ Welcome to Level 2! Today we're focusing on how to handle variables in your pseu
 Variables in pseudocode follow simple patterns:
 
 **Declaration and assignment:**
-```
+```go
 SET name TO "John"
 SET age TO 25
 SET is_student TO TRUE
 ```
 
 **Reassignment:**
-```
+```go
 SET age TO age + 1
 SET total TO total + new_value
 SET is_student TO FALSE
 ```
 
 **Calculations with variables:**
-```
+```go
 SET area TO length * width
 SET average TO (num1 + num2 + num3) / 3
 SET is_adult TO age >= 18
@@ -54,10 +54,23 @@ SET is_adult TO age >= 18
 
 ---
 
+
+### How to Run
+
+1. **Run the code**:
+   ```bash
+   go run hello.go
+   ```
+
+**Expected output:**
+```
+Hello, World!
+```
+
 ## Algorithm 1: Simple Variable Swapping
 
 **Pseudocode:**
-```
+```go
 Algorithm: Swap Two Variables
 1. SET first_number TO 10
 2. SET second_number TO 20
@@ -75,7 +88,7 @@ Algorithm: Swap Two Variables
 ## Algorithm 2: Running Total Calculator
 
 **Pseudocode:**
-```
+```go
 Algorithm: Calculate Running Total
 1. SET total TO 0
 2. SET count TO 0
@@ -101,7 +114,7 @@ Algorithm: Calculate Running Total
 ## Algorithm 3: Temperature Tracker
 
 **Pseudocode:**
-```
+```go
 Algorithm: Track Temperature Readings
 1. SET min_temp TO 100
 2. SET max_temp TO -100
@@ -132,7 +145,7 @@ Algorithm: Track Temperature Readings
 ## Algorithm 4: Account Balance Tracker
 
 **Pseudocode:**
-```
+```go
 Algorithm: Track Bank Account Balance
 1. SET account_balance TO 1000
 2. SET transaction_amount TO -50
@@ -156,7 +169,7 @@ Algorithm: Track Bank Account Balance
 ## Algorithm 5: Student Grade Calculator
 
 **Pseudocode:**
-```
+```go
 Algorithm: Calculate Student Grade
 1. SET total_points TO 0
 2. SET possible_points TO 0
@@ -191,7 +204,7 @@ Algorithm: Calculate Student Grade
 ## Algorithm 6: Counter Patterns
 
 **Pseudocode:**
-```
+```go
 Algorithm: Different Counter Patterns
 1. SET counter TO 1
 2. SET even_counter TO 2
@@ -217,7 +230,7 @@ Algorithm: Different Counter Patterns
 ## Algorithm 7: Accumulator Pattern
 
 **Pseudocode:**
-```
+```go
 Algorithm: Calculate Statistics
 1. SET sum TO 0
 2. SET count TO 0
