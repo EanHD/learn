@@ -39,7 +39,7 @@ Based on your Stage 3 pseudocode, implement a compound interest calculator that:
 5. **Displays professional financial report** with all details
 
 **Compound Interest Formula:**
-```
+```rust
 A = P(1 + r/n)^(nt)
 ```
 Where:
@@ -119,11 +119,34 @@ Mathematical applications involve:
 
 ---
 
+## ANSWER KEY (No cheating until you've tried!)
+
+### Code Breakdown
+
+> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+
+### Key Concepts
+
+- Review the code structure specific to Rust
+- Understand the execution flow
+- Learn common pitfalls and solutions
+
+### Next Steps
+
+Practice the code and experiment with variations!
+
+---
+
+**Congratulations! Keep coding!**
+
+
+---
+
 ## SOLUTION GUIDE (No cheating until you've tried!)
 
 ### Expected Program Behavior
 
-```
+```rust
 Compound Interest Calculator
 ============================
 Enter principal amount: $1000
@@ -313,12 +336,12 @@ A Rust program that calculates compound interest for savings and investments.
 1. Compile the program:
    ```bash
    rustc main.rs
-   ```
+```rust
 
 2. Run the program:
    ```bash
    ./main
-   ```
+```rust
 
 3. Enter investment details as prompted.
 
@@ -351,7 +374,7 @@ Years: 3
 Compounding: Quarterly
 Final Amount: $1161.54
 Total Interest: $161.54
-```
+```rust
 ```
 
 ### Bonus Challenges

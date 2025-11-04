@@ -24,6 +24,24 @@ Data management involves organizing, storing, and manipulating information. You'
 
 **Read the problem below, then write pseudocode to solve it. Create a file called `data_management.md` with your pseudocode solution.**
 
+
+### How to Compile and Run
+
+1. **Compile the code**:
+   ```bash
+   rustc hello.rs -o hello hello.rs
+   ```
+
+2. **Run your program**:
+   ```bash
+   ./hello hello
+   ```
+
+**Expected output:**
+```
+Hello, World!
+```
+
 ### Problem: Student Grade Calculator
 
 **Description:**
@@ -48,7 +66,7 @@ Create a program that helps teachers calculate final grades for students. The pr
 - Assignment 3: 35%
 
 **Example Interaction:**
-```
+```rust
 Enter student name: Alice Johnson
 Enter Assignment 1 score (0-100): 85
 Enter Assignment 2 score (0-100): 92
@@ -137,7 +155,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 
 ### Sample Pseudocode Solution
 
-```
+```rust
 START PROGRAM
     DISPLAY "Student Grade Calculator"
     DISPLAY "Enter student name:"

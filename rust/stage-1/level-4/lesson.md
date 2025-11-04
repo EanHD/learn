@@ -67,7 +67,7 @@ fn main() {
    ```
 
 **Example interaction:**
-```
+```rust
 What's your name?
 Alice
 Hello, Alice!

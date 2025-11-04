@@ -24,8 +24,26 @@ Programs become interactive when they can accept input and provide output! You'l
 
 **Read the pseudocode below, then write the equivalent Rust code in a file called `io_translation.rs`**
 
-### Pseudocode:
+
+### How to Compile and Run
+
+1. **Compile the code**:
+   ```bash
+   rustc hello.rs -o hello hello.rs
+   ```
+
+2. **Run your program**:
+   ```bash
+   ./hello hello
+   ```
+
+**Expected output:**
 ```
+Hello, World!
+```
+
+### Pseudocode:
+```rust
 START PROGRAM
     DISPLAY "Welcome to the calculator!"
     
@@ -70,7 +88,7 @@ END PROGRAM
    ```
 
 **Example interaction:**
-```
+```rust
 Welcome to the calculator!
 Enter first number:
 5
@@ -129,7 +147,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 ### Step-by-Step Translation
 
 **Pseudocode:**
-```
+```rust
 START PROGRAM
     DISPLAY "Welcome to the calculator!"
     

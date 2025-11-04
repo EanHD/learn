@@ -24,6 +24,24 @@ Interactive problems require handling multiple user inputs and decisions. You'll
 
 **Read the problem below, then write pseudocode to solve it. Create a file called `interactive_problems.md` with your pseudocode solution.**
 
+
+### How to Compile and Run
+
+1. **Compile the code**:
+   ```bash
+   rustc hello.rs -o hello hello.rs
+   ```
+
+2. **Run your program**:
+   ```bash
+   ./hello hello
+   ```
+
+**Expected output:**
+```
+Hello, World!
+```
+
 ### Problem: Simple Banking System
 
 **Description:**
@@ -41,7 +59,7 @@ Create a simple banking system that allows users to perform basic banking operat
 6. Show updated balance after each transaction
 
 **Menu Options:**
-```
+```rust
 Simple Bank System
 ==================
 Current Balance: $1000.00
@@ -56,7 +74,7 @@ Enter your choice (1-4):
 ```
 
 **Example Interaction:**
-```
+```rust
 Simple Bank System
 ==================
 Current Balance: $1000.00
@@ -163,7 +181,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 - **Exit Condition**: Clean program termination
 
 **Program Flow:**
-```
+```rust
 Initialize balance
 WHILE user hasn't chosen exit:
     Display menu with current balance
@@ -177,7 +195,7 @@ Display exit message
 
 ### Sample Pseudocode Solution
 
-```
+```rust
 START PROGRAM
     SET balance TO 1000.00
     

@@ -108,11 +108,34 @@ Full problem solving involves:
 
 ---
 
+## ANSWER KEY (No cheating until you've tried!)
+
+### Code Breakdown
+
+> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+
+### Key Concepts
+
+- Review the code structure specific to Rust
+- Understand the execution flow
+- Learn common pitfalls and solutions
+
+### Next Steps
+
+Practice the code and experiment with variations!
+
+---
+
+**Congratulations! Keep coding!**
+
+
+---
+
 ## SOLUTION GUIDE (No cheating until you've tried!)
 
 ### Expected Program Behavior
 
-```
+```rust
 Temperature Converter
 =====================
 What conversion do you want?
@@ -255,12 +278,12 @@ A simple Rust program that converts temperatures between Celsius and Fahrenheit.
 1. Compile the program:
    ```bash
    rustc main.rs
-   ```
+```rust
 
 2. Run the program:
    ```bash
    ./main
-   ```
+```rust
 
 3. Follow the on-screen prompts to convert temperatures.
 
@@ -282,7 +305,7 @@ What conversion do you want?
 Enter choice (1 or 2): 1
 Enter temperature in Celsius: 25
 25.0°C is equal to 77.0°F
-```
+```rust
 ```
 
 ### Bonus Challenges

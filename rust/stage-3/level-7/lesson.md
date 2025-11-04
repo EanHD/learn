@@ -24,6 +24,24 @@ Complex system problems require integrating multiple components and managing sys
 
 **Read the problem below, then write pseudocode to solve it. Create a file called `complex_system_problems.md` with your pseudocode solution.**
 
+
+### How to Compile and Run
+
+1. **Compile the code**:
+   ```bash
+   rustc hello.rs -o hello hello.rs
+   ```
+
+2. **Run your program**:
+   ```bash
+   ./hello hello
+   ```
+
+**Expected output:**
+```
+Hello, World!
+```
+
 ### Problem: Library Management System
 
 **Description:**
@@ -58,7 +76,7 @@ Create a comprehensive library management system that handles books, patrons, an
 - Books can be reserved when checked out
 
 **Example Interaction:**
-```
+```rust
 Library Management System
 =========================
 
@@ -202,7 +220,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 - Transactions ↔ Time (due dates, overdue calculations)
 
 **System Flow:**
-```
+```rust
 Main Loop:
     Display main menu
     Process user choice
@@ -214,7 +232,7 @@ Main Loop:
 
 ### Sample Pseudocode Solution
 
-```
+```rust
 START PROGRAM
     // Initialize system data structures
     INITIALIZE_BOOK_CATALOG()

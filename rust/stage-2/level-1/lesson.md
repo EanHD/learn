@@ -24,8 +24,26 @@ Welcome to Stage 2! Now that you understand Rust syntax, you'll learn to transla
 
 **Read the pseudocode below, then write the equivalent Rust code in a file called `basic_translation.rs`**
 
-### Pseudocode:
+
+### How to Compile and Run
+
+1. **Compile the code**:
+   ```bash
+   rustc hello.rs -o hello hello.rs
+   ```
+
+2. **Run your program**:
+   ```bash
+   ./hello hello
+   ```
+
+**Expected output:**
 ```
+Hello, World!
+```
+
+### Pseudocode:
+```rust
 START PROGRAM
     DISPLAY "Welcome to Rust programming!"
     DISPLAY "This is your first pseudocode translation!"
@@ -105,7 +123,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 ### Step-by-Step Translation
 
 **Pseudocode:**
-```
+```rust
 START PROGRAM
     DISPLAY "Welcome to Rust programming!"
     DISPLAY "This is your first pseudocode translation!"

@@ -24,8 +24,26 @@ Programs make decisions! You'll translate pseudocode that uses conditional logic
 
 **Read the pseudocode below, then write the equivalent Rust code in a file called `decision_translation.rs`**
 
-### Pseudocode:
+
+### How to Compile and Run
+
+1. **Compile the code**:
+   ```bash
+   rustc hello.rs -o hello hello.rs
+   ```
+
+2. **Run your program**:
+   ```bash
+   ./hello hello
+   ```
+
+**Expected output:**
 ```
+Hello, World!
+```
+
+### Pseudocode:
+```rust
 START PROGRAM
     DISPLAY "Number Classifier"
     DISPLAY "Enter a number:"
@@ -77,7 +95,7 @@ END PROGRAM
    ```
 
 **Example interaction:**
-```
+```rust
 Number Classifier
 Enter a number:
 7
@@ -135,7 +153,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 ### Step-by-Step Translation
 
 **Pseudocode:**
-```
+```rust
 START PROGRAM
     DISPLAY "Number Classifier"
     DISPLAY "Enter a number:"

@@ -114,11 +114,34 @@ Decision support applications involve:
 
 ---
 
+## ANSWER KEY (No cheating until you've tried!)
+
+### Code Breakdown
+
+> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+
+### Key Concepts
+
+- Review the code structure specific to Rust
+- Understand the execution flow
+- Learn common pitfalls and solutions
+
+### Next Steps
+
+Practice the code and experiment with variations!
+
+---
+
+**Congratulations! Keep coding!**
+
+
+---
+
 ## SOLUTION GUIDE (No cheating until you've tried!)
 
 ### Expected Program Behavior
 
-```
+```rust
 Travel Recommendation System
 ===========================
 
@@ -450,12 +473,12 @@ A Rust program that provides personalized travel destination recommendations bas
 1. Compile the program:
    ```bash
    rustc main.rs
-   ```
+```rust
 
 2. Run the program:
    ```bash
    ./main
-   ```
+```rust
 
 3. Answer the preference questions to get recommendations.
 
@@ -486,7 +509,7 @@ Based on your preferences (Medium budget, Warm climate, Relaxation, Week-long tr
    - Cost estimate: $1500-2200 for flights + resort
    - Duration: 7-10 days ideal
    - Activities: Beach, spa, swimming with dolphins
-```
+```rust
 ```
 
 ### Bonus Challenges

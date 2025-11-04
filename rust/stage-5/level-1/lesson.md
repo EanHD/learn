@@ -193,7 +193,7 @@ Your capstone will be evaluated on:
 
 Before coding, submit a proposal addressing:
 
-```
+```rust
 PROJECT TITLE: [Name]
 DOMAIN: [Category - e.g., Personal Finance, Education]
 PURPOSE: [What problem does it solve?]
@@ -370,6 +370,29 @@ From **Stage 4**: File I/O, data structures, system design
 
 ---
 
+## ANSWER KEY (No cheating until you've tried!)
+
+### Code Breakdown
+
+> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+
+### Key Concepts
+
+- Review the code structure specific to Rust
+- Understand the execution flow
+- Learn common pitfalls and solutions
+
+### Next Steps
+
+Practice the code and experiment with variations!
+
+---
+
+**Congratulations! Keep coding!**
+
+
+---
+
 ## CAPSTONE PLANNING GUIDE
 
 ### Phase 1: Project Selection
@@ -402,7 +425,7 @@ From **Stage 4**: File I/O, data structures, system design
 **Essential Planning Steps:**
 
 1. **Write a Problem Statement**
- ```
+```rust
  "My application solves [problem]
  by [approach]
  for [users]
@@ -410,7 +433,7 @@ From **Stage 4**: File I/O, data structures, system design
  ```
 
 2. **Define Core Features** (3-5 minimum)
- ```
+```rust
  MUST HAVE (critical):
  - Feature A
  - Feature B
@@ -440,7 +463,7 @@ From **Stage 4**: File I/O, data structures, system design
  ```
 
 4. **Create Architecture Diagram**
- ```
+```rust
  USER INPUT
  ↓
  MENU SYSTEM
@@ -453,7 +476,7 @@ From **Stage 4**: File I/O, data structures, system design
  ```
 
 5. **Write Pseudocode for Main Functions**
- ```
+```rust
  Function: add_new_record(collection)
  1. Get input from user
  2. Validate input (return error if invalid)
@@ -560,7 +583,7 @@ impl EntityManager {
 
 **Create a Test Plan:**
 
-```
+```rust
 TEST CASE 1: Add New Record
 Input: Valid record data
 Expected: Record added, saved to file
@@ -576,7 +599,9 @@ Input: Search query on empty data
 Expected: Empty results
 Result: PASS / FAIL
 
-... (20-30 test cases minimum)
+
+> **NEEDS_AUTHOR:** Removed placeholder - verify completeness
+
 ```
 
 **Unit Test Example:**
@@ -712,7 +737,7 @@ mod tests {
 ## Real-World Capstone Examples
 
 ### Example 1: Personal Finance Manager
-```
+```rust
 PURPOSE: Help track personal spending and savings goals
 FEATURES: 
  - Add/categorize expenses
@@ -723,7 +748,7 @@ COMPLEXITY: Moderate (5-7 hours)
 ```
 
 ### Example 2: Quiz Application
-```
+```rust
 PURPOSE: Interactive quiz system for learning
 FEATURES:
  - Load questions from file
@@ -734,7 +759,7 @@ COMPLEXITY: Moderate (6-8 hours)
 ```
 
 ### Example 3: Data Processor
-```
+```rust
 PURPOSE: Analyze CSV files and generate reports
 FEATURES:
  - Parse CSV files

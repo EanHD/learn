@@ -115,11 +115,34 @@ Data processing involves:
 
 ---
 
+## ANSWER KEY (No cheating until you've tried!)
+
+### Code Breakdown
+
+> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+
+### Key Concepts
+
+- Review the code structure specific to Rust
+- Understand the execution flow
+- Learn common pitfalls and solutions
+
+### Next Steps
+
+Practice the code and experiment with variations!
+
+---
+
+**Congratulations! Keep coding!**
+
+
+---
+
 ## SOLUTION GUIDE (No cheating until you've tried!)
 
 ### Expected Program Behavior
 
-```
+```rust
 Student Grade Calculator
 ========================
 Enter student name: Alice Johnson
@@ -257,12 +280,12 @@ A Rust program that calculates weighted final grades for students based on assig
 1. Compile the program:
    ```bash
    rustc main.rs
-   ```
+```rust
 
 2. Run the program:
    ```bash
    ./main
-   ```
+```rust
 
 3. Enter student information and scores as prompted.
 
@@ -290,7 +313,7 @@ Assignment 2: 92/100 (35%)
 Assignment 3: 78/100 (35%)
 Final Average: 84.9%
 Letter Grade: B
-```
+```rust
 ```
 
 ### Bonus Challenges

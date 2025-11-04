@@ -24,6 +24,24 @@ Repetitive problems require processing data in loops and handling repeated opera
 
 **Read the problem below, then write pseudocode to solve it. Create a file called `repetitive_problems.md` with your pseudocode solution.**
 
+
+### How to Compile and Run
+
+1. **Compile the code**:
+   ```bash
+   rustc hello.rs -o hello hello.rs
+   ```
+
+2. **Run your program**:
+   ```bash
+   ./hello hello
+   ```
+
+**Expected output:**
+```
+Hello, World!
+```
+
 ### Problem: Student Grade Analyzer
 
 **Description:**
@@ -49,7 +67,7 @@ Create a program that analyzes student grades and provides comprehensive statist
 - F: Below 60
 
 **Example Interaction:**
-```
+```rust
 Student Grade Analyzer
 ======================
 
@@ -168,7 +186,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 - **Classification**: Convert numeric grades to letter grades
 
 **Processing Flow:**
-```
+```rust
 Get student count
 FOR each student:
     Get student name
@@ -185,7 +203,7 @@ Display comprehensive report
 
 ### Sample Pseudocode Solution
 
-```
+```rust
 START PROGRAM
     DISPLAY "Student Grade Analyzer"
     DISPLAY "======================"

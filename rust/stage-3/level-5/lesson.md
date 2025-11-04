@@ -24,6 +24,24 @@ Decision-based problems require complex conditional logic and multiple decision 
 
 **Read the problem below, then write pseudocode to solve it. Create a file called `decision_based_problems.md` with your pseudocode solution.**
 
+
+### How to Compile and Run
+
+1. **Compile the code**:
+   ```bash
+   rustc hello.rs -o hello hello.rs
+   ```
+
+2. **Run your program**:
+   ```bash
+   ./hello hello
+   ```
+
+**Expected output:**
+```
+Hello, World!
+```
+
 ### Problem: Travel Recommendation System
 
 **Description:**
@@ -59,7 +77,7 @@ Create a travel recommendation system that suggests destinations based on user p
 - Month: International destinations
 
 **Example Interaction:**
-```
+```rust
 Travel Recommendation System
 ===========================
 
@@ -186,7 +204,7 @@ The problem requires a 4-dimensional decision matrix:
 
 ### Sample Pseudocode Solution
 
-```
+```rust
 START PROGRAM
     DISPLAY "Travel Recommendation System"
     DISPLAY "==========================="

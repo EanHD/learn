@@ -24,6 +24,24 @@ Mathematical problems often require careful analysis of formulas and algorithms.
 
 **Read the problem below, then write pseudocode to solve it. Create a file called `mathematical_problems.md` with your pseudocode solution.**
 
+
+### How to Compile and Run
+
+1. **Compile the code**:
+   ```bash
+   rustc hello.rs -o hello hello.rs
+   ```
+
+2. **Run your program**:
+   ```bash
+   ./hello hello
+   ```
+
+**Expected output:**
+```
+Hello, World!
+```
+
 ### Problem: Compound Interest Calculator
 
 **Description:**
@@ -37,7 +55,7 @@ Create a program that calculates compound interest for savings accounts. The pro
 6. Display a detailed breakdown
 
 **Compound Interest Formula:**
-```
+```rust
 A = P(1 + r/n)^(nt)
 ```
 Where:
@@ -53,7 +71,7 @@ Where:
 - Monthly: n = 12
 
 **Example Interaction:**
-```
+```rust
 Compound Interest Calculator
 Enter principal amount: $1000
 Enter annual interest rate (%): 5
@@ -143,14 +161,14 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 - Final Amount (A): Result of compound interest formula
 
 **Formula Breakdown:**
-```
+```rust
 A = P(1 + r/n)^(nt)
 Total Interest = A - P
 ```
 
 ### Sample Pseudocode Solution
 
-```
+```rust
 START PROGRAM
     DISPLAY "Compound Interest Calculator"
     

@@ -29,6 +29,24 @@ Now you'll implement an automated application that processes data in batches, re
 2. **`students.txt`** - Sample student data file
 3. **`README.md`** - Instructions for running the program
 
+
+### How to Compile and Run
+
+1. **Compile the code**:
+   ```bash
+   rustc hello.rs -o hello hello.rs
+   ```
+
+2. **Run your program**:
+   ```bash
+   ./hello hello
+   ```
+
+**Expected output:**
+```
+Hello, World!
+```
+
 ### Program Requirements
 
 Based on your Stage 3 pseudocode, implement a student grade analyzer that:
@@ -106,11 +124,34 @@ Automated applications involve:
 
 ---
 
+## ANSWER KEY (No cheating until you've tried!)
+
+### Code Breakdown
+
+> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+
+### Key Concepts
+
+- Review the code structure specific to Rust
+- Understand the execution flow
+- Learn common pitfalls and solutions
+
+### Next Steps
+
+Practice the code and experiment with variations!
+
+---
+
+**Congratulations! Keep coding!**
+
+
+---
+
 ## SOLUTION GUIDE (No cheating until you've tried!)
 
 ### Expected Program Behavior
 
-```
+```rust
 Student Grade Analyzer
 ======================
 
@@ -431,7 +472,7 @@ fn save_report_to_file(students: &[Student]) -> Result<(), Box<dyn std::error::E
 ### Testing Your Program
 
 **Test Data Format:**
-```
+```rust
 1001,Alice Johnson,Math:95,Science:92,English:98,History:96
 1002,Bob Smith,Math:87,Science:89,English:85,History:88
 1003,Carol Davis,Math:78,Science:82,English:75,History:80
@@ -464,7 +505,7 @@ Create a `students.txt` file with the following format:
 ```
 ID,Name,Subject1:Score,Subject2:Score,...
 1001,Alice Johnson,Math:95,Science:92,English:98
-```
+```rust
 
 ## Usage
 
@@ -473,7 +514,7 @@ ID,Name,Subject1:Score,Subject2:Score,...
    ```bash
    rustc main.rs
    ./main
-   ```
+```rust
 3. View reports on screen and in `grade_report.txt`
 ```
 

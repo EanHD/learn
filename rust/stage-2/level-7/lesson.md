@@ -24,8 +24,26 @@ Functions organize code into reusable pieces! You'll translate pseudocode that d
 
 **Read the pseudocode below, then write the equivalent Rust code in a file called `function_translation.rs`**
 
-### Pseudocode:
+
+### How to Compile and Run
+
+1. **Compile the code**:
+   ```bash
+   rustc hello.rs -o hello hello.rs
+   ```
+
+2. **Run your program**:
+   ```bash
+   ./hello hello
+   ```
+
+**Expected output:**
 ```
+Hello, World!
+```
+
+### Pseudocode:
+```rust
 FUNCTION greet(name)
     DISPLAY "Hello, " + name + "!"
 END FUNCTION
@@ -142,7 +160,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 ### Step-by-Step Translation
 
 **Pseudocode:**
-```
+```rust
 FUNCTION greet(name)
     DISPLAY "Hello, " + name + "!"
 END FUNCTION

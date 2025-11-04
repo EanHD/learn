@@ -24,8 +24,26 @@ Math is everywhere in programming! You'll translate pseudocode that performs cal
 
 **Read the pseudocode below, then write the equivalent Rust code in a file called `math_translation.rs`**
 
-### Pseudocode:
+
+### How to Compile and Run
+
+1. **Compile the code**:
+   ```bash
+   rustc hello.rs -o hello hello.rs
+   ```
+
+2. **Run your program**:
+   ```bash
+   ./hello hello
+   ```
+
+**Expected output:**
 ```
+Hello, World!
+```
+
+### Pseudocode:
+```rust
 START PROGRAM
     DECLARE a AS NUMBER
     SET a TO 10
@@ -138,7 +156,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 ### Step-by-Step Translation
 
 **Pseudocode:**
-```
+```rust
 START PROGRAM
     DECLARE a AS NUMBER
     SET a TO 10
