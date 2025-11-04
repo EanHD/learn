@@ -26,7 +26,7 @@ Welcome to Level 3! Today we're focusing on mathematical operations in pseudocod
 Mathematical expressions in pseudocode follow standard notation:
 
 **Basic operations:**
-```
+```lua
 SET result TO 5 + 3
 SET result TO 10 - 4
 SET result TO 6 * 7
@@ -35,7 +35,7 @@ SET remainder TO 17 MOD 5
 ```
 
 **Complex expressions:**
-```
+```lua
 SET area TO length * width
 SET volume TO length * width * height
 SET average TO (num1 + num2 + num3) / 3
@@ -44,14 +44,14 @@ SET discount TO original_price * discount_rate
 ```
 
 **Order of operations:**
-```
+```lua
 SET result TO 2 + 3 * 4     // result = 14 (not 20), multiplication first
 SET result TO (2 + 3) * 4   // result = 20, parentheses override
 SET result TO 10 / 2 + 3    // result = 8, division first
 ```
 
 **Mathematical functions:**
-```
+```lua
 SET result TO POWER(2, 3)    // 2 to the power of 3
 SET result TO SQRT(16)       // square root of 16
 SET result TO ROUND(3.7)     // round to nearest integer
@@ -65,10 +65,23 @@ SET result TO ROUND(3.7)     // round to nearest integer
 
 ---
 
+
+### How to Run
+
+1. **Run the code**:
+   ```bash
+   lua hello.lua
+   ```
+
+**Expected output:**
+```
+Hello, World!
+```
+
 ## Algorithm 1: Complex Arithmetic Expression
 
 **Pseudocode:**
-```
+```lua
 Algorithm: Evaluate Complex Expression
 1. SET a TO 10
 2. SET b TO 5
@@ -88,7 +101,7 @@ Algorithm: Evaluate Complex Expression
 ## Algorithm 2: Quadratic Formula Calculator
 
 **Pseudocode:**
-```
+```lua
 Algorithm: Solve Quadratic Equation
 1. SET a TO 1
 2. SET b TO -5
@@ -108,7 +121,7 @@ Algorithm: Solve Quadratic Equation
 ## Algorithm 3: Compound Interest Calculator
 
 **Pseudocode:**
-```
+```lua
 Algorithm: Calculate Compound Interest
 1. SET principal TO 1000
 2. SET rate TO 0.05
@@ -128,7 +141,7 @@ Algorithm: Calculate Compound Interest
 ## Algorithm 4: Geometric Calculations
 
 **Pseudocode:**
-```
+```lua
 Algorithm: Calculate Geometric Properties
 1. SET radius TO 5
 2. SET side TO 4
@@ -151,7 +164,7 @@ Algorithm: Calculate Geometric Properties
 ## Algorithm 5: Physics Formula Calculator
 
 **Pseudocode:**
-```
+```lua
 Algorithm: Physics Calculations
 1. SET mass TO 5.5
 2. SET velocity TO 10
@@ -174,7 +187,7 @@ Algorithm: Physics Calculations
 ## Algorithm 6: Temperature Conversion with Multiple Formulas
 
 **Pseudocode:**
-```
+```lua
 Algorithm: Multiple Temperature Conversions
 1. SET celsius TO 25
 2. SET fahrenheit TO celsius * 9 / 5 + 32
@@ -195,7 +208,7 @@ Algorithm: Multiple Temperature Conversions
 ## Algorithm 7: Statistical Calculations
 
 **Pseudocode:**
-```
+```lua
 Algorithm: Calculate Statistics for Three Numbers
 1. SET num1 TO 10
 2. SET num2 TO 20

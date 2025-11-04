@@ -26,7 +26,7 @@ Welcome to Stage 2! You've mastered copying code - now it's time to think like a
 **Pseudocode** is a way to write programming logic in plain English (or your native language) before writing actual code. It's like writing a recipe or instructions for a task.
 
 **Example:**
-```
+```lua
 Algorithm: Make a sandwich
 1. Get bread from pantry
 2. Get peanut butter from fridge
@@ -47,10 +47,23 @@ This is much easier to understand than trying to write code first!
 
 ---
 
+
+### How to Run
+
+1. **Run the code**:
+   ```bash
+   lua hello.lua
+   ```
+
+**Expected output:**
+```
+Hello, World!
+```
+
 ## Algorithm 1: Greeting Program
 
 **Pseudocode:**
-```
+```lua
 Algorithm: Display Personal Greeting
 1. Display "Hello! What's your name?" to the user
 2. Get the user's name from input
@@ -65,7 +78,7 @@ Algorithm: Display Personal Greeting
 ## Algorithm 2: Simple Calculator
 
 **Pseudocode:**
-```
+```lua
 Algorithm: Add Two Numbers
 1. Ask user for first number
 2. Get first number from user
@@ -82,7 +95,7 @@ Algorithm: Add Two Numbers
 ## Algorithm 3: Age Calculator
 
 **Pseudocode:**
-```
+```lua
 Algorithm: Calculate Age in Days
 1. Display "Enter your age in years: "
 2. Get age in years from user
@@ -98,7 +111,7 @@ Algorithm: Calculate Age in Days
 ## Algorithm 4: Temperature Converter
 
 **Pseudocode:**
-```
+```lua
 Algorithm: Celsius to Fahrenheit Converter
 1. Display "Enter temperature in Celsius: "
 2. Get temperature in Celsius from user
@@ -116,7 +129,7 @@ Algorithm: Celsius to Fahrenheit Converter
 ## Algorithm 5: Rectangle Area Calculator
 
 **Pseudocode:**
-```
+```lua
 Algorithm: Calculate Rectangle Area
 1. Display "Rectangle Area Calculator"
 2. Display "Enter length: "
@@ -136,7 +149,7 @@ Algorithm: Calculate Rectangle Area
 ## Algorithm 6: Simple Interest Calculator
 
 **Pseudocode:**
-```
+```lua
 Algorithm: Calculate Simple Interest
 1. Display "Simple Interest Calculator"
 2. Display "Enter principal amount: $"
@@ -159,7 +172,7 @@ Algorithm: Calculate Simple Interest
 ## Algorithm 7: BMI Calculator
 
 **Pseudocode:**
-```
+```lua
 Algorithm: Calculate Body Mass Index
 1. Display "BMI Calculator"
 2. Display "Enter weight in kg: "
@@ -232,7 +245,7 @@ Algorithm: Calculate Body Mass Index
 ## Pseudocode Best Practices
 
 ### Good Pseudocode
-```
+```lua
 Algorithm: Process User Data
 1. Get user's name
 2. Get user's age
@@ -244,7 +257,7 @@ Else
 ```
 
 ### Bad Pseudocode (Too Vague)
-```
+```lua
 Algorithm: Do stuff
 1. Get things
 2. Calculate something
@@ -252,7 +265,7 @@ Algorithm: Do stuff
 ```
 
 ### Good Pseudocode (Clear and Specific)
-```
+```lua
 Algorithm: Calculate BMI
 1. Display "BMI Calculator"
 2. Display "Enter weight in kg: "
