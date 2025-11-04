@@ -36,7 +36,7 @@ sqlite3 variables.sql
 
 Expected output:
 
-```
+```sql
 Hello, Alice!
 You are 25 years old.
 Your height is 5.6 feet.
@@ -76,3 +76,26 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 ---
 
 <div style="page-break-after: always;"></div>
+
+---
+
+## ANSWER KEY (No cheating until you've tried!)
+
+### Code Breakdown
+
+> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+
+### Key Concepts
+
+- Review the code structure specific to Sql
+- Understand the execution flow
+- Learn common pitfalls and solutions
+
+### Next Steps
+
+Practice the code and experiment with variations!
+
+---
+
+**Congratulations! Keep coding!**
+
