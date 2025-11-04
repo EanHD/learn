@@ -1090,7 +1090,7 @@ class InteractiveCLI:
     def _print_main_menu(self):
         """Print main menu"""
         print("\n🎯 MAIN MENU\n")
-        print("  1. Start a lesson")
+        print("  1. Start a lesson (browse by category)")
         print("  2. Continue where you left off")
         print("  3. View progress")
         print("  4. Browse all lessons")
@@ -1101,24 +1101,63 @@ class InteractiveCLI:
         print("  0. Exit")
 
     def _select_language_and_lesson(self):
-        """Select language and lesson interactively"""
+        """Select language and lesson interactively - now with categories"""
+        self._clear_screen()
+        print("🎯 SELECT CATEGORY\n")
+        
+        # Show categories
+        categories = [
+            ("1", "🧠 Core Languages", ["c-c++", "rust", "go", "zig"]),
+            ("2", "💻 Web & Scripting", ["javascript", "typescript", "python", "php"]),
+            ("3", "📱 Mobile Development", ["swift", "kotlin", "dart"]),
+            ("4", "🧮 Data & Databases", ["sql", "nosql", "r", "julia"]),
+            ("5", "⚙️ Scripting & Automation", ["shell", "powershell", "lua"]),
+            ("6", "🏢 Enterprise & Systems", ["java", "csharp"]),
+            ("7", "📋 All Languages (A-Z)", None)
+        ]
+        
+        for num, name, _ in categories:
+            print(f"  {num}. {name}")
+        
+        category_choice = input("\n→ Select category (or 'b' to go back): ").strip()
+        
+        if category_choice.lower() == 'b':
+            return
+        
+        # Find selected category
+        selected_languages = None
+        for num, name, langs in categories:
+            if category_choice == num:
+                selected_languages = langs
+                break
+        
+        if selected_languages is None and category_choice == "7":
+            # Show all languages
+            selected_languages = list(self.lesson_mgr.languages.keys())
+        elif selected_languages is None:
+            print("Invalid choice!")
+            input("Press Enter to continue...")
+            return
+        
+        # Now show languages from selected category
         self._clear_screen()
         print("📝 SELECT LANGUAGE\n")
-
-        languages = list(self.lesson_mgr.languages.keys())
-        for idx, lang in enumerate(languages, 1):
+        
+        for idx, lang in enumerate(selected_languages, 1):
             display_name = self.lesson_mgr.get_language_display_name(lang)
             print(f"  {idx}. {display_name}")
 
         lang_choice = input("\n→ Select language (or 'b' to go back): ").strip()
 
         if lang_choice.lower() == 'b':
+            # Go back to category selection
+            self._select_language_and_lesson()
             return
 
         try:
             lang_idx = int(lang_choice) - 1
-            if 0 <= lang_idx < len(languages):
-                language = languages[lang_idx]
+            if 0 <= lang_idx < len(selected_languages):
+                language = selected_languages[lang_idx]
                 self._select_stage_and_level(language)
         except ValueError:
             print("Invalid choice!")
