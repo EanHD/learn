@@ -1,5 +1,7 @@
 # LEARN: Programming in 20 Languages
 
+![Demo](example.gif)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-blue)](https://github.com/EanHD/learn)
 [![Devcontainer](https://img.shields.io/badge/Devcontainer-Ready-green)](https://github.com/EanHD/learn/blob/main/.devcontainer/devcontainer.json)
