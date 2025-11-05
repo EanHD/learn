@@ -1,226 +1,70 @@
-# Level 1: Hello World
+# Level 1: Hello World in Pure C
 
-> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.cpp` or similar). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
+> **LESSON NOTE:** This lesson file is **read-only**. Write your code in `main.c` in the right window.
 
-## Stage 1: Copying Code
-
-### Today's Mission
-
-Welcome to your first step into programming! Today, you'll learn how to create your very first C program. Don't worry about understanding everything yet - just focus on getting the code typed correctly and watching it work!
-
----
+## Stage 1: Your First C Program
 
 ### Learning Goals
 
-- [ ] Understand the basic structure of a C program
-- [ ] Learn how to compile and run code
-- [ ] See your first program output "Hello, World!"
-- [ ] Get comfortable with your text editor
+- Write your first C program
+- Understand basic C structure
+- Learn compilation and execution
+- Use `printf()` for output
 
 ---
 
 ### Your Task
 
-**Copy the following code EXACTLY as shown below into a new file called `hello.cpp`**
+Create a file called `main.c` and type this code:
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 int main() {
-    std::cout << "Hello, World!\n");
+    printf("Hello, World!\n");
     return 0;
 }
+```
+
+### How to Compile and Run
+
 ```bash
+gcc main.c -o main
+./main
+```
+
+**Expected Output:**
+```
+Hello, World!
+```
 
 ---
 
-### How to Run
+### Code Explanation
 
-1. **Open your terminal** (or command prompt)
-2. **Navigate to where you saved your file**:
-   ```bash
-   cd /path/to/your/folder
-   ```bash
-3. **Compile the code**:
-   ```bash
-   g++ hello.cpp -o hello
-   ```bash
-4. **Run your program**:
-   ```bash
-   ./hello
-   ```bash
+- `#include <stdio.h>` - Includes Standard Input/Output library
+- `int main()` - Main function where program starts
+- `printf()` - Function to print text (from stdio.h)
+- `"Hello, World!\n"` - String to print (`\n` = newline)
+- `return 0;` - Exit successfully
 
-**Expected output:**
-```bash
-Hello, World!
-```bash
+---
+
+### Try This
+
+1. Change the message to "Hello, C!"
+2. Add another `printf()` line with your name
+3. Try removing `\n` and see what happens
 
 ---
 
 ### Success Checklist
 
-- [ ] Created a file named `hello.cpp`
-- [ ] Copied the code exactly as shown
-- [ ] Compiled without errors
-- [ ] Ran the program successfully
-- [ ] Saw "Hello, World!" printed on screen
+- [ ] File named `main.c` created
+- [ ] Code compiles without errors
+- [ ] Program runs and prints message
+- [ ] You understand each line
 
 ---
 
-### What Happened?
-
-You just created a real computer program! Here's what each part does:
-
-- [ ] `#include <iostream>` - Tells C to include helpful tools for input/output
-- [ ] `int main()` - The main function where every C program starts
-- [ ] `printf(...)` - A function that prints text to the screen
-- [ ] `"Hello, World!\n"` - The message to print (the `\n` creates a new line)
-- [ ] `return 0;` - Tells the computer the program finished successfully
-
----
-
-### Try This (Optional Challenges)
-
-If you're feeling brave, try these small changes:
-
-1. Change the message to "Hello, C Programming!"
-2. Add another printf() line with your name
-3. Remove the `\n` and see what happens
-
----
-
-## Need Help with Vim?
-
-Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim commands!
-
----
-
-<div style="page-break-after: always;"></div>
-
----
-
-## ANSWER KEY (No cheating until you've tried!)
-
-### Code Breakdown
-
-```c
-# include <stdio.h>
-```bash
-- [ ] **`#include`** = A preprocessor command that includes libraries
-- [ ] **`<stdio.h>`** = Standard Input/Output library - gives us printf()
-- [ ] **Purpose**: Lets us use functions like printf() for printing
-
-```c
-int main() {
-```bash
-- [ ] **`int`** = Return type - this function will return an integer
-- [ ] **`main`** = Function name - every C program starts here
-- [ ] **`()`** = Parameters (empty means no inputs needed)
-- [ ] **`{`** = Opening brace - start of function body
-
-```c
-    std::cout << "Hello, World!\n");
-```c
-- [ ] **`printf`** = "print formatted" function from stdio.h
-- [ ] **`"`** = String literal start/end
-- [ ] **`\n`** = Escape sequence for newline (moves cursor to next line)
-- [ ] **`;`** = Statement terminator - EVERY statement must end with this!
-
-```c
-    return 0;
-}
-```bash
-- [ ] **`return 0`** = Returns 0 to indicate successful execution
-- [ ] **`}`** = Closing brace - end of function body
-
-### Compilation Process
-
-1. **Preprocessing**: `#include` statements are processed
-2. **Compilation**: Code is converted to machine-readable object files
-3. **Linking**: Object files are linked to create executable
-4. **Result**: Your `hello` program is ready to run!
-
-### Common Errors & Solutions
-
-| Error | Cause | Solution |
-|-------|-------|----------|
-| `fatal error: stdio.h: No such file` | GCC not installed | Install with: `sudo apt-get install gcc` (Ubuntu) |
-| `undefined reference to printf` | Missing #include | Add `#include <iostream>` |
-| `syntax error` | Missing semicolon or brace | Check every line has `;` and braces match |
-| `Permission denied` | Can't execute | Run `chmod +x hello` |
-
-### Bonus Knowledge
-
-- [ ] **C Development Timeline**: Dennis Ritchie created C in 1972 at Bell Labs
-- [ ] **Why "Hello, World!"?**: Tradition started with Brian Kernighan in 1978
-- [ ] **What does GCC stand for?**: GNU Compiler Collection
-- [ ] **File extensions**: `.c` for source, `.o` for object, no extension for Linux executables
-
----
-
- **Congratulations! You've written your first C program!** 
-
-*Keep moving forward - next up: Variables!*
-
-### Additional Content
-
-Understand the key concepts:
-
-- [ ] Review each function
-- [ ] Understand the flow
-- [ ] Learn the patterns used
-
-
-### Code Review
-
-Key functions and their purpose:
-
-- [ ] Main function: Entry point
-- [ ] Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```cpp
-#include <iostream>
-
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
-}
-```
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses std::cout to print messages to the console
-3. **Standard Library**: Includes iostream for input/output operations
-4. **Return Value**: Returns 0 to indicate successful execution
-5. **Best Practices**: Code is readable and uses C++ idioms
-
-### Testing Your Solution
-
-1. **Compile**: `g++ hello.cpp -o hello`
-2. **Run**: `./hello`
-3. **Expected Output**: `Hello, World!`
-
-### Common Errors & Solutions
-
-| Error | Cause | Solution |
-|-------|-------|----------|
-| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
-| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
-
-### Tips for Learning
-
-- C++ is a superset of C with additional features
-- `std::cout` is the C++ way to print (replaces `printf`)
-- `std::endl` adds a newline and flushes the buffer
-- The `std::` prefix means these are from the "standard" namespace
+**Next: Variables and data types!**
