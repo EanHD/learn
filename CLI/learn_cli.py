@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Enhanced Learn CLI - Full-Featured Interactive Learning System
+Enhanced Learn CLI - Full-Featured Interactive Learning System with Rich Output
 """
 
 import os
@@ -13,6 +13,21 @@ from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Optional, Tuple
 import argparse
+
+# Rich for beautiful terminal output
+try:
+    from rich.console import Console
+    from rich.table import Table
+    from rich.panel import Panel
+    from rich.progress import Progress, SpinnerColumn, TextColumn
+    from rich.syntax import Syntax
+    from rich.markdown import Markdown
+    from rich.layout import Layout
+    from rich.text import Text
+    RICH_AVAILABLE = True
+except ImportError:
+    RICH_AVAILABLE = False
+    print("[!!] Rich library not available. Install with: pip install rich")
 
 # Import new modules for modernization
 try:
@@ -30,6 +45,9 @@ except ImportError:
         languages = None
         utils = None
         cfg_module = None
+
+# Create global console for rich output
+console = Console() if RICH_AVAILABLE else None
 
 
 class SystemChecker:
@@ -154,26 +172,110 @@ class SystemChecker:
         installed = sorted([p.name for p in mason_dir.iterdir() if p.is_dir()])
         return f"{len(installed)} packages installed"
 
+    # Language runtime checks
+    LANGUAGE_RUNTIMES = {
+        "c-c++": {"cmd": "gcc", "name": "GCC/G++", "install": "sudo apt install build-essential"},
+        "rust": {"cmd": "rustc", "name": "Rust compiler", "install": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"},
+        "python": {"cmd": "python3", "name": "Python 3", "install": "sudo apt install python3"},
+        "javascript": {"cmd": "node", "name": "Node.js", "install": "curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt install -y nodejs"},
+        "typescript": {"cmd": "node", "name": "Node.js", "install": "curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt install -y nodejs"},
+        "go": {"cmd": "go", "name": "Go compiler", "install": "sudo apt install golang-go"},
+        "lua": {"cmd": "lua", "name": "Lua interpreter", "install": "sudo apt install lua5.4"},
+        "dart": {"cmd": "dart", "name": "Dart SDK", "install": "sudo apt install dart"},
+        "swift": {"cmd": "swift", "name": "Swift compiler", "install": "sudo apt install swift"},
+        "kotlin": {"cmd": "kotlinc", "name": "Kotlin compiler", "install": "sudo apt install kotlin"},
+        "java": {"cmd": "javac", "name": "Java compiler", "install": "sudo apt install default-jdk"},
+        "csharp": {"cmd": "csc", "name": "C# compiler (.NET)", "install": "sudo apt install dotnet-sdk-latest"},
+        "shell": {"cmd": "bash", "name": "Bash shell", "install": "Already installed on Linux"},
+        "powershell": {"cmd": "pwsh", "name": "PowerShell Core", "install": "sudo apt install -y powershell"},
+        "zig": {"cmd": "zig", "name": "Zig compiler", "install": "Download from https://ziglang.org/download/"},
+        "sql": {"cmd": "sqlite3", "name": "SQLite3", "install": "sudo apt install sqlite3"},
+        "julia": {"cmd": "julia", "name": "Julia language", "install": "Download from https://julialang.org/downloads/"},
+        "r": {"cmd": "R", "name": "R language", "install": "sudo apt install r-base"},
+        "php": {"cmd": "php", "name": "PHP interpreter", "install": "sudo apt install php-cli"},
+        "nosql": {"cmd": "mongosh", "name": "MongoDB shell", "install": "Visit https://www.mongodb.com/try/download/shell"},
+    }
+
+    def check_language_runtime(self, language: str) -> Tuple[bool, str, Optional[str]]:
+        """Check if a language runtime is available
+
+        Returns: (is_available, display_name, install_command)
+        """
+        if language not in self.LANGUAGE_RUNTIMES:
+            return True, language, None  # Unknown language, assume available
+
+        runtime_info = self.LANGUAGE_RUNTIMES[language]
+        cmd = runtime_info["cmd"]
+        name = runtime_info["name"]
+        install = runtime_info["install"]
+
+        is_available = self._check_command(cmd, "--version")
+        return is_available, name, install if not is_available else None
+
+    def check_multiple_languages(self, languages: List[str]) -> Dict[str, Dict]:
+        """Check runtimes for multiple languages
+
+        Returns: {language: {available, name, install_cmd}}
+        """
+        results = {}
+        for language in languages:
+            available, name, install_cmd = self.check_language_runtime(language)
+            results[language] = {
+                "available": available,
+                "name": name,
+                "install_cmd": install_cmd
+            }
+        return results
+
     def print_report(self):
-        """Print formatted check report"""
-        print("\n" + "=" * 70)
-        print("  SYSTEM CHECK REPORT")
-        print("=" * 70 + "\n")
+        """Print formatted check report using Rich"""
+        if console:
+            # Create a rich table
+            table = Table(title="◽ SYSTEM CHECK", show_header=True, header_style="bold cyan")
+            table.add_column("Component", style="cyan")
+            table.add_column("Status", style="green")
+            table.add_column("Details", style="dim white")
 
-        for check in self.checks:
-            status_icon = "[OK]" if check["status"] == "OK" else "[!!]"
-            print(f"{status_icon} {check['name']}")
+            for check in self.checks:
+                status = "[bold green][OK][/bold green]" if check["status"] == "OK" else "[bold yellow][!!][/bold yellow]"
+                details = ""
 
-            if check.get("version"):
-                print(f"    Version: {check['version']}")
+                if check.get("version"):
+                    details = f"v{check['version']}"
+                elif check.get("details"):
+                    details = check["details"]
 
-            if check.get("details"):
-                print(f"    Status: {check['details']}")
+                table.add_row(check["name"], status, details)
 
-            if check["status"] != "OK" and check.get("fix"):
-                print(f"    Fix: {check['fix']}")
+            console.print(table)
 
-            print()
+            # Show fixes if needed
+            fixes_needed = [c for c in self.checks if c["status"] != "OK" and c.get("fix")]
+            if fixes_needed:
+                console.print("\n[bold yellow]◽ MISSING COMPONENTS[/bold yellow]")
+                for check in fixes_needed:
+                    console.print(f"  [dim]{check['name']}:[/dim]")
+                    console.print(f"    [cyan]{check['fix']}[/cyan]")
+        else:
+            # Fallback to plain text
+            print("\n" + "=" * 70)
+            print("  SYSTEM CHECK REPORT")
+            print("=" * 70 + "\n")
+
+            for check in self.checks:
+                status_icon = "[OK]" if check["status"] == "OK" else "[!!]"
+                print(f"{status_icon} {check['name']}")
+
+                if check.get("version"):
+                    print(f"    Version: {check['version']}")
+
+                if check.get("details"):
+                    print(f"    Status: {check['details']}")
+
+                if check["status"] != "OK" and check.get("fix"):
+                    print(f"    Fix: {check['fix']}")
+
+                print()
 
 
 class InitWizard:
@@ -187,15 +289,27 @@ class InitWizard:
     def run(self):
         """Run the initialization wizard"""
         self._clear_screen()
-        print("=" * 70)
-        print("  LEARN CLI - FIRST-TIME SETUP WIZARD")
-        print("=" * 70)
-        print("\nThis wizard will:")
-        print("  1. Check your system dependencies")
-        print("  2. Install missing components")
-        print("  3. Set up your learning workspace")
-        print("  4. Configure your preferred editor")
-        print("\nEstimated time: 5 minutes\n")
+        if console:
+            console.print("[bold cyan]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/bold cyan]")
+            console.print("[bold cyan]◽ LEARN CLI[/bold cyan]")
+            console.print("[bold cyan]   FIRST-TIME SETUP[/bold cyan]")
+            console.print("[bold cyan]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/bold cyan]")
+            console.print("\n[bold]This wizard will:[/bold]")
+            console.print("  [cyan]1[/cyan]  Check your system dependencies")
+            console.print("  [cyan]2[/cyan]  Install missing components")
+            console.print("  [cyan]3[/cyan]  Set up your learning workspace")
+            console.print("  [cyan]4[/cyan]  Configure your preferred editor")
+            console.print("\n[dim]Estimated time: 5 minutes[/dim]\n")
+        else:
+            print("=" * 70)
+            print("  LEARN CLI - FIRST-TIME SETUP WIZARD")
+            print("=" * 70)
+            print("\nThis wizard will:")
+            print("  1. Check your system dependencies")
+            print("  2. Install missing components")
+            print("  3. Set up your learning workspace")
+            print("  4. Configure your preferred editor")
+            print("\nEstimated time: 5 minutes\n")
 
         input("Press Enter to begin...")
 
@@ -256,23 +370,53 @@ class InitWizard:
     def _step_editor_selection(self):
         """Select preferred editor"""
         self._clear_screen()
-        print("=" * 70)
-        print("  STEP 2: EDITOR SELECTION")
-        print("=" * 70)
+        if console:
+            console.print(Panel.fit(
+                "[bold cyan]STEP 2: EDITOR SELECTION[/bold cyan]",
+                border_style="cyan"
+            ))
+            console.print("\n[bold]Choose your preferred editor mode:[/bold]\n")
 
-        print("\nChoose your preferred editor mode:\n")
-        print("  1. Neovim (recommended)")
-        print("     - Split-screen with lesson + code")
-        print("     - Full LSP support (autocomplete, diagnostics)")
-        print("     - Auto-formatting on save")
-        print("")
-        print("  2. VS Code")
-        print("     - Opens lesson directory in VS Code")
-        print("     - Use your existing VS Code setup")
-        print("")
-        print("  3. Terminal (read-only)")
-        print("     - Simple markdown viewer")
-        print("     - Use external editor for code")
+            editors = [
+                ("1", "Neovim (recommended)", [
+                    "Split-screen with lesson + code",
+                    "Full LSP support (autocomplete, diagnostics)",
+                    "Auto-formatting on save"
+                ]),
+                ("2", "VS Code", [
+                    "Opens lesson directory in VS Code",
+                    "Use your existing VS Code setup",
+                    "Graphical interface with Vim motions"
+                ]),
+                ("3", "Terminal (read-only)", [
+                    "Simple markdown viewer",
+                    "Use external editor for code",
+                    "Distraction-free"
+                ])
+            ]
+
+            for num, name, features in editors:
+                console.print(f"  [cyan]{num}[/cyan]  [bold]{name}[/bold]")
+                for feature in features:
+                    console.print(f"     [dim]· {feature}[/dim]")
+                console.print()
+        else:
+            print("=" * 70)
+            print("  STEP 2: EDITOR SELECTION")
+            print("=" * 70)
+            print("\nChoose your preferred editor mode:\n")
+            print("  1. Neovim (recommended)")
+            print("     - Split-screen with lesson + code")
+            print("     - Full LSP support (autocomplete, diagnostics)")
+            print("     - Auto-formatting on save")
+            print("")
+            print("  2. VS Code")
+            print("     - Opens lesson directory in VS Code")
+            print("     - Use your existing VS Code setup")
+            print("")
+            print("  3. Terminal (read-only)")
+            print("     - Simple markdown viewer")
+            print("     - Use external editor for code")
 
         choice = input("\nSelect mode (1-3, default: 1): ").strip() or "1"
 
@@ -283,7 +427,11 @@ class InitWizard:
         config = {"default_mode": selected_mode}
         config_file.write_text(json.dumps(config, indent=2))
 
-        print(f"\nDefault mode set to: {selected_mode}")
+        if console:
+            console.print(f"\n[bold green][OK] Default mode set to: {selected_mode}[/bold green]")
+        else:
+            print(f"\nDefault mode set to: {selected_mode}")
+
         input("Press Enter to continue...")
 
     def _step_workspace_setup(self):
@@ -312,23 +460,41 @@ class InitWizard:
     def _step_completion(self):
         """Completion message"""
         self._clear_screen()
-        print("=" * 70)
-        print("  SETUP COMPLETE!")
-        print("=" * 70)
-
-        print("\nYou're all set! Here's what to do next:\n")
-        print("  1. Start your first lesson:")
-        print("     learn c++ 1")
-        print("")
-        print("  2. Or browse all lessons:")
-        print("     learn --list")
-        print("")
-        print("  3. Need help?")
-        print("     learn --help")
-        print("")
-        print("  4. Check system anytime:")
-        print("     learn doctor")
-        print("")
+        if console:
+            console.print(Panel.fit(
+                "[bold green]◽ SETUP COMPLETE[/bold green]",
+                border_style="green"
+            ))
+            console.print("\n[bold]You're all set! Here's what to do next:[/bold]\n")
+            console.print("  [cyan]1.[/cyan] Start your first lesson:")
+            console.print("     [yellow]learn c++ 1[/yellow]")
+            console.print("")
+            console.print("  [cyan]2.[/cyan] Or browse all lessons:")
+            console.print("     [yellow]learn --list[/yellow]")
+            console.print("")
+            console.print("  [cyan]3.[/cyan] Need help?")
+            console.print("     [yellow]learn --help[/yellow]")
+            console.print("")
+            console.print("  [cyan]4.[/cyan] Check system anytime:")
+            console.print("     [yellow]learn doctor[/yellow]")
+            console.print("")
+        else:
+            print("=" * 70)
+            print("  SETUP COMPLETE!")
+            print("=" * 70)
+            print("\nYou're all set! Here's what to do next:\n")
+            print("  1. Start your first lesson:")
+            print("     learn c++ 1")
+            print("")
+            print("  2. Or browse all lessons:")
+            print("     learn --list")
+            print("")
+            print("  3. Need help?")
+            print("     learn --help")
+            print("")
+            print("  4. Check system anytime:")
+            print("     learn doctor")
+            print("")
 
         input("Press Enter to return to main menu...")
 
@@ -795,7 +961,7 @@ edition = "2021"
         print("\n" + "="*70)
         print("  LAUNCHING VIM LEARNING MODE")
         print("="*70)
-        print(f"\n{BG_CYAN}{BOLD} ✨ NEW! QUICK GUIDE POPUP {RESET}")
+        print(f"\n{BG_CYAN}{BOLD} QUICK GUIDE POPUP {RESET}")
         print(f"{CYAN}{BOLD}    <Space>g{RESET}           -> {YELLOW}Beautiful popup with ALL shortcuts!{RESET}")
         print("")
         print("ESSENTIAL SHORTCUTS:\n")
@@ -820,7 +986,7 @@ edition = "2021"
         print(f"Your code: {workspace['main_file']}")
         print("TIP: Lesson is on the LEFT, your code is on the RIGHT")
         print("")
-        print(f"{GREEN}💡 Remember: Press {CYAN}{BOLD}<Space>g{RESET}{GREEN} anytime for the complete guide!{RESET}")
+        print(f"{GREEN}[TIP] Remember: Press {CYAN}{BOLD}<Space>g{RESET}{GREEN} anytime for the complete guide!{RESET}")
         print("="*70)
         print("\nPress ENTER to launch Vim...")
         input()
@@ -865,7 +1031,7 @@ class InteractiveTutorial:
             if self.current_step < len(self.steps) - 1:
                 choice = input("\n→ Press Enter to continue (or 'q' to quit tutorial): ").strip().lower()
                 if choice == 'q':
-                    print("\n👋 Tutorial ended. You can restart anytime with option 8!")
+                    print("\nTutorial ended. You can restart anytime with option 8!")
                     input("Press Enter to return to main menu...")
                     return
 
@@ -878,42 +1044,42 @@ class InteractiveTutorial:
             os.system('clear' if os.name != 'nt' else 'cls')
 
     def _intro(self):
-        print("=" * 70)
-        print("  📚 WELCOME TO THE LEARN CLI INTERACTIVE TUTORIAL")
-        print("=" * 70)
+        print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+        print("◽ INTERACTIVE TUTORIAL")
+        print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
         print("\nThis tutorial will teach you how to use the Learn CLI effectively.")
-        print("\n🎯 What you'll learn:")
-        print("  • How to navigate the CLI")
-        print("  • Understanding lesson structure")
-        print("  • Using Vim mode efficiently")
-        print("  • Tracking your progress")
-        print("  • Advanced features and tips")
-        print("\n⏱️  Estimated time: 5 minutes")
+        print("\n── What you'll learn")
+        print("  · How to navigate the CLI")
+        print("  · Understanding lesson structure")
+        print("  · Using Vim mode efficiently")
+        print("  · Tracking your progress")
+        print("  · Advanced features and tips")
+        print("\n[Estimated time: 5 minutes]")
 
     def _navigation_basics(self):
-        print("=" * 70)
-        print("  STEP 1: NAVIGATION BASICS")
-        print("=" * 70)
-        print("\n📖 The Main Menu:")
+        print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+        print("STEP 1: NAVIGATION BASICS")
+        print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+        print("\n── The Main Menu")
         print("\nWhen you run 'learn', you see the main menu with these options:\n")
-        print("  1. Start a lesson     → Begin learning a specific lesson")
-        print("  2. Continue           → Pick up where you left off")
-        print("  3. View progress      → See your completion status")
-        print("  4. Browse all         → Explore all available lessons")
-        print("  5. Switch language    → Change programming language")
-        print("  6. Mark complete      → Flag a lesson as done")
-        print("  7. Statistics         → View detailed stats")
-        print("  8. Tutorial           → You're here now!")
-        print("\n💡 TIP: You can also use command-line arguments:")
-        print("  learn c++ 1           → Directly open C++ Stage 1, Level 1")
-        print("  learn --list          → List all lessons")
+        print("  1  Start a lesson     · Begin learning a specific lesson")
+        print("  2  Continue           · Pick up where you left off")
+        print("  3  View progress      · See your completion status")
+        print("  4  Browse all         · Explore all available lessons")
+        print("  5  Switch language    · Change programming language")
+        print("  6  Mark complete      · Flag a lesson as done")
+        print("  7  Statistics         · View detailed stats")
+        print("  8  Tutorial           · You're here now!")
+        print("\n[TIP] You can also use command-line arguments:")
+        print("  learn c++ 1           · Directly open C++ Stage 1, Level 1")
+        print("  learn --list          · List all lessons")
         print("  learn --next          → Get next lesson suggestion")
 
     def _lesson_structure(self):
         print("=" * 70)
         print("  STEP 2: LESSON STRUCTURE")
         print("=" * 70)
-        print("\n📚 How Lessons Are Organized:\n")
+        print("\n── How Lessons Are Organized\n")
         print("Each programming language has 5 STAGES of learning:")
         print("\n  Stage 1: Copying Code")
         print("    → Learn by following examples exactly")
@@ -930,20 +1096,20 @@ class InteractiveTutorial:
         print("\n  Stage 5: Capstone Projects")
         print("    → Professional-level projects")
         print("    → Portfolio-worthy work")
-        print("\n📝 Each stage has 7 LEVELS (lessons) to complete.")
+        print("\n[NOTE] Each stage has 7 LEVELS (lessons) to complete.")
 
     def _vim_mode_tutorial(self):
         print("=" * 70)
         print("  STEP 3: VIM MODE (DEFAULT)")
         print("=" * 70)
-        print("\n🚀 When you open a lesson, you'll see a SPLIT-SCREEN view:\n")
+        print("\n── When you open a lesson, you'll see a SPLIT-SCREEN view:\n")
         print("  ┌──────────────────┬──────────────────┐")
         print("  │                  │                  │")
         print("  │  LESSON TEXT     │  YOUR CODE       │")
         print("  │  (Read-only)     │  (Editable)      │")
         print("  │                  │                  │")
         print("  └──────────────────┴──────────────────┘")
-        print("\n⌨️  Essential Vim Commands:\n")
+        print("\n── Essential Vim Commands\n")
         print("  NAVIGATION:")
         print("    Ctrl-w h / Ctrl-w l    → Switch between windows")
         print("    j / k              → Move down/up")
@@ -957,7 +1123,7 @@ class InteractiveTutorial:
         print("    :q!                → Quit without saving")
         print("\n  HELP:")
         print("    <Space>?           → Show full help in Vim")
-        print("\n💡 TIP: Your LazyVim config is active, so you have:")
+        print("\n[TIP] Your LazyVim config is active, so you have:")
         print("  • LSP autocomplete (clangd, rust-analyzer, etc.)")
         print("  • Auto-formatting on save")
         print("  • Syntax highlighting")
@@ -967,25 +1133,25 @@ class InteractiveTutorial:
         print("=" * 70)
         print("  STEP 4: PROGRESS TRACKING")
         print("=" * 70)
-        print("\n📊 Your progress is automatically tracked!\n")
+        print("\nYour progress is automatically tracked!\n")
         print("  • Every lesson you open is recorded")
         print("  • You can mark lessons as 'completed'")
         print("  • View stats anytime with option 3 or 7")
-        print("\n✅ Marking Lessons Complete:\n")
+        print("\n── Marking Lessons Complete\n")
         print("  From the main menu:")
         print("    → Select option 6 (Mark lesson as complete)")
         print("    → Enter: language, stage, level")
         print("\n  From command line:")
         print("    learn --complete c++ 1 1")
-        print("\n📈 Progress is saved in: .learn-progress.json")
-        print("\n💡 TIP: Use 'learn --next' to get a suggestion for")
+        print("\n── Progress is saved in: .learn-progress.json")
+        print("\n[TIP] Use 'learn --next' to get a suggestion for")
         print("         what to study next based on your progress!")
 
     def _advanced_features(self):
         print("=" * 70)
         print("  STEP 5: ADVANCED FEATURES")
         print("=" * 70)
-        print("\n🔧 Power User Tips:\n")
+        print("\n── Power User Tips:\n")
         print("  COMMAND-LINE SHORTCUTS:")
         print("    learn c++ 3 --stage 2     → Open specific stage/level")
         print("    learn --list              → Quick lesson browser")
@@ -1007,29 +1173,29 @@ class InteractiveTutorial:
         print("    3. Complete levels sequentially for best results")
         print("    4. Mark lessons complete to track progress")
         print("    5. Use 'learn --next' when unsure what to do")
-        print("\n💡 SETUP COMPLETE:")
+        print("\n── SETUP COMPLETE:")
         print("  • Full LSP support (autocomplete, diagnostics)")
         print("  • Auto-formatting on save")
         print("  • 9 formatters & LSPs installed via Mason")
 
     def _completion(self):
         print("=" * 70)
-        print("  🎉 TUTORIAL COMPLETE!")
+        print("  ◽ TUTORIAL COMPLETE")
         print("=" * 70)
-        print("\n✨ You're now ready to start learning!\n")
-        print("📚 Quick Reference Card:\n")
+        print("\nYou're now ready to start learning!\n")
+        print("── Quick Reference Card\n")
         print("  Start learning:     learn c++ 1")
         print("  Continue:           learn --next")
         print("  List lessons:       learn --list")
         print("  Check progress:     learn --progress")
         print("  Get help:           learn --help")
-        print("\n🚀 Recommended First Steps:")
+        print("\n── Recommended First Steps")
         print("  1. Run: learn c++ 1")
         print("  2. Practice Vim navigation (Ctrl-h/l)")
         print("  3. Complete the lesson")
         print("  4. Mark it complete: learn --complete c++ 1 1")
         print("  5. Continue to next lesson: learn --next")
-        print("\n💪 Happy Learning!")
+        print("\nHappy Learning!")
         input("\nPress Enter to return to main menu...")
 
 
@@ -1047,7 +1213,10 @@ class InteractiveCLI:
         while True:
             self._clear_screen()
             self._print_header()
+            self._print_status_bar()
             self._print_main_menu()
+            self._print_recent_lessons()
+            self._print_footer_hint(["[0] quit", "[h] help"])
 
             choice = input("\n→ Select option: ").strip()
 
@@ -1067,8 +1236,10 @@ class InteractiveCLI:
                 self._mark_lesson_complete()
             elif choice == "7":
                 self._view_stats()
+            elif choice == "9":
+                self._system_diagnostics()
             elif choice == "q" or choice == "0":
-                print("\n👋 Happy learning!")
+                print("\nHappy learning!")
                 break
             else:
                 print("Invalid option. Press Enter to continue...")
@@ -1076,76 +1247,255 @@ class InteractiveCLI:
 
     def _clear_screen(self):
         """Clear terminal screen"""
-        if utils:
+        if console:
+            console.clear()
+        elif utils:
             utils.clear_screen()
         else:
             os.system('clear' if os.name != 'nt' else 'cls')
 
-    def _print_header(self):
-        """Print CLI header"""
-        print("=" * 70)
-        print("  📚 LEARN CLI - Interactive Programming Learning System")
-        print("=" * 70)
+    def _print_header(self, context: str = ""):
+        """Print CLI header with optional context breadcrumbs"""
+        if console:
+            console.print("[bold cyan]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/bold cyan]")
+            console.print("[bold cyan]◽ LEARN CLI[/bold cyan]")
+            if context:
+                console.print(f"[dim]   {context}[/dim]")
+            else:
+                console.print("[dim]   Interactive Programming Learning[/dim]")
+            console.print("[bold cyan]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/bold cyan]")
+        else:
+            print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+            print("◽ LEARN CLI")
+            if context:
+                print(f"   {context}")
+            else:
+                print("   Interactive Programming Learning")
+            print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+
+    def _print_footer_hint(self, hints: List[str]):
+        """Show contextual keyboard hints at bottom of screen"""
+        if console:
+            hint_text = " · ".join([f"[dim]{h}[/dim]" for h in hints])
+            console.print(f"\n[dim]─────────────────────────────────────[/dim]")
+            console.print(f"  {hint_text}")
+        else:
+            hint_text = " · ".join(hints)
+            print(f"\n─────────────────────────────────────")
+            print(f"  {hint_text}")
+
+    def _print_status_bar(self):
+        """Show current status at top of screen"""
+        total_completed = sum(
+            self.progress.get_completion_stats(lang)["completed"]
+            for lang in self.lesson_mgr.languages.keys()
+        )
+        active_langs = len([lang for lang in self.progress.data.get("languages", {}).values() if lang.get("sessions")])
+
+        if console:
+            console.print(f"[dim]Lessons completed: {total_completed} · Active languages: {active_langs}[/dim]\n")
+        else:
+            print(f"Lessons completed: {total_completed} · Active languages: {active_langs}\n")
+
+    def _print_recent_lessons(self):
+        """Show 3 most recent lessons in main menu"""
+        all_sessions = []
+        for lang, lang_data in self.progress.data.get("languages", {}).items():
+            for session in lang_data.get("sessions", []):
+                all_sessions.append({
+                    "language": lang,
+                    "stage": session.get("stage"),
+                    "level": session.get("level"),
+                    "last_opened": session.get("last_opened", "")
+                })
+
+        # Sort by last_opened and get top 3
+        all_sessions.sort(key=lambda x: x.get("last_opened", ""), reverse=True)
+        recent = all_sessions[:3]
+
+        if recent:
+            if console:
+                console.print("\n[dim]Recent lessons:[/dim]")
+                for idx, session in enumerate(recent, 1):
+                    lang = session["language"]
+                    display_name = self.lesson_mgr.get_language_display_name(lang)
+                    console.print(f"  [dim]{idx}.[/dim] [cyan]{display_name}[/cyan] [dim]· Stage {session['stage']}, Level {session['level']}[/dim]")
+            else:
+                print("\nRecent lessons:")
+                for idx, session in enumerate(recent, 1):
+                    lang = session["language"]
+                    display_name = self.lesson_mgr.get_language_display_name(lang)
+                    print(f"  {idx}. {display_name} · Stage {session['stage']}, Level {session['level']}")
+
+    def _get_input_with_shortcuts(self, prompt: str, allow_back: bool = True, allow_help: bool = True) -> str:
+        """Enhanced input with global shortcuts (q=quit, b=back, h=help)"""
+        choice = input(prompt).strip().lower()
+
+        if choice == 'q':
+            if console:
+                console.print("\n[dim]Returning to main menu...[/dim]")
+            else:
+                print("\nReturning to main menu...")
+            return 'QUIT'
+        elif choice == 'b' and allow_back:
+            return 'BACK'
+        elif choice == 'h' and allow_help:
+            self._show_contextual_help()
+            return self._get_input_with_shortcuts(prompt, allow_back, allow_help)
+
+        return choice
+
+    def _show_contextual_help(self):
+        """Show contextual help"""
+        if console:
+            console.print("\n[bold cyan]◽ QUICK HELP[/bold cyan]")
+            console.print("[dim]─────────────────────────────────────[/dim]")
+            console.print("  [cyan]q[/cyan]  Return to main menu")
+            console.print("  [cyan]b[/cyan]  Go back one level")
+            console.print("  [cyan]h[/cyan]  Show this help")
+            console.print("  [cyan]0[/cyan]  Exit application")
+        else:
+            print("\n◽ QUICK HELP")
+            print("─────────────────────────────────────")
+            print("  q  Return to main menu")
+            print("  b  Go back one level")
+            print("  h  Show this help")
+            print("  0  Exit application")
+        input("\nPress Enter to continue...")
+
+    def _show_lesson_preview(self, lesson_path: Path) -> bool:
+        """Show first 5 lines of lesson. Returns True if user wants to open it."""
+        try:
+            with open(lesson_path, 'r', encoding='utf-8') as f:
+                lines = [line.rstrip() for line in f.readlines()[:5]]
+
+            if console:
+                console.print("\n[dim]Preview:[/dim]")
+                for line in lines:
+                    console.print(f"  [dim]{line}[/dim]")
+                console.print("  [dim]...[/dim]\n")
+            else:
+                print("\nPreview:")
+                for line in lines:
+                    print(f"  {line}")
+                print("  ...\n")
+
+            choice = input("→ Open this lesson? (Y/n): ").strip().lower()
+            return choice != 'n'
+        except Exception as e:
+            if console:
+                console.print(f"[yellow][!!] Could not preview: {e}[/yellow]")
+            else:
+                print(f"[!!] Could not preview: {e}")
+            return True  # Default to opening if preview fails
 
     def _print_main_menu(self):
         """Print main menu"""
-        print("\n🎯 MAIN MENU\n")
-        print("  1. Start a lesson (browse by category)")
-        print("  2. Continue where you left off")
-        print("  3. View progress")
-        print("  4. Browse all lessons")
-        print("  5. Switch language")
-        print("  6. Mark lesson as complete")
-        print("  7. View statistics")
-        print("  8. 📚 Interactive Tutorial (New!)")
-        print("  0. Exit")
+        if console:
+            console.print("\n[bold cyan]◽ MAIN MENU[/bold cyan]")
+            console.print("[dim]─────────────────────────────────────[/dim]\n")
+            menu_items = [
+                "  [cyan]1[/cyan]  Start a lesson",
+                "  [cyan]2[/cyan]  Continue learning",
+                "  [cyan]3[/cyan]  View progress",
+                "  [cyan]4[/cyan]  Browse all lessons",
+                "  [cyan]5[/cyan]  Switch language",
+                "  [cyan]6[/cyan]  Mark lesson complete",
+                "  [cyan]7[/cyan]  View statistics",
+                "  [cyan]8[/cyan]  Interactive tutorial",
+                "  [cyan]9[/cyan]  System diagnostics",
+                "  [cyan]0[/cyan]  Exit"
+            ]
+            for item in menu_items:
+                console.print(item)
+        else:
+            print("\n◽ MAIN MENU")
+            print("─────────────────────────────────────\n")
+            print("  1  Start a lesson")
+            print("  2  Continue learning")
+            print("  3  View progress")
+            print("  4  Browse all lessons")
+            print("  5  Switch language")
+            print("  6  Mark lesson complete")
+            print("  7  View statistics")
+            print("  8  Interactive tutorial")
+            print("  9  System diagnostics")
+            print("  0  Exit")
 
     def _select_language_and_lesson(self):
         """Select language and lesson interactively - now with categories"""
         self._clear_screen()
-        print("🎯 SELECT CATEGORY\n")
-        
+        if console:
+            console.print("\n[bold cyan]◽ SELECT CATEGORY[/bold cyan]")
+            console.print("[dim]─────────────────────────────────────[/dim]\n")
+        else:
+            print("\n◽ SELECT CATEGORY")
+            print("─────────────────────────────────────\n")
+
         # Show categories
         categories = [
-            ("1", "🧠 Core Languages", ["c-c++", "rust", "go", "zig"]),
-            ("2", "💻 Web & Scripting", ["javascript", "typescript", "python", "php"]),
-            ("3", "📱 Mobile Development", ["swift", "kotlin", "dart"]),
-            ("4", "🧮 Data & Databases", ["sql", "nosql", "r", "julia"]),
-            ("5", "⚙️ Scripting & Automation", ["shell", "powershell", "lua"]),
-            ("6", "🏢 Enterprise & Systems", ["java", "csharp"]),
-            ("7", "📋 All Languages (A-Z)", None)
+            ("1", "Core Languages", ["c-c++", "rust", "go", "zig"]),
+            ("2", "Web & Scripting", ["javascript", "typescript", "python", "php"]),
+            ("3", "Mobile Development", ["swift", "kotlin", "dart"]),
+            ("4", "Data & Databases", ["sql", "nosql", "r", "julia"]),
+            ("5", "Scripting & Automation", ["shell", "powershell", "lua"]),
+            ("6", "Enterprise & Systems", ["java", "csharp"]),
+            ("7", "All Languages", None)
         ]
-        
+
         for num, name, _ in categories:
-            print(f"  {num}. {name}")
-        
+            if console:
+                console.print(f"  [cyan]{num}.[/cyan] {name}")
+            else:
+                print(f"  {num}. {name}")
+
         category_choice = input("\n→ Select category (or 'b' to go back): ").strip()
-        
+
         if category_choice.lower() == 'b':
             return
-        
+
         # Find selected category
         selected_languages = None
         for num, name, langs in categories:
             if category_choice == num:
                 selected_languages = langs
                 break
-        
+
         if selected_languages is None and category_choice == "7":
             # Show all languages
             selected_languages = list(self.lesson_mgr.languages.keys())
         elif selected_languages is None:
-            print("Invalid choice!")
-            input("Press Enter to continue...")
+            if console:
+                console.print("[yellow][!!] Please enter 1-7 or 'b' to go back[/yellow]")
+            else:
+                print("[!!] Please enter 1-7 or 'b' to go back")
+            input("Press Enter to try again...")
             return
-        
+
         # Now show languages from selected category
         self._clear_screen()
-        print("📝 SELECT LANGUAGE\n")
-        
+        if console:
+            console.print("\n[bold cyan]◽ SELECT LANGUAGE[/bold cyan]")
+            console.print("[dim]─────────────────────────────────────[/dim]\n")
+        else:
+            print("\n◽ SELECT LANGUAGE")
+            print("─────────────────────────────────────\n")
+
         for idx, lang in enumerate(selected_languages, 1):
             display_name = self.lesson_mgr.get_language_display_name(lang)
-            print(f"  {idx}. {display_name}")
+            stats = self.progress.get_completion_stats(lang)
+
+            if stats["completed"] > 0:
+                pct = stats["percentage"]
+                if console:
+                    console.print(f"  [cyan]{idx}.[/cyan] {display_name} [dim]({pct:.0f}% complete)[/dim]")
+                else:
+                    print(f"  {idx}. {display_name} ({pct:.0f}% complete)")
+            else:
+                if console:
+                    console.print(f"  [cyan]{idx}.[/cyan] {display_name}")
+                else:
+                    print(f"  {idx}. {display_name}")
 
         lang_choice = input("\n→ Select language (or 'b' to go back): ").strip()
 
@@ -1159,15 +1509,24 @@ class InteractiveCLI:
             if 0 <= lang_idx < len(selected_languages):
                 language = selected_languages[lang_idx]
                 self._select_stage_and_level(language)
+            else:
+                if console:
+                    console.print(f"[yellow][!!] Please enter 1-{len(selected_languages)} or 'b' to go back[/yellow]")
+                else:
+                    print(f"[!!] Please enter 1-{len(selected_languages)} or 'b' to go back")
+                input("Press Enter to try again...")
         except ValueError:
-            print("Invalid choice!")
-            input("Press Enter to continue...")
+            if console:
+                console.print(f"[yellow][!!] Please enter 1-{len(selected_languages)} or 'b' to go back[/yellow]")
+            else:
+                print(f"[!!] Please enter 1-{len(selected_languages)} or 'b' to go back")
+            input("Press Enter to try again...")
 
     def _select_stage_and_level(self, language: str):
         """Select stage and level"""
         self._clear_screen()
         display_name = self.lesson_mgr.get_language_display_name(language)
-        print(f"📖 {display_name.upper()} - SELECT LESSON\n")
+        print(f"◽ {display_name.upper()} - SELECT LESSON\n")
 
         print("  Stage:")
         for i in range(1, 6):
@@ -1192,8 +1551,35 @@ class InteractiveCLI:
         lesson_path = self.lesson_mgr.find_lesson(language, stage, level)
 
         if not lesson_path:
-            print(f"\n❌ Lesson not found: Stage {stage}, Level {level}")
+            print(f"\n[!!] Lesson not found: Stage {stage}, Level {level}")
             input("Press Enter to continue...")
+            return
+
+        # Show preview and confirm
+        if not self._show_lesson_preview(lesson_path):
+            return
+
+        # Check if language runtime is available
+        checker = SystemChecker()
+        is_available, runtime_name, install_cmd = checker.check_language_runtime(language)
+
+        if not is_available:
+            self._clear_screen()
+            if console:
+                console.print("\n[bold red]◽ RUNTIME NOT FOUND[/bold red]")
+                console.print("[dim]─────────────────────────────────────[/dim]\n")
+                console.print(f"[bold yellow]{runtime_name}[/bold yellow] is required to run {language} lessons.\n")
+                console.print(f"[dim]Install with:[/dim]")
+                console.print(f"  [cyan]{install_cmd}[/cyan]\n")
+                console.print("[dim]Or select Option 9 from the main menu to install all dependencies.[/dim]")
+            else:
+                print("\n◽ RUNTIME NOT FOUND")
+                print("─────────────────────────────────────")
+                print(f"\n{runtime_name} is required to run {language} lessons.\n")
+                print(f"Install with:\n  {install_cmd}\n")
+                print("Or select Option 9 from the main menu to install all dependencies.")
+
+            input("\nPress Enter to continue...")
             return
 
         if mode is None:
@@ -1211,7 +1597,7 @@ class InteractiveCLI:
 
     def _select_mode(self) -> Optional[str]:
         """Select editor mode"""
-        print("\n🎨 SELECT MODE\n")
+        print("\n◽ SELECT MODE\n")
         print("  1. Vim (default)")
         print("  2. VS Code")
         print("  3. Terminal (read-only)")
@@ -1233,7 +1619,7 @@ class InteractiveCLI:
         sessions = self.progress.data.get("sessions", [])
 
         if not sessions:
-            print("\n📚 No previous sessions found. Start with a new lesson!")
+            print("\nNo previous sessions found. Start with a new lesson!")
             input("Press Enter to continue...")
             return
 
@@ -1246,59 +1632,151 @@ class InteractiveCLI:
             stage, level = next_lesson
             display_name = self.lesson_mgr.get_language_display_name(language)
 
-            print(f"\n✨ Next lesson: {display_name} - Stage {stage}, Level {level}")
+            print(f"\n◽ Next lesson: {display_name} - Stage {stage}, Level {level}")
             confirm = input("→ Open this lesson? (Y/n): ").strip().lower()
 
             if confirm != 'n':
                 self._open_lesson(language, stage, level)
         else:
-            print(f"\n🎉 Congratulations! You've completed all lessons in {language}!")
+            print(f"\n[OK] Congratulations! You've completed all lessons in {language}!")
             input("Press Enter to continue...")
 
     def _view_progress(self):
         """View learning progress"""
         self._clear_screen()
-        print("📊 YOUR LEARNING PROGRESS\n")
+        if console:
+            console.print("\n[bold cyan]◽ PROGRESS[/bold cyan]")
+            console.print("[dim]─────────────────────────────────────[/dim]\n")
 
-        for language in self.lesson_mgr.languages.keys():
-            display_name = self.lesson_mgr.get_language_display_name(language)
-            stats = self.progress.get_completion_stats(language)
+            table = Table(show_header=True, header_style="bold cyan", box=None)
+            table.add_column("Language", style="cyan")
+            table.add_column("Completed", style="dim white")
+            table.add_column("Total", style="dim white")
+            table.add_column("Progress", style="cyan")
 
-            if stats["completed"] > 0:
-                print(f"\n{display_name}:")
-                print(f"  Completed: {stats['completed']}/{stats['total']} lessons")
-                print(f"  Progress: {stats['percentage']:.1f}%")
+            for language in self.lesson_mgr.languages.keys():
+                display_name = self.lesson_mgr.get_language_display_name(language)
+                stats = self.progress.get_completion_stats(language)
 
-                bar_length = 30
-                filled = int(stats['percentage'] / 100 * bar_length)
-                bar = "█" * filled + "░" * (bar_length - filled)
-                print(f"  [{bar}]")
+                if stats["completed"] > 0:
+                    bar_length = 20
+                    filled = int(stats['percentage'] / 100 * bar_length)
+                    bar = "█" * filled + "░" * (bar_length - filled)
+                    progress_str = f"{bar} {stats['percentage']:.0f}%"
 
-        sessions = self.progress.data.get("sessions", [])
-        if sessions:
-            print(f"\n📈 Total sessions: {len(sessions)}")
+                    table.add_row(
+                        display_name,
+                        str(stats['completed']),
+                        str(stats['total']),
+                        progress_str
+                    )
 
-            last_session = sessions[-1]
-            lang_display = self.lesson_mgr.get_language_display_name(last_session["language"])
-            print(f"💡 Last session: {lang_display} - Stage {last_session['stage']}, Level {last_session['level']}")
+            console.print(table)
+
+            sessions = self.progress.data.get("sessions", [])
+            if sessions:
+                console.print(f"\n[dim]Total sessions:[/dim] [cyan]{len(sessions)}[/cyan]")
+
+                last_session = sessions[-1]
+                lang_display = self.lesson_mgr.get_language_display_name(last_session["language"])
+                console.print(f"[dim]Last session:[/dim] [cyan]{lang_display} · Stage {last_session['stage']} · Level {last_session['level']}[/cyan]")
+        else:
+            print("\n◽ PROGRESS")
+            print("─────────────────────────────────────\n")
+
+            for language in self.lesson_mgr.languages.keys():
+                display_name = self.lesson_mgr.get_language_display_name(language)
+                stats = self.progress.get_completion_stats(language)
+
+                if stats["completed"] > 0:
+                    print(f"\n{display_name}:")
+                    print(f"  Completed: {stats['completed']}/{stats['total']} lessons")
+                    print(f"  Progress: {stats['percentage']:.1f}%")
+
+                    bar_length = 30
+                    filled = int(stats['percentage'] / 100 * bar_length)
+                    bar = "█" * filled + "░" * (bar_length - filled)
+                    print(f"  [{bar}]")
+
+            sessions = self.progress.data.get("sessions", [])
+            if sessions:
+                print(f"\nTotal sessions: {len(sessions)}")
+
+                last_session = sessions[-1]
+                lang_display = self.lesson_mgr.get_language_display_name(last_session["language"])
+                print(f"Last session: {lang_display} - Stage {last_session['stage']}, Level {last_session['level']}")
 
         input("\nPress Enter to continue...")
 
     def _browse_all_lessons(self):
         """Browse all available lessons"""
         self._clear_screen()
-        print("📚 ALL AVAILABLE LESSONS\n")
+        if console:
+            console.print("\n[bold cyan]◽ LESSONS[/bold cyan]")
+            console.print("[dim]─────────────────────────────────────[/dim]\n")
 
-        lessons = self.lesson_mgr.list_all_lessons()
+            # Ask for filter
+            console.print("[dim]Filter:[/dim]")
+            console.print("  [cyan]1[/cyan] All lessons")
+            console.print("  [cyan]2[/cyan] In progress")
+            console.print("  [cyan]3[/cyan] Not started")
+            console.print("  [cyan]4[/cyan] Completed\n")
 
-        for lang_code, stages in lessons.items():
-            display_name = self.lesson_mgr.get_language_display_name(lang_code)
-            print(f"\n{display_name}")
-            print("=" * 50)
+            filter_choice = input("→ Select filter (default: 1): ").strip() or "1"
 
-            for stage, levels in stages.items():
-                if levels:
-                    print(f"  Stage {stage}: Levels {', '.join(map(str, levels))}")
+            self._clear_screen()
+            console.print("\n[bold cyan]◽ LESSONS[/bold cyan]")
+            console.print("[dim]─────────────────────────────────────[/dim]\n")
+
+            lessons = self.lesson_mgr.list_all_lessons()
+
+            for lang_code, stages in lessons.items():
+                display_name = self.lesson_mgr.get_language_display_name(lang_code)
+                console.print(f"\n[bold cyan]{display_name}[/bold cyan]")
+                console.print("[dim]" + "─" * 60 + "[/dim]")
+
+                for stage, levels in stages.items():
+                    if levels:
+                        # Apply filter
+                        filtered_levels = []
+                        for level in levels:
+                            lang_data = self.progress.data.get("languages", {}).get(lang_code, {})
+                            completed = lang_data.get("completed", [])
+                            is_completed = any(c["stage"] == stage and c["level"] == level for c in completed)
+                            sessions = lang_data.get("sessions", [])
+                            is_in_progress = any(s["stage"] == stage and s["level"] == level for s in sessions)
+
+                            if filter_choice == "1":  # All
+                                filtered_levels.append((level, is_completed, is_in_progress))
+                            elif filter_choice == "2" and is_in_progress and not is_completed:  # In progress
+                                filtered_levels.append((level, is_completed, is_in_progress))
+                            elif filter_choice == "3" and not is_in_progress and not is_completed:  # Not started
+                                filtered_levels.append((level, is_completed, is_in_progress))
+                            elif filter_choice == "4" and is_completed:  # Completed
+                                filtered_levels.append((level, is_completed, is_in_progress))
+
+                        if filtered_levels:
+                            levels_str = ", ".join([
+                                f"[green]{l}[/green]" if completed else
+                                f"[yellow]{l}[/yellow]" if in_progress else
+                                f"[cyan]{l}[/cyan]"
+                                for l, completed, in_progress in filtered_levels
+                            ])
+                            console.print(f"  [dim]Stage {stage}:[/dim] {levels_str}")
+        else:
+            print("\n◽ LESSONS")
+            print("─────────────────────────────────────\n")
+
+            lessons = self.lesson_mgr.list_all_lessons()
+
+            for lang_code, stages in lessons.items():
+                display_name = self.lesson_mgr.get_language_display_name(lang_code)
+                print(f"\n{display_name}")
+                print("=" * 50)
+
+                for stage, levels in stages.items():
+                    if levels:
+                        print(f"  Stage {stage}: Levels {', '.join(map(str, levels))}")
 
         input("\nPress Enter to continue...")
 
@@ -1309,12 +1787,22 @@ class InteractiveCLI:
     def _mark_lesson_complete(self):
         """Mark a lesson as completed"""
         self._clear_screen()
-        print("✅ MARK LESSON AS COMPLETE\n")
+        if console:
+            console.print(Panel.fit(
+                "[bold cyan]◽ MARK LESSON COMPLETE[/bold cyan]",
+                border_style="cyan"
+            ))
+            console.print()
+        else:
+            print("◽ MARK LESSON COMPLETE\n")
 
         languages = list(self.lesson_mgr.languages.keys())
         for idx, lang in enumerate(languages, 1):
             display_name = self.lesson_mgr.get_language_display_name(lang)
-            print(f"  {idx}. {display_name}")
+            if console:
+                console.print(f"  [cyan]{idx}.[/cyan] {display_name}")
+            else:
+                print(f"  {idx}. {display_name}")
 
         lang_choice = input("\n→ Select language: ").strip()
 
@@ -1326,43 +1814,110 @@ class InteractiveCLI:
                 stage = int(input("→ Stage number (1-5): ").strip())
                 level = int(input("→ Level number (1-7): ").strip())
 
-                if self.progress.mark_lesson_completed(language, stage, level):
-                    print(f"\n✨ Lesson marked as complete!")
+                # Show confirmation
+                display_name = self.lesson_mgr.get_language_display_name(language)
+                if console:
+                    console.print(f"\n[yellow]This will mark as complete:[/yellow]")
+                    console.print(f"  [cyan]{display_name}[/cyan] → Stage {stage}, Level {level}")
+                    console.print(f"\n[dim]You can still reopen it anytime[/dim]")
                 else:
-                    print(f"\n❌ Lesson not found in progress.")
+                    print(f"\nThis will mark as complete:")
+                    print(f"  {display_name} → Stage {stage}, Level {level}")
+                    print(f"\nYou can still reopen it anytime")
+
+                confirm = input("\n→ Confirm? (y/N): ").strip().lower()
+                if confirm != 'y':
+                    if console:
+                        console.print("[dim]Cancelled[/dim]")
+                    else:
+                        print("Cancelled")
+                    input("Press Enter to continue...")
+                    return
+
+                if self.progress.mark_lesson_completed(language, stage, level):
+                    if console:
+                        console.print(f"\n[bold green]◽ Lesson marked as complete![/bold green]")
+                    else:
+                        print(f"\n[OK] Lesson marked as complete!")
+                else:
+                    if console:
+                        console.print(f"\n[bold red][!!] Lesson not found in progress.[/bold red]")
+                    else:
+                        print(f"\n[!!] Lesson not found in progress.")
         except ValueError:
-            print("Invalid input!")
+            if console:
+                console.print("[bold red]Invalid input![/bold red]")
+            else:
+                print("Invalid input!")
 
         input("Press Enter to continue...")
 
     def _view_stats(self):
         """View detailed statistics"""
         self._clear_screen()
-        print("📊 DETAILED STATISTICS\n")
+        if console:
+            console.print("\n[bold cyan]◽ STATISTICS[/bold cyan]")
+            console.print("[dim]─────────────────────────────────────[/dim]\n")
 
-        total_lessons = 0
-        total_completed = 0
+            total_lessons = 0
+            total_completed = 0
 
-        for language in self.lesson_mgr.languages.keys():
-            stats = self.progress.get_completion_stats(language)
-            total_lessons += stats["total"]
-            total_completed += stats["completed"]
+            for language in self.lesson_mgr.languages.keys():
+                stats = self.progress.get_completion_stats(language)
+                total_lessons += stats["total"]
+                total_completed += stats["completed"]
 
-        print(f"Overall Progress:")
-        print(f"  Total lessons available: {total_lessons}")
-        print(f"  Lessons completed: {total_completed}")
+            stats_text = Text()
+            stats_text.append(f"Total lessons available: ", style="dim")
+            stats_text.append(f"{total_lessons}\n", style="bold yellow")
+            stats_text.append(f"Lessons completed: ", style="dim")
+            stats_text.append(f"{total_completed}\n", style="bold green")
 
-        if total_lessons > 0:
-            overall_pct = (total_completed / total_lessons * 100)
-            print(f"  Completion rate: {overall_pct:.1f}%")
+            if total_lessons > 0:
+                overall_pct = (total_completed / total_lessons * 100)
+                bar_length = 30
+                filled = int(overall_pct / 100 * bar_length)
+                bar = "█" * filled + "░" * (bar_length - filled)
+                stats_text.append(f"Completion rate: ", style="dim")
+                stats_text.append(f"{overall_pct:.1f}%\n", style="bold green")
+                stats_text.append(f"[{bar}]\n", style="green")
 
-        sessions = self.progress.data.get("sessions", [])
-        print(f"\nSession Statistics:")
-        print(f"  Total study sessions: {len(sessions)}")
+            sessions = self.progress.data.get("sessions", [])
+            stats_text.append(f"Total study sessions: ", style="dim")
+            stats_text.append(f"{len(sessions)}\n", style="bold yellow")
 
-        if sessions:
-            first_session = sessions[0]["timestamp"]
-            print(f"  Started learning: {first_session[:10]}")
+            if sessions:
+                first_session = sessions[0]["timestamp"]
+                stats_text.append(f"Started learning: ", style="dim")
+                stats_text.append(f"{first_session[:10]}", style="bold cyan")
+
+            console.print(stats_text)
+        else:
+            print("DETAILED STATISTICS\n")
+
+            total_lessons = 0
+            total_completed = 0
+
+            for language in self.lesson_mgr.languages.keys():
+                stats = self.progress.get_completion_stats(language)
+                total_lessons += stats["total"]
+                total_completed += stats["completed"]
+
+            print(f"Overall Progress:")
+            print(f"  Total lessons available: {total_lessons}")
+            print(f"  Lessons completed: {total_completed}")
+
+            if total_lessons > 0:
+                overall_pct = (total_completed / total_lessons * 100)
+                print(f"  Completion rate: {overall_pct:.1f}%")
+
+            sessions = self.progress.data.get("sessions", [])
+            print(f"\nSession Statistics:")
+            print(f"  Total study sessions: {len(sessions)}")
+
+            if sessions:
+                first_session = sessions[0]["timestamp"]
+                print(f"  Started learning: {first_session[:10]}")
 
         input("\nPress Enter to continue...")
 
@@ -1370,6 +1925,178 @@ class InteractiveCLI:
         """Run the interactive tutorial"""
         tutorial = InteractiveTutorial()
         tutorial.run()
+
+    def _system_diagnostics(self):
+        """System diagnostics and setup menu"""
+        while True:
+            self._clear_screen()
+            if console:
+                console.print("\n[bold cyan]◽ SYSTEM DIAGNOSTICS[/bold cyan]")
+                console.print("[dim]─────────────────────────────────────[/dim]\n")
+                diag_items = [
+                    "  [cyan]1[/cyan]  Run system check",
+                    "  [cyan]2[/cyan]  Run setup wizard",
+                    "  [cyan]3[/cyan]  Reset progress",
+                    "  [cyan]4[/cyan]  Show configuration",
+                    "  [cyan]5[/cyan]  Install dependencies",
+                    "  [cyan]b[/cyan]  Back"
+                ]
+                for item in diag_items:
+                    console.print(item)
+            else:
+                print("\n◽ SYSTEM DIAGNOSTICS")
+                print("─────────────────────────────────────\n")
+                print("  1  Run system check")
+                print("  2  Run setup wizard")
+                print("  3  Reset progress")
+                print("  4  Show configuration")
+                print("  5  Install dependencies")
+                print("  b  Back")
+
+            choice = input("\n→ Select option: ").strip().lower()
+
+            if choice == "1":
+                self._clear_screen()
+                checker = SystemChecker()
+                checker.check_all()
+                checker.print_report()
+                input("\nPress Enter to continue...")
+
+            elif choice == "2":
+                wizard = InitWizard(self.learn_dir)
+                wizard.run()
+                break
+
+            elif choice == "3":
+                if console:
+                    console.print("\n[bold yellow][!!] WARNING: This will reset all your progress![/bold yellow]")
+                else:
+                    print("\n[!!] WARNING: This will reset all your progress!")
+
+                confirm = input("Are you sure? (type 'yes' to confirm): ").strip().lower()
+
+                if confirm == "yes":
+                    self.progress.data = self.progress._init_progress()
+                    self.progress._save_progress()
+                    if console:
+                        console.print("\n[bold green][OK] Progress reset successfully[/bold green]")
+                    else:
+                        print("\n[OK] Progress reset successfully")
+                    input("Press Enter to continue...")
+                else:
+                    if console:
+                        console.print("\n[bold]Reset cancelled.[/bold]")
+                    else:
+                        print("\nReset cancelled.")
+                    input("Press Enter to continue...")
+
+            elif choice == "4":
+                self._show_configuration()
+
+            elif choice == "5":
+                self._install_dependencies()
+
+            elif choice == "b" or choice == "":
+                break
+
+            else:
+                if console:
+                    console.print("[bold red]Invalid option![/bold red]")
+                else:
+                    print("Invalid option!")
+                input("Press Enter to continue...")
+
+    def _show_configuration(self):
+        """Show current configuration"""
+        self._clear_screen()
+        if console:
+            console.print("\n[bold cyan]◽ CONFIGURATION[/bold cyan]")
+            console.print("[dim]─────────────────────────────────────[/dim]\n")
+
+            config_info = Text()
+            config_info.append("Paths\n", style="bold cyan")
+            config_info.append(f"  LEARN Directory: ", style="dim")
+            config_info.append(f"{self.learn_dir}\n", style="cyan")
+
+            workspace_root = Path.home() / ".local" / "share" / "learn" / "workspaces"
+            config_info.append(f"  Workspace Root: ", style="dim")
+            config_info.append(f"{workspace_root}\n", style="cyan")
+
+            progress_file = self.learn_dir / ".learn-progress.json"
+            config_info.append(f"  Progress File: ", style="dim")
+            config_info.append(f"{progress_file}\n", style="cyan")
+
+            config_info.append("\nStatistics\n", style="bold cyan")
+            total_sessions = len(self.progress.data.get("sessions", []))
+            config_info.append(f"  Total Sessions: ", style="dim")
+            config_info.append(f"{total_sessions}\n", style="cyan")
+
+            languages_started = len(self.progress.data.get("languages", {}))
+            config_info.append(f"  Languages Started: ", style="dim")
+            config_info.append(f"{languages_started}\n", style="cyan")
+
+            console.print(config_info)
+        else:
+            print("\n◽ CONFIGURATION")
+            print("─────────────────────────────────────")
+
+            print("\nPaths:")
+            print(f"  LEARN Directory: {self.learn_dir}")
+
+            workspace_root = Path.home() / ".local" / "share" / "learn" / "workspaces"
+            print(f"  Workspace Root: {workspace_root}")
+
+            progress_file = self.learn_dir / ".learn-progress.json"
+            print(f"  Progress File: {progress_file}")
+
+            print("\nStatistics:")
+            total_sessions = len(self.progress.data.get("sessions", []))
+            print(f"  Total Sessions: {total_sessions}")
+
+            languages_started = len(self.progress.data.get("languages", {}))
+            print(f"  Languages Started: {languages_started}")
+
+        input("\nPress Enter to continue...")
+
+    def _install_dependencies(self):
+        """Install/Reinstall dependencies"""
+        self._clear_screen()
+        checker = SystemChecker()
+        checker.check_all()
+
+        if console:
+            console.print("\n[bold cyan]Installing Dependencies[/bold cyan]\n")
+        else:
+            print("\nInstalling Dependencies\n")
+
+        fixes_needed = [c for c in checker.checks if c["status"] != "OK" and c.get("fix")]
+
+        if not fixes_needed:
+            if console:
+                console.print("[bold green][OK] All dependencies are already installed[/bold green]")
+            else:
+                print("[OK] All dependencies are already installed")
+            input("Press Enter to continue...")
+            return
+
+        for check in fixes_needed:
+            if console:
+                console.print(f"[yellow]{check['name']}[/yellow]:")
+                console.print(f"  [cyan]{check['fix']}[/cyan]")
+            else:
+                print(f"{check['name']}:")
+                print(f"  {check['fix']}")
+
+            confirm = input("  Run this? (Y/n): ").strip().lower()
+            if confirm != 'n':
+                os.system(check['fix'])
+
+        if console:
+            console.print("\n[bold green][OK] Dependencies updated[/bold green]")
+        else:
+            print("\n[OK] Dependencies updated")
+
+        input("Press Enter to continue...")
 
 
 def main():
@@ -1505,7 +2232,7 @@ Examples:
         }
         language = lang_map.get(lang.lower(), lang)
         cli.progress.mark_lesson_completed(language, int(stage), int(level))
-        print(f"✅ Marked {language} Stage {stage} Level {level} as complete!")
+        print(f"[OK] Marked {language} Stage {stage} Level {level} as complete!")
         return
 
     # Open specific lesson

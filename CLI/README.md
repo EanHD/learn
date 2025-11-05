@@ -33,15 +33,100 @@ Choose the guide that fits your needs:
 
 The Enhanced CLI adds:
 - ✅ Interactive menu system
-- ✅ Multi-language support (6 languages)
+- ✅ Multi-language support (20 languages!)
 - ✅ Advanced progress tracking with JSON
 - ✅ Completion tracking
 - ✅ Visual statistics and progress bars
 - ✅ Smart lesson suggestions
 - ✅ Session history
+- ✅ System diagnostics & setup (NEW - Option 9!)
 - ✅ Better error handling
+- ✅ Rich terminal output with colors and tables
 
 **All while maintaining full backward compatibility!**
+
+## 🎮 Interactive Menu (All Options)
+
+When you run `learn`, you get this menu:
+
+```
+🎯 MAIN MENU
+
+  1 Start a lesson (browse by category)
+  2 Continue where you left off
+  3 View progress
+  4 Browse all lessons
+  5 Switch language
+  6 Mark lesson as complete
+  7 View statistics
+  8 Interactive Tutorial
+  9 System Diagnostics & Setup
+  0 Exit
+```
+
+### Option 9: System Diagnostics & Setup
+
+**NEW!** Manage your system setup and configuration:
+
+```
+🔧 SYSTEM DIAGNOSTICS & SETUP
+
+  1 Run system check (verify all dependencies)
+  2 Run setup wizard (first-time setup)
+  3 Reset progress (start over)
+  4 Show configuration
+  5 Install/Reinstall dependencies
+  b Back to main menu
+```
+
+Perfect for:
+- 🔍 Troubleshooting setup issues
+- ✅ Verifying all dependencies are installed
+- 🔧 Reinstalling tools if something breaks
+- 📊 Viewing your configuration and paths
+- ↩️ Starting fresh if needed
+
+## 📦 Language Requirements
+
+The CLI automatically checks that required language runtimes are available **before opening a lesson**. If a runtime is missing, you'll see:
+
+```
+⚠️  RUNTIME NOT FOUND
+
+Node.js is required to run javascript lessons.
+
+Install with:
+  curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt install -y nodejs
+
+Or select Option 9 from the main menu to install all dependencies.
+```
+
+### Supported Languages & Requirements
+
+| Language | Runtime | Installation |
+|----------|---------|--------------|
+| C / C++ | GCC/G++ | `sudo apt install build-essential` |
+| Rust | rustc | `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \| sh` |
+| Python | Python 3 | `sudo apt install python3` |
+| JavaScript | Node.js | `curl -fsSL https://deb.nodesource.com/setup_lts.x \| sudo -E bash - && sudo apt install -y nodejs` |
+| TypeScript | Node.js + tsc | `npm install -g typescript` |
+| Go | Go compiler | `sudo apt install golang-go` |
+| Lua | Lua 5.4 | `sudo apt install lua5.4` |
+| Dart | Dart SDK | `sudo apt install dart` |
+| Swift | Swift | `sudo apt install swift` |
+| Kotlin | Kotlin | `sudo apt install kotlin` |
+| Java | JDK | `sudo apt install default-jdk` |
+| C# | .NET SDK | `sudo apt install dotnet-sdk-latest` |
+| Shell | Bash | Pre-installed on Linux |
+| PowerShell | PowerShell Core | `sudo apt install -y powershell` |
+| Zig | Zig | [Download](https://ziglang.org/download/) |
+| SQL | SQLite3 | `sudo apt install sqlite3` |
+| Julia | Julia | [Download](https://julialang.org/downloads/) |
+| R | R language | `sudo apt install r-base` |
+| PHP | PHP | `sudo apt install php-cli` |
+| NoSQL | MongoDB shell | [Download](https://www.mongodb.com/try/download/shell) |
+
+**Tip**: Use **Option 9 → Install/Reinstall dependencies** to install all runtimes at once!
 
 ---
 

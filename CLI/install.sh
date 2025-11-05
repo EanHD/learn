@@ -59,6 +59,20 @@ command -v nvim >/dev/null 2>&1 && echo "Neovim: OK" || echo "Neovim: MISSING (i
 command -v code >/dev/null 2>&1 && echo "VS Code: OK" || echo "VS Code: not found (optional)"
 command -v less >/dev/null 2>&1 && echo "less: OK" || echo "less: MISSING (install: sudo apt install less)"
 
+# Install Python dependencies
+echo ""
+echo "Installing Python dependencies..."
+python3 -m pip install --user rich --quiet 2>/dev/null || true
+echo "Python dependencies installed"
+
+# Install VS Code Vim extension if VS Code is available
+if command -v code >/dev/null 2>&1; then
+  echo ""
+  echo "Installing VS Code extensions..."
+  code --install-extension vscodevim.vim 2>/dev/null || true
+  echo "VS Code extensions installed"
+fi
+
 echo ""
 echo "=================================================="
 echo "  Installation Complete"

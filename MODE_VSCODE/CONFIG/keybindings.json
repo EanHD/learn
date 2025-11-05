@@ -1,0 +1,156 @@
+// VS Code Keybindings for LEARN Workspace
+// Copy this to your ~/.config/Code/User/keybindings.json or use CMD+K CMD+S to edit
+[
+  // ==========================================
+  // LESSON NAVIGATION
+  // ==========================================
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "learn --next\n"
+    },
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "learn --prev\n"
+    },
+    "when": "terminalFocus"
+  },
+
+  // ==========================================
+  // WINDOW MANAGEMENT (Vim-style)
+  // ==========================================
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp",
+    "when": "!terminalFocus"
+  },
+
+  // ==========================================
+  // QUICK ACTIONS
+  // ==========================================
+  {
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "ctrl+shift+f",
+    "command": "workbench.action.findInFiles"
+  },
+
+  // ==========================================
+  // FOCUS MODE
+  // ==========================================
+  {
+    "key": "ctrl+shift+z",
+    "command": "workbench.action.toggleZenMode"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+shift+m",
+    "command": "workbench.action.togglePanel"
+  },
+
+  // ==========================================
+  // SPLIT EDITOR LAYOUT
+  // ==========================================
+  {
+    "key": "ctrl+shift+\\",
+    "command": "workbench.action.splitEditor"
+  },
+  {
+    "key": "ctrl+shift+]",
+    "command": "workbench.action.increaseViewWidth"
+  },
+  {
+    "key": "ctrl+shift+[",
+    "command": "workbench.action.decreaseViewWidth"
+  },
+  {
+    "key": "ctrl+=",
+    "command": "workbench.action.evenEditorWidths"
+  },
+
+  // ==========================================
+  // VIM EXTENSION SUPPORT
+  // ==========================================
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.action.navigateLeft",
+    "when": "vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "workbench.action.navigateRight",
+    "when": "vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+w j",
+    "command": "workbench.action.navigateDown",
+    "when": "vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+w k",
+    "command": "workbench.action.navigateUp",
+    "when": "vim.mode == 'Normal'"
+  },
+
+  // ==========================================
+  // FILE OPERATIONS
+  // ==========================================
+  {
+    "key": "ctrl+shift+s",
+    "command": "workbench.action.files.saveAll"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpen"
+  },
+
+  // ==========================================
+  // CODE ACTIONS
+  // ==========================================
+  {
+    "key": "ctrl+shift+r",
+    "command": "workbench.action.tasks.runTask"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "workbench.action.debug.start"
+  },
+
+  // ==========================================
+  // MARKDOWN PREVIEW
+  // ==========================================
+  {
+    "key": "ctrl+shift+v",
+    "command": "markdown.showPreviewToSide",
+    "when": "editorLangId == 'markdown'"
+  }
+]

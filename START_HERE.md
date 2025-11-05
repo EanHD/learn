@@ -67,17 +67,25 @@ By default, lessons open in **Neovim** with split-screen view (lesson on left, c
 
 ```bash
 learn open c++ 1 1 --vim        # Neovim split-screen (default)
-learn open c++ 1 1 --vscode     # VS Code
+learn open c++ 1 1 --vscode     # VS Code with Vim motions
 learn open c++ 1 1 --terminal   # Read-only terminal view
 ```
 
-**Vim Instructions:**
-When you launch Vim, you'll see language-specific compile/run commands:
+### Neovim (--vim, default)
+- Full Vim/Neovim experience
+- 19 powerful plugins
+- Best for Vim enthusiasts
+- See: `MODE_VIM/README.md`
 
-```text
-Compile/Run (in code window):
-    :!make run         -> C++ (compile + run)
-```
+### VS Code (--vscode)
+- Graphical interface with Vim motions
+- Auto-completion and language servers
+- Best for beginners and GUI lovers
+- See: `MODE_VSCODE/README.md`
+
+### Terminal (--terminal)
+- Read-only lesson viewing
+- Great for distraction-free reading
 
 For other languages:
 

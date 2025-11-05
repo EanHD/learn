@@ -167,6 +167,45 @@ Copy-Item $initLua $destInit
 Write-Host "✅ Neovim configured" -ForegroundColor Green
 Write-Host ""
 
+# Setup VS Code configuration
+Write-Host "🎨 Setting up VS Code configuration..." -ForegroundColor Cyan
+
+if (Get-Command code -ErrorAction SilentlyContinue) {
+    Write-Host "📝 Installing VS Code extensions..." -ForegroundColor Cyan
+
+    # Core extension for Vim motions
+    code --install-extension vscodevim.vim --force | Out-Null
+
+    # Language support extensions
+    code --install-extension ms-vscode.cpptools --force | Out-Null
+    code --install-extension rust-lang.rust-analyzer --force | Out-Null
+    code --install-extension ms-python.python --force | Out-Null
+    code --install-extension golang.go --force | Out-Null
+    code --install-extension yzhang.markdown-all-in-one --force | Out-Null
+    code --install-extension eamodio.gitlens --force | Out-Null
+    code --install-extension streetsidesoftware.code-spell-checker --force | Out-Null
+    code --install-extension ms-vscode.makefile-tools --force | Out-Null
+
+    # Theme extension
+    code --install-extension edeneast.nightfox --force | Out-Null
+
+    Write-Host "✅ VS Code extensions installed" -ForegroundColor Green
+
+    # Copy VS Code settings
+    $vscodeConfig = Join-Path $env:APPDATA "Code\User"
+    if (-not (Test-Path $vscodeConfig)) {
+        New-Item -ItemType Directory -Path $vscodeConfig -Force | Out-Null
+    }
+
+    # Note: VS Code settings are automatically synced from workspace .vscode/settings.json
+    Write-Host "💡 VS Code will use .vscode/settings.json from the LEARN directory" -ForegroundColor Cyan
+} else {
+    Write-Host "⚠️  VS Code not found" -ForegroundColor Yellow
+    Write-Host "   Download from: https://code.visualstudio.com" -ForegroundColor Yellow
+}
+
+Write-Host ""
+
 # Install Python dependencies for CLI
 Write-Host "🐍 Installing Python dependencies..." -ForegroundColor Cyan
 python -m pip install --user rich --quiet
@@ -192,6 +231,13 @@ if (Get-Command nvim -ErrorAction SilentlyContinue) {
     Write-Host "✅ Neovim is available: $nvimVersion" -ForegroundColor Green
 } else {
     Write-Host "❌ Neovim not found" -ForegroundColor Red
+}
+
+if (Get-Command code -ErrorAction SilentlyContinue) {
+    $codeVersion = (code --version | Select-Object -First 1)
+    Write-Host "✅ VS Code is available: $codeVersion" -ForegroundColor Green
+} else {
+    Write-Host "⚠️  VS Code not found (optional)" -ForegroundColor Yellow
 }
 
 Write-Host ""
@@ -222,11 +268,17 @@ if ($Update) {
     Write-Host "   • README: $learnDir\README.md" -ForegroundColor White
     Write-Host "   • Features: $learnDir\FEATURES.md" -ForegroundColor White
     Write-Host "   • Vim Guide: $learnDir\MODE_VIM\README.md" -ForegroundColor White
+    Write-Host "   • VS Code Guide: $learnDir\MODE_VSCODE\README.md" -ForegroundColor White
     Write-Host ""
-    Write-Host "💡 Tips:" -ForegroundColor Yellow
+    Write-Host "💡 Vim Tips:" -ForegroundColor Yellow
     Write-Host "   • Press <Space> in Neovim to see all commands" -ForegroundColor White
     Write-Host "   • Press <Space>h for essential shortcuts" -ForegroundColor White
     Write-Host "   • Press <Space>g for quick navigation guide" -ForegroundColor White
+    Write-Host ""
+    Write-Host "💡 VS Code Tips (if installed):" -ForegroundColor Yellow
+    Write-Host "   • Press Ctrl+Shift+T to run lesson" -ForegroundColor White
+    Write-Host "   • Press Ctrl+H/J/K/L for window navigation (Vim-style)" -ForegroundColor White
+    Write-Host "   • Press <Space> as leader key for commands" -ForegroundColor White
     Write-Host ""
     Write-Host "🔄 To update later, run:" -ForegroundColor Yellow
     Write-Host "   powershell -File ~\LEARN\install.ps1 -Update" -ForegroundColor White

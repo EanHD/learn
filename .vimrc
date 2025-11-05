@@ -1,9 +1,12 @@
+```bat
 " LEARN Platform Vim Configuration
 " Optimized for learning programming with focus on visibility and keystroke practice
+" This configuration aligns with both Neovim (init.lua) and VS Code settings for consistency
 
 " ============================================================================
 " CORE INDENTATION & SPACING (DEFAULT: 2 SPACES)
 " ============================================================================
+" ALIGNMENT NOTE: Matches VS Code .vscode/settings.json defaults
 
 set tabstop=2           " Tab character displays as 2 spaces
 set softtabstop=2       " Backspace deletes 2 spaces (soft tabs)
@@ -214,3 +217,26 @@ endfunction
 " Run command mapping
 nnoremap <leader>r :execute '!'.GetRunCommand()<CR>
 nnoremap <leader>h :call ShowDynamicHelp()<CR>
+
+" ============================================================================
+" EDITOR ALIGNMENT ACROSS PLATFORMS
+" ============================================================================
+" This configuration aligns with:
+"   • Neovim (MODE_VIM) - via ~/.config/nvim/init.lua
+"   • VS Code (MODE_VSCODE) - via .vscode/settings.json
+"   • Plain Vim - via this .vimrc file
+"
+" Consistent settings:
+"   • Default indentation: 2 spaces
+"   • Language-specific overrides: 4 spaces (C++, Python, Rust, Go, etc.)
+"   • Vim motions enabled in all editors
+"   • Leader key: Space (<Space>)
+"   • Relative line numbers for fast navigation
+"   • Visual customizations for learning focus
+"
+" To learn more:
+"   • Vim/Neovim: MODE_VIM/README.md
+"   • VS Code: MODE_VSCODE/README.md
+"   • General: README.md
+
+```

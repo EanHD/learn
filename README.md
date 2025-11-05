@@ -9,7 +9,7 @@
 
 **490 hands-on lessons.** Twenty languages. Five stages. Real projects.
 
-Start coding in **5 minutes** with our **professional IDE setup**.
+Start coding in **5 minutes** with our **professional IDE setup** on Linux, macOS, and Windows.
 
 ---
 
@@ -23,6 +23,8 @@ Start coding in **5 minutes** with our **professional IDE setup**.
 - ⚡ **19 Neovim Plugins** - LSP, Telescope, Flash navigation, and more
 - 💬 **Help Comments** - Every code file starts with quick help reference
 - 🪟 **Smart Window Navigation** - Seamless switching between lesson and code
+- 🖥️ **Cross-Platform** - Works perfectly on Linux, macOS, and Windows
+- 💻 **VS Code Support** - Vim motions, split-screen, and all features on VS Code
 
 ---
 

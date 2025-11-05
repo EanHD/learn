@@ -1,0 +1,299 @@
+// VS Code Settings for LEARN Workspace - Focused Learning Mode
+// This configuration enables Vim motions and creates a distraction-free learning environment
+{
+  // ==========================================
+  // VIM MODE CONFIGURATION
+  // ==========================================
+  "vim.enableNeovim": false,
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 200,
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": false,
+    "<C-z>": false,
+    "<C-f>": false,
+    "<C-h>": false,
+    "<C-j>": false,
+    "<C-k>": false,
+    "<C-l>": false
+  },
+
+  // Vim Insert Mode Mappings
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+
+  // Vim Normal Mode Mappings (Leader key = Space)
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "f", "g"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<leader>", "z"],
+      "commands": ["workbench.action.toggleZenMode"]
+    },
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["<leader>", "="],
+      "commands": ["workbench.action.evenEditorWidths"]
+    },
+    {
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    }
+  ],
+
+  // Vim Visual Mode Mappings
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["editor.action.commentLine"]
+    }
+  ],
+
+  // ==========================================
+  // EDITOR APPEARANCE - FOCUSED & CLEAN
+  // ==========================================
+  "workbench.colorTheme": "Default Dark+",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.6,
+  "editor.fontFamily": "'JetBrains Mono', 'Fira Code', 'Consolas', 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorStyle": "block",
+  "editor.lineNumbers": "relative",
+  "editor.renderWhitespace": "selection",
+  "editor.rulers": [80, 100],
+  "editor.minimap.enabled": false,
+  "editor.occurrencesHighlight": "off",
+  "editor.renderLineHighlight": "line",
+  "editor.guides.bracketPairs": true,
+
+  // ==========================================
+  // WORKBENCH - MINIMAL DISTRACTIONS
+  // ==========================================
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": true,
+  "workbench.sideBar.location": "left",
+  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.enablePreview": false,
+  "workbench.startupEditor": "none",
+  "breadcrumbs.enabled": true,
+
+  // Panel (terminal) configuration
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontFamily": "'JetBrains Mono', monospace",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+
+  // Hide UI elements for focus
+  "workbench.tips.enabled": false,
+  "workbench.welcomePage.walkthroughs.openOnInstall": false,
+  "extensions.ignoreRecommendations": true,
+  "update.mode": "none",
+
+  // ==========================================
+  // FILE HANDLING
+  // ==========================================
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.associations": {
+    "*.md": "markdown",
+    "*.cpp": "cpp",
+    "*.hpp": "cpp",
+    "*.c": "c",
+    "*.h": "c",
+    "*.rs": "rust",
+    "*.py": "python"
+  },
+
+  // ==========================================
+  // MARKDOWN CONFIGURATION (for lessons)
+  // ==========================================
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "editor.trimTrailingWhitespace": false,
+    "editor.lineNumbers": "on",
+    "editor.fontSize": 15,
+    "editor.lineHeight": 1.8
+  },
+
+  // Markdown preview styling
+  "markdown.preview.fontSize": 15,
+  "markdown.preview.lineHeight": 1.7,
+  "markdown.preview.fontFamily": "'Segoe UI', system-ui, sans-serif",
+  "markdown.preview.scrollPreviewWithEditor": true,
+  "markdown.preview.scrollEditorWithPreview": true,
+
+  // Make lesson files read-only (optional)
+  "files.readonlyInclude": {
+    "**/lesson.md": true
+  },
+
+  // ==========================================
+  // LANGUAGE-SPECIFIC SETTINGS
+  // ==========================================
+  "[cpp]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnSave": true,
+    "editor.semanticHighlighting.enabled": true
+  },
+
+  "[c]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true
+  },
+
+  "[rust]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true
+  },
+
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ==========================================
+  // SEARCH & NAVIGATION
+  // ==========================================
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/target": true,
+    "**/.git": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
+
+  // ==========================================
+  // GIT INTEGRATION (minimal)
+  // ==========================================
+  "git.enabled": true,
+  "git.autofetch": false,
+  "git.confirmSync": false,
+  "scm.defaultViewMode": "tree",
+
+  // ==========================================
+  // LANGUAGE SERVERS & INTELLISENSE
+  // ==========================================
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggestSelection": "first",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+
+  // C/C++
+  "C_Cpp.intelliSenseEngine": "default",
+  "C_Cpp.errorSquiggles": "enabled",
+  "C_Cpp.autocomplete": "default",
+
+  // Rust
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.cargo.allFeatures": true,
+
+  // Python
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.analysis.typeCheckingMode": "basic",
+
+  // ==========================================
+  // TERMINAL INTEGRATION
+  // ==========================================
+  "terminal.integrated.scrollback": 5000,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.rightClickBehavior": "default",
+
+  // ==========================================
+  // PERFORMANCE
+  // ==========================================
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/node_modules/**": true,
+    "**/target/**": true
+  },
+
+  // ==========================================
+  // SECURITY
+  // ==========================================
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // ==========================================
+  // NOTIFICATIONS (minimal)
+  // ==========================================
+  "extensions.autoUpdate": false,
+  "telemetry.telemetryLevel": "off"
+}

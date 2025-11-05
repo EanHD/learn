@@ -21,7 +21,7 @@ Welcome to your first step into programming! Today, you'll learn how to create y
 
 ### Your Task
 
-**Copy the following code EXACTLY as shown below into a new file called `hello.cpppp`**
+**Copy the following code EXACTLY as shown below into a new file called `hello.cpp`**
 
 ```c
 # include <stdio.h>
@@ -59,7 +59,7 @@ Hello, World!
 
 ### Success Checklist
 
-- [ ] Created a file named `hello.cpppp`
+- [ ] Created a file named `hello.cpp`
 - [ ] Copied the code exactly as shown
 - [ ] Compiled without errors
 - [ ] Ran the program successfully

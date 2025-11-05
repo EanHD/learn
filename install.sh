@@ -120,6 +120,25 @@ cp MODE_VIM/CONFIG/init-learning.lua "$NVIM_CONFIG/init.lua"
 echo "✅ Neovim configured"
 echo ""
 
+# Setup VS Code configuration (if VS Code is installed)
+echo "🎨 Checking for VS Code..."
+if command -v code &> /dev/null; then
+    echo "📝 Installing VS Code extensions..."
+    code --install-extension vscodevim.vim 2>/dev/null || true
+    code --install-extension ms-vscode.cpptools 2>/dev/null || true
+    code --install-extension rust-lang.rust-analyzer 2>/dev/null || true
+    code --install-extension ms-python.python 2>/dev/null || true
+    code --install-extension yzhang.markdown-all-in-one 2>/dev/null || true
+    code --install-extension streetsidesoftware.code-spell-checker 2>/dev/null || true
+    code --install-extension eamodio.gitlens 2>/dev/null || true
+    echo "✅ VS Code extensions installed"
+else
+    echo "⚠️  VS Code not found (optional)"
+    echo "   To install VS Code: https://code.visualstudio.com/"
+    echo "   Then run: code --install-extension vscodevim.vim"
+fi
+echo ""
+
 # Install Python dependencies for CLI
 echo "🐍 Installing Python dependencies..."
 pip3 install --user rich
@@ -172,11 +191,13 @@ else
     echo "   • README: $LEARN_DIR/README.md"
     echo "   • Features: $LEARN_DIR/FEATURES.md"
     echo "   • Vim Guide: $LEARN_DIR/MODE_VIM/README.md"
+    echo "   • VS Code Guide: $LEARN_DIR/MODE_VSCODE/README.md"
     echo ""
     echo "💡 Tips:"
     echo "   • Press <Space> in Neovim to see all commands"
     echo "   • Press <Space>h for essential shortcuts"
     echo "   • Press <Space>g for quick navigation guide"
+    echo "   • For VS Code: Ctrl+Shift+X to install recommended extensions"
     echo ""
     echo "🔄 To update later, run:"
     echo "   bash ~/LEARN/install.sh --update"
