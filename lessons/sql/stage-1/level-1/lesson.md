@@ -56,20 +56,22 @@ Hello, World!
 
 ## ANSWER KEY (No cheating until you've tried!)
 
-### Code Breakdown
+### Solution
 
-> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+```
+SELECT 'Hello, World!' AS message;
+```
 
-### Key Concepts
+### Explanation
 
-- Review the code structure specific to Sql
-- Understand the execution flow
-- Learn common pitfalls and solutions
+This solution demonstrates the key concepts from this lesson. Copy this code exactly as shown, and make sure you understand each part before moving on.
 
-### Next Steps
+### Success Criteria
 
-Practice the code and experiment with variations!
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
 
 ---
 
-**Congratulations! Keep coding!**
+**Great job! You've completed this lesson!**

@@ -73,52 +73,28 @@ If you're stuck, here's what your code should look like (don't peek until you tr
 
 ---
 
-## ANSWER KEY
+## ANSWER KEY (No cheating until you've tried!)
 
-
-
-(Fill in based on language-specific syntax)
+### Solution
 
 ```
+START
+    print "Welcome to the program!"
+    print "This is my first real program"
+    print "I'm learning to code!"
+END
+```
+
+### Explanation
+
+This solution demonstrates the key concepts from this lesson. Copy this code exactly as shown, and make sure you understand each part before moving on.
+
+### Success Criteria
+
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
 
 ---
 
-## What's Different About Stage 2?
-
-**Stage 1 (Copying):** Code was provided, you typed it
-**Stage 2 (Pseudocode→Code):** Logic is provided, you write the code
-
-This is a crucial step! You're now writing code from specifications, not just copying. This is how real programming works.
-
-### Key Concepts
-
-- Pseudocode is language-independent - the same pseudocode could translate to many languages
-- Your job is to understand the logic and implement it correctly
-- Different languages have different syntax, but the logic is the same
-
----
-
-## Need Help with Vim?
-
-Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim commands!
-
----
-
-<div style="page-break-after: always;"></div>
-
-
-### Additional Content
-
-Understand the key concepts:
-
-- Review each function
-- Understand the flow
-- Learn the patterns used
-
-
-### Code Review
-
-Key functions and their purpose:
-
-- Main function: Entry point
-- Helper functions: Support logic
+**Great job! You've completed this lesson!**

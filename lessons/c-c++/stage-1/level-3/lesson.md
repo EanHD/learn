@@ -99,3 +99,59 @@ scanf("%d", &age);
 ---
 
 **Next: Conditional logic with if statements!**
+
+---
+
+## ANSWER KEY (No cheating until you've tried!)
+
+### Solution
+
+```c
+#include <stdio.h>
+
+int main() {
+    int age;
+    float height;
+    char initial;
+
+    // Get user input
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    printf("Enter your height in feet: ");
+    scanf("%f", &height);
+
+    printf("Enter your first initial: ");
+    scanf(" %c", &initial);  // Note the space before %c
+
+    // Display results
+    printf("\n--- Your Info ---\n");
+    printf("Initial: %c\n", initial);
+    printf("Age: %d years old\n", age);
+    printf("Height: %.1f feet\n", height);
+
+    // Calculate something
+    int months = age * 12;
+    printf("That's %d months!\n", months);
+
+    return 0;
+}
+```
+
+### Explanation
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Basic Structure**: The program follows the standard structure for c
+2. **Output**: The code produces the expected output
+3. **Syntax**: Pay attention to the syntax details - they're important!
+
+### Success Criteria
+
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
+
+---
+
+**Great job! You've completed this lesson!**

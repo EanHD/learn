@@ -56,44 +56,22 @@ Hello, World!
 
 ## ANSWER KEY (No cheating until you've tried!)
 
-### Code Breakdown
+### Solution
 
-> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+```
+console.log("Hello, World!");
+```
 
-### Key Concepts
+### Explanation
 
-- Review the code structure specific to Typescript
-- Understand the execution flow
-- Learn common pitfalls and solutions
+This solution demonstrates the key concepts from this lesson. Copy this code exactly as shown, and make sure you understand each part before moving on.
 
-### Next Steps
+### Success Criteria
 
-Practice the code and experiment with variations!
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
 
 ---
 
-**Congratulations! Keep coding!**
-
-
-### How to Run
-
-1. Open the code file
-2. Review and understand the implementation
-3. Execute using: `<Space>r` in Vim
-
-
-### Additional Content
-
-Understand the key concepts:
-
-- Review each function
-- Understand the flow
-- Learn the patterns used
-
-
-### Code Review
-
-Key functions and their purpose:
-
-- Main function: Entry point
-- Helper functions: Support logic
+**Great job! You've completed this lesson!**

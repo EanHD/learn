@@ -116,45 +116,47 @@ You just created a real Zig program! Here's what makes it work:
 
 ---
 
-## ANSWER KEY (No peeking until you've tried!)
+## ANSWER KEY (No cheating until you've tried!)
 
-### Code Breakdown
+### Solution
 
-The code you copied demonstrates fundamental Zig concepts:
+```
+const std = @import("std");
 
-**Key Components:**
-- Syntax rules specific to Zig
-- How data is stored and manipulated
-- Input/output operations
-- Program flow and structure
+pub fn main() !void {
+    const stdout = std.io.getStdOut().writer();
+    const stdin = std.io.getStdIn().reader();
 
-### Common Errors & Solutions
+    try stdout.print("Enter your score (0-100): ", .{});
 
-| Error | Cause | Solution |
-|-------|-------|----------|
-| Syntax error | Typo in code | Double-check spelling and punctuation |
-| Runtime error | Code runs but crashes | Check your logic and data types |
-| Unexpected output | Logic error | Review your algorithm step-by-step |
-| Compilation error | Code won't compile | Fix syntax before running |
+    var buf: [10]u8 = undefined;
+    const input = try stdin.readUntilDelimiter(&buf, '\n');
+    const score = try std.fmt.parseInt(i32, input, 10);
 
-### Bonus Knowledge
+    if (score >= 90) {
+        try stdout.print("Grade: A - Excellent!\n", .{});
+    } else if (score >= 80) {
+        try stdout.print("Grade: B - Good job!\n", .{});
+    } else if (score >= 70) {
+        try stdout.print("Grade: C - Passing\n", .{});
+    } else if (score >= 60) {
+        try stdout.print("Grade: D - Needs improvement\n", .{});
+    } else {
+        try stdout.print("Grade: F - Study harder!\n", .{});
+    }
+}
+```
 
-- Zig has a rich ecosystem of libraries and tools
-- Understanding these basics prepares you for advanced topics
-- Practice is key - try writing similar programs from scratch
-- Every expert programmer started exactly where you are now!
+### Explanation
 
-### Real-World Applications
+This solution demonstrates the key concepts from this lesson. Copy this code exactly as shown, and make sure you understand each part before moving on.
 
-This concept is used in:
-1. Professional software development
-2. Web applications and mobile apps
-3. Data analysis and scientific computing
-4. Automation and scripting
-5. Game development
+### Success Criteria
+
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
 
 ---
 
-**Excellent work! You've mastered a fundamental concept!**
-
-*Ready for the next challenge? Keep going!*
+**Great job! You've completed this lesson!**

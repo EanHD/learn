@@ -127,3 +127,76 @@ do {
 ---
 
 **Next: Functions and introduction to classes!**
+
+---
+
+## ANSWER KEY (No cheating until you've tried!)
+
+### Solution
+
+```
+#include <iostream>
+using namespace std;
+
+int main() {
+    // FOR LOOP - count from 1 to 5
+    cout << "For loop:\n";
+    for (int i = 1; i <= 5; i++) {
+        cout << "Count: " << i << "\n";
+    }
+
+    // WHILE LOOP - keep asking until valid input
+    cout << "\nWhile loop example:\n";
+    int number = 0;
+    while (number < 1 || number > 10) {
+        cout << "Enter a number between 1-10: ";
+        cin >> number;
+        if (number < 1 || number > 10) {
+            cout << "Invalid! Try again.\n";
+        }
+    }
+    cout << "You entered: " << number << "\n";
+
+    // DO-WHILE - runs at least once
+    cout << "\nDo-while loop:\n";
+    char again;
+    do {
+        cout << "Hello from do-while!\n";
+        cout << "Run again? (y/n): ";
+        cin >> again;
+    } while (again == 'y' || again == 'Y');
+
+    // BREAK and CONTINUE
+    cout << "\nLoop control:\n";
+    for (int i = 1; i <= 10; i++) {
+        if (i == 5) {
+            continue;  // Skip 5
+        }
+        if (i == 8) {
+            break;     // Stop at 8
+        }
+        cout << i << " ";
+    }
+    cout << "\n";
+
+    return 0;
+}
+```
+
+### Explanation
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Basic Structure**: The program follows the standard structure for this language
+2. **Output**: The code produces the expected output
+3. **Syntax**: Pay attention to the syntax details - they're important!
+
+### Success Criteria
+
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
+
+---
+
+**Great job! You've completed this lesson!**

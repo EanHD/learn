@@ -116,3 +116,64 @@ Think of the arrows as direction of data flow!
 ---
 
 **Next: Loops in C++!**
+
+---
+
+## ANSWER KEY (No cheating until you've tried!)
+
+### Solution
+
+```
+#include <iostream>
+using namespace std;
+
+int main() {
+    // C++ style variables (same as C)
+    int age;
+    float height;
+    string name;  // New! C++ has built-in strings
+
+    // C++ style output (no printf!)
+    cout << "Enter your name: ";
+    cin >> name;
+
+    cout << "Enter your age: ";
+    cin >> age;
+
+    cout << "Enter your height (feet): ";
+    cin >> height;
+
+    // Output with cout (replaces printf)
+    cout << "\n--- Your Info ---\n";
+    cout << "Name: " << name << "\n";
+    cout << "Age: " << age << " years\n";
+    cout << "Height: " << height << " feet\n";
+
+    // Conditionals work the same!
+    if (age >= 18) {
+        cout << "You're an adult!\n";
+    } else {
+        cout << "You're a minor.\n";
+    }
+
+    return 0;
+}
+```
+
+### Explanation
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Basic Structure**: The program follows the standard structure for this language
+2. **Output**: The code produces the expected output
+3. **Syntax**: Pay attention to the syntax details - they're important!
+
+### Success Criteria
+
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
+
+---
+
+**Great job! You've completed this lesson!**

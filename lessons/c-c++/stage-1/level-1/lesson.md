@@ -68,3 +68,36 @@ Hello, World!
 ---
 
 **Next: Variables and data types!**
+
+---
+
+## ANSWER KEY (No cheating until you've tried!)
+
+### Solution
+
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+```
+
+### Explanation
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Basic Structure**: The program follows the standard structure for c
+2. **Output**: The code produces the expected output
+3. **Syntax**: Pay attention to the syntax details - they're important!
+
+### Success Criteria
+
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
+
+---
+
+**Great job! You've completed this lesson!**

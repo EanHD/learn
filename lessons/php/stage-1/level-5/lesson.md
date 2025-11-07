@@ -106,44 +106,39 @@ You just created a real PHP program! Here's what makes it work:
 
 ---
 
-## ANSWER KEY (No peeking until you've tried!)
+## ANSWER KEY (No cheating until you've tried!)
 
-### Code Breakdown
+### Solution
 
-The code you copied demonstrates fundamental PHP concepts:
+```
+<?php
+echo "Enter your score (0-100): ";
+$score = intval(trim(fgets(STDIN)));
 
-**Key Components:**
-- Syntax rules specific to PHP
-- How data is stored and manipulated
-- Input/output operations
-- Program flow and structure
+if ($score >= 90) {
+    echo "Grade: A - Excellent!\n";
+} elseif ($score >= 80) {
+    echo "Grade: B - Good job!\n";
+} elseif ($score >= 70) {
+    echo "Grade: C - Passing\n";
+} elseif ($score >= 60) {
+    echo "Grade: D - Needs improvement\n";
+} else {
+    echo "Grade: F - Study harder!\n";
+}
+?>
+```
 
-### Common Errors & Solutions
+### Explanation
 
-| Error | Cause | Solution |
-|-------|-------|----------|
-| Syntax error | Typo in code | Double-check spelling and punctuation |
-| Runtime error | Code runs but crashes | Check your logic and data types |
-| Unexpected output | Logic error | Review your algorithm step-by-step |
+This solution demonstrates the key concepts from this lesson. Copy this code exactly as shown, and make sure you understand each part before moving on.
 
-### Bonus Knowledge
+### Success Criteria
 
-- PHP has a rich ecosystem of libraries and tools
-- Understanding these basics prepares you for advanced topics
-- Practice is key - try writing similar programs from scratch
-- Every expert programmer started exactly where you are now!
-
-### Real-World Applications
-
-This concept is used in:
-1. Professional software development
-2. Web applications and mobile apps
-3. Data analysis and scientific computing
-4. Automation and scripting
-5. Game development
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
 
 ---
 
-**Excellent work! You've mastered a fundamental concept!**
-
-*Ready for the next challenge? Keep going!*
+**Great job! You've completed this lesson!**

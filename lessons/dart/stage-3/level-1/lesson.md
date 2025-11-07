@@ -87,36 +87,26 @@ Check the `VIM_CHEATSHEET.md` for basic Vim commands!
 
 ## ANSWER KEY (No cheating until you've tried!)
 
-### Code Breakdown
+### Solution
 
-### Key Concepts
+```
+What should happen:
+1. Print "Hello, [name]"
 
-- Review the code structure specific to Dart
-- Understand the execution flow
-- Learn common pitfalls and solutions
+Write your pseudocode in plain English below:
+(Your pseudocode here)
+```
 
-### Next Steps
+### Explanation
 
-Practice the code and experiment with variations!
+This solution demonstrates the key concepts from this lesson. Copy this code exactly as shown, and make sure you understand each part before moving on.
+
+### Success Criteria
+
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
 
 ---
 
-**Congratulations! Keep coding!**
-
-
-
-### Additional Content
-
-Understand the key concepts:
-
-- Review each function
-- Understand the flow
-- Learn the patterns used
-
-
-### Code Review
-
-Key functions and their purpose:
-
-- Main function: Entry point
-- Helper functions: Support logic
+**Great job! You've completed this lesson!**

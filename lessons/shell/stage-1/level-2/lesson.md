@@ -86,21 +86,31 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ## ANSWER KEY (No cheating until you've tried!)
 
-### Code Breakdown
+### Solution
 
-> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+```
+#!/bin/bash
+name="Alice"
+age=25
+height=5.6
+isStudent=true
 
-### Key Concepts
+echo "Hello, $name!"
+echo "You are $age years old."
+echo "Your height is $height feet."
+echo "Student status: $isStudent"
+```
 
-- Review the code structure specific to Shell
-- Understand the execution flow
-- Learn common pitfalls and solutions
+### Explanation
 
-### Next Steps
+This solution demonstrates the key concepts from this lesson. Copy this code exactly as shown, and make sure you understand each part before moving on.
 
-Practice the code and experiment with variations!
+### Success Criteria
+
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
 
 ---
 
-**Congratulations! Keep coding!**
-
+**Great job! You've completed this lesson!**

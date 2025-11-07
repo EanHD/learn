@@ -114,44 +114,47 @@ You just created a real PHP program! Here's what makes it work:
 
 ---
 
-## ANSWER KEY (No peeking until you've tried!)
+## ANSWER KEY (No cheating until you've tried!)
 
-### Code Breakdown
+### Solution
 
-The code you copied demonstrates fundamental PHP concepts:
+```
+<?php
+// For loop
+echo "Counting 1 to 10:\n";
+for ($i = 1; $i <= 10; $i++) {
+    echo "$i ";
+}
+echo "\n";
 
-**Key Components:**
-- Syntax rules specific to PHP
-- How data is stored and manipulated
-- Input/output operations
-- Program flow and structure
+// While loop
+echo "\nCountdown:\n";
+$count = 5;
+while ($count > 0) {
+    echo "$count\n";
+    $count--;
+}
+echo "Blastoff!\n";
 
-### Common Errors & Solutions
+// Multiplication table
+$num = 7;
+echo "\n$num times table:\n";
+for ($i = 1; $i <= 10; $i++) {
+    echo "$num × $i = " . ($num * $i) . "\n";
+}
+?>
+```
 
-| Error | Cause | Solution |
-|-------|-------|----------|
-| Syntax error | Typo in code | Double-check spelling and punctuation |
-| Runtime error | Code runs but crashes | Check your logic and data types |
-| Unexpected output | Logic error | Review your algorithm step-by-step |
+### Explanation
 
-### Bonus Knowledge
+This solution demonstrates the key concepts from this lesson. Copy this code exactly as shown, and make sure you understand each part before moving on.
 
-- PHP has a rich ecosystem of libraries and tools
-- Understanding these basics prepares you for advanced topics
-- Practice is key - try writing similar programs from scratch
-- Every expert programmer started exactly where you are now!
+### Success Criteria
 
-### Real-World Applications
-
-This concept is used in:
-1. Professional software development
-2. Web applications and mobile apps
-3. Data analysis and scientific computing
-4. Automation and scripting
-5. Game development
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
 
 ---
 
-**Excellent work! You've mastered a fundamental concept!**
-
-*Ready for the next challenge? Keep going!*
+**Great job! You've completed this lesson!**

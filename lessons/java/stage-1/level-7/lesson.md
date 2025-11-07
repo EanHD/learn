@@ -122,45 +122,53 @@ You just created a real Java program! Here's what makes it work:
 
 ---
 
-## ANSWER KEY (No peeking until you've tried!)
+## ANSWER KEY (No cheating until you've tried!)
 
-### Code Breakdown
+### Solution
 
-The code you copied demonstrates fundamental Java concepts:
+```
+public class Main {
+    // Function to greet someone
+    public static void greet(String name) {
+        System.out.println("Hello, " + name + "!");
+    }
 
-**Key Components:**
-- Syntax rules specific to Java
-- How data is stored and manipulated
-- Input/output operations
-- Program flow and structure
+    // Function that returns a value
+    public static int add(int a, int b) {
+        return a + b;
+    }
 
-### Common Errors & Solutions
+    // Function to calculate factorial
+    public static long factorial(int n) {
+        long result = 1;
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
 
-| Error | Cause | Solution |
-|-------|-------|----------|
-| Syntax error | Typo in code | Double-check spelling and punctuation |
-| Runtime error | Code runs but crashes | Check your logic and data types |
-| Unexpected output | Logic error | Review your algorithm step-by-step |
-| Compilation error | Code won't compile | Fix syntax before running |
+    public static void main(String[] args) {
+        greet("Alice");
+        greet("Bob");
 
-### Bonus Knowledge
+        int sum = add(5, 3);
+        System.out.println("5 + 3 = " + sum);
 
-- Java has a rich ecosystem of libraries and tools
-- Understanding these basics prepares you for advanced topics
-- Practice is key - try writing similar programs from scratch
-- Every expert programmer started exactly where you are now!
+        System.out.println("5! = " + factorial(5));
+    }
+}
+```
 
-### Real-World Applications
+### Explanation
 
-This concept is used in:
-1. Professional software development
-2. Web applications and mobile apps
-3. Data analysis and scientific computing
-4. Automation and scripting
-5. Game development
+This solution demonstrates the key concepts from this lesson. Copy this code exactly as shown, and make sure you understand each part before moving on.
+
+### Success Criteria
+
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
 
 ---
 
-**Excellent work! You've mastered a fundamental concept!**
-
-*Ready for the next challenge? Keep going!*
+**Great job! You've completed this lesson!**

@@ -87,43 +87,32 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ## ANSWER KEY (No cheating until you've tried!)
 
-### Code Breakdown
+### Solution
 
-### Key Concepts
+```
+void main() {
+  String name = "Alice";
+  int age = 25;
+  double height = 5.6;
+  bool isStudent = true;
 
-- Review the code structure specific to Dart
-- Understand the execution flow
-- Learn common pitfalls and solutions
+  print("Hello, $name!");
+  print("You are $age years old.");
+  print("Your height is $height feet.");
+  print("Student status: $isStudent");
+}
+```
 
-### Next Steps
+### Explanation
 
-Practice the code and experiment with variations!
+This solution demonstrates the key concepts from this lesson. Copy this code exactly as shown, and make sure you understand each part before moving on.
+
+### Success Criteria
+
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
 
 ---
 
-**Congratulations! Keep coding!**
-
-
-
-### How to Run
-
-1. Open the code file
-2. Review and understand the implementation
-3. Execute using: `<Space>r` in Vim
-
-
-### Additional Content
-
-Understand the key concepts:
-
-- Review each function
-- Understand the flow
-- Learn the patterns used
-
-
-### Code Review
-
-Key functions and their purpose:
-
-- Main function: Entry point
-- Helper functions: Support logic
+**Great job! You've completed this lesson!**

@@ -123,45 +123,54 @@ You just created a real Zig program! Here's what makes it work:
 
 ---
 
-## ANSWER KEY (No peeking until you've tried!)
+## ANSWER KEY (No cheating until you've tried!)
 
-### Code Breakdown
+### Solution
 
-The code you copied demonstrates fundamental Zig concepts:
+```
+const std = @import("std");
 
-**Key Components:**
-- Syntax rules specific to Zig
-- How data is stored and manipulated
-- Input/output operations
-- Program flow and structure
+fn greet(name: []const u8) !void {
+    const stdout = std.io.getStdOut().writer();
+    try stdout.print("Hello, {s}!\n", .{name});
+}
 
-### Common Errors & Solutions
+fn add(a: i32, b: i32) i32 {
+    return a + b;
+}
 
-| Error | Cause | Solution |
-|-------|-------|----------|
-| Syntax error | Typo in code | Double-check spelling and punctuation |
-| Runtime error | Code runs but crashes | Check your logic and data types |
-| Unexpected output | Logic error | Review your algorithm step-by-step |
-| Compilation error | Code won't compile | Fix syntax before running |
+fn factorial(n: i32) i64 {
+    var result: i64 = 1;
+    var i: i32 = 1;
+    while (i <= n) : (i += 1) {
+        result *= i;
+    }
+    return result;
+}
 
-### Bonus Knowledge
+pub fn main() !void {
+    const stdout = std.io.getStdOut().writer();
 
-- Zig has a rich ecosystem of libraries and tools
-- Understanding these basics prepares you for advanced topics
-- Practice is key - try writing similar programs from scratch
-- Every expert programmer started exactly where you are now!
+    try greet("Alice");
+    try greet("Bob");
 
-### Real-World Applications
+    const sum = add(5, 3);
+    try stdout.print("5 + 3 = {}\n", .{sum});
 
-This concept is used in:
-1. Professional software development
-2. Web applications and mobile apps
-3. Data analysis and scientific computing
-4. Automation and scripting
-5. Game development
+    try stdout.print("5! = {}\n", .{factorial(5)});
+}
+```
+
+### Explanation
+
+This solution demonstrates the key concepts from this lesson. Copy this code exactly as shown, and make sure you understand each part before moving on.
+
+### Success Criteria
+
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
 
 ---
 
-**Excellent work! You've mastered a fundamental concept!**
-
-*Ready for the next challenge? Keep going!*
+**Great job! You've completed this lesson!**

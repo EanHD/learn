@@ -85,3 +85,57 @@ gcc main.c -o main
 ---
 
 **Next: User input with scanf()!**
+
+---
+
+## ANSWER KEY (No cheating until you've tried!)
+
+### Solution
+
+```c
+#include <stdio.h>
+
+int main() {
+    // Integer variables
+    int age = 25;
+    int year = 2025;
+
+    // Floating point
+    float height = 5.9;
+    float price = 19.99;
+
+    // Character
+    char grade = 'A';
+
+    // Print them all
+    printf("Age: %d\n", age);
+    printf("Year: %d\n", year);
+    printf("Height: %.1f feet\n", height);
+    printf("Price: $%.2f\n", price);
+    printf("Grade: %c\n", grade);
+
+    // Basic arithmetic
+    int sum = age + 5;
+    printf("In 5 years you'll be: %d\n", sum);
+
+    return 0;
+}
+```
+
+### Explanation
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Basic Structure**: The program follows the standard structure for c
+2. **Output**: The code produces the expected output
+3. **Syntax**: Pay attention to the syntax details - they're important!
+
+### Success Criteria
+
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
+
+---
+
+**Great job! You've completed this lesson!**

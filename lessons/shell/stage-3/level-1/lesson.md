@@ -87,21 +87,26 @@ Check the `VIM_CHEATSHEET.md` for basic Vim commands!
 
 ## ANSWER KEY (No cheating until you've tried!)
 
-### Code Breakdown
+### Solution
 
-> **NEEDS_AUTHOR:** This lesson needs a complete answer key with code breakdown, execution process explanation, common errors table, and bonus knowledge section. Reference c-c++/stage-1/level-1/lesson.md for the gold standard format.
+```
+What should happen:
+1. Print "Hello, [name]"
 
-### Key Concepts
+Write your pseudocode in plain English below:
+(Your pseudocode here)
+```
 
-- Review the code structure specific to Shell
-- Understand the execution flow
-- Learn common pitfalls and solutions
+### Explanation
 
-### Next Steps
+This solution demonstrates the key concepts from this lesson. Copy this code exactly as shown, and make sure you understand each part before moving on.
 
-Practice the code and experiment with variations!
+### Success Criteria
+
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
 
 ---
 
-**Congratulations! Keep coding!**
-
+**Great job! You've completed this lesson!**

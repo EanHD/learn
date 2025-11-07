@@ -117,3 +117,80 @@ gcc main.c -o main
 ---
 
 **Next: Transitioning from C to C++!**
+
+---
+
+## ANSWER KEY (No cheating until you've tried!)
+
+### Solution
+
+```c
+#include <stdio.h>
+
+int main() {
+    int age;
+    float temperature;
+    char hasUmbrella;
+
+    // Get input
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    printf("Enter temperature (F): ");
+    scanf("%f", &temperature);
+
+    printf("Do you have an umbrella? (y/n): ");
+    scanf(" %c", &hasUmbrella);
+
+    // Age-based message
+    printf("\n--- Analysis ---\n");
+    if (age < 13) {
+        printf("You're a kid!\n");
+    } else if (age < 20) {
+        printf("You're a teenager!\n");
+    } else if (age < 65) {
+        printf("You're an adult!\n");
+    } else {
+        printf("You're a senior!\n");
+    }
+
+    // Weather advice
+    if (temperature > 85) {
+        printf("It's hot! Stay hydrated.\n");
+    } else if (temperature < 32) {
+        printf("It's freezing! Bundle up!\n");
+    } else {
+        printf("Weather is nice!\n");
+    }
+
+    // Multiple conditions
+    if (temperature < 50 && hasUmbrella == 'n') {
+        printf("Warning: Cold and no umbrella!\n");
+    }
+
+    // Logical NOT
+    if (!(age >= 18)) {
+        printf("You're not an adult yet.\n");
+    }
+
+    return 0;
+}
+```
+
+### Explanation
+
+This solution demonstrates the key concepts from this lesson:
+
+1. **Basic Structure**: The program follows the standard structure for c
+2. **Output**: The code produces the expected output
+3. **Syntax**: Pay attention to the syntax details - they're important!
+
+### Success Criteria
+
+- [ ] Code runs without errors
+- [ ] Output matches expected result
+- [ ] You understand what each line does
+
+---
+
+**Great job! You've completed this lesson!**
