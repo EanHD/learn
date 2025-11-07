@@ -2195,8 +2195,10 @@ class InteractiveCLI:
                     "  [cyan]3[/cyan]  Reset progress",
                     "  [cyan]4[/cyan]  Show configuration",
                     "  [cyan]5[/cyan]  Install dependencies",
-                    "  [cyan]6[/cyan]  Reset all data (progress + workspaces)",
-                    "  [cyan]7[/cyan]  Uninstall LEARN CLI",
+                    "  [cyan]6[/cyan]  Check for updates",
+                    "  [cyan]7[/cyan]  Update to latest version",
+                    "  [cyan]8[/cyan]  Reset all data (progress + workspaces)",
+                    "  [cyan]9[/cyan]  Uninstall LEARN CLI",
                     "  [cyan]b[/cyan]  Back"
                 ]
                 for item in diag_items:
@@ -2209,8 +2211,10 @@ class InteractiveCLI:
                 print("  3  Reset progress")
                 print("  4  Show configuration")
                 print("  5  Install dependencies")
-                print("  6  Reset all data (progress + workspaces)")
-                print("  7  Uninstall LEARN CLI")
+                print("  6  Check for updates")
+                print("  7  Update to latest version")
+                print("  8  Reset all data (progress + workspaces)")
+                print("  9  Uninstall LEARN CLI")
                 print("  b  Back")
 
             choice = input("\n→ Select option: ").strip().lower()
@@ -2257,12 +2261,49 @@ class InteractiveCLI:
                 self._install_dependencies()
 
             elif choice == "6":
+                # Check for updates
+                self._clear_screen()
+                update_info = check_for_updates(self.learn_dir)
+                
+                if "error" in update_info:
+                    if console:
+                        console.print(f"[bold red]Error:[/bold red] {update_info['error']}")
+                    else:
+                        print(f"Error: {update_info['error']}")
+                elif update_info["has_update"]:
+                    if console:
+                        console.print(f"[bold yellow]Update available![/bold yellow]")
+                        console.print(f"  Current: [cyan]{update_info['current']}[/cyan]")
+                        console.print(f"  Latest:  [green]{update_info['latest']}[/green]")
+                        console.print(f"  Commits behind: [yellow]{update_info['commits_behind']}[/yellow]")
+                    else:
+                        print(f"Update available!")
+                        print(f"  Current: {update_info['current']}")
+                        print(f"  Latest:  {update_info['latest']}")
+                        print(f"  Commits behind: {update_info['commits_behind']}")
+                else:
+                    if console:
+                        console.print(f"[bold green]✓ You're on the latest version[/bold green]")
+                        console.print(f"[dim]Version: {update_info['current']}[/dim]")
+                    else:
+                        print(f"✓ You're on the latest version")
+                        print(f"Version: {update_info['current']}")
+                
+                input("\nPress Enter to continue...")
+
+            elif choice == "7":
+                # Update to latest version
+                self._clear_screen()
+                update_learn(self.learn_dir)
+                input("\nPress Enter to continue...")
+
+            elif choice == "8":
                 # Reset all data
                 self._clear_screen()
                 reset_user_data(self.learn_dir)
                 input("\nPress Enter to continue...")
 
-            elif choice == "7":
+            elif choice == "9":
                 # Uninstall
                 self._clear_screen()
                 uninstall_learn(self.learn_dir)
@@ -2375,6 +2416,179 @@ class InteractiveCLI:
             print("\n[OK] Dependencies updated")
 
         input("Press Enter to continue...")
+
+
+def check_for_updates(learn_dir: Path) -> dict:
+    """Check if updates are available from GitHub
+    
+    Returns:
+        dict with keys: has_update (bool), current (str), latest (str), commits_behind (int)
+    """
+    try:
+        import subprocess
+        
+        # Get current commit hash
+        result = subprocess.run(
+            ["git", "-C", str(learn_dir), "rev-parse", "HEAD"],
+            capture_output=True,
+            text=True,
+            timeout=5
+        )
+        current_hash = result.stdout.strip() if result.returncode == 0 else None
+        
+        # Fetch latest from remote
+        subprocess.run(
+            ["git", "-C", str(learn_dir), "fetch", "origin", "main"],
+            capture_output=True,
+            timeout=10
+        )
+        
+        # Get remote commit hash
+        result = subprocess.run(
+            ["git", "-C", str(learn_dir), "rev-parse", "origin/main"],
+            capture_output=True,
+            text=True,
+            timeout=5
+        )
+        remote_hash = result.stdout.strip() if result.returncode == 0 else None
+        
+        if not current_hash or not remote_hash:
+            return {"has_update": False, "current": "unknown", "latest": "unknown", "commits_behind": 0}
+        
+        # Count commits behind
+        result = subprocess.run(
+            ["git", "-C", str(learn_dir), "rev-list", "--count", f"{current_hash}..{remote_hash}"],
+            capture_output=True,
+            text=True,
+            timeout=5
+        )
+        commits_behind = int(result.stdout.strip()) if result.returncode == 0 else 0
+        
+        return {
+            "has_update": current_hash != remote_hash,
+            "current": current_hash[:7],
+            "latest": remote_hash[:7],
+            "commits_behind": commits_behind
+        }
+        
+    except Exception as e:
+        return {"has_update": False, "current": "error", "latest": "error", "commits_behind": 0, "error": str(e)}
+
+
+def update_learn(learn_dir: Path):
+    """Update LEARN to the latest version"""
+    if console:
+        console.print("[bold cyan]╔══════════════════════════════════════════════════════════════╗[/bold cyan]")
+        console.print("[bold cyan]║              UPDATE LEARN CLI                                ║[/bold cyan]")
+        console.print("[bold cyan]╚══════════════════════════════════════════════════════════════╝[/bold cyan]")
+        console.print("\n[bold]Checking for updates...[/bold]")
+    else:
+        print("=" * 70)
+        print("  UPDATE LEARN CLI")
+        print("=" * 70)
+        print("\nChecking for updates...")
+    
+    update_info = check_for_updates(learn_dir)
+    
+    if "error" in update_info:
+        if console:
+            console.print(f"\n[bold red]Error checking for updates:[/bold red] {update_info['error']}")
+        else:
+            print(f"\nError checking for updates: {update_info['error']}")
+        return
+    
+    if not update_info["has_update"]:
+        if console:
+            console.print("\n[bold green]✓ You're already on the latest version![/bold green]")
+            console.print(f"[dim]Current version: {update_info['current']}[/dim]")
+        else:
+            print("\n✓ You're already on the latest version!")
+            print(f"Current version: {update_info['current']}")
+        return
+    
+    # Show update info
+    if console:
+        console.print(f"\n[bold yellow]Update available![/bold yellow]")
+        console.print(f"  Current version: [cyan]{update_info['current']}[/cyan]")
+        console.print(f"  Latest version:  [green]{update_info['latest']}[/green]")
+        console.print(f"  Commits behind:  [yellow]{update_info['commits_behind']}[/yellow]")
+    else:
+        print(f"\nUpdate available!")
+        print(f"  Current version: {update_info['current']}")
+        print(f"  Latest version:  {update_info['latest']}")
+        print(f"  Commits behind:  {update_info['commits_behind']}")
+    
+    confirm = input("\nDo you want to update now? (Y/n): ").strip().lower()
+    
+    if confirm == 'n':
+        if console:
+            console.print("\n[bold]Update cancelled.[/bold]")
+        else:
+            print("\nUpdate cancelled.")
+        return
+    
+    # Perform update
+    if console:
+        console.print("\n[bold cyan]Updating...[/bold cyan]")
+    else:
+        print("\nUpdating...")
+    
+    try:
+        # Pull latest changes
+        result = subprocess.run(
+            ["git", "-C", str(learn_dir), "pull", "origin", "main"],
+            capture_output=True,
+            text=True,
+            timeout=30
+        )
+        
+        if result.returncode != 0:
+            if console:
+                console.print(f"\n[bold red]Update failed:[/bold red]")
+                console.print(f"[dim]{result.stderr}[/dim]")
+            else:
+                print(f"\nUpdate failed:")
+                print(result.stderr)
+            return
+        
+        # Show what was updated
+        if console:
+            console.print("\n[bold green]✓ Update complete![/bold green]")
+            console.print("\n[bold]Changes:[/bold]")
+            if result.stdout:
+                for line in result.stdout.split('\n')[:10]:  # Show first 10 lines
+                    if line.strip():
+                        console.print(f"  [dim]{line}[/dim]")
+        else:
+            print("\n✓ Update complete!")
+            print("\nChanges:")
+            if result.stdout:
+                for line in result.stdout.split('\n')[:10]:
+                    if line.strip():
+                        print(f"  {line}")
+        
+        # Reinstall CLI if needed
+        if console:
+            console.print("\n[bold cyan]Updating CLI...[/bold cyan]")
+        else:
+            print("\nUpdating CLI...")
+        
+        cli_install = learn_dir / "CLI" / "install.sh"
+        if cli_install.exists():
+            subprocess.run(["bash", str(cli_install)], capture_output=True)
+        
+        if console:
+            console.print("\n[bold green]✓ All updates applied successfully![/bold green]")
+            console.print("\n[bold yellow]Note:[/bold yellow] You may need to restart the CLI for all changes to take effect.")
+        else:
+            print("\n✓ All updates applied successfully!")
+            print("\nNote: You may need to restart the CLI for all changes to take effect.")
+            
+    except Exception as e:
+        if console:
+            console.print(f"\n[bold red]Update error:[/bold red] {str(e)}")
+        else:
+            print(f"\nUpdate error: {str(e)}")
 
 
 def reset_user_data(learn_dir: Path):
@@ -2661,6 +2875,8 @@ Examples:
     parser.add_argument("--run", nargs=3, metavar=("LANG", "STAGE", "LEVEL"), help="Compile and run workspace code")
     parser.add_argument("--reset-data", action="store_true", help="Reset all user data (progress and workspaces)")
     parser.add_argument("--uninstall", action="store_true", help="Uninstall LEARN CLI")
+    parser.add_argument("--update", action="store_true", help="Update LEARN to the latest version")
+    parser.add_argument("--check-updates", action="store_true", help="Check if updates are available")
 
     args = parser.parse_args()
 
@@ -2679,6 +2895,41 @@ Examples:
         checker.print_report()
 
         print("Run 'learn init' to install missing components.")
+        return
+
+    # Check for updates
+    if args.check_updates:
+        update_info = check_for_updates(learn_dir)
+        
+        if "error" in update_info:
+            print(f"Error checking for updates: {update_info['error']}")
+            return
+        
+        if console:
+            if update_info["has_update"]:
+                console.print(f"[bold yellow]Update available![/bold yellow]")
+                console.print(f"  Current: [cyan]{update_info['current']}[/cyan]")
+                console.print(f"  Latest:  [green]{update_info['latest']}[/green]")
+                console.print(f"  Commits behind: [yellow]{update_info['commits_behind']}[/yellow]")
+                console.print(f"\nRun [cyan]learn --update[/cyan] to update")
+            else:
+                console.print(f"[bold green]✓ You're on the latest version[/bold green]")
+                console.print(f"[dim]Version: {update_info['current']}[/dim]")
+        else:
+            if update_info["has_update"]:
+                print(f"Update available!")
+                print(f"  Current: {update_info['current']}")
+                print(f"  Latest:  {update_info['latest']}")
+                print(f"  Commits behind: {update_info['commits_behind']}")
+                print(f"\nRun 'learn --update' to update")
+            else:
+                print(f"✓ You're on the latest version")
+                print(f"Version: {update_info['current']}")
+        return
+
+    # Update
+    if args.update:
+        update_learn(learn_dir)
         return
 
     # Reset data

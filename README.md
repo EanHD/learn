@@ -58,14 +58,26 @@ This installs everything: CLI, Neovim config, and all dependencies.
 
 ### Update anytime
 
+**Simple update (recommended):**
+```bash
+learn --update
+```
+
+**Or use the install scripts:**
+
 **Linux/Mac:**
 ```bash
-bash ~/LEARN/install.sh --update
+cd ~/LEARN && bash install.sh --update
 ```
 
 **Windows:**
 ```powershell
-powershell -File ~\LEARN\install.ps1 -Update
+cd ~\LEARN; powershell -File install.ps1 -Update
+```
+
+**Check for updates without installing:**
+```bash
+learn --check-updates
 ```
 
 ### Launch
@@ -448,8 +460,7 @@ Students can track their own progress with the built-in progress system!
 | Problem | Solution |
 |---------|----------|
 | Command not found | Linux/Mac: \`bash install.sh\` • Windows: Run \`install.ps1\` |
-| Need to update | Linux/Mac: \`bash ~/LEARN/install.sh --update\` |
-|  | Windows: \`powershell -File ~\LEARN\install.ps1 -Update\` |
+| Need to update | Run: \`learn --update\` (or use install scripts) |
 | Neovim issues | See: [MODE_VIM/README.md](MODE_VIM/README.md) |
 | CLI help | Run: \`learn --help\` |
 | Vim basics | Read: [VIM_CHEATSHEET.md](VIM_CHEATSHEET.md) |
