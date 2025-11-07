@@ -252,7 +252,7 @@ if ($Update) {
     Write-Host "   • New lessons and improvements" -ForegroundColor White
     Write-Host ""
     Write-Host "🔄 To update again later, run:" -ForegroundColor Yellow
-    Write-Host "   powershell -File ~\LEARN\install.ps1 -Update" -ForegroundColor White
+    Write-Host "   powershell -File $learnDir\install.ps1 -Update" -ForegroundColor White
 } else {
     Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Cyan
     Write-Host "║                   🎉 Installation Complete!                 ║" -ForegroundColor Cyan
@@ -281,7 +281,7 @@ if ($Update) {
     Write-Host "   • Press <Space> as leader key for commands" -ForegroundColor White
     Write-Host ""
     Write-Host "🔄 To update later, run:" -ForegroundColor Yellow
-    Write-Host "   powershell -File ~\LEARN\install.ps1 -Update" -ForegroundColor White
+    Write-Host "   powershell -File $learnDir\install.ps1 -Update" -ForegroundColor White
 }
 
 Write-Host ""

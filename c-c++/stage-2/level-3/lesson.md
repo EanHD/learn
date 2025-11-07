@@ -1,6 +1,6 @@
 # Level 3: Mathematical Pseudocode
 
-> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> **LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.c\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -275,7 +275,7 @@ Algorithm: Calculate Distance Between Points
 
 **Required Headers:**
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <math.h>  // For mathematical functions
 ```cpp
 
@@ -349,24 +349,24 @@ Algorithm: Calculate Distance Between Points
 ### Algorithm 1: Geometry Calculator
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 int main() {
     float radius, area, circumference, diameter;
     const float PI = 3.14159;
     
-    std::cout << "Circle Calculator\n");
-    std::cout << "Enter radius: ");
+    printf("Circle Calculator\n");
+    printf("Enter radius: ");
     scanf("%f", &radius);
     
     area = PI * radius * radius;
     circumference = 2 * PI * radius;
     diameter = 2 * radius;
     
-    std::cout << "Radius: %.2f\n", radius);
-    std::cout << "Diameter: %.2f\n", diameter);
-    std::cout << "Area: %.2f\n", area);
-    std::cout << "Circumference: %.2f\n", circumference);
+    printf("Radius: %.2f\n", radius);
+    printf("Diameter: %.2f\n", diameter);
+    printf("Area: %.2f\n", area);
+    printf("Circumference: %.2f\n", circumference);
     
     return 0;
 }
@@ -382,27 +382,27 @@ int main() {
 ### Algorithm 2: Right Triangle Solver
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <math.h>
 
 int main() {
     float side_a, side_b, hypotenuse, area, perimeter;
     
-    std::cout << "Right Triangle Calculator\n");
-    std::cout << "Enter side A: ");
+    printf("Right Triangle Calculator\n");
+    printf("Enter side A: ");
     scanf("%f", &side_a);
-    std::cout << "Enter side B: ");
+    printf("Enter side B: ");
     scanf("%f", &side_b);
     
     hypotenuse = sqrt(side_a * side_a + side_b * side_b);
     area = (side_a * side_b) / 2;
     perimeter = side_a + side_b + hypotenuse;
     
-    std::cout << "Side A: %.2f\n", side_a);
-    std::cout << "Side B: %.2f\n", side_b);
-    std::cout << "Hypotenuse: %.2f\n", hypotenuse);
-    std::cout << "Area: %.2f\n", area);
-    std::cout << "Perimeter: %.2f\n", perimeter);
+    printf("Side A: %.2f\n", side_a);
+    printf("Side B: %.2f\n", side_b);
+    printf("Hypotenuse: %.2f\n", hypotenuse);
+    printf("Area: %.2f\n", area);
+    printf("Perimeter: %.2f\n", perimeter);
     
     return 0;
 }
@@ -418,21 +418,21 @@ int main() {
 ### Algorithm 3: Compound Interest Calculator
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <math.h>
 
 int main() {
     float principal, rate, years, frequency;
     float rate_decimal, total_compounds, compound_rate, final_amount, total_interest;
     
-    std::cout << "Compound Interest Calculator\n");
-    std::cout << "Enter principal amount: $");
+    printf("Compound Interest Calculator\n");
+    printf("Enter principal amount: $");
     scanf("%f", &principal);
-    std::cout << "Enter annual interest rate (%%): ");
+    printf("Enter annual interest rate (%%): ");
     scanf("%f", &rate);
-    std::cout << "Enter number of years: ");
+    printf("Enter number of years: ");
     scanf("%f", &years);
-    std::cout << "Enter compounding frequency (1=annual, 12=monthly): ");
+    printf("Enter compounding frequency (1=annual, 12=monthly): ");
     scanf("%f", &frequency);
     
     rate_decimal = rate / 100;
@@ -442,9 +442,9 @@ int main() {
     final_amount = principal * pow(1 + compound_rate, total_compounds);
     total_interest = final_amount - principal;
     
-    std::cout << "Principal: $%.2f\n", principal);
-    std::cout << "Final Amount: $%.2f\n", final_amount);
-    std::cout << "Total Interest: $%.2f\n", total_interest);
+    printf("Principal: $%.2f\n", principal);
+    printf("Final Amount: $%.2f\n", final_amount);
+    printf("Total Interest: $%.2f\n", total_interest);
     
     return 0;
 }
@@ -460,34 +460,34 @@ int main() {
 ### Algorithm 4: Quadratic Equation Solver
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <math.h>
 
 int main() {
     float a, b, c, discriminant, root1, root2, root;
     
-    std::cout << "Quadratic Equation Solver\n");
-    std::cout << "For equation ax² + bx + c = 0\n");
-    std::cout << "Enter coefficient a: ");
+    printf("Quadratic Equation Solver\n");
+    printf("For equation ax² + bx + c = 0\n");
+    printf("Enter coefficient a: ");
     scanf("%f", &a);
-    std::cout << "Enter coefficient b: ");
+    printf("Enter coefficient b: ");
     scanf("%f", &b);
-    std::cout << "Enter coefficient c: ");
+    printf("Enter coefficient c: ");
     scanf("%f", &c);
     
     discriminant = b * b - 4 * a * c;
     
-    std::cout << "Discriminant: %.2f\n", discriminant);
+    printf("Discriminant: %.2f\n", discriminant);
     
     if (discriminant > 0) {
         root1 = (-b + sqrt(discriminant)) / (2 * a);
         root2 = (-b - sqrt(discriminant)) / (2 * a);
-        std::cout << "Two real roots: %.2f and %.2f\n", root1, root2);
+        printf("Two real roots: %.2f and %.2f\n", root1, root2);
     } else if (discriminant == 0) {
         root = -b / (2 * a);
-        std::cout << "One real root: %.2f\n", root);
+        printf("One real root: %.2f\n", root);
     } else {
-        std::cout << "No real roots (complex solutions)\n");
+        printf("No real roots (complex solutions)\n");
     }
     
     return 0;
@@ -504,34 +504,34 @@ int main() {
 ### Algorithm 5: Fibonacci Sequence Generator
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 int main() {
     int n, first = 0, second = 1, next, count = 3;
     
-    std::cout << "Fibonacci Sequence Generator\n");
-    std::cout << "Enter number of terms: ");
+    printf("Fibonacci Sequence Generator\n");
+    printf("Enter number of terms: ");
     scanf("%d", &n);
     
-    std::cout << "Fibonacci sequence:\n");
+    printf("Fibonacci sequence:\n");
     
     if (n >= 1) {
-        std::cout << "%d ", first);
+        printf("%d ", first);
     }
     if (n >= 2) {
-        std::cout << "%d ", second);
+        printf("%d ", second);
     }
     
     while (count <= n) {
         next = first + second;
-        std::cout << "%d ", next);
+        printf("%d ", next);
         
         first = second;
         second = next;
         count++;
     }
     
-    std::cout << "\nSequence complete\n");
+    printf("\nSequence complete\n");
     
     return 0;
 }
@@ -547,17 +547,17 @@ int main() {
 ### Algorithm 6: Statistical Calculator
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <math.h>
 
 int main() {
     float sum = 0, sum_squares = 0, number, mean, variance, std_dev;
     int count = 0, has_more = 1;
     
-    std::cout << "Statistical Calculator\n");
+    printf("Statistical Calculator\n");
     
     while (has_more) {
-        std::cout << "Enter number %d (or 0 to finish): ", count + 1);
+        printf("Enter number %d (or 0 to finish): ", count + 1);
         scanf("%f", &number);
         
         if (number == 0) {
@@ -574,12 +574,12 @@ int main() {
         variance = (sum_squares / count) - (mean * mean);
         std_dev = sqrt(variance);
         
-        std::cout << "Count: %d\n", count);
-        std::cout << "Sum: %.2f\n", sum);
-        std::cout << "Mean: %.2f\n", mean);
-        std::cout << "Standard Deviation: %.2f\n", std_dev);
+        printf("Count: %d\n", count);
+        printf("Sum: %.2f\n", sum);
+        printf("Mean: %.2f\n", mean);
+        printf("Standard Deviation: %.2f\n", std_dev);
     } else {
-        std::cout << "No numbers entered\n");
+        printf("No numbers entered\n");
     }
     
     return 0;
@@ -596,32 +596,32 @@ int main() {
 ### Algorithm 7: Distance Calculator
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <math.h>
 
 int main() {
     float x1, y1, x2, y2, delta_x, delta_y, distance;
     
-    std::cout << "Distance Between Two Points\n");
-    std::cout << "Enter coordinates for point 1:\n");
-    std::cout << "X1: ");
+    printf("Distance Between Two Points\n");
+    printf("Enter coordinates for point 1:\n");
+    printf("X1: ");
     scanf("%f", &x1);
-    std::cout << "Y1: ");
+    printf("Y1: ");
     scanf("%f", &y1);
     
-    std::cout << "Enter coordinates for point 2:\n");
-    std::cout << "X2: ");
+    printf("Enter coordinates for point 2:\n");
+    printf("X2: ");
     scanf("%f", &x2);
-    std::cout << "Y2: ");
+    printf("Y2: ");
     scanf("%f", &y2);
     
     delta_x = x2 - x1;
     delta_y = y2 - y1;
     distance = sqrt(delta_x * delta_x + delta_y * delta_y);
     
-    std::cout << "Point 1: (%.2f, %.2f)\n", x1, y1);
-    std::cout << "Point 2: (%.2f, %.2f)\n", x2, y2);
-    std::cout << "Distance: %.2f\n", distance);
+    printf("Point 1: (%.2f, %.2f)\n", x1, y1);
+    printf("Point 2: (%.2f, %.2f)\n", x2, y2);
+    printf("Distance: %.2f\n", distance);
     
     return 0;
 }
@@ -714,10 +714,10 @@ Key functions and their purpose:
 ### Complete Solution
 
 ```cpp
-#include <iostream>
+#include <stdio.h>
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    printf("Hello, World!\n");
     return 0;
 }
 ```
@@ -727,14 +727,14 @@ int main() {
 This solution demonstrates the key concepts from this lesson:
 
 1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses std::cout to print messages to the console
-3. **Standard Library**: Includes iostream for input/output operations
+2. **Output**: Uses printf to print messages to the console
+3. **Standard Library**: Includes stdio.h for input/output operations
 4. **Return Value**: Returns 0 to indicate successful execution
 5. **Best Practices**: Code is readable and uses C++ idioms
 
 ### Testing Your Solution
 
-1. **Compile**: `g++ hello.cpp -o hello`
+1. **Compile**: `gcc main.c -o main`
 2. **Run**: `./hello`
 3. **Expected Output**: `Hello, World!`
 
@@ -742,13 +742,13 @@ This solution demonstrates the key concepts from this lesson:
 
 | Error | Cause | Solution |
 |-------|-------|----------|
-| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
 | `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+| `error: implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
 
 ### Tips for Learning
 
-- C++ is a superset of C with additional features
-- `std::cout` is the C++ way to print (replaces `printf`)
-- `std::endl` adds a newline and flushes the buffer
-- The `std::` prefix means these are from the "standard" namespace
+- C uses stdio.h for input/output with additional features
+- `printf` is the C standard for formatted output
+- `\n` adds a newline character in format strings
+- Format specifiers control how data is displayed (%d, %f, %s, etc.)

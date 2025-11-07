@@ -1,6 +1,6 @@
 # Level 6: Automated Application
 
-> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> **LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.c\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 4: Full Problem Solving
@@ -160,7 +160,7 @@ typedef struct {
 # ifndef AUTOMATION_SUITE_H
 # define AUTOMATION_SUITE_H
 
-# include <stdio.h>
+#include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <time.h>
@@ -350,7 +350,7 @@ int schedule_task(AutomationSuite *suite, const char *name, const char *descript
                  ScheduleType schedule_type, const char *schedule_time, Priority priority,
                  void (*execute_function)(void*), void *parameters) {
     if (suite->task_count >= MAX_TASKS) {
-        std::cout << " Maximum number of tasks reached!\n");
+        printf(" Maximum number of tasks reached!\n");
         return 0;
     }
 
@@ -452,7 +452,7 @@ int calculate_next_run_time(const ScheduledTask *task, char *next_run) {
 int configure_backup(AutomationSuite *suite, const char *source, const char *backup_dest,
                     int versions, ScheduleType schedule) {
     if (suite->backup_count >= MAX_BACKUPS) {
-        std::cout << " Maximum number of backup configurations reached!\n");
+        printf(" Maximum number of backup configurations reached!\n");
         return 0;
     }
 
@@ -478,7 +478,7 @@ int configure_backup(AutomationSuite *suite, const char *source, const char *bac
 int perform_backup(const BackupConfig *config) {
     // Simplified backup implementation
     // In real implementation, would copy files recursively
-    std::cout << " Performing backup: %s -> %s\n", config->source_path, config->backup_path);
+    printf(" Performing backup: %s -> %s\n", config->source_path, config->backup_path);
 
     // Create backup directory if it doesn't exist
     char mkdir_cmd[300];
@@ -491,24 +491,24 @@ int perform_backup(const BackupConfig *config) {
     int result = system(copy_cmd);
 
     if (result == 0) {
-        std::cout << " Backup completed successfully\n");
+        printf(" Backup completed successfully\n");
         return 1;
     } else {
-        std::cout << " Backup failed\n");
+        printf(" Backup failed\n");
         return 0;
     }
 }
 
 void cleanup_old_backups(BackupConfig *config) {
     // Simplified cleanup - in real implementation would manage versions
-    std::cout << " Cleaning up old backup versions (keeping %d)\n", config->versions_to_keep);
+    printf(" Cleaning up old backup versions (keeping %d)\n", config->versions_to_keep);
 }
 
 // Reminder system functions
 int create_reminder(AutomationSuite *suite, const char *title, const char *message,
                    const char *due_date, const char *due_time, Priority priority) {
     if (suite->reminder_count >= MAX_REMINDERS) {
-        std::cout << " Maximum number of reminders reached!\n");
+        printf(" Maximum number of reminders reached!\n");
         return 0;
     }
 
@@ -546,24 +546,24 @@ void check_due_reminders(AutomationSuite *suite) {
 
             if (compare_datetimes(current_time, due_datetime) >= 0) {
                 // Reminder is due
-                std::cout << "\n REMINDER ALERT!\n");
-                std::cout << "Title: %s\n", reminder->title);
-                std::cout << "Message: %s\n", reminder->message);
-                std::cout << "Due: %s %s\n", reminder->due_date, reminder->due_time);
+                printf("\n REMINDER ALERT!\n");
+                printf("Title: %s\n", reminder->title);
+                printf("Message: %s\n", reminder->message);
+                printf("Due: %s %s\n", reminder->due_date, reminder->due_time);
 
                 if (reminder->priority == HIGH && !reminder->escalated) {
-                    std::cout << " HIGH PRIORITY - Immediate attention required!\n");
+                    printf(" HIGH PRIORITY - Immediate attention required!\n");
                     escalate_reminder(reminder);
                 }
 
-                std::cout << "Press 1 to acknowledge, 2 to snooze: ");
+                printf("Press 1 to acknowledge, 2 to snooze: ");
                 int choice = get_user_choice();
 
                 if (choice == 1) {
                     acknowledge_reminder(reminder);
-                    std::cout << " Reminder acknowledged\n");
+                    printf(" Reminder acknowledged\n");
                 } else {
-                    std::cout << "⏰ Reminder snoozed for 1 hour\n");
+                    printf("⏰ Reminder snoozed for 1 hour\n");
                     // In real implementation, would update due time
                 }
             }
@@ -574,7 +574,7 @@ void check_due_reminders(AutomationSuite *suite) {
 void escalate_reminder(Reminder *reminder) {
     reminder->escalated = 1;
     // In real implementation, would send email/SMS notifications
-    std::cout << " Escalating high-priority reminder!\n");
+    printf(" Escalating high-priority reminder!\n");
 }
 
 void acknowledge_reminder(Reminder *reminder) {
@@ -583,8 +583,8 @@ void acknowledge_reminder(Reminder *reminder) {
 
 // Batch processing functions
 int process_file_batch(const char *source_dir, const char *dest_dir, const char *operation) {
-    std::cout << " Processing file batch: %s -> %s\n", source_dir, dest_dir);
-    std::cout << "Operation: %s\n", operation);
+    printf(" Processing file batch: %s -> %s\n", source_dir, dest_dir);
+    printf("Operation: %s\n", operation);
 
     // Simplified implementation - would use proper directory traversal
     char cmd[400];
@@ -593,7 +593,7 @@ int process_file_batch(const char *source_dir, const char *dest_dir, const char 
     } else if (strcmp(operation, "move") == 0) {
         sprintf(cmd, "mv \"%s\"/* \"%s\"/ 2>/dev/null || true", source_dir, dest_dir);
     } else {
-        std::cout << " Unknown operation: %s\n", operation);
+        printf(" Unknown operation: %s\n", operation);
         return 0;
     }
 
@@ -603,11 +603,11 @@ int process_file_batch(const char *source_dir, const char *dest_dir, const char 
 
 // Report generation functions
 void generate_productivity_report(const AutomationSuite *suite) {
-    std::cout << " Generating Productivity Report...\n");
+    printf(" Generating Productivity Report...\n");
 
     FILE *report = fopen("productivity_report.txt", "w");
     if (report == NULL) {
-        std::cout << " Could not create report file\n");
+        printf(" Could not create report file\n");
         return;
     }
 
@@ -641,13 +641,13 @@ void generate_productivity_report(const AutomationSuite *suite) {
     int pending = 0, acknowledged = 0;
     for (int i = 0; i < suite->reminder_count; i++) {
         if (suite->reminders[i].acknowledged) acknowledged++;
-        else pending++;
+        else pendingcc;
     }
     fprintf(report, "Pending: %d\n", pending);
     fprintf(report, "Acknowledged: %d\n", acknowledged);
 
     fclose(report);
-    std::cout << " Productivity report generated: productivity_report.txt\n");
+    printf(" Productivity report generated: productivity_report.txt\n");
 }
 
 // Monitoring and logging
@@ -663,25 +663,25 @@ void log_activity(const AutomationSuite *suite, const char *activity, const char
 }
 
 void check_system_health(const AutomationSuite *suite) {
-    std::cout << " System Health Check\n");
-    std::cout << "═══════════════════════\n");
+    printf(" System Health Check\n");
+    printf("═══════════════════════\n");
 
     // Check automation status
-    std::cout << "Automation Status: %s\n", suite->automation_enabled ? " Enabled" : " Disabled");
+    printf("Automation Status: %s\n", suite->automation_enabled ? " Enabled" : " Disabled");
 
     // Check task health
     int healthy_tasks = 0;
     for (int i = 0; i < suite->task_count; i++) {
         if (suite->tasks[i].status != FAILED) healthy_tasks++;
     }
-    std::cout << "Task Health: %d/%d healthy\n", healthy_tasks, suite->task_count);
+    printf("Task Health: %d/%d healthy\n", healthy_tasks, suite->task_count);
 
     // Check backup health
     int healthy_backups = 0;
     for (int i = 0; i < suite->backup_count; i++) {
         if (suite->backups[i].failure_count == 0) healthy_backups++;
     }
-    std::cout << "Backup Health: %d/%d healthy\n", healthy_backups, suite->backup_count);
+    printf("Backup Health: %d/%d healthy\n", healthy_backups, suite->backup_count);
 
     // Check reminder system
     int overdue = 0;
@@ -697,33 +697,33 @@ void check_system_health(const AutomationSuite *suite) {
             }
         }
     }
-    std::cout << "Overdue Reminders: %d\n", overdue);
+    printf("Overdue Reminders: %d\n", overdue);
 }
 
 // Display functions
 void display_main_menu(void) {
     clear_screen();
-    std::cout << "╔══════════════════════════════════════════════╗\n");
-    std::cout << "║        AUTOMATED PRODUCTIVITY SUITE         ║\n");
-    std::cout << "╠══════════════════════════════════════════════╣\n");
-    std::cout << "║ 1.  Task Manager                           ║\n");
-    std::cout << "║ 2.  Backup Manager                         ║\n");
-    std::cout << "║ 3.  Reminder System                        ║\n");
-    std::cout << "║ 4.  Reports & Analytics                    ║\n");
-    std::cout << "║ 5.  System Health                          ║\n");
-    std::cout << "║ 6. ▶  Run Automation                         ║\n");
-    std::cout << "║ 7.   Settings                              ║\n");
-    std::cout << "║ 8.  Exit                                   ║\n");
-    std::cout << "╚══════════════════════════════════════════════╝\n");
-    std::cout << "Enter your choice (1-8): ");
+    printf("╔══════════════════════════════════════════════╗\n");
+    printf("║        AUTOMATED PRODUCTIVITY SUITE         ║\n");
+    printf("╠══════════════════════════════════════════════╣\n");
+    printf("║ 1.  Task Manager                           ║\n");
+    printf("║ 2.  Backup Manager                         ║\n");
+    printf("║ 3.  Reminder System                        ║\n");
+    printf("║ 4.  Reports & Analytics                    ║\n");
+    printf("║ 5.  System Health                          ║\n");
+    printf("║ 6. ▶  Run Automation                         ║\n");
+    printf("║ 7.   Settings                              ║\n");
+    printf("║ 8.  Exit                                   ║\n");
+    printf("╚══════════════════════════════════════════════╝\n");
+    printf("Enter your choice (1-8): ");
 }
 
 void display_task_manager(const AutomationSuite *suite) {
-    std::cout << "\n TASK MANAGER\n");
-    std::cout << "═════════════════\n");
-    std::cout << "%-3s %-20s %-10s %-12s %-10s %-15s\n",
+    printf("\n TASK MANAGER\n");
+    printf("═════════════════\n");
+    printf("%-3s %-20s %-10s %-12s %-10s %-15s\n",
            "ID", "Name", "Schedule", "Next Run", "Status", "Priority");
-    std::cout << "────────────────────────────────────────────────────────────────\n");
+    printf("────────────────────────────────────────────────────────────────\n");
 
     for (int i = 0; i < suite->task_count; i++) {
         const ScheduledTask *task = &suite->tasks[i];
@@ -737,49 +737,49 @@ void display_task_manager(const AutomationSuite *suite) {
         const char *priority_str = (task->priority == HIGH) ? "High" :
                                   (task->priority == MEDIUM) ? "Medium" : "Low";
 
-        std::cout << "%-3d %-20s %-10s %-12s %-10s %-15s\n",
+        printf("%-3d %-20s %-10s %-12s %-10s %-15s\n",
                task->id, task->name, schedule_str, task->schedule_time,
                status_str, priority_str);
     }
 }
 
 void display_backup_manager(const AutomationSuite *suite) {
-    std::cout << "\n BACKUP MANAGER\n");
-    std::cout << "═══════════════════\n");
+    printf("\n BACKUP MANAGER\n");
+    printf("═══════════════════\n");
 
     for (int i = 0; i < suite->backup_count; i++) {
         const BackupConfig *backup = &suite->backups[i];
-        std::cout << "Backup %d:\n", i + 1);
-        std::cout << "  Source: %s\n", backup->source_path);
-        std::cout << "  Destination: %s\n", backup->backup_path);
-        std::cout << "  Schedule: %s\n", backup->schedule == DAILY ? "Daily" :
+        printf("Backup %d:\n", i + 1);
+        printf("  Source: %s\n", backup->source_path);
+        printf("  Destination: %s\n", backup->backup_path);
+        printf("  Schedule: %s\n", backup->schedule == DAILY ? "Daily" :
                                backup->schedule == WEEKLY ? "Weekly" : "Monthly");
-        std::cout << "  Last Backup: %s\n", backup->last_backup);
-        std::cout << "  Success Rate: %.1f%%\n\n",
+        printf("  Last Backup: %s\n", backup->last_backup);
+        printf("  Success Rate: %.1f%%\n\n",
                backup->success_count + backup->failure_count > 0 ?
                (float)backup->success_count / (backup->success_count + backup->failure_count) * 100 : 0);
     }
 }
 
 void display_reminder_system(const AutomationSuite *suite) {
-    std::cout << "\n REMINDER SYSTEM\n");
-    std::cout << "════════════════════\n");
+    printf("\n REMINDER SYSTEM\n");
+    printf("════════════════════\n");
 
     int pending_count = 0;
     for (int i = 0; i < suite->reminder_count; i++) {
         const Reminder *reminder = &suite->reminders[i];
         if (!reminder->acknowledged) {
             pending_count++;
-            std::cout << "ID %d: %s\n", reminder->id, reminder->title);
-            std::cout << "  Due: %s %s\n", reminder->due_date, reminder->due_time);
-            std::cout << "  Priority: %s\n", reminder->priority == HIGH ? "High" :
+            printf("ID %d: %s\n", reminder->id, reminder->title);
+            printf("  Due: %s %s\n", reminder->due_date, reminder->due_time);
+            printf("  Priority: %s\n", reminder->priority == HIGH ? "High" :
                                    reminder->priority == MEDIUM ? "Medium" : "Low");
-            std::cout << "  Status: %s\n\n", reminder->escalated ? "Escalated" : "Active");
+            printf("  Status: %s\n\n", reminder->escalated ? "Escalated" : "Active");
         }
     }
 
     if (pending_count == 0) {
-        std::cout << " No pending reminders!\n");
+        printf(" No pending reminders!\n");
     }
 }
 
@@ -799,7 +799,7 @@ void clear_screen(void) {
 }
 
 void pause(void) {
-    std::cout << "\nPress Enter to continue...");
+    printf("\nPress Enter to continue...");
     getchar();
     getchar();
 }
@@ -852,8 +852,8 @@ int main() {
     AutomationSuite suite;
     initialize_automation_suite(&suite);
 
-    std::cout << " Automated Personal Productivity Suite\n");
-    std::cout << "Initializing automation systems...\n\n");
+    printf(" Automated Personal Productivity Suite\n");
+    printf("Initializing automation systems...\n\n");
 
     int running = 1;
     while (running) {
@@ -881,12 +881,12 @@ int main() {
             }
 
             case 4: { // Reports & Analytics
-                std::cout << "\n Reports & Analytics\n");
-                std::cout << "════════════════════════\n");
-                std::cout << "1. Productivity Report\n");
-                std::cout << "2. Task Execution Report\n");
-                std::cout << "3. Backup Status Report\n");
-                std::cout << "Enter choice: ");
+                printf("\n Reports & Analytics\n");
+                printf("════════════════════════\n");
+                printf("1. Productivity Report\n");
+                printf("2. Task Execution Report\n");
+                printf("3. Backup Status Report\n");
+                printf("Enter choice: ");
                 int report_choice = get_user_choice();
 
                 switch (report_choice) {
@@ -900,7 +900,7 @@ int main() {
                         generate_backup_report(&suite);
                         break;
                     default:
-                        std::cout << " Invalid choice!\n");
+                        printf(" Invalid choice!\n");
                 }
                 pause();
                 break;
@@ -913,28 +913,28 @@ int main() {
             }
 
             case 6: { // Run Automation
-                std::cout << "▶  Running automated tasks...\n");
+                printf("▶  Running automated tasks...\n");
                 execute_pending_tasks(&suite);
                 check_due_reminders(&suite);
-                std::cout << " Automation cycle completed\n");
+                printf(" Automation cycle completed\n");
                 pause();
                 break;
             }
 
             case 7: { // Settings
-                std::cout << "\n  Settings\n");
-                std::cout << "═════════════\n");
-                std::cout << "Automation currently: %s\n", suite.automation_enabled ? "ENABLED" : "DISABLED");
-                std::cout << "1. Toggle Automation\n");
-                std::cout << "2. View Log File\n");
-                std::cout << "Enter choice: ");
+                printf("\n  Settings\n");
+                printf("═════════════\n");
+                printf("Automation currently: %s\n", suite.automation_enabled ? "ENABLED" : "DISABLED");
+                printf("1. Toggle Automation\n");
+                printf("2. View Log File\n");
+                printf("Enter choice: ");
                 int setting_choice = get_user_choice();
 
                 if (setting_choice == 1) {
                     suite.automation_enabled = !suite.automation_enabled;
-                    std::cout << "Automation %s\n", suite.automation_enabled ? "ENABLED" : "DISABLED");
+                    printf("Automation %s\n", suite.automation_enabled ? "ENABLED" : "DISABLED");
                 } else if (setting_choice == 2) {
-                    std::cout << "Opening log file...\n");
+                    printf("Opening log file...\n");
                     char cmd[300];
                     sprintf(cmd, "cat %s || echo 'Log file not found'", suite.log_file);
                     system(cmd);
@@ -944,14 +944,14 @@ int main() {
             }
 
             case 8: { // Exit
-                std::cout << " Thank you for using Automated Productivity Suite!\n");
-                std::cout << "Your automation systems will continue running in the background.\n");
+                printf(" Thank you for using Automated Productivity Suite!\n");
+                printf("Your automation systems will continue running in the background.\n");
                 running = 0;
                 break;
             }
 
             default:
-                std::cout << " Invalid choice! Please select 1-8.\n");
+                printf(" Invalid choice! Please select 1-8.\n");
                 pause();
         }
     }
@@ -961,11 +961,11 @@ int main() {
 
 // Additional report functions (simplified implementations)
 void generate_task_report(const AutomationSuite *suite) {
-    std::cout << " Generating Task Execution Report...\n");
+    printf(" Generating Task Execution Report...\n");
 
     FILE *report = fopen("task_report.txt", "w");
     if (report == NULL) {
-        std::cout << " Could not create report file\n");
+        printf(" Could not create report file\n");
         return;
     }
 
@@ -992,15 +992,15 @@ void generate_task_report(const AutomationSuite *suite) {
     }
 
     fclose(report);
-    std::cout << " Task report generated: task_report.txt\n");
+    printf(" Task report generated: task_report.txt\n");
 }
 
 void generate_backup_report(const AutomationSuite *suite) {
-    std::cout << " Generating Backup Status Report...\n");
+    printf(" Generating Backup Status Report...\n");
 
     FILE *report = fopen("backup_report.txt", "w");
     if (report == NULL) {
-        std::cout << " Could not create report file\n");
+        printf(" Could not create report file\n");
         return;
     }
 
@@ -1028,7 +1028,7 @@ void generate_backup_report(const AutomationSuite *suite) {
     }
 
     fclose(report);
-    std::cout << " Backup report generated: backup_report.txt\n");
+    printf(" Backup report generated: backup_report.txt\n");
 }
 ```cpp
 
@@ -1037,9 +1037,9 @@ void generate_backup_report(const AutomationSuite *suite) {
 ## Testing the Application
 
 ### Compilation Instructions
-```bash
+```
 # Compile the program
-g++ -o productivity_suite main.c automation_suite.c
+gcc -o productivity_suite main.c automation_suite.c
 
 # Run the program
 ./productivity_suite
@@ -1247,10 +1247,10 @@ Expected implementation provided.
 ### Complete Solution
 
 ```cpp
-#include <iostream>
+#include <stdio.h>
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    printf("Hello, World!\n");
     return 0;
 }
 ```
@@ -1260,14 +1260,14 @@ int main() {
 This solution demonstrates the key concepts from this lesson:
 
 1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses std::cout to print messages to the console
-3. **Standard Library**: Includes iostream for input/output operations
+2. **Output**: Uses printf to print messages to the console
+3. **Standard Library**: Includes stdio.h for input/output operations
 4. **Return Value**: Returns 0 to indicate successful execution
 5. **Best Practices**: Code is readable and uses C++ idioms
 
 ### Testing Your Solution
 
-1. **Compile**: `g++ hello.cpp -o hello`
+1. **Compile**: `gcc main.c -o main`
 2. **Run**: `./hello`
 3. **Expected Output**: `Hello, World!`
 
@@ -1275,13 +1275,13 @@ This solution demonstrates the key concepts from this lesson:
 
 | Error | Cause | Solution |
 |-------|-------|----------|
-| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
 | `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+| `error: implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
 
 ### Tips for Learning
 
-- C++ is a superset of C with additional features
-- `std::cout` is the C++ way to print (replaces `printf`)
-- `std::endl` adds a newline and flushes the buffer
-- The `std::` prefix means these are from the "standard" namespace
+- C uses stdio.h for input/output with additional features
+- `printf` is the C standard for formatted output
+- `\n` adds a newline character in format strings
+- Format specifiers control how data is displayed (%d, %f, %s, etc.)

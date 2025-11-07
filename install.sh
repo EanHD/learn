@@ -175,7 +175,7 @@ if [ "$UPDATE_MODE" = true ]; then
     echo "   • New lessons and improvements"
     echo ""
     echo "🔄 To update again later, run:"
-    echo "   bash ~/LEARN/install.sh --update"
+    echo "   bash $LEARN_DIR/install.sh --update"
 else
     echo "╔══════════════════════════════════════════════════════════════╗"
     echo "║                   🎉 Installation Complete!                 ║"
@@ -200,7 +200,7 @@ else
     echo "   • For VS Code: Ctrl+Shift+X to install recommended extensions"
     echo ""
     echo "🔄 To update later, run:"
-    echo "   bash ~/LEARN/install.sh --update"
+    echo "   bash $LEARN_DIR/install.sh --update"
 fi
 echo ""
 echo "Happy Learning! 🎓"

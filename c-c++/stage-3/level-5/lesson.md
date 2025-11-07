@@ -1,6 +1,6 @@
 # Level 5: Decision-Based Problems
 
-> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> **LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.c\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 3: Problem to Pseudocode
@@ -567,10 +567,10 @@ Expected implementation provided.
 ### Complete Solution
 
 ```cpp
-#include <iostream>
+#include <stdio.h>
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    printf("Hello, World!\n");
     return 0;
 }
 ```
@@ -580,14 +580,14 @@ int main() {
 This solution demonstrates the key concepts from this lesson:
 
 1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses std::cout to print messages to the console
-3. **Standard Library**: Includes iostream for input/output operations
+2. **Output**: Uses printf to print messages to the console
+3. **Standard Library**: Includes stdio.h for input/output operations
 4. **Return Value**: Returns 0 to indicate successful execution
 5. **Best Practices**: Code is readable and uses C++ idioms
 
 ### Testing Your Solution
 
-1. **Compile**: `g++ hello.cpp -o hello`
+1. **Compile**: `gcc main.c -o main`
 2. **Run**: `./hello`
 3. **Expected Output**: `Hello, World!`
 
@@ -595,13 +595,13 @@ This solution demonstrates the key concepts from this lesson:
 
 | Error | Cause | Solution |
 |-------|-------|----------|
-| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
 | `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+| `error: implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
 
 ### Tips for Learning
 
-- C++ is a superset of C with additional features
-- `std::cout` is the C++ way to print (replaces `printf`)
-- `std::endl` adds a newline and flushes the buffer
-- The `std::` prefix means these are from the "standard" namespace
+- C uses stdio.h for input/output with additional features
+- `printf` is the C standard for formatted output
+- `\n` adds a newline character in format strings
+- Format specifiers control how data is displayed (%d, %f, %s, etc.)

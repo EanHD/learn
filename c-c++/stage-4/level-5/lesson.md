@@ -1,6 +1,6 @@
 # Level 5: Decision Support Application
 
-> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> **LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.c\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 4: Full Problem Solving
@@ -136,7 +136,7 @@ typedef struct {
 # ifndef SMART_ANALYZER_H
 # define SMART_ANALYZER_H
 
-# include <stdio.h>
+#include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <math.h>
@@ -562,148 +562,148 @@ double predict_savings_potential(SmartAnalyzer *analyzer) {
 // Display functions
 void display_main_menu(void) {
     clear_screen();
-    std::cout << "╔══════════════════════════════════════════════╗\n");
-    std::cout << "║         SMART EXPENSE ANALYZER & ADVISOR    ║\n");
-    std::cout << "╠══════════════════════════════════════════════╣\n");
-    std::cout << "║ 1.  Financial Dashboard                    ║\n");
-    std::cout << "║ 2.  Spending Insights                      ║\n");
-    std::cout << "║ 3.  Personalized Recommendations           ║\n");
-    std::cout << "║ 4.  Interactive Advisor                     ║\n");
-    std::cout << "║ 5.  Risk Assessment                        ║\n");
-    std::cout << "║ 6.  Generate Report                        ║\n");
-    std::cout << "║ 7.  Exit                                   ║\n");
-    std::cout << "╚══════════════════════════════════════════════╝\n");
-    std::cout << "Enter your choice (1-7): ");
+    printf("╔══════════════════════════════════════════════╗\n");
+    printf("║         SMART EXPENSE ANALYZER & ADVISOR    ║\n");
+    printf("╠══════════════════════════════════════════════╣\n");
+    printf("║ 1.  Financial Dashboard                    ║\n");
+    printf("║ 2.  Spending Insights                      ║\n");
+    printf("║ 3.  Personalized Recommendations           ║\n");
+    printf("║ 4.  Interactive Advisor                     ║\n");
+    printf("║ 5.  Risk Assessment                        ║\n");
+    printf("║ 6.  Generate Report                        ║\n");
+    printf("║ 7.  Exit                                   ║\n");
+    printf("╚══════════════════════════════════════════════╝\n");
+    printf("Enter your choice (1-7): ");
 }
 
 void display_financial_dashboard(const SmartAnalyzer *analyzer) {
-    std::cout << "\n FINANCIAL DASHBOARD\n");
-    std::cout << "════════════════════════\n");
-    std::cout << "Monthly Income:     $%.2f\n", analyzer->health.income);
-    std::cout << "Total Expenses:     $%.2f\n", analyzer->health.total_expenses);
-    std::cout << "Net Income:         $%.2f\n", analyzer->health.income - analyzer->health.total_expenses);
-    std::cout << "Savings Rate:       %.1f%%\n", analyzer->health.savings_rate);
-    std::cout << "Financial Score:    %d/100\n", analyzer->health.financial_score);
-    std::cout << "Risk Level:         %s\n", analyzer->health.risk_level);
+    printf("\n FINANCIAL DASHBOARD\n");
+    printf("════════════════════════\n");
+    printf("Monthly Income:     $%.2f\n", analyzer->health.income);
+    printf("Total Expenses:     $%.2f\n", analyzer->health.total_expenses);
+    printf("Net Income:         $%.2f\n", analyzer->health.income - analyzer->health.total_expenses);
+    printf("Savings Rate:       %.1f%%\n", analyzer->health.savings_rate);
+    printf("Financial Score:    %d/100\n", analyzer->health.financial_score);
+    printf("Risk Level:         %s\n", analyzer->health.risk_level);
 
-    std::cout << "\n FORECASTS\n");
-    std::cout << "Next Month Expenses: $%.2f\n", forecast_monthly_expenses(analyzer));
-    std::cout << "Savings Potential:   $%.2f\n", predict_savings_potential(analyzer));
+    printf("\n FORECASTS\n");
+    printf("Next Month Expenses: $%.2f\n", forecast_monthly_expenses(analyzer));
+    printf("Savings Potential:   $%.2f\n", predict_savings_potential(analyzer));
 }
 
 void display_spending_insights(const SmartAnalyzer *analyzer) {
-    std::cout << "\n SPENDING INSIGHTS\n");
-    std::cout << "═══════════════════════\n");
-    std::cout << "%-15s %-10s %-10s %-8s %-10s\n", "Category", "Total", "Daily Avg", "Trend", "Budget");
-    std::cout << "────────────────────────────────────────────────────────\n");
+    printf("\n SPENDING INSIGHTS\n");
+    printf("═══════════════════════\n");
+    printf("%-15s %-10s %-10s %-8s %-10s\n", "Category", "Total", "Daily Avg", "Trend", "Budget");
+    printf("────────────────────────────────────────────────────────\n");
 
     for (int i = 0; i < analyzer->category_count; i++) {
         const CategoryAnalysis *cat = &analyzer->categories[i];
         char trend_symbol = cat->trend_percentage > 0 ? '↗' : '↘';
-        std::cout << "%-15s $%-9.2f $%-9.2f %c%-6.1f%% $%-9.2f\n",
+        printf("%-15s $%-9.2f $%-9.2f %c%-6.1f%% $%-9.2f\n",
                cat->category, cat->total_spent, cat->average_daily,
                trend_symbol, fabs(cat->trend_percentage), cat->budget_limit);
     }
 }
 
 void display_recommendations(const SmartAnalyzer *analyzer) {
-    std::cout << "\n PERSONALIZED RECOMMENDATIONS\n");
-    std::cout << "══════════════════════════════════\n");
+    printf("\n PERSONALIZED RECOMMENDATIONS\n");
+    printf("══════════════════════════════════\n");
 
     for (int i = 0; i < analyzer->recommendation_count; i++) {
         const Recommendation *rec = &analyzer->recommendations[i];
-        std::cout << "\n%d. %s (Priority: %d/5)\n", i + 1, rec->title, rec->priority);
-        std::cout << "   %s\n", rec->description);
+        printf("\n%d. %s (Priority: %d/5)\n", i + 1, rec->title, rec->priority);
+        printf("   %s\n", rec->description);
         if (rec->potential_savings > 0) {
-            std::cout << "    Potential Savings: $%.2f\n", rec->potential_savings);
+            printf("    Potential Savings: $%.2f\n", rec->potential_savings);
         }
-        std::cout << "   Status: %s\n", rec->implemented ? " Implemented" : "⏳ Pending");
+        printf("   Status: %s\n", rec->implemented ? " Implemented" : "⏳ Pending");
     }
 }
 
 void interactive_advisor(SmartAnalyzer *analyzer) {
-    std::cout << "\n INTERACTIVE FINANCIAL ADVISOR\n");
-    std::cout << "═══════════════════════════════════\n");
+    printf("\n INTERACTIVE FINANCIAL ADVISOR\n");
+    printf("═══════════════════════════════════\n");
 
     // Ask user about their financial goals
-    std::cout << "What is your primary financial goal?\n");
-    std::cout << "1. Build emergency savings\n");
-    std::cout << "2. Pay off debt\n");
-    std::cout << "3. Save for a major purchase\n");
-    std::cout << "4. Increase retirement savings\n");
-    std::cout << "5. General financial health\n");
-    std::cout << "Enter choice: ");
+    printf("What is your primary financial goal?\n");
+    printf("1. Build emergency savings\n");
+    printf("2. Pay off debt\n");
+    printf("3. Save for a major purchase\n");
+    printf("4. Increase retirement savings\n");
+    printf("5. General financial health\n");
+    printf("Enter choice: ");
 
     int goal = get_user_choice();
 
-    std::cout << "\nBased on your goal and spending analysis:\n");
+    printf("\nBased on your goal and spending analysis:\n");
 
     switch (goal) {
         case 1:
-            std::cout << " EMERGENCY FUND ADVICE:\n");
-            std::cout << "• Aim for 3-6 months of expenses in savings\n");
-            std::cout << "• Your target: $%.2f - $%.2f\n",
+            printf(" EMERGENCY FUND ADVICE:\n");
+            printf("• Aim for 3-6 months of expenses in savings\n");
+            printf("• Your target: $%.2f - $%.2f\n",
                    analyzer->health.total_expenses * 3,
                    analyzer->health.total_expenses * 6);
-            std::cout << "• Start with $%.2f monthly deposits\n",
+            printf("• Start with $%.2f monthly deposits\n",
                    (analyzer->health.total_expenses * 3) / 12);
             break;
 
         case 2:
-            std::cout << " DEBT REDUCTION ADVICE:\n");
-            std::cout << "• Focus on high-interest debt first\n");
-            std::cout << "• Consider debt consolidation\n");
-            std::cout << "• Cut discretionary spending by reviewing your top categories\n");
+            printf(" DEBT REDUCTION ADVICE:\n");
+            printf("• Focus on high-interest debt first\n");
+            printf("• Consider debt consolidation\n");
+            printf("• Cut discretionary spending by reviewing your top categories\n");
             break;
 
         case 3:
-            std::cout << " MAJOR PURCHASE ADVICE:\n");
-            std::cout << "• Set a realistic timeline and monthly savings goal\n");
-            std::cout << "• Consider using windfalls for extra payments\n");
-            std::cout << "• Track progress with your expense analyzer\n");
+            printf(" MAJOR PURCHASE ADVICE:\n");
+            printf("• Set a realistic timeline and monthly savings goal\n");
+            printf("• Consider using windfalls for extra payments\n");
+            printf("• Track progress with your expense analyzer\n");
             break;
 
         case 4:
-            std::cout << " RETIREMENT SAVINGS ADVICE:\n");
-            std::cout << "• Maximize employer matches if available\n");
-            std::cout << "• Consider Roth vs Traditional accounts\n");
-            std::cout << "• Increase contributions gradually\n");
+            printf(" RETIREMENT SAVINGS ADVICE:\n");
+            printf("• Maximize employer matches if available\n");
+            printf("• Consider Roth vs Traditional accounts\n");
+            printf("• Increase contributions gradually\n");
             break;
 
         case 5:
-            std::cout << " GENERAL FINANCIAL HEALTH:\n");
-            std::cout << "• Your financial score: %d/100 (%s risk)\n",
+            printf(" GENERAL FINANCIAL HEALTH:\n");
+            printf("• Your financial score: %d/100 (%s risk)\n",
                    analyzer->health.financial_score, analyzer->health.risk_level);
-            std::cout << "• Focus on increasing savings rate to 20%%\n");
-            std::cout << "• Review and optimize recurring expenses\n");
+            printf("• Focus on increasing savings rate to 20%%\n");
+            printf("• Review and optimize recurring expenses\n");
             break;
     }
 
-    std::cout << "\n Top recommendations for your goal:\n");
+    printf("\n Top recommendations for your goal:\n");
     int rec_count = 0;
     for (int i = 0; i < analyzer->recommendation_count && rec_count < 3; i++) {
         if (!analyzer->recommendations[i].implemented) {
-            std::cout << "%d. %s\n", ++rec_count, analyzer->recommendations[i].title);
+            printf("%d. %s\n", ++rec_count, analyzer->recommendations[i].title);
         }
     }
 }
 
 void display_risk_assessment(const SmartAnalyzer *analyzer) {
-    std::cout << "\n FINANCIAL RISK ASSESSMENT\n");
-    std::cout << "═══════════════════════════════\n");
-    std::cout << "Overall Risk Level: %s\n", analyzer->health.risk_level);
-    std::cout << "Financial Score: %d/100\n", analyzer->health.financial_score);
+    printf("\n FINANCIAL RISK ASSESSMENT\n");
+    printf("═══════════════════════════════\n");
+    printf("Overall Risk Level: %s\n", analyzer->health.risk_level);
+    printf("Financial Score: %d/100\n", analyzer->health.financial_score);
 
-    std::cout << "\nRisk Factors:\n");
+    printf("\nRisk Factors:\n");
 
     if (analyzer->health.savings_rate < 10) {
-        std::cout << "•  Low savings rate (%.1f%%) - increases financial vulnerability\n",
+        printf("•  Low savings rate (%.1f%%) - increases financial vulnerability\n",
                analyzer->health.savings_rate);
     }
 
     double expense_ratio = analyzer->health.total_expenses / analyzer->health.income;
     if (expense_ratio > 0.8) {
-        std::cout << "•  High expense ratio (%.1f%%) - leaves little buffer for emergencies\n",
+        printf("•  High expense ratio (%.1f%%) - leaves little buffer for emergencies\n",
                expense_ratio * 100);
     }
 
@@ -715,15 +715,15 @@ void display_risk_assessment(const SmartAnalyzer *analyzer) {
     }
 
     if (budget_overruns > 0) {
-        std::cout << "•  %d budget categories over limit - indicates spending control issues\n",
+        printf("•  %d budget categories over limit - indicates spending control issues\n",
                budget_overruns);
     }
 
-    std::cout << "\nRecommendations to reduce risk:\n");
-    std::cout << "• Build emergency fund (3-6 months expenses)\n");
-    std::cout << "• Keep expense ratio below 70%%\n");
-    std::cout << "• Maintain savings rate above 15%%\n");
-    std::cout << "• Stay within budget limits\n");
+    printf("\nRecommendations to reduce risk:\n");
+    printf("• Build emergency fund (3-6 months expenses)\n");
+    printf("• Keep expense ratio below 70%%\n");
+    printf("• Maintain savings rate above 15%%\n");
+    printf("• Stay within budget limits\n");
 }
 
 // Utility functions
@@ -742,7 +742,7 @@ void clear_screen(void) {
 }
 
 void pause(void) {
-    std::cout << "\nPress Enter to continue...");
+    printf("\nPress Enter to continue...");
     getchar();
     getchar();
 }
@@ -785,8 +785,8 @@ int main() {
     SmartAnalyzer analyzer;
     initialize_analyzer(&analyzer);
 
-    std::cout << " Smart Expense Analyzer & Financial Advisor\n");
-    std::cout << "Analyzing your financial data...\n\n");
+    printf(" Smart Expense Analyzer & Financial Advisor\n");
+    printf("Analyzing your financial data...\n\n");
 
     int running = 1;
     while (running) {
@@ -825,36 +825,36 @@ int main() {
             }
 
             case 6: { // Generate Report
-                std::cout << "\n FINANCIAL ANALYSIS REPORT\n");
-                std::cout << "═══════════════════════════════\n");
+                printf("\n FINANCIAL ANALYSIS REPORT\n");
+                printf("═══════════════════════════════\n");
                 display_financial_dashboard(&analyzer);
-                std::cout << "\n");
+                printf("\n");
                 display_spending_insights(&analyzer);
-                std::cout << "\n");
+                printf("\n");
                 display_risk_assessment(&analyzer);
-                std::cout << "\n");
+                printf("\n");
                 display_recommendations(&analyzer);
 
-                std::cout << "\n NEXT STEPS:\n");
-                std::cout << "1. Implement high-priority recommendations\n");
-                std::cout << "2. Set up automatic savings transfers\n");
-                std::cout << "3. Review subscriptions and recurring expenses\n");
-                std::cout << "4. Create a detailed monthly budget\n");
-                std::cout << "5. Track progress weekly\n");
+                printf("\n NEXT STEPS:\n");
+                printf("1. Implement high-priority recommendations\n");
+                printf("2. Set up automatic savings transfers\n");
+                printf("3. Review subscriptions and recurring expenses\n");
+                printf("4. Create a detailed monthly budget\n");
+                printf("5. Track progress weekly\n");
 
                 pause();
                 break;
             }
 
             case 7: { // Exit
-                std::cout << " Thank you for using Smart Expense Analyzer!\n");
-                std::cout << "Remember: Small financial changes lead to big results.\n");
+                printf(" Thank you for using Smart Expense Analyzer!\n");
+                printf("Remember: Small financial changes lead to big results.\n");
                 running = 0;
                 break;
             }
 
             default:
-                std::cout << " Invalid choice! Please select 1-7.\n");
+                printf(" Invalid choice! Please select 1-7.\n");
                 pause();
         }
     }
@@ -868,9 +868,9 @@ int main() {
 ## Testing the Application
 
 ### Compilation Instructions
-```bash
+```
 # Compile the program
-g++ -o smart_analyzer main.c smart_analyzer.c -lm
+gcc -o smart_analyzer main.c smart_analyzer.c -lm
 
 # Run the program
 ./smart_analyzer
@@ -1074,10 +1074,10 @@ Expected implementation provided.
 ### Complete Solution
 
 ```cpp
-#include <iostream>
+#include <stdio.h>
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    printf("Hello, World!\n");
     return 0;
 }
 ```
@@ -1087,14 +1087,14 @@ int main() {
 This solution demonstrates the key concepts from this lesson:
 
 1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses std::cout to print messages to the console
-3. **Standard Library**: Includes iostream for input/output operations
+2. **Output**: Uses printf to print messages to the console
+3. **Standard Library**: Includes stdio.h for input/output operations
 4. **Return Value**: Returns 0 to indicate successful execution
 5. **Best Practices**: Code is readable and uses C++ idioms
 
 ### Testing Your Solution
 
-1. **Compile**: `g++ hello.cpp -o hello`
+1. **Compile**: `gcc main.c -o main`
 2. **Run**: `./hello`
 3. **Expected Output**: `Hello, World!`
 
@@ -1102,13 +1102,13 @@ This solution demonstrates the key concepts from this lesson:
 
 | Error | Cause | Solution |
 |-------|-------|----------|
-| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
 | `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+| `error: implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
 
 ### Tips for Learning
 
-- C++ is a superset of C with additional features
-- `std::cout` is the C++ way to print (replaces `printf`)
-- `std::endl` adds a newline and flushes the buffer
-- The `std::` prefix means these are from the "standard" namespace
+- C uses stdio.h for input/output with additional features
+- `printf` is the C standard for formatted output
+- `\n` adds a newline character in format strings
+- Format specifiers control how data is displayed (%d, %f, %s, etc.)

@@ -55,6 +55,19 @@ class SystemChecker:
 
     def __init__(self):
         self.checks = []
+        if utils:
+            self.os_type = utils.get_platform()
+        else:
+            self.os_type = self._detect_os()
+    
+    def _detect_os(self) -> str:
+        """Detect operating system (fallback)"""
+        if sys.platform == "win32":
+            return "windows"
+        elif sys.platform == "darwin":
+            return "mac"
+        else:
+            return "linux"
 
     def check_all(self) -> bool:
         """Run all checks and return True if all pass"""
@@ -65,7 +78,7 @@ class SystemChecker:
         self.checks.append({
             "name": "Neovim",
             "status": "OK" if nvim_ok else "MISSING",
-            "fix": "sudo apt install neovim  # or brew install neovim" if not nvim_ok else None,
+            "fix": self._get_install_command("neovim") if not nvim_ok else None,
             "version": self._get_nvim_version() if nvim_ok else None
         })
 
@@ -74,14 +87,14 @@ class SystemChecker:
         self.checks.append({
             "name": "GCC (C/C++ compiler)",
             "status": "OK" if gcc_ok else "MISSING",
-            "fix": "sudo apt install build-essential" if not gcc_ok else None
+            "fix": self._get_install_command("gcc") if not gcc_ok else None
         })
 
         clangd_ok = self._check_command("clangd", "--version")
         self.checks.append({
             "name": "clangd (C++ LSP)",
             "status": "OK" if clangd_ok else "MISSING",
-            "fix": "sudo apt install clangd" if not clangd_ok else None
+            "fix": self._get_install_command("clangd") if not clangd_ok else None
         })
 
         # Check Rust
@@ -89,7 +102,7 @@ class SystemChecker:
         self.checks.append({
             "name": "Rust compiler",
             "status": "OK" if rustc_ok else "MISSING",
-            "fix": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh" if not rustc_ok else None
+            "fix": self._get_install_command("rust") if not rustc_ok else None
         })
 
         # Check Node
@@ -97,16 +110,17 @@ class SystemChecker:
         self.checks.append({
             "name": "Node.js",
             "status": "OK" if node_ok else "MISSING",
-            "fix": "curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt install -y nodejs" if not node_ok else None,
+            "fix": self._get_install_command("node") if not node_ok else None,
             "version": self._get_command_output("node", "--version") if node_ok else None
         })
 
         # Check Python
-        python_ok = self._check_command("python3", "--version")
+        python_cmd = "python" if self.os_type == "windows" else "python3"
+        python_ok = self._check_command(python_cmd, "--version")
         self.checks.append({
             "name": "Python 3",
             "status": "OK" if python_ok else "MISSING",
-            "fix": "sudo apt install python3" if not python_ok else None
+            "fix": self._get_install_command("python") if not python_ok else None
         })
 
         # Check Mason packages
@@ -119,11 +133,15 @@ class SystemChecker:
         })
 
         # Check Kickstart
-        kickstart_ok = Path.home() / ".config" / "nvim" / "init.lua"
+        if self.os_type == "windows":
+            kickstart_ok = Path.home() / "AppData" / "Local" / "nvim" / "init.lua"
+        else:
+            kickstart_ok = Path.home() / ".config" / "nvim" / "init.lua"
+        
         self.checks.append({
             "name": "Kickstart.nvim config",
             "status": "OK" if kickstart_ok.exists() else "MISSING",
-            "fix": "git clone https://github.com/nvim-lua/kickstart.nvim.git ~/.config/nvim" if not kickstart_ok.exists() else None
+            "fix": self._get_nvim_config_command() if not kickstart_ok.exists() else None
         })
 
         return all(c["status"] == "OK" for c in self.checks if c["name"] not in ["Mason LSP packages", "Kickstart.nvim config"])
@@ -153,9 +171,16 @@ class SystemChecker:
         except:
             return None
 
+    def _get_mason_dir(self) -> Path:
+        """Get Mason packages directory (cross-platform)"""
+        if self.os_type == "windows":
+            return Path.home() / "AppData" / "Local" / "nvim-data" / "mason" / "packages"
+        else:
+            return Path.home() / ".local" / "share" / "nvim" / "mason" / "packages"
+    
     def _check_mason_packages(self) -> bool:
         """Check if Mason packages are installed"""
-        mason_dir = Path.home() / ".local" / "share" / "nvim" / "mason" / "packages"
+        mason_dir = self._get_mason_dir()
         if not mason_dir.exists():
             return False
 
@@ -165,35 +190,238 @@ class SystemChecker:
 
     def _get_mason_status(self) -> str:
         """Get Mason package status"""
-        mason_dir = Path.home() / ".local" / "share" / "nvim" / "mason" / "packages"
+        mason_dir = self._get_mason_dir()
         if not mason_dir.exists():
             return "Mason directory not found"
 
         installed = sorted([p.name for p in mason_dir.iterdir() if p.is_dir()])
         return f"{len(installed)} packages installed"
+    
+    def _get_install_command(self, package: str) -> str:
+        """Get OS-specific installation command"""
+        commands = {
+            "neovim": {
+                "linux": "sudo apt install neovim  # or: sudo dnf install neovim",
+                "mac": "brew install neovim",
+                "windows": "choco install neovim  # or: scoop install neovim"
+            },
+            "gcc": {
+                "linux": "sudo apt install build-essential",
+                "mac": "xcode-select --install  # or: brew install gcc",
+                "windows": "choco install mingw  # or download from https://www.mingw-w64.org/"
+            },
+            "clangd": {
+                "linux": "sudo apt install clangd",
+                "mac": "brew install llvm",
+                "windows": "choco install llvm"
+            },
+            "rust": {
+                "linux": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh",
+                "mac": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh",
+                "windows": "Download from https://rustup.rs/ and run installer"
+            },
+            "node": {
+                "linux": "curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt install -y nodejs",
+                "mac": "brew install node",
+                "windows": "choco install nodejs  # or download from https://nodejs.org/"
+            },
+            "python": {
+                "linux": "sudo apt install python3",
+                "mac": "brew install python3",
+                "windows": "choco install python  # or download from https://www.python.org/"
+            }
+        }
+        return commands.get(package, {}).get(self.os_type, f"Install {package} for {self.os_type}")
+    
+    def _get_nvim_config_command(self) -> str:
+        """Get OS-specific Neovim config installation command"""
+        if self.os_type == "windows":
+            return "git clone https://github.com/nvim-lua/kickstart.nvim.git $env:LOCALAPPDATA\\nvim"
+        else:
+            return "git clone https://github.com/nvim-lua/kickstart.nvim.git ~/.config/nvim"
 
     # Language runtime checks
     LANGUAGE_RUNTIMES = {
-        "c-c++": {"cmd": "gcc", "name": "GCC/G++", "install": "sudo apt install build-essential"},
-        "rust": {"cmd": "rustc", "name": "Rust compiler", "install": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"},
-        "python": {"cmd": "python3", "name": "Python 3", "install": "sudo apt install python3"},
-        "javascript": {"cmd": "node", "name": "Node.js", "install": "curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt install -y nodejs"},
-        "typescript": {"cmd": "node", "name": "Node.js", "install": "curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt install -y nodejs"},
-        "go": {"cmd": "go", "name": "Go compiler", "install": "sudo apt install golang-go"},
-        "lua": {"cmd": "lua", "name": "Lua interpreter", "install": "sudo apt install lua5.4"},
-        "dart": {"cmd": "dart", "name": "Dart SDK", "install": "sudo apt install dart"},
-        "swift": {"cmd": "swift", "name": "Swift compiler", "install": "sudo apt install swift"},
-        "kotlin": {"cmd": "kotlinc", "name": "Kotlin compiler", "install": "sudo apt install kotlin"},
-        "java": {"cmd": "javac", "name": "Java compiler", "install": "sudo apt install default-jdk"},
-        "csharp": {"cmd": "csc", "name": "C# compiler (.NET)", "install": "sudo apt install dotnet-sdk-latest"},
-        "shell": {"cmd": "bash", "name": "Bash shell", "install": "Already installed on Linux"},
-        "powershell": {"cmd": "pwsh", "name": "PowerShell Core", "install": "sudo apt install -y powershell"},
-        "zig": {"cmd": "zig", "name": "Zig compiler", "install": "Download from https://ziglang.org/download/"},
-        "sql": {"cmd": "sqlite3", "name": "SQLite3", "install": "sudo apt install sqlite3"},
-        "julia": {"cmd": "julia", "name": "Julia language", "install": "Download from https://julialang.org/downloads/"},
-        "r": {"cmd": "R", "name": "R language", "install": "sudo apt install r-base"},
-        "php": {"cmd": "php", "name": "PHP interpreter", "install": "sudo apt install php-cli"},
-        "nosql": {"cmd": "mongosh", "name": "MongoDB shell", "install": "Visit https://www.mongodb.com/try/download/shell"},
+        "c-c++": {
+            "cmd": "gcc",
+            "name": "GCC/G++",
+            "install": {
+                "linux": "sudo apt install build-essential",
+                "mac": "xcode-select --install",
+                "windows": "choco install mingw"
+            }
+        },
+        "rust": {
+            "cmd": "rustc",
+            "name": "Rust compiler",
+            "install": {
+                "linux": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh",
+                "mac": "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh",
+                "windows": "Download from https://rustup.rs/"
+            }
+        },
+        "python": {
+            "cmd": {"linux": "python3", "mac": "python3", "windows": "python"},
+            "name": "Python 3",
+            "install": {
+                "linux": "sudo apt install python3",
+                "mac": "brew install python3",
+                "windows": "choco install python"
+            }
+        },
+        "javascript": {
+            "cmd": "node",
+            "name": "Node.js",
+            "install": {
+                "linux": "curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt install -y nodejs",
+                "mac": "brew install node",
+                "windows": "choco install nodejs"
+            }
+        },
+        "typescript": {
+            "cmd": "node",
+            "name": "Node.js",
+            "install": {
+                "linux": "curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt install -y nodejs",
+                "mac": "brew install node",
+                "windows": "choco install nodejs"
+            }
+        },
+        "go": {
+            "cmd": "go",
+            "name": "Go compiler",
+            "install": {
+                "linux": "sudo apt install golang-go",
+                "mac": "brew install go",
+                "windows": "choco install golang"
+            }
+        },
+        "lua": {
+            "cmd": "lua",
+            "name": "Lua interpreter",
+            "install": {
+                "linux": "sudo apt install lua5.4",
+                "mac": "brew install lua",
+                "windows": "choco install lua"
+            }
+        },
+        "dart": {
+            "cmd": "dart",
+            "name": "Dart SDK",
+            "install": {
+                "linux": "sudo apt install dart",
+                "mac": "brew install dart",
+                "windows": "choco install dart-sdk"
+            }
+        },
+        "swift": {
+            "cmd": "swift",
+            "name": "Swift compiler",
+            "install": {
+                "linux": "sudo apt install swift",
+                "mac": "Already installed with Xcode",
+                "windows": "Download from https://swift.org/download/"
+            }
+        },
+        "kotlin": {
+            "cmd": "kotlinc",
+            "name": "Kotlin compiler",
+            "install": {
+                "linux": "sudo apt install kotlin",
+                "mac": "brew install kotlin",
+                "windows": "choco install kotlinc"
+            }
+        },
+        "java": {
+            "cmd": "javac",
+            "name": "Java compiler",
+            "install": {
+                "linux": "sudo apt install default-jdk",
+                "mac": "brew install openjdk",
+                "windows": "choco install openjdk"
+            }
+        },
+        "csharp": {
+            "cmd": {"linux": "csc", "mac": "csc", "windows": "csc"},
+            "name": "C# compiler (.NET)",
+            "install": {
+                "linux": "sudo apt install dotnet-sdk-latest",
+                "mac": "brew install dotnet",
+                "windows": "choco install dotnet-sdk"
+            }
+        },
+        "shell": {
+            "cmd": "bash",
+            "name": "Bash shell",
+            "install": {
+                "linux": "Already installed",
+                "mac": "Already installed",
+                "windows": "Git Bash (comes with Git) or WSL"
+            }
+        },
+        "powershell": {
+            "cmd": "pwsh",
+            "name": "PowerShell Core",
+            "install": {
+                "linux": "sudo apt install -y powershell",
+                "mac": "brew install powershell",
+                "windows": "Already installed (or choco install powershell-core)"
+            }
+        },
+        "zig": {
+            "cmd": "zig",
+            "name": "Zig compiler",
+            "install": {
+                "linux": "Download from https://ziglang.org/download/",
+                "mac": "brew install zig",
+                "windows": "choco install zig"
+            }
+        },
+        "sql": {
+            "cmd": "sqlite3",
+            "name": "SQLite3",
+            "install": {
+                "linux": "sudo apt install sqlite3",
+                "mac": "brew install sqlite3",
+                "windows": "choco install sqlite"
+            }
+        },
+        "julia": {
+            "cmd": "julia",
+            "name": "Julia language",
+            "install": {
+                "linux": "Download from https://julialang.org/downloads/",
+                "mac": "brew install julia",
+                "windows": "choco install julia"
+            }
+        },
+        "r": {
+            "cmd": "R",
+            "name": "R language",
+            "install": {
+                "linux": "sudo apt install r-base",
+                "mac": "brew install r",
+                "windows": "choco install r.project"
+            }
+        },
+        "php": {
+            "cmd": "php",
+            "name": "PHP interpreter",
+            "install": {
+                "linux": "sudo apt install php-cli",
+                "mac": "brew install php",
+                "windows": "choco install php"
+            }
+        },
+        "nosql": {
+            "cmd": "mongosh",
+            "name": "MongoDB shell",
+            "install": {
+                "linux": "Visit https://www.mongodb.com/try/download/shell",
+                "mac": "brew install mongosh",
+                "windows": "choco install mongodb-shell"
+            }
+        },
     }
 
     def check_language_runtime(self, language: str) -> Tuple[bool, str, Optional[str]]:
@@ -205,9 +433,18 @@ class SystemChecker:
             return True, language, None  # Unknown language, assume available
 
         runtime_info = self.LANGUAGE_RUNTIMES[language]
+        
+        # Get command (may be OS-specific)
         cmd = runtime_info["cmd"]
+        if isinstance(cmd, dict):
+            cmd = cmd.get(self.os_type, cmd.get("linux", ""))
+        
         name = runtime_info["name"]
+        
+        # Get install command for current OS
         install = runtime_info["install"]
+        if isinstance(install, dict):
+            install = install.get(self.os_type, install.get("linux", ""))
 
         is_available = self._check_command(cmd, "--version")
         return is_available, name, install if not is_available else None
@@ -284,7 +521,16 @@ class InitWizard:
     def __init__(self, learn_dir: Path):
         self.learn_dir = learn_dir
         self.checker = SystemChecker()
-        self.workspace_root = Path.home() / ".local" / "share" / "learn" / "workspaces"
+        # Use cross-platform workspace location
+        if utils:
+            if self.checker.os_type == "windows":
+                self.workspace_root = Path.home() / "AppData" / "Local" / "learn" / "workspaces"
+            elif self.checker.os_type == "mac":
+                self.workspace_root = Path.home() / "Library" / "Application Support" / "learn" / "workspaces"
+            else:
+                self.workspace_root = Path.home() / ".local" / "share" / "learn" / "workspaces"
+        else:
+            self.workspace_root = Path.home() / ".local" / "share" / "learn" / "workspaces"
 
     def run(self):
         """Run the initialization wizard"""
@@ -329,7 +575,7 @@ class InitWizard:
         if utils:
             utils.clear_screen()
         else:
-            os.system('clear' if os.name != 'nt' else 'cls')
+            os.system('cls' if os.name == 'nt' else 'clear')
 
     def _step_system_check(self):
         """Check system dependencies"""
@@ -356,7 +602,14 @@ class InitWizard:
     def _install_missing_deps(self):
         """Install missing dependencies"""
         print("\nInstalling missing dependencies...")
-        print("This may require sudo password.\n")
+        
+        os_type = self.checker.os_type
+        if os_type == "linux":
+            print("This may require sudo password.\n")
+        elif os_type == "windows":
+            print("Note: Some commands require Administrator privileges.\n")
+        elif os_type == "mac":
+            print("This may require your password.\n")
 
         for check in self.checker.checks:
             if check["status"] != "OK" and check.get("fix"):
@@ -365,6 +618,9 @@ class InitWizard:
 
                 confirm = input("  Run this command? (Y/n): ").strip().lower()
                 if confirm != 'n':
+                    if os_type == "windows" and "choco" in check['fix']:
+                        # Check if running as admin on Windows
+                        print("  Note: Chocolatey commands require Administrator privileges.")
                     os.system(check['fix'])
 
     def _step_editor_selection(self):
@@ -2099,6 +2355,257 @@ class InteractiveCLI:
         input("Press Enter to continue...")
 
 
+def reset_user_data(learn_dir: Path):
+    """Reset all user data including progress and workspaces"""
+    if console:
+        console.print("[bold cyan]╔══════════════════════════════════════════════════════════════╗[/bold cyan]")
+        console.print("[bold cyan]║              RESET USER DATA                                 ║[/bold cyan]")
+        console.print("[bold cyan]╚══════════════════════════════════════════════════════════════╝[/bold cyan]")
+        console.print("\n[bold yellow]⚠️  WARNING: This will:[/bold yellow]")
+        console.print("  [red]•[/red] Delete all lesson progress")
+        console.print("  [red]•[/red] Delete all workspace files (your code)")
+        console.print("  [red]•[/red] Delete configuration settings")
+        console.print("\n[bold]The LEARN CLI itself will remain installed.[/bold]")
+    else:
+        print("=" * 70)
+        print("  RESET USER DATA")
+        print("=" * 70)
+        print("\n⚠️  WARNING: This will:")
+        print("  • Delete all lesson progress")
+        print("  • Delete all workspace files (your code)")
+        print("  • Delete configuration settings")
+        print("\nThe LEARN CLI itself will remain installed.")
+
+    confirm = input("\nAre you ABSOLUTELY sure? (type 'DELETE' to confirm): ").strip()
+    
+    if confirm != "DELETE":
+        if console:
+            console.print("\n[bold green]Reset cancelled.[/bold green]")
+        else:
+            print("\nReset cancelled.")
+        return
+
+    # Get OS type for workspace path
+    checker = SystemChecker()
+    if checker.os_type == "windows":
+        workspace_root = Path.home() / "AppData" / "Local" / "learn" / "workspaces"
+    elif checker.os_type == "mac":
+        workspace_root = Path.home() / "Library" / "Application Support" / "learn" / "workspaces"
+    else:
+        workspace_root = Path.home() / ".local" / "share" / "learn" / "workspaces"
+
+    # Ask about keeping workspaces
+    if workspace_root.exists():
+        if console:
+            console.print("\n[bold cyan]Found workspace directory:[/bold cyan]")
+            console.print(f"  {workspace_root}")
+        else:
+            print(f"\nFound workspace directory:")
+            print(f"  {workspace_root}")
+        
+        keep_workspaces = input("\nDo you want to keep your workspace files? (Y/n): ").strip().lower()
+        delete_workspaces = keep_workspaces == 'n'
+    else:
+        delete_workspaces = False
+
+    # Delete files
+    deleted = []
+    
+    # Progress file
+    progress_file = learn_dir / ".learn-progress.json"
+    if progress_file.exists():
+        progress_file.unlink()
+        deleted.append("Progress file")
+    
+    # Config file
+    config_file = learn_dir / ".learn-config.json"
+    if config_file.exists():
+        config_file.unlink()
+        deleted.append("Configuration file")
+    
+    # Workspaces
+    if delete_workspaces and workspace_root.exists():
+        shutil.rmtree(workspace_root)
+        deleted.append("Workspace directory")
+    
+    if console:
+        console.print("\n[bold green]✓ Data reset complete![/bold green]")
+        console.print("\n[bold]Deleted:[/bold]")
+        for item in deleted:
+            console.print(f"  [green]•[/green] {item}")
+        
+        if not delete_workspaces and workspace_root.exists():
+            console.print(f"\n[bold cyan]Preserved:[/bold cyan]")
+            console.print(f"  [cyan]•[/cyan] Workspace files at {workspace_root}")
+    else:
+        print("\n✓ Data reset complete!")
+        print("\nDeleted:")
+        for item in deleted:
+            print(f"  • {item}")
+        
+        if not delete_workspaces and workspace_root.exists():
+            print(f"\nPreserved:")
+            print(f"  • Workspace files at {workspace_root}")
+
+
+def uninstall_learn(learn_dir: Path):
+    """Uninstall LEARN CLI"""
+    if console:
+        console.print("[bold cyan]╔══════════════════════════════════════════════════════════════╗[/bold cyan]")
+        console.print("[bold cyan]║              UNINSTALL LEARN CLI                             ║[/bold cyan]")
+        console.print("[bold cyan]╚══════════════════════════════════════════════════════════════╝[/bold cyan]")
+        console.print("\n[bold yellow]⚠️  WARNING: This will:[/bold yellow]")
+        console.print("  [red]•[/red] Remove the LEARN CLI command")
+        console.print("  [red]•[/red] Remove the LEARN repository")
+        console.print("  [red]•[/red] Optionally remove user data (progress and workspaces)")
+        console.print("\n[dim]Note: This will NOT uninstall Neovim, compilers, or other dependencies[/dim]")
+    else:
+        print("=" * 70)
+        print("  UNINSTALL LEARN CLI")
+        print("=" * 70)
+        print("\n⚠️  WARNING: This will:")
+        print("  • Remove the LEARN CLI command")
+        print("  • Remove the LEARN repository")
+        print("  • Optionally remove user data (progress and workspaces)")
+        print("\nNote: This will NOT uninstall Neovim, compilers, or other dependencies")
+
+    confirm = input("\nAre you sure you want to uninstall? (type 'yes' to confirm): ").strip().lower()
+    
+    if confirm != "yes":
+        if console:
+            console.print("\n[bold green]Uninstall cancelled.[/bold green]")
+        else:
+            print("\nUninstall cancelled.")
+        return
+
+    # Ask about user data
+    keep_data = input("\nDo you want to keep your user data (progress and workspaces)? (Y/n): ").strip().lower()
+    delete_data = keep_data == 'n'
+
+    if console:
+        console.print("\n[bold cyan]Uninstalling...[/bold cyan]")
+    else:
+        print("\nUninstalling...")
+
+    # Get OS type
+    checker = SystemChecker()
+    
+    # Get workspace path
+    if checker.os_type == "windows":
+        workspace_root = Path.home() / "AppData" / "Local" / "learn" / "workspaces"
+    elif checker.os_type == "mac":
+        workspace_root = Path.home() / "Library" / "Application Support" / "learn" / "workspaces"
+    else:
+        workspace_root = Path.home() / ".local" / "share" / "learn" / "workspaces"
+
+    removed = []
+    preserved = []
+
+    # Remove user data if requested
+    if delete_data:
+        # Progress file
+        progress_file = learn_dir / ".learn-progress.json"
+        if progress_file.exists():
+            progress_file.unlink()
+            removed.append("Progress file")
+        
+        # Config file
+        config_file = learn_dir / ".learn-config.json"
+        if config_file.exists():
+            config_file.unlink()
+            removed.append("Configuration file")
+        
+        # Workspaces
+        if workspace_root.exists():
+            shutil.rmtree(workspace_root)
+            removed.append("Workspace directory")
+    else:
+        if (learn_dir / ".learn-progress.json").exists():
+            preserved.append(f"Progress file at {learn_dir / '.learn-progress.json'}")
+        if workspace_root.exists():
+            preserved.append(f"Workspaces at {workspace_root}")
+
+    # Remove CLI from PATH (if possible)
+    shell_config_updated = False
+    if checker.os_type != "windows":
+        # Try to remove from shell config
+        shell_configs = [
+            Path.home() / ".bashrc",
+            Path.home() / ".zshrc",
+            Path.home() / ".profile",
+        ]
+        
+        for config_file in shell_configs:
+            if config_file.exists():
+                try:
+                    content = config_file.read_text()
+                    # Remove LEARN CLI path lines
+                    lines = content.split('\n')
+                    new_lines = []
+                    skip_next = False
+                    
+                    for line in lines:
+                        if '# Learn CLI' in line:
+                            skip_next = True
+                            continue
+                        if skip_next and 'LEARN' in line and 'PATH' in line:
+                            skip_next = False
+                            continue
+                        new_lines.append(line)
+                    
+                    if len(new_lines) < len(lines):
+                        config_file.write_text('\n'.join(new_lines))
+                        removed.append(f"PATH entry from {config_file.name}")
+                        shell_config_updated = True
+                except Exception as e:
+                    if console:
+                        console.print(f"[yellow]Could not update {config_file.name}: {e}[/yellow]")
+    else:
+        # Windows - remove from PATH (user PATH variable)
+        if console:
+            console.print("\n[yellow]Note: You may need to manually remove from PATH on Windows[/yellow]")
+
+    # Show instructions for removing repository
+    if console:
+        console.print("\n[bold green]✓ Uninstall complete![/bold green]")
+        console.print("\n[bold]Removed:[/bold]")
+        for item in removed:
+            console.print(f"  [green]•[/green] {item}")
+        
+        if preserved:
+            console.print(f"\n[bold cyan]Preserved:[/bold cyan]")
+            for item in preserved:
+                console.print(f"  [cyan]•[/cyan] {item}")
+        
+        console.print(f"\n[bold yellow]Final step:[/bold yellow]")
+        console.print(f"  To complete uninstallation, manually remove:")
+        console.print(f"  [cyan]{learn_dir}[/cyan]")
+        console.print(f"\n  Run: [yellow]rm -rf {learn_dir}[/yellow] (Linux/Mac)")
+        console.print(f"  Or:  [yellow]Remove-Item -Recurse {learn_dir}[/yellow] (Windows)")
+        
+        if shell_config_updated:
+            console.print(f"\n[bold cyan]Restart your terminal[/bold cyan] for PATH changes to take effect.")
+    else:
+        print("\n✓ Uninstall complete!")
+        print("\nRemoved:")
+        for item in removed:
+            print(f"  • {item}")
+        
+        if preserved:
+            print(f"\nPreserved:")
+            for item in preserved:
+                print(f"  • {item}")
+        
+        print(f"\nFinal step:")
+        print(f"  To complete uninstallation, manually remove:")
+        print(f"  {learn_dir}")
+        print(f"\n  Run: rm -rf {learn_dir} (Linux/Mac)")
+        print(f"  Or:  Remove-Item -Recurse {learn_dir} (Windows)")
+        
+        if shell_config_updated:
+            print(f"\nRestart your terminal for PATH changes to take effect.")
+
+
 def main():
     """Main entry point"""
     parser = argparse.ArgumentParser(
@@ -2130,6 +2637,8 @@ Examples:
     parser.add_argument("--init", action="store_true", help="Run first-time setup wizard")
     parser.add_argument("--doctor", action="store_true", help="Check system dependencies")
     parser.add_argument("--run", nargs=3, metavar=("LANG", "STAGE", "LEVEL"), help="Compile and run workspace code")
+    parser.add_argument("--reset-data", action="store_true", help="Reset all user data (progress and workspaces)")
+    parser.add_argument("--uninstall", action="store_true", help="Uninstall LEARN CLI")
 
     args = parser.parse_args()
 
@@ -2148,6 +2657,16 @@ Examples:
         checker.print_report()
 
         print("Run 'learn init' to install missing components.")
+        return
+
+    # Reset data
+    if args.reset_data:
+        reset_user_data(learn_dir)
+        return
+
+    # Uninstall
+    if args.uninstall:
+        uninstall_learn(learn_dir)
         return
 
     # Run workspace code

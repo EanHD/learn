@@ -1,6 +1,6 @@
 # Level 5: Decision Pseudocode
 
-> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> **LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.c\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -589,7 +589,7 @@ int evaluate_rules(DataItem item, Rule* rules, int rule_count) {
 ### Algorithm 1: Loan Approval System
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 int main() {
     int age, credit_score;
@@ -597,14 +597,14 @@ int main() {
     char approval_status[50] = "PENDING";
     float max_loan_amount = 0.0;
     
-    std::cout << "=== Loan Approval System ===\n");
-    std::cout << "Enter applicant's age: ");
+    printf("=== Loan Approval System ===\n");
+    printf("Enter applicant's age: ");
     scanf("%d", &age);
-    std::cout << "Enter annual income: $");
+    printf("Enter annual income: $");
     scanf("%f", &income);
-    std::cout << "Enter credit score (300-850): ");
+    printf("Enter credit score (300-850): ");
     scanf("%d", &credit_score);
-    std::cout << "Enter loan amount requested: $");
+    printf("Enter loan amount requested: $");
     scanf("%f", &loan_amount);
     
     if (age < 18) {
@@ -635,21 +635,21 @@ int main() {
         }
     }
     
-    std::cout << "\n=== Loan Decision ===\n");
-    std::cout << "Applicant age: %d\n", age);
-    std::cout << "Annual income: $%.2f\n", income);
-    std::cout << "Credit score: %d\n", credit_score);
-    std::cout << "Loan requested: $%.2f\n", loan_amount);
+    printf("\n=== Loan Decision ===\n");
+    printf("Applicant age: %d\n", age);
+    printf("Annual income: $%.2f\n", income);
+    printf("Credit score: %d\n", credit_score);
+    printf("Loan requested: $%.2f\n", loan_amount);
     
     if (strcmp(approval_status, "APPROVED") == 0) {
-        std::cout << " LOAN APPROVED!\n");
-        std::cout << "Maximum approved amount: $%.2f\n", max_loan_amount);
+        printf(" LOAN APPROVED!\n");
+        printf("Maximum approved amount: $%.2f\n", max_loan_amount);
     } else if (strcmp(approval_status, "REQUIRES MANAGER APPROVAL") == 0) {
-        std::cout << " REQUIRES MANAGER APPROVAL\n");
-        std::cout << "Reason: High loan-to-income ratio\n");
+        printf(" REQUIRES MANAGER APPROVAL\n");
+        printf("Reason: High loan-to-income ratio\n");
     } else {
-        std::cout << " LOAN DENIED\n");
-        std::cout << "Reason: %s\n", approval_status);
+        printf(" LOAN DENIED\n");
+        printf("Reason: %s\n", approval_status);
     }
     
     return 0;
@@ -667,7 +667,7 @@ int main() {
 ### Algorithm 2: Health Risk Assessment
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <string.h>
 
 int main() {
@@ -676,16 +676,16 @@ int main() {
     char smoking_status[10], exercise_status[10], family_history[10];
     char risk_level[20] = "LOW";
     
-    std::cout << "=== Health Risk Assessment ===\n");
-    std::cout << "Enter your age: ");
+    printf("=== Health Risk Assessment ===\n");
+    printf("Enter your age: ");
     scanf("%d", &age);
-    std::cout << "Enter your BMI: ");
+    printf("Enter your BMI: ");
     scanf("%f", &bmi);
-    std::cout << "Do you smoke? (yes/no): ");
+    printf("Do you smoke? (yes/no): ");
     scanf("%s", smoking_status);
-    std::cout << "Do you exercise regularly? (yes/no): ");
+    printf("Do you exercise regularly? (yes/no): ");
     scanf("%s", exercise_status);
-    std::cout << "Family history of heart disease? (yes/no): ");
+    printf("Family history of heart disease? (yes/no): ");
     scanf("%s", family_history);
     
     // Age risk
@@ -708,27 +708,27 @@ int main() {
     else if (risk_points >= 5) strcpy(risk_level, "MODERATE");
     else if (risk_points >= 3) strcpy(risk_level, "ELEVATED");
     
-    std::cout << "\n=== Health Risk Assessment Results ===\n");
-    std::cout << "Age: %d years\n", age);
-    std::cout << "BMI: %.1f\n", bmi);
-    std::cout << "Smoking: %s\n", smoking_status);
-    std::cout << "Exercise: %s\n", exercise_status);
-    std::cout << "Family history: %s\n", family_history);
-    std::cout << "Risk points: %d/12\n", risk_points);
-    std::cout << "Risk level: %s\n", risk_level);
+    printf("\n=== Health Risk Assessment Results ===\n");
+    printf("Age: %d years\n", age);
+    printf("BMI: %.1f\n", bmi);
+    printf("Smoking: %s\n", smoking_status);
+    printf("Exercise: %s\n", exercise_status);
+    printf("Family history: %s\n", family_history);
+    printf("Risk points: %d/12\n", risk_points);
+    printf("Risk level: %s\n", risk_level);
     
     if (strcmp(risk_level, "HIGH") == 0) {
-        std::cout << " HIGH RISK - Consult doctor immediately\n");
-        std::cout << "Recommendations: Lifestyle changes, medical evaluation\n");
+        printf(" HIGH RISK - Consult doctor immediately\n");
+        printf("Recommendations: Lifestyle changes, medical evaluation\n");
     } else if (strcmp(risk_level, "MODERATE") == 0) {
-        std::cout << " MODERATE RISK - Monitor health closely\n");
-        std::cout << "Recommendations: Improve diet, start exercising\n");
+        printf(" MODERATE RISK - Monitor health closely\n");
+        printf("Recommendations: Improve diet, start exercising\n");
     } else if (strcmp(risk_level, "ELEVATED") == 0) {
-        std::cout << " ELEVATED RISK - Take preventive measures\n");
-        std::cout << "Recommendations: Regular check-ups, healthy habits\n");
+        printf(" ELEVATED RISK - Take preventive measures\n");
+        printf("Recommendations: Regular check-ups, healthy habits\n");
     } else {
-        std::cout << " LOW RISK - Maintain healthy lifestyle\n");
-        std::cout << "Recommendations: Continue current healthy habits\n");
+        printf(" LOW RISK - Maintain healthy lifestyle\n");
+        printf("Recommendations: Continue current healthy habits\n");
     }
     
     return 0;
@@ -746,7 +746,7 @@ int main() {
 ### Algorithm 3: Academic Standing Calculator
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <string.h>
 
 int main() {
@@ -756,14 +756,14 @@ int main() {
     char standing[50] = "UNDETERMINED";
     char eligibility_status[30] = "ELIGIBLE";
     
-    std::cout << "=== Academic Standing Calculator ===\n");
-    std::cout << "Enter GPA (0.0-4.0): ");
+    printf("=== Academic Standing Calculator ===\n");
+    printf("Enter GPA (0.0-4.0): ");
     scanf("%f", &gpa);
-    std::cout << "Enter total credit hours completed: ");
+    printf("Enter total credit hours completed: ");
     scanf("%d", &credit_hours);
-    std::cout << "Enter number of semesters completed: ");
+    printf("Enter number of semesters completed: ");
     scanf("%d", &semesters);
-    std::cout << "Any academic probation? (yes/no): ");
+    printf("Any academic probation? (yes/no): ");
     scanf("%s", probation_status);
     
     if (strcmp(probation_status, "yes") == 0) {
@@ -794,20 +794,20 @@ int main() {
         }
     }
     
-    std::cout << "\n=== Academic Assessment ===\n");
-    std::cout << "GPA: %.2f\n", gpa);
-    std::cout << "Credit Hours: %d\n", credit_hours);
-    std::cout << "Semesters: %d\n", semesters);
-    std::cout << "Probation Status: %s\n", probation_status);
-    std::cout << "Academic Standing: %s\n", standing);
-    std::cout << "Eligibility Status: %s\n", eligibility_status);
+    printf("\n=== Academic Assessment ===\n");
+    printf("GPA: %.2f\n", gpa);
+    printf("Credit Hours: %d\n", credit_hours);
+    printf("Semesters: %d\n", semesters);
+    printf("Probation Status: %s\n", probation_status);
+    printf("Academic Standing: %s\n", standing);
+    printf("Eligibility Status: %s\n", eligibility_status);
     
     if (strcmp(eligibility_status, "ELIGIBLE") == 0) {
-        std::cout << " Eligible for all academic activities\n");
+        printf(" Eligible for all academic activities\n");
     } else if (strcmp(eligibility_status, "RESTRICTED") == 0) {
-        std::cout << " Limited eligibility - Academic plan required\n");
+        printf(" Limited eligibility - Academic plan required\n");
     } else {
-        std::cout << " Counseling required - Contact academic advisor\n");
+        printf(" Counseling required - Contact academic advisor\n");
     }
     
     return 0;
@@ -825,7 +825,7 @@ int main() {
 ### Algorithm 4: Insurance Premium Calculator
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <string.h>
 
 int main() {
@@ -833,16 +833,16 @@ int main() {
     char vehicle_type[20], accident_history[10];
     float base_premium = 500.0, risk_multiplier = 1.0, final_premium;
     
-    std::cout << "=== Auto Insurance Premium Calculator ===\n");
-    std::cout << "Enter driver's age: ");
+    printf("=== Auto Insurance Premium Calculator ===\n");
+    printf("Enter driver's age: ");
     scanf("%d", &age);
-    std::cout << "Enter years of driving experience: ");
+    printf("Enter years of driving experience: ");
     scanf("%d", &experience);
-    std::cout << "Enter vehicle type (sedan/suv/truck/sports): ");
+    printf("Enter vehicle type (sedan/suv/truck/sports): ");
     scanf("%s", vehicle_type);
-    std::cout << "Any accidents in last 3 years? (yes/no): ");
+    printf("Any accidents in last 3 years? (yes/no): ");
     scanf("%s", accident_history);
-    std::cout << "Annual mileage: ");
+    printf("Annual mileage: ");
     scanf("%d", &mileage);
     
     // Age risk
@@ -867,25 +867,25 @@ int main() {
     
     final_premium = base_premium * risk_multiplier;
     
-    std::cout << "\n=== Premium Calculation ===\n");
-    std::cout << "Driver Age: %d\n", age);
-    std::cout << "Driving Experience: %d years\n", experience);
-    std::cout << "Vehicle Type: %s\n", vehicle_type);
-    std::cout << "Accident History: %s\n", accident_history);
-    std::cout << "Annual Mileage: %d\n", mileage);
-    std::cout << "Base Premium: $%.2f\n", base_premium);
-    std::cout << "Risk Multiplier: %.2f\n", risk_multiplier);
-    std::cout << "Final Premium: $%.2f\n", final_premium);
+    printf("\n=== Premium Calculation ===\n");
+    printf("Driver Age: %d\n", age);
+    printf("Driving Experience: %d years\n", experience);
+    printf("Vehicle Type: %s\n", vehicle_type);
+    printf("Accident History: %s\n", accident_history);
+    printf("Annual Mileage: %d\n", mileage);
+    printf("Base Premium: $%.2f\n", base_premium);
+    printf("Risk Multiplier: %.2f\n", risk_multiplier);
+    printf("Final Premium: $%.2f\n", final_premium);
     
     if (risk_multiplier > 2.0) {
-        std::cout << " HIGH RISK PROFILE\n");
-        std::cout << "Consider defensive driving courses\n");
+        printf(" HIGH RISK PROFILE\n");
+        printf("Consider defensive driving courses\n");
     } else if (risk_multiplier > 1.5) {
-        std::cout << " MODERATE RISK PROFILE\n");
-        std::cout << "Safe driving discount may apply\n");
+        printf(" MODERATE RISK PROFILE\n");
+        printf("Safe driving discount may apply\n");
     } else {
-        std::cout << " LOW RISK PROFILE\n");
-        std::cout << "Eligible for premium discounts\n");
+        printf(" LOW RISK PROFILE\n");
+        printf("Eligible for premium discounts\n");
     }
     
     return 0;
@@ -903,7 +903,7 @@ int main() {
 ### Algorithm 5: Travel Itinerary Planner
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <string.h>
 
 int main() {
@@ -912,41 +912,41 @@ int main() {
     float daily_budget, total_cost = 0.0;
     float accommodation_cost, food_cost, activity_cost, transportation_cost, miscellaneous_cost, total_budget;
     
-    std::cout << "=== Travel Itinerary Planner ===\n");
-    std::cout << "Enter destination city: ");
+    printf("=== Travel Itinerary Planner ===\n");
+    printf("Enter destination city: ");
     scanf("%s", destination);
-    std::cout << "Enter trip duration in days: ");
+    printf("Enter trip duration in days: ");
     scanf("%d", &trip_days);
-    std::cout << "Enter budget per day: $");
+    printf("Enter budget per day: $");
     scanf("%f", &daily_budget);
-    std::cout << "Travel season (spring/summer/fall/winter): ");
+    printf("Travel season (spring/summer/fall/winter): ");
     scanf("%s", season);
-    std::cout << "Group size: ");
+    printf("Group size: ");
     scanf("%d", &group_size);
     
     // Seasonal activity planning
     if (strcmp(season, "summer") == 0) {
         if (strstr(destination, "beach") != NULL || strstr(destination, "Beach") != NULL) {
-            std::cout << " Beach activities recommended\n");
+            printf(" Beach activities recommended\n");
             total_cost += 50;
             activity_count = 5;
         } else {
-            std::cout << " Mountain activities recommended\n");
+            printf(" Mountain activities recommended\n");
             total_cost += 40;
             activity_count = 4;
         }
     } else if (strcmp(season, "winter") == 0) {
         if (strstr(destination, "mountain") != NULL || strstr(destination, "Mountain") != NULL) {
-            std::cout << " Skiing activities recommended\n");
+            printf(" Skiing activities recommended\n");
             total_cost += 80;
             activity_count = 3;
         } else {
-            std::cout << " Cultural activities recommended\n");
+            printf(" Cultural activities recommended\n");
             total_cost += 30;
             activity_count = 4;
         }
     } else {
-        std::cout << " Outdoor activities recommended\n");
+        printf(" Outdoor activities recommended\n");
         total_cost += 35;
         activity_count = 4;
     }
@@ -963,28 +963,28 @@ int main() {
     if (group_size > 4) {
         float group_discount = total_budget * 0.1;
         total_budget -= group_discount;
-        std::cout << " Group discount applied: $%.2f\n", group_discount);
+        printf(" Group discount applied: $%.2f\n", group_discount);
     }
     
-    std::cout << "\n=== Travel Itinerary ===\n");
-    std::cout << "Destination: %s\n", destination);
-    std::cout << "Duration: %d days\n", trip_days);
-    std::cout << "Season: %s\n", season);
-    std::cout << "Group Size: %d\n", group_size);
-    std::cout << "Daily Budget: $%.2f\n", daily_budget);
-    std::cout << "\n=== Cost Breakdown ===\n");
-    std::cout << "Accommodation: $%.2f\n", accommodation_cost);
-    std::cout << "Food: $%.2f\n", food_cost);
-    std::cout << "Activities: $%.2f (%.0f per day)\n", activity_cost, total_cost);
-    std::cout << "Transportation: $%.2f\n", transportation_cost);
-    std::cout << "Miscellaneous: $%.2f\n", miscellaneous_cost);
-    std::cout << "Total Estimated Cost: $%.2f\n", total_budget);
+    printf("\n=== Travel Itinerary ===\n");
+    printf("Destination: %s\n", destination);
+    printf("Duration: %d days\n", trip_days);
+    printf("Season: %s\n", season);
+    printf("Group Size: %d\n", group_size);
+    printf("Daily Budget: $%.2f\n", daily_budget);
+    printf("\n=== Cost Breakdown ===\n");
+    printf("Accommodation: $%.2f\n", accommodation_cost);
+    printf("Food: $%.2f\n", food_cost);
+    printf("Activities: $%.2f (%.0f per day)\n", activity_cost, total_cost);
+    printf("Transportation: $%.2f\n", transportation_cost);
+    printf("Miscellaneous: $%.2f\n", miscellaneous_cost);
+    printf("Total Estimated Cost: $%.2f\n", total_budget);
     
     float budget_limit = daily_budget * trip_days;
     if (total_budget > budget_limit) {
-        std::cout << " Budget exceeded by $%.2f\n", total_budget - budget_limit);
+        printf(" Budget exceeded by $%.2f\n", total_budget - budget_limit);
     } else {
-        std::cout << " Within budget - $%.2f remaining\n", budget_limit - total_budget);
+        printf(" Within budget - $%.2f remaining\n", budget_limit - total_budget);
     }
     
     return 0;
@@ -1002,7 +1002,7 @@ int main() {
 ### Algorithm 6: Employee Performance Review
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <string.h>
 
 int main() {
@@ -1011,18 +1011,18 @@ int main() {
     float average_score, salary_adjustment = 0.0;
     char performance_rating[30] = "UNDETERMINED";
     
-    std::cout << "=== Employee Performance Review ===\n");
-    std::cout << "Enter employee name: ");
+    printf("=== Employee Performance Review ===\n");
+    printf("Enter employee name: ");
     scanf("%s", employee_name);
-    std::cout << "Enter years of service: ");
+    printf("Enter years of service: ");
     scanf("%d", &years_service);
-    std::cout << "Enter productivity score (1-10): ");
+    printf("Enter productivity score (1-10): ");
     scanf("%d", &productivity);
-    std::cout << "Enter quality score (1-10): ");
+    printf("Enter quality score (1-10): ");
     scanf("%d", &quality);
-    std::cout << "Enter teamwork score (1-10): ");
+    printf("Enter teamwork score (1-10): ");
     scanf("%d", &teamwork);
-    std::cout << "Any disciplinary actions? (yes/no): ");
+    printf("Any disciplinary actions? (yes/no): ");
     scanf("%s", disciplinary_status);
     
     average_score = (productivity + quality + teamwork) / 3.0;
@@ -1054,26 +1054,26 @@ int main() {
         }
     }
     
-    std::cout << "\n=== Performance Review Results ===\n");
-    std::cout << "Employee: %s\n", employee_name);
-    std::cout << "Years of Service: %d\n", years_service);
-    std::cout << "Productivity Score: %d/10\n", productivity);
-    std::cout << "Quality Score: %d/10\n", quality);
-    std::cout << "Teamwork Score: %d/10\n", teamwork);
-    std::cout << "Average Score: %.1f/10\n", average_score);
-    std::cout << "Disciplinary Actions: %s\n", disciplinary_status);
-    std::cout << "Performance Rating: %s\n", performance_rating);
-    std::cout << "Salary Adjustment: %.1f%%\n", salary_adjustment);
+    printf("\n=== Performance Review Results ===\n");
+    printf("Employee: %s\n", employee_name);
+    printf("Years of Service: %d\n", years_service);
+    printf("Productivity Score: %d/10\n", productivity);
+    printf("Quality Score: %d/10\n", quality);
+    printf("Teamwork Score: %d/10\n", teamwork);
+    printf("Average Score: %.1f/10\n", average_score);
+    printf("Disciplinary Actions: %s\n", disciplinary_status);
+    printf("Performance Rating: %s\n", performance_rating);
+    printf("Salary Adjustment: %.1f%%\n", salary_adjustment);
     
     if (strcmp(performance_rating, "OUTSTANDING") == 0) {
-        std::cout << " EMPLOYEE OF THE YEAR CANDIDATE\n");
-        std::cout << "Eligible for bonus and promotion consideration\n");
+        printf(" EMPLOYEE OF THE YEAR CANDIDATE\n");
+        printf("Eligible for bonus and promotion consideration\n");
     } else if (strcmp(performance_rating, "UNSATISFACTORY") == 0) {
-        std::cout << " PERFORMANCE IMPROVEMENT PLAN REQUIRED\n");
-        std::cout << "Mandatory counseling and training\n");
+        printf(" PERFORMANCE IMPROVEMENT PLAN REQUIRED\n");
+        printf("Mandatory counseling and training\n");
     } else {
-        std::cout << " Performance review complete\n");
-        std::cout << "Continue professional development\n");
+        printf(" Performance review complete\n");
+        printf("Continue professional development\n");
     }
     
     return 0;
@@ -1123,7 +1123,7 @@ if (condition1) {
 ```c
 // Good - fail fast
 if (invalid_input) {
-    std::cout << "Error: Invalid input\n");
+    printf("Error: Invalid input\n");
     return;
 }
 // continue with valid input
@@ -1166,10 +1166,10 @@ Key functions and their purpose:
 ### Complete Solution
 
 ```cpp
-#include <iostream>
+#include <stdio.h>
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    printf("Hello, World!\n");
     return 0;
 }
 ```
@@ -1179,14 +1179,14 @@ int main() {
 This solution demonstrates the key concepts from this lesson:
 
 1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses std::cout to print messages to the console
-3. **Standard Library**: Includes iostream for input/output operations
+2. **Output**: Uses printf to print messages to the console
+3. **Standard Library**: Includes stdio.h for input/output operations
 4. **Return Value**: Returns 0 to indicate successful execution
 5. **Best Practices**: Code is readable and uses C++ idioms
 
 ### Testing Your Solution
 
-1. **Compile**: `g++ hello.cpp -o hello`
+1. **Compile**: `gcc main.c -o main`
 2. **Run**: `./hello`
 3. **Expected Output**: `Hello, World!`
 
@@ -1194,13 +1194,13 @@ This solution demonstrates the key concepts from this lesson:
 
 | Error | Cause | Solution |
 |-------|-------|----------|
-| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
 | `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+| `error: implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
 
 ### Tips for Learning
 
-- C++ is a superset of C with additional features
-- `std::cout` is the C++ way to print (replaces `printf`)
-- `std::endl` adds a newline and flushes the buffer
-- The `std::` prefix means these are from the "standard" namespace
+- C uses stdio.h for input/output with additional features
+- `printf` is the C standard for formatted output
+- `\n` adds a newline character in format strings
+- Format specifiers control how data is displayed (%d, %f, %s, etc.)

@@ -1,6 +1,6 @@
 # Level 7: Function Pseudocode
 
-> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> **LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.c\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -743,21 +743,21 @@ Calculator* create_calculator(CalculationType type) {
 ### Algorithm 1: Calculator Program with Functions
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 void display_menu() {
-    std::cout << "=== Calculator Menu ===\n");
-    std::cout << "1. Addition\n");
-    std::cout << "2. Subtraction\n");
-    std::cout << "3. Multiplication\n");
-    std::cout << "4. Division\n");
-    std::cout << "5. Exit\n");
-    std::cout << "Choose operation (1-5): ");
+    printf("=== Calculator Menu ===\n");
+    printf("1. Addition\n");
+    printf("2. Subtraction\n");
+    printf("3. Multiplication\n");
+    printf("4. Division\n");
+    printf("5. Exit\n");
+    printf("Choose operation (1-5): ");
 }
 
 float get_number(const char* prompt) {
     float number;
-    std::cout << "%s", prompt);
+    printf("%s", prompt);
     scanf("%f", &number);
     return number;
 }
@@ -776,14 +776,14 @@ float perform_multiplication(float a, float b) {
 
 float perform_division(float a, float b) {
     if (b == 0) {
-        std::cout << " Error: Division by zero!\n");
+        printf(" Error: Division by zero!\n");
         return 0;
     }
     return a / b;
 }
 
 void display_result(const char* operation, float a, float b, float result) {
-    std::cout << "Result: %.2f %s %.2f = %.2f\n", a, operation, b, result);
+    printf("Result: %.2f %s %.2f = %.2f\n", a, operation, b, result);
 }
 
 int main() {
@@ -822,11 +822,11 @@ int main() {
         } else if (choice == 5) {
             running = 0;
         } else {
-            std::cout << " Invalid choice!\n");
+            printf(" Invalid choice!\n");
         }
     }
     
-    std::cout << "Thank you for using the calculator! \n");
+    printf("Thank you for using the calculator! \n");
     return 0;
 }
 ```cpp
@@ -842,17 +842,17 @@ int main() {
 ### Algorithm 2: Student Grade Management System
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <string.h>
 
 void display_main_menu() {
-    std::cout << "=== Grade Management System ===\n");
-    std::cout << "1. Add Student\n");
-    std::cout << "2. View All Students\n");
-    std::cout << "3. Calculate Class Average\n");
-    std::cout << "4. Find Top Performer\n");
-    std::cout << "5. Exit\n");
-    std::cout << "Choose option (1-5): ");
+    printf("=== Grade Management System ===\n");
+    printf("1. Add Student\n");
+    printf("2. View All Students\n");
+    printf("3. Calculate Class Average\n");
+    printf("4. Find Top Performer\n");
+    printf("5. Exit\n");
+    printf("Choose option (1-5): ");
 }
 
 int add_student(char students[50][50], float grades[50], int* count) {
@@ -860,35 +860,35 @@ int add_student(char students[50][50], float grades[50], int* count) {
         char name[50];
         float grade;
         
-        std::cout << "Enter student name: ");
+        printf("Enter student name: ");
         scanf("%s", name);
-        std::cout << "Enter grade (0-100): ");
+        printf("Enter grade (0-100): ");
         scanf("%f", &grade);
         
         if (grade >= 0 && grade <= 100) {
             strcpy(students[*count], name);
             grades[*count] = grade;
             (*count)++;
-            std::cout << " Student added successfully!\n");
+            printf(" Student added successfully!\n");
             return 1;
         } else {
-            std::cout << " Invalid grade!\n");
+            printf(" Invalid grade!\n");
             return 0;
         }
     } else {
-        std::cout << " Student list is full!\n");
+        printf(" Student list is full!\n");
         return 0;
     }
 }
 
 void display_all_students(char students[50][50], float grades[50], int count) {
     if (count > 0) {
-        std::cout << "=== Student List ===\n");
+        printf("=== Student List ===\n");
         for (int i = 0; i < count; i++) {
-            std::cout << "%d. %s - %.1f%%\n", i + 1, students[i], grades[i]);
+            printf("%d. %s - %.1f%%\n", i + 1, students[i], grades[i]);
         }
     } else {
-        std::cout << " No students in the system.\n");
+        printf(" No students in the system.\n");
     }
 }
 
@@ -942,9 +942,9 @@ int main() {
             case 3: {
                 float average = calculate_class_average(grades, student_count);
                 if (student_count > 0) {
-                    std::cout << " Class Average: %.1f%%\n", average);
+                    printf(" Class Average: %.1f%%\n", average);
                 } else {
-                    std::cout << " No students to average.\n");
+                    printf(" No students to average.\n");
                 }
                 break;
             }
@@ -954,9 +954,9 @@ int main() {
                 find_top_performer(students, grades, student_count, top_student, &max_grade);
                 
                 if (strcmp(top_student, "No students") != 0) {
-                    std::cout << " Top Performer: %s (%.1f%%)\n", top_student, max_grade);
+                    printf(" Top Performer: %s (%.1f%%)\n", top_student, max_grade);
                 } else {
-                    std::cout << " No students in the system.\n");
+                    printf(" No students in the system.\n");
                 }
                 break;
             }
@@ -964,12 +964,12 @@ int main() {
                 running = 0;
                 break;
             default:
-                std::cout << " Invalid choice!\n");
+                printf(" Invalid choice!\n");
                 break;
         }
     }
     
-    std::cout << "Thank you for using Grade Management System! \n");
+    printf("Thank you for using Grade Management System! \n");
     return 0;
 }
 ```cpp
@@ -985,30 +985,30 @@ int main() {
 ### Algorithm 3: Library Book System
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <string.h>
 
 void display_library_menu() {
-    std::cout << "=== Library Management ===\n");
-    std::cout << "1. Add Book\n");
-    std::cout << "2. Search Books\n");
-    std::cout << "3. Display All Books\n");
-    std::cout << "4. Check Out Book\n");
-    std::cout << "5. Return Book\n");
-    std::cout << "6. Exit\n");
-    std::cout << "Choose option (1-6): ");
+    printf("=== Library Management ===\n");
+    printf("1. Add Book\n");
+    printf("2. Search Books\n");
+    printf("3. Display All Books\n");
+    printf("4. Check Out Book\n");
+    printf("5. Return Book\n");
+    printf("6. Exit\n");
+    printf("Choose option (1-6): ");
 }
 
 int add_book(char titles[100][100], char authors[100][50], int available[100], int* count) {
     if (*count < 100) {
         char title[100], author[50];
         
-        std::cout << "Enter book title: ");
+        printf("Enter book title: ");
         getchar(); // Clear newline
         fgets(title, sizeof(title), stdin);
         title[strcspn(title, "\n")] = '\0'; // Remove newline
         
-        std::cout << "Enter author name: ");
+        printf("Enter author name: ");
         fgets(author, sizeof(author), stdin);
         author[strcspn(author, "\n")] = '\0';
         
@@ -1017,10 +1017,10 @@ int add_book(char titles[100][100], char authors[100][50], int available[100], i
         available[*count] = 1; // true
         (*count)++;
         
-        std::cout << " Book added successfully!\n");
+        printf(" Book added successfully!\n");
         return 1;
     } else {
-        std::cout << " Library is full!\n");
+        printf(" Library is full!\n");
         return 0;
     }
 }
@@ -1028,18 +1028,18 @@ int add_book(char titles[100][100], char authors[100][50], int available[100], i
 int search_books(char titles[100][100], char authors[100][50], int available[100], 
                 int count, const char* search_term) {
     int found_count = 0;
-    std::cout << "=== Search Results for '%s' ===\n", search_term);
+    printf("=== Search Results for '%s' ===\n", search_term);
     
     for (int i = 0; i < count; i++) {
         if (strstr(titles[i], search_term) != NULL || strstr(authors[i], search_term) != NULL) {
-            std::cout << " %s by %s\n", titles[i], authors[i]);
-            std::cout << "   Status: %s\n", available[i] ? "Available " : "Checked Out ");
+            printf(" %s by %s\n", titles[i], authors[i]);
+            printf("   Status: %s\n", available[i] ? "Available " : "Checked Out ");
             found_count++;
         }
     }
     
     if (found_count == 0) {
-        std::cout << " No books found matching '%s'\n", search_term);
+        printf(" No books found matching '%s'\n", search_term);
     }
     
     return found_count;
@@ -1047,13 +1047,13 @@ int search_books(char titles[100][100], char authors[100][50], int available[100
 
 void display_all_books(char titles[100][100], char authors[100][50], int available[100], int count) {
     if (count > 0) {
-        std::cout << "=== Library Collection ===\n");
+        printf("=== Library Collection ===\n");
         for (int i = 0; i < count; i++) {
-            std::cout << "%d. %s by %s\n", i + 1, titles[i], authors[i]);
-            std::cout << "   Status: %s\n", available[i] ? "Available " : "Checked Out ");
+            printf("%d. %s by %s\n", i + 1, titles[i], authors[i]);
+            printf("   Status: %s\n", available[i] ? "Available " : "Checked Out ");
         }
     } else {
-        std::cout << " Library is empty.\n");
+        printf(" Library is empty.\n");
     }
 }
 
@@ -1061,11 +1061,11 @@ int checkout_book(char titles[100][100], int available[100], int count, const ch
     for (int i = 0; i < count; i++) {
         if (strcmp(titles[i], book_title) == 0 && available[i]) {
             available[i] = 0; // false
-            std::cout << " '%s' checked out successfully!\n", book_title);
+            printf(" '%s' checked out successfully!\n", book_title);
             return 1;
         }
     }
-    std::cout << " Book not found or already checked out.\n");
+    printf(" Book not found or already checked out.\n");
     return 0;
 }
 
@@ -1073,11 +1073,11 @@ int return_book(char titles[100][100], int available[100], int count, const char
     for (int i = 0; i < count; i++) {
         if (strcmp(titles[i], book_title) == 0 && !available[i]) {
             available[i] = 1; // true
-            std::cout << " '%s' returned successfully!\n", book_title);
+            printf(" '%s' returned successfully!\n", book_title);
             return 1;
         }
     }
-    std::cout << " Book not found or not checked out.\n");
+    printf(" Book not found or not checked out.\n");
     return 0;
 }
 
@@ -1099,7 +1099,7 @@ int main() {
                 break;
             case 2: {
                 char search_term[100];
-                std::cout << "Enter search term: ");
+                printf("Enter search term: ");
                 getchar(); // Clear newline
                 fgets(search_term, sizeof(search_term), stdin);
                 search_term[strcspn(search_term, "\n")] = '\0';
@@ -1111,7 +1111,7 @@ int main() {
                 break;
             case 4: {
                 char book_title[100];
-                std::cout << "Enter book title to check out: ");
+                printf("Enter book title to check out: ");
                 getchar(); // Clear newline
                 fgets(book_title, sizeof(book_title), stdin);
                 book_title[strcspn(book_title, "\n")] = '\0';
@@ -1120,7 +1120,7 @@ int main() {
             }
             case 5: {
                 char book_title[100];
-                std::cout << "Enter book title to return: ");
+                printf("Enter book title to return: ");
                 getchar(); // Clear newline
                 fgets(book_title, sizeof(book_title), stdin);
                 book_title[strcspn(book_title, "\n")] = '\0';
@@ -1131,12 +1131,12 @@ int main() {
                 running = 0;
                 break;
             default:
-                std::cout << " Invalid choice!\n");
+                printf(" Invalid choice!\n");
                 break;
         }
     }
     
-    std::cout << "Thank you for using Library Management System! \n");
+    printf("Thank you for using Library Management System! \n");
     return 0;
 }
 ```cpp
@@ -1152,7 +1152,7 @@ int main() {
 ### Algorithm 4: Math Quiz Game
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <stdlib.h>
 # include <time.h>
 
@@ -1179,23 +1179,23 @@ int calculate_answer(int num1, char operation, int num2) {
 }
 
 void display_question(int num1, char operation, int num2, int question_number) {
-    std::cout << "Question %d:\n", question_number);
-    std::cout << "What is %d %c %d?\n", num1, operation, num2);
+    printf("Question %d:\n", question_number);
+    printf("What is %d %c %d?\n", num1, operation, num2);
 }
 
 int get_user_answer() {
     int answer;
-    std::cout << "Your answer: ");
+    printf("Your answer: ");
     scanf("%d", &answer);
     return answer;
 }
 
 int check_answer(int user_answer, int correct_answer) {
     if (user_answer == correct_answer) {
-        std::cout << " Correct!\n");
+        printf(" Correct!\n");
         return 1;
     } else {
-        std::cout << " Incorrect. The answer is %d\n", correct_answer);
+        printf(" Incorrect. The answer is %d\n", correct_answer);
         return 0;
     }
 }
@@ -1203,30 +1203,30 @@ int check_answer(int user_answer, int correct_answer) {
 void display_score(int correct_answers, int total_questions) {
     float percentage = (float)correct_answers / total_questions * 100;
     
-    std::cout << "=== Quiz Complete ===\n");
-    std::cout << "Score: %d/%d (%.1f%%)\n", correct_answers, total_questions, percentage);
+    printf("=== Quiz Complete ===\n");
+    printf("Score: %d/%d (%.1f%%)\n", correct_answers, total_questions, percentage);
     
     if (percentage >= 90) {
-        std::cout << " Excellent! Math Master!\n");
+        printf(" Excellent! Math Master!\n");
     } else if (percentage >= 70) {
-        std::cout << " Good job!\n");
+        printf(" Good job!\n");
     } else if (percentage >= 50) {
-        std::cout << " Keep practicing!\n");
+        printf(" Keep practicing!\n");
     } else {
-        std::cout << " Don't give up! Try again!\n");
+        printf(" Don't give up! Try again!\n");
     }
 }
 
 int main() {
     srand(time(NULL)); // Seed random number generator
     
-    std::cout << "=== Math Quiz Game ===\n");
-    std::cout << "How many questions? (1-20): ");
+    printf("=== Math Quiz Game ===\n");
+    printf("How many questions? (1-20): ");
     int num_questions;
     scanf("%d", &num_questions);
     
     while (num_questions < 1 || num_questions > 20) {
-        std::cout << " Please enter 1-20 questions.\n");
+        printf(" Please enter 1-20 questions.\n");
         scanf("%d", &num_questions);
     }
     
@@ -1246,11 +1246,11 @@ int main() {
             correct_count++;
         }
         
-        std::cout << "\n");
+        printf("\n");
     }
     
     display_score(correct_count, num_questions);
-    std::cout << "Thanks for playing! \n");
+    printf("Thanks for playing! \n");
     
     return 0;
 }
@@ -1267,30 +1267,30 @@ int main() {
 ### Algorithm 5: Bank Account Manager
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <string.h>
 
 void display_account_menu() {
-    std::cout << "=== Bank Account Menu ===\n");
-    std::cout << "1. Check Balance\n");
-    std::cout << "2. Deposit Money\n");
-    std::cout << "3. Withdraw Money\n");
-    std::cout << "4. View Transaction History\n");
-    std::cout << "5. Exit\n");
-    std::cout << "Choose option (1-5): ");
+    printf("=== Bank Account Menu ===\n");
+    printf("1. Check Balance\n");
+    printf("2. Deposit Money\n");
+    printf("3. Withdraw Money\n");
+    printf("4. View Transaction History\n");
+    printf("5. Exit\n");
+    printf("Choose option (1-5): ");
 }
 
 void display_balance(float balance) {
-    std::cout << " Current Balance: $%.2f\n", balance);
+    printf(" Current Balance: $%.2f\n", balance);
 }
 
 float deposit_money(float balance, float amount) {
     if (amount > 0) {
         balance += amount;
-        std::cout << " Deposit successful! New balance: $%.2f\n", balance);
+        printf(" Deposit successful! New balance: $%.2f\n", balance);
         return balance;
     } else {
-        std::cout << " Deposit amount must be positive!\n");
+        printf(" Deposit amount must be positive!\n");
         return balance;
     }
 }
@@ -1299,14 +1299,14 @@ float withdraw_money(float balance, float amount) {
     if (amount > 0) {
         if (amount <= balance) {
             balance -= amount;
-            std::cout << " Withdrawal successful! New balance: $%.2f\n", balance);
+            printf(" Withdrawal successful! New balance: $%.2f\n", balance);
             return balance;
         } else {
-            std::cout << " Insufficient funds!\n");
+            printf(" Insufficient funds!\n");
             return balance;
         }
     } else {
-        std::cout << " Withdrawal amount must be positive!\n");
+        printf(" Withdrawal amount must be positive!\n");
         return balance;
     }
 }
@@ -1322,7 +1322,7 @@ int add_transaction(char transactions[100][20], float amounts[100],
         (*count)++;
         return 1;
     } else {
-        std::cout << " Transaction history is full!\n");
+        printf(" Transaction history is full!\n");
         return 0;
     }
 }
@@ -1330,12 +1330,12 @@ int add_transaction(char transactions[100][20], float amounts[100],
 void display_transaction_history(char transactions[100][20], float amounts[100], 
                                char descriptions[100][30], int count) {
     if (count > 0) {
-        std::cout << "=== Transaction History ===\n");
+        printf("=== Transaction History ===\n");
         for (int i = count - 1; i >= 0; i--) { // Most recent first
-            std::cout << "%s - %s $%.2f\n", transactions[i], descriptions[i], amounts[i]);
+            printf("%s - %s $%.2f\n", transactions[i], descriptions[i], amounts[i]);
         }
     } else {
-        std::cout << " No transactions yet.\n");
+        printf(" No transactions yet.\n");
     }
 }
 
@@ -1357,7 +1357,7 @@ int main() {
                 display_balance(balance);
                 break;
             case 2: {
-                std::cout << "Enter deposit amount: $");
+                printf("Enter deposit amount: $");
                 float amount;
                 scanf("%f", &amount);
                 float old_balance = balance;
@@ -1369,7 +1369,7 @@ int main() {
                 break;
             }
             case 3: {
-                std::cout << "Enter withdrawal amount: $");
+                printf("Enter withdrawal amount: $");
                 float amount;
                 scanf("%f", &amount);
                 float old_balance = balance;
@@ -1387,12 +1387,12 @@ int main() {
                 running = 0;
                 break;
             default:
-                std::cout << " Invalid choice!\n");
+                printf(" Invalid choice!\n");
                 break;
         }
     }
     
-    std::cout << "Thank you for banking with us! \n");
+    printf("Thank you for banking with us! \n");
     return 0;
 }
 ```cpp
@@ -1408,7 +1408,7 @@ int main() {
 ### Algorithm 6: Text Analyzer
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <string.h>
 # include <ctype.h>
 
@@ -1503,17 +1503,17 @@ void display_analysis(const char* text) {
     int freq_count;
     find_most_frequent_character(text, &most_frequent, &freq_count);
     
-    std::cout << "=== Text Analysis Results ===\n");
-    std::cout << "Characters: %d\n", char_count);
-    std::cout << "Words: %d\n", word_count);
-    std::cout << "Sentences: %d\n", sentence_count);
-    std::cout << "Average word length: %.1f characters\n", avg_word_length);
-    std::cout << "Most frequent character: '%c' (%d times)\n", most_frequent, freq_count);
+    printf("=== Text Analysis Results ===\n");
+    printf("Characters: %d\n", char_count);
+    printf("Words: %d\n", word_count);
+    printf("Sentences: %d\n", sentence_count);
+    printf("Average word length: %.1f characters\n", avg_word_length);
+    printf("Most frequent character: '%c' (%d times)\n", most_frequent, freq_count);
 }
 
 int main() {
-    std::cout << "=== Text Analyzer ===\n");
-    std::cout << "Enter text to analyze (max 1000 characters):\n");
+    printf("=== Text Analyzer ===\n");
+    printf("Enter text to analyze (max 1000 characters):\n");
     
     char text[1001];
     fgets(text, sizeof(text), stdin);
@@ -1524,10 +1524,10 @@ int main() {
     if (strlen(text) > 0) {
         display_analysis(text);
     } else {
-        std::cout << " No text entered.\n");
+        printf(" No text entered.\n");
     }
     
-    std::cout << "Analysis complete! \n");
+    printf("Analysis complete! \n");
     return 0;
 }
 ```cpp
@@ -1595,10 +1595,10 @@ Key functions and their purpose:
 ### Complete Solution
 
 ```cpp
-#include <iostream>
+#include <stdio.h>
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    printf("Hello, World!\n");
     return 0;
 }
 ```
@@ -1608,14 +1608,14 @@ int main() {
 This solution demonstrates the key concepts from this lesson:
 
 1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses std::cout to print messages to the console
-3. **Standard Library**: Includes iostream for input/output operations
+2. **Output**: Uses printf to print messages to the console
+3. **Standard Library**: Includes stdio.h for input/output operations
 4. **Return Value**: Returns 0 to indicate successful execution
 5. **Best Practices**: Code is readable and uses C++ idioms
 
 ### Testing Your Solution
 
-1. **Compile**: `g++ hello.cpp -o hello`
+1. **Compile**: `gcc main.c -o main`
 2. **Run**: `./hello`
 3. **Expected Output**: `Hello, World!`
 
@@ -1623,13 +1623,13 @@ This solution demonstrates the key concepts from this lesson:
 
 | Error | Cause | Solution |
 |-------|-------|----------|
-| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
 | `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+| `error: implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
 
 ### Tips for Learning
 
 - C++ is a superset of C with additional features
-- `std::cout` is the C++ way to print (replaces `printf`)
-- `std::endl` adds a newline and flushes the buffer
-- The `std::` prefix means these are from the "standard" namespace
+- `printf` is the C standard for formatted output
+- `\n` adds a newline character in format strings
+- Format specifiers control how data is displayed (%d, %f, %s, etc.)

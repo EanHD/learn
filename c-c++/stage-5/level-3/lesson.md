@@ -1,7 +1,8 @@
 # Level 3: Mastery Through Specialized Domains
 
-> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> **LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.c` for C or `main.cpp` for C++). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
+> **LANGUAGE CHOICE:** Remember, you can use **either C or C++** for this level. Choose what works best for your project!
 
 ## Stage 5: Capstone - Domain-Specific Expert Project
 

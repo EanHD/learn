@@ -1,9 +1,30 @@
 # Level 1: Your First Independent Project
 
-> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
-
+> **LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.c` for C or `main.cpp` for C++). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 ## Stage 5: Capstone - Full Integration Project
+
+### 🔧 IMPORTANT: Language Choice - C or C++?
+
+**Stage 5 is OPTIONAL-LANGUAGE:** You've mastered C fundamentals in Stages 1-4. Now **choose your preferred language** for all Stage 5 projects:
+
+#### **Option 1: Continue with Pure C** (`main.c`)
+- ✓ Build on everything you've learned in Stages 1-4
+- ✓ Focus on procedural programming mastery
+- ✓ Compile with: `gcc main.c -o program`
+- ✓ Use: `stdio.h`, structs, function pointers, file I/O
+- ✓ Perfect for: Systems programming, embedded, or C mastery
+
+#### **Option 2: Switch to C++** (`main.cpp`)
+- ✓ Leverage your C foundation with object-oriented features
+- ✓ Use classes, objects, STL containers, templates
+- ✓ Compile with: `g++ main.cpp -o program`
+- ✓ Use: `iostream`, `std::string`, `std::vector`, classes
+- ✓ Perfect for: Application development, games, or modern C++
+
+**YOU DECIDE:** Pick the language that excites you most or aligns with your goals. Both are valid paths to programming mastery!
+
+> **Note:** You can work in **either C OR C++** for any Stage 5 level. The concepts and project requirements remain the same—only the syntax and features differ.
 
 ### Today's Mission
 

@@ -1,6 +1,6 @@
 # Level 2: Data Processing Application
 
-> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> **LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.c\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 4: Full Problem Solving
@@ -111,7 +111,7 @@ typedef struct {
 # ifndef SALES_ANALYZER_H
 # define SALES_ANALYZER_H
 
-# include <stdio.h>
+#include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <ctype.h>
@@ -173,7 +173,7 @@ void display_records(const SalesData *data, int limit);
 void initialize_sales_data(SalesData *data, const char *filename) {
     data->records = malloc(INITIAL_CAPACITY * sizeof(SaleRecord));
     if (data->records == NULL) {
-        std::cout << "Error: Memory allocation failed.\n");
+        printf("Error: Memory allocation failed.\n");
         exit(1);
     }
     data->count = 0;
@@ -195,7 +195,7 @@ int resize_sales_data(SalesData *data) {
     SaleRecord *new_records = realloc(data->records, new_capacity * sizeof(SaleRecord));
 
     if (new_records == NULL) {
-        std::cout << "Error: Memory reallocation failed.\n");
+        printf("Error: Memory reallocation failed.\n");
         return 0;
     }
 
@@ -208,7 +208,7 @@ int resize_sales_data(SalesData *data) {
 int load_csv(SalesData *data) {
     FILE *file = fopen(data->filename, "r");
     if (file == NULL) {
-        std::cout << "Error: Could not open file '%s'\n", data->filename);
+        printf("Error: Could not open file '%s'\n", data->filename);
         return 0;
     }
 
@@ -218,7 +218,7 @@ int load_csv(SalesData *data) {
 
     // Skip header line
     if (fgets(line, sizeof(line), file) == NULL) {
-        std::cout << "Error: Empty file or read error.\n");
+        printf("Error: Empty file or read error.\n");
         fclose(file);
         return 0;
     }
@@ -245,15 +245,15 @@ int load_csv(SalesData *data) {
                 data->count++;
                 valid_records++;
             } else {
-                std::cout << "Warning: Invalid data on line %d, skipping.\n", line_number);
+                printf("Warning: Invalid data on line %d, skipping.\n", line_number);
             }
         } else {
-            std::cout << "Warning: Parse error on line %d, skipping.\n", line_number);
+            printf("Warning: Parse error on line %d, skipping.\n", line_number);
         }
     }
 
     fclose(file);
-    std::cout << "Loaded %d valid records from %s\n", valid_records, data->filename);
+    printf("Loaded %d valid records from %s\n", valid_records, data->filename);
     return valid_records;
 }
 
@@ -377,15 +377,15 @@ void calculate_statistics(const SalesData *data, SalesStats *stats) {
 
 // Display menu
 void display_menu(void) {
-    std::cout << "\n=== Sales Data Analyzer ===\n");
-    std::cout << "1. Load Sales Data\n");
-    std::cout << "2. View Records\n");
-    std::cout << "3. Generate Statistics\n");
-    std::cout << "4. Analyze by Date\n");
-    std::cout << "5. Analyze by Product\n");
-    std::cout << "6. Generate Report\n");
-    std::cout << "7. Exit\n");
-    std::cout << "Enter your choice (1-7): ");
+    printf("\n=== Sales Data Analyzer ===\n");
+    printf("1. Load Sales Data\n");
+    printf("2. View Records\n");
+    printf("3. Generate Statistics\n");
+    printf("4. Analyze by Date\n");
+    printf("5. Analyze by Product\n");
+    printf("6. Generate Report\n");
+    printf("7. Exit\n");
+    printf("Enter your choice (1-7): ");
 }
 
 // Get user choice
@@ -398,19 +398,19 @@ int get_user_choice(void) {
 // Display records with limit
 void display_records(const SalesData *data, int limit) {
     if (data->count == 0) {
-        std::cout << "No data loaded.\n");
+        printf("No data loaded.\n");
         return;
     }
 
     int display_count = (limit > 0 && limit < data->count) ? limit : data->count;
 
-    std::cout << "\n=== Sales Records (showing %d of %d) ===\n", display_count, data->count);
-    std::cout << "%-12s %-15s %8s %10s %10s\n", "Date", "Product", "Qty", "Unit Price", "Total");
-    std::cout << "------------------------------------------------------------\n");
+    printf("\n=== Sales Records (showing %d of %d) ===\n", display_count, data->count);
+    printf("%-12s %-15s %8s %10s %10s\n", "Date", "Product", "Qty", "Unit Price", "Total");
+    printf("------------------------------------------------------------\n");
 
     for (int i = 0; i < display_count; i++) {
         const SaleRecord *record = &data->records[i];
-        std::cout << "%-12s %-15s %8d %10.2f %10.2f\n",
+        printf("%-12s %-15s %8d %10.2f %10.2f\n",
                record->date, record->product, record->quantity,
                record->unit_price, record->total_amount);
     }
@@ -418,19 +418,19 @@ void display_records(const SalesData *data, int limit) {
 
 // Generate summary report
 void generate_summary_report(const SalesData *data, const SalesStats *stats) {
-    std::cout << "\n=== Sales Summary Report ===\n");
-    std::cout << "Total Records: %d\n", data->count);
-    std::cout << "Total Revenue: $%.2f\n", stats->total_revenue);
-    std::cout << "Average Sale: $%.2f\n", stats->average_sale);
-    std::cout << "Best Day: %s ($%.2f)\n", stats->best_day, stats->best_day_revenue);
-    std::cout << "Top Product: %s ($%.2f)\n", stats->top_product, stats->top_product_revenue);
+    printf("\n=== Sales Summary Report ===\n");
+    printf("Total Records: %d\n", data->count);
+    printf("Total Revenue: $%.2f\n", stats->total_revenue);
+    printf("Average Sale: $%.2f\n", stats->average_sale);
+    printf("Best Day: %s ($%.2f)\n", stats->best_day, stats->best_day_revenue);
+    printf("Top Product: %s ($%.2f)\n", stats->top_product, stats->top_product_revenue);
 }
 
 // Save report to file
 int save_report(const char *filename, const SalesData *data, const SalesStats *stats) {
     FILE *file = fopen(filename, "w");
     if (file == NULL) {
-        std::cout << "Error: Could not create report file.\n");
+        printf("Error: Could not create report file.\n");
         return 0;
     }
 
@@ -455,21 +455,21 @@ int save_report(const char *filename, const SalesData *data, const SalesStats *s
     }
 
     fclose(file);
-    std::cout << "Report saved to %s\n", filename);
+    printf("Report saved to %s\n", filename);
     return 1;
 }
 
 // Analyze by date
 void analyze_by_date(const SalesData *data) {
     if (data->count == 0) {
-        std::cout << "No data to analyze.\n");
+        printf("No data to analyze.\n");
         return;
     }
 
     // Simple date analysis - group by date
-    std::cout << "\n=== Sales by Date ===\n");
-    std::cout << "%-12s %8s %12s\n", "Date", "Sales", "Revenue");
-    std::cout << "------------------------------\n");
+    printf("\n=== Sales by Date ===\n");
+    printf("%-12s %8s %12s\n", "Date", "Sales", "Revenue");
+    printf("------------------------------\n");
 
     char current_date[MAX_DATE_LENGTH] = "";
     int date_sales = 0;
@@ -481,7 +481,7 @@ void analyze_by_date(const SalesData *data) {
         if (strcmp(current_date, record->date) != 0) {
             // Print previous date if exists
             if (strlen(current_date) > 0) {
-                std::cout << "%-12s %8d %12.2f\n", current_date, date_sales, date_revenue);
+                printf("%-12s %8d %12.2f\n", current_date, date_sales, date_revenue);
             }
 
             // Start new date
@@ -496,20 +496,20 @@ void analyze_by_date(const SalesData *data) {
 
     // Print last date
     if (strlen(current_date) > 0) {
-        std::cout << "%-12s %8d %12.2f\n", current_date, date_sales, date_revenue);
+        printf("%-12s %8d %12.2f\n", current_date, date_sales, date_revenue);
     }
 }
 
 // Analyze by product
 void analyze_by_product(const SalesData *data) {
     if (data->count == 0) {
-        std::cout << "No data to analyze.\n");
+        printf("No data to analyze.\n");
         return;
     }
 
-    std::cout << "\n=== Sales by Product ===\n");
-    std::cout << "%-15s %8s %12s %8s\n", "Product", "Sales", "Revenue", "Avg Price");
-    std::cout << "--------------------------------------------------\n");
+    printf("\n=== Sales by Product ===\n");
+    printf("%-15s %8s %12s %8s\n", "Product", "Sales", "Revenue", "Avg Price");
+    printf("--------------------------------------------------\n");
 
     char current_product[MAX_PRODUCT_NAME] = "";
     int product_sales = 0;
@@ -523,7 +523,7 @@ void analyze_by_product(const SalesData *data) {
             // Print previous product if exists
             if (strlen(current_product) > 0) {
                 float avg_price = product_revenue / total_quantity;
-                std::cout << "%-15s %8d %12.2f %8.2f\n",
+                printf("%-15s %8d %12.2f %8.2f\n",
                        current_product, product_sales, product_revenue, avg_price);
             }
 
@@ -542,7 +542,7 @@ void analyze_by_product(const SalesData *data) {
     // Print last product
     if (strlen(current_product) > 0) {
         float avg_price = product_revenue / total_quantity;
-        std::cout << "%-15s %8d %12.2f %8.2f\n",
+        printf("%-15s %8d %12.2f %8.2f\n",
                current_product, product_sales, product_revenue, avg_price);
     }
 }
@@ -559,8 +559,8 @@ int main() {
 
     initialize_sales_data(&data, "sales_data.csv");
 
-    std::cout << "Sales Data Analyzer\n");
-    std::cout << "===================\n");
+    printf("Sales Data Analyzer\n");
+    printf("===================\n");
 
     int running = 1;
     while (running) {
@@ -571,20 +571,20 @@ int main() {
             case 1: { // Load Sales Data
                 if (load_csv(&data) > 0) {
                     data_loaded = 1;
-                    std::cout << "Data loaded successfully.\n");
+                    printf("Data loaded successfully.\n");
                 } else {
-                    std::cout << "Failed to load data.\n");
+                    printf("Failed to load data.\n");
                 }
                 break;
             }
 
             case 2: { // View Records
                 if (!data_loaded) {
-                    std::cout << "Please load data first.\n");
+                    printf("Please load data first.\n");
                     break;
                 }
                 int limit;
-                std::cout << "Enter number of records to display (0 for all): ");
+                printf("Enter number of records to display (0 for all): ");
                 scanf("%d", &limit);
                 display_records(&data, limit);
                 break;
@@ -592,7 +592,7 @@ int main() {
 
             case 3: { // Generate Statistics
                 if (!data_loaded) {
-                    std::cout << "Please load data first.\n");
+                    printf("Please load data first.\n");
                     break;
                 }
                 calculate_statistics(&data, &stats);
@@ -602,7 +602,7 @@ int main() {
 
             case 4: { // Analyze by Date
                 if (!data_loaded) {
-                    std::cout << "Please load data first.\n");
+                    printf("Please load data first.\n");
                     break;
                 }
                 analyze_by_date(&data);
@@ -611,7 +611,7 @@ int main() {
 
             case 5: { // Analyze by Product
                 if (!data_loaded) {
-                    std::cout << "Please load data first.\n");
+                    printf("Please load data first.\n");
                     break;
                 }
                 analyze_by_product(&data);
@@ -620,7 +620,7 @@ int main() {
 
             case 6: { // Generate Report
                 if (!data_loaded) {
-                    std::cout << "Please load data first.\n");
+                    printf("Please load data first.\n");
                     break;
                 }
                 calculate_statistics(&data, &stats);
@@ -629,13 +629,13 @@ int main() {
             }
 
             case 7: { // Exit
-                std::cout << "Goodbye!\n");
+                printf("Goodbye!\n");
                 running = 0;
                 break;
             }
 
             default:
-                std::cout << "Invalid choice. Please try again.\n");
+                printf("Invalid choice. Please try again.\n");
         }
     }
 
@@ -662,9 +662,9 @@ Date,Product,Quantity,UnitPrice
 ```cpp
 
 ### Compilation Instructions
-```bash
+```
 # Compile the program
-g++ -o sales_analyzer main.c sales_analyzer.c -lm
+gcc -o sales_analyzer main.c sales_analyzer.c -lm
 
 # Run the program
 ./sales_analyzer
@@ -849,10 +849,10 @@ Expected implementation provided.
 ### Complete Solution
 
 ```cpp
-#include <iostream>
+#include <stdio.h>
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    printf("Hello, World!\n");
     return 0;
 }
 ```
@@ -862,14 +862,14 @@ int main() {
 This solution demonstrates the key concepts from this lesson:
 
 1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses std::cout to print messages to the console
-3. **Standard Library**: Includes iostream for input/output operations
+2. **Output**: Uses printf to print messages to the console
+3. **Standard Library**: Includes stdio.h for input/output operations
 4. **Return Value**: Returns 0 to indicate successful execution
 5. **Best Practices**: Code is readable and uses C++ idioms
 
 ### Testing Your Solution
 
-1. **Compile**: `g++ hello.cpp -o hello`
+1. **Compile**: `gcc main.c -o main`
 2. **Run**: `./hello`
 3. **Expected Output**: `Hello, World!`
 
@@ -877,13 +877,13 @@ This solution demonstrates the key concepts from this lesson:
 
 | Error | Cause | Solution |
 |-------|-------|----------|
-| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
 | `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+| `error: implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
 
 ### Tips for Learning
 
-- C++ is a superset of C with additional features
-- `std::cout` is the C++ way to print (replaces `printf`)
-- `std::endl` adds a newline and flushes the buffer
-- The `std::` prefix means these are from the "standard" namespace
+- C uses stdio.h for input/output with additional features
+- `printf` is the C standard for formatted output
+- `\n` adds a newline character in format strings
+- Format specifiers control how data is displayed (%d, %f, %s, etc.)

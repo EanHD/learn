@@ -1,6 +1,6 @@
 # Level 1: Basic Pseudocode Translation
 
-> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> **LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (`main.c`). The lesson stays on the **left** for reference. Press `Ctrl+l` to switch to your code window, or `<Space>h` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -165,7 +165,7 @@ Algorithm: Calculate Simple Interest
 3. **Identify Outputs**: What should the program display?
 4. **Identify Calculations**: What math is needed?
 5. **Plan the Code Structure**:
-   - `#include <iostream>`
+   - `#include <stdio.h>`
    - `int main() {`
    - Variable declarations
    - Input statements
@@ -253,49 +253,49 @@ Algorithm: Calculate BMI
 ### Algorithm 1: Greeting Program
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 int main() {
     char name[50];
     
-    std::cout << "Hello! What's your name? ");
+    printf("Hello! What's your name? ");
     scanf("%s", name);
     
-    std::cout << "Nice to meet you, %s\n", name);
-    std::cout << "Welcome to programming!\n");
+    printf("Nice to meet you, %s\n", name);
+    printf("Welcome to programming!\n");
     
     return 0;
 }
-```bash
+```
 
 **Key Concepts:**
 - [ ] `char name[50];` - String variable to store the name
 - [ ] `scanf("%s", name);` - Read string input
-- [ ] `std::cout << "Nice to meet you, %s\n", name);` - Display with variable
+- [ ] `printf("Nice to meet you, %s\n", name);` - Display with variable
 
 ---
 
 ### Algorithm 2: Simple Calculator
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 int main() {
     int num1, num2, sum;
     
-    std::cout << "Enter first number: ");
+    printf("Enter first number: ");
     scanf("%d", &num1);
     
-    std::cout << "Enter second number: ");
+    printf("Enter second number: ");
     scanf("%d", &num2);
     
     sum = num1 + num2;
     
-    std::cout << "The sum is: %d\n", sum);
+    printf("The sum is: %d\n", sum);
     
     return 0;
 }
-```bash
+```
 
 **Key Concepts:**
 - [ ] Multiple variables: `num1`, `num2`, `sum`
@@ -307,22 +307,22 @@ int main() {
 ### Algorithm 3: Age Calculator
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 int main() {
     int age_years, age_days;
     
-    std::cout << "Enter your age in years: ");
+    printf("Enter your age in years: ");
     scanf("%d", &age_years);
     
     age_days = age_years * 365;
     
-    std::cout << "You are approximately %d days old\n", age_days);
-    std::cout << "That's a lot of days! \n");
+    printf("You are approximately %d days old\n", age_days);
+    printf("That's a lot of days!\n");
     
     return 0;
 }
-```bash
+```
 
 **Key Concepts:**
 - [ ] Simple multiplication: `age_days = age_years * 365;`
@@ -334,21 +334,21 @@ int main() {
 ### Algorithm 4: Temperature Converter
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 int main() {
     float celsius, fahrenheit;
     
-    std::cout << "Enter temperature in Celsius: ");
+    printf("Enter temperature in Celsius: ");
     scanf("%f", &celsius);
     
     fahrenheit = (celsius * 9.0/5.0) + 32;
     
-    std::cout << "%.1f°C = %.1f°F\n", celsius, fahrenheit);
+    printf("%.1f°C = %.1f°F\n", celsius, fahrenheit);
     
     return 0;
 }
-```bash
+```
 
 **Key Concepts:**
 - [ ] `float` variables for decimal temperatures
@@ -360,27 +360,27 @@ int main() {
 ### Algorithm 5: Rectangle Area Calculator
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 int main() {
     float length, width, area, perimeter;
     
-    std::cout << "Rectangle Area Calculator\n");
-    std::cout << "Enter length: ");
+    printf("Rectangle Area Calculator\n");
+    printf("Enter length: ");
     scanf("%f", &length);
     
-    std::cout << "Enter width: ");
+    printf("Enter width: ");
     scanf("%f", &width);
     
     area = length * width;
     perimeter = 2 * (length + width);
     
-    std::cout << "Area: %.2f\n", area);
-    std::cout << "Perimeter: %.2f\n", perimeter);
+    printf("Area: %.2f\n", area);
+    printf("Perimeter: %.2f\n", perimeter);
     
     return 0;
 }
-```bash
+```
 
 **Key Concepts:**
 - [ ] Multiple calculations: area and perimeter
@@ -392,31 +392,31 @@ int main() {
 ### Algorithm 6: Simple Interest Calculator
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 int main() {
     float principal, rate, time, interest, total;
     
-    std::cout << "Simple Interest Calculator\n");
-    std::cout << "Enter principal amount: $");
+    printf("Simple Interest Calculator\n");
+    printf("Enter principal amount: $");
     scanf("%f", &principal);
     
-    std::cout << "Enter interest rate (%%): ");
+    printf("Enter interest rate (%%): ");
     scanf("%f", &rate);
     
-    std::cout << "Enter time in years: ");
+    printf("Enter time in years: ");
     scanf("%f", &time);
     
     interest = (principal * rate * time) / 100;
     total = principal + interest;
     
-    std::cout << "Principal: $%.2f\n", principal);
-    std::cout << "Interest: $%.2f\n", interest);
-    std::cout << "Total: $%.2f\n", total);
+    printf("Principal: $%.2f\n", principal);
+    printf("Interest: $%.2f\n", interest);
+    printf("Total: $%.2f\n", total);
     
     return 0;
 }
-```bash
+```
 
 **Key Concepts:**
 - [ ] Complex formula: `(principal * rate * time) / 100`
@@ -429,11 +429,11 @@ int main() {
 
 | Pseudocode Pattern | C Code Equivalent |
 |-------------------|-------------------|
-| `Display "message"` | `std::cout << "message\n");` |
+| `Display "message"` | `printf("message\n");` |
 | `Get variable from user` | `scanf("%d", &variable);` |
 | `Calculate result = a + b` | `result = a + b;` |
 | `If condition then` | `if (condition) {` |
-| `Display variable` | `std::cout << "%d\n", variable);` |
+| `Display variable` | `printf("%d\n", variable);` |
 
 ### Debugging Tips
 
@@ -469,103 +469,55 @@ int main() {
 **Getting Numbers:**
 ```c
 int age;
-std::cout << "Enter age: ");
+printf("Enter age: ");
 scanf("%d", &age);
-```bash
+```
 
 **Getting Decimals:**
 ```c
 float price;
-std::cout << "Enter price: $");
+printf("Enter price: $");
 scanf("%f", &price);
-```bash
+```
 
 **Getting Text:**
 ```c
 char name[50];
-std::cout << "Enter name: ");
+printf("Enter name: ");
 scanf("%s", name);
-```bash
+```
 
 **Displaying Results:**
 ```c
-std::cout << "Result: %d\n", result);
-std::cout << "Price: $%.2f\n", price);
-std::cout << "Hello, %s!\n", name);
-```bash
+printf("Result: %d\n", result);
+printf("Price: $%.2f\n", price);
+printf("Hello, %s!\n", name);
+```
 
 ---
 
- **Congratulations! You've translated your first pseudocode algorithms into working C programs!** 
+**Congratulations! You've translated your first pseudocode algorithms into working C programs!** 
 
-*This is a major milestone - you're now thinking like a programmer! Next up: Variables in pseudocode! *
+*This is a major milestone - you're now thinking like a programmer! Next up: Variables in pseudocode!*
 
-### How to Run
+### How to Compile and Run
 
-1. Open the code file
-2. Review and understand the implementation
-3. Execute using: `<Space>r` in Vim
-
-
-### Additional Content
-
-Understand the key concepts:
-
-- [ ] Review each function
-- [ ] Understand the flow
-- [ ] Learn the patterns used
-
-
-### Code Review
-
-Key functions and their purpose:
-
-- [ ] Main function: Entry point
-- [ ] Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```cpp
-#include <iostream>
-
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
-}
+```bash
+gcc main.c -o main
+./main
 ```
 
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses std::cout to print messages to the console
-3. **Standard Library**: Includes iostream for input/output operations
-4. **Return Value**: Returns 0 to indicate successful execution
-5. **Best Practices**: Code is readable and uses C++ idioms
-
-### Testing Your Solution
-
-1. **Compile**: `g++ hello.cpp -o hello`
-2. **Run**: `./hello`
-3. **Expected Output**: `Hello, World!`
-
-### Common Errors & Solutions
+### Common Compilation Errors
 
 | Error | Cause | Solution |
 |-------|-------|----------|
-| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
 | `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+| `implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
 
 ### Tips for Learning
 
-- C++ is a superset of C with additional features
-- `std::cout` is the C++ way to print (replaces `printf`)
-- `std::endl` adds a newline and flushes the buffer
-- The `std::` prefix means these are from the "standard" namespace
+- Always include `#include <stdio.h>` for printf and scanf
+- Use `%d` for integers, `%f` for floats, `%s` for strings
+- Don't forget the `&` operator with scanf for non-string variables
+- End your strings with `\n` for a newline

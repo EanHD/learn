@@ -1,6 +1,6 @@
 # Level 1: Simple Application
 
-> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> **LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.c\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 4: Full Problem Solving
@@ -99,7 +99,7 @@ typedef struct {
 # ifndef GRADEBOOK_H
 # define GRADEBOOK_H
 
-# include <stdio.h>
+#include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 
@@ -151,13 +151,13 @@ void initialize_gradebook(GradeBook *book, const char *filename) {
 // Add a new student
 int add_student(GradeBook *book, int id, const char *name) {
     if (book->student_count >= MAX_STUDENTS) {
-        std::cout << "Error: Maximum number of students reached.\n");
+        printf("Error: Maximum number of students reached.\n");
         return 0;
     }
 
     // Check if student ID already exists
     if (find_student(book, id) != -1) {
-        std::cout << "Error: Student ID %d already exists.\n", id);
+        printf("Error: Student ID %d already exists.\n", id);
         return 0;
     }
 
@@ -168,7 +168,7 @@ int add_student(GradeBook *book, int id, const char *name) {
     student->gpa = 0.0;
 
     book->student_count++;
-    std::cout << "Student %s (ID: %d) added successfully.\n", name, id);
+    printf("Student %s (ID: %d) added successfully.\n", name, id);
     return 1;
 }
 
@@ -186,18 +186,18 @@ int find_student(const GradeBook *book, int id) {
 int add_grade(GradeBook *book, int student_id, float grade) {
     int index = find_student(book, student_id);
     if (index == -1) {
-        std::cout << "Error: Student ID %d not found.\n", student_id);
+        printf("Error: Student ID %d not found.\n", student_id);
         return 0;
     }
 
     Student *student = &book->students[index];
     if (student->grade_count >= MAX_GRADES) {
-        std::cout << "Error: Maximum grades reached for student.\n");
+        printf("Error: Maximum grades reached for student.\n");
         return 0;
     }
 
     if (grade < 0.0 || grade > 100.0) {
-        std::cout << "Error: Grade must be between 0.0 and 100.0.\n");
+        printf("Error: Grade must be between 0.0 and 100.0.\n");
         return 0;
     }
 
@@ -205,7 +205,7 @@ int add_grade(GradeBook *book, int student_id, float grade) {
     student->grade_count++;
     calculate_gpa(student);
 
-    std::cout << "Grade %.2f added to %s.\n", grade, student->name);
+    printf("Grade %.2f added to %s.\n", grade, student->name);
     return 1;
 }
 
@@ -225,33 +225,33 @@ void calculate_gpa(Student *student) {
 
 // Display single student information
 void display_student(const Student *student) {
-    std::cout << "\n=== Student Information ===\n");
-    std::cout << "ID: %d\n", student->id);
-    std::cout << "Name: %s\n", student->name);
-    std::cout << "Number of grades: %d\n", student->grade_count);
-    std::cout << "GPA: %.2f\n", student->gpa);
+    printf("\n=== Student Information ===\n");
+    printf("ID: %d\n", student->id);
+    printf("Name: %s\n", student->name);
+    printf("Number of grades: %d\n", student->grade_count);
+    printf("GPA: %.2f\n", student->gpa);
 
     if (student->grade_count > 0) {
-        std::cout << "Grades: ");
+        printf("Grades: ");
         for (int i = 0; i < student->grade_count; i++) {
-            std::cout << "%.2f", student->grades[i]);
-            if (i < student->grade_count - 1) std::cout << ", ");
+            printf("%.2f", student->grades[i]);
+            if (i < student->grade_count - 1) printf(", ");
         }
-        std::cout << "\n");
+        printf("\n");
     }
 }
 
 // Display all students
 void display_all_students(const GradeBook *book) {
     if (book->student_count == 0) {
-        std::cout << "No students in the gradebook.\n");
+        printf("No students in the gradebook.\n");
         return;
     }
 
-    std::cout << "\n=== All Students ===\n");
+    printf("\n=== All Students ===\n");
     for (int i = 0; i < book->student_count; i++) {
         const Student *student = &book->students[i];
-        std::cout << "%d. %s (ID: %d) - GPA: %.2f\n",
+        printf("%d. %s (ID: %d) - GPA: %.2f\n",
                i + 1, student->name, student->id, student->gpa);
     }
 }
@@ -260,7 +260,7 @@ void display_all_students(const GradeBook *book) {
 int save_data(const GradeBook *book) {
     FILE *file = fopen(book->filename, "w");
     if (file == NULL) {
-        std::cout << "Error: Could not open file for writing.\n");
+        printf("Error: Could not open file for writing.\n");
         return 0;
     }
 
@@ -276,7 +276,7 @@ int save_data(const GradeBook *book) {
     }
 
     fclose(file);
-    std::cout << "Data saved to %s\n", book->filename);
+    printf("Data saved to %s\n", book->filename);
     return 1;
 }
 
@@ -284,7 +284,7 @@ int save_data(const GradeBook *book) {
 int load_data(GradeBook *book) {
     FILE *file = fopen(book->filename, "r");
     if (file == NULL) {
-        std::cout << "No existing data file found. Starting fresh.\n");
+        printf("No existing data file found. Starting fresh.\n");
         return 0;
     }
 
@@ -309,20 +309,20 @@ int load_data(GradeBook *book) {
     }
 
     fclose(file);
-    std::cout << "Data loaded from %s\n", book->filename);
+    printf("Data loaded from %s\n", book->filename);
     return 1;
 }
 
 // Display menu
 void display_menu(void) {
-    std::cout << "\n=== Grade Management System ===\n");
-    std::cout << "1. Add Student\n");
-    std::cout << "2. Add Grade\n");
-    std::cout << "3. View Student\n");
-    std::cout << "4. View All Students\n");
-    std::cout << "5. Save Data\n");
-    std::cout << "6. Exit\n");
-    std::cout << "Enter your choice (1-6): ");
+    printf("\n=== Grade Management System ===\n");
+    printf("1. Add Student\n");
+    printf("2. Add Grade\n");
+    printf("3. View Student\n");
+    printf("4. View All Students\n");
+    printf("5. Save Data\n");
+    printf("6. Exit\n");
+    printf("Enter your choice (1-6): ");
 }
 
 // Get user choice
@@ -351,9 +351,9 @@ int main() {
                 int id;
                 char name[MAX_NAME_LENGTH];
 
-                std::cout << "Enter student ID: ");
+                printf("Enter student ID: ");
                 scanf("%d", &id);
-                std::cout << "Enter student name: ");
+                printf("Enter student name: ");
                 scanf(" %[^\n]", name); // Read entire line including spaces
 
                 add_student(&book, id, name);
@@ -364,9 +364,9 @@ int main() {
                 int student_id;
                 float grade;
 
-                std::cout << "Enter student ID: ");
+                printf("Enter student ID: ");
                 scanf("%d", &student_id);
-                std::cout << "Enter grade (0-100): ");
+                printf("Enter grade (0-100): ");
                 scanf("%f", &grade);
 
                 add_grade(&book, student_id, grade);
@@ -375,14 +375,14 @@ int main() {
 
             case 3: { // View Student
                 int student_id;
-                std::cout << "Enter student ID: ");
+                printf("Enter student ID: ");
                 scanf("%d", &student_id);
 
                 int index = find_student(&book, student_id);
                 if (index != -1) {
                     display_student(&book.students[index]);
                 } else {
-                    std::cout << "Student not found.\n");
+                    printf("Student not found.\n");
                 }
                 break;
             }
@@ -399,13 +399,13 @@ int main() {
 
             case 6: { // Exit
                 save_data(&book); // Auto-save on exit
-                std::cout << "Goodbye!\n");
+                printf("Goodbye!\n");
                 running = 0;
                 break;
             }
 
             default:
-                std::cout << "Invalid choice. Please try again.\n");
+                printf("Invalid choice. Please try again.\n");
         }
     }
 
@@ -418,9 +418,9 @@ int main() {
 ## Testing the Application
 
 ### Compilation Instructions
-```bash
+```
 # Compile the program
-g++ -o gradebook main.c gradebook.c
+gcc -o gradebook main.c gradebook.c
 
 # Run the program
 ./gradebook
@@ -633,10 +633,10 @@ Expected implementation provided.
 ### Complete Solution
 
 ```cpp
-#include <iostream>
+#include <stdio.h>
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    printf("Hello, World!\n");
     return 0;
 }
 ```
@@ -646,14 +646,14 @@ int main() {
 This solution demonstrates the key concepts from this lesson:
 
 1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses std::cout to print messages to the console
-3. **Standard Library**: Includes iostream for input/output operations
+2. **Output**: Uses printf to print messages to the console
+3. **Standard Library**: Includes stdio.h for input/output operations
 4. **Return Value**: Returns 0 to indicate successful execution
 5. **Best Practices**: Code is readable and uses C++ idioms
 
 ### Testing Your Solution
 
-1. **Compile**: `g++ hello.cpp -o hello`
+1. **Compile**: `gcc main.c -o main`
 2. **Run**: `./hello`
 3. **Expected Output**: `Hello, World!`
 
@@ -661,13 +661,13 @@ This solution demonstrates the key concepts from this lesson:
 
 | Error | Cause | Solution |
 |-------|-------|----------|
-| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
 | `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+| `error: implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
 
 ### Tips for Learning
 
-- C++ is a superset of C with additional features
-- `std::cout` is the C++ way to print (replaces `printf`)
-- `std::endl` adds a newline and flushes the buffer
-- The `std::` prefix means these are from the "standard" namespace
+- C uses stdio.h for input/output with additional features
+- `printf` is the C standard for formatted output
+- `\n` adds a newline character in format strings
+- Format specifiers control how data is displayed (%d, %f, %s, etc.)

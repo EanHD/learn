@@ -1,6 +1,6 @@
 # Level 2: Variables in Pseudocode
 
-> ** LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.cpp\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
+> **LESSON NOTE:** This lesson file is **read-only** to prevent accidental edits. Your code goes in the **right window** (\`main.c\` or similar). The lesson stays on the **left** for reference. Press \`Ctrl+l\` to switch to your code window, or \`<Space>h\` for help.
 
 
 ## Stage 2: Pseudocode to Code
@@ -355,26 +355,26 @@ For each value:
 ### Algorithm 1: Shopping Cart Total
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 int main() {
     float total = 0.0;
     int item_count = 0;
     float price;
     
-    std::cout << "Enter price of item 1 (or 0 to finish): ");
+    printf("Enter price of item 1 (or 0 to finish): ");
     scanf("%f", &price);
     
     while (price != 0) {
         total = total + price;
         item_count = item_count + 1;
         
-        std::cout << "Enter price of item %d (or 0 to finish): ", item_count + 1);
+        printf("Enter price of item %d (or 0 to finish): ", item_count + 1);
         scanf("%f", &price);
     }
     
-    std::cout << "Items purchased: %d\n", item_count);
-    std::cout << "Total cost: $%.2f\n", total);
+    printf("Items purchased: %d\n", item_count);
+    printf("Total cost: $%.2f\n", total);
     
     return 0;
 }
@@ -390,7 +390,7 @@ int main() {
 ### Algorithm 2: Password Validation
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 # include <string.h>
 
 int main() {
@@ -402,7 +402,7 @@ int main() {
     while (attempts < 3 && is_valid == 0) {
         attempts = attempts + 1;
         
-        std::cout << "Enter password (attempt %d/3): ", attempts);
+        printf("Enter password (attempt %d/3): ", attempts);
         scanf("%s", user_input);
         
         if (strcmp(user_input, correct_password) == 0) {
@@ -411,9 +411,9 @@ int main() {
     }
     
     if (is_valid == 1) {
-        std::cout << "Access granted! \n");
+        printf("Access granted! \n");
     } else {
-        std::cout << "Access denied! \n");
+        printf("Access denied! \n");
     }
     
     return 0;
@@ -430,7 +430,7 @@ int main() {
 ### Algorithm 3: Grade Average Calculator
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 int main() {
     float total_score = 0.0;
@@ -439,7 +439,7 @@ int main() {
     float score;
     
     while (has_more_students == 1) {
-        std::cout << "Enter score for student %d (or -1 to finish): ", student_count + 1);
+        printf("Enter score for student %d (or -1 to finish): ", student_count + 1);
         scanf("%f", &score);
         
         if (score == -1) {
@@ -452,10 +452,10 @@ int main() {
     
     if (student_count > 0) {
         float average = total_score / student_count;
-        std::cout << "Class average: %.1f%%\n", average);
-        std::cout << "Total students: %d\n", student_count);
+        printf("Class average: %.1f%%\n", average);
+        printf("Total students: %d\n", student_count);
     } else {
-        std::cout << "No students entered\n");
+        printf("No students entered\n");
     }
     
     return 0;
@@ -472,7 +472,7 @@ int main() {
 ### Algorithm 4: Number Guessing Game
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 int main() {
     int secret_number = 42;
@@ -480,27 +480,27 @@ int main() {
     int game_won = 0;  // 0 = false, 1 = true
     int user_guess;
     
-    std::cout << "I'm thinking of a number between 1-100!\n");
+    printf("I'm thinking of a number between 1-100!\n");
     
     while (game_won == 0) {
         guess_count = guess_count + 1;
         
-        std::cout << "Guess #%d: ", guess_count);
+        printf("Guess #%d: ", guess_count);
         scanf("%d", &user_guess);
         
         if (user_guess == secret_number) {
             game_won = 1;
-            std::cout << "Correct! You won in %d guesses! \n", guess_count);
+            printf("Correct! You won in %d guesses! \n", guess_count);
         } else {
             if (user_guess > secret_number) {
-                std::cout << "Too high! Try lower.\n");
+                printf("Too high! Try lower.\n");
             } else {
-                std::cout << "Too low! Try higher.\n");
+                printf("Too low! Try higher.\n");
             }
         }
     }
     
-    std::cout << "Thanks for playing!\n");
+    printf("Thanks for playing!\n");
     
     return 0;
 }
@@ -516,7 +516,7 @@ int main() {
 ### Algorithm 5: Bank Account Simulator
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 int main() {
     float balance = 1000.00;
@@ -525,41 +525,41 @@ int main() {
     int user_choice;
     float amount;
     
-    std::cout << "Welcome to Bank Account Manager\n");
-    std::cout << "Initial balance: $%.2f\n", balance);
+    printf("Welcome to Bank Account Manager\n");
+    printf("Initial balance: $%.2f\n", balance);
     
     while (is_running == 1) {
-        std::cout << "\n1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit\n");
-        std::cout << "Enter choice: ");
+        printf("\n1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit\n");
+        printf("Enter choice: ");
         scanf("%d", &user_choice);
         
         if (user_choice == 1) {
-            std::cout << "Enter deposit amount: $");
+            printf("Enter deposit amount: $");
             scanf("%f", &amount);
             balance = balance + amount;
             transaction_count = transaction_count + 1;
-            std::cout << "Deposit successful. New balance: $%.2f\n", balance);
+            printf("Deposit successful. New balance: $%.2f\n", balance);
         } else if (user_choice == 2) {
-            std::cout << "Enter withdrawal amount: $");
+            printf("Enter withdrawal amount: $");
             scanf("%f", &amount);
             if (amount <= balance) {
                 balance = balance - amount;
                 transaction_count = transaction_count + 1;
-                std::cout << "Withdrawal successful. New balance: $%.2f\n", balance);
+                printf("Withdrawal successful. New balance: $%.2f\n", balance);
             } else {
-                std::cout << "Insufficient funds!\n");
+                printf("Insufficient funds!\n");
             }
         } else if (user_choice == 3) {
-            std::cout << "Current balance: $%.2f\n", balance);
-            std::cout << "Transactions today: %d\n", transaction_count);
+            printf("Current balance: $%.2f\n", balance);
+            printf("Transactions today: %d\n", transaction_count);
         } else if (user_choice == 4) {
             is_running = 0;
         } else {
-            std::cout << "Invalid choice!\n");
+            printf("Invalid choice!\n");
         }
     }
     
-    std::cout << "Thank you for banking with us!\n");
+    printf("Thank you for banking with us!\n");
     
     return 0;
 }
@@ -575,7 +575,7 @@ int main() {
 ### Algorithm 6: Temperature Tracker
 
 ```c
-# include <stdio.h>
+#include <stdio.h>
 
 int main() {
     int day_count = 0;  // Not used in this version, but could be for multiple days
@@ -585,12 +585,12 @@ int main() {
     int reading_count = 0;
     float temperature;
     
-    std::cout << "Daily Temperature Tracker\n");
+    printf("Daily Temperature Tracker\n");
     
     while (reading_count < 24) {
         reading_count = reading_count + 1;
         
-        std::cout << "Enter temperature reading #%d (°F): ", reading_count);
+        printf("Enter temperature reading #%d (°F): ", reading_count);
         scanf("%f", &temperature);
         
         total_temperature = total_temperature + temperature;
@@ -606,11 +606,11 @@ int main() {
     
     float average_temp = total_temperature / 24;
     
-    std::cout << "\nTemperature Summary:\n");
-    std::cout << "Average: %.1f°F\n", average_temp);
-    std::cout << "Highest: %.1f°F\n", highest_temp);
-    std::cout << "Lowest: %.1f°F\n", lowest_temp);
-    std::cout << "Readings taken: %d\n", reading_count);
+    printf("\nTemperature Summary:\n");
+    printf("Average: %.1f°F\n", average_temp);
+    printf("Highest: %.1f°F\n", highest_temp);
+    printf("Lowest: %.1f°F\n", lowest_temp);
+    printf("Readings taken: %d\n", reading_count);
     
     return 0;
 }
@@ -709,10 +709,10 @@ Key functions and their purpose:
 ### Complete Solution
 
 ```cpp
-#include <iostream>
+#include <stdio.h>
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    printf("Hello, World!\n");
     return 0;
 }
 ```
@@ -722,14 +722,14 @@ int main() {
 This solution demonstrates the key concepts from this lesson:
 
 1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses std::cout to print messages to the console
-3. **Standard Library**: Includes iostream for input/output operations
+2. **Output**: Uses printf to print messages to the console
+3. **Standard Library**: Includes stdio.h for input/output operations
 4. **Return Value**: Returns 0 to indicate successful execution
 5. **Best Practices**: Code is readable and uses C++ idioms
 
 ### Testing Your Solution
 
-1. **Compile**: `g++ hello.cpp -o hello`
+1. **Compile**: `gcc main.c -o main`
 2. **Run**: `./hello`
 3. **Expected Output**: `Hello, World!`
 
@@ -737,13 +737,13 @@ This solution demonstrates the key concepts from this lesson:
 
 | Error | Cause | Solution |
 |-------|-------|----------|
-| `command not found: g++` | Compiler not installed | `sudo apt install g++` (Ubuntu) |
+| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
 | `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: unknown type name 'cout'` | Missing iostream | Add `#include <iostream>` |
+| `error: implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
 
 ### Tips for Learning
 
-- C++ is a superset of C with additional features
-- `std::cout` is the C++ way to print (replaces `printf`)
-- `std::endl` adds a newline and flushes the buffer
-- The `std::` prefix means these are from the "standard" namespace
+- C uses stdio.h for input/output with additional features
+- `printf` is the C standard for formatted output
+- `\n` adds a newline character in format strings
+- Format specifiers control how data is displayed (%d, %f, %s, etc.)
