@@ -866,12 +866,12 @@ map("n", "<leader>n", function()
 
   local current_path = vim.fn.expand("%:p")
   local next_lesson_path = current_path:gsub("level%-" .. info.level .. "/", "level%-" .. next_level .. "/")
-  
+
   if vim.fn.filereadable(next_lesson_path) == 1 then
     -- Switch to left window and open next lesson
     vim.cmd("wincmd h")
     vim.cmd("edit " .. next_lesson_path)
-    
+
     -- Find and open corresponding code file in right window
     local next_dir = next_lesson_path:match("(.*)/lesson%.md$")
     if next_dir then
@@ -881,7 +881,7 @@ map("n", "<leader>n", function()
         "main.go", "main.lua", "main.dart", "main.swift",
         "main.kt", "main.sql", "main.cs", "main.sh", "main.ps1"
       }
-      
+
       local code_file = nil
       for _, file in ipairs(possible_files) do
         local full_path = next_dir .. "/" .. file
@@ -890,7 +890,7 @@ map("n", "<leader>n", function()
           break
         end
       end
-      
+
       vim.cmd("wincmd l")
       if code_file then
         vim.cmd("edit " .. code_file)
@@ -899,7 +899,7 @@ map("n", "<leader>n", function()
         print("Level " .. next_level .. " - No code file found yet")
       end
     end
-    
+
     vim.cmd("wincmd h")  -- Focus back on lesson
     print("Moved to Level " .. next_level)
   else
@@ -923,12 +923,12 @@ map("n", "<leader>p", function()
 
   local current_path = vim.fn.expand("%:p")
   local prev_lesson_path = current_path:gsub("level%-" .. info.level .. "/", "level%-" .. prev_level .. "/")
-  
+
   if vim.fn.filereadable(prev_lesson_path) == 1 then
     -- Switch to left window and open previous lesson
     vim.cmd("wincmd h")
     vim.cmd("edit " .. prev_lesson_path)
-    
+
     -- Find and open corresponding code file in right window
     local prev_dir = prev_lesson_path:match("(.*)/lesson%.md$")
     if prev_dir then
@@ -938,7 +938,7 @@ map("n", "<leader>p", function()
         "main.go", "main.lua", "main.dart", "main.swift",
         "main.kt", "main.sql", "main.cs", "main.sh", "main.ps1"
       }
-      
+
       local code_file = nil
       for _, file in ipairs(possible_files) do
         local full_path = prev_dir .. "/" .. file
@@ -947,7 +947,7 @@ map("n", "<leader>p", function()
           break
         end
       end
-      
+
       vim.cmd("wincmd l")
       if code_file then
         vim.cmd("edit " .. code_file)
@@ -956,7 +956,7 @@ map("n", "<leader>p", function()
         print("Level " .. prev_level .. " - No code file found")
       end
     end
-    
+
     vim.cmd("wincmd h")  -- Focus back on lesson
     print("Moved to Level " .. prev_level)
   else
@@ -977,7 +977,7 @@ end, { desc = "Show lesson info" })
 -- Function to detect language from file path
 local function detect_language()
   local current_file = vim.fn.expand("%:p")
-  
+
   if current_file:match("/python/") then return "python"
   elseif current_file:match("/java/") then return "java"
   elseif current_file:match("/javascript/") then return "javascript"
@@ -1004,7 +1004,7 @@ end
 -- Get run command for current language
 local function get_run_command()
   local lang = detect_language()
-  
+
   local commands = {
     python = "python3 main.py",
     java = "javac Main.java && java Main",
@@ -1029,7 +1029,7 @@ local function get_run_command()
     kotlin = "kotlin -J-Xms128m -J-Xmx768m MainKt",
     swift = "swift main.swift",
   }
-  
+
   return commands[lang] or "echo 'No run command defined'"
 end
 
@@ -1114,7 +1114,7 @@ end
 map("n", "<leader>h", function()
   -- Get compile command dynamically
   local compile_cmd, lang_name = get_compile_command()
-  
+
   -- Get language-specific run command
   local run_cmd = get_run_command()
   local current_lang = detect_language()
@@ -1196,7 +1196,7 @@ map("n", "<leader>g", function()
   end
 end, { desc = "Toggle Quick Guide popup" })
 
--- Run/Compile current file (dynamically detects language)
+-- Run/Compile current file (dynamically detects language) with auto-progress tracking
 map("n", "<leader>r", function()
   local compile_cmd, lang_name = get_compile_command()
   if compile_cmd == ":!echo 'Unknown file type'" then
@@ -1204,16 +1204,75 @@ map("n", "<leader>r", function()
     return
   end
 
-  -- Show what we're doing
-  vim.notify("🔨 Compiling/Running " .. lang_name .. " code...", vim.log.levels.INFO)
-
   -- Save file first
   vim.cmd("write")
 
-  -- Execute the command (remove :! prefix for vim.cmd)
+  -- Get lesson info for progress tracking
+  local lesson_info = get_lesson_info()
+
+  -- Execute the command normally so user sees output
   local cmd = compile_cmd:gsub("^:!", "!")
   vim.cmd(cmd)
-end, { desc = "Compile and run current file" })
+  
+  -- Check the shell exit status
+  local exit_status = vim.v.shell_error
+  
+  if exit_status == 0 and lesson_info then
+    -- Success! Mark lesson as complete
+    local lang_dir = detect_language()
+    local lang_map = {
+      cpp = "c-c++",
+      python = "python",
+      javascript = "javascript",
+      java = "java",
+      rust = "rust",
+      go = "go",
+      lua = "lua",
+      typescript = "typescript",
+      php = "php",
+      r = "r",
+      julia = "julia",
+      bash = "shell",
+      powershell = "powershell",
+      sql = "sql",
+      nosql = "nosql",
+      zig = "zig",
+      csharp = "csharp",
+      dart = "dart",
+      kotlin = "kotlin",
+      swift = "swift"
+    }
+    
+    local learn_lang = lang_map[lang_dir] or lang_dir
+    
+    -- Try multiple possible paths for learn CLI
+    local possible_paths = {
+      vim.fn.expand("~") .. "/.local/share/learn/CLI/learn",
+      vim.fn.expand("~") .. "/LEARN/CLI/learn",
+      "/usr/local/bin/learn",
+      "learn"  -- Fallback to PATH
+    }
+    
+    local learn_cli = nil
+    for _, path in ipairs(possible_paths) do
+      if vim.fn.executable(path) == 1 then
+        learn_cli = path
+        break
+      end
+    end
+    
+    if learn_cli then
+      -- Mark as complete using the learn CLI
+      local mark_cmd = string.format("%s --complete %s %d %d 2>/dev/null", learn_cli, learn_lang, lesson_info.stage, lesson_info.level)
+      vim.fn.system(mark_cmd)
+      vim.notify("✅ Success! Lesson marked complete.", vim.log.levels.INFO)
+    else
+      vim.notify("✅ Code ran successfully!", vim.log.levels.INFO)
+    end
+  elseif exit_status ~= 0 then
+    vim.notify("❌ Execution failed (exit code: " .. exit_status .. ")", vim.log.levels.WARN)
+  end
+end, { desc = "Compile and run current file (auto-tracks progress)" })
 
 -- ========== STARTUP MESSAGE ==========
 
