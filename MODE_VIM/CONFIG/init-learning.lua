@@ -850,7 +850,7 @@ local function get_lesson_info()
   return nil
 end
 
--- Jump to next lesson
+-- Jump to next lesson (switches BOTH windows)
 map("n", "<leader>n", function()
   local info = get_lesson_info()
   if not info then
@@ -865,18 +865,49 @@ map("n", "<leader>n", function()
   end
 
   local current_path = vim.fn.expand("%:p")
-  local next_path = current_path:gsub("level%-" .. info.level .. "/", "level%-" .. next_level .. "/")
-
-  if vim.fn.filereadable(next_path) == 1 then
-    vim.cmd("edit " .. next_path)
-    vim.cmd("wincmd l")  -- Switch to right window (code window)
-    print("Moved to Level " .. next_level .. " - Code window active")
+  local next_lesson_path = current_path:gsub("level%-" .. info.level .. "/", "level%-" .. next_level .. "/")
+  
+  if vim.fn.filereadable(next_lesson_path) == 1 then
+    -- Switch to left window and open next lesson
+    vim.cmd("wincmd h")
+    vim.cmd("edit " .. next_lesson_path)
+    
+    -- Find and open corresponding code file in right window
+    local next_dir = next_lesson_path:match("(.*)/lesson%.md$")
+    if next_dir then
+      local possible_files = {
+        "main.cpp", "main.c", "main.cc",
+        "main.rs", "main.py", "main.js", "main.ts",
+        "main.go", "main.lua", "main.dart", "main.swift",
+        "main.kt", "main.sql", "main.cs", "main.sh", "main.ps1"
+      }
+      
+      local code_file = nil
+      for _, file in ipairs(possible_files) do
+        local full_path = next_dir .. "/" .. file
+        if vim.fn.filereadable(full_path) == 1 then
+          code_file = full_path
+          break
+        end
+      end
+      
+      vim.cmd("wincmd l")
+      if code_file then
+        vim.cmd("edit " .. code_file)
+      else
+        -- No code file exists yet, stay in empty buffer or create placeholder
+        print("Level " .. next_level .. " - No code file found yet")
+      end
+    end
+    
+    vim.cmd("wincmd h")  -- Focus back on lesson
+    print("Moved to Level " .. next_level)
   else
     print("Next lesson not found")
   end
-end, { desc = "Next lesson (switches to code window)" })
+end, { desc = "Next lesson (switches both windows)" })
 
--- Jump to previous lesson
+-- Jump to previous lesson (switches BOTH windows)
 map("n", "<leader>p", function()
   local info = get_lesson_info()
   if not info then
@@ -891,16 +922,47 @@ map("n", "<leader>p", function()
   end
 
   local current_path = vim.fn.expand("%:p")
-  local prev_path = current_path:gsub("level%-" .. info.level .. "/", "level%-" .. prev_level .. "/")
-
-  if vim.fn.filereadable(prev_path) == 1 then
-    vim.cmd("edit " .. prev_path)
-    vim.cmd("wincmd l")  -- Switch to right window (code window)
-    print("Moved to Level " .. prev_level .. " - Code window active")
+  local prev_lesson_path = current_path:gsub("level%-" .. info.level .. "/", "level%-" .. prev_level .. "/")
+  
+  if vim.fn.filereadable(prev_lesson_path) == 1 then
+    -- Switch to left window and open previous lesson
+    vim.cmd("wincmd h")
+    vim.cmd("edit " .. prev_lesson_path)
+    
+    -- Find and open corresponding code file in right window
+    local prev_dir = prev_lesson_path:match("(.*)/lesson%.md$")
+    if prev_dir then
+      local possible_files = {
+        "main.cpp", "main.c", "main.cc",
+        "main.rs", "main.py", "main.js", "main.ts",
+        "main.go", "main.lua", "main.dart", "main.swift",
+        "main.kt", "main.sql", "main.cs", "main.sh", "main.ps1"
+      }
+      
+      local code_file = nil
+      for _, file in ipairs(possible_files) do
+        local full_path = prev_dir .. "/" .. file
+        if vim.fn.filereadable(full_path) == 1 then
+          code_file = full_path
+          break
+        end
+      end
+      
+      vim.cmd("wincmd l")
+      if code_file then
+        vim.cmd("edit " .. code_file)
+      else
+        -- No code file exists yet
+        print("Level " .. prev_level .. " - No code file found")
+      end
+    end
+    
+    vim.cmd("wincmd h")  -- Focus back on lesson
+    print("Moved to Level " .. prev_level)
   else
     print("Previous lesson not found")
   end
-end, { desc = "Previous lesson (switches to code window)" })
+end, { desc = "Previous lesson (switches both windows)" })
 
 -- Show lesson info
 map("n", "<leader>i", function()
@@ -1012,9 +1074,11 @@ local function get_compile_command()
 
   -- Fallback to file extension detection
   if code_file:match("%.cpp$") or code_file:match("%.cc$") then
-    return ":!make run", "C++"
+    local exe_name = code_file:gsub("%.cp?p?$", "")
+    return ":!g++ " .. code_file .. " -o " .. exe_name .. " && ./" .. exe_name, "C++"
   elseif code_file:match("%.c$") then
-    return ":!make run", "C"
+    local exe_name = code_file:gsub("%.c$", "")
+    return ":!gcc " .. code_file .. " -o " .. exe_name .. " && ./" .. exe_name, "C"
   elseif code_file:match("%.rs$") then
     return ":!cargo run --release", "Rust"
   elseif code_file:match("%.py$") then
