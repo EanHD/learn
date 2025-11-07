@@ -59,7 +59,7 @@ class SystemChecker:
             self.os_type = utils.get_platform()
         else:
             self.os_type = self._detect_os()
-    
+
     def _detect_os(self) -> str:
         """Detect operating system (fallback)"""
         if sys.platform == "win32":
@@ -137,7 +137,7 @@ class SystemChecker:
             kickstart_ok = Path.home() / "AppData" / "Local" / "nvim" / "init.lua"
         else:
             kickstart_ok = Path.home() / ".config" / "nvim" / "init.lua"
-        
+
         self.checks.append({
             "name": "Kickstart.nvim config",
             "status": "OK" if kickstart_ok.exists() else "MISSING",
@@ -177,7 +177,7 @@ class SystemChecker:
             return Path.home() / "AppData" / "Local" / "nvim-data" / "mason" / "packages"
         else:
             return Path.home() / ".local" / "share" / "nvim" / "mason" / "packages"
-    
+
     def _check_mason_packages(self) -> bool:
         """Check if Mason packages are installed"""
         mason_dir = self._get_mason_dir()
@@ -196,7 +196,7 @@ class SystemChecker:
 
         installed = sorted([p.name for p in mason_dir.iterdir() if p.is_dir()])
         return f"{len(installed)} packages installed"
-    
+
     def _get_install_command(self, package: str) -> str:
         """Get OS-specific installation command"""
         commands = {
@@ -232,7 +232,7 @@ class SystemChecker:
             }
         }
         return commands.get(package, {}).get(self.os_type, f"Install {package} for {self.os_type}")
-    
+
     def _get_nvim_config_command(self) -> str:
         """Get OS-specific Neovim config installation command"""
         if self.os_type == "windows":
@@ -433,14 +433,14 @@ class SystemChecker:
             return True, language, None  # Unknown language, assume available
 
         runtime_info = self.LANGUAGE_RUNTIMES[language]
-        
+
         # Get command (may be OS-specific)
         cmd = runtime_info["cmd"]
         if isinstance(cmd, dict):
             cmd = cmd.get(self.os_type, cmd.get("linux", ""))
-        
+
         name = runtime_info["name"]
-        
+
         # Get install command for current OS
         install = runtime_info["install"]
         if isinstance(install, dict):
@@ -602,7 +602,7 @@ class InitWizard:
     def _install_missing_deps(self):
         """Install missing dependencies"""
         print("\nInstalling missing dependencies...")
-        
+
         os_type = self.checker.os_type
         if os_type == "linux":
             print("This may require sudo password.\n")
@@ -896,9 +896,10 @@ class LessonManager:
         """Discover available languages dynamically"""
         lang_map = {}
 
-        # Check all directories in the learn directory
-        if self.learn_dir.exists():
-            for item in self.learn_dir.iterdir():
+        # Check all directories in the lessons directory
+        lessons_dir = self.learn_dir / "lessons"
+        if lessons_dir.exists():
+            for item in lessons_dir.iterdir():
                 if item.is_dir() and not item.name.startswith('.'):
                     # Check if this directory has stage subdirectories
                     stages = list(item.glob("stage-*"))
@@ -929,7 +930,7 @@ class LessonManager:
 
     def find_lesson(self, language: str, stage: int, level: int) -> Optional[Path]:
         """Find lesson path"""
-        lang_path = self.learn_dir / language / f"stage-{stage}" / f"level-{level}" / "lesson.md"
+        lang_path = self.learn_dir / "lessons" / language / f"stage-{stage}" / f"level-{level}" / "lesson.md"
         return lang_path if lang_path.exists() else None
 
     def list_all_lessons(self) -> Dict:
@@ -937,7 +938,7 @@ class LessonManager:
         lessons = {}
 
         for lang_code, lang_name in self.languages.items():
-            lang_path = self.learn_dir / lang_code
+            lang_path = self.learn_dir / "lessons" / lang_code
             lessons[lang_code] = {}
 
             for stage in range(1, 6):
@@ -2264,7 +2265,7 @@ class InteractiveCLI:
                 # Check for updates
                 self._clear_screen()
                 update_info = check_for_updates(self.learn_dir)
-                
+
                 if "error" in update_info:
                     if console:
                         console.print(f"[bold red]Error:[/bold red] {update_info['error']}")
@@ -2288,7 +2289,7 @@ class InteractiveCLI:
                     else:
                         print(f"✓ You're on the latest version")
                         print(f"Version: {update_info['current']}")
-                
+
                 input("\nPress Enter to continue...")
 
             elif choice == "7":
@@ -2420,13 +2421,13 @@ class InteractiveCLI:
 
 def check_for_updates(learn_dir: Path) -> dict:
     """Check if updates are available from GitHub
-    
+
     Returns:
         dict with keys: has_update (bool), current (str), latest (str), commits_behind (int)
     """
     try:
         import subprocess
-        
+
         # Get current commit hash
         result = subprocess.run(
             ["git", "-C", str(learn_dir), "rev-parse", "HEAD"],
@@ -2435,14 +2436,14 @@ def check_for_updates(learn_dir: Path) -> dict:
             timeout=5
         )
         current_hash = result.stdout.strip() if result.returncode == 0 else None
-        
+
         # Fetch latest from remote
         subprocess.run(
             ["git", "-C", str(learn_dir), "fetch", "origin", "main"],
             capture_output=True,
             timeout=10
         )
-        
+
         # Get remote commit hash
         result = subprocess.run(
             ["git", "-C", str(learn_dir), "rev-parse", "origin/main"],
@@ -2451,10 +2452,10 @@ def check_for_updates(learn_dir: Path) -> dict:
             timeout=5
         )
         remote_hash = result.stdout.strip() if result.returncode == 0 else None
-        
+
         if not current_hash or not remote_hash:
             return {"has_update": False, "current": "unknown", "latest": "unknown", "commits_behind": 0}
-        
+
         # Count commits behind
         result = subprocess.run(
             ["git", "-C", str(learn_dir), "rev-list", "--count", f"{current_hash}..{remote_hash}"],
@@ -2463,14 +2464,14 @@ def check_for_updates(learn_dir: Path) -> dict:
             timeout=5
         )
         commits_behind = int(result.stdout.strip()) if result.returncode == 0 else 0
-        
+
         return {
             "has_update": current_hash != remote_hash,
             "current": current_hash[:7],
             "latest": remote_hash[:7],
             "commits_behind": commits_behind
         }
-        
+
     except Exception as e:
         return {"has_update": False, "current": "error", "latest": "error", "commits_behind": 0, "error": str(e)}
 
@@ -2487,16 +2488,16 @@ def update_learn(learn_dir: Path):
         print("  UPDATE LEARN CLI")
         print("=" * 70)
         print("\nChecking for updates...")
-    
+
     update_info = check_for_updates(learn_dir)
-    
+
     if "error" in update_info:
         if console:
             console.print(f"\n[bold red]Error checking for updates:[/bold red] {update_info['error']}")
         else:
             print(f"\nError checking for updates: {update_info['error']}")
         return
-    
+
     if not update_info["has_update"]:
         if console:
             console.print("\n[bold green]✓ You're already on the latest version![/bold green]")
@@ -2505,7 +2506,7 @@ def update_learn(learn_dir: Path):
             print("\n✓ You're already on the latest version!")
             print(f"Current version: {update_info['current']}")
         return
-    
+
     # Show update info
     if console:
         console.print(f"\n[bold yellow]Update available![/bold yellow]")
@@ -2517,22 +2518,22 @@ def update_learn(learn_dir: Path):
         print(f"  Current version: {update_info['current']}")
         print(f"  Latest version:  {update_info['latest']}")
         print(f"  Commits behind:  {update_info['commits_behind']}")
-    
+
     confirm = input("\nDo you want to update now? (Y/n): ").strip().lower()
-    
+
     if confirm == 'n':
         if console:
             console.print("\n[bold]Update cancelled.[/bold]")
         else:
             print("\nUpdate cancelled.")
         return
-    
+
     # Perform update
     if console:
         console.print("\n[bold cyan]Updating...[/bold cyan]")
     else:
         print("\nUpdating...")
-    
+
     try:
         # Pull latest changes
         result = subprocess.run(
@@ -2541,7 +2542,7 @@ def update_learn(learn_dir: Path):
             text=True,
             timeout=30
         )
-        
+
         if result.returncode != 0:
             if console:
                 console.print(f"\n[bold red]Update failed:[/bold red]")
@@ -2550,7 +2551,7 @@ def update_learn(learn_dir: Path):
                 print(f"\nUpdate failed:")
                 print(result.stderr)
             return
-        
+
         # Show what was updated
         if console:
             console.print("\n[bold green]✓ Update complete![/bold green]")
@@ -2566,24 +2567,24 @@ def update_learn(learn_dir: Path):
                 for line in result.stdout.split('\n')[:10]:
                     if line.strip():
                         print(f"  {line}")
-        
+
         # Reinstall CLI if needed
         if console:
             console.print("\n[bold cyan]Updating CLI...[/bold cyan]")
         else:
             print("\nUpdating CLI...")
-        
+
         cli_install = learn_dir / "CLI" / "install.sh"
         if cli_install.exists():
             subprocess.run(["bash", str(cli_install)], capture_output=True)
-        
+
         if console:
             console.print("\n[bold green]✓ All updates applied successfully![/bold green]")
             console.print("\n[bold yellow]Note:[/bold yellow] You may need to restart the CLI for all changes to take effect.")
         else:
             print("\n✓ All updates applied successfully!")
             print("\nNote: You may need to restart the CLI for all changes to take effect.")
-            
+
     except Exception as e:
         if console:
             console.print(f"\n[bold red]Update error:[/bold red] {str(e)}")
@@ -2613,7 +2614,7 @@ def reset_user_data(learn_dir: Path):
         print("\nThe LEARN CLI itself will remain installed.")
 
     confirm = input("\nAre you ABSOLUTELY sure? (type 'DELETE' to confirm): ").strip()
-    
+
     if confirm != "DELETE":
         if console:
             console.print("\n[bold green]Reset cancelled.[/bold green]")
@@ -2638,7 +2639,7 @@ def reset_user_data(learn_dir: Path):
         else:
             print(f"\nFound workspace directory:")
             print(f"  {workspace_root}")
-        
+
         keep_workspaces = input("\nDo you want to keep your workspace files? (Y/n): ").strip().lower()
         delete_workspaces = keep_workspaces == 'n'
     else:
@@ -2646,30 +2647,30 @@ def reset_user_data(learn_dir: Path):
 
     # Delete files
     deleted = []
-    
+
     # Progress file
     progress_file = learn_dir / ".learn-progress.json"
     if progress_file.exists():
         progress_file.unlink()
         deleted.append("Progress file")
-    
+
     # Config file
     config_file = learn_dir / ".learn-config.json"
     if config_file.exists():
         config_file.unlink()
         deleted.append("Configuration file")
-    
+
     # Workspaces
     if delete_workspaces and workspace_root.exists():
         shutil.rmtree(workspace_root)
         deleted.append("Workspace directory")
-    
+
     if console:
         console.print("\n[bold green]✓ Data reset complete![/bold green]")
         console.print("\n[bold]Deleted:[/bold]")
         for item in deleted:
             console.print(f"  [green]•[/green] {item}")
-        
+
         if not delete_workspaces and workspace_root.exists():
             console.print(f"\n[bold cyan]Preserved:[/bold cyan]")
             console.print(f"  [cyan]•[/cyan] Workspace files at {workspace_root}")
@@ -2678,7 +2679,7 @@ def reset_user_data(learn_dir: Path):
         print("\nDeleted:")
         for item in deleted:
             print(f"  • {item}")
-        
+
         if not delete_workspaces and workspace_root.exists():
             print(f"\nPreserved:")
             print(f"  • Workspace files at {workspace_root}")
@@ -2706,7 +2707,7 @@ def uninstall_learn(learn_dir: Path):
         print("\nNote: This will NOT uninstall Neovim, compilers, or other dependencies")
 
     confirm = input("\nAre you sure you want to uninstall? (type 'yes' to confirm): ").strip().lower()
-    
+
     if confirm != "yes":
         if console:
             console.print("\n[bold green]Uninstall cancelled.[/bold green]")
@@ -2725,7 +2726,7 @@ def uninstall_learn(learn_dir: Path):
 
     # Get OS type
     checker = SystemChecker()
-    
+
     # Get workspace path
     if checker.os_type == "windows":
         workspace_root = Path.home() / "AppData" / "Local" / "learn" / "workspaces"
@@ -2744,13 +2745,13 @@ def uninstall_learn(learn_dir: Path):
         if progress_file.exists():
             progress_file.unlink()
             removed.append("Progress file")
-        
+
         # Config file
         config_file = learn_dir / ".learn-config.json"
         if config_file.exists():
             config_file.unlink()
             removed.append("Configuration file")
-        
+
         # Workspaces
         if workspace_root.exists():
             shutil.rmtree(workspace_root)
@@ -2770,7 +2771,7 @@ def uninstall_learn(learn_dir: Path):
             Path.home() / ".zshrc",
             Path.home() / ".profile",
         ]
-        
+
         for config_file in shell_configs:
             if config_file.exists():
                 try:
@@ -2779,7 +2780,7 @@ def uninstall_learn(learn_dir: Path):
                     lines = content.split('\n')
                     new_lines = []
                     skip_next = False
-                    
+
                     for line in lines:
                         if '# Learn CLI' in line:
                             skip_next = True
@@ -2788,7 +2789,7 @@ def uninstall_learn(learn_dir: Path):
                             skip_next = False
                             continue
                         new_lines.append(line)
-                    
+
                     if len(new_lines) < len(lines):
                         config_file.write_text('\n'.join(new_lines))
                         removed.append(f"PATH entry from {config_file.name}")
@@ -2807,18 +2808,18 @@ def uninstall_learn(learn_dir: Path):
         console.print("\n[bold]Removed:[/bold]")
         for item in removed:
             console.print(f"  [green]•[/green] {item}")
-        
+
         if preserved:
             console.print(f"\n[bold cyan]Preserved:[/bold cyan]")
             for item in preserved:
                 console.print(f"  [cyan]•[/cyan] {item}")
-        
+
         console.print(f"\n[bold yellow]Final step:[/bold yellow]")
         console.print(f"  To complete uninstallation, manually remove:")
         console.print(f"  [cyan]{learn_dir}[/cyan]")
         console.print(f"\n  Run: [yellow]rm -rf {learn_dir}[/yellow] (Linux/Mac)")
         console.print(f"  Or:  [yellow]Remove-Item -Recurse {learn_dir}[/yellow] (Windows)")
-        
+
         if shell_config_updated:
             console.print(f"\n[bold cyan]Restart your terminal[/bold cyan] for PATH changes to take effect.")
     else:
@@ -2826,18 +2827,18 @@ def uninstall_learn(learn_dir: Path):
         print("\nRemoved:")
         for item in removed:
             print(f"  • {item}")
-        
+
         if preserved:
             print(f"\nPreserved:")
             for item in preserved:
                 print(f"  • {item}")
-        
+
         print(f"\nFinal step:")
         print(f"  To complete uninstallation, manually remove:")
         print(f"  {learn_dir}")
         print(f"\n  Run: rm -rf {learn_dir} (Linux/Mac)")
         print(f"  Or:  Remove-Item -Recurse {learn_dir} (Windows)")
-        
+
         if shell_config_updated:
             print(f"\nRestart your terminal for PATH changes to take effect.")
 
@@ -2900,11 +2901,11 @@ Examples:
     # Check for updates
     if args.check_updates:
         update_info = check_for_updates(learn_dir)
-        
+
         if "error" in update_info:
             print(f"Error checking for updates: {update_info['error']}")
             return
-        
+
         if console:
             if update_info["has_update"]:
                 console.print(f"[bold yellow]Update available![/bold yellow]")
