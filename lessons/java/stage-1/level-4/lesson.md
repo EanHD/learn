@@ -24,7 +24,7 @@ Get ready to make your programs interactive! Today you'll learn how to talk to y
 
 **Copy the following code EXACTLY as shown below into `Main.java`**
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -114,34 +114,34 @@ public class Main {
         input.close();
     }
 }
-```java
+```
 
 ---
 
 
 
 **Expected output:**
-```java
+```
 [Interactive - output varies based on user input]
-```java
+```
 
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```java
+```
 <Space>r
-```java
+```
 
 **Method 2 (Terminal):**
-```bash
+```
 javac Main.java
 java Main
-```java
+```
 
 **Follow the prompts** and enter your information when asked!
 
 **Example interaction:**
-```java
+```
 === Personal Information Form ===
 
 What's your first name? Alex
@@ -173,7 +173,7 @@ How many years into the future should we predict? 10
 In 10 years, you'll be 35 years old!
 
 Thanks for using the personal info calculator, Alex!
-```java
+```
 
 ---
 
@@ -234,60 +234,60 @@ Always close your Scanner with `input.close()` when you're done! This is good pr
 
 ### Code Breakdown
 
-```java
+```
 import java.util.Scanner;
-```java
+```
 - **`import`** = Brings in external classes we need
 - **`java.util.Scanner`** = The Scanner class for reading input
 - **Why needed?** Scanner isn't built into Java core, must be imported
 
-```java
+```
 Scanner input = new Scanner(System.in);
-```java
+```
 - **`Scanner input`** = Declares a Scanner variable named "input"
 - **`new Scanner`** = Creates a new Scanner object
 - **`System.in`** = Standard input stream (keyboard)
 - **Think of it as**: Creating a tool that listens to the keyboard
 
-```java
+```
 String name = input.nextLine();
-```java
+```
 - **`nextLine()`** = Reads entire line of text until Enter is pressed
 - **Best for**: Names, sentences, any text with spaces
 - **Returns**: String data type
 
-```java
+```
 int age = input.nextInt();
-```java
+```
 - **`nextInt()`** = Reads the next integer number
 - **Warning**: Doesn't consume the newline character!
 - **Returns**: int data type
 
-```java
+```
 input.nextLine();  // Clear the newline
-```java
+```
 - **Why this line?** After `nextInt()` or `nextDouble()`, a newline character remains in the buffer
 - **Problem**: Next `nextLine()` would read that empty line
 - **Solution**: Call `nextLine()` once to consume it
 - **This is a common Java gotcha!**
 
-```java
+```
 char grade = gradeStr.charAt(0);
-```java
+```
 - **Why not direct char input?** Scanner has no `nextChar()` method
 - **Solution**: Read as String, extract first character
 - **`charAt(0)`** = Gets character at index 0 (first character)
 
-```java
+```
 System.out.printf("Height in centimeters: %.1f cm\n", heightCm);
-```java
+```
 - **`printf`** = Formatted print (like C's printf)
 - **`%.1f`** = Float with 1 decimal place
 - **`\n`** = Newline character
 
-```java
+```
 input.close();
-```java
+```
 - **Purpose**: Closes the Scanner and releases resources
 - **Best practice**: Always close resources when done
 - **Prevents**: Resource leaks in larger applications
@@ -297,18 +297,18 @@ input.close();
 This is one of the most confusing issues for Java beginners:
 
 **The Problem:**
-```java
+```
 int age = input.nextInt();      // User types: 25[Enter]
 // nextInt() reads "25" but leaves "[Enter]" in buffer!
 String name = input.nextLine();  // Reads that leftover Enter = empty string!
-```java
+```
 
 **The Solution:**
-```java
+```
 int age = input.nextInt();
 input.nextLine();  // Consume the leftover newline
 String name = input.nextLine();  // Now this works correctly!
-```java
+```
 
 **Rule of Thumb**: After using `nextInt()`, `nextDouble()`, or `nextFloat()`, always call `input.nextLine()` once to clear the buffer before reading more text.
 
@@ -325,19 +325,19 @@ String name = input.nextLine();  // Now this works correctly!
 
 Scanner will crash if you enter the wrong type! Here's what happens:
 
-```java
+```
 // If you enter "hello" when it expects int:
 int age = input.nextInt();  // Throws InputMismatchException!
-```java
+```
 
 **Better approach (we'll learn this later):**
-```java
+```
 if (input.hasNextInt()) {
     int age = input.nextInt();
 } else {
     System.out.println("Please enter a valid number!");
 }
-```java
+```
 
 ### Common Errors & Solutions
 
@@ -353,18 +353,18 @@ if (input.hasNextInt()) {
 We used two ways to combine strings and values:
 
 **Method 1: Using + operator**
-```java
+```
 System.out.println("Name: " + name);
 System.out.println("Age: " + age + " years old");
-```java
+```
 - Simple and readable
 - Java automatically converts numbers to strings
 
 **Method 2: Using printf**
-```java
+```
 System.out.printf("Height: %.1f cm\n", heightCm);
 System.out.printf("BMI: %.1f\n", bmi);
-```java
+```
 - More control over formatting
 - Better for numbers with specific decimal places
 
@@ -406,7 +406,7 @@ User input is everywhere:
 
 Create a simple restaurant order system:
 
-```java
+```
 Scanner input = new Scanner(System.in);
 
 System.out.println("Welcome to Java Cafe!");
@@ -430,7 +430,7 @@ System.out.println("Sandwiches: " + sandwiches + " × $" + sandwichPrice);
 System.out.printf("Total: $%.2f\n", total);
 
 input.close();
-```java
+```
 
 ---
 

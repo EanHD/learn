@@ -25,7 +25,7 @@ Time to do some math! Today you'll learn how to perform mathematical operations 
 
 **Copy the following code into a new file called `math.go`**
 
-```go
+```
 package main
 
 import "fmt"
@@ -184,11 +184,11 @@ func importMathExample() {
     }
     fmt.Println("2^3 (manual):", result)
 }
-```go
+```
 
 Actually, let me fix the above code as we can't import inside functions in Go. Here's the corrected version:
 
-```go
+```
 package main
 
 import (
@@ -351,25 +351,25 @@ func main() {
     fmt.Println("intNum + floatNum (with conversion):", result1)
     fmt.Println("intNum + int(floatNum) (truncated):", result2)
 }
-```go
+```
 
 ---
 
 ### How to Execute
 
 1. **Create or navigate to a Go module directory** (if not already in one):
-   ```bash
+   ```
    mkdir math-example && cd math-example
    go mod init math
-   ```go
+   ```
 2. **Copy the code into `math.go`**
 3. **Run your program**:
-   ```bash
+   ```
    go run math.go
-   ```bash
+   ```
 
 **Expected output:**
-```go
+```
 === Basic Arithmetic ===
 5 + 3 = 8
 10 - 4 = 6
@@ -419,7 +419,7 @@ Max int8 + 1 (overflow): -128
 === Type Conversion in Math ===
 intNum + floatNum (with conversion): 13.5
 intNum + int(floatNum) (truncated): 13
-```go
+```
 
 ---
 
@@ -475,18 +475,18 @@ In Go math, you saw some operators:
 
 ### Code Breakdown
 
-```go
+```
 sum := 5 + 3
 fmt.Println("5 + 3 =", sum)
-```go
+```
 - **`:=`** = Short variable declaration (declare and initialize)
 - **`+`** = Addition operator (performs arithmetic addition)
 - **Variable declaration** happens at the same time as initialization
 
-```go
+```
 remainder := 17 % 5
 fmt.Println("17 % 5 =", remainder, "(remainder)")
-```go
+```
 - **`%`** = Modulo operator (returns the remainder after division)
 - 17 ÷ 5 = 3 remainder 2, so 17 % 5 = 2
 - Useful for checking if numbers are even (n % 2 == 0) or cycling through values
@@ -495,11 +495,11 @@ fmt.Println("17 % 5 =", remainder, "(remainder)")
 
 In Go, when both operands in division are integers, the result is truncated to an integer:
 
-```go
+```
 result := 7 / 2      // Result is 3 (integer truncated)
 result := 7.0 / 2.0  // Result is 3.5 (float division)
 result := 7 / 2.0    // Result is 3.5 (mixed, converted to float)
-```go
+```
 
 ### Order of Operations (PEMDAS)
 
@@ -510,19 +510,19 @@ Go follows the standard mathematical order of operations:
 3. **A**ddition `+`, **S**ubtraction `-` (left to right)
 
 Examples:
-```go
+```
 // Without parentheses: Multiplication before addition
 result := 10 + 5 * 2  // = 10 + 10 = 20 (not 30!)
 
 // With parentheses: Addition before multiplication
 result := (10 + 5) * 2  // = 15 * 2 = 30
-```go
+```
 
 ### Go's Math Package
 
 The math package provides advanced mathematical functions:
 
-```go
+```
 import "math"
 
 // Basic operations
@@ -542,52 +542,52 @@ math.Pow(2, 3)    // 2 to the power of 3: 8.0
 // Constants
 math.Pi   // π: 3.141592653589793
 math.E    // e: 2.718281828459045
-```go
+```
 
 ### Increment and Decrement Operators
 
 Go has `++` and `--` operators, but they are statements, not expressions:
 
-```go
+```
 count := 5
 count++  // OK: increments count by 1
 count--  // OK: decrements count by 1
 
 // NOT OK in Go (unlike C/C++/Java):
 // result := count++  // Syntax error! Can't use as expression
-```go
+```
 
 ### Compound Assignment Operators
 
 Go supports all compound assignment operators:
 
-```go
+```
 value := 10
 value += 5  // Same as: value = value + 5
 value -= 3  // Same as: value = value - 3
 value *= 2  // Same as: value = value * 2
 value /= 4  // Same as: value = value / 4
 value %= 3  // Same as: value = value % 3
-```go
+```
 
 ### Important Go Math Notes
 
 **No exponentiation operator**: Go doesn't have a `^` operator for exponentiation (it's used for bitwise XOR). Use `math.Pow()` instead:
 
-```go
+```
 result := math.Pow(2, 3)  // 2^3 = 8
-```go
+```
 
 **Integer overflow**: Go has types of different sizes. When you exceed the limit of a type, it wraps around:
 
-```go
+```
 var small int8 = 127  // Maximum for int8
 small = small + 1     // Now small becomes -128 (overflow)
-```go
+```
 
 **Type conversions**: In Go, you must explicitly convert between numeric types:
 
-```go
+```
 var intVal int = 5
 var floatVal float64 = 2.5
 
@@ -597,7 +597,7 @@ var floatVal float64 = 2.5
 // Must convert explicitly:
 result1 := float64(intVal) + floatVal  // Convert int to float64
 result2 := intVal + int(floatVal)      // Convert float64 to int (truncates)
-```go
+```
 
 ### Common Errors & Solutions
 
@@ -612,7 +612,7 @@ result2 := intVal + int(floatVal)      // Convert float64 to int (truncates)
 
 Try this complex calculation:
 
-```go
+```
 package main
 
 import (
@@ -652,7 +652,7 @@ func main() {
     fmt.Println("Max int32:", counter)
     fmt.Println("Max int32 + 1:", counter + 1)  // This will overflow to negative
 }
-```go
+```
 
 ---
 
@@ -691,7 +691,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```go
+```
 package main
 
 import "fmt"

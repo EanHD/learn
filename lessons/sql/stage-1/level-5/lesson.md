@@ -23,7 +23,7 @@ Add decision-making to your programs with if/else statements.
 
 **Copy the following code EXACTLY as shown below into `main.sql`**
 
-```sql
+```
 -- Conditional Logic with CASE
 DECLARE @num INT = 15;
 
@@ -60,7 +60,7 @@ SELECT
 
 ### The Complete Code
 
-```sql
+```
 -- Conditional Logic with CASE
 DECLARE @num INT = 15;
 

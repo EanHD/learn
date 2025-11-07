@@ -51,19 +51,19 @@ Text Processing Problems - Design an algorithm to solve this problem, then imple
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    kotlinc hello.kt
-   ```kotlin
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    kotlin hello
-   ```kotlin
+   ```
 
 **Expected output:**
-```kotlin
+```
 Hello, World!
-```kotlin
+```
 
 ### How to Approach This
 
@@ -160,7 +160,7 @@ Hello, World!
 4. **Edge Cases**: What could go wrong?
 
 **Pseudocode Template:**
-```kotlin
+```
 ALGORITHM: [Name]
 INPUT: [What we need]
 OUTPUT: [What we produce]
@@ -174,7 +174,7 @@ BEGIN
         - Step 3
     4. Display results
 END
-```kotlin
+```
 
 Then translate this directly to Kotlin code.
 

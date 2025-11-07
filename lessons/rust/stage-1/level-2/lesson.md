@@ -24,7 +24,7 @@ Now that you know how to create and run a basic Rust program, let's learn about 
 
 **Copy the following code EXACTLY as shown below into a new file called `variables.rs`**
 
-```rust
+```
 fn main() {
     // Integer variable
     let x = 42;
@@ -44,32 +44,32 @@ fn main() {
     println!("greeting = {}", greeting);
     println!("is_rust_fun = {}", is_rust_fun);
 }
-```rust
+```
 
 ---
 
 ### How to Run
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Compile the code**:
-   ```bash
+   ```
    rustc variables.rs -o variables
-   ```rust
+   ```
 3. **Run your program**:
-   ```bash
+   ```
    ./variables
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 x = 42
 pi = 3.14159
 greeting = Hello, Rust!
 is_rust_fun = true
-```rust
+```
 
 ---
 
@@ -120,44 +120,44 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 
 ### Code Breakdown
 
-```rust
+```
 fn main() {
-```rust
+```
 - Same as before - entry point of the program
 
-```rust
+```
     // Integer variable
     let x = 42;
-```rust
+```
 - **`let`** = Variable declaration keyword
 - **`x`** = Variable name (identifier)
 - **`42`** = Integer literal value
 - **`;`** = Statement end
 
-```rust
+```
     // Floating-point variable
     let pi = 3.14159;
-```rust
+```
 - **`pi`** = Variable name
 - **`3.14159`** = Floating-point literal (decimal number)
 
-```rust
+```
     // String variable
     let greeting = "Hello, Rust!";
-```rust
+```
 - **`"Hello, Rust!"`** = String literal (text)
 - Strings are enclosed in double quotes
 
-```rust
+```
     // Boolean variable
     let is_rust_fun = true;
-```rust
+```
 - **`true`** = Boolean literal (true/false values)
 
-```rust
+```
     // Print the variables
     println!("x = {}", x);
-```rust
+```
 - **`{}`** = Placeholder for variable value
 - **`x`** = Variable to insert at placeholder
 

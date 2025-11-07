@@ -89,7 +89,7 @@ typedef struct {
     double min;
     double max;
 } StatisticalData;
-```cpp
+```
 
 ### Function Modules
 - [ ] **Calculator**: `scientific_calc()`, `basic_arithmetic()`
@@ -188,7 +188,7 @@ int get_user_choice(void);
 void clear_input_buffer(void);
 
 # endif
-```cpp
+```
 
 ### Implementation File (math_toolbox.c)
 ```c
@@ -554,7 +554,7 @@ void clear_input_buffer(void) {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
 }
-```cpp
+```
 
 ### Main Program (main.c)
 ```c
@@ -845,20 +845,20 @@ int main() {
 
     return 0;
 }
-```cpp
+```
 
 ---
 
 ## Testing the Application
 
 ### Compilation Instructions
-```bash
+```
 # Compile the program
 g++ -o math_toolbox main.c math_toolbox.c -lm
 
 # Run the program
 ./math_toolbox
-```cpp
+```
 
 ### Test Scenarios
 1. **Scientific Calculator**: Test sin(30), log(100), sqrt(144)
@@ -869,7 +869,7 @@ g++ -o math_toolbox main.c math_toolbox.c -lm
 6. **Number Theory**: Check if 17 is prime, factorize 60
 
 ### Sample Usage
-```cpp
+```
 === Math Toolbox ===
 1. Scientific Calculator
 2. Equation Solver
@@ -891,7 +891,7 @@ Solve ax² + bx + c = 0
 Enter a, b, c: 1 5 6
 Equation: 1.00x² + 5.00x + 6.00 = 0
 Roots: -2.0000, -3.0000
-```cpp
+```
 
 ---
 
@@ -983,20 +983,20 @@ Roots: -2.0000, -3.0000
 ## Code Walkthrough
 
 ### Mathematical Computation Flow
-```cpp
+```
 User Input → Validation → Mathematical Calculation → Precision Check → Formatted Output
       ↓           ↓                ↓                    ↓              ↓
 Input Parsing  Constraint  Algorithm Execution  Rounding/Precision  Display Results
 and Cleaning   Checking    and Processing       Error Handling      with Units
-```cpp
+```
 
 ### Algorithm Selection
-```cpp
+```
 Problem Type → Algorithm Choice → Implementation → Testing → Optimization
       ↓              ↓                ↓            ↓          ↓
 Mathematical  Numerical Methods  Code Writing   Validation  Performance
 Classification Selection         & Debugging   & Accuracy  Tuning
-```cpp
+```
 
 ---
 
@@ -1068,7 +1068,7 @@ Expected implementation provided.
 
 ### Complete Solution
 
-```cpp
+```
 #include <iostream>
 
 int main() {

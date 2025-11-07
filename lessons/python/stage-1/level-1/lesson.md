@@ -24,9 +24,9 @@ Welcome to your first step into programming with Python! Today, you'll learn how
 
 **Copy the following code EXACTLY as shown below into a new file called `hello.py`**
 
-```python
+```
 print("Hello, World!")
-```python
+```
 
 ---
 
@@ -34,18 +34,18 @@ print("Hello, World!")
 
 1. **Open your terminal** (or command prompt)
 2. **Navigate to where you saved your file**:
-    ```bash
+    ```
     cd /path/to/your/folder
-    ```python
+    ```
 3. **Run the code**:
-    ```bash
+    ```
     python3 hello.py
-    ```bash
+    ```
 
 **Expected output:**
-```python
+```
 Hello, World!
-```python
+```
 
 ---
 
@@ -92,9 +92,9 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ### Code Breakdown
 
-```python
+```
 print("Hello, World!")
-```python
+```
 
 - **`print`** = Built-in function that displays text
 - **`"`** = String literal start/end delimiters

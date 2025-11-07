@@ -23,7 +23,7 @@ Learn how to store and work with different types of data in Julia.
 
 **Copy the following code EXACTLY as shown below into `main.jl`**
 
-```julia
+```
 # Numeric variables
 age = 25
 score = 100
@@ -36,28 +36,28 @@ name = "Alex"
 println("Name: $name")
 println("Age: $age")
 println("Price: \$", @sprintf("%.2f", price))
-```julia
+```
 
 ---
 
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```julia
+```
 <Space>r
-```julia
+```
 
 **Method 2 (Terminal):**
-```bash
+```
 julia main.jl
-```julia
+```
 
 **Expected output:**
-```julia
+```
 Name: Alex
 Age: 25
 Price: $29.99
-```julia
+```
 
 
 ---

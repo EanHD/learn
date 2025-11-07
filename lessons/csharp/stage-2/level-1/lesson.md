@@ -19,13 +19,13 @@ Now that you know the basics, it's time to think like a programmer! You'll take 
 
 Here's some pseudocode that describes a simple program:
 
-```csharp
+```
 START
  print "Welcome to the program!"
  print "This is my first real program"
  print "I'm learning to code!"
 END
-```csharp
+```
 
 **Your mission**: Translate this pseudocode into Csharp code and save it as `main.cs`.
 
@@ -37,18 +37,18 @@ Hints:
 
 ### How to Run
 
-```bash
+```
 cd ~/.local/share/learn/workspaces/csharp/stage-2/level-1
 csc main.cs
-```csharp
+```
 
 Expected output:
 
-```csharp
+```
 Welcome to the program!
 This is my first real program
 I'm learning to code!
-```csharp
+```
 
 ### Success Checklist
 
@@ -70,12 +70,12 @@ If you're stuck, here's what your code should look like (don't peek until you tr
 
 ## ANSWER KEY
 
-```cs
-```csharp
+```
+```
 
 (Fill in based on language-specific syntax)
 
-```csharp
+```
 
 ---
 

@@ -101,7 +101,7 @@ typedef struct {
     AlertSystem *alerts;
     ImportExport *data_handler;
 } FinanceApplication;
-```cpp
+```
 
 ### Key Data Structures
 ```c
@@ -195,7 +195,7 @@ typedef struct {
     double alert_price_high;
     double alert_price_low;
 } Investment;
-```cpp
+```
 
 ### Advanced Features Structure
 ```c
@@ -232,7 +232,7 @@ typedef struct {
     RecurringTransaction recurring[100];
     int recurring_count;
 } AutomationRules;
-```cpp
+```
 
 ---
 
@@ -385,7 +385,7 @@ int validate_date(const char *date);
 void format_currency(char *buffer, double amount);
 
 # endif
-```cpp
+```
 
 ### Core Implementation File (finance_manager.c)
 ```c
@@ -1053,7 +1053,7 @@ void format_currency(char *buffer, double amount) {
         sprintf(buffer, "$%.2f", amount);
     }
 }
-```cpp
+```
 
 ### Main Program (main.c)
 ```c
@@ -1335,7 +1335,7 @@ int main() {
 
     return 0;
 }
-```cpp
+```
 
 ---
 
@@ -1348,7 +1348,7 @@ gcc -o finance_manager main.c finance_manager.c
 
 # Run the program
 ./finance_manager
-```cpp
+```
 
 ### Test Scenarios
 1. **Setup**: Add checking and savings accounts
@@ -1360,7 +1360,7 @@ gcc -o finance_manager main.c finance_manager.c
 7. **Data**: Save and reload financial data
 
 ### Sample Usage Flow
-```cpp
+```
 === Main Menu ===
 1.  Dashboard
 ...
@@ -1374,7 +1374,7 @@ Enter account name: My Checking
 Account type (1-Checking, 2-Savings, 3-Credit Card, 4-Investment, 5-Loan, 6-Retirement): 1
 Enter institution: Bank of America
  Account 'My Checking' added successfully!
-```cpp
+```
 
 ---
 
@@ -1492,21 +1492,21 @@ Enter institution: Bank of America
 ## Code Walkthrough
 
 ### System Architecture Flow
-```cpp
+```
 User Interface Layer → Business Logic Layer → Data Access Layer → Persistence Layer
       ↓                        ↓                      ↓                    ↓
 Menu Navigation        Financial         Data Structures       File I/O
 & Input Handling     Calculations      & Memory Management   & Backup
-```cpp
+```
 
 ### Financial Processing Pipeline
-```cpp
+```
 Transaction Input → Validation → Categorization → Account Update → Budget Check → Goal Update → Analytics Update
       ↓                ↓            ↓              ↓              ↓            ↓            ↓
 Data Entry       Rule Validation  Smart Tagging  Balance Calc   Variance      Progress     Trend Analysis
 & Capture       & Constraint     & Learning     & Synchronization Analysis   Tracking    & Forecasting
 Checking       Enforcement      Algorithms     & Persistence                & Alerts
-```cpp
+```
 
 ---
 
@@ -1586,7 +1586,7 @@ Expected implementation provided.
 
 ### Complete Solution
 
-```cpp
+```
 #include <stdio.h>
 
 int main() {

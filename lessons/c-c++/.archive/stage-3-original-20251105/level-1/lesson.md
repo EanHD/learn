@@ -80,10 +80,10 @@ Create a program that asks the user for a temperature in Fahrenheit and classifi
 The program should display both the temperature and its classification.
 
 **Example:**
-```cpp
+```
 Enter temperature in Fahrenheit: 75
 Temperature: 75°F - Comfortable
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for this problem
@@ -103,13 +103,13 @@ Create a program that simulates a vending machine selling snacks for $1.50 each.
 - [ ] Handle cases where payment is insufficient
 
 **Example:**
-```cpp
+```
 How many snacks would you like? 3
 Total cost: $4.50
 Enter payment amount: $5.00
 Change: $0.50
 Thank you for your purchase!
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for this vending machine
@@ -131,11 +131,11 @@ Create a program that asks for a person's age and determines their life stage ca
 Also display how many years until the next category (or "Final stage" if Senior).
 
 **Example:**
-```cpp
+```
 Enter age: 25
 Category: Young Adult
 Years until next category: 11
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for age categorization
@@ -157,7 +157,7 @@ Create a program that calculates movie ticket prices based on:
 The program should ask for age, show time (24-hour format), and number of tickets.
 
 **Example:**
-```cpp
+```
 Enter age: 70
 Enter show time (0-23): 14
 Enter number of tickets: 2
@@ -167,7 +167,7 @@ Senior discount: 30% off
 Matinee discount: 20% off
 Final price per ticket: $6.72
 Total for 2 tickets: $13.44
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for ticket price calculation
@@ -187,14 +187,14 @@ Create a program that asks the user for three numbers and:
 - [ ] Determines if the numbers form an increasing sequence
 
 **Example:**
-```cpp
+```
 Enter three numbers: 5 8 3
 Largest: 8
 Smallest: 3
 Average: 5.33
 All equal: No
 Increasing sequence: No
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for number analysis
@@ -216,11 +216,11 @@ Create a program that converts a numerical grade (0-100) to a letter grade:
 Also display a motivational message based on the grade.
 
 **Example:**
-```cpp
+```
 Enter numerical grade (0-100): 87
 Letter grade: B
 Message: Good job! Keep up the excellent work!
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for grade conversion
@@ -232,17 +232,17 @@ Message: Good job! Keep up the excellent work!
 ### Pseudocode Writing Guidelines
 
 **Good Pseudocode Structure:**
-```cpp
+```
 Algorithm: Problem Name
 1. Clear step-by-step instructions
 2. Handle all input/output
 3. Include decision points
 4. Handle edge cases
 5. End with clear output
-```cpp
+```
 
 **Example:**
-```cpp
+```
 Algorithm: Temperature Classifier
 1. Display "Enter temperature in Fahrenheit: "
 2. Get temperature from user
@@ -256,7 +256,7 @@ Algorithm: Temperature Classifier
    a. Display temperature + "°F - Warm"
 7. Else:
    a. Display temperature + "°F - Hot"
-```cpp
+```
 
 ---
 
@@ -327,7 +327,7 @@ Algorithm: Temperature Classifier
 - [ ] Edge cases: Negative temperatures, very high temperatures
 
 **Sample Pseudocode:**
-```cpp
+```
 Algorithm: Temperature Classifier
 1. Display "Enter temperature in Fahrenheit: "
 2. Get temperature from user
@@ -341,7 +341,7 @@ Algorithm: Temperature Classifier
    a. Display temperature + "°F - Warm"
 7. Else:
    a. Display temperature + "°F - Hot"
-```cpp
+```
 
 **Test Cases:**
 - [ ] 25°F → Freezing
@@ -361,7 +361,7 @@ Algorithm: Temperature Classifier
 - [ ] Constants: Snack price = $1.50
 
 **Sample Pseudocode:**
-```cpp
+```
 Algorithm: Vending Machine
 1. Set snack_price to 1.50
 2. Display "How many snacks would you like? "
@@ -377,7 +377,7 @@ Algorithm: Vending Machine
 9. Else:
    a. Calculate needed = total_cost - payment
    b. Display "Insufficient payment. You need $" + needed + " more."
-```cpp
+```
 
 ---
 
@@ -447,23 +447,23 @@ Algorithm: Vending Machine
 ### Common Problem-Solving Patterns
 
 **Range Checking:**
-```cpp
+```
 If value >= min AND value <= max:
     Process valid value
 Else:
     Handle invalid value
-```cpp
+```
 
 **Sequential Processing:**
-```cpp
+```
 Step 1: Get input
 Step 2: Validate input
 Step 3: Process data
 Step 4: Display results
-```cpp
+```
 
 **Decision Trees:**
-```cpp
+```
 If condition A:
     If sub-condition A1:
         Action A1
@@ -473,7 +473,7 @@ Else if condition B:
     Action B
 Else:
     Default action
-```cpp
+```
 
 ---
 
@@ -539,7 +539,7 @@ Expected implementation provided.
 
 ### Complete Solution
 
-```cpp
+```
 #include <iostream>
 
 int main() {

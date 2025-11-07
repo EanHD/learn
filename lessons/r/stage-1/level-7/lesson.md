@@ -23,7 +23,7 @@ Organize your code into reusable functions/methods.
 
 **Copy the following code EXACTLY as shown below into `main.R`**
 
-```r
+```
 # Function to greet someone
 greet <- function(name) {
     cat("Hello,", name, "!\n")
@@ -57,12 +57,12 @@ cat("5! =", factorial_calc(5), "\n")
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```r
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 Rscript main.R
 ```
 

@@ -24,7 +24,7 @@ Now that you know how to run Python programs, let's learn about variables! Varia
 
 **Copy the following code EXACTLY as shown below into a new file called `variables.py`**
 
-```python
+```
 # Store some information in variables
 name = "Alice"
 age = 25
@@ -36,7 +36,7 @@ print(f"Hello, {name}!")
 print(f"You are {age} years old.")
 print(f"Your height is {height} feet.")
 print(f"Student status: {is_student}")
-```python
+```
 
 ---
 
@@ -44,21 +44,21 @@ print(f"Student status: {is_student}")
 
 1. **Open your terminal** (or command prompt)
 2. **Navigate to where you saved your file**:
-    ```bash
+    ```
     cd /path/to/your/folder
-    ```python
+    ```
 3. **Run the code**:
-    ```bash
+    ```
     python3 variables.py
-    ```bash
+    ```
 
 **Expected output:**
-```python
+```
 Hello, Alice!
 You are 25 years old.
 Your height is 5.6 feet.
 Student status: True
-```python
+```
 
 ---
 
@@ -107,13 +107,13 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ### Code Breakdown
 
-```python
+```
 # Store some information in variables
 name = "Alice"
 age = 25
 height = 5.6
 is_student = True
-```python
+```
 
 - **`name = "Alice"`** = Creates variable `name` and assigns string value
 - **`age = 25`** = Creates variable `age` and assigns integer value
@@ -121,13 +121,13 @@ is_student = True
 - **`is_student = True`** = Creates variable `is_student` and assigns boolean value
 - **`#`** = Comment - ignored by Python, for human readers
 
-```python
+```
 # Display the information
 print(f"Hello, {name}!")
 print(f"You are {age} years old.")
 print(f"Your height is {height} feet.")
 print(f"Student status: {is_student}")
-```python
+```
 
 - **`f"Hello, {name}!"`** = F-string formatting - inserts variable values into strings
 - **`{name}`** = Placeholder where variable value gets inserted

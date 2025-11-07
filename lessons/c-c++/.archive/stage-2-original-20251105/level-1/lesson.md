@@ -26,7 +26,7 @@ Welcome to Stage 2!  You've mastered copying code - now it's time to think like 
 **Pseudocode** is a way to write programming logic in plain English (or your native language) before writing actual code. It's like writing a recipe or instructions for a task.
 
 **Example:**
-```bash
+```
 Algorithm: Make a sandwich
 1. Get bread from pantry
 2. Get peanut butter from fridge
@@ -35,7 +35,7 @@ Algorithm: Make a sandwich
 5. Spread jelly on the other bread slice
 6. Put slices together
 7. Enjoy your sandwich!
-```bash
+```
 
 This is much easier to understand than trying to write code first!
 
@@ -50,13 +50,13 @@ This is much easier to understand than trying to write code first!
 ## Algorithm 1: Greeting Program
 
 **Pseudocode:**
-```bash
+```
 Algorithm: Display Personal Greeting
 1. Display "Hello! What's your name?" to the user
 2. Get the user's name from input
 3. Display "Nice to meet you, " followed by the user's name
 4. Display "Welcome to programming!"
-```bash
+```
 
 **Your Task:** Create a C program that follows these exact steps.
 
@@ -65,7 +65,7 @@ Algorithm: Display Personal Greeting
 ## Algorithm 2: Simple Calculator
 
 **Pseudocode:**
-```bash
+```
 Algorithm: Add Two Numbers
 1. Ask user for first number
 2. Get first number from user
@@ -73,7 +73,7 @@ Algorithm: Add Two Numbers
 4. Get second number from user
 5. Calculate sum of the two numbers
 6. Display "The sum is: " followed by the sum
-```bash
+```
 
 **Your Task:** Create a C program that implements this calculator.
 
@@ -82,14 +82,14 @@ Algorithm: Add Two Numbers
 ## Algorithm 3: Age Calculator
 
 **Pseudocode:**
-```bash
+```
 Algorithm: Calculate Age in Days
 1. Display "Enter your age in years: "
 2. Get age in years from user
 3. Calculate days = age × 365
 4. Display "You are approximately " + days + " days old"
 5. Display "That's a lot of days! "
-```bash
+```
 
 **Your Task:** Create a program that calculates approximate age in days.
 
@@ -98,7 +98,7 @@ Algorithm: Calculate Age in Days
 ## Algorithm 4: Temperature Converter
 
 **Pseudocode:**
-```bash
+```
 Algorithm: Celsius to Fahrenheit Converter
 1. Display "Enter temperature in Celsius: "
 2. Get temperature in Celsius from user
@@ -107,7 +107,7 @@ Algorithm: Celsius to Fahrenheit Converter
 5. Display "°C = "
 6. Display the Fahrenheit temperature
 7. Display "°F"
-```bash
+```
 
 **Your Task:** Create a temperature conversion program.
 
@@ -116,7 +116,7 @@ Algorithm: Celsius to Fahrenheit Converter
 ## Algorithm 5: Rectangle Area Calculator
 
 **Pseudocode:**
-```bash
+```
 Algorithm: Calculate Rectangle Area
 1. Display "Rectangle Area Calculator"
 2. Display "Enter length: "
@@ -127,7 +127,7 @@ Algorithm: Calculate Rectangle Area
 7. Calculate perimeter = 2 × (length + width)
 8. Display "Area: " + area
 9. Display "Perimeter: " + perimeter
-```bash
+```
 
 **Your Task:** Create a program that calculates both area and perimeter.
 
@@ -136,7 +136,7 @@ Algorithm: Calculate Rectangle Area
 ## Algorithm 6: Simple Interest Calculator
 
 **Pseudocode:**
-```bash
+```
 Algorithm: Calculate Simple Interest
 1. Display "Simple Interest Calculator"
 2. Display "Enter principal amount: $"
@@ -150,7 +150,7 @@ Algorithm: Calculate Simple Interest
 10. Display "Principal: $" + principal
 11. Display "Interest: $" + interest
 12. Display "Total: $" + total
-```bash
+```
 
 **Your Task:** Implement the complete interest calculation.
 
@@ -211,7 +211,7 @@ Algorithm: Calculate Simple Interest
 ## Pseudocode Best Practices
 
 ### Good Pseudocode
-```bash
+```
 Algorithm: Process User Data
 1. Get user's name
 2. Get user's age
@@ -220,18 +220,18 @@ Algorithm: Process User Data
 Else
    Display "Minor user"
 4. Display "Data processed"
-```bash
+```
 
 ### Bad Pseudocode (Too Vague)
-```bash
+```
 Algorithm: Do stuff
 1. Get things
 2. Calculate something
 3. Show results
-```bash
+```
 
 ### Good Pseudocode (Clear and Specific)
-```bash
+```
 Algorithm: Calculate BMI
 1. Display "BMI Calculator"
 2. Display "Enter weight in kg: "
@@ -240,7 +240,7 @@ Algorithm: Calculate BMI
 5. Get height from user
 6. Calculate BMI = weight ÷ (height × height)
 7. Display "Your BMI is: " + BMI
-```bash
+```
 
 ---
 
@@ -266,7 +266,7 @@ int main() {
     
     return 0;
 }
-```bash
+```
 
 **Key Concepts:**
 - [ ] `char name[50];` - String variable to store the name
@@ -295,7 +295,7 @@ int main() {
     
     return 0;
 }
-```bash
+```
 
 **Key Concepts:**
 - [ ] Multiple variables: `num1`, `num2`, `sum`
@@ -322,7 +322,7 @@ int main() {
     
     return 0;
 }
-```bash
+```
 
 **Key Concepts:**
 - [ ] Simple multiplication: `age_days = age_years * 365;`
@@ -348,7 +348,7 @@ int main() {
     
     return 0;
 }
-```bash
+```
 
 **Key Concepts:**
 - [ ] `float` variables for decimal temperatures
@@ -380,7 +380,7 @@ int main() {
     
     return 0;
 }
-```bash
+```
 
 **Key Concepts:**
 - [ ] Multiple calculations: area and perimeter
@@ -416,7 +416,7 @@ int main() {
     
     return 0;
 }
-```bash
+```
 
 **Key Concepts:**
 - [ ] Complex formula: `(principal * rate * time) / 100`
@@ -471,28 +471,28 @@ int main() {
 int age;
 std::cout << "Enter age: ");
 scanf("%d", &age);
-```bash
+```
 
 **Getting Decimals:**
 ```c
 float price;
 std::cout << "Enter price: $");
 scanf("%f", &price);
-```bash
+```
 
 **Getting Text:**
 ```c
 char name[50];
 std::cout << "Enter name: ");
 scanf("%s", name);
-```bash
+```
 
 **Displaying Results:**
 ```c
 std::cout << "Result: %d\n", result);
 std::cout << "Price: $%.2f\n", price);
 std::cout << "Hello, %s!\n", name);
-```bash
+```
 
 ---
 
@@ -530,7 +530,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cpp
+```
 #include <iostream>
 
 int main() {

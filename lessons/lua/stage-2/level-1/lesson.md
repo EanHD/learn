@@ -26,7 +26,7 @@ Welcome to Stage 2! You've mastered copying code - now it's time to think like a
 **Pseudocode** is a way to write programming logic in plain English (or your native language) before writing actual code. It's like writing a recipe or instructions for a task.
 
 **Example:**
-```lua
+```
 Algorithm: Make a sandwich
 1. Get bread from pantry
 2. Get peanut butter from fridge
@@ -35,7 +35,7 @@ Algorithm: Make a sandwich
 5. Spread jelly on the other bread slice
 6. Put slices together
 7. Enjoy your sandwich!
-```lua
+```
 
 This is much easier to understand than trying to write code first!
 
@@ -51,25 +51,25 @@ This is much easier to understand than trying to write code first!
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    lua hello.lua
-   ```lua
+   ```
 
 **Expected output:**
-```lua
+```
 Hello, World!
-```lua
+```
 
 ## Algorithm 1: Greeting Program
 
 **Pseudocode:**
-```lua
+```
 Algorithm: Display Personal Greeting
 1. Display "Hello! What's your name?" to the user
 2. Get the user's name from input
 3. Display "Nice to meet you, " followed by the user's name
 4. Display "Welcome to programming!"
-```lua
+```
 
 **Your Task:** Create a Lua program that follows these exact steps.
 
@@ -78,7 +78,7 @@ Algorithm: Display Personal Greeting
 ## Algorithm 2: Simple Calculator
 
 **Pseudocode:**
-```lua
+```
 Algorithm: Add Two Numbers
 1. Ask user for first number
 2. Get first number from user
@@ -86,7 +86,7 @@ Algorithm: Add Two Numbers
 4. Get second number from user
 5. Calculate sum of the two numbers
 6. Display "The sum is: " followed by the sum
-```lua
+```
 
 **Your Task:** Create a Lua program that implements this calculator.
 
@@ -95,14 +95,14 @@ Algorithm: Add Two Numbers
 ## Algorithm 3: Age Calculator
 
 **Pseudocode:**
-```lua
+```
 Algorithm: Calculate Age in Days
 1. Display "Enter your age in years: "
 2. Get age in years from user
 3. Calculate days = age × 365
 4. Display "You are approximately " + days + " days old"
 5. Display "That's a lot of days!"
-```lua
+```
 
 **Your Task:** Create a program that calculates approximate age in days.
 
@@ -111,7 +111,7 @@ Algorithm: Calculate Age in Days
 ## Algorithm 4: Temperature Converter
 
 **Pseudocode:**
-```lua
+```
 Algorithm: Celsius to Fahrenheit Converter
 1. Display "Enter temperature in Celsius: "
 2. Get temperature in Celsius from user
@@ -120,7 +120,7 @@ Algorithm: Celsius to Fahrenheit Converter
 5. Display "°C = "
 6. Display the Fahrenheit temperature
 7. Display "°F"
-```lua
+```
 
 **Your Task:** Create a temperature conversion program.
 
@@ -129,7 +129,7 @@ Algorithm: Celsius to Fahrenheit Converter
 ## Algorithm 5: Rectangle Area Calculator
 
 **Pseudocode:**
-```lua
+```
 Algorithm: Calculate Rectangle Area
 1. Display "Rectangle Area Calculator"
 2. Display "Enter length: "
@@ -140,7 +140,7 @@ Algorithm: Calculate Rectangle Area
 7. Calculate perimeter = 2 × (length + width)
 8. Display "Area: " + area
 9. Display "Perimeter: " + perimeter
-```lua
+```
 
 **Your Task:** Create a program that calculates both area and perimeter.
 
@@ -149,7 +149,7 @@ Algorithm: Calculate Rectangle Area
 ## Algorithm 6: Simple Interest Calculator
 
 **Pseudocode:**
-```lua
+```
 Algorithm: Calculate Simple Interest
 1. Display "Simple Interest Calculator"
 2. Display "Enter principal amount: $"
@@ -163,7 +163,7 @@ Algorithm: Calculate Simple Interest
 10. Display "Principal: $" + principal
 11. Display "Interest: $" + interest
 12. Display "Total: $" + total
-```lua
+```
 
 **Your Task:** Implement the complete interest calculation.
 
@@ -172,7 +172,7 @@ Algorithm: Calculate Simple Interest
 ## Algorithm 7: BMI Calculator
 
 **Pseudocode:**
-```lua
+```
 Algorithm: Calculate Body Mass Index
 1. Display "BMI Calculator"
 2. Display "Enter weight in kg: "
@@ -189,7 +189,7 @@ Algorithm: Calculate Body Mass Index
    Display "Category: Overweight"
 11. Else
    Display "Category: Obesity"
-```lua
+```
 
 **Your Task:** Create a program that calculates BMI with categorization.
 
@@ -245,7 +245,7 @@ Algorithm: Calculate Body Mass Index
 ## Pseudocode Best Practices
 
 ### Good Pseudocode
-```lua
+```
 Algorithm: Process User Data
 1. Get user's name
 2. Get user's age
@@ -254,18 +254,18 @@ Algorithm: Process User Data
 Else
    Display "Minor user"
 4. Display "Data processed"
-```lua
+```
 
 ### Bad Pseudocode (Too Vague)
-```lua
+```
 Algorithm: Do stuff
 1. Get things
 2. Calculate something
 3. Show results
-```lua
+```
 
 ### Good Pseudocode (Clear and Specific)
-```lua
+```
 Algorithm: Calculate BMI
 1. Display "BMI Calculator"
 2. Display "Enter weight in kg: "
@@ -274,7 +274,7 @@ Algorithm: Calculate BMI
 5. Get height from user
 6. Calculate BMI = weight ÷ (height × height)
 7. Display "Your BMI is: " + BMI
-```lua
+```
 
 ---
 
@@ -286,7 +286,7 @@ Algorithm: Calculate BMI
 
 ### Algorithm 1: Greeting Program
 
-```lua
+```
 print("Algorithm 1: Greeting Program")
 
 -- Display "Hello! What's your name?" to the user
@@ -298,11 +298,11 @@ print("Nice to meet you, " .. name)
 
 -- Display "Welcome to programming!"
 print("Welcome to programming!")
-```lua
+```
 
 ### Algorithm 2: Simple Calculator
 
-```lua
+```
 print("Algorithm 2: Simple Calculator")
 
 -- Ask user for first number
@@ -318,11 +318,11 @@ local sum = first_num + second_num
 
 -- Display "The sum is: " followed by the sum
 print("The sum is: " .. sum)
-```lua
+```
 
 ### Algorithm 3: Age Calculator
 
-```lua
+```
 print("Algorithm 3: Age Calculator")
 
 -- Display "Enter your age in years: "
@@ -335,11 +335,11 @@ local days = age * 365
 -- Display messages
 print("You are approximately " .. days .. " days old")
 print("That's a lot of days!")
-```lua
+```
 
 ### Algorithm 4: Temperature Converter
 
-```lua
+```
 print("Algorithm 4: Temperature Converter")
 
 -- Display "Enter temperature in Celsius: "
@@ -351,11 +351,11 @@ local fahrenheit = (celsius * 9/5) + 32
 
 -- Display the results
 print(celsius .. "°C = " .. fahrenheit .. "°F")
-```lua
+```
 
 ### Algorithm 5: Rectangle Area Calculator
 
-```lua
+```
 print("Rectangle Area Calculator")
 
 -- Get length from user
@@ -375,11 +375,11 @@ local perimeter = 2 * (length + width)
 -- Display results
 print("Area: " .. area)
 print("Perimeter: " .. perimeter)
-```lua
+```
 
 ### Algorithm 6: Simple Interest Calculator
 
-```lua
+```
 print("Simple Interest Calculator")
 
 -- Get principal from user
@@ -404,11 +404,11 @@ local total = principal + interest
 print("Principal: $" .. string.format("%.2f", principal))
 print("Interest: $" .. string.format("%.2f", interest))
 print("Total: $" .. string.format("%.2f", total))
-```lua
+```
 
 ### Algorithm 7: BMI Calculator
 
-```lua
+```
 print("BMI Calculator")
 
 -- Get weight from user
@@ -435,7 +435,7 @@ elseif bmi < 30 then
 else
     print("Category: Obesity")
 end
-```lua
+```
 
 ### Common Translation Patterns
 
@@ -480,23 +480,23 @@ end
 ### Input/Output Patterns
 
 **Getting Numbers:**
-```lua
+```
 io.write("Enter age: ")
 local age = tonumber(io.read())
-```lua
+```
 
 **Getting Text:**
-```lua
+```
 io.write("Enter name: ")
 local name = io.read()
-```lua
+```
 
 **Displaying Results:**
-```lua
+```
 print("Result: " .. result)
 print("Price: $" .. string.format("%.2f", price))
 print("Hello, " .. name .. "!")
-```lua
+```
 
 ---
 
@@ -528,7 +528,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```lua
+```
 print("Hello, World!")
 
 ```

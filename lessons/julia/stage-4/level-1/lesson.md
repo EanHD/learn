@@ -51,14 +51,14 @@ Build a complete Calculator Application application that:
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    julia hello.jl
    ```
 
 **Expected output:**
-```julia
+```
 Hello, World!
-```julia
+```
 
 ### How to Approach This
 
@@ -158,13 +158,13 @@ A complete application has these components:
 5. **Error Handling**: Manage problems gracefully
 
 **Code Organization:**
-```julia
+```
 // Setup and initialization
 // Main program loop or flow
 // Helper functions
 // Error handlers
 // Testing/verification
-```julia
+```
 
 Build incrementally - get one feature working before adding the next.
 

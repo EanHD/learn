@@ -23,7 +23,7 @@ Master arithmetic operations and use the language as your calculator.
 
 **Copy the following code EXACTLY as shown below into `main.sql`**
 
-```sql
+```
 -- Math Operations in SQL
 SELECT 
     15 + 4 AS addition,
@@ -54,7 +54,7 @@ SELECT
 
 ### The Complete Code
 
-```sql
+```
 -- Math Operations in SQL
 SELECT 
     15 + 4 AS addition,

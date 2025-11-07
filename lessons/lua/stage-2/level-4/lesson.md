@@ -30,7 +30,7 @@ You've mastered the basics! Now you'll learn to translate written algorithms (ps
 
 **Study the pseudocode algorithm below, then implement it in Lua:**
 
-```lua
+```
 ALGORITHM: Input/Output Algorithms
 
 BEGIN
@@ -39,7 +39,7 @@ BEGIN
     // Translate step by step into Lua
     // Test with sample inputs
 END
-```lua
+```
 
 **Implementation Steps:**
 1. Analyze what the algorithm does
@@ -54,14 +54,14 @@ END
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    lua hello.lua
-   ```lua
+   ```
 
 **Expected output:**
-```lua
+```
 Hello, World!
-```lua
+```
 
 ### How to Approach This
 
@@ -160,7 +160,7 @@ The key is understanding what each pseudocode statement represents in Lua:
 5. **Conditions**: `IF...THEN...ELSE` → if/else statements
 
 **Example Translation:**
-```lua
+```
 PSEUDOCODE:
     READ number
     IF number > 0 THEN
@@ -168,7 +168,7 @@ PSEUDOCODE:
     ELSE
         PRINT "Not positive"
     END IF
-```lua
+```
 
 This becomes structured Lua code following the language syntax.
 
@@ -219,7 +219,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```lua
+```
 print("Hello, World!")
 
 ```

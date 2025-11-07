@@ -23,7 +23,7 @@ Add decision-making to your programs with if/else statements.
 
 **Copy the following code EXACTLY as shown below into `main.sh`**
 
-```bash
+```
 #!/bin/bash
 
 read -p "Enter a number: " num
@@ -63,7 +63,7 @@ fi
 
 ### The Complete Code
 
-```bash
+```
 #!/bin/bash
 
 read -p "Enter a number: " num

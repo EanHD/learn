@@ -25,7 +25,7 @@ Time to do some math! Today you'll learn how to perform mathematical operations 
 
 **Copy the following code into a new file called `math.js`**
 
-```javascript
+```
 // Basic arithmetic operations
 console.log("=== Basic Arithmetic ===");
 
@@ -116,19 +116,19 @@ console.log("After *= 2: " + value);
 
 value /= 4;  // Same as: value = value / 4
 console.log("After /= 4: " + value);
-```javascript
+```
 
 ---
 
 ### How to Execute
 
 1. **Run your program**:
-   ```bash
+   ```
    node math.js
-   ```java
+   ```
 
 **Expected output:**
-```javascript
+```
 === Basic Arithmetic ===
 5 + 3 = 8
 10 - 4 = 6
@@ -160,7 +160,7 @@ After += 5: 15
 After -= 3: 12
 After *= 2: 24
 After /= 4: 6
-```javascript
+```
 
 ---
 
@@ -221,26 +221,26 @@ In JavaScript math, you saw some operators:
 
 ### Code Breakdown
 
-```javascript
+```
 let sum = 5 + 3;
 console.log("5 + 3 = " + sum);
-```javascript
+```
 - **`=`** = Assignment operator (stores the result of 5 + 3 into variable 'sum')
 - **`+`** = Addition operator (performs arithmetic addition)
 - **String concatenation**: The `+` operator also joins strings when one operand is a string
 
-```javascript
+```
 let remainder = 17 % 5;
 console.log("17 % 5 = " + remainder + " (remainder)");
-```javascript
+```
 - **`%`** = Modulo operator (returns the remainder after division)
 - 17 ÷ 5 = 3 remainder 2, so 17 % 5 = 2
 - Useful for checking if numbers are even (n % 2 === 0) or cycling through values
 
-```javascript
+```
 let power = 2 ** 3;
 console.log("2 ** 3 = " + power + " (2 to the power of 3)");
-```javascript
+```
 - **`**`** = Exponentiation operator (new in ES2016)
 - 2 ** 3 = 2 to the power of 3 = 2 × 2 × 2 = 8
 - Alternative to Math.pow(2, 3)
@@ -255,19 +255,19 @@ JavaScript follows the standard mathematical order of operations:
 4. **A**ddition `+` and **S**ubtraction `-` (left to right)
 
 Examples:
-```javascript
+```
 // Without parentheses: Multiplication before addition
 10 + 5 * 2;  // = 10 + 10 = 20 (not 30!)
 
 // With parentheses: Addition before multiplication
 (10 + 5) * 2;  // = 15 * 2 = 30
-```javascript
+```
 
 ### Increment/Decrement Operators
 
 JavaScript has special operators for adding/subtracting 1:
 
-```javascript
+```
 let x = 5;
 
 // Pre-increment (++x): Add 1 FIRST, then return the new value
@@ -277,13 +277,13 @@ console.log(++x);  // Prints: 6 (x is now 6)
 let y = 5;
 console.log(y++);  // Prints: 5 (y is now 6)
 console.log(y);    // Prints: 6
-```javascript
+```
 
 ### Compound Assignment Operators
 
 These combine an operation with assignment:
 
-```javascript
+```
 let value = 10;
 
 value += 5;  // Same as: value = value + 5;  // value is now 15
@@ -291,26 +291,26 @@ value -= 3;  // Same as: value = value - 3;  // value is now 12
 value *= 2;  // Same as: value = value * 2;  // value is now 24
 value /= 4;  // Same as: value = value / 4;  // value is now 6
 value %= 3;  // Same as: value = value % 3;  // value is now 0
-```javascript
+```
 
 ### Important JavaScript Math Notes
 
 **Floating Point Precision:**
-```javascript
+```
 console.log(0.1 + 0.2);  // Output: 0.30000000000000004 (not exactly 0.3!)
-```javascript
+```
 This is due to how JavaScript (and most programming languages) store decimal numbers internally.
 
 **Division by Zero:**
-```javascript
+```
 console.log(5 / 0);     // Output: Infinity
 console.log(-5 / 0);    // Output: -Infinity
 console.log(0 / 0);     // Output: NaN (Not a Number)
-```javascript
+```
 
 **Mathematical Functions:**
 For more complex math, JavaScript has a built-in Math object:
-```javascript
+```
 Math.sqrt(16);     // Square root: 4
 Math.max(1, 5, 3); // Maximum: 5
 Math.min(1, 5, 3); // Minimum: 1
@@ -318,7 +318,7 @@ Math.round(4.7);   // Round: 5
 Math.floor(4.7);   // Floor: 4
 Math.ceil(4.2);    // Ceiling: 5
 Math.PI;           // Pi: 3.141592653589793
-```javascript
+```
 
 ### Common Errors & Solutions
 
@@ -342,7 +342,7 @@ JavaScript math is used everywhere:
 
 Try this complex calculation:
 
-```javascript
+```
 // Compound interest calculation
 let principal = 1000;  // Initial amount
 let rate = 0.05;       // 5% annual interest rate
@@ -360,7 +360,7 @@ let original = 100;
 let newAmount = 125;
 let percentageChange = ((newAmount - original) / original) * 100;
 console.log("Percentage change from " + original + " to " + newAmount + ": " + percentageChange + "%");
-```javascript
+```
 
 ---
 

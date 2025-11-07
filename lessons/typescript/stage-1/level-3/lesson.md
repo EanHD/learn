@@ -23,7 +23,7 @@ Master arithmetic operations and use the language as your calculator.
 
 **Copy the following code EXACTLY as shown below into `main.ts`**
 
-```typescript
+```
 const a: number = 15;
 const b: number = 4;
 
@@ -58,7 +58,7 @@ console.log(`Precise Division: ${x} / ${y} = ${x / y}`);
 
 ### The Complete Code
 
-```typescript
+```
 const a: number = 15;
 const b: number = 4;
 
@@ -148,10 +148,10 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```ts
+```
 console.log("Hello, World!");
 
-```ts
+```
 
 ### Code Breakdown
 

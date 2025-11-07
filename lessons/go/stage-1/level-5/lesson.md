@@ -25,7 +25,7 @@ Time to make programs that can make decisions! Today you'll learn how to write c
 
 **Copy the following code into a new file called `conditionals.go`**
 
-```go
+```
 package main
 
 import "fmt"
@@ -219,25 +219,25 @@ func ternary(condition bool, a string, b string) string {
     }
     return b
 }
-```go
+```
 
 ---
 
 ### How to Execute
 
 1. **Create or navigate to a Go module directory** (if not already in one):
-   ```bash
+   ```
    mkdir conditionals-example && cd conditionals-example
    go mod init conditionals
-   ```go
+   ```
 2. **Copy the code into `conditionals.go`**
 3. **Run your program**:
-   ```bash
+   ```
    go run conditionals.go
-   ```bash
+   ```
 
 **Expected output:**
-```go
+```
 === Simple Age Check ===
 You are an adult (18 or older)
 
@@ -270,7 +270,7 @@ Good job!
 === Switch with Expressions ===
 Grade: B+
 Score: 88, Result: Pass
-```go
+```
 
 ---
 
@@ -331,19 +331,19 @@ In Go conditionals, you'll use these comparison operators:
 
 ### Code Breakdown
 
-```go
+```
 if age >= 18 {
     fmt.Println("You are an adult (18 or older)")
 } else {
     fmt.Println("You are a minor (under 18)")
 }
-```go
+```
 - **`if`** = Start of conditional statement
 - **`age >= 18`** = Condition that evaluates to true or false
 - **`{}`** = Code block executed if condition is true
 - **`else`** = Code block executed if condition is false
 
-```go
+```
 if grade >= 90 {
     fmt.Println("Grade: A (90-100)")
 } else if grade >= 80 {
@@ -355,18 +355,18 @@ if grade >= 90 {
 } else {
     fmt.Println("Grade: F (below 60)")
 }
-```go
+```
 - **`else if`** = Additional condition to check if the first was false
 - **Execution order** matters: Go checks each condition in order and executes the first true one
 - **Only one block** executes, not multiple blocks
 
-```go
+```
 if username == "admin" && password == "secret123" {
     fmt.Println("Login successful! Welcome, admin.")
 } else {
     fmt.Println("Login failed! Invalid username or password.")
 }
-```go
+```
 - **`&&`** = Logical AND operator (both conditions must be true)
 - **`==`** = Equality comparison operator
 - **Security** considerations: Never hardcode credentials in real programs
@@ -374,13 +374,13 @@ if username == "admin" && password == "secret123" {
 ### Comparison Operators Deep Dive
 
 **Equality vs Assignment:**
-```go
+```
 // Wrong! This assigns a value (would cause a compilation error)
 if username = "admin" {  // ERROR: Cannot use assignment in condition
 
 // Correct! This compares values
 if username == "admin" {  // OK: Equality comparison
-```go
+```
 
 ### Logical Operators
 
@@ -391,7 +391,7 @@ if username == "admin" {  // OK: Equality comparison
 | NOT | `!` | Reverse condition | `!true` | `false` |
 
 **More Examples:**
-```go
+```
 // AND: All conditions must be true
 age := 21
 hasID := true
@@ -413,11 +413,11 @@ isLoggedIn := false
 if !isLoggedIn {
     fmt.Println("Please log in first")
 }
-```go
+```
 
 ### Nested Conditionals
 
-```go
+```
 if number > 0 {
     fmt.Println("The number is positive")
     if number%2 == 0 {        // Nested if
@@ -427,13 +427,13 @@ if number > 0 {
         }
     }
 }
-```go
+```
 - **Inner condition** only evaluated if outer condition is true
 - **Be careful** with nesting - too deep can be hard to read
 
 ### Switch Statement
 
-```go
+```
 switch dayOfWeek {
 case 1:
     fmt.Println("Today is Monday")
@@ -442,7 +442,7 @@ case 2:
 default:  // Executes if no case matches
     fmt.Println("Invalid day number")
 }
-```go
+```
 - **Alternative to long if/else if** chains
 - **Automatic break** after each case (no fallthrough by default)
 - **`default`** = Catch-all case when no others match
@@ -451,7 +451,7 @@ default:  // Executes if no case matches
 ### Switch Variations
 
 **Multiple values in one case:**
-```go
+```
 grade := "A"
 switch grade {
 case "A", "A+", "A-":  // Multiple values
@@ -459,10 +459,10 @@ case "A", "A+", "A-":  // Multiple values
 case "B", "B+":
     fmt.Println("Good!")
 }
-```go
+```
 
 **Switch without expression (like if/else if):**
-```go
+```
 score := 88
 switch {
 case score >= 90:
@@ -474,13 +474,13 @@ case score >= 70:
 default:
     fmt.Println("F grade")
 }
-```go
+```
 
 ### Go's Logical Short-Circuiting
 
 Go uses short-circuit evaluation for `&&` and `||`:
 
-```go
+```
 // With &&, if the first condition is false, the second is not evaluated
 if x != 0 && 10/x > 2 {  // If x is 0, 10/x is never evaluated (no division by zero)
     fmt.Println("This is safe!")
@@ -490,13 +490,13 @@ if x != 0 && 10/x > 2 {  // If x is 0, 10/x is never evaluated (no division by z
 if x == 0 || 10/x > 2 {  // If x is 0, 10/x is never evaluated
     fmt.Println("This is also safe!")
 }
-```go
+```
 
 ### No Ternary Operator in Go
 
 Unlike many languages, Go doesn't have a ternary operator (`condition ? a : b`). Instead, use if/else or a function:
 
-```go
+```
 // Instead of: result = condition ? value1 : value2
 var result string
 if condition {
@@ -512,7 +512,7 @@ func ternary(condition bool, a string, b string) string {
     }
     return b
 }
-```go
+```
 
 ### Common Errors & Solutions
 
@@ -539,7 +539,7 @@ Wait, let me correct that last point - Go doesn't require parentheses around con
 ### Best Practices for Conditionals
 
 **Use descriptive variable names:**
-```go
+```
 // Good
 if isAdult { ... }
 if isValidEmail { ... }
@@ -547,17 +547,17 @@ if isValidEmail { ... }
 // Avoid
 if x { ... }
 if flag { ... }
-```go
+```
 
 **Keep conditions simple:**
-```go
+```
 // Good - store complex condition in variable
 canVote := age >= 18 && isCitizen && !isInPrison
 if canVote { ... }
 
 // Avoid - hard to read
 if age >= 18 && isCitizen && !isInPrison { ... }
-```go
+```
 
 **Consider switch vs if/else if:**
 - Use `switch` for exact value matching
@@ -567,7 +567,7 @@ if age >= 18 && isCitizen && !isInPrison { ... }
 
 Try this complex conditional program:
 
-```go
+```
 package main
 
 import "fmt"
@@ -640,7 +640,7 @@ func main() {
         fmt.Println("Not eligible for graduation, must repeat course")
     }
 }
-```go
+```
 
 ---
 
@@ -679,7 +679,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```go
+```
 package main
 
 import "fmt"

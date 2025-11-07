@@ -23,7 +23,7 @@ Organize your code into reusable functions/methods.
 
 **Copy the following code EXACTLY as shown below into `main.jl`**
 
-```julia
+```
 # Function to greet someone
 function greet(name)
     println("Hello, $name!")
@@ -50,26 +50,26 @@ sum_result = add(5, 3)
 println("5 + 3 = $sum_result")
 
 println("5! = $(factorial_calc(5))")
-```julia
+```
 
 ---
 
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```julia
+```
 <Space>r
-```julia
+```
 
 **Method 2 (Terminal):**
-```bash
+```
 julia main.jl
-```julia
+```
 
 **Expected output:**
-```julia
+```
 Result: 15
-```julia
+```
 
 
 ---

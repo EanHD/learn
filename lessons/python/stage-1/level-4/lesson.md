@@ -24,7 +24,7 @@ So far, our programs have used fixed values. Now let's make programs that intera
 
 **Copy the following code EXACTLY as shown below into a new file called `input.py`**
 
-```python
+```
 # Get user information
 name = input("What is your name? ")
 age = int(input("How old are you? "))
@@ -35,7 +35,7 @@ print(f"\nHello, {name}!")
 print(f"You are {age} years old.")
 print(f"Your favorite color is {favorite_color}.")
 print(f"Nice to meet you, {name}!")
-```python
+```
 
 ---
 
@@ -43,17 +43,17 @@ print(f"Nice to meet you, {name}!")
 
 1. **Open your terminal** (or command prompt)
 2. **Navigate to where you saved your file**:
-    ```bash
+    ```
     cd /path/to/your/folder
-    ```python
+    ```
 3. **Run the code**:
-    ```bash
+    ```
     python3 input.py
-    ```python
+    ```
 4. **Follow the prompts** - type your answers when asked!
 
 **Example interaction:**
-```python
+```
 What is your name? Alice
 How old are you? 25
 What is your favorite color? Blue
@@ -62,7 +62,7 @@ Hello, Alice!
 You are 25 years old.
 Your favorite color is Blue.
 Nice to meet you, Alice!
-```python
+```
 
 ---
 
@@ -110,24 +110,24 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ### Code Breakdown
 
-```python
+```
 # Get user information
 name = input("What is your name? ")
 age = int(input("How old are you? "))
 favorite_color = input("What is your favorite color? ")
-```python
+```
 
 - **`input("What is your name? ")`** = Displays prompt, gets text input
 - **`int(input("How old are you? "))`** = Gets input, converts to integer
 - **`name = ...`** = Stores input in variable `name`
 
-```python
+```
 # Display personalized message
 print(f"\nHello, {name}!")
 print(f"You are {age} years old.")
 print(f"Your favorite color is {favorite_color}.")
 print(f"Nice to meet you, {name}!")
-```python
+```
 
 - **`f"\nHello, {name}!"`** = Newline then personalized greeting
 - **Uses stored variables** = Program remembers what user typed

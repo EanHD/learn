@@ -22,13 +22,13 @@ You're now ready for Stage 3! This is where you start thinking like a real progr
 
 Step 1: Write the pseudocode first
 
-```kotlin
+```
 What should happen:
 1. Print "Hello, [name]"
 
 Write your pseudocode in plain English below:
 (Your pseudocode here)
-```bash
+```
 
 Step 2: Implement your pseudocode in Kotlin
 
@@ -38,19 +38,19 @@ Create `main.kotlin.kotlin` with your solution.
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    kotlinc hello.kt
-   ```kotlin
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    kotlin hello
-   ```kotlin
+   ```
 
 **Expected output:**
-```kotlin
+```
 Hello, World!
-```kotlin
+```
 
 ### Success Checklist
 

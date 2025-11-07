@@ -51,7 +51,7 @@ Sorting Algorithms - Design an algorithm to solve this problem, then implement i
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    sqlite3 < hello.sql
    ```
 
@@ -155,7 +155,7 @@ Hello, World!
 4. **Edge Cases**: What could go wrong?
 
 **Pseudocode Template:**
-```sql
+```
 ALGORITHM: [Name]
 INPUT: [What we need]
 OUTPUT: [What we produce]

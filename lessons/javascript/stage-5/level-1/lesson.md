@@ -58,14 +58,14 @@ Create a production-ready Web Scraper using Javascript with:
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    node hello.js
-   ```java
+   ```
 
 **Expected output:**
-```javascript
+```
 Hello, World!
-```javascript
+```
 
 ### How to Approach This
 

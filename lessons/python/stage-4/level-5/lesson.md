@@ -39,9 +39,9 @@ The system uses conditional logic to map user responses to specific recommendati
 - Time availability sets scheduling recommendations
 
 **Data Flow:**
-```python
+```
 User Input → Assessment → Analysis → Recommendation → Display
-```python
+```
 
 ### Decision-Making Algorithm
 

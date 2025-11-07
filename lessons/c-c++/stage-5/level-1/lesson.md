@@ -210,7 +210,7 @@ Your capstone will be evaluated on:
 
 Before coding, submit a proposal addressing:
 
-```cpp
+```
 PROJECT TITLE: [Name]
 DOMAIN: [Category - e.g., Personal Finance, Education]
 PURPOSE: [What problem does it solve?]
@@ -238,7 +238,7 @@ USER INTERFACE:
 - [What menus or prompts?]
 
 ESTIMATED EFFORT: [X hours of work]
-```cpp
+```
 
 ---
 
@@ -408,15 +408,15 @@ From **Stage 4**: File I/O, data structures, system design
 **Essential Planning Steps:**
 
 1. **Write a Problem Statement**
- ```cpp
+ ```
  "My application solves [problem]
  by [approach]
  for [users]
  so that [outcome]."
- ```cpp
+ ```
 
 2. **Define Core Features** (3-5 minimum)
- ```cpp
+ ```
  MUST HAVE (critical):
  - Feature A
  - Feature B
@@ -427,7 +427,7 @@ From **Stage 4**: File I/O, data structures, system design
  
  NICE TO HAVE (bonus):
  - Feature E
- ```cpp
+ ```
 
 3. **Design Data Structures**
  ```c
@@ -442,10 +442,10 @@ From **Stage 4**: File I/O, data structures, system design
  int employee_count;
  // ... other fields
  };
- ```cpp
+ ```
 
 4. **Create Architecture Diagram**
- ```cpp
+ ```
  USER INPUT
  ↓
  MENU SYSTEM
@@ -455,10 +455,10 @@ From **Stage 4**: File I/O, data structures, system design
  DATA STORAGE (structs)
  ↓
  FILE I/O (persistence)
- ```cpp
+ ```
 
 5. **Write Pseudocode for Main Functions**
- ```cpp
+ ```
  Algorithm: AddNewRecord
  1. Get input from user
  2. Validate input
@@ -473,7 +473,7 @@ From **Stage 4**: File I/O, data structures, system design
  3. Check if record matches criteria
  4. Display matching records
  5. Ask if user wants to filter further
- ```cpp
+ ```
 
 ### Phase 3: Data Structure Design
 
@@ -520,7 +520,7 @@ void add_entity(EntityManager *manager);
 void view_entities(EntityManager *manager);
 void search_entities(EntityManager *manager);
 void delete_entity(EntityManager *manager);
-```cpp
+```
 
 ### Phase 4: Implementation Strategy
 
@@ -543,7 +543,7 @@ void delete_entity(EntityManager *manager);
 
 **Create a Test Plan:**
 
-```cpp
+```
 TEST CASE 1: Add New Record
 Input: Valid record data
 Expected: Record added, saved to file
@@ -560,7 +560,7 @@ Expected: "No records found" message
 Result: PASS / FAIL
 
 ... (20-30 test cases minimum)
-```cpp
+```
 
 ### Phase 6: Code Quality Checklist
 
@@ -592,9 +592,9 @@ Result: PASS / FAIL
  - Note which are core vs. bonus
 
 3. **Compilation Instructions**
- ```bash
+ ```
  g++ -o myapp main.c -lm
- ```cpp
+ ```
 
 4. **Usage Guide**
  - How to run the program
@@ -668,7 +668,7 @@ Result: PASS / FAIL
 ## Real-World Capstone Examples
 
 ### Example 1: Personal Finance Manager
-```cpp
+```
 PURPOSE: Help track personal spending and savings goals
 FEATURES: 
  - Add/categorize expenses
@@ -676,10 +676,10 @@ FEATURES:
  - Generate spending reports
  - Export to CSV for analysis
 COMPLEXITY: Moderate (5-7 hours)
-```cpp
+```
 
 ### Example 2: Quiz Application
-```cpp
+```
 PURPOSE: Interactive quiz system for learning
 FEATURES:
  - Load questions from file
@@ -687,10 +687,10 @@ FEATURES:
  - Provide instant feedback
  - Show statistics and progress
 COMPLEXITY: Moderate (6-8 hours)
-```cpp
+```
 
 ### Example 3: Data Processor
-```cpp
+```
 PURPOSE: Analyze CSV files and generate reports
 FEATURES:
  - Parse CSV files
@@ -699,7 +699,7 @@ FEATURES:
  - Generate reports
  - Export results
 COMPLEXITY: Moderate to Advanced (8-12 hours)
-```cpp
+```
 
 ---
 
@@ -756,7 +756,7 @@ Expected implementation provided.
 
 ### Complete Solution
 
-```cpp
+```
 #include <iostream>
 
 int main() {

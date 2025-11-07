@@ -28,19 +28,19 @@ You're going to build a complete Csharp application. This is a real project that
 ### How to Compile and Run
 
 1. **Compile the code**:
- ```bash
+ ```
  csc hello.cs
- ```csharp
+ ```
 
 2. **Run your program**:
- ```bash
+ ```
  mono hello
- ```csharp
+ ```
 
 **Expected output:**
-```csharp
+```
 Hello, World!
-```csharp
+```
 
 ### Project Requirements
 
@@ -167,7 +167,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cs
+```
 using System;
 
 class Program {

@@ -33,19 +33,19 @@ Now you'll implement an automated application that processes data in batches, re
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    rustc hello.rs -o hello hello.rs
-   ```rust
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
-```rust
+```
 
 ### Program Requirements
 
@@ -70,19 +70,19 @@ Based on your Stage 3 pseudocode, implement a student grade analyzer that:
 ### Implementation Steps
 
 1. **Create the project structure**:
-   ```bash
+   ```
    cd /home/eanhd/LEARN/rust/stage-4-full-problem-solving/level-6-automated-application
-   ```rust
+   ```
 
 2. **Create `students.txt`** with sample data
 
 3. **Create `main.rs`** with your Rust implementation
 
 4. **Test your program**:
-   ```bash
+   ```
    rustc main.rs
    ./main
-   ```rust
+   ```
 
 5. **Create `README.md`** with usage instructions
 
@@ -151,7 +151,7 @@ Practice the code and experiment with variations!
 
 ### Expected Program Behavior
 
-```rust
+```
 Student Grade Analyzer
 ======================
 
@@ -211,11 +211,11 @@ GPA: 1.00
 Status: Needs improvement.
 
 Analysis complete! Reports saved to grade_report.txt
-```rust
+```
 
 ### Sample Implementation
 
-```rust
+```
 use std::fs;
 use std::io::Write;
 use std::collections::HashMap;
@@ -433,7 +433,7 @@ fn save_report_to_file(students: &[Student]) -> Result<(), Box<dyn std::error::E
 
     Ok(())
 }
-```rust
+```
 
 ### Implementation Analysis
 
@@ -472,11 +472,11 @@ fn save_report_to_file(students: &[Student]) -> Result<(), Box<dyn std::error::E
 ### Testing Your Program
 
 **Test Data Format:**
-```rust
+```
 1001,Alice Johnson,Math:95,Science:92,English:98,History:96
 1002,Bob Smith,Math:87,Science:89,English:85,History:88
 1003,Carol Davis,Math:78,Science:82,English:75,History:80
-```rust
+```
 
 **Expected Calculations:**
 - Alice: (95+92+98+96)/4 = 95.25% → A (4.0 GPA)
@@ -485,7 +485,7 @@ fn save_report_to_file(students: &[Student]) -> Result<(), Box<dyn std::error::E
 
 ### README.md Template
 
-```markdown
+```
 # Student Grade Analyzer
 
 An automated Rust application that processes student grade data from files and generates comprehensive analysis reports.
@@ -502,21 +502,21 @@ An automated Rust application that processes student grade data from files and g
 ## Data Format
 
 Create a `students.txt` file with the following format:
-```rust
+```
 ID,Name,Subject1:Score,Subject2:Score,...
 1001,Alice Johnson,Math:95,Science:92,English:98
-```rust
+```
 
 ## Usage
 
 1. Create your student data file
 2. Run the analyzer:
-   ```bash
+   ```
    rustc main.rs
    ./main
-```rust
+```
 3. View reports on screen and in `grade_report.txt`
-```rust
+```
 
 ---
 

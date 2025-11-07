@@ -23,7 +23,7 @@ Master arithmetic operations and use the language as your calculator.
 
 **Copy the following code EXACTLY as shown below into `main.kt`**
 
-```kotlin
+```
 fun main() {
     val a = 15
     val b = 4
@@ -38,7 +38,7 @@ fun main() {
     val y = 4.0
     println("Precise Division: $x / $y = ${x / y}")
 }
-```kotlin
+```
 
 ---
 
@@ -60,7 +60,7 @@ fun main() {
 
 ### The Complete Code
 
-```kotlin
+```
 fun main() {
     val a = 15
     val b = 4
@@ -75,7 +75,7 @@ fun main() {
     val y = 4.0
     println("Precise Division: $x / $y = ${x / y}")
 }
-```kotlin
+```
 
 ### What This Code Does
 

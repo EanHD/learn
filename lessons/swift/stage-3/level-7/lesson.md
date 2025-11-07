@@ -51,14 +51,14 @@ Sorting Algorithms - Design an algorithm to solve this problem, then implement i
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    swift hello.swift
-   ```swift
+   ```
 
 **Expected output:**
-```swift
+```
 Hello, World!
-```swift
+```
 
 ### How to Approach This
 
@@ -155,7 +155,7 @@ Hello, World!
 4. **Edge Cases**: What could go wrong?
 
 **Pseudocode Template:**
-```swift
+```
 ALGORITHM: [Name]
 INPUT: [What we need]
 OUTPUT: [What we produce]
@@ -169,7 +169,7 @@ BEGIN
         - Step 3
     4. Display results
 END
-```swift
+```
 
 Then translate this directly to Swift code.
 
@@ -220,7 +220,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```swift
+```
 print("Hello, World!")
 
 ```

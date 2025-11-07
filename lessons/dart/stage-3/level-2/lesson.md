@@ -20,9 +20,9 @@ Another level, another challenge! You're getting stronger at analyzing problems.
 
 Read the problem carefully:
 
-```dart
+```
 [Problem statement will be specific to this level]
-```dart
+```
 
 **Step 1:** Write pseudocode in `pseudocode.txt` that solves this problem
 
@@ -34,14 +34,14 @@ Create `main.dart.dart` with your solution.
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    dart hello.dart
-   ```dart
+   ```
 
 **Expected output:**
-```dart
+```
 Hello, World!
-```dart
+```
 
 ### Success Checklist
 
@@ -115,12 +115,12 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```dart
+```
 void main() {
     print("Hello, World!");
 }
 
-```dart
+```
 
 ### Code Breakdown
 

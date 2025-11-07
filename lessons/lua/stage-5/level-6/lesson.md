@@ -58,14 +58,14 @@ Create a production-ready Performance Optimization using Lua with:
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    lua hello.lua
-   ```lua
+   ```
 
 **Expected output:**
-```lua
+```
 Hello, World!
-```lua
+```
 
 ### How to Approach This
 
@@ -230,7 +230,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```lua
+```
 print("Hello, World!")
 
 ```

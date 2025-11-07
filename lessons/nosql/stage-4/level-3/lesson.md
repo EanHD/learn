@@ -51,7 +51,7 @@ Build a complete Data Processing application that:
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    mongo hello.js
    ```
 
@@ -158,7 +158,7 @@ A complete application has these components:
 5. **Error Handling**: Manage problems gracefully
 
 **Code Organization:**
-```javascript
+```
 // Setup and initialization
 // Main program loop or flow
 // Helper functions

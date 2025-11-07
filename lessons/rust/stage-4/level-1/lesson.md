@@ -47,17 +47,17 @@ Based on your Stage 3 pseudocode, implement a temperature converter that:
 ### Implementation Steps
 
 1. **Create the project structure**:
-   ```bash
+   ```
    cd /home/eanhd/LEARN/rust/stage-4-full-problem-solving/level-1-simple-application
-   ```rust
+   ```
 
 2. **Create `main.rs`** with your Rust implementation
 
 3. **Test your program**:
-   ```bash
+   ```
    rustc main.rs
    ./main
-   ```rust
+   ```
 
 4. **Create `README.md`** with usage instructions
 
@@ -135,7 +135,7 @@ Practice the code and experiment with variations!
 
 ### Expected Program Behavior
 
-```rust
+```
 Temperature Converter
 =====================
 What conversion do you want?
@@ -153,11 +153,11 @@ What conversion do you want?
 Enter choice (1 or 2): 2
 Enter temperature in Fahrenheit: 77
 77°F is equal to 25°C
-```rust
+```
 
 ### Sample Implementation
 
-```rust
+```
 use std::io;
 
 fn main() {
@@ -221,7 +221,7 @@ fn main() {
         println!("Invalid choice. Please enter 1 or 2.");
     }
 }
-```rust
+```
 
 ### Implementation Analysis
 
@@ -268,7 +268,7 @@ fn main() {
 
 ### README.md Template
 
-```markdown
+```
 # Temperature Converter
 
 A simple Rust program that converts temperatures between Celsius and Fahrenheit.
@@ -276,14 +276,14 @@ A simple Rust program that converts temperatures between Celsius and Fahrenheit.
 ## How to Run
 
 1. Compile the program:
-   ```bash
+   ```
    rustc main.rs
-```rust
+```
 
 2. Run the program:
-   ```bash
+   ```
    ./main
-```rust
+```
 
 3. Follow the on-screen prompts to convert temperatures.
 
@@ -296,7 +296,7 @@ A simple Rust program that converts temperatures between Celsius and Fahrenheit.
 
 ## Example Usage
 
-```rust
+```
 Temperature Converter
 =====================
 What conversion do you want?
@@ -305,8 +305,8 @@ What conversion do you want?
 Enter choice (1 or 2): 1
 Enter temperature in Celsius: 25
 25.0°C is equal to 77.0°F
-```rust
-```rust
+```
+```
 
 ### Bonus Challenges
 

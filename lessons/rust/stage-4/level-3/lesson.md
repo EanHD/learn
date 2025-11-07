@@ -39,9 +39,9 @@ Based on your Stage 3 pseudocode, implement a compound interest calculator that:
 5. **Displays professional financial report** with all details
 
 **Compound Interest Formula:**
-```rust
+```
 A = P(1 + r/n)^(nt)
-```rust
+```
 Where:
 - A = Final amount
 - P = Principal amount
@@ -59,17 +59,17 @@ Where:
 ### Implementation Steps
 
 1. **Create the project structure**:
-   ```bash
+   ```
    cd /home/eanhd/LEARN/rust/stage-4-full-problem-solving/level-3-mathematical-application
-   ```rust
+   ```
 
 2. **Create `main.rs`** with your Rust implementation
 
 3. **Test your program**:
-   ```bash
+   ```
    rustc main.rs
    ./main
-   ```rust
+   ```
 
 4. **Create `README.md`** with usage instructions
 
@@ -146,7 +146,7 @@ Practice the code and experiment with variations!
 
 ### Expected Program Behavior
 
-```rust
+```
 Compound Interest Calculator
 ============================
 Enter principal amount: $1000
@@ -166,11 +166,11 @@ Years: 3
 Compounding: Quarterly
 Final Amount: $1161.54
 Total Interest: $161.54
-```rust
+```
 
 ### Sample Implementation
 
-```rust
+```
 use std::io::{self, Write};
 
 fn main() {
@@ -282,7 +282,7 @@ fn get_valid_choice(prompt: &str, min: u32, max: u32) -> u32 {
         }
     }
 }
-```rust
+```
 
 ### Implementation Analysis
 
@@ -326,7 +326,7 @@ fn get_valid_choice(prompt: &str, min: u32, max: u32) -> u32 {
 
 ### README.md Template
 
-```markdown
+```
 # Compound Interest Calculator
 
 A Rust program that calculates compound interest for savings and investments.
@@ -334,14 +334,14 @@ A Rust program that calculates compound interest for savings and investments.
 ## How to Run
 
 1. Compile the program:
-   ```bash
+   ```
    rustc main.rs
-```rust
+```
 
 2. Run the program:
-   ```bash
+   ```
    ./main
-```rust
+```
 
 3. Enter investment details as prompted.
 
@@ -354,7 +354,7 @@ A Rust program that calculates compound interest for savings and investments.
 
 ## Example Usage
 
-```rust
+```
 Compound Interest Calculator
 ============================
 Enter principal amount: $1000
@@ -374,8 +374,8 @@ Years: 3
 Compounding: Quarterly
 Final Amount: $1161.54
 Total Interest: $161.54
-```rust
-```rust
+```
+```
 
 ### Bonus Challenges
 

@@ -23,7 +23,7 @@ Learn to repeat actions efficiently using loops.
 
 **Copy the following code EXACTLY as shown below into `main.R`**
 
-```r
+```
 # For loop
 cat("Counting 1 to 10:\n")
 for (i in 1:10) {
@@ -53,12 +53,12 @@ for (i in 1:10) {
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```r
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 Rscript main.R
 ```
 

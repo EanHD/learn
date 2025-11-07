@@ -85,7 +85,7 @@ Create a program that generates different star patterns based on user input:
 Ask for pattern type and size, then display the pattern.
 
 **Example:**
-```cpp
+```
 Enter pattern type (1-4): 1
 Enter size: 5
 
@@ -94,7 +94,7 @@ Enter size: 5
 ***
 ****
 *****
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for pattern generation algorithms
@@ -115,7 +115,7 @@ Create a program that generates number patterns:
 Display the pattern up to a user-specified limit.
 
 **Example:**
-```cpp
+```
 Enter pattern type (1-4): 2
 Enter size: 5
 
@@ -123,7 +123,7 @@ Enter size: 5
 1 x 2 = 2
 ...
 5 x 5 = 25
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for number pattern algorithms
@@ -142,7 +142,7 @@ Create a program that calculates statistics for a series of numbers:
 - [ ] Show final summary
 
 **Example:**
-```cpp
+```
 Enter numbers (enter -1 to stop):
 Number 1: 10
 Count: 1, Sum: 10, Avg: 10.0, Min: 10, Max: 10
@@ -158,7 +158,7 @@ Sum: 30
 Average: 15.0
 Minimum: 10
 Maximum: 20
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for statistics calculation loop
@@ -179,7 +179,7 @@ Simulate growth over multiple years, showing:
 - [ ] Total growth over time
 
 **Example:**
-```cpp
+```
 Enter initial population: 1000
 Enter annual growth rate (%): 5
 Enter years to simulate: 10
@@ -190,7 +190,7 @@ Year 2: 1050 → 1102 (+52)
 Year 10: 1628 → 1709 (+81)
 
 Total growth: 709 people
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for growth simulation loop
@@ -210,14 +210,14 @@ Create a program that searches for a target value in an array:
 - [ ] Show search efficiency
 
 **Example:**
-```cpp
+```
 Enter array size: 5
 Enter 5 numbers: 10 20 30 40 50
 Enter target to search: 30
 
 Target 30 found at position 3
 Comparisons made: 3
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for linear search algorithm
@@ -238,7 +238,7 @@ Create a savings account simulator with monthly compounding:
 Show balance each month and final totals.
 
 **Example:**
-```cpp
+```
 Enter initial deposit: 1000
 Enter monthly deposit: 100
 Enter annual interest rate (%): 6
@@ -251,7 +251,7 @@ Month 24: Balance $3,422.19
 
 Total deposited: $3,400.00
 Total interest earned: $422.19
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for savings simulation
@@ -263,7 +263,7 @@ Total interest earned: $422.19
 ### Loop Algorithm Guidelines
 
 **For Loop Structure:**
-```cpp
+```
 Algorithm: Pattern Generator
 1. Get size/input parameters
 2. For i from 1 to size:
@@ -271,10 +271,10 @@ Algorithm: Pattern Generator
       i. Print pattern element
    b. Move to next line
 3. End pattern
-```cpp
+```
 
 **While Loop Structure:**
-```cpp
+```
 Algorithm: Data Processor
 1. Initialize variables
 2. While condition is true:
@@ -282,7 +282,7 @@ Algorithm: Data Processor
    b. Update variables
    c. Check termination condition
 3. Display final results
-```cpp
+```
 
 ---
 
@@ -353,22 +353,22 @@ Algorithm: Data Processor
 - [ ] Careful spacing and alignment
 
 **Right Triangle Pattern:**
-```cpp
+```
 For i from 1 to size:
     For j from 1 to i:
         Print "*"
     Print newline
-```cpp
+```
 
 **Pyramid Pattern:**
-```cpp
+```
 For i from 1 to size:
     For spaces from 1 to (size-i):
         Print " "
     For stars from 1 to (2*i-1):
         Print "*"
     Print newline
-```cpp
+```
 
 ---
 
@@ -380,12 +380,12 @@ For i from 1 to size:
 - [ ] Variable increment patterns
 
 **Multiplication Table:**
-```cpp
+```
 For i from 1 to size:
     For j from 1 to size:
         Print i + " x " + j + " = " + (i*j)
     Print newline
-```cpp
+```
 
 ---
 
@@ -397,7 +397,7 @@ For i from 1 to size:
 - [ ] Multiple statistics to track
 
 **Loop Structure:**
-```cpp
+```
 Initialize: count=0, sum=0, min=MAX, max=MIN
 While true:
     Get number
@@ -408,7 +408,7 @@ While true:
     if number > max: max = number
     Display current stats
 Display final summary
-```cpp
+```
 
 ---
 
@@ -420,14 +420,14 @@ Display final summary
 - [ ] Cumulative tracking
 
 **Growth Loop:**
-```cpp
+```
 current_pop = initial
 For year from 1 to years:
     growth = current_pop * (rate/100)
     new_pop = current_pop + growth
     Display year, current_pop, new_pop, growth
     current_pop = new_pop
-```cpp
+```
 
 ---
 
@@ -439,7 +439,7 @@ For year from 1 to years:
 - [ ] Early termination on find
 
 **Search Algorithm:**
-```cpp
+```
 found = false
 position = -1
 comparisons = 0
@@ -453,7 +453,7 @@ If found:
     Display position and comparisons
 Else:
     Display not found
-```cpp
+```
 
 ---
 
@@ -465,7 +465,7 @@ Else:
 - [ ] Interest calculation per month
 
 **Monthly Simulation:**
-```cpp
+```
 balance = initial_deposit
 total_deposited = initial_deposit
 monthly_rate = annual_rate / 100 / 12
@@ -480,7 +480,7 @@ For month from 1 to (years * 12):
     balance += interest
 
     Display month details
-```cpp
+```
 
 ---
 
@@ -548,7 +548,7 @@ Expected implementation provided.
 
 ### Complete Solution
 
-```cpp
+```
 #include <stdio.h>
 
 int main() {

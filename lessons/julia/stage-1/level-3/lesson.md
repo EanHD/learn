@@ -23,7 +23,7 @@ Master arithmetic operations and use Julia as your powerful calculator.
 
 **Copy the following code EXACTLY as shown below into `main.jl`**
 
-```julia
+```
 a = 10
 b = 3
 
@@ -33,29 +33,29 @@ println("Multiplication: ", a * b)
 println("Division: ", a / b)
 println("Integer division: ", a ÷ b)
 println("Modulus: ", a % b)
-```julia
+```
 
 ---
 
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```julia
+```
 <Space>r
-```julia
+```
 
 **Method 2 (Terminal):**
-```bash
+```
 julia main.jl
-```julia
+```
 
 **Expected output:**
-```julia
+```
 Sum: 13
 Difference: 7
 Product: 30
 Quotient: 3.33
-```julia
+```
 
 
 ---

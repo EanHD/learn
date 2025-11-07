@@ -23,7 +23,7 @@ Organize your code into reusable functions/methods.
 
 **Copy the following code EXACTLY as shown below into `main.ts`**
 
-```typescript
+```
 function greet(name: string): void {
     console.log(`Hello, ${name}!`);
 }
@@ -67,7 +67,7 @@ console.log(`5! = ${fact}`);
 
 ### The Complete Code
 
-```typescript
+```
 function greet(name: string): void {
     console.log(`Hello, ${name}!`);
 }
@@ -166,10 +166,10 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```ts
+```
 console.log("Hello, World!");
 
-```ts
+```
 
 ### Code Breakdown
 

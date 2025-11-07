@@ -20,13 +20,13 @@ Now that you know the basics, it's time to think like a programmer! You'll take 
 
 Here's some pseudocode that describes a simple program:
 
-```kotlin
+```
 START
     print "Welcome to the program!"
     print "This is my first real program"
     print "I'm learning to code!"
 END
-```kotlin
+```
 
 **Your mission**: Translate this pseudocode into Kotlin code and save it as `main.kt`.
 
@@ -38,18 +38,18 @@ Hints:
 
 ### How to Run
 
-```bash
+```
 cd ~/.local/share/learn/workspaces/kotlin/stage-2/level-1
 kotlinc main.kt
-```kotlin
+```
 
 Expected output:
 
-```kotlin
+```
 Welcome to the program!
 This is my first real program
 I'm learning to code!
-```kotlin
+```
 
 ### Success Checklist
 
@@ -72,11 +72,11 @@ If you're stuck, here's what your code should look like (don't peek until you tr
 ## ANSWER KEY
 
 ```kt
-```kotlin
+```
 
 (Fill in based on language-specific syntax)
 
-```kotlin
+```
 
 ---
 

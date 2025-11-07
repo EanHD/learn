@@ -23,7 +23,7 @@ Organize your code into reusable functions/methods.
 
 **Copy the following code EXACTLY as shown below into `main.js`**
 
-```javascript
+```
 // Functions in MongoDB JavaScript
 function greet(name) {
     print("Hello, " + name + "!");
@@ -55,12 +55,12 @@ print("5! = " + factorial(5));
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```javascript
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 mongo < script.js
 ```
 

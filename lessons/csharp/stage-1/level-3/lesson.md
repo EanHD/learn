@@ -23,7 +23,7 @@ Master arithmetic operations and use the language as your calculator.
 
 **Copy the following code EXACTLY as shown below into `main.cs`**
 
-```csharp
+```
 using System;
 
 class Program {
@@ -42,7 +42,7 @@ class Program {
  Console.WriteLine($"Precise Division: {x} / {y} = {x / y}");
  }
 }
-```csharp
+```
 
 ---
 
@@ -64,7 +64,7 @@ class Program {
 
 ### The Complete Code
 
-```csharp
+```
 using System;
 
 class Program {
@@ -83,7 +83,7 @@ class Program {
  Console.WriteLine($"Precise Division: {x} / {y} = {x / y}");
  }
 }
-```csharp
+```
 
 ### What This Code Does
 
@@ -158,7 +158,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cs
+```
 using System;
 
 class Program {

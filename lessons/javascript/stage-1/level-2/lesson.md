@@ -25,7 +25,7 @@ Welcome to the world of variables! Today you'll learn how to store and use data 
 
 **Copy the following code into a new file called `variables.js`**
 
-```javascript
+```
 // String variables (text)
 let name = "Alex";
 let city = "New York";
@@ -68,19 +68,19 @@ dynamicVar = 42;  // Now it's a number!
 console.log("Dynamic variable: " + dynamicVar);
 dynamicVar = true; // Now it's a boolean!
 console.log("Dynamic variable: " + dynamicVar);
-```javascript
+```
 
 ---
 
 ### How to Execute
 
 1. **Run your program**:
-   ```bash
+   ```
    node variables.js
-   ```java
+   ```
 
 **Expected output:**
-```javascript
+```
 === Personal Info ===
 Name: Alex
 City: New York
@@ -100,7 +100,7 @@ Happy: true
 Dynamic variable: I'm a string
 Dynamic variable: 42
 Dynamic variable: true
-```javascript
+```
 
 ---
 
@@ -154,10 +154,10 @@ JavaScript has several important concepts about variables:
 
 ### Code Breakdown
 
-```javascript
+```
 // String variables (text)
 let name = "Alex";
-```javascript
+```
 - **`//`** = Single-line comment (ignored by computer)
 - **`let`** = Keyword to declare a variable that can be reassigned
 - **`name`** = Variable name (follows naming rules)
@@ -165,22 +165,22 @@ let name = "Alex";
 - **`"Alex"`** = String value (text in quotes)
 - **`;`** = End of statement
 
-```javascript
+```
 let age = 25;
-```javascript
+```
 - **`age`** = Variable name (numeric variable)
 - **`25`** = Number value (no quotes needed for numbers)
 - JavaScript treats integers and decimals the same way
 
-```javascript
+```
 let isStudent = true;
-```javascript
+```
 - **`isStudent`** = Boolean variable name (descriptive naming)
 - **`true`** = Boolean value (one of only two possible values: true or false)
 
-```javascript
+```
 console.log("Name: " + name);
-```javascript
+```
 - **`+`** = String concatenation operator (joins strings together)
 - The variable `name` gets its value inserted into the output string
 
@@ -192,7 +192,7 @@ JavaScript has three main ways to declare variables:
 2. **`let`** - Modern way for variables that change
 3. **`const`** - For variables that won't change
 
-```javascript
+```
 // var (old style - avoid)
 var oldStyle = "Don't use this much anymore";
 
@@ -201,7 +201,7 @@ let canChange = "This value can be updated later";
 
 // const (modern - for constants that won't change)
 const neverChanges = "This value cannot be changed";
-```javascript
+```
 
 ### Variable Naming Rules
 
@@ -231,7 +231,7 @@ const neverChanges = "This value cannot be changed";
 
 JavaScript is dynamically typed, meaning:
 
-```javascript
+```
 let dynamic = "I start as a string";
 console.log(typeof dynamic);  // Output: "string"
 
@@ -240,7 +240,7 @@ console.log(typeof dynamic);  // Output: "number"
 
 dynamic = true;  // Now it's a boolean
 console.log(typeof dynamic);  // Output: "boolean"
-```javascript
+```
 
 This is different from statically typed languages like C/C++ where you must declare the type in advance.
 
@@ -248,7 +248,7 @@ This is different from statically typed languages like C/C++ where you must decl
 
 There are multiple ways to combine strings:
 
-```javascript
+```
 let firstName = "John";
 let lastName = "Doe";
 
@@ -260,7 +260,7 @@ console.log(`Full name: ${firstName} ${lastName}`);
 
 // Method 3: concat() method
 console.log("Full name: ".concat(firstName, " ", lastName));
-```javascript
+```
 
 ### Common Errors & Solutions
 
@@ -282,7 +282,7 @@ console.log("Full name: ".concat(firstName, " ", lastName));
 
 Try this modified version:
 
-```javascript
+```
 // Let's do some calculations with variables!
 const currentYear = 2025;
 let birthYear = 2000;
@@ -301,7 +301,7 @@ console.log("Full name: " + fullName);
 // JavaScript's type conversion
 console.log("Number and string: " + (5 + "3"));  // Output: "53"
 console.log("Number math: " + (5 + 3));          // Output: "8"
-```javascript
+```
 
 ---
 

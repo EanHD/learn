@@ -117,7 +117,7 @@ typedef struct {
     double monthly_income;
     char analysis_period[20];
 } SmartAnalyzer;
-```cpp
+```
 
 ### Function Modules
 - [ ] **Data Analysis**: `analyze_spending_patterns()`, `detect_anomalies()`
@@ -235,7 +235,7 @@ int compare_dates(const char *date1, const char *date2);
 void get_current_date(char *date);
 
 # endif
-```cpp
+```
 
 ### Implementation File (smart_analyzer.c)
 ```c
@@ -775,7 +775,7 @@ void get_current_date(char *date) {
     struct tm *tm_info = localtime(&t);
     strftime(date, 11, "%Y-%m-%d", tm_info);
 }
-```cpp
+```
 
 ### Main Program (main.c)
 ```c
@@ -861,20 +861,20 @@ int main() {
 
     return 0;
 }
-```cpp
+```
 
 ---
 
 ## Testing the Application
 
 ### Compilation Instructions
-```bash
+```
 # Compile the program
 g++ -o smart_analyzer main.c smart_analyzer.c -lm
 
 # Run the program
 ./smart_analyzer
-```cpp
+```
 
 ### Test Scenarios
 1. **Dashboard**: View overall financial health and forecasts
@@ -885,7 +885,7 @@ g++ -o smart_analyzer main.c smart_analyzer.c -lm
 6. **Report**: Generate comprehensive financial analysis
 
 ### Sample Analysis Output
-```cpp
+```
  FINANCIAL DASHBOARD
 ════════════════════════
 Monthly Income:     $5000.00
@@ -898,7 +898,7 @@ Risk Level:         Low
  FORECASTS
 Next Month Expenses: $1289.34
 Savings Potential:   $234.56
-```cpp
+```
 
 ---
 
@@ -988,20 +988,20 @@ Savings Potential:   $234.56
 ## Code Walkthrough
 
 ### Intelligence Pipeline
-```cpp
+```
 Data Collection → Pattern Recognition → Analysis & Scoring → Recommendation Generation → User Presentation
       ↓                ↓                      ↓                        ↓                    ↓
 Expense Loading   Trend Detection     Financial Health      Personalized Advice    Interactive Display
 & Validation     & Anomaly Finding    Assessment & Risk     Priority Ranking       & Guidance
-```cpp
+```
 
 ### Decision Support Flow
-```cpp
+```
 User Goals → Spending Analysis → Risk Assessment → Recommendation Filtering → Actionable Advice
      ↓             ↓                    ↓                    ↓                    ↓
 Goal Input    Pattern Recognition   Vulnerability      Personalization       Implementation
 Collection    & Trend Analysis     Analysis & Scoring  & Prioritization      Guidance
-```cpp
+```
 
 ---
 
@@ -1073,7 +1073,7 @@ Expected implementation provided.
 
 ### Complete Solution
 
-```cpp
+```
 #include <iostream>
 
 int main() {

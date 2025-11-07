@@ -24,7 +24,7 @@ Programs become much more interesting when they can interact with users! You'll 
 
 **Copy the following code EXACTLY as shown below into a new file called `input.rs`**
 
-```rust
+```
 use std::io;
 
 fn main() {
@@ -47,27 +47,27 @@ fn main() {
     println!("You are {} years old!", age);
     println!("Next year you'll be {}!", age + 1);
 }
-```rust
+```
 
 ---
 
 ### How to Run
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Compile the code**:
-   ```bash
+   ```
    rustc input.rs -o input
-   ```rust
+   ```
 3. **Run your program**:
-   ```bash
+   ```
    ./input
-   ```rust
+   ```
 
 **Example interaction:**
-```rust
+```
 What's your name?
 Alice
 Hello, Alice!
@@ -75,7 +75,7 @@ Enter your age:
 25
 You are 25 years old!
 Next year you'll be 26!
-```rust
+```
 
 ---
 
@@ -125,36 +125,36 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 
 ### Code Breakdown
 
-```rust
+```
 use std::io;
-```rust
+```
 - **`use`** = Import statement
 - **`std::io`** = Standard library input/output module
 
-```rust
+```
     let mut name = String::new();
-```rust
+```
 - **`mut`** = Mutable (can be changed)
 - **`String::new()`** = Create empty string
 - **Why mutable?** `read_line` modifies the string
 
-```rust
+```
     io::stdin().read_line(&mut name).expect("Failed to read line");
-```rust
+```
 - **`io::stdin()`** = Get standard input handle
 - **`.read_line(&mut name)`** = Read line into `name`
 - **`&mut`** = Mutable reference
 - **`.expect(...)`** = Handle potential errors
 
-```rust
+```
     println!("Hello, {}!", name.trim());
-```rust
+```
 - **`.trim()`** = Remove leading/trailing whitespace
 - **Needed because** `read_line` includes the newline character
 
-```rust
+```
     let age: i32 = age_str.trim().parse().expect("Please enter a valid number");
-```rust
+```
 - **`age: i32`** = Type annotation (32-bit integer)
 - **`.parse()`** = Convert string to number
 - **`.expect(...)`** = Error message if parsing fails

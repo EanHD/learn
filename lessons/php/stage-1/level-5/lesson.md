@@ -23,7 +23,7 @@ Add decision-making to your programs with if/else statements.
 
 **Copy the following code EXACTLY as shown below into `main.php`**
 
-```php
+```
 <?php
 echo "Enter your score (0-100): ";
 $score = intval(trim(fgets(STDIN)));
@@ -47,12 +47,12 @@ if ($score >= 90) {
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```php
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 php main.php
 ```
 

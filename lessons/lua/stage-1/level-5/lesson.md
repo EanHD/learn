@@ -25,7 +25,7 @@ Time to make programs that can make decisions! Today you'll learn how to write c
 
 **Copy the following code into a new file called `conditionals.lua`**
 
-```lua
+```
 print("=== Simple Age Check ===")
 -- Input for age
 local age = 20
@@ -188,19 +188,19 @@ local test_nil = nil
 local test_false = false
 if not test_nil then print("- nil is falsy") end
 if not test_false then print("- false is falsy") end
-```lua
+```
 
 ---
 
 ### How to Execute
 
 1. **Run your program**:
-   ```bash
+   ```
    lua conditionals.lua
-   ```lua
+   ```
 
 **Expected output:**
-```lua
+```
 === Simple Age Check ===
 You are an adult (18 or older)
 
@@ -239,7 +239,7 @@ These values are truthy (evaluate to true in conditionals):
 Only these are falsy:
 - nil is falsy
 - false is falsy
-```lua
+```
 
 ---
 
@@ -299,20 +299,20 @@ In Lua conditionals, you'll use these comparison operators:
 
 ### Code Breakdown
 
-```lua
+```
 if age >= 18 then
     print("You are an adult (18 or older)")
 else
     print("You are a minor (under 18)")
 end
-```lua
+```
 - **`if`** = Start of conditional statement
 - **`age >= 18`** = Condition that evaluates to true or false
 - **`then`** = Keyword required after condition
 - **`end`** = Required to close the if block
 - **`else`** = Code block executed if condition is false
 
-```lua
+```
 if grade >= 90 then
     print("Grade: A (90-100)")
 elseif grade >= 80 then
@@ -322,18 +322,18 @@ elseif grade >= 70 then
 else
     print("Grade: F (below 60)")
 end
-```lua
+```
 - **`elseif`** = Additional condition to check if the first was false
 - **Execution order** matters: Lua checks each condition in order and executes the first true one
 - **Only one block** executes, not multiple blocks
 
-```lua
+```
 if username == "admin" and password == "secret123" then
     print("Login successful! Welcome, admin.")
 else
     print("Login failed! Invalid username or password.")
 end
-```lua
+```
 - **`and`** = Logical AND operator (both conditions must be true)
 - **`==`** = Equality comparison operator
 - **Security** considerations: Never hardcode credentials in real programs
@@ -341,13 +341,13 @@ end
 ### Comparison Operators Deep Dive
 
 **Equality vs Assignment:**
-```lua
+```
 -- Wrong! This assigns a value (would cause an error in conditional)
 if username = "admin" then  -- ERROR: Should be ==
 
 -- Correct! This compares values
 if username == "admin" then  -- OK: Comparison
-```lua
+```
 
 ### Logical Operators
 
@@ -358,7 +358,7 @@ if username == "admin" then  -- OK: Comparison
 | NOT | `not` | Reverse condition | `not true` | `false` |
 
 **More Examples:**
-```lua
+```
 -- AND: All conditions must be true
 local age = 21
 local has_id = true
@@ -380,11 +380,11 @@ local is_logged_in = false
 if not is_logged_in then
     print("Please log in first")
 end
-```lua
+```
 
 ### Nested Conditionals
 
-```lua
+```
 if number > 0 then
     print("The number is positive")
     if number % 2 == 0 then        -- Nested if
@@ -394,7 +394,7 @@ if number > 0 then
         end
     end
 end
-```lua
+```
 - **Inner condition** only evaluated if outer condition is true
 - **Be careful** with nesting - too deep can be hard to read
 
@@ -410,7 +410,7 @@ This is a major difference from other languages!
   - Any other number
   - Any table, function, thread, userdata
 
-```lua
+```
 -- Examples
 if 0 then print("0 is truthy in Lua!") end           -- This prints!
 if "" then print("Empty string is truthy in Lua!") end -- This prints!
@@ -419,13 +419,13 @@ if -1 then print("-1 is truthy in Lua!") end         -- This prints!
 -- Only nil and false are falsy
 if not nil then print("nil is falsy in Lua") end      -- This prints!
 if not false then print("false is falsy in Lua") end  -- This prints!
-```lua
+```
 
 **This is different from JavaScript, Python, C++, etc. where 0 and empty strings are falsy!**
 
 ### Control Flow with Logical Operators
 
-```lua
+```
 -- Short-circuit evaluation
 local result = true and print("This will print")
 -- print() returns nil, which is assigned to result
@@ -433,11 +433,11 @@ local result = true and print("This will print")
 -- Useful patterns
 local name = user_input or "Anonymous"  -- Use default if user_input is nil
 local value = some_condition and "yes" or "no"  -- Ternary-like operation
-```lua
+```
 
 ### Switch Alternative with Tables
 
-```lua
+```
 -- Instead of long if-elseif chains, you can use a table:
 local actions = {
     fire = function() print("Fire attack!") end,
@@ -450,7 +450,7 @@ local action = actions[element]
 if action then
     action()  -- Execute the fire attack function
 end
-```lua
+```
 
 ### Common Errors & Solutions
 
@@ -465,7 +465,7 @@ end
 ### Best Practices for Conditionals
 
 **Use descriptive variable names:**
-```lua
+```
 -- Good
 if is_adult then ... end
 if is_valid_email then ... end
@@ -473,17 +473,17 @@ if is_valid_email then ... end
 -- Avoid
 if x then ... end
 if flag then ... end
-```lua
+```
 
 **Keep conditions simple:**
-```lua
+```
 -- Good - store complex condition in variable
 local can_vote = age >= 18 and is_citizen and not is_in_prison
 if can_vote then ... end
 
 -- Avoid - hard to read
 if age >= 18 and is_citizen and not is_in_prison then ... end
-```lua
+```
 
 **Consider table lookup vs if/elseif:**
 - Use `if/elseif` for complex conditions and ranges
@@ -493,7 +493,7 @@ if age >= 18 and is_citizen and not is_in_prison then ... end
 
 Try this complex conditional program:
 
-```lua
+```
 print("=== Advanced Conditional Example ===")
 
 -- A simple grading system with lots of conditions
@@ -561,7 +561,7 @@ elseif overall_score >= 60 then
 else
     print("Not eligible for graduation, must repeat course")
 end
-```lua
+```
 
 ---
 
@@ -600,7 +600,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```lua
+```
 print("Hello, World!")
 
 ```

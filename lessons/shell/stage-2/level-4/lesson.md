@@ -30,7 +30,7 @@ You've mastered the basics! Now you'll learn to translate written algorithms (ps
 
 **Study the pseudocode algorithm below, then implement it in Shell:**
 
-```bash
+```
 ALGORITHM: Input/Output Algorithms
 
 BEGIN
@@ -54,7 +54,7 @@ END
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    bash hello.sh
    ```
 
@@ -160,7 +160,7 @@ The key is understanding what each pseudocode statement represents in Shell:
 5. **Conditions**: `IF...THEN...ELSE` → if/else statements
 
 **Example Translation:**
-```bash
+```
 PSEUDOCODE:
     READ number
     IF number > 0 THEN

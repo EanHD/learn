@@ -55,17 +55,17 @@ Based on your Stage 3 pseudocode, implement a student grade calculator that:
 ### Implementation Steps
 
 1. **Create the project structure**:
-   ```bash
+   ```
    cd /home/eanhd/LEARN/rust/stage-4-full-problem-solving/level-2-data-processing-application
-   ```rust
+   ```
 
 2. **Create `main.rs`** with your Rust implementation
 
 3. **Test your program**:
-   ```bash
+   ```
    rustc main.rs
    ./main
-   ```rust
+   ```
 
 4. **Create `README.md`** with usage instructions
 
@@ -142,7 +142,7 @@ Practice the code and experiment with variations!
 
 ### Expected Program Behavior
 
-```rust
+```
 Student Grade Calculator
 ========================
 Enter student name: Alice Johnson
@@ -157,11 +157,11 @@ Assignment 2: 92/100 (35%)
 Assignment 3: 78/100 (35%)
 Final Average: 84.9%
 Letter Grade: B
-```rust
+```
 
 ### Sample Implementation
 
-```rust
+```
 use std::io::{self, Write};
 
 fn main() {
@@ -225,7 +225,7 @@ fn get_valid_score(prompt: &str) -> f64 {
         }
     }
 }
-```rust
+```
 
 ### Implementation Analysis
 
@@ -270,7 +270,7 @@ fn get_valid_score(prompt: &str) -> f64 {
 
 ### README.md Template
 
-```markdown
+```
 # Student Grade Calculator
 
 A Rust program that calculates weighted final grades for students based on assignment scores.
@@ -278,14 +278,14 @@ A Rust program that calculates weighted final grades for students based on assig
 ## How to Run
 
 1. Compile the program:
-   ```bash
+   ```
    rustc main.rs
-```rust
+```
 
 2. Run the program:
-   ```bash
+   ```
    ./main
-```rust
+```
 
 3. Enter student information and scores as prompted.
 
@@ -298,7 +298,7 @@ A Rust program that calculates weighted final grades for students based on assig
 
 ## Example Usage
 
-```rust
+```
 Student Grade Calculator
 ========================
 Enter student name: Alice Johnson
@@ -313,8 +313,8 @@ Assignment 2: 92/100 (35%)
 Assignment 3: 78/100 (35%)
 Final Average: 84.9%
 Letter Grade: B
-```rust
-```rust
+```
+```
 
 ### Bonus Challenges
 

@@ -42,7 +42,7 @@ Variables are the memory of your programs! Today you'll learn how to use variabl
 ## Algorithm 1: Shopping Cart Total
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Calculate Shopping Total
 1. Initialize total to 0
 2. Initialize item_count to 0
@@ -55,7 +55,7 @@ Algorithm: Calculate Shopping Total
    d. Get next price from user
 6. Display "Items purchased: " + item_count
 7. Display "Total cost: $" + total
-```cpp
+```
 
 **Variable Analysis:**
 - [ ] `total`: Accumulator (starts at 0, adds prices)
@@ -69,7 +69,7 @@ Algorithm: Calculate Shopping Total
 ## Algorithm 2: Password Validation
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Validate Password
 1. Initialize attempts to 0
 2. Initialize is_valid to false
@@ -84,7 +84,7 @@ Algorithm: Validate Password
    a. Display "Access granted! "
 6. Else:
    a. Display "Access denied! "
-```cpp
+```
 
 **Variable Analysis:**
 - [ ] `attempts`: Counter (tracks login attempts)
@@ -99,7 +99,7 @@ Algorithm: Validate Password
 ## Algorithm 3: Grade Average Calculator
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Calculate Class Average
 1. Initialize total_score to 0
 2. Initialize student_count to 0
@@ -118,7 +118,7 @@ Algorithm: Calculate Class Average
    c. Display "Total students: " + student_count
 6. Else:
    a. Display "No students entered"
-```cpp
+```
 
 **Variable Analysis:**
 - [ ] `total_score`: Accumulator (sums all grades)
@@ -134,7 +134,7 @@ Algorithm: Calculate Class Average
 ## Algorithm 4: Number Guessing Game
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Number Guessing Game
 1. Initialize secret_number to 42
 2. Initialize guess_count to 0
@@ -153,7 +153,7 @@ Algorithm: Number Guessing Game
       ii. Else:
          i. Display "Too low! Try higher."
 6. Display "Thanks for playing!"
-```cpp
+```
 
 **Variable Analysis:**
 - [ ] `secret_number`: Constant (game target)
@@ -168,7 +168,7 @@ Algorithm: Number Guessing Game
 ## Algorithm 5: Bank Account Simulator
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Bank Account Manager
 1. Initialize balance to 1000.00
 2. Initialize transaction_count to 0
@@ -201,7 +201,7 @@ Algorithm: Bank Account Manager
    g. Else:
       i. Display "Invalid choice!"
 7. Display "Thank you for banking with us!"
-```cpp
+```
 
 **Variable Analysis:**
 - [ ] `balance`: Accumulator (changes with deposits/withdrawals)
@@ -217,7 +217,7 @@ Algorithm: Bank Account Manager
 ## Algorithm 6: Temperature Tracker
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Daily Temperature Tracker
 1. Initialize day_count to 0
 2. Initialize total_temperature to 0
@@ -240,7 +240,7 @@ Algorithm: Daily Temperature Tracker
 11. Display "Highest: " + highest_temp + "°F"
 12. Display "Lowest: " + lowest_temp + "°F"
 13. Display "Readings taken: " + reading_count
-```cpp
+```
 
 **Variable Analysis:**
 - [ ] `total_temperature`: Accumulator (sum of all readings)
@@ -258,7 +258,7 @@ Algorithm: Daily Temperature Tracker
 **For each algorithm, track how variables change:**
 
 **Example for Algorithm 1:**
-```cpp
+```
 Initial state:
 total = 0, item_count = 0
 
@@ -273,7 +273,7 @@ total = 15.75, item_count = 2
 User enters: 0 (finish)
 Final state:
 total = 15.75, item_count = 2
-```cpp
+```
 
 ---
 
@@ -306,25 +306,25 @@ total = 15.75, item_count = 2
 ## Variable Patterns in Pseudocode
 
 ### Counter Variables
-```cpp
+```
 Initialize counter to 0
 While condition:
     Add 1 to counter
     // do something
 Display "Count: " + counter
-```cpp
+```
 
 ### Accumulator Variables
-```cpp
+```
 Initialize total to 0
 While getting values:
     Get value from user
     Add value to total
 Display "Total: " + total
-```cpp
+```
 
 ### Flag Variables
-```cpp
+```
 Initialize is_valid to false
 // check conditions
 If condition met:
@@ -333,16 +333,16 @@ If is_valid:
     Display "Success"
 Else:
     Display "Failed"
-```cpp
+```
 
 ### Tracker Variables
-```cpp
+```
 Initialize maximum to smallest possible value
 Initialize minimum to largest possible value
 For each value:
     If value > maximum: set maximum to value
     If value < minimum: set minimum to value
-```cpp
+```
 
 ---
 
@@ -378,7 +378,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Variable Flow:**
 - [ ] `total`: Starts at 0, accumulates prices
@@ -418,7 +418,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] String comparison with `strcmp()`
@@ -460,7 +460,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Variable Management:**
 - [ ] `total_score`: Accumulates all grades
@@ -504,7 +504,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Game Logic:**
 - [ ] `game_won` flag controls the game loop
@@ -563,7 +563,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Complex Variable Management:**
 - [ ] `balance`: Changes with deposits/withdrawals
@@ -614,7 +614,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Statistical Tracking:**
 - [ ] `highest_temp`: Tracks maximum value (initialized to very low)
@@ -628,27 +628,27 @@ int main() {
 **Counters:** Always start at 0
 ```c
 int count = 0;
-```cpp
+```
 
 **Accumulators:** Usually start at 0
 ```c
 float total = 0.0;
-```cpp
+```
 
 **Flags:** Initialize to false/0
 ```c
 int is_done = 0;
-```cpp
+```
 
 **Maximum Trackers:** Initialize to minimum possible value
 ```c
 int max_value = INT_MIN;  // or a very small number
-```cpp
+```
 
 **Minimum Trackers:** Initialize to maximum possible value
 ```c
 int min_value = INT_MAX;  // or a very large number
-```cpp
+```
 
 ### Common Variable Mistakes
 
@@ -656,13 +656,13 @@ int min_value = INT_MAX;  // or a very large number
 ```c
 int sum;  // Uninitialized - contains garbage value
 sum = sum + 5;  // Undefined behavior!
-```cpp
+```
 
 **Wrong Data Types:**
 ```c
 int average;  // Wrong! Should be float for decimals
 average = 85.5;  // Gets truncated to 85
-```cpp
+```
 
 **Scope Issues:**
 ```c
@@ -670,7 +670,7 @@ if (condition) {
     int temp = 5;  // Only exists in this block
 }
 // temp is undefined here!
-```cpp
+```
 
 ---
 
@@ -708,7 +708,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cpp
+```
 #include <iostream>
 
 int main() {

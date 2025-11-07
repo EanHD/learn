@@ -23,7 +23,7 @@ Organize your code into reusable functions/methods.
 
 **Copy the following code EXACTLY as shown below into `main.cs`**
 
-```csharp
+```
 using System;
 
 class Program {
@@ -51,7 +51,7 @@ class Program {
  Console.WriteLine($"5! = {fact}");
  }
 }
-```csharp
+```
 
 ---
 
@@ -73,7 +73,7 @@ class Program {
 
 ### The Complete Code
 
-```csharp
+```
 using System;
 
 class Program {
@@ -101,7 +101,7 @@ class Program {
  Console.WriteLine($"5! = {fact}");
  }
 }
-```csharp
+```
 
 ### What This Code Does
 
@@ -176,7 +176,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cs
+```
 using System;
 
 class Program {

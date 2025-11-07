@@ -58,19 +58,19 @@ Create a production-ready Data Visualization using Kotlin with:
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    kotlinc hello.kt
-   ```kotlin
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    kotlin hello
-   ```kotlin
+   ```
 
 **Expected output:**
-```kotlin
+```
 Hello, World!
-```kotlin
+```
 
 ### How to Approach This
 

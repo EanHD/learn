@@ -19,7 +19,7 @@ Welcome to C#! Today, you'll create your first C# program. C# is a modern, objec
 
 Copy the following code EXACTLY as shown into a new file called `hello.cs`:
 
-```csharp
+```
 using System;
 
 class Program {
@@ -27,20 +27,20 @@ class Program {
  Console.WriteLine("Hello, World!");
  }
 }
-```csharp
+```
 
 ### How to Execute
 
-```bash
+```
 csc hello.cs
 ./hello.exe
-```csharp
+```
 
 Expected output:
 
-```csharp
+```
 Hello, World!
-```csharp
+```
 
 ### Success Checklist
 
@@ -105,7 +105,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cs
+```
 using System;
 
 class Program {

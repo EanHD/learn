@@ -51,12 +51,12 @@ Build a complete Data Processing application that:
 ### How to Compile and Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    zig build-exe hello.zig
    ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
    ```
 
@@ -163,7 +163,7 @@ A complete application has these components:
 5. **Error Handling**: Manage problems gracefully
 
 **Code Organization:**
-```zig
+```
 // Setup and initialization
 // Main program loop or flow
 // Helper functions

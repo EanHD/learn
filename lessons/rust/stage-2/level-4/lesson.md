@@ -28,22 +28,22 @@ Programs become interactive when they can accept input and provide output! You'l
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    rustc hello.rs -o hello hello.rs
-   ```rust
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
-```rust
+```
 
 ### Pseudocode:
-```rust
+```
 START PROGRAM
     DISPLAY "Welcome to the calculator!"
     
@@ -64,7 +64,7 @@ START PROGRAM
     DISPLAY "Product: " + product
     DISPLAY "Thank you for using the calculator!"
 END PROGRAM
-```rust
+```
 
 **Your task:** Create an interactive Rust program that matches this pseudocode.
 
@@ -73,22 +73,22 @@ END PROGRAM
 ### How to Create Your Solution
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Create your code file**:
-   ```bash
+   ```
    touch io_translation.rs
-   ```rust
+   ```
 3. **Write the Rust code** that matches the pseudocode
 4. **Compile and test**:
-   ```bash
+   ```
    rustc io_translation.rs -o io_translation
    ./io_translation
-   ```rust
+   ```
 
 **Example interaction:**
-```rust
+```
 Welcome to the calculator!
 Enter first number:
 5
@@ -98,7 +98,7 @@ Numbers entered: 5 and 3
 Sum: 8
 Product: 15
 Thank you for using the calculator!
-```rust
+```
 
 ---
 
@@ -147,7 +147,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 ### Step-by-Step Translation
 
 **Pseudocode:**
-```rust
+```
 START PROGRAM
     DISPLAY "Welcome to the calculator!"
     
@@ -168,10 +168,10 @@ START PROGRAM
     DISPLAY "Product: " + product
     DISPLAY "Thank you for using the calculator!"
 END PROGRAM
-```rust
+```
 
 **Rust Code:**
-```rust
+```
 use std::io;
 
 fn main() {
@@ -195,7 +195,7 @@ fn main() {
     println!("Product: {}", product);
     println!("Thank you for using the calculator!");
 }
-```rust
+```
 
 ### Translation Guide
 

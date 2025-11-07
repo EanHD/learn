@@ -22,7 +22,7 @@ You're now ready for Stage 3! This is where you start thinking like a real progr
 
 Step 1: Write the pseudocode first
 
-```bash
+```
 What should happen:
 1. Print "Hello, [name]"
 
@@ -38,7 +38,7 @@ Create `main.shell.shell` with your solution.
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    bash hello.sh
    ```
 

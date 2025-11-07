@@ -25,7 +25,7 @@ Time to make your programs repeat actions! Today you'll learn how to write code 
 
 **Copy the following code into a new file called `loops.js`**
 
-```javascript
+```
 console.log("=== For Loop - Counting ===");
 // Basic for loop: for (initialization; condition; increment)
 for (let i = 1; i <= 5; i++) {
@@ -162,19 +162,19 @@ for (let i = 0; i < items.length; i++) {
  // In a real program, we might do some work here
  console.log(" " + items[i] + " processed");
 }
-```javascript
+```
 
 ---
 
 ### How to Execute
 
 1. **Run your program**:
- ```bash
+ ```
  node loops.js
- ```java
+ ```
 
 **Expected output:**
-```javascript
+```
 === For Loop - Counting ===
 Count: 1
 Count: 2
@@ -282,7 +282,7 @@ Processing item4...
  item4 processed
 Processing item5...
  item5 processed
-```javascript
+```
 
 ---
 
@@ -333,11 +333,11 @@ Processing item5...
 
 ### Code Breakdown
 
-```javascript
+```
 for (let i = 1; i <= 5; i++) {
  console.log("Count: " + i);
 }
-```javascript
+```
 - **`for`** = Loop keyword
 - **`let i = 1`** = Initialization: set up the counter variable
 - **`i <= 5`** = Condition: keep looping while this is true
@@ -345,21 +345,21 @@ for (let i = 1; i <= 5; i++) {
 - **`{}`** = Code block that runs each iteration
 - **Loop execution**: 1, 2, 3, 4, 5 (stops when i becomes 6)
 
-```javascript
+```
 while (count <= 5) {
  console.log("While count: " + count);
  count++; // Critical: must update the counter!
 }
-```javascript
+```
 - **`while`** = Loop that continues while condition is true
 - **Condition checked first** before each iteration
 - **`count++`** = Must update counter inside the loop or it runs forever!
 
-```javascript
+```
 do {
  console.log("Menu attempt #" + tries + ": Option " + menuChoice);
 } while (menuChoice !== 3 && tries < 10);
-```javascript
+```
 - **`do`** = Code block executes first
 - **`while`** = Then condition is checked
 - **Result**: Block runs at least once regardless of condition
@@ -367,7 +367,7 @@ do {
 ### For Loop Variations
 
 **Different increment patterns:**
-```javascript
+```
 // Count by 5s
 for (let i = 0; i <= 25; i += 5) {
  console.log(i); // 0, 5, 10, 15, 20, 25
@@ -382,11 +382,11 @@ for (let i = 10; i > 0; i--) {
 for (let i = 0; i <= 1; i += 0.2) {
  console.log(i); // 0, 0.2, 0.4, 0.6, 0.8, 1
 }
-```javascript
+```
 
 ### Array Iteration Methods
 
-```javascript
+```
 let fruits = ["apple", "banana", "orange"];
 
 // Traditional for loop
@@ -403,43 +403,43 @@ for (let fruit of fruits) {
 fruits.forEach(function(fruit) {
  console.log(fruit);
 });
-```javascript
+```
 
 **`array.length`** = Property that returns the number of elements in the array.
 
 ### Break and Continue
 
 **`break`** = Exits the loop completely:
-```javascript
+```
 for (let i = 1; i <= 10; i++) {
  if (i === 5) {
  break; // Loop stops here
  }
  console.log(i); // Prints: 1, 2, 3, 4
 }
-```javascript
+```
 
 **`continue`** = Skips the rest of current iteration:
-```javascript
+```
 for (let i = 1; i <= 5; i++) {
  if (i === 3) {
  continue; // Skip to next iteration
  }
  console.log(i); // Prints: 1, 2, 4, 5 (skips 3)
 }
-```javascript
+```
 
 ### Nested Loops
 
-```javascript
+```
 for (let i = 1; i <= 3; i++) { // Outer loop
  for (let j = 1; j <= 3; j++) { // Inner loop
  console.log("i=" + i + ", j=" + j);
  }
 }
-```javascript
+```
 **Output:**
-```javascript
+```
 i=1, j=1
 i=1, j=2
 i=1, j=3
@@ -449,13 +449,13 @@ i=2, j=3
 i=3, j=1
 i=3, j=2
 i=3, j=3
-```javascript
+```
 - **Inner loop** completes all iterations for each outer loop iteration
 - **Total iterations**: 3 × 3 = 9
 
 ### Random Numbers in JavaScript
 
-```javascript
+```
 // Random integer between min and max (inclusive)
 function randomInt(min, max) {
  return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -465,19 +465,19 @@ function randomInt(min, max) {
 console.log(randomInt(1, 6)); // Random die roll
 console.log(randomInt(1, 100)); // Random number 1-100
 console.log(randomInt(10, 20)); // Random number 10-20
-```javascript
+```
 
 ### Loop Performance Considerations
 
 **Cache array length** (minor optimization):
-```javascript
+```
 // Instead of this (length checked each iteration):
 for (let i = 0; i < myArray.length; i++) { ... }
 
 // Do this (length calculated once):
 let len = myArray.length;
 for (let i = 0; i < len; i++) { ... }
-```javascript
+```
 
 ### Common Errors & Solutions
 
@@ -515,7 +515,7 @@ for (let i = 0; i < len; i++) { ... }
 
 Try this complex loop program:
 
-```javascript
+```
 console.log("=== Advanced Loop Examples ===");
 
 // Prime number finder
@@ -571,7 +571,7 @@ for (let i = 1; i <= 5; i++) {
  }
  console.log(row);
 }
-```javascript
+```
 
 ---
 

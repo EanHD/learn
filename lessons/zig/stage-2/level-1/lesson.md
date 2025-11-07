@@ -30,7 +30,7 @@ You've mastered the basics! Now you'll learn to translate written algorithms (ps
 
 **Study the pseudocode algorithm below, then implement it in Zig:**
 
-```zig
+```
 ALGORITHM: Greeting Generator
 
 BEGIN
@@ -61,12 +61,12 @@ END
 ### How to Compile and Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    zig build-exe hello.zig
    ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
    ```
 
@@ -172,7 +172,7 @@ The key is understanding what each pseudocode statement represents in Zig:
 5. **Calculation**: `calculate length` → `string.len` property
 
 **Zig Implementation:**
-```zig
+```
 const std = @import("std");
 
 pub fn main() !void {

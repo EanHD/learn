@@ -24,11 +24,11 @@ Welcome to your first step into programming with Rust! Today, you'll learn how t
 
 **Copy the following code EXACTLY as shown below into a new file called `hello.rs`**
 
-```rust
+```
 fn main() {
     println!("Hello, World!");
 }
-```rust
+```
 
 ---
 
@@ -36,22 +36,22 @@ fn main() {
 
 1. **Open your terminal** (or command prompt)
 2. **Navigate to where you saved your file**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 3. **Compile the code**:
-   ```bash
+   ```
    rustc hello.rs -o hello
-   ```rust
+   ```
 4. **Run your program**:
-   ```bash
+   ```
    ./hello
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
-```rust
+```
 
 ---
 
@@ -100,25 +100,25 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ### Code Breakdown
 
-```rust
+```
 fn main() {
-```rust
+```
 - **`fn`** = Function keyword - declares a function
 - **`main`** = Function name - every Rust program starts here
 - **`()`** = Parameters (empty means no inputs needed)
 - **`{`** = Opening brace - start of function body
 
-```rust
+```
     println!("Hello, World!");
-```rust
+```
 - **`println!`** = Print line macro - prints text followed by newline
 - **`!`** = Indicates this is a macro, not a function
 - **`"`** = String literal start/end
 - **`;`** = Statement terminator - EVERY statement must end with this!
 
-```rust
+```
 }
-```rust
+```
 - **`}`** = Closing brace - end of function body
 
 ### Compilation Process

@@ -93,7 +93,7 @@ typedef struct {
     char top_product[MAX_PRODUCT_NAME];
     float top_product_revenue;
 } SalesStats;
-```cpp
+```
 
 ### Function Modules
 - [ ] **File Operations**: `load_csv()`, `save_report()`
@@ -163,7 +163,7 @@ int get_user_choice(void);
 void display_records(const SalesData *data, int limit);
 
 # endif
-```cpp
+```
 
 ### Implementation File (sales_analyzer.c)
 ```c
@@ -546,7 +546,7 @@ void analyze_by_product(const SalesData *data) {
                current_product, product_sales, product_revenue, avg_price);
     }
 }
-```cpp
+```
 
 ### Main Program (main.c)
 ```c
@@ -642,7 +642,7 @@ int main() {
     free_sales_data(&data);
     return 0;
 }
-```cpp
+```
 
 ---
 
@@ -659,16 +659,16 @@ Date,Product,Quantity,UnitPrice
 2024-01-03,Monitor,1,299.99
 2024-01-04,Laptop,3,999.99
 2024-01-04,Mouse,4,25.50
-```cpp
+```
 
 ### Compilation Instructions
-```bash
+```
 # Compile the program
 g++ -o sales_analyzer main.c sales_analyzer.c -lm
 
 # Run the program
 ./sales_analyzer
-```cpp
+```
 
 ### Test Scenarios
 1. **Load Data**: Import the sample CSV file
@@ -763,20 +763,20 @@ g++ -o sales_analyzer main.c sales_analyzer.c -lm
 ## Code Walkthrough
 
 ### Data Processing Pipeline
-```cpp
+```
 CSV File → Parse Records → Validate Data → Store in Memory
       ↓           ↓            ↓           ↓
    Error     Clean Data    Validated    In-Memory
   Handling   Extraction    Records      Database
-```cpp
+```
 
 ### Analysis Workflow
-```cpp
+```
 Raw Data → Statistical Calculations → Grouping Operations → Report Generation
      ↓               ↓                      ↓              ↓
 Data Loading    Summary Stats        Date/Product     Formatted Output
 Validation      & Averages           Analysis         & File Export
-```cpp
+```
 
 ---
 
@@ -848,7 +848,7 @@ Expected implementation provided.
 
 ### Complete Solution
 
-```cpp
+```
 #include <iostream>
 
 int main() {

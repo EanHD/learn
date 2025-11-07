@@ -48,7 +48,7 @@ Decision-making is the intelligence of programs! Today you'll master complex con
 ## Algorithm 1: Loan Approval System
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Evaluate Loan Application
 1. Display "=== Loan Approval System ==="
 2. Display "Enter applicant's age: "
@@ -97,7 +97,7 @@ Algorithm: Evaluate Loan Application
 22. Else:
    a. Display " LOAN DENIED"
    b. Display "Reason: " + approval_status
-```cpp
+```
 
 **Decision Logic:**
 - [ ] Age restrictions (18-70)
@@ -113,7 +113,7 @@ Algorithm: Evaluate Loan Application
 ## Algorithm 2: Health Risk Assessment
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Assess Health Risk Factors
 1. Display "=== Health Risk Assessment ==="
 2. Display "Enter your age: "
@@ -172,7 +172,7 @@ Algorithm: Assess Health Risk Factors
 37. Else:
    a. Display " LOW RISK - Maintain healthy lifestyle"
    b. Display "Recommendations: Continue current healthy habits"
-```cpp
+```
 
 **Decision Logic:**
 - [ ] Multi-factor risk assessment
@@ -187,7 +187,7 @@ Algorithm: Assess Health Risk Factors
 ## Algorithm 3: Academic Standing Calculator
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Determine Academic Standing
 1. Display "=== Academic Standing Calculator ==="
 2. Display "Enter GPA (0.0-4.0): "
@@ -237,7 +237,7 @@ Algorithm: Determine Academic Standing
    a. Display " Limited eligibility - Academic plan required"
 23. Else:
    a. Display " Counseling required - Contact academic advisor"
-```cpp
+```
 
 **Decision Logic:**
 - [ ] Multi-criteria academic evaluation
@@ -252,7 +252,7 @@ Algorithm: Determine Academic Standing
 ## Algorithm 4: Insurance Premium Calculator
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Calculate Insurance Premium
 1. Display "=== Auto Insurance Premium Calculator ==="
 2. Display "Enter driver's age: "
@@ -306,7 +306,7 @@ Algorithm: Calculate Insurance Premium
 36. Else:
    a. Display " LOW RISK PROFILE"
    b. Display "Eligible for premium discounts"
-```cpp
+```
 
 **Decision Logic:**
 - [ ] Multi-factor risk assessment
@@ -321,7 +321,7 @@ Algorithm: Calculate Insurance Premium
 ## Algorithm 5: Travel Itinerary Planner
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Plan Travel Itinerary
 1. Display "=== Travel Itinerary Planner ==="
 2. Display "Enter destination city: "
@@ -385,7 +385,7 @@ Algorithm: Plan Travel Itinerary
    a. Display " Budget exceeded by $" + (total_budget - daily_budget × trip_days)
 38. Else:
    a. Display " Within budget - $" + (daily_budget × trip_days - total_budget) + " remaining"
-```cpp
+```
 
 **Decision Logic:**
 - [ ] Seasonal activity recommendations
@@ -400,7 +400,7 @@ Algorithm: Plan Travel Itinerary
 ## Algorithm 6: Employee Performance Review
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Evaluate Employee Performance
 1. Display "=== Employee Performance Review ==="
 2. Display "Enter employee name: "
@@ -460,7 +460,7 @@ Algorithm: Evaluate Employee Performance
 31. Else:
    a. Display " Performance review complete"
    b. Display "Continue professional development"
-```cpp
+```
 
 **Decision Logic:**
 - [ ] Multi-criteria performance evaluation
@@ -475,7 +475,7 @@ Algorithm: Evaluate Employee Performance
 ### Decision Tree Patterns
 
 **Eligibility Checking:**
-```cpp
+```
 If primary_condition AND secondary_condition:
     If qualifying_factor:
         APPROVE
@@ -483,19 +483,19 @@ If primary_condition AND secondary_condition:
         DENY
 Else:
     DENY
-```cpp
+```
 
 **Risk Assessment:**
-```cpp
+```
 Initialize risk_score = 0
 For each risk_factor:
     If factor_present:
         Add points to risk_score
 Categorize based on total_score
-```cpp
+```
 
 **Multi-tier Classification:**
-```cpp
+```
 If score >= threshold_A:
     If sub_condition:
         CATEGORY_A_PLUS
@@ -505,7 +505,7 @@ Else if score >= threshold_B:
     CATEGORY_B
 Else:
     CATEGORY_C
-```cpp
+```
 
 ---
 
@@ -553,7 +553,7 @@ ApplicationState evaluate_application(ApplicationData data) {
     if (data.income > 50000 && data.score > 700) return STATE_APPROVED;
     return STATE_PROCESSING;
 }
-```cpp
+```
 
 ### Rule Engine Pattern
 ```c
@@ -566,7 +566,7 @@ int evaluate_rules(DataItem item, Rule* rules, int rule_count) {
     }
     return score;
 }
-```cpp
+```
 
 ### Decision Table Pattern
 ```c
@@ -576,7 +576,7 @@ int evaluate_rules(DataItem item, Rule* rules, int rule_count) {
 // >=25| <30k   | <600   | Deny
 // >=25| >=30k  | >=600  | Approve
 // >=25| <30k   | >=600  | Review
-```cpp
+```
 
 ---
 
@@ -654,7 +654,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Complex nested conditional logic
@@ -733,7 +733,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Point-based risk assessment system
@@ -812,7 +812,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Multi-criteria academic evaluation
@@ -890,7 +890,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Cumulative risk multiplier system
@@ -989,7 +989,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Seasonal activity recommendations
@@ -1078,7 +1078,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Multi-criteria performance evaluation
@@ -1105,7 +1105,7 @@ if (age >= 18) {
         }
     }
 }
-```cpp
+```
 
 **Consistent Structure:**
 ```c
@@ -1117,7 +1117,7 @@ if (condition1) {
 } else {
     // handle default case
 }
-```cpp
+```
 
 **Early Returns:**
 ```c
@@ -1127,7 +1127,7 @@ if (invalid_input) {
     return;
 }
 // continue with valid input
-```cpp
+```
 
 ---
 
@@ -1165,7 +1165,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cpp
+```
 #include <iostream>
 
 int main() {

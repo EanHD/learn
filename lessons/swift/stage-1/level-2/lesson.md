@@ -20,7 +20,7 @@ Now that you know how to run Swift programs, let's learn about variables! Variab
 
 Copy the following code EXACTLY as shown into a new file called `variables.swift`:
 
-```swift
+```
 let name = "Alice"
 let age = 25
 let height = 5.6
@@ -30,22 +30,22 @@ print("Hello, \(name)!")
 print("You are \(age) years old.")
 print("Your height is \(height) feet.")
 print("Student status: \(isStudent)")
-```swift
+```
 
 ### How to Execute
 
-```bash
+```
 swift variables.swift
-```swift
+```
 
 Expected output:
 
-```swift
+```
 Hello, Alice!
 You are 25 years old.
 Your height is 5.6 feet.
 Student status: true
-```swift
+```
 
 ### Success Checklist
 
@@ -135,7 +135,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```swift
+```
 print("Hello, World!")
 
 ```

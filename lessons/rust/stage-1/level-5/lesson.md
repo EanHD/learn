@@ -24,7 +24,7 @@ Programs need to make decisions! You'll learn how to use `if`, `else if`, and `e
 
 **Copy the following code EXACTLY as shown below into a new file called `conditionals.rs`**
 
-```rust
+```
 fn main() {
     let number = 7;
     
@@ -66,33 +66,33 @@ fn main() {
         println!("a is less than or equal to b");
     }
 }
-```rust
+```
 
 ---
 
 ### How to Run
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Compile the code**:
-   ```bash
+   ```
    rustc conditionals.rs -o conditionals
-   ```rust
+   ```
 3. **Run your program**:
-   ```bash
+   ```
    ./conditionals
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 The number 7 is positive
 It's warm. 25°C
 a does not equal b
 a is less than b
 a is less than or equal to b
-```rust
+```
 
 ---
 
@@ -142,18 +142,18 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 
 ### Code Breakdown
 
-```rust
+```
     if number > 0 {
         println!("The number {} is positive", number);
     } else {
         println!("The number {} is not positive", number);
     }
-```rust
+```
 - **`if number > 0`** = Condition: is number greater than 0?
 - **`{ ... }`** = Code block executed if condition true
 - **`else`** = Executed if condition false
 
-```rust
+```
     if temperature > 30 {
         println!("It's very hot! {}°C", temperature);
     } else if temperature > 20 {
@@ -163,18 +163,18 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
     } else {
         println!("It's cold! {}°C", temperature);
     }
-```rust
+```
 - **Chain of conditions** checked in order
 - **First true condition** executes, others skipped
 - **else** catches any remaining cases
 
-```rust
+```
     if a == b {
         println!("a equals b");
     } else if a != b {
         println!("a does not equal b");
     }
-```rust
+```
 - **`==`** = Equality comparison
 - **`!=`** = Inequality comparison
 - Note: `=` is assignment, `==` is comparison

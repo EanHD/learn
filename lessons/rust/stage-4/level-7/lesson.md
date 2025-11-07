@@ -34,19 +34,19 @@
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    rustc hello.rs -o hello hello.rs
-   ```rust
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
-```rust
+```
 
 ### Program Requirements
 
@@ -84,19 +84,19 @@ Based on your Stage 3 pseudocode, implement a complete library management system
 ### Implementation Steps
 
 1. **Create the project structure**:
-   ```bash
+   ```
    cd /home/eanhd/LEARN/rust/stage-4-full-problem-solving/level-7-capstone-project
-   ```rust
+   ```
 
 2. **Create `library_data.txt`** with initial data
 
 3. **Create `main.rs`** with your complete Rust implementation
 
 4. **Test your program**:
-   ```bash
+   ```
    rustc main.rs
    ./main
-   ```rust
+   ```
 
 5. **Create `README.md`** with usage instructions
 
@@ -166,7 +166,7 @@ Practice the code and experiment with variations!
 
 ### Expected Program Behavior
 
-```rust
+```
   LIBRARY MANAGEMENT SYSTEM
 ==============================
 
@@ -213,11 +213,11 @@ ISBN: 978-1593278281
 Status: Available
 
 Found 1 book(s) matching "rust"
-```rust
+```
 
 ### Sample Implementation
 
-```rust
+```
 use std::fs;
 use std::io::{self, Write};
 use std::collections::HashMap;
@@ -1129,7 +1129,7 @@ fn get_numeric_input() -> Result<u32, std::num::ParseIntError> {
     io::stdin().read_line(&mut input).unwrap();
     input.trim().parse::<u32>()
 }
-```rust
+```
 
 ### Implementation Analysis
 
@@ -1183,7 +1183,7 @@ fn get_numeric_input() -> Result<u32, std::num::ParseIntError> {
 
 ### README.md Template
 
-```markdown
+```
 # Library Management System
 
 A comprehensive Rust application for managing library operations including book inventory, user management, and transaction tracking.
@@ -1215,7 +1215,7 @@ A comprehensive Rust application for managing library operations including book 
 - User Management (register, view, list users)
 - Transaction Management (checkout, return, view active)
 - Reports & Analytics (statistics, overdue, popular books)
-```bash
+```
 
 ---
 

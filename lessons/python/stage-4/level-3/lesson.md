@@ -38,14 +38,14 @@ The calculator should provide:
 ### How to Run
 
 1. **Navigate to this level's directory**:
-    ```bash
+    ```
     cd python/stage-4-full-problem-solving/level-3-mathematical-application
-    ```bash
+    ```
 
 2. **Run the program**:
-    ```bash
+    ```
     python3 main.py
-    ```bash
+    ```
 
 3. **Test all calculator functions** and explore the features
 
@@ -91,7 +91,7 @@ Try these advanced mathematical features:
 
 ### Mathematical Operations Implementation
 
-```python
+```
 import math
 
 # Basic operations
@@ -103,7 +103,7 @@ result = math.sqrt(num)  # Square root
 result = math.factorial(int(num))  # Factorial
 result = math.log(num)  # Natural logarithm
 result = math.exp(num)  # Exponential
-```python
+```
 
 - **Built-in Operators**: Python provides `+`, `-`, `*`, `/`, `**` directly
 - **Math Module**: `import math` gives access to advanced functions
@@ -111,14 +111,14 @@ result = math.exp(num)  # Exponential
 
 ### Trigonometric Functions
 
-```python
+```
 # Convert degrees to radians for math functions
 angle_rad = math.radians(angle)
 result = math.sin(angle_rad)
 
 # Convert back to degrees for inverse functions
 result = math.degrees(math.asin(value))
-```python
+```
 
 - **Radian Conversion**: Math functions expect radians, not degrees
 - **Inverse Functions**: asin, acos, atan return radians, convert back to degrees
@@ -126,7 +126,7 @@ result = math.degrees(math.asin(value))
 
 ### State Management
 
-```python
+```
 # Global variables for persistent state
 memory = 0.0
 history = []
@@ -134,7 +134,7 @@ history = []
 def add_to_history(operation, result):
     """Add calculation to history."""
     history.append(f"{operation} = {result}")
-```python
+```
 
 - **Global State**: Variables accessible across function calls
 - **Data Persistence**: History maintained throughout program execution
@@ -170,7 +170,7 @@ def add_to_history(operation, result):
 
 ### Input Validation Patterns
 
-```python
+```
 def validate_number(prompt):
     """Get a valid number from user input."""
     while True:
@@ -179,7 +179,7 @@ def validate_number(prompt):
             return num
         except ValueError:
             print(" Invalid input. Please enter a valid number.")
-```python
+```
 
 - **Loop Until Valid**: Keeps prompting until good input received
 - **Type Conversion**: `float()` handles both integers and decimals
@@ -187,7 +187,7 @@ def validate_number(prompt):
 
 ### Memory and History Implementation
 
-```python
+```
 # Memory operations
 memory = 0.0
 
@@ -196,7 +196,7 @@ def memory_functions():
         memory = value
     elif choice == '2':  # Recall
         print(f"Memory: {memory}")
-```python
+```
 
 - **Persistent Storage**: Memory retains value between operations
 - **Multiple Operations**: Store, recall, add, subtract, clear
@@ -204,7 +204,7 @@ def memory_functions():
 
 ### Menu System Design
 
-```python
+```
 while True:
     print_menu()
     choice = get_choice()
@@ -213,7 +213,7 @@ while True:
         basic_calculator()
     elif choice == '7':
         break
-```python
+```
 
 - **Main Loop**: Continues until user chooses to exit
 - **Modular Functions**: Each menu option calls separate function

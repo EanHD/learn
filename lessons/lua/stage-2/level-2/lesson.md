@@ -26,25 +26,25 @@ Welcome to Level 2! Today we're focusing on how to handle variables in your pseu
 Variables in pseudocode follow simple patterns:
 
 **Declaration and assignment:**
-```lua
+```
 SET name TO "John"
 SET age TO 25
 SET is_student TO TRUE
-```lua
+```
 
 **Reassignment:**
-```lua
+```
 SET age TO age + 1
 SET total TO total + new_value
 SET is_student TO FALSE
-```lua
+```
 
 **Calculations with variables:**
-```lua
+```
 SET area TO length * width
 SET average TO (num1 + num2 + num3) / 3
 SET is_adult TO age >= 18
-```lua
+```
 
 ---
 
@@ -58,19 +58,19 @@ SET is_adult TO age >= 18
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    lua hello.lua
-   ```lua
+   ```
 
 **Expected output:**
-```lua
+```
 Hello, World!
-```lua
+```
 
 ## Algorithm 1: Simple Variable Swapping
 
 **Pseudocode:**
-```lua
+```
 Algorithm: Swap Two Variables
 1. SET first_number TO 10
 2. SET second_number TO 20
@@ -79,7 +79,7 @@ Algorithm: Swap Two Variables
 5. SET first_number TO second_number
 6. SET second_number TO temp
 7. DISPLAY "After swap: first=" + first_number + ", second=" + second_number
-```lua
+```
 
 **Your Task:** Create a Lua program that demonstrates variable swapping.
 
@@ -88,7 +88,7 @@ Algorithm: Swap Two Variables
 ## Algorithm 2: Running Total Calculator
 
 **Pseudocode:**
-```lua
+```
 Algorithm: Calculate Running Total
 1. SET total TO 0
 2. SET count TO 0
@@ -105,7 +105,7 @@ Algorithm: Calculate Running Total
 13. DISPLAY "Total: " + total
 14. DISPLAY "Count: " + count
 15. DISPLAY "Average: " + average
-```lua
+```
 
 **Your Task:** Create a Lua program that calculates a running total and average.
 
@@ -114,7 +114,7 @@ Algorithm: Calculate Running Total
 ## Algorithm 3: Temperature Tracker
 
 **Pseudocode:**
-```lua
+```
 Algorithm: Track Temperature Readings
 1. SET min_temp TO 100
 2. SET max_temp TO -100
@@ -136,7 +136,7 @@ Algorithm: Track Temperature Readings
 13. IF current_temp > max_temp THEN
    SET max_temp TO current_temp
 14. DISPLAY "Current: " + current_temp + ", Min: " + min_temp + ", Max: " + max_temp
-```lua
+```
 
 **Your Task:** Create a Lua program that tracks min/max temperatures.
 
@@ -145,7 +145,7 @@ Algorithm: Track Temperature Readings
 ## Algorithm 4: Account Balance Tracker
 
 **Pseudocode:**
-```lua
+```
 Algorithm: Track Bank Account Balance
 1. SET account_balance TO 1000
 2. SET transaction_amount TO -50
@@ -160,7 +160,7 @@ Algorithm: Track Bank Account Balance
 11. SET transaction_amount TO 150.25
 12. SET account_balance TO account_balance + transaction_amount
 13. DISPLAY "Balance after deposit: $" + account_balance
-```lua
+```
 
 **Your Task:** Create a Lua program that tracks account balance changes.
 
@@ -169,7 +169,7 @@ Algorithm: Track Bank Account Balance
 ## Algorithm 5: Student Grade Calculator
 
 **Pseudocode:**
-```lua
+```
 Algorithm: Calculate Student Grade
 1. SET total_points TO 0
 2. SET possible_points TO 0
@@ -195,7 +195,7 @@ Algorithm: Calculate Student Grade
 22. DISPLAY "Possible Points: " + possible_points
 23. DISPLAY "Percentage: " + percentage
 24. DISPLAY "Letter Grade: " + letter_grade
-```lua
+```
 
 **Your Task:** Create a Lua program that calculates student grades.
 
@@ -204,7 +204,7 @@ Algorithm: Calculate Student Grade
 ## Algorithm 6: Counter Patterns
 
 **Pseudocode:**
-```lua
+```
 Algorithm: Different Counter Patterns
 1. SET counter TO 1
 2. SET even_counter TO 2
@@ -221,7 +221,7 @@ Algorithm: Different Counter Patterns
    13. DISPLAY "Odd: " + odd_counter
    14. SET odd_counter TO odd_counter + 2
 15. END WHILE
-```lua
+```
 
 **Your Task:** Create a Lua program that demonstrates different counting patterns.
 
@@ -230,7 +230,7 @@ Algorithm: Different Counter Patterns
 ## Algorithm 7: Accumulator Pattern
 
 **Pseudocode:**
-```lua
+```
 Algorithm: Calculate Statistics
 1. SET sum TO 0
 2. SET count TO 0
@@ -252,7 +252,7 @@ Algorithm: Calculate Statistics
 18. DISPLAY "Count: " + count
 19. DISPLAY "Product: " + product
 20. DISPLAY "Average: " + average
-```lua
+```
 
 **Your Task:** Create a Lua program that demonstrates accumulator patterns.
 
@@ -308,7 +308,7 @@ Algorithm: Calculate Statistics
 
 ### Algorithm 1: Simple Variable Swapping
 
-```lua
+```
 -- Algorithm: Swap Two Variables
 local first_number = 10
 local second_number = 20
@@ -320,11 +320,11 @@ first_number = second_number
 second_number = temp
 
 print("After swap: first=" .. first_number .. ", second=" .. second_number)
-```lua
+```
 
 ### Algorithm 2: Running Total Calculator
 
-```lua
+```
 -- Algorithm: Calculate Running Total
 local total = 0
 local count = 0
@@ -346,11 +346,11 @@ local average = total / count
 print("Total: " .. total)
 print("Count: " .. count)
 print("Average: " .. average)
-```lua
+```
 
 ### Algorithm 3: Temperature Tracker
 
-```lua
+```
 -- Algorithm: Track Temperature Readings
 local min_temp = 100
 local max_temp = -100
@@ -381,11 +381,11 @@ if current_temp > max_temp then
     max_temp = current_temp
 end
 print("Current: " .. current_temp .. ", Min: " .. min_temp .. ", Max: " .. max_temp)
-```lua
+```
 
 ### Algorithm 4: Account Balance Tracker
 
-```lua
+```
 -- Algorithm: Track Bank Account Balance
 local account_balance = 1000
 
@@ -404,11 +404,11 @@ print("Balance after withdrawal: $" .. account_balance)
 transaction_amount = 150.25
 account_balance = account_balance + transaction_amount
 print("Balance after deposit: $" .. account_balance)
-```lua
+```
 
 ### Algorithm 5: Student Grade Calculator
 
-```lua
+```
 -- Algorithm: Calculate Student Grade
 local total_points = 0
 local possible_points = 0
@@ -445,11 +445,11 @@ print("Total Points: " .. total_points)
 print("Possible Points: " .. possible_points)
 print("Percentage: " .. percentage)
 print("Letter Grade: " .. letter_grade)
-```lua
+```
 
 ### Algorithm 6: Counter Patterns
 
-```lua
+```
 -- Algorithm: Different Counter Patterns
 local counter = 1
 while counter <= 5 do
@@ -468,11 +468,11 @@ while odd_counter <= 10 do
     print("Odd: " .. odd_counter)
     odd_counter = odd_counter + 2
 end
-```lua
+```
 
 ### Algorithm 7: Accumulator Pattern
 
-```lua
+```
 -- Algorithm: Calculate Statistics
 local sum = 0
 local count = 0
@@ -499,7 +499,7 @@ print("Sum: " .. sum)
 print("Count: " .. count)
 print("Product: " .. product)
 print("Average: " .. average)
-```lua
+```
 
 ### Variable Translation Patterns
 
@@ -552,7 +552,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```lua
+```
 print("Hello, World!")
 
 ```

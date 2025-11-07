@@ -23,7 +23,7 @@ Organize your code into reusable functions/methods.
 
 **Copy the following code EXACTLY as shown below into `main.kt`**
 
-```kotlin
+```
 fun greet(name: String) {
     println("Hello, $name!")
 }
@@ -47,7 +47,7 @@ fun main() {
     val fact = factorial(5)
     println("5! = $fact")
 }
-```kotlin
+```
 
 ---
 
@@ -69,7 +69,7 @@ fun main() {
 
 ### The Complete Code
 
-```kotlin
+```
 fun greet(name: String) {
     println("Hello, $name!")
 }
@@ -93,7 +93,7 @@ fun main() {
     val fact = factorial(5)
     println("5! = $fact")
 }
-```kotlin
+```
 
 ### What This Code Does
 

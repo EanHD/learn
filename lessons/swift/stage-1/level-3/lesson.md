@@ -23,7 +23,7 @@ Master arithmetic operations and use the language as your calculator.
 
 **Copy the following code EXACTLY as shown below into `main.swift`**
 
-```swift
+```
 let a = 15
 let b = 4
 
@@ -36,7 +36,7 @@ print("Remainder: \(a) % \(b) = \(a % b)")
 let x: Double = 15.0
 let y: Double = 4.0
 print("Precise Division: \(x) / \(y) = \(x / y)")
-```swift
+```
 
 ---
 
@@ -58,7 +58,7 @@ print("Precise Division: \(x) / \(y) = \(x / y)")
 
 ### The Complete Code
 
-```swift
+```
 let a = 15
 let b = 4
 
@@ -71,7 +71,7 @@ print("Remainder: \(a) % \(b) = \(a % b)")
 let x: Double = 15.0
 let y: Double = 4.0
 print("Precise Division: \(x) / \(y) = \(x / y)")
-```swift
+```
 
 ### What This Code Does
 
@@ -148,7 +148,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```swift
+```
 print("Hello, World!")
 
 ```

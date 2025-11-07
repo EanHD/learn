@@ -66,7 +66,7 @@ Create a program that manages student grades for a class. The program should:
 - [ ] Search/filter capabilities
 
 **Example Usage:**
-```cpp
+```
 1. Add Student
 2. View All Students
 3. Show Statistics
@@ -83,7 +83,7 @@ Class Statistics:
 Average: 87.5%
 Highest: 95% (Alice)
 Lowest: 80% (Bob)
-```cpp
+```
 
 **Your Task:**
 1. Design data structures for student information
@@ -110,7 +110,7 @@ Create an inventory management system for a small store with:
 - [ ] Search functionality
 
 **Example Usage:**
-```cpp
+```
 Inventory System:
 1. Add Product
 2. Update Stock
@@ -129,7 +129,7 @@ Choice: 4
 Low Stock Alert:
 - [ ] Mouse: 3 units remaining
 - [ ] Keyboard: 2 units remaining
-```cpp
+```
 
 **Your Task:**
 1. Design product data structure
@@ -158,7 +158,7 @@ Build a digital address book that can:
 - [ ] Contact management operations
 
 **Example Usage:**
-```cpp
+```
 Contact Manager:
 1. Add Contact
 2. Search Contact
@@ -175,7 +175,7 @@ Contact added!
 Choice: 2
 Enter search name: John
 Found: John Doe - (555) 123-4567 - john@example.com
-```cpp
+```
 
 **Your Task:**
 1. Design contact data structure
@@ -203,7 +203,7 @@ Create a library system that tracks:
 - [ ] Statistical reporting
 
 **Example Usage:**
-```cpp
+```
 Library System:
 1. Add Book
 2. Search Books
@@ -218,7 +218,7 @@ Total Books: 150
 Available: 120
 Checked Out: 30
 Most Popular Author: J.K. Rowling (8 books)
-```cpp
+```
 
 **Your Task:**
 1. Design book database structure
@@ -247,7 +247,7 @@ Build a personal finance tracker that:
 - [ ] Financial calculations and summaries
 
 **Example Usage:**
-```cpp
+```
 Expense Tracker:
 1. Add Expense
 2. View by Category
@@ -263,7 +263,7 @@ Entertainment: $89.99
 Utilities: $200.00
 Other: $50.25
 Total: $910.74
-```cpp
+```
 
 **Your Task:**
 1. Design expense data structure
@@ -292,7 +292,7 @@ Create a to-do list manager that can:
 - [ ] Search and filter capabilities
 
 **Example Usage:**
-```cpp
+```
 Task Manager:
 1. Add Task
 2. Complete Task
@@ -309,7 +309,7 @@ High Priority Tasks:
 Medium Priority Tasks:
 1. Buy groceries (Completed)
 2. Clean room (Not completed)
-```cpp
+```
 
 **Your Task:**
 1. Design task data structure
@@ -334,7 +334,7 @@ Medium Priority Tasks:
 - [ ] **Consider access patterns** (how data will be used)
 
 **Example Design:**
-```cpp
+```
 Student Grade Book:
 - [ ] student_names[100][50] - array of strings
 - [ ] student_grades[100] - array of floats
@@ -342,7 +342,7 @@ Student Grade Book:
 
 Each student[i] corresponds to:
 - [ ] student_names[i] and student_grades[i]
-```cpp
+```
 
 ---
 
@@ -380,7 +380,7 @@ Each student[i] corresponds to:
 ## Data Management Patterns
 
 ### Array Management
-```cpp
+```
 Initialize array and counter
 While adding items:
     If not at capacity:
@@ -388,10 +388,10 @@ While adding items:
         Increment counter
     Else:
         Show capacity error
-```cpp
+```
 
 ### Search Operations
-```cpp
+```
 Initialize found flag to false
 For each item in collection:
     If item matches search criteria:
@@ -399,19 +399,19 @@ For each item in collection:
         Set found flag to true
 If not found:
     Display "not found" message
-```cpp
+```
 
 ### Data Validation
-```cpp
+```
 When receiving input:
     Check if input is valid format
     Check if input is within acceptable range
     Check for required fields
     Show appropriate error messages
-```cpp
+```
 
 ### Statistical Calculations
-```cpp
+```
 Initialize accumulator variables
 For each data item:
     Add to running totals
@@ -419,7 +419,7 @@ For each data item:
     Count valid items
 Calculate averages and percentages
 Display formatted results
-```cpp
+```
 
 ---
 
@@ -432,11 +432,11 @@ Display formatted results
 ### Problem 1: Student Grade Book
 
 **Data Structure Design:**
-```cpp
+```
 student_names[25][50] - array of student names
 student_grades[25] - array of corresponding grades
 student_count - number of students currently stored
-```cpp
+```
 
 **Key Operations:**
 - [ ] Add student: Validate grade range, store in next available slot
@@ -455,12 +455,12 @@ student_count - number of students currently stored
 ### Problem 2: Inventory Tracker
 
 **Data Structure Design:**
-```cpp
+```
 product_names[50][50] - product names
 product_prices[50] - product prices
 product_stock[50] - current stock levels
 product_count - number of products
-```cpp
+```
 
 **Key Operations:**
 - [ ] Add product: Store name, price, initial stock
@@ -479,12 +479,12 @@ product_count - number of products
 ### Problem 3: Contact List Manager
 
 **Data Structure Design:**
-```cpp
+```
 contact_names[100][50] - contact names
 contact_phones[100][20] - phone numbers
 contact_emails[100][50] - email addresses
 contact_count - number of contacts
-```cpp
+```
 
 **Key Operations:**
 - [ ] Add contact: Validate phone/email format, store all fields
@@ -502,13 +502,13 @@ contact_count - number of contacts
 ### Problem 4: Library Book Database
 
 **Data Structure Design:**
-```cpp
+```
 book_titles[200][100] - book titles
 book_authors[200][50] - author names
 book_isbns[200][20] - ISBN numbers
 book_available[200] - availability status (1=available, 0=checked out)
 book_count - number of books
-```cpp
+```
 
 **Key Operations:**
 - [ ] Add book: Store all book information
@@ -526,13 +526,13 @@ book_count - number of books
 ### Problem 5: Expense Tracker
 
 **Data Structure Design:**
-```cpp
+```
 expense_dates[100][20] - expense dates (MM/DD/YYYY format)
 expense_descriptions[100][100] - expense descriptions
 expense_amounts[100] - expense amounts
 expense_categories[100] - category indices (0=Food, 1=Transportation, etc.)
 expense_count - number of expenses
-```cpp
+```
 
 **Key Operations:**
 - [ ] Add expense: Store all expense details
@@ -541,22 +541,22 @@ expense_count - number of expenses
 - [ ] Budget alerts: Compare against monthly budgets
 
 **Categories Array:**
-```cpp
+```
 categories[5] = {"Food", "Transportation", "Entertainment", "Utilities", "Other"}
-```cpp
+```
 
 ---
 
 ### Problem 6: Task Management System
 
 **Data Structure Design:**
-```cpp
+```
 task_titles[50][100] - task titles
 task_descriptions[50][200] - task descriptions
 task_priorities[50] - priority levels (0=Low, 1=Medium, 2=High)
 task_completed[50] - completion status (0=pending, 1=completed)
 task_count - number of tasks
-```cpp
+```
 
 **Key Operations:**
 - [ ] Add task: Store all task information
@@ -566,12 +566,12 @@ task_count - number of tasks
 - [ ] Statistics: Completion rates, priority distribution
 
 **Priority Display:**
-```cpp
+```
 High Priority: Show first (most important)
 Medium Priority: Show second
 Low Priority: Show last
 Completed tasks: Show with checkmark
-```cpp
+```
 
 ---
 
@@ -583,7 +583,7 @@ Completed tasks: Show with checkmark
 char names[MAX_ITEMS][50];
 float values[MAX_ITEMS];
 int count = 0;
-```cpp
+```
 
 **Add One Operation at a Time:**
 1. Implement data storage
@@ -642,7 +642,7 @@ Expected implementation provided.
 
 ### Complete Solution
 
-```cpp
+```
 #include <iostream>
 
 int main() {

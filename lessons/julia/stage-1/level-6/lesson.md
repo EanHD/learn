@@ -23,7 +23,7 @@ Learn to repeat actions efficiently using loops.
 
 **Copy the following code EXACTLY as shown below into `main.jl`**
 
-```julia
+```
 # For loop
 println("Counting 1 to 10:")
 for i in 1:10
@@ -46,26 +46,26 @@ println("\n$num times table:")
 for i in 1:10
     println("$num × $i = $(num * i)")
 end
-```julia
+```
 
 ---
 
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```julia
+```
 <Space>r
-```julia
+```
 
 **Method 2 (Terminal):**
-```bash
+```
 julia main.jl
-```julia
+```
 
 **Expected output:**
-```julia
+```
 1 2 3 4 5 6 7 8 9 10
-```julia
+```
 
 
 ---

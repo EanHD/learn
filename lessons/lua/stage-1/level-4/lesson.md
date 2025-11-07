@@ -25,7 +25,7 @@ Now let's make our programs interactive! Today you'll learn how to get input fro
 
 **Copy the following code into a new file called `input.lua`**
 
-```lua
+```
 print("=== Interactive Greeting Program ===")
 -- Get input from user
 io.write("What's your name? ")  -- io.write() doesn't add a newline
@@ -120,19 +120,19 @@ if number ~= nil and number > 0 then
 else
     print("Invalid input! That wasn't a positive number.")
 end
-```lua
+```
 
 ---
 
 ### How to Execute
 
 1. **Run your program**:
-   ```bash
+   ```
    lua input.lua
-   ```lua
+   ```
 
 **Expected interaction:**
-```lua
+```
 === Interactive Greeting Program ===
 What's your name? [User types their name and presses Enter]
 Hello, [User's name]! Nice to meet you!
@@ -147,7 +147,7 @@ What year were you born? [User enters a year]
 [Age calculation is performed and shown]
 
 [Additional prompts will ask for input and respond accordingly...]
-```lua
+```
 
 ---
 
@@ -200,23 +200,23 @@ What year were you born? [User enters a year]
 
 ### Code Breakdown
 
-```lua
+```
 local name = io.read()
-```lua
+```
 - **`io.read()`** = Function from the io library that reads from standard input
 - **Reads until** the user presses Enter
 - **Returns a string** containing whatever the user typed
 
-```lua
+```
 local num1 = tonumber(io.read())
-```lua
+```
 - **`tonumber()`** = Converts string to number
 - **Necessary** because `io.read()` returns a string, but we want to do math
 - **Returns nil** if conversion fails (input wasn't a valid number)
 
-```lua
+```
 io.write("What's your name? ")
-```lua
+```
 - **`io.write()`** = Outputs text to the console
 - **Doesn't add** a newline character (unlike print)
 - **Useful for** prompts where user types on same line
@@ -224,14 +224,14 @@ io.write("What's your name? ")
 ### Alternative Input Methods
 
 **Reading multiple values:**
-```lua
+```
 -- Read multiple values on one line (space separated)
 local first, second = io.read("*number", "*number")
 print("First: " .. first .. ", Second: " .. second)
-```lua
+```
 
 **Reading with different modes:**
-```lua
+```
 -- Read one character
 local char = io.read(1)
 
@@ -240,12 +240,12 @@ local content = io.read("*all")
 
 -- Read current line
 local line = io.read("*line")
-```lua
+```
 
 ### Important Input Considerations
 
 **Always validate user input:**
-```lua
+```
 local user_input = io.read()
 local number = tonumber(user_input)
 
@@ -254,10 +254,10 @@ if number == nil then
 else
     print("You entered: " .. number)
 end
-```lua
+```
 
 **Case sensitivity:**
-```lua
+```
 -- Without string.lower(), "Paris" and "paris" would be different
 if answer == "Paris" then  -- "paris" would not match
     -- This would fail if user types "paris"
@@ -267,12 +267,12 @@ end
 if string.lower(answer) == "paris" then  -- Works for any case
     -- This works regardless of case
 end
-```lua
+```
 
 ### String Manipulation
 
 **Common string functions:**
-```lua
+```
 -- Length of string
 local text = "Hello"
 print(string.len(text))  -- Output: 5
@@ -285,12 +285,12 @@ print(string.find(text, "ll"))  -- Output: 3 (position where "ll" starts)
 
 -- Replace text (pattern matching)
 local new_text = string.gsub(text, "H", "h")  -- "hello"
-```lua
+```
 
 ### Error Prevention with Input
 
 **Safe number conversion:**
-```lua
+```
 local get_number = function(prompt)
     io.write(prompt)
     local input = io.read()
@@ -306,11 +306,11 @@ end
 
 -- Usage
 local age = get_number("Enter your age: ")
-```lua
+```
 
 ### Date and Time in Lua
 
-```lua
+```
 -- Get current date components
 local year = tonumber(os.date("%Y"))   -- Full year (e.g., 2025)
 local month = tonumber(os.date("%m"))  -- Month (01-12)
@@ -318,7 +318,7 @@ local day = tonumber(os.date("%d"))    -- Day (01-31)
 
 -- Get full date string
 local full_date = os.date("%Y-%m-%d")  -- e.g., "2025-10-30"
-```lua
+```
 
 ### Common Errors & Solutions
 
@@ -332,17 +332,17 @@ local full_date = os.date("%Y-%m-%d")  -- e.g., "2025-10-30"
 ### Best Practices for Input
 
 **Always validate user input:**
-```lua
+```
 local age = tonumber(io.read())
 if age == nil or age < 0 or age > 150 then
     print("Please enter a valid age between 0 and 150")
 else
     print("You are " .. age .. " years old")
 end
-```lua
+```
 
 **Handle potential nil returns from tonumber:**
-```lua
+```
 local input = io.read()
 local number = tonumber(input)
 if number ~= nil then
@@ -351,7 +351,7 @@ if number ~= nil then
 else
     print("Invalid input - not a number")
 end
-```lua
+```
 
 ### Security Considerations
 
@@ -364,7 +364,7 @@ When accepting user input:
 
 Try this full interactive program:
 
-```lua
+```
 print("=== Personal Finance Calculator ===")
 
 -- Get user's income
@@ -402,7 +402,7 @@ if remaining > 0 then
 else
     print("You're spending more than you earn. Consider reducing expenses.")
 end
-```lua
+```
 
 ---
 
@@ -441,7 +441,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```lua
+```
 print("Hello, World!")
 
 ```

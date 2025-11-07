@@ -32,22 +32,22 @@ fun main() {
     println("Your height is $height feet.")
     println("Student status: $isStudent")
 }
-```kotlin
+```
 
 ### How to Execute
 
-```bash
+```
 kotlinc variables.kt
-```kotlin
+```
 
 Expected output:
 
-```kotlin
+```
 Hello, Alice!
 You are 25 years old.
 Your height is 5.6 feet.
 Student status: true
-```kotlin
+```
 
 ### Success Checklist
 

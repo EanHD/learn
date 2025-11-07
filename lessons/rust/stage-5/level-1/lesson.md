@@ -193,7 +193,7 @@ Your capstone will be evaluated on:
 
 Before coding, submit a proposal addressing:
 
-```rust
+```
 PROJECT TITLE: [Name]
 DOMAIN: [Category - e.g., Personal Finance, Education]
 PURPOSE: [What problem does it solve?]
@@ -221,7 +221,7 @@ USER INTERFACE:
 - [What menus or prompts?]
 
 ESTIMATED EFFORT: [X hours of work]
-```rust
+```
 
 ---
 
@@ -240,10 +240,10 @@ Sketch out data structures and main functions.
 Plan the logic before implementing.
 
 **Step 5: Create Cargo Project**
-```bash
+```
 cargo new my_capstone
 cd my_capstone
-```rust
+```
 
 **Step 6: Start Coding**
 Implement one feature at a time, testing as you go.
@@ -425,15 +425,15 @@ Practice the code and experiment with variations!
 **Essential Planning Steps:**
 
 1. **Write a Problem Statement**
-```rust
+```
  "My application solves [problem]
  by [approach]
  for [users]
  so that [outcome]."
- ```rust
+ ```
 
 2. **Define Core Features** (3-5 minimum)
-```rust
+```
  MUST HAVE (critical):
  - Feature A
  - Feature B
@@ -444,10 +444,10 @@ Practice the code and experiment with variations!
  
  NICE TO HAVE (bonus):
  - Feature E
- ```rust
+ ```
 
 3. **Design Data Structures**
- ```rust
+ ```
  #[derive(Clone, Debug, Serialize, Deserialize)]
  pub struct Person {
  pub id: usize,
@@ -460,10 +460,10 @@ Practice the code and experiment with variations!
  pub name: String,
  // ... other fields
  }
- ```rust
+ ```
 
 4. **Create Architecture Diagram**
-```rust
+```
  USER INPUT
  ↓
  MENU SYSTEM
@@ -473,10 +473,10 @@ Practice the code and experiment with variations!
  DATA STORAGE (structs)
  ↓
  FILE I/O (persistence)
- ```rust
+ ```
 
 5. **Write Pseudocode for Main Functions**
-```rust
+```
  Function: add_new_record(collection)
  1. Get input from user
  2. Validate input (return error if invalid)
@@ -489,7 +489,7 @@ Practice the code and experiment with variations!
  1. Filter collection by criteria
  2. Return matching records
  3. Handle no matches case
- ```rust
+ ```
 
 ### Phase 3: Data Structure Design
 
@@ -512,7 +512,7 @@ Practice the code and experiment with variations!
 
 **Design Pattern:**
 
-```rust
+```
 use serde::{Serialize, Deserialize};
 use std::error::Error;
 
@@ -559,7 +559,7 @@ impl EntityManager {
  .collect()
  }
 }
-```rust
+```
 
 ### Phase 4: Implementation Strategy
 
@@ -583,7 +583,7 @@ impl EntityManager {
 
 **Create a Test Plan:**
 
-```rust
+```
 TEST CASE 1: Add New Record
 Input: Valid record data
 Expected: Record added, saved to file
@@ -602,11 +602,11 @@ Result: PASS / FAIL
 
 > **NEEDS_AUTHOR:** Removed placeholder - verify completeness
 
-```rust
+```
 
 **Unit Test Example:**
 
-```rust
+```
 #[cfg(test)]
 mod tests {
  use super::*;
@@ -625,7 +625,7 @@ mod tests {
  assert_eq!(results.len(), 0);
  }
 }
-```rust
+```
 
 ### Phase 6: Code Quality Checklist
 
@@ -660,9 +660,9 @@ mod tests {
  - Note which are core vs. bonus
 
 3. **Building Instructions**
- ```bash
+ ```
  cargo build --release
- ```rust
+ ```
 
 4. **Usage Guide**
  - How to run: `cargo run`
@@ -737,7 +737,7 @@ mod tests {
 ## Real-World Capstone Examples
 
 ### Example 1: Personal Finance Manager
-```rust
+```
 PURPOSE: Help track personal spending and savings goals
 FEATURES: 
  - Add/categorize expenses
@@ -745,10 +745,10 @@ FEATURES:
  - Generate spending reports
  - Export to CSV for analysis
 COMPLEXITY: Moderate (5-7 hours)
-```rust
+```
 
 ### Example 2: Quiz Application
-```rust
+```
 PURPOSE: Interactive quiz system for learning
 FEATURES:
  - Load questions from file
@@ -756,10 +756,10 @@ FEATURES:
  - Provide instant feedback
  - Show statistics and progress
 COMPLEXITY: Moderate (6-8 hours)
-```rust
+```
 
 ### Example 3: Data Processor
-```rust
+```
 PURPOSE: Analyze CSV files and generate reports
 FEATURES:
  - Parse CSV files
@@ -768,7 +768,7 @@ FEATURES:
  - Generate reports
  - Export results
 COMPLEXITY: Moderate to Advanced (8-12 hours)
-```rust
+```
 
 ---
 

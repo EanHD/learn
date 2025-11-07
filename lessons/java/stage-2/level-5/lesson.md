@@ -49,24 +49,24 @@ Decision-making is the intelligence of programs! Today you'll master complex con
 ### How to Compile and Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    javac hello.java
    ```
 
 2. **Run your program**:
-   ```bash
+   ```
    java hello
    ```
 
 **Expected output:**
-```java
+```
 Hello, World!
-```java
+```
 
 ## Algorithm 1: Loan Approval System
 
 **Pseudocode:**
-```java
+```
 Algorithm: Evaluate Loan Application
 1. Display "=== Loan Approval System ==="
 2. Display "Enter applicant's age: "
@@ -115,7 +115,7 @@ Algorithm: Evaluate Loan Application
 22. Else:
    a. Display " LOAN DENIED"
    b. Display "Reason: " + approvalStatus
-```java
+```
 
 **Decision Logic:**
 - Age restrictions (18-70)
@@ -131,7 +131,7 @@ Algorithm: Evaluate Loan Application
 ## Algorithm 2: Health Risk Assessment
 
 **Pseudocode:**
-```java
+```
 Algorithm: Assess Health Risk Factors
 1. Display "=== Health Risk Assessment ==="
 2. Display "Enter your age: "
@@ -190,7 +190,7 @@ Algorithm: Assess Health Risk Factors
 37. Else:
    a. Display " LOW RISK - Maintain healthy lifestyle"
    b. Display "Recommendations: Continue current healthy habits"
-```java
+```
 
 **Decision Logic:**
 - Multi-factor risk assessment
@@ -205,7 +205,7 @@ Algorithm: Assess Health Risk Factors
 ## Algorithm 3: Academic Standing Calculator
 
 **Pseudocode:**
-```java
+```
 Algorithm: Determine Academic Standing
 1. Display "=== Academic Standing Calculator ==="
 2. Display "Enter GPA (0.0-4.0): "
@@ -255,7 +255,7 @@ Algorithm: Determine Academic Standing
    a. Display " Limited eligibility - Academic plan required"
 23. Else:
    a. Display " Counseling required - Contact academic advisor"
-```java
+```
 
 **Decision Logic:**
 - Multi-criteria academic evaluation
@@ -270,7 +270,7 @@ Algorithm: Determine Academic Standing
 ## Algorithm 4: Insurance Premium Calculator
 
 **Pseudocode:**
-```java
+```
 Algorithm: Calculate Insurance Premium
 1. Display "=== Auto Insurance Premium Calculator ==="
 2. Display "Enter driver's age: "
@@ -324,7 +324,7 @@ Algorithm: Calculate Insurance Premium
 36. Else:
    a. Display " LOW RISK PROFILE"
    b. Display "Eligible for premium discounts"
-```java
+```
 
 **Decision Logic:**
 - Multi-factor risk assessment
@@ -339,7 +339,7 @@ Algorithm: Calculate Insurance Premium
 ## Algorithm 5: Travel Itinerary Planner
 
 **Pseudocode:**
-```java
+```
 Algorithm: Plan Travel Itinerary
 1. Display "=== Travel Itinerary Planner ==="
 2. Display "Enter destination city: "
@@ -403,7 +403,7 @@ Algorithm: Plan Travel Itinerary
    a. Display " Budget exceeded by $" + (totalBudget - dailyBudget × tripDays)
 38. Else:
    a. Display " Within budget - $" + (dailyBudget × tripDays - totalBudget) + " remaining"
-```java
+```
 
 **Decision Logic:**
 - Seasonal activity recommendations
@@ -418,7 +418,7 @@ Algorithm: Plan Travel Itinerary
 ## Algorithm 6: Employee Performance Review
 
 **Pseudocode:**
-```java
+```
 Algorithm: Evaluate Employee Performance
 1. Display "=== Employee Performance Review ==="
 2. Display "Enter employee name: "
@@ -478,7 +478,7 @@ Algorithm: Evaluate Employee Performance
 31. Else:
    a. Display " Performance review complete"
    b. Display "Continue professional development"
-```java
+```
 
 **Decision Logic:**
 - Multi-criteria performance evaluation
@@ -493,7 +493,7 @@ Algorithm: Evaluate Employee Performance
 ### Decision Tree Patterns
 
 **Eligibility Checking:**
-```java
+```
 If primaryCondition && secondaryCondition:
     If qualifyingFactor:
         APPROVE
@@ -501,19 +501,19 @@ If primaryCondition && secondaryCondition:
         DENY
 Else:
     DENY
-```java
+```
 
 **Risk Assessment:**
-```java
+```
 Initialize riskScore = 0
 For each riskFactor:
     If factorPresent:
         Add points to riskScore
 Categorize based on totalScore
-```java
+```
 
 **Multi-tier Classification:**
-```java
+```
 If score >= thresholdA:
     If subCondition:
         CATEGORY_A_PLUS
@@ -523,7 +523,7 @@ Else if score >= thresholdB:
     CATEGORY_B
 Else:
     CATEGORY_C
-```java
+```
 
 ---
 
@@ -556,7 +556,7 @@ Else:
 ## Advanced Decision Patterns
 
 ### State Machine Concept
-```java
+```
 enum ApplicationState {
     INITIAL,
     PROCESSING,
@@ -571,10 +571,10 @@ ApplicationState evaluateApplication(ApplicationData data) {
     if (data.income > 50000 && data.score > 700) return ApplicationState.APPROVED;
     return ApplicationState.PROCESSING;
 }
-```java
+```
 
 ### Rule Engine Pattern
-```java
+```
 int evaluateRules(DataItem item, Rule[] rules) {
     int score = 0;
     for (Rule rule : rules) {
@@ -584,7 +584,7 @@ int evaluateRules(DataItem item, Rule[] rules) {
     }
     return score;
 }
-```java
+```
 
 ---
 
@@ -596,7 +596,7 @@ int evaluateRules(DataItem item, Rule[] rules) {
 
 ### Algorithm 1: Loan Approval System
 
-```java
+```
 import java.util.Scanner;
 
 public class LoanApproval {
@@ -665,7 +665,7 @@ public class LoanApproval {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Complex nested conditional logic
@@ -687,7 +687,7 @@ public class LoanApproval {
 
 ### Algorithm 2: Health Risk Assessment
 
-```java
+```
 import java.util.Scanner;
 
 public class HealthRiskAssessment {
@@ -757,7 +757,7 @@ public class HealthRiskAssessment {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Point-based risk assessment system
@@ -779,7 +779,7 @@ public class HealthRiskAssessment {
 
 ### Algorithm 3: Academic Standing Calculator
 
-```java
+```
 import java.util.Scanner;
 
 public class AcademicStanding {
@@ -849,7 +849,7 @@ public class AcademicStanding {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Multi-criteria academic evaluation
@@ -868,7 +868,7 @@ public class AcademicStanding {
 
 ### Algorithm 4: Insurance Premium Calculator
 
-```java
+```
 import java.util.Scanner;
 
 public class InsurancePremium {
@@ -937,7 +937,7 @@ public class InsurancePremium {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Cumulative risk multiplier system (*= operator)
@@ -959,7 +959,7 @@ public class InsurancePremium {
 
 ### Algorithm 5: Travel Itinerary Planner
 
-```java
+```
 import java.util.Scanner;
 
 public class TravelPlanner {
@@ -1049,7 +1049,7 @@ public class TravelPlanner {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Seasonal activity recommendations (nested if for season + destination)
@@ -1072,7 +1072,7 @@ public class TravelPlanner {
 
 ### Algorithm 6: Employee Performance Review
 
-```java
+```
 import java.util.Scanner;
 
 public class PerformanceReview {
@@ -1152,7 +1152,7 @@ public class PerformanceReview {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Multi-criteria performance evaluation (three scores averaged)
@@ -1180,7 +1180,7 @@ public class PerformanceReview {
 ### Decision Logic Best Practices in Java
 
 **Readable Conditions:**
-```java
+```
 // Good - clear and readable
 if (age >= 18 && age <= 65 && income > 30000) {
     // approve
@@ -1194,10 +1194,10 @@ if (age >= 18) {
         }
     }
 }
-```java
+```
 
 **Consistent Structure:**
-```java
+```
 // Use consistent patterns
 if (condition1) {
     // handle case 1
@@ -1206,10 +1206,10 @@ if (condition1) {
 } else {
     // handle default case
 }
-```java
+```
 
 **Early Returns (in methods):**
-```java
+```
 // Good - fail fast
 public void processApplication(int age, double income) {
     if (age < 18) {
@@ -1218,10 +1218,10 @@ public void processApplication(int age, double income) {
     }
     // continue with valid input
 }
-```java
+```
 
 **Enum for States:**
-```java
+```
 enum RiskLevel {
     LOW, ELEVATED, MODERATE, HIGH
 }
@@ -1230,7 +1230,7 @@ RiskLevel level = RiskLevel.LOW;
 if (riskPoints >= 8) level = RiskLevel.HIGH;
 else if (riskPoints >= 5) level = RiskLevel.MODERATE;
 else if (riskPoints >= 3) level = RiskLevel.ELEVATED;
-```java
+```
 
 ---
 

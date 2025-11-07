@@ -23,7 +23,7 @@ Organize your code into reusable functions/methods.
 
 **Copy the following code EXACTLY as shown below into `main.php`**
 
-```php
+```
 <?php
 // Function to greet someone
 function greet($name) {
@@ -59,12 +59,12 @@ echo "5! = " . factorial(5) . "\n";
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```php
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 php main.php
 ```
 

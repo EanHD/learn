@@ -26,14 +26,14 @@ Design and implement a complete Dart solution in `main.dart.dart`.
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    dart hello.dart
-   ```dart
+   ```
 
 **Expected output:**
-```dart
+```
 Hello, World!
-```dart
+```
 
 ### Your Approach
 
@@ -114,12 +114,12 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```dart
+```
 void main() {
     print("Hello, World!");
 }
 
-```dart
+```
 
 ### Code Breakdown
 

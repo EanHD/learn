@@ -19,7 +19,7 @@ Now that you know how to run Csharp programs, let's learn about variables! Varia
 
 Copy the following code EXACTLY as shown into a new file called `variables.cs`:
 
-```cs
+```
 using System;
 
 class Program {
@@ -35,22 +35,22 @@ class Program {
  Console.WriteLine($"Student status: {isStudent}");
  }
 }
-```csharp
+```
 
 ### How to Execute
 
-```bash
+```
 csc variables.cs
-```csharp
+```
 
 Expected output:
 
-```csharp
+```
 Hello, Alice!
 You are 25 years old.
 Your height is 5.6 feet.
 Student status: true
-```csharp
+```
 
 ### Success Checklist
 
@@ -134,7 +134,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cs
+```
 using System;
 
 class Program {

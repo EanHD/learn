@@ -21,13 +21,13 @@ You're now ready for Stage 3! This is where you start thinking like a real progr
 
 Step 1: Write the pseudocode first
 
-```csharp
+```
 What should happen:
 1. Print "Hello, [name]"
 
 Write your pseudocode in plain English below:
 (Your pseudocode here)
-```csharp
+```
 
 Step 2: Implement your pseudocode in Csharp
 
@@ -36,19 +36,19 @@ Create `main.csharp.csharp` with your solution.
 ### How to Compile and Run
 
 1. **Compile the code**:
- ```bash
+ ```
  csc hello.cs
- ```csharp
+ ```
 
 2. **Run your program**:
- ```bash
+ ```
  mono hello
- ```csharp
+ ```
 
 **Expected output:**
-```csharp
+```
 Hello, World!
-```csharp
+```
 
 ### Success Checklist
 
@@ -134,7 +134,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cs
+```
 using System;
 
 class Program {

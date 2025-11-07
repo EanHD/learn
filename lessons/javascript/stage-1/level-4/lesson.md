@@ -25,13 +25,13 @@ Now let's make our programs interactive! Today you'll learn how to get input fro
 
 **First, install the readline-sync module (if not already installed):**
 
-```bash
+```
 npm install readline-sync
-```javascript
+```
 
 **Then copy the following code into a new file called `input.js`**
 
-```javascript
+```
 // Import the readline-sync module for user input
 const readlineSync = require('readline-sync');
 
@@ -97,11 +97,11 @@ if (index > -1) {
 } else {
     console.log("You didn't select anything!");
 }
-```javascript
+```
 
 **Note:** If you don't want to install readline-sync, you can create a simpler version that demonstrates the concept without user interaction by replacing the input with preset values. Create an alternate version in `simple_input.js`:
 
-```javascript
+```
 // This is a simplified version that doesn't require user input
 // We'll simulate user answers with predefined values
 
@@ -151,7 +151,7 @@ if (answer.toLowerCase() === "paris") {
 } else {
     console.log("Not quite! The answer is Paris.");
 }
-```javascript
+```
 
 ---
 
@@ -159,19 +159,19 @@ if (answer.toLowerCase() === "paris") {
 
 **For the full interactive version:**
 1. **Install readline-sync** (if not already installed):
-   ```bash
+   ```
    npm install readline-sync
-   ```java
+   ```
 2. **Run your program**:
-   ```bash
+   ```
    node input.js
-   ```java
+   ```
 
 **For the simplified version (no installation needed):**
 1. **Run your program**:
-   ```bash
+   ```
    node simple_input.js
-   ```java
+   ```
 
 ---
 
@@ -227,24 +227,24 @@ if (answer.toLowerCase() === "paris") {
 
 ### Code Breakdown
 
-```javascript
+```
 const readlineSync = require('readline-sync');
-```javascript
+```
 - **`const`** = Declares a constant (value that won't change)
 - **`require()`** = Imports external module functionality
 - **`'readline-sync'`** = The module name we want to import
 - This module allows us to get user input synchronously (waits for input before continuing)
 
-```javascript
+```
 let name = readlineSync.question("What's your name? ");
-```javascript
+```
 - **`readlineSync.question()`** = Method to get text input from user
 - **`"What's your name? "`** = Prompt message shown to user
 - **Returns a string** containing whatever the user typed
 
-```javascript
+```
 let num1 = parseFloat(readlineSync.question("Enter first number: "));
-```javascript
+```
 - **`parseFloat()`** = Converts string to floating-point number
 - **Necessary** because `readlineSync.question()` returns a string, but we want to do math
 - **`parseInt()`** = For integers (whole numbers only)
@@ -253,7 +253,7 @@ let num1 = parseFloat(readlineSync.question("Enter first number: "));
 ### Alternative Input Methods
 
 **In Browser Environment (HTML):**
-```html
+```
 <!DOCTYPE html>
 <html>
 <body>
@@ -263,20 +263,20 @@ let num1 = parseFloat(readlineSync.question("Enter first number: "));
   </script>
 </body>
 </html>
-```javascript
+```
 
 **Command Line Arguments:**
-```javascript
+```
 // Access arguments passed to node: `node program.js arg1 arg2`
 let name = process.argv[2];  // First argument after filename
 console.log("Hello, " + name + "!");
-```javascript
+```
 
 ### Data Type Conversion
 
 JavaScript is dynamically typed, but we still need to convert strings to numbers for math:
 
-```javascript
+```
 // Without conversion - concatenation instead of addition!
 let str1 = "5";
 let str2 = "3";
@@ -286,13 +286,13 @@ console.log(str1 + str2);  // Output: "53" (not 8!)
 let num1 = parseFloat("5");
 let num2 = parseFloat("3");
 console.log(num1 + num2);  // Output: 8
-```javascript
+```
 
 ### Error Handling for Input
 
 Real programs need to handle invalid input:
 
-```javascript
+```
 let userInput = readlineSync.question("Enter a number: ");
 let number = parseFloat(userInput);
 
@@ -301,21 +301,21 @@ if (isNaN(number)) {  // Check if it's Not-a-Number
 } else {
     console.log("You entered: " + number);
 }
-```javascript
+```
 
 ### readline-sync Methods
 
 **Text Input:**
-```javascript
+```
 // Get any text
 let name = readlineSync.question("Name: ");
 
 // Get text with masking (good for passwords)
 let password = readlineSync.question("Password: ", {hideEchoBack: true});
-```javascript
+```
 
 **Yes/No Questions:**
-```javascript
+```
 // Returns true for yes/y/Y, false for no/n/N
 let continue = readlineSync.keyInYN("Continue? ");
 if (continue) {
@@ -323,21 +323,21 @@ if (continue) {
 } else {
     console.log("Exiting...");
 }
-```javascript
+```
 
 **Multiple Choice:**
-```javascript
+```
 let colors = ['Red', 'Blue', 'Green'];
 let index = readlineSync.keyInSelect(colors, 'Choose a color: ');
 
 if (index > -1) {  // -1 means no selection
     console.log("You chose: " + colors[index]);
 }
-```javascript
+```
 
 ### Date and Time in JavaScript
 
-```javascript
+```
 // Get current date and time
 let now = new Date();
 console.log(now);  // Full date/time
@@ -346,7 +346,7 @@ console.log(now);  // Full date/time
 let currentYear = now.getFullYear();  // 2025 (or current year)
 let currentMonth = now.getMonth() + 1;  // 0-11, so add 1 for 1-12
 let currentDay = now.getDate();  // 1-31
-```javascript
+```
 
 ### Common Errors & Solutions
 
@@ -361,7 +361,7 @@ let currentDay = now.getDate();  // 1-31
 ### Best Practices for Input
 
 **Always validate user input:**
-```javascript
+```
 let userInput = readlineSync.question("Enter age: ");
 let age = parseInt(userInput);
 
@@ -371,15 +371,15 @@ if (isNaN(age) || age < 0 || age > 150) {
 } else {
     console.log("You are " + age + " years old");
 }
-```javascript
+```
 
 **Handle different string cases:**
-```javascript
+```
 let answer = readlineSync.question("Yes or No? ");
 if (answer.toLowerCase() === "yes" || answer.toLowerCase() === "y") {
     console.log("You said yes!");
 }
-```javascript
+```
 
 ### Security Considerations
 
@@ -392,7 +392,7 @@ When accepting user input, be aware of potential security issues:
 
 Try this full interactive program:
 
-```javascript
+```
 const readlineSync = require('readline-sync');
 
 console.log("=== Personal Finance Calculator ===");
@@ -424,7 +424,7 @@ if (remaining > 0) {
 } else {
     console.log("You're spending more than you earn. Consider reducing expenses.");
 }
-```javascript
+```
 
 ---
 

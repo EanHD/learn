@@ -24,7 +24,7 @@ Programs that can make decisions are much more powerful! Python's `if`, `elif`, 
 
 **Copy the following code EXACTLY as shown below into a new file called `conditionals.py`**
 
-```python
+```
 # Get user input
 age = int(input("How old are you? "))
 temperature = float(input("What is the temperature in Celsius? "))
@@ -48,7 +48,7 @@ elif temperature < 25:
     print("It's mild weather.")
 else:
     print("It's hot! Stay cool.")
-```python
+```
 
 ---
 
@@ -56,23 +56,23 @@ else:
 
 1. **Open your terminal** (or command prompt)
 2. **Navigate to where you saved your file**:
-    ```bash
+    ```
     cd /path/to/your/folder
-    ```python
+    ```
 3. **Run the code**:
-    ```bash
+    ```
     python3 conditionals.py
-    ```python
+    ```
 4. **Provide input** when prompted!
 
 **Example interaction:**
-```python
+```
 How old are you? 25
 What is the temperature in Celsius? 22
 
 You are an adult.
 It's mild weather.
-```python
+```
 
 ---
 
@@ -120,15 +120,15 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ### Code Breakdown
 
-```python
+```
 # Get user input
 age = int(input("How old are you? "))
 temperature = float(input("What is the temperature in Celsius? "))
-```python
+```
 
 - **Gets numeric input** = Age as integer, temperature as float
 
-```python
+```
 # Age-based decisions
 if age < 13:
     print("You are a child.")
@@ -138,7 +138,7 @@ elif age < 65:
     print("You are an adult.")
 else:
     print("You are a senior citizen.")
-```python
+```
 
 - **`if age < 13:`** = Checks if age is less than 13
 - **`elif age < 20:`** = If not child, checks if less than 20

@@ -21,19 +21,19 @@ Welcome to TypeScript! Today, you'll create your first TypeScript program. TypeS
 
 Copy the following code EXACTLY as shown into a new file called `hello.ts`:
 
-```typescript
+```
 console.log("Hello, World!");
 ```type
 
 ### How to Execute
 
-```bash
+```
 ts-node hello.ts
 ```type
 
 Expected output:
 
-```typescript
+```
 Hello, World!
 ```type
 
@@ -105,10 +105,10 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```ts
+```
 console.log("Hello, World!");
 
-```ts
+```
 
 ### Code Breakdown
 

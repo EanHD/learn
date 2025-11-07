@@ -24,7 +24,7 @@ Time to do some math! Programming is all about calculations. You'll learn how to
 
 **Copy the following code EXACTLY as shown below into a new file called `math.rs`**
 
-```rust
+```
 fn main() {
     // Integer variables
     let a = 15;
@@ -48,27 +48,27 @@ fn main() {
     let result = 2 + 3 * 4;  // Multiplication before addition
     println!("2 + 3 * 4 = {}", result);
 }
-```rust
+```
 
 ---
 
 ### How to Run
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Compile the code**:
-   ```bash
+   ```
    rustc math.rs -o math
-   ```rust
+   ```
 3. **Run your program**:
-   ```bash
+   ```
    ./math
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 a = 15
 b = 4
 a + b = 19
@@ -78,7 +78,7 @@ a / b = 3
 a % b = 3
 x / y = 3.75
 2 + 3 * 4 = 14
-```rust
+```
 
 ---
 
@@ -128,36 +128,36 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 
 ### Code Breakdown
 
-```rust
+```
     let a = 15;
     let b = 4;
-```rust
+```
 - Declare integer variables for calculations
 
-```rust
+```
     println!("a + b = {}", a + b);
-```rust
+```
 - **`+`** = Addition operator
 - Combines values of `a` and `b`
 
-```rust
+```
     println!("a / b = {}", a / b);
-```rust
+```
 - **Integer division**: `15 / 4 = 3` (no decimal)
 - Rust truncates toward zero
 
-```rust
+```
     let x = 15.0;
     let y = 4.0;
     println!("x / y = {}", x / y);
-```rust
+```
 - **Float division**: Keeps decimal precision
 - `15.0 / 4.0 = 3.75`
 
-```rust
+```
     let result = 2 + 3 * 4;
     println!("2 + 3 * 4 = {}", result);
-```rust
+```
 - **Operator precedence**: `*` before `+`
 - `3 * 4 = 12`, then `2 + 12 = 14`
 

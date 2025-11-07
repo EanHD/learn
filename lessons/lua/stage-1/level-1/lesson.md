@@ -25,9 +25,9 @@ Welcome to your first step into Lua programming! Today, you'll learn how to crea
 
 **Copy the following code EXACTLY as shown below into a new file called `hello.lua`**
 
-```lua
+```
 print("Hello, World!")
-```lua
+```
 
 ---
 
@@ -35,18 +35,18 @@ print("Hello, World!")
 
 1. **Open your terminal** (or command prompt)
 2. **Navigate to where you saved your file**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```lua
+   ```
 3. **Run your program**:
-   ```bash
+   ```
    lua hello.lua
-   ```bash
+   ```
 
 **Expected output:**
-```lua
+```
 Hello, World!
-```lua
+```
 
 ---
 
@@ -97,9 +97,9 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ### Code Breakdown
 
-```lua
+```
 print("Hello, World!")
-```lua
+```
 - **`print`** = Built-in function that outputs text to the console
 - **`()`** = Function call operator - executes the function with arguments
 - **`"Hello, World!"`** = String argument passed to the print function
@@ -173,7 +173,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```lua
+```
 print("Hello, World!")
 
 ```

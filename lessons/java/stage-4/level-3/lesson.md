@@ -51,19 +51,19 @@ Build a complete Data Processing application that:
 ### How to Compile and Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    javac hello.java
    ```
 
 2. **Run your program**:
-   ```bash
+   ```
    java hello
    ```
 
 **Expected output:**
-```java
+```
 Hello, World!
-```java
+```
 
 ### How to Approach This
 
@@ -163,13 +163,13 @@ A complete application has these components:
 5. **Error Handling**: Manage problems gracefully
 
 **Code Organization:**
-```java
+```
 // Setup and initialization
 // Main program loop or flow
 // Helper functions
 // Error handlers
 // Testing/verification
-```java
+```
 
 Build incrementally - get one feature working before adding the next.
 

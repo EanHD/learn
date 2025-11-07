@@ -23,7 +23,7 @@ Organize your code into reusable functions/methods.
 
 **Copy the following code EXACTLY as shown below into `main.swift`**
 
-```swift
+```
 func greet(name: String) {
     print("Hello, \(name)!")
 }
@@ -45,7 +45,7 @@ print("15 + 7 = \(sum)")
 
 let fact = factorial(n: 5)
 print("5! = \(fact)")
-```swift
+```
 
 ---
 
@@ -67,7 +67,7 @@ print("5! = \(fact)")
 
 ### The Complete Code
 
-```swift
+```
 func greet(name: String) {
     print("Hello, \(name)!")
 }
@@ -89,7 +89,7 @@ print("15 + 7 = \(sum)")
 
 let fact = factorial(n: 5)
 print("5! = \(fact)")
-```swift
+```
 
 ### What This Code Does
 
@@ -166,7 +166,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```swift
+```
 print("Hello, World!")
 
 ```

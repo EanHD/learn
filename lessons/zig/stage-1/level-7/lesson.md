@@ -23,7 +23,7 @@ Organize your code into reusable functions/methods.
 
 **Copy the following code EXACTLY as shown below into `main.zig`**
 
-```zig
+```
 const std = @import("std");
 
 fn greet(name: []const u8) !void {
@@ -62,12 +62,12 @@ pub fn main() !void {
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```zig
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 zig build-exe main.zig
 ./main
 ```

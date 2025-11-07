@@ -88,7 +88,7 @@ Eligibility rules:
 - [ ] Employed applicants get preferred rates
 
 **Example:**
-```cpp
+```
 === Loan Application ===
 Enter credit score (300-850): 720
 Enter annual income: 45000
@@ -100,7 +100,7 @@ ELIGIBLE!
 Loan amount: $100,000
 Interest rate: 6.5%
 Monthly payment: $632.07
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for loan eligibility rules
@@ -120,7 +120,7 @@ Create an insurance premium calculator with rules:
 - [ ] Coverage level: Basic (+0%), Standard (+25%), Premium (+50%)
 
 **Example:**
-```cpp
+```
 === Insurance Quote ===
 Enter age: 28
 Enter accidents in last 3 years: 0
@@ -129,7 +129,7 @@ Enter coverage level (basic/standard/premium): standard
 
 Annual Premium: $687.50
 (Base: $500 + Age: $0 + Record: -$50 + Vehicle: $0 + Coverage: $125)
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for premium calculation rules
@@ -155,7 +155,7 @@ Award levels:
 - [ ] Honorable mention: GPA >=3.5 AND essay >=7
 
 **Example:**
-```cpp
+```
 === Scholarship Application ===
 Enter GPA (0.0-4.0): 3.8
 Enter family income: 35000
@@ -166,7 +166,7 @@ Enter recommendation score (1-10): 9
 
 AWARD: Partial Scholarship
 Reason: Strong GPA and leadership experience
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for scholarship rules
@@ -188,7 +188,7 @@ Create a tax calculator for 2024 tax brackets:
 Also calculate effective tax rate and after-tax income.
 
 **Example:**
-```cpp
+```
 === Tax Calculator ===
 Enter annual income: 75000
 
@@ -201,7 +201,7 @@ Tax breakdown:
 10% bracket: $1,100.00
 12% bracket: $4,032.00
 22% bracket: $3,715.50
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for tax bracket calculations
@@ -224,7 +224,7 @@ Create a simple medical diagnosis assistant with symptoms:
 Provide diagnosis and recommend seeing a doctor if multiple symptoms match.
 
 **Example:**
-```cpp
+```
 === Symptom Checker ===
 Do you have a fever? (y/n): y
 Do you have a cough? (y/n): y
@@ -234,7 +234,7 @@ Do you feel nauseous? (y/n): n
 
 Possible diagnosis: Flu
 Recommendation: Rest, drink fluids, see doctor if symptoms worsen
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for diagnosis rules
@@ -260,7 +260,7 @@ Screening rules:
 - [ ] Offer: Interview qualified AND salary match AND local
 
 **Example:**
-```cpp
+```
 === Application Screening ===
 Enter years of experience: 4
 Enter education level (HS/Associate/BS/MS): BS
@@ -271,7 +271,7 @@ Offered salary range: 80000-90000
 
 SCREENING RESULT: Interview
 Reason: Good experience, education, and skills match
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for screening rules
@@ -283,7 +283,7 @@ Reason: Good experience, education, and skills match
 ### Decision Logic Guidelines
 
 **Rule Engine Structure:**
-```cpp
+```
 Algorithm: Decision Engine
 1. Gather all input criteria
 2. Evaluate primary rules first
@@ -291,17 +291,17 @@ Algorithm: Decision Engine
 4. Apply rule combinations (AND/OR)
 5. Determine final decision
 6. Provide reasoning for decision
-```cpp
+```
 
 **Complex Condition Handling:**
-```cpp
+```
 If (condition_A AND condition_B) OR (condition_C AND condition_D):
     Outcome 1
 Else if condition_E OR (condition_F AND condition_G):
     Outcome 2
 Else:
     Default outcome
-```cpp
+```
 
 ---
 
@@ -371,7 +371,7 @@ Else:
 - [ ] Calculation of loan terms if eligible
 
 **Decision Tree:**
-```cpp
+```
 If (credit >= 650 AND income >= 30000 AND dti < 40) OR (credit >= 700 AND income >= 25000):
     If loan_amount <= income * 3:
         ELIGIBLE
@@ -380,7 +380,7 @@ If (credit >= 650 AND income >= 30000 AND dti < 40) OR (credit >= 700 AND income
         INELIGIBLE - Loan too large
 Else:
     INELIGIBLE - Doesn't meet criteria
-```cpp
+```
 
 ---
 
@@ -392,14 +392,14 @@ Else:
 - [ ] Percentage-based modifications
 
 **Calculation Structure:**
-```cpp
+```
 base_premium = 500
 age_adjustment = calculate_age_factor(age)
 record_adjustment = calculate_record_factor(accidents)
 vehicle_adjustment = calculate_vehicle_factor(type)
 coverage_adjustment = calculate_coverage_factor(level)
 total = base + age + record + vehicle + coverage
-```cpp
+```
 
 ---
 
@@ -411,7 +411,7 @@ total = base + age + record + vehicle + coverage
 - [ ] Priority ranking for awards
 
 **Evaluation Logic:**
-```cpp
+```
 score = 0
 If GPA >= 3.5: score += 1
 If income < 50000: score += 1
@@ -423,7 +423,7 @@ If recommendation >= 8: score += 1
 If score >= 5 AND GPA == 4.0: Full Scholarship
 Else if score >= 4: Partial Scholarship
 Else if score >= 3: Honorable Mention
-```cpp
+```
 
 ---
 
@@ -435,7 +435,7 @@ Else if score >= 3: Honorable Mention
 - [ ] Marginal vs effective rates
 
 **Tax Calculation:**
-```cpp
+```
 taxable = income - deduction
 tax = 0
 
@@ -449,7 +449,7 @@ If taxable > 0:
     bracket2 = min(taxable, 33725)
     tax += bracket2 * 0.12
     // Continue for other brackets
-```cpp
+```
 
 ---
 
@@ -461,7 +461,7 @@ If taxable > 0:
 - [ ] Multiple possible diagnoses
 
 **Diagnosis Logic:**
-```cpp
+```
 flu_score = 0
 if fever: flu_score += 1
 if cough or fatigue: flu_score += 1
@@ -473,7 +473,7 @@ if headache: cold_score += 1
 if fatigue or nausea: cold_score += 1
 
 // Compare scores and determine diagnosis
-```cpp
+```
 
 ---
 
@@ -485,7 +485,7 @@ if fatigue or nausea: cold_score += 1
 - [ ] Multiple criteria evaluation
 
 **Screening Flow:**
-```cpp
+```
 If experience < 2 AND education < BS AND skills < 2:
     REJECT
 Else if experience >= 3 OR education >= BS:
@@ -498,7 +498,7 @@ Else if experience >= 3 OR education >= BS:
         PHONE_SCREEN
 Else:
     HOLD
-```cpp
+```
 
 ---
 
@@ -566,7 +566,7 @@ Expected implementation provided.
 
 ### Complete Solution
 
-```cpp
+```
 #include <stdio.h>
 
 int main() {

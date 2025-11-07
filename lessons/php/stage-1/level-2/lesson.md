@@ -23,7 +23,7 @@ Learn how to store and work with different types of data in PHP.
 
 **Copy the following code EXACTLY as shown below into `main.php`**
 
-```php
+```
 <?php
 // Integer variables
 $age = 25;
@@ -48,12 +48,12 @@ printf("Price: $%.2f\n", $price);
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```php
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 php main.php
 ```
 

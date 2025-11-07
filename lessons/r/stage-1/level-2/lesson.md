@@ -23,7 +23,7 @@ Learn how to store and work with different types of data in R.
 
 **Copy the following code EXACTLY as shown below into `main.R`**
 
-```r
+```
 # Numeric variables
 age <- 25
 score <- 100
@@ -43,12 +43,12 @@ cat(sprintf("Price: $%.2f\n", price))
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```r
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 Rscript main.R
 ```
 

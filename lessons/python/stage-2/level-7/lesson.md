@@ -34,7 +34,7 @@ START
     greet("Alice")
     greet("Bob")
 END
-```python
+```
 
 **Translate to Python. Hints:**
 
@@ -49,10 +49,10 @@ END
 
 Expected output:
 
-```python
+```
 Hello, Alice!
 Hello, Bob!
-```python
+```
 
 ---
 
@@ -70,23 +70,23 @@ Hello, Bob!
 
 ### Solution
 
-```python
+```
 def greet(name):
     print("Hello, " + name + "!")
 
 greet("Alice")
 greet("Bob")
-```python
+```
 
 ### Key Concepts
 
 **Defining Functions:**
 
-```python
+```
 def function_name(parameters):
     # Code inside function
     # Indented
-```python
+```
 
 **Function Components:**
 
@@ -98,10 +98,10 @@ def function_name(parameters):
 
 **Calling Functions:**
 
-```python
+```
 greet("Alice")  # Call greet with "Alice" as argument
                 # name = "Alice" inside the function
-```python
+```
 
 **Parameters vs Arguments:**
 

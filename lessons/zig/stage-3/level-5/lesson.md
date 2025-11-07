@@ -51,12 +51,12 @@ Logic Problems - Design an algorithm to solve this problem, then implement it.
 ### How to Compile and Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    zig build-exe hello.zig
    ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
    ```
 
@@ -160,7 +160,7 @@ Hello, World!
 4. **Edge Cases**: What could go wrong?
 
 **Pseudocode Template:**
-```zig
+```
 ALGORITHM: [Name]
 INPUT: [What we need]
 OUTPUT: [What we produce]

@@ -58,14 +58,14 @@ Create a production-ready Final Capstone Project using Python with:
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    python3 hello.py
-   ```python
+   ```
 
 **Expected output:**
-```python
+```
 Hello, World!
-```python
+```
 
 ### How to Approach This
 

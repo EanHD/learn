@@ -30,7 +30,7 @@ You're going to build a complete Typescript application. This is a real project 
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    ts-node hello.ts
    ```type
 
@@ -164,10 +164,10 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```ts
+```
 console.log("Hello, World!");
 
-```ts
+```
 
 ### Code Breakdown
 

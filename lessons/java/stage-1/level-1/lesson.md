@@ -23,33 +23,33 @@ Welcome to your first step into programming with Java! Today, you'll learn how t
 
 **Copy the following code EXACTLY as shown below into `main.java`**
 
-```java
+```
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
 }
-```java
+```
 
 ---
 
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```java
+```
 <Space>r
-```java
+```
 
 **Method 2 (Terminal):**
-```bash
+```
 javac main.java
 java Main
-```java
+```
 
 **Expected output:**
-```java
+```
 Hello, World!
-```java
+```
 
 ---
 
@@ -98,13 +98,13 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ### Code Breakdown
 
-```java
+```
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
 }
-```java
+```
 
 - **`public class Main`** = Class declaration (public = accessible everywhere)
 - **`main`** = Special method where Java starts execution

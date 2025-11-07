@@ -141,7 +141,7 @@ typedef struct {
     char log_file[256];
     int automation_enabled;
 } AutomationSuite;
-```cpp
+```
 
 ### Function Modules
 - [ ] **Task Scheduler**: `schedule_task()`, `execute_pending_tasks()`
@@ -302,7 +302,7 @@ long long get_file_size(const char *filename);
 int copy_file(const char *source, const char *dest);
 
 # endif
-```cpp
+```
 
 ### Implementation File (automation_suite.c)
 ```c
@@ -842,7 +842,7 @@ int copy_file(const char *source, const char *dest) {
     fclose(dst);
     return 1;
 }
-```cpp
+```
 
 ### Main Program (main.c)
 ```c
@@ -1030,7 +1030,7 @@ void generate_backup_report(const AutomationSuite *suite) {
     fclose(report);
     printf(" Backup report generated: backup_report.txt\n");
 }
-```cpp
+```
 
 ---
 
@@ -1043,7 +1043,7 @@ gcc -o productivity_suite main.c automation_suite.c
 
 # Run the program
 ./productivity_suite
-```cpp
+```
 
 ### Test Scenarios
 1. **Task Manager**: View scheduled tasks and their status
@@ -1054,7 +1054,7 @@ gcc -o productivity_suite main.c automation_suite.c
 6. **System Health**: Check overall system status
 
 ### Sample Automation Flow
-```cpp
+```
 === Main Menu ===
 1.  Task Manager
 ...
@@ -1065,7 +1065,7 @@ Enter your choice (1-8): 6
  Generating Productivity Report...
  Productivity report generated: productivity_report.txt
  Automation cycle completed
-```cpp
+```
 
 ---
 
@@ -1161,20 +1161,20 @@ Enter your choice (1-8): 6
 ## Code Walkthrough
 
 ### Automation Engine Flow
-```cpp
+```
 Initialization → Schedule Loading → Main Loop → Time Check → Task Execution
       ↓              ↓              ↓            ↓            ↓
 System Setup   Task Queue      User Input   Due Tasks     Function Call
 Configuration  Management      Processing   Selection    & Monitoring
-```cpp
+```
 
 ### Scheduling Algorithm
-```cpp
+```
 Task Queue → Time Comparison → Priority Sorting → Resource Check → Execution
      ↓             ↓                ↓              ↓            ↓
 Pending Tasks  Schedule Match   High Priority   Available     Run Task
 Identification Comparison      Task Selection  Resources     & Update
-```cpp
+```
 
 ---
 
@@ -1246,7 +1246,7 @@ Expected implementation provided.
 
 ### Complete Solution
 
-```cpp
+```
 #include <stdio.h>
 
 int main() {

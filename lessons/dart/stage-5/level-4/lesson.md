@@ -34,14 +34,14 @@ Design and implement a Dart project that demonstrates your mastery of the langua
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    dart hello.dart
-   ```dart
+   ```
 
 **Expected output:**
-```dart
+```
 Hello, World!
-```dart
+```
 
 ### Project Suggestions
 
@@ -137,12 +137,12 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```dart
+```
 void main() {
     print("Hello, World!");
 }
 
-```dart
+```
 
 ### Code Breakdown
 

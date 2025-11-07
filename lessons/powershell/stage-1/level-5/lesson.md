@@ -23,7 +23,7 @@ Add decision-making to your programs with if/else statements.
 
 **Copy the following code EXACTLY as shown below into `main.ps1`**
 
-```powershell
+```
 $num = [int](Read-Host "Enter a number")
 
 if ($num -gt 0) {
@@ -61,7 +61,7 @@ if ($num % 2 -eq 0) {
 
 ### The Complete Code
 
-```powershell
+```
 $num = [int](Read-Host "Enter a number")
 
 if ($num -gt 0) {

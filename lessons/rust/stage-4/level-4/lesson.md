@@ -44,7 +44,7 @@ Based on your Stage 3 pseudocode, implement a simple banking system that:
 6. **Maintains state** across multiple operations
 
 **Menu Structure:**
-```rust
+```
 Simple Bank System
 ==================
 Current Balance: $1000.00
@@ -56,24 +56,24 @@ Choose an option:
 4. Exit
 
 Enter your choice (1-4):
-```rust
+```
 
 ---
 
 ### Implementation Steps
 
 1. **Create the project structure**:
-   ```bash
+   ```
    cd /home/eanhd/LEARN/rust/stage-4-full-problem-solving/level-4-interactive-application
-   ```rust
+   ```
 
 2. **Create `main.rs`** with your Rust implementation
 
 3. **Test your program**:
-   ```bash
+   ```
    rustc main.rs
    ./main
-   ```rust
+   ```
 
 4. **Create `README.md`** with usage instructions
 
@@ -151,7 +151,7 @@ Practice the code and experiment with variations!
 
 ### Expected Program Behavior
 
-```rust
+```
 Simple Bank System
 ==================
 Current Balance: $1000.00
@@ -176,11 +176,11 @@ Choose an option:
 Enter your choice (1-4): 4
 
 Thank you for using Simple Bank System!
-```rust
+```
 
 ### Sample Implementation
 
-```rust
+```
 use std::io::{self, Write};
 
 fn main() {
@@ -283,7 +283,7 @@ fn get_positive_amount() -> f64 {
         }
     }
 }
-```rust
+```
 
 ### Implementation Analysis
 
@@ -331,7 +331,7 @@ fn get_positive_amount() -> f64 {
 
 ### README.md Template
 
-```markdown
+```
 # Simple Banking System
 
 A Rust program that simulates basic banking operations with an interactive menu system.
@@ -339,14 +339,14 @@ A Rust program that simulates basic banking operations with an interactive menu 
 ## How to Run
 
 1. Compile the program:
-   ```bash
+   ```
    rustc main.rs
-```rust
+```
 
 2. Run the program:
-   ```bash
+   ```
    ./main
-```rust
+```
 
 3. Use the menu to perform banking operations.
 
@@ -360,7 +360,7 @@ A Rust program that simulates basic banking operations with an interactive menu 
 
 ## Example Usage
 
-```rust
+```
 Simple Bank System
 ==================
 Current Balance: $1000.00
@@ -375,8 +375,8 @@ Enter your choice (1-4): 2
 Enter deposit amount: $500
 
 Deposit successful! New balance: $1500.00
-```rust
-```rust
+```
+```
 
 ### Bonus Challenges
 

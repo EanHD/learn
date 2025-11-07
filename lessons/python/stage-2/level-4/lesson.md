@@ -30,7 +30,7 @@ You've mastered the basics! Now you'll learn to translate written algorithms (ps
 
 **Study the pseudocode algorithm below, then implement it in Python:**
 
-```python
+```
 ALGORITHM: Input/Output Algorithms
 
 BEGIN
@@ -39,7 +39,7 @@ BEGIN
     // Translate step by step into Python
     // Test with sample inputs
 END
-```python
+```
 
 **Implementation Steps:**
 1. Analyze what the algorithm does
@@ -54,14 +54,14 @@ END
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    python3 hello.py
-   ```python
+   ```
 
 **Expected output:**
-```python
+```
 Hello, World!
-```python
+```
 
 ### How to Approach This
 
@@ -160,7 +160,7 @@ The key is understanding what each pseudocode statement represents in Python:
 5. **Conditions**: `IF...THEN...ELSE` → if/else statements
 
 **Example Translation:**
-```python
+```
 PSEUDOCODE:
     READ number
     IF number > 0 THEN
@@ -168,7 +168,7 @@ PSEUDOCODE:
     ELSE
         PRINT "Not positive"
     END IF
-```python
+```
 
 This becomes structured Python code following the language syntax.
 

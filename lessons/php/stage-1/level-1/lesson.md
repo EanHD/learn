@@ -23,7 +23,7 @@ Welcome to your first PHP program! Today, you'll create and run your very first 
 
 **Copy the following code EXACTLY as shown below into `main.php`**
 
-```php
+```
 <?php
 echo "Hello, World!\n";
 ?>
@@ -34,12 +34,12 @@ echo "Hello, World!\n";
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```php
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 php main.php
 ```
 

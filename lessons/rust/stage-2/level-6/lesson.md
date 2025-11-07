@@ -28,22 +28,22 @@ Repetition is powerful! You'll translate pseudocode that uses loops to repeat ac
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    rustc hello.rs -o hello hello.rs
-   ```rust
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
-```rust
+```
 
 ### Pseudocode:
-```rust
+```
 START PROGRAM
     DISPLAY "Countdown Program"
     
@@ -76,7 +76,7 @@ START PROGRAM
         SET num TO num + 1
     END WHILE
 END PROGRAM
-```rust
+```
 
 **Your task:** Create a Rust program that implements these looping constructs.
 
@@ -85,22 +85,22 @@ END PROGRAM
 ### How to Create Your Solution
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Create your code file**:
-   ```bash
+   ```
    touch loop_translation.rs
-   ```rust
+   ```
 3. **Write the Rust code** that matches the pseudocode
 4. **Compile and test**:
-   ```bash
+   ```
    rustc loop_translation.rs -o loop_translation
    ./loop_translation
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Countdown Program
 Count: 5
 Count: 4
@@ -119,7 +119,7 @@ Number: 1
 Number: 2
 Number: 3
 Number: 4
-```rust
+```
 
 ---
 
@@ -169,7 +169,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 ### Step-by-Step Translation
 
 **Pseudocode:**
-```rust
+```
 START PROGRAM
     DISPLAY "Countdown Program"
     
@@ -202,10 +202,10 @@ START PROGRAM
         SET num TO num + 1
     END WHILE
 END PROGRAM
-```rust
+```
 
 **Rust Code:**
-```rust
+```
 fn main() {
     println!("Countdown Program");
     
@@ -236,7 +236,7 @@ fn main() {
         num = num + 1;
     }
 }
-```rust
+```
 
 ### Translation Guide
 

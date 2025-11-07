@@ -17,7 +17,7 @@
 
 Create `main.cpp` (note: `.cpp` not `.c`):
 
-```cpp
+```
 #include <iostream>
 using namespace std;
 
@@ -56,7 +56,7 @@ int main() {
 
 ### Compile and Run (note g++ not gcc!)
 
-```bash
+```
 g++ main.cpp -o main
 ./main
 ```
@@ -78,7 +78,7 @@ g++ main.cpp -o main
 
 ### Understanding cout and cin
 
-```cpp
+```
 cout << "Hello";  // Output - arrows point LEFT (out of program)
 cin >> age;       // Input - arrows point RIGHT (into variable)
 ```

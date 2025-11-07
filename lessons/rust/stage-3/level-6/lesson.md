@@ -28,19 +28,19 @@ Repetitive problems require processing data in loops and handling repeated opera
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    rustc hello.rs -o hello hello.rs
-   ```rust
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
-```rust
+```
 
 ### Problem: Student Grade Analyzer
 
@@ -67,7 +67,7 @@ Create a program that analyzes student grades and provides comprehensive statist
 - F: Below 60
 
 **Example Interaction:**
-```rust
+```
 Student Grade Analyzer
 ======================
 
@@ -117,20 +117,20 @@ Highest Average: Alice Johnson (90.75)
 Lowest Average: Bob Smith (78.33)
 Students Above Class Average: 2
 Students Below Class Average: 1
-```rust
+```
 
 ---
 
 ### How to Create Your Solution
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Create your pseudocode file**:
-   ```bash
+   ```
    touch repetitive_problems.md
-   ```rust
+   ```
 3. **Plan data structures** - How to store student information
 4. **Design input loops** - Processing multiple students and grades
 5. **Plan calculation logic** - Averages and statistics
@@ -186,7 +186,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 - **Classification**: Convert numeric grades to letter grades
 
 **Processing Flow:**
-```rust
+```
 Get student count
 FOR each student:
     Get student name
@@ -199,11 +199,11 @@ FOR each student:
     Store student data
     Update class statistics
 Display comprehensive report
-```rust
+```
 
 ### Sample Pseudocode Solution
 
-```rust
+```
 START PROGRAM
     DISPLAY "Student Grade Analyzer"
     DISPLAY "======================"
@@ -332,7 +332,7 @@ FUNCTION FORMAT_PERCENT(count, total)
     SET percentage TO (count / total) * 100
     RETURN FORMAT_NUMBER(percentage, 2)
 END FUNCTION
-```rust
+```
 
 ### Analysis Breakdown
 

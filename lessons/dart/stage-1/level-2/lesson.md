@@ -20,7 +20,7 @@ Now that you know how to run Dart programs, let's learn about variables! Variabl
 
 Copy the following code EXACTLY as shown into a new file called `variables.dart`:
 
-```dart
+```
 void main() {
   String name = "Alice";
   int age = 25;
@@ -32,22 +32,22 @@ void main() {
   print("Your height is $height feet.");
   print("Student status: $isStudent");
 }
-```dart
+```
 
 ### How to Execute
 
-```bash
+```
 dart variables.dart
-```dart
+```
 
 Expected output:
 
-```dart
+```
 Hello, Alice!
 You are 25 years old.
 Your height is 5.6 feet.
 Student status: true
-```dart
+```
 
 ### Success Checklist
 
@@ -135,12 +135,12 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```dart
+```
 void main() {
     print("Hello, World!");
 }
 
-```dart
+```
 
 ### Code Breakdown
 

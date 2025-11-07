@@ -30,7 +30,7 @@ You've mastered the basics! Now you'll learn to translate written algorithms (ps
 
 **Study the pseudocode algorithm below, then implement it in R:**
 
-```r
+```
 ALGORITHM: Mathematical Algorithms
 
 BEGIN
@@ -54,7 +54,7 @@ END
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    Rscript hello.R
    ```
 
@@ -160,7 +160,7 @@ The key is understanding what each pseudocode statement represents in R:
 5. **Conditions**: `IF...THEN...ELSE` → if/else statements
 
 **Example Translation:**
-```r
+```
 PSEUDOCODE:
     READ number
     IF number > 0 THEN

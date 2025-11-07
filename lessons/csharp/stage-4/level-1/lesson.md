@@ -28,19 +28,19 @@ Requirements:
 ### How to Compile and Run
 
 1. **Compile the code**:
- ```bash
+ ```
  csc hello.cs
- ```csharp
+ ```
 
 2. **Run your program**:
- ```bash
+ ```
  mono hello
- ```csharp
+ ```
 
 **Expected output:**
-```csharp
+```
 Hello, World!
-```csharp
+```
 
 ### How to Approach This
 
@@ -127,7 +127,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cs
+```
 using System;
 
 class Program {

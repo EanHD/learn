@@ -28,19 +28,19 @@ Interactive problems require handling multiple user inputs and decisions. You'll
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    rustc hello.rs -o hello hello.rs
-   ```rust
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
-```rust
+```
 
 ### Problem: Simple Banking System
 
@@ -59,7 +59,7 @@ Create a simple banking system that allows users to perform basic banking operat
 6. Show updated balance after each transaction
 
 **Menu Options:**
-```rust
+```
 Simple Bank System
 ==================
 Current Balance: $1000.00
@@ -71,10 +71,10 @@ Choose an option:
 4. Exit
 
 Enter your choice (1-4):
-```rust
+```
 
 **Example Interaction:**
-```rust
+```
 Simple Bank System
 ==================
 Current Balance: $1000.00
@@ -110,20 +110,20 @@ Choose an option:
 Enter your choice (1-4): 4
 
 Thank you for using Simple Bank System!
-```rust
+```
 
 ---
 
 ### How to Create Your Solution
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Create your pseudocode file**:
-   ```bash
+   ```
    touch interactive_problems.md
-   ```rust
+   ```
 3. **Plan the main loop** - Program runs until user exits
 4. **Design menu system** - Clear options for user
 5. **Handle each operation** - Different logic for each choice
@@ -181,7 +181,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 - **Exit Condition**: Clean program termination
 
 **Program Flow:**
-```rust
+```
 Initialize balance
 WHILE user hasn't chosen exit:
     Display menu with current balance
@@ -191,11 +191,11 @@ WHILE user hasn't chosen exit:
     Show confirmation
 END WHILE
 Display exit message
-```rust
+```
 
 ### Sample Pseudocode Solution
 
-```rust
+```
 START PROGRAM
     SET balance TO 1000.00
     
@@ -261,7 +261,7 @@ START PROGRAM
         END IF
     END WHILE
 END PROGRAM
-```rust
+```
 
 ### Analysis Breakdown
 

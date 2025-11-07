@@ -28,19 +28,19 @@ Welcome to Stage 3! Now you'll learn to analyze problems and design solutions be
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    rustc hello.rs -o hello hello.rs
-   ```rust
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
-```rust
+```
 
 ### Problem: Temperature Converter
 
@@ -57,27 +57,27 @@ You need to create a program that converts temperatures between Celsius and Fahr
 - Fahrenheit to Celsius: `C = (F - 32) × 5/9`
 
 **Example Interactions:**
-```rust
+```
 What conversion do you want?
 1. Celsius to Fahrenheit
 2. Fahrenheit to Celsius
 Enter choice (1 or 2): 1
 Enter temperature in Celsius: 25
 25°C is equal to 77°F
-```rust
+```
 
 ---
 
 ### How to Create Your Solution
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Create your pseudocode file**:
-   ```bash
+   ```
    touch simple_analysis.md
-   ```rust
+   ```
 3. **Write pseudocode** that solves the problem step by step
 4. **Think about edge cases** (what if user enters invalid choice?)
 
@@ -142,7 +142,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 
 ### Sample Pseudocode Solution
 
-```rust
+```
 START PROGRAM
     DISPLAY "Temperature Converter"
     DISPLAY "What conversion do you want?"
@@ -166,7 +166,7 @@ START PROGRAM
         DISPLAY "Invalid choice. Please enter 1 or 2."
     END IF
 END PROGRAM
-```rust
+```
 
 ### Analysis Breakdown
 

@@ -21,23 +21,23 @@ Welcome to Dart! Today, you'll create your first Dart program. Dart is a modern 
 
 Copy the following code EXACTLY as shown into a new file called `hello.dart`:
 
-```dart
+```
 void main() {
   print("Hello, World!");
 }
-```dart
+```
 
 ### How to Execute
 
-```bash
+```
 dart hello.dart
-```dart
+```
 
 Expected output:
 
-```dart
+```
 Hello, World!
-```dart
+```
 
 ### Success Checklist
 
@@ -60,24 +60,24 @@ Hello, World!
 
 ### The Complete Solution
 
-```dart
+```
 void main() {
   print("Hello, World!");
 }
-```dart
+```
 
 ### Code Breakdown
 
 ```c
 # include <stdio.h>
-```dart
+```
 - **`#include`** = A preprocessor command that includes libraries
 - **`<stdio.h>`** = Standard Input/Output library - gives us printf()
 - **Purpose**: Lets us use functions like printf() for printing
 
 ```c
 main function {
-```dart
+```
 - **`int`** = Return type - this function will return an integer
 - **`main`** = Function name - every C program starts here
 - **`()`** = Parameters (empty means no inputs needed)
@@ -85,7 +85,7 @@ main function {
 
 ```c
     printf("Hello, World!\n");
-```dart
+```
 - **`printf`** = "print formatted" function from stdio.h
 - **`"`** = String literal start/end
 - **`\n`** = Escape sequence for newline (moves cursor to next line)
@@ -94,7 +94,7 @@ main function {
 ```c
     return 0;
 }
-```dart
+```
 - **`return 0`** = Returns 0 to indicate successful execution
 - **`}`** = Closing brace - end of function body
 
@@ -154,12 +154,12 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```dart
+```
 void main() {
     print("Hello, World!");
 }
 
-```dart
+```
 
 ### Code Breakdown
 

@@ -28,22 +28,22 @@ Programs make decisions! You'll translate pseudocode that uses conditional logic
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    rustc hello.rs -o hello hello.rs
-   ```rust
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
-```rust
+```
 
 ### Pseudocode:
-```rust
+```
 START PROGRAM
     DISPLAY "Number Classifier"
     DISPLAY "Enter a number:"
@@ -71,7 +71,7 @@ START PROGRAM
         DISPLAY "That's a negative number!"
     END IF
 END PROGRAM
-```rust
+```
 
 **Your task:** Create a Rust program that classifies numbers based on the pseudocode logic.
 
@@ -80,29 +80,29 @@ END PROGRAM
 ### How to Create Your Solution
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Create your code file**:
-   ```bash
+   ```
    touch decision_translation.rs
-   ```rust
+   ```
 3. **Write the Rust code** that matches the pseudocode
 4. **Compile and test**:
-   ```bash
+   ```
    rustc decision_translation.rs -o decision_translation
    ./decision_translation
-   ```rust
+   ```
 
 **Example interaction:**
-```rust
+```
 Number Classifier
 Enter a number:
 7
 7 is positive
 7 is odd
 That's a small number!
-```rust
+```
 
 ---
 
@@ -153,7 +153,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 ### Step-by-Step Translation
 
 **Pseudocode:**
-```rust
+```
 START PROGRAM
     DISPLAY "Number Classifier"
     DISPLAY "Enter a number:"
@@ -181,10 +181,10 @@ START PROGRAM
         DISPLAY "That's a negative number!"
     END IF
 END PROGRAM
-```rust
+```
 
 **Rust Code:**
-```rust
+```
 use std::io;
 
 fn main() {
@@ -217,7 +217,7 @@ fn main() {
         println!("That's a negative number!");
     }
 }
-```rust
+```
 
 ### Translation Guide
 

@@ -23,7 +23,7 @@ Learn to repeat actions efficiently using loops.
 
 **Copy the following code EXACTLY as shown below into `main.cs`**
 
-```csharp
+```
 using System;
 
 class Program {
@@ -48,7 +48,7 @@ class Program {
  Console.WriteLine("Liftoff!");
  }
 }
-```csharp
+```
 
 ---
 
@@ -70,7 +70,7 @@ class Program {
 
 ### The Complete Code
 
-```csharp
+```
 using System;
 
 class Program {
@@ -95,7 +95,7 @@ class Program {
  Console.WriteLine("Liftoff!");
  }
 }
-```csharp
+```
 
 ### What This Code Does
 
@@ -167,7 +167,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cs
+```
 using System;
 
 class Program {

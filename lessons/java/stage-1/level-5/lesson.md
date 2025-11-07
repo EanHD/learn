@@ -24,7 +24,7 @@ Time to add intelligence to your programs! Today you'll learn how to make decisi
 
 **Copy the following code EXACTLY as shown below into `Main.java`**
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -150,34 +150,34 @@ public class Main {
         input.close();
     }
 }
-```java
+```
 
 ---
 
 
 
 **Expected output:**
-```java
+```
 [Output depends on conditions - varies based on input]
-```java
+```
 
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```java
+```
 <Space>r
-```java
+```
 
 **Method 2 (Terminal):**
-```bash
+```
 javac Main.java
 java Main
-```java
+```
 
 **Follow all the prompts** and see how the program makes different decisions!
 
 **Example interaction:**
-```java
+```
 === DECISION MAKER 3000 ===
 
 Enter your age: 25
@@ -214,7 +214,7 @@ Weather Advice:
 === EVEN OR ODD ===
 Enter a number: 42
 42 is EVEN
-```java
+```
 
 ---
 
@@ -280,19 +280,19 @@ You learned the foundation of programming logic! Here's what's powerful:
 
 ### Code Breakdown
 
-```java
+```
 if (age >= 18) {
     System.out.println("You are an adult!");
 } else {
     System.out.println("You are a minor.");
 }
-```java
+```
 - **`if`** = Tests a condition
 - **`age >= 18`** = Condition (must be true or false)
 - **`{}`** = Code block that runs if condition is true
 - **`else`** = Runs if condition is false
 
-```java
+```
 if (score >= 90) {
     System.out.println("Grade: A");
 } else if (score >= 80) {
@@ -302,38 +302,38 @@ if (score >= 90) {
 } else {
     System.out.println("Grade: F");
 }
-```java
+```
 - **`else if`** = Tests another condition if previous was false
 - **Order matters!** Checks from top to bottom
 - **First match wins**: Once a condition is true, rest are skipped
 
-```java
+```
 if (movieAge >= 17 || (movieAge >= 13 && hasConsent)) {
     System.out.println("You can watch R-rated movies!");
 }
-```java
+```
 - **`||`** = OR operator (either condition can be true)
 - **`&&`** = AND operator (both conditions must be true)
 - **`()`** = Parentheses control order of evaluation
 
-```java
+```
 if (drivingAge >= 16) {
     if (hasPermit) {
         System.out.println("You can drive!");
     }
 }
-```java
+```
 - **Nested if** = An if statement inside another if statement
 - **Both conditions** must be true to reach inner code
 - **Useful for** complex decision trees
 
-```java
+```
 String result = (number % 2 == 0) ? "EVEN" : "ODD";
-```java
+```
 - **Ternary operator** = Shorthand if-else for simple assignments
 - **Format**: `condition ? valueIfTrue : valueIfFalse`
 - **Same as**:
-  ```java
+  ```
   String result;
   if (number % 2 == 0) {
       result = "EVEN";
@@ -345,26 +345,26 @@ String result = (number % 2 == 0) ? "EVEN" : "ODD";
 ### Understanding Logical Operators
 
 **AND (&&) - Both must be true:**
-```java
+```
 true  && true  = true
 true  && false = false
 false && true  = false
 false && false = false
-```java
+```
 
 **OR (||) - At least one must be true:**
-```java
+```
 true  || true  = true
 true  || false = true
 false || true  = true
 false || false = false
-```java
+```
 
 **NOT (!) - Inverts the value:**
-```java
+```
 !true  = false
 !false = true
-```java
+```
 
 ### Operator Precedence
 
@@ -374,65 +374,65 @@ When combining conditions, Java evaluates in this order:
 3. **`||`** (OR) - lowest priority
 
 **Example:**
-```java
+```
 // Without parentheses:
 if (age > 18 || age == 18 && hasLicense)
 // Evaluates as: age > 18 || (age == 18 && hasLicense)
 
 // With parentheses (recommended for clarity):
 if ((age > 18 || age == 18) && hasLicense)
-```java
+```
 
 ### Short-Circuit Evaluation
 
 Java is smart! It doesn't waste time:
 
 **AND (`&&`):**
-```java
+```
 if (false && expensiveFunction()) {
     // expensiveFunction() is NEVER called!
     // Because false && anything = false
 }
-```java
+```
 
 **OR (`||`):**
-```java
+```
 if (true || expensiveFunction()) {
     // expensiveFunction() is NEVER called!
     // Because true || anything = true
 }
-```java
+```
 
 **Practical use:**
-```java
+```
 // Prevents division by zero:
 if (denominator != 0 && numerator / denominator > 10) {
     // Safe! Division only happens if denominator != 0
 }
-```java
+```
 
 ### Common Mistakes
 
 **1. Using `=` instead of `==`:**
-```java
+```
 // WRONG:
 if (age = 18) {  // Assignment, not comparison!
 
 // RIGHT:
 if (age == 18) {  // Comparison
-```java
+```
 
 **2. Comparing strings with `==`:**
-```java
+```
 // WRONG:
 if (name == "John") {  // Compares memory addresses!
 
 // RIGHT:
 if (name.equals("John")) {  // Compares content
-```java
+```
 
 **3. Missing braces in if statements:**
-```java
+```
 // DANGEROUS:
 if (age < 18)
     System.out.println("Minor");
@@ -443,10 +443,10 @@ if (age < 18) {
     System.out.println("Minor");
     System.out.println("Cannot vote");
 }
-```java
+```
 
 **4. Redundant conditions:**
-```java
+```
 // REDUNDANT:
 if (age >= 18 && age < 65) {
     // ...
@@ -460,7 +460,7 @@ if (age >= 18 && age < 65) {
 } else {  // Automatically means age < 18 or age >= 65
     // ...
 }
-```java
+```
 
 ### Common Errors & Solutions
 
@@ -474,7 +474,7 @@ if (age >= 18 && age < 65) {
 ### Advanced Patterns
 
 **1. Range checking:**
-```java
+```
 if (score >= 90 && score <= 100) {
     System.out.println("A");
 }
@@ -483,18 +483,18 @@ if (score >= 90 && score <= 100) {
 if (90 <= score && score <= 100) {  // Math notation
     System.out.println("A");
 }
-```java
+```
 
 **2. Flag variables:**
-```java
+```
 boolean isEligible = (age >= 18 && hasID && !isBanned);
 if (isEligible) {
     System.out.println("Welcome!");
 }
-```java
+```
 
 **3. Guard clauses (early returns):**
-```java
+```
 public static void processAge(int age) {
     if (age < 0) {
         System.out.println("Invalid age");
@@ -506,10 +506,10 @@ public static void processAge(int age) {
     }
     System.out.println("Adult");
 }
-```java
+```
 
 **4. Switch statement (alternative to many else-if):**
-```java
+```
 int day = 3;
 switch (day) {
     case 1:
@@ -524,7 +524,7 @@ switch (day) {
     default:
         System.out.println("Other day");
 }
-```java
+```
 
 ### Bonus Knowledge
 

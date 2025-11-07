@@ -34,7 +34,7 @@ START
     else
         print "You are a minor"
 END
-```python
+```
 
 **Translate to Python. Hints:**
 
@@ -49,19 +49,19 @@ END
 
 If you enter 20:
 
-```python
+```
 How old are you?
 20
 You are an adult
-```python
+```
 
 If you enter 15:
 
-```python
+```
 How old are you?
 15
 You are a minor
-```python
+```
 
 ---
 
@@ -79,14 +79,14 @@ You are a minor
 
 ### Solution
 
-```python
+```
 print("How old are you?")
 age = int(input())
 if age >= 18:
     print("You are an adult")
 else:
     print("You are a minor")
-```python
+```
 
 ### Key Concepts
 
@@ -98,12 +98,12 @@ else:
 
 **If/Else Structure:**
 
-```python
+```
 if condition:
     code if true
 else:
     code if false
-```python
+```
 
 **Indentation:**
 

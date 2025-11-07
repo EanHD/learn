@@ -51,14 +51,14 @@ Data Structure Planning - Design an algorithm to solve this problem, then implem
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    julia hello.jl
    ```
 
 **Expected output:**
-```julia
+```
 Hello, World!
-```julia
+```
 
 ### How to Approach This
 
@@ -155,7 +155,7 @@ Hello, World!
 4. **Edge Cases**: What could go wrong?
 
 **Pseudocode Template:**
-```julia
+```
 ALGORITHM: [Name]
 INPUT: [What we need]
 OUTPUT: [What we produce]
@@ -169,7 +169,7 @@ BEGIN
         - Step 3
     4. Display results
 END
-```julia
+```
 
 Then translate this directly to Julia code.
 

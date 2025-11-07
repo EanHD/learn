@@ -26,36 +26,36 @@ Welcome to Level 3! Today we're focusing on mathematical operations in pseudocod
 Mathematical expressions in pseudocode follow standard notation:
 
 **Basic operations:**
-```go
+```
 SET result TO 5 + 3
 SET result TO 10 - 4
 SET result TO 6 * 7
 SET result TO 15 / 3
 SET remainder TO 17 MOD 5
-```go
+```
 
 **Complex expressions:**
-```go
+```
 SET area TO length * width
 SET volume TO length * width * height
 SET average TO (num1 + num2 + num3) / 3
 SET tax TO price * 0.08
 SET discount TO original_price * discount_rate
-```go
+```
 
 **Order of operations:**
-```go
+```
 SET result TO 2 + 3 * 4     // result = 14 (not 20), multiplication first
 SET result TO (2 + 3) * 4   // result = 20, parentheses override
 SET result TO 10 / 2 + 3    // result = 8, division first
-```go
+```
 
 **Mathematical functions:**
-```go
+```
 SET result TO POWER(2, 3)    // 2 to the power of 3
 SET result TO SQRT(16)       // square root of 16
 SET result TO ROUND(3.7)     // round to nearest integer
-```go
+```
 
 ---
 
@@ -69,19 +69,19 @@ SET result TO ROUND(3.7)     // round to nearest integer
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    go run hello.go
-   ```go
+   ```
 
 **Expected output:**
-```go
+```
 Hello, World!
-```go
+```
 
 ## Algorithm 1: Complex Arithmetic Expression
 
 **Pseudocode:**
-```go
+```
 Algorithm: Evaluate Complex Expression
 1. SET a TO 10
 2. SET b TO 5
@@ -92,7 +92,7 @@ Algorithm: Evaluate Complex Expression
 7. DISPLAY "Result without parentheses: " + result2
 8. SET result3 TO ((a + b) * c - a) / c
 9. DISPLAY "Result with different grouping: " + result3
-```go
+```
 
 **Your Task:** Create a Go program that evaluates complex arithmetic expressions.
 
@@ -101,7 +101,7 @@ Algorithm: Evaluate Complex Expression
 ## Algorithm 2: Quadratic Formula Calculator
 
 **Pseudocode:**
-```go
+```
 Algorithm: Solve Quadratic Equation
 1. SET a TO 1
 2. SET b TO -5
@@ -112,7 +112,7 @@ Algorithm: Solve Quadratic Equation
 7. SET root2 TO (-b - sqrt_discriminant) / (2 * a)
 8. DISPLAY "Root 1: " + root1
 9. DISPLAY "Root 2: " + root2
-```go
+```
 
 **Your Task:** Create a Go program that solves quadratic equations using the quadratic formula.
 
@@ -121,7 +121,7 @@ Algorithm: Solve Quadratic Equation
 ## Algorithm 3: Compound Interest Calculator
 
 **Pseudocode:**
-```go
+```
 Algorithm: Calculate Compound Interest
 1. SET principal TO 1000
 2. SET rate TO 0.05
@@ -132,7 +132,7 @@ Algorithm: Calculate Compound Interest
 7. DISPLAY "Principal: $" + principal
 8. DISPLAY "Final Amount: $" + amount
 9. DISPLAY "Interest Earned: $" + interest
-```go
+```
 
 **Your Task:** Create a Go program that calculates compound interest.
 
@@ -141,7 +141,7 @@ Algorithm: Calculate Compound Interest
 ## Algorithm 4: Geometric Calculations
 
 **Pseudocode:**
-```go
+```
 Algorithm: Calculate Geometric Properties
 1. SET radius TO 5
 2. SET side TO 4
@@ -155,7 +155,7 @@ Algorithm: Calculate Geometric Properties
 10. DISPLAY "Circle - Area: " + circle_area + ", Circumference: " + circle_circumference
 11. DISPLAY "Square - Area: " + square_area + ", Perimeter: " + square_perimeter
 12. DISPLAY "Triangle - Area: " + triangle_area
-```go
+```
 
 **Your Task:** Create a Go program that calculates geometric properties.
 
@@ -164,7 +164,7 @@ Algorithm: Calculate Geometric Properties
 ## Algorithm 5: Physics Formula Calculator
 
 **Pseudocode:**
-```go
+```
 Algorithm: Physics Calculations
 1. SET mass TO 5.5
 2. SET velocity TO 10
@@ -178,7 +178,7 @@ Algorithm: Physics Calculations
 10. DISPLAY "Force: " + force
 11. DISPLAY "Distance: " + distance
 12. DISPLAY "Momentum: " + momentum
-```go
+```
 
 **Your Task:** Create a Go program that calculates physics formulas.
 
@@ -187,7 +187,7 @@ Algorithm: Physics Calculations
 ## Algorithm 6: Temperature Conversion with Multiple Formulas
 
 **Pseudocode:**
-```go
+```
 Algorithm: Multiple Temperature Conversions
 1. SET celsius TO 25
 2. SET fahrenheit TO celsius * 9 / 5 + 32
@@ -199,7 +199,7 @@ Algorithm: Multiple Temperature Conversions
 8. DISPLAY "Kelvin: " + kelvin
 9. DISPLAY "F to C: " + celsius_from_f
 10. DISPLAY "K to C: " + celsius_from_k
-```go
+```
 
 **Your Task:** Create a Go program that performs multiple temperature conversions.
 
@@ -208,7 +208,7 @@ Algorithm: Multiple Temperature Conversions
 ## Algorithm 7: Statistical Calculations
 
 **Pseudocode:**
-```go
+```
 Algorithm: Calculate Statistics for Three Numbers
 1. SET num1 TO 10
 2. SET num2 TO 20
@@ -225,7 +225,7 @@ Algorithm: Calculate Statistics for Three Numbers
 13. DISPLAY "Range: " + range
 14. DISPLAY "Variance: " + variance
 15. DISPLAY "Standard Deviation: " + std_deviation
-```go
+```
 
 **Your Task:** Create a Go program that calculates statistical measures.
 
@@ -281,7 +281,7 @@ Algorithm: Calculate Statistics for Three Numbers
 
 ### Algorithm 1: Complex Arithmetic Expression
 
-```go
+```
 package main
 
 import "fmt"
@@ -301,11 +301,11 @@ func main() {
     result3 := (float64(a+b)*float64(c) - float64(a)) / float64(c)
     fmt.Println("Result with different grouping: " + fmt.Sprintf("%f", result3))
 }
-```go
+```
 
 ### Algorithm 2: Quadratic Formula Calculator
 
-```go
+```
 package main
 
 import (
@@ -327,11 +327,11 @@ func main() {
     fmt.Println("Root 1: " + fmt.Sprintf("%f", root1))
     fmt.Println("Root 2: " + fmt.Sprintf("%f", root2))
 }
-```go
+```
 
 ### Algorithm 3: Compound Interest Calculator
 
-```go
+```
 package main
 
 import (
@@ -353,11 +353,11 @@ func main() {
     fmt.Println("Final Amount: $" + fmt.Sprintf("%.2f", amount))
     fmt.Println("Interest Earned: $" + fmt.Sprintf("%.2f", interest))
 }
-```go
+```
 
 ### Algorithm 4: Geometric Calculations
 
-```go
+```
 package main
 
 import (
@@ -382,11 +382,11 @@ func main() {
     fmt.Println("Square - Area: " + fmt.Sprintf("%.2f", square_area) + ", Perimeter: " + fmt.Sprintf("%.2f", square_perimeter))
     fmt.Println("Triangle - Area: " + fmt.Sprintf("%.2f", triangle_area))
 }
-```go
+```
 
 ### Algorithm 5: Physics Formula Calculator
 
-```go
+```
 package main
 
 import "fmt"
@@ -408,11 +408,11 @@ func main() {
     fmt.Println("Distance: " + fmt.Sprintf("%f", distance))
     fmt.Println("Momentum: " + fmt.Sprintf("%f", momentum))
 }
-```go
+```
 
 ### Algorithm 6: Temperature Conversion with Multiple Formulas
 
-```go
+```
 package main
 
 import "fmt"
@@ -431,11 +431,11 @@ func main() {
     fmt.Println("F to C: " + fmt.Sprintf("%f", celsius_from_f))
     fmt.Println("K to C: " + fmt.Sprintf("%f", celsius_from_k))
 }
-```go
+```
 
 ### Algorithm 7: Statistical Calculations
 
-```go
+```
 package main
 
 import (
@@ -463,7 +463,7 @@ func main() {
     fmt.Println("Variance: " + fmt.Sprintf("%f", variance))
     fmt.Println("Standard Deviation: " + fmt.Sprintf("%.2f", std_deviation))
 }
-```go
+```
 
 ### Mathematical Operation Translation Patterns
 
@@ -517,7 +517,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```go
+```
 package main
 
 import "fmt"

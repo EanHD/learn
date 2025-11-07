@@ -17,7 +17,7 @@
 
 Create `main.cpp`:
 
-```cpp
+```
 #include <iostream>
 using namespace std;
 
@@ -88,7 +88,7 @@ float calculateBMI(float weight, float height) {
 
 ### Compile and Run
 
-```bash
+```
 g++ main.cpp -o main
 ./main
 ```
@@ -97,7 +97,7 @@ g++ main.cpp -o main
 
 ### Function Structure
 
-```cpp
+```
 returnType functionName(parameters) {
     // code
     return value;
@@ -112,7 +112,7 @@ returnType functionName(parameters) {
 
 ### Classes - A Preview
 
-```cpp
+```
 class ClassName {
 public:
     // Functions (called "methods")

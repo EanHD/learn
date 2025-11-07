@@ -23,7 +23,7 @@ Make your programs interactive by reading input from users.
 
 **Copy the following code EXACTLY as shown below into `main.php`**
 
-```php
+```
 <?php
 echo "Enter your name: ";
 $name = trim(fgets(STDIN));
@@ -41,12 +41,12 @@ echo "You are $age years old.\n";
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```php
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 php main.php
 ```
 

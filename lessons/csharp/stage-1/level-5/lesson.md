@@ -23,7 +23,7 @@ Add decision-making to your programs with if/else statements.
 
 **Copy the following code EXACTLY as shown below into `main.cs`**
 
-```csharp
+```
 using System;
 
 class Program {
@@ -46,7 +46,7 @@ class Program {
  }
  }
 }
-```csharp
+```
 
 ---
 
@@ -68,7 +68,7 @@ class Program {
 
 ### The Complete Code
 
-```csharp
+```
 using System;
 
 class Program {
@@ -91,7 +91,7 @@ class Program {
  }
  }
 }
-```csharp
+```
 
 ### What This Code Does
 
@@ -164,7 +164,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cs
+```
 using System;
 
 class Program {

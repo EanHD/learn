@@ -84,7 +84,7 @@ Create a comprehensive student management system with:
 - [ ] Student search and modification
 
 **Example:**
-```cpp
+```
 === Student Management System ===
 1. Register Student
 2. Add Grades
@@ -100,7 +100,7 @@ Enter number of courses: 3
 Enter courses: Math Physics Chemistry
 
 Student registered successfully!
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for the complete student management system
@@ -121,7 +121,7 @@ Create an inventory system for a store with:
 - [ ] Product search and modification
 
 **Example:**
-```cpp
+```
 === Inventory Management ===
 1. Add Product
 2. Update Stock
@@ -136,7 +136,7 @@ Enter quantity to sell: 2
 
 Sale processed! Total: $29.98
 Stock updated: Widget (8 remaining)
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for inventory system integration
@@ -158,7 +158,7 @@ Create a banking system with multiple account types:
 - [ ] Balance inquiries
 
 **Example:**
-```cpp
+```
 === Banking System ===
 1. Create Account
 2. Deposit
@@ -176,7 +176,7 @@ Amount to transfer: 500
 Transfer successful!
 Account 1001 balance: $1,500.00
 Account 1002 balance: $2,500.00
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for banking system components
@@ -198,7 +198,7 @@ Create a hospital management system with:
 - [ ] Patient search and reports
 
 **Example:**
-```cpp
+```
 === Hospital Management ===
 1. Register Patient
 2. Schedule Appointment
@@ -215,7 +215,7 @@ Enter time: 14:00
 Enter doctor: Dr. Smith
 
 Appointment scheduled successfully!
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for hospital system workflow
@@ -237,7 +237,7 @@ Create an online shopping system with:
 - [ ] Customer reviews and ratings
 
 **Example:**
-```cpp
+```
 === E-commerce System ===
 1. Browse Products
 2. Add to Cart
@@ -252,7 +252,7 @@ Enter product ID: 2001
 Enter quantity: 2
 
 Added to cart! Cart total: $49.98
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for e-commerce system integration
@@ -274,7 +274,7 @@ Create a game character management system with:
 - [ ] Character statistics display
 
 **Example:**
-```cpp
+```
 === Character System ===
 1. Create Character
 2. Manage Inventory
@@ -291,7 +291,7 @@ Enter experience gained: 500
 Quest completed! Experience: +500
 Level up! Now level 5
 New stats: HP +20, Attack +5
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for game character system
@@ -303,7 +303,7 @@ New stats: HP +20, Attack +5
 ### System Architecture Guidelines
 
 **Modular Design:**
-```cpp
+```
 System: Complex Application
 ├── Component 1: Data Management
 │   ├── Function: Add Data
@@ -321,15 +321,15 @@ System: Complex Application
     ├── Initialize System
     ├── Process User Requests
     └── Maintain System State
-```cpp
+```
 
 **Data Flow Planning:**
-```cpp
+```
 User Input → Validation → Processing → Storage → Output
               ↓           ↓         ↓        ↓
          Error Handling  Business  Database  Display
          Messages       Logic     Updates   Results
-```cpp
+```
 
 ---
 
@@ -412,10 +412,10 @@ struct Student {
     int attendance[365]; // 1 year
     int course_count;
 };
-```cpp
+```
 
 **Main System Loop:**
-```cpp
+```
 While running:
     Display menu
     Get choice
@@ -425,7 +425,7 @@ While running:
         Case 3: Mark attendance
         Case 4: Generate student report
         Case 5: Search and display student
-```cpp
+```
 
 ---
 
@@ -455,14 +455,14 @@ While running:
 - [ ] Statement Generation (period reports)
 
 **Transaction Flow:**
-```cpp
+```
 Validate accounts exist
 Check sufficient funds
 Update balances
 Record transaction in history
 Update interest calculations
 Generate confirmation
-```cpp
+```
 
 ---
 
@@ -476,11 +476,11 @@ Generate confirmation
 - [ ] Discharge Processing (final reports)
 
 **Patient Journey:**
-```cpp
+```
 Registration → Appointment → Doctor Assignment → Treatment → Discharge
      ↓            ↓              ↓                ↓          ↓
    Data Entry   Scheduling    Assignment      Recording   Processing
-```cpp
+```
 
 ---
 
@@ -494,11 +494,11 @@ Registration → Appointment → Doctor Assignment → Treatment → Discharge
 - [ ] Inventory Integration (stock updates)
 
 **Shopping Workflow:**
-```cpp
+```
 Browse → Add to Cart → Checkout → Process Order → Update Inventory
    ↓          ↓            ↓           ↓              ↓
 Catalog   Cart Mgmt   Payment   Order Creation   Stock Reduction
-```cpp
+```
 
 ---
 
@@ -512,11 +512,11 @@ Catalog   Cart Mgmt   Payment   Order Creation   Stock Reduction
 - [ ] Statistics Display (current status)
 
 **Character Development:**
-```cpp
+```
 Creation → Questing → Leveling → Equipment → Stats Growth
     ↓         ↓          ↓          ↓          ↓
   Setup    Progress   Rewards   Upgrades   Improvements
-```cpp
+```
 
 ---
 
@@ -590,7 +590,7 @@ Expected implementation provided.
 
 ### Complete Solution
 
-```cpp
+```
 #include <iostream>
 
 int main() {

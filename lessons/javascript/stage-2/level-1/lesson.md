@@ -26,7 +26,7 @@ Welcome to Stage 2! You've mastered copying code - now it's time to think like a
 **Pseudocode** is a way to write programming logic in plain English (or your native language) before writing actual code. It's like writing a recipe or instructions for a task.
 
 **Example:**
-```javascript
+```
 Algorithm: Make a sandwich
 1. Get bread from pantry
 2. Get peanut butter from fridge
@@ -35,7 +35,7 @@ Algorithm: Make a sandwich
 5. Spread jelly on the other bread slice
 6. Put slices together
 7. Enjoy your sandwich!
-```javascript
+```
 
 This is much easier to understand than trying to write code first!
 
@@ -51,25 +51,25 @@ This is much easier to understand than trying to write code first!
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    node hello.js
-   ```java
+   ```
 
 **Expected output:**
-```javascript
+```
 Hello, World!
-```javascript
+```
 
 ## Algorithm 1: Greeting Program
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Display Personal Greeting
 1. Display "Hello! What's your name?" to the user
 2. Get the user's name from input
 3. Display "Nice to meet you, " followed by the user's name
 4. Display "Welcome to programming!"
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that follows these exact steps.
 
@@ -78,7 +78,7 @@ Algorithm: Display Personal Greeting
 ## Algorithm 2: Simple Calculator
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Add Two Numbers
 1. Ask user for first number
 2. Get first number from user
@@ -86,7 +86,7 @@ Algorithm: Add Two Numbers
 4. Get second number from user
 5. Calculate sum of the two numbers
 6. Display "The sum is: " followed by the sum
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that implements this calculator.
 
@@ -95,14 +95,14 @@ Algorithm: Add Two Numbers
 ## Algorithm 3: Age Calculator
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Calculate Age in Days
 1. Display "Enter your age in years: "
 2. Get age in years from user
 3. Calculate days = age × 365
 4. Display "You are approximately " + days + " days old"
 5. Display "That's a lot of days!"
-```javascript
+```
 
 **Your Task:** Create a program that calculates approximate age in days.
 
@@ -111,7 +111,7 @@ Algorithm: Calculate Age in Days
 ## Algorithm 4: Temperature Converter
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Celsius to Fahrenheit Converter
 1. Display "Enter temperature in Celsius: "
 2. Get temperature in Celsius from user
@@ -120,7 +120,7 @@ Algorithm: Celsius to Fahrenheit Converter
 5. Display "°C = "
 6. Display the Fahrenheit temperature
 7. Display "°F"
-```javascript
+```
 
 **Your Task:** Create a temperature conversion program.
 
@@ -129,7 +129,7 @@ Algorithm: Celsius to Fahrenheit Converter
 ## Algorithm 5: Rectangle Area Calculator
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Calculate Rectangle Area
 1. Display "Rectangle Area Calculator"
 2. Display "Enter length: "
@@ -140,7 +140,7 @@ Algorithm: Calculate Rectangle Area
 7. Calculate perimeter = 2 × (length + width)
 8. Display "Area: " + area
 9. Display "Perimeter: " + perimeter
-```javascript
+```
 
 **Your Task:** Create a program that calculates both area and perimeter.
 
@@ -149,7 +149,7 @@ Algorithm: Calculate Rectangle Area
 ## Algorithm 6: Simple Interest Calculator
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Calculate Simple Interest
 1. Display "Simple Interest Calculator"
 2. Display "Enter principal amount: $"
@@ -163,7 +163,7 @@ Algorithm: Calculate Simple Interest
 10. Display "Principal: $" + principal
 11. Display "Interest: $" + interest
 12. Display "Total: $" + total
-```javascript
+```
 
 **Your Task:** Implement the complete interest calculation.
 
@@ -172,7 +172,7 @@ Algorithm: Calculate Simple Interest
 ## Algorithm 7: BMI Calculator
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Calculate Body Mass Index
 1. Display "BMI Calculator"
 2. Display "Enter weight in kg: "
@@ -189,7 +189,7 @@ Algorithm: Calculate Body Mass Index
    Display "Category: Overweight"
 11. Else
    Display "Category: Obesity"
-```javascript
+```
 
 **Your Task:** Create a program that calculates BMI with categorization.
 
@@ -245,7 +245,7 @@ Algorithm: Calculate Body Mass Index
 ## Pseudocode Best Practices
 
 ### Good Pseudocode
-```javascript
+```
 Algorithm: Process User Data
 1. Get user's name
 2. Get user's age
@@ -254,18 +254,18 @@ Algorithm: Process User Data
 Else
    Display "Minor user"
 4. Display "Data processed"
-```javascript
+```
 
 ### Bad Pseudocode (Too Vague)
-```javascript
+```
 Algorithm: Do stuff
 1. Get things
 2. Calculate something
 3. Show results
-```javascript
+```
 
 ### Good Pseudocode (Clear and Specific)
-```javascript
+```
 Algorithm: Calculate BMI
 1. Display "BMI Calculator"
 2. Display "Enter weight in kg: "
@@ -274,7 +274,7 @@ Algorithm: Calculate BMI
 5. Get height from user
 6. Calculate BMI = weight ÷ (height × height)
 7. Display "Your BMI is: " + BMI
-```javascript
+```
 
 ---
 
@@ -286,7 +286,7 @@ Algorithm: Calculate BMI
 
 ### Algorithm 1: Greeting Program
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -300,11 +300,11 @@ console.log("Nice to meet you, " + name);
 
 // Display "Welcome to programming!"
 console.log("Welcome to programming!");
-```javascript
+```
 
 ### Algorithm 2: Simple Calculator
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -321,11 +321,11 @@ let sum = firstNum + secondNum;
 
 // Display "The sum is: " followed by the sum
 console.log("The sum is: " + sum);
-```javascript
+```
 
 ### Algorithm 3: Age Calculator
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -340,11 +340,11 @@ let days = age * 365;
 // Display messages
 console.log("You are approximately " + days + " days old");
 console.log("That's a lot of days!");
-```javascript
+```
 
 ### Algorithm 4: Temperature Converter
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -358,11 +358,11 @@ let fahrenheit = (celsius * 9/5) + 32;
 
 // Display the results
 console.log(celsius + "°C = " + fahrenheit + "°F");
-```javascript
+```
 
 ### Algorithm 5: Rectangle Area Calculator
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -383,11 +383,11 @@ let perimeter = 2 * (length + width);
 // Display results
 console.log("Area: " + area);
 console.log("Perimeter: " + perimeter);
-```javascript
+```
 
 ### Algorithm 6: Simple Interest Calculator
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -412,11 +412,11 @@ let total = principal + interest;
 console.log("Principal: $" + principal.toFixed(2));
 console.log("Interest: $" + interest.toFixed(2));
 console.log("Total: $" + total.toFixed(2));
-```javascript
+```
 
 ### Algorithm 7: BMI Calculator
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -444,7 +444,7 @@ if (bmi < 18.5) {
 } else {
     console.log("Category: Obesity");
 }
-```javascript
+```
 
 ### Common Translation Patterns
 
@@ -489,21 +489,21 @@ if (bmi < 18.5) {
 ### Input/Output Patterns
 
 **Getting Numbers:**
-```javascript
+```
 let age = parseFloat(readlineSync.question("Enter age: "));
-```javascript
+```
 
 **Getting Text:**
-```javascript
+```
 let name = readlineSync.question("Enter name: ");
-```javascript
+```
 
 **Displaying Results:**
-```javascript
+```
 console.log("Result: " + result);
 console.log("Price: $" + price.toFixed(2));
 console.log("Hello, " + name + "!");
-```javascript
+```
 
 ---
 

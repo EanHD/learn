@@ -23,28 +23,28 @@ Welcome to your first Julia program! Today, you'll create and run your very firs
 
 **Copy the following code EXACTLY as shown below into `main.jl`**
 
-```julia
+```
 println("Hello, World!")
-```julia
+```
 
 ---
 
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```julia
+```
 <Space>r
-```julia
+```
 
 **Method 2 (Terminal):**
-```bash
+```
 julia main.jl
-```julia
+```
 
 **Expected output:**
-```julia
+```
 Hello, World!
-```julia
+```
 
 
 ---

@@ -23,7 +23,7 @@ Master arithmetic operations and use MongoDB (NoSQL) as your powerful calculator
 
 **Copy the following code EXACTLY as shown below into `main.js`**
 
-```javascript
+```
 // Math operations in MongoDB
 var a = 10;
 var b = 3;
@@ -40,12 +40,12 @@ print("Modulus: " + (a % b));
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```javascript
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 mongo < script.js
 ```
 

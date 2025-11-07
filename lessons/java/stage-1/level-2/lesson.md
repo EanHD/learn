@@ -23,7 +23,7 @@ Now that you can run Java code, let's learn about **variables** - containers tha
 
 **Copy the following code EXACTLY into `main.java`**
 
-```java
+```
 public class Main {
     public static void main(String[] args) {
         String name = "Alice";
@@ -35,7 +35,7 @@ public class Main {
         System.out.println("Height: " + height);
     }
 }
-```java
+```
 
 ---
 
@@ -44,17 +44,17 @@ public class Main {
 **Vim:** `<Space>r`
 
 **Terminal:**
-```bash
+```
 javac main.java
 java Main
-```java
+```
 
 **Expected output:**
-```java
+```
 Name: Alex
 Age: 25
 Price: $29.99
-```java
+```
 
 ---
 
@@ -77,9 +77,9 @@ You just used **three different data types** in Java:
 - **`double`** - Decimal numbers (with decimal point)
 
 Each line follows this pattern:
-```java
+```
 [type] [variableName] = [value];
-```java
+```
 
 When you use `+` between strings and variables, Java converts them to text and joins them together!
 
@@ -101,11 +101,11 @@ When you use `+` between strings and variables, Java converts them to text and j
 
 ### Code Breakdown
 
-```java
+```
 String name = "Alice";     // Text variable
 int age = 25;              // Whole number variable
 double height = 5.7;       // Decimal number variable
-```java
+```
 
 Each variable has:
 - **Type**: What kind of data (String, int, double)
@@ -114,9 +114,9 @@ Each variable has:
 
 ### String Concatenation
 
-```java
+```
 System.out.println("Name: " + name);
-```java
+```
 
 The `+` operator concatenates (joins) strings and converts variables to text!
 

@@ -21,19 +21,19 @@ Welcome to SQL! Today, you'll create your first SQL query. SQL (Structured Query
 
 Copy the following code EXACTLY as shown into a new file called `hello.sql`:
 
-```sql
+```
 SELECT 'Hello, World!' AS message;
 ```
 
 ### How to Execute
 
-```bash
+```
 sqlite3 < hello.sql
 ```
 
 Expected output:
 
-```sql
+```
 Hello, World!
 ```
 

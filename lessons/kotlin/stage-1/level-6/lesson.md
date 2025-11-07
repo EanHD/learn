@@ -23,7 +23,7 @@ Learn to repeat actions efficiently using loops.
 
 **Copy the following code EXACTLY as shown below into `main.kt`**
 
-```kotlin
+```
 fun main() {
     println("Counting 1 to 10:")
     for (i in 1..10) {
@@ -44,7 +44,7 @@ fun main() {
     }
     println("Liftoff!")
 }
-```kotlin
+```
 
 ---
 
@@ -66,7 +66,7 @@ fun main() {
 
 ### The Complete Code
 
-```kotlin
+```
 fun main() {
     println("Counting 1 to 10:")
     for (i in 1..10) {
@@ -87,7 +87,7 @@ fun main() {
     }
     println("Liftoff!")
 }
-```kotlin
+```
 
 ### What This Code Does
 

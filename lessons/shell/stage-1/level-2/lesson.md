@@ -20,7 +20,7 @@ Now that you know how to run Shell programs, let's learn about variables! Variab
 
 Copy the following code EXACTLY as shown into a new file called `variables.sh`:
 
-```sh
+```
 #!/bin/bash
 name="Alice"
 age=25
@@ -35,13 +35,13 @@ echo "Student status: $isStudent"
 
 ### How to Execute
 
-```bash
+```
 bash variables.sh
 ```
 
 Expected output:
 
-```bash
+```
 Hello, Alice!
 You are 25 years old.
 Your height is 5.6 feet.

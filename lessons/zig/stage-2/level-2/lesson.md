@@ -30,7 +30,7 @@ You've mastered the basics! Now you'll learn to translate written algorithms (ps
 
 **Study the pseudocode algorithm below, then implement it in Zig:**
 
-```zig
+```
 ALGORITHM: Variables in Algorithms
 
 BEGIN
@@ -54,12 +54,12 @@ END
 ### How to Compile and Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    zig build-exe hello.zig
    ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
    ```
 
@@ -165,7 +165,7 @@ The key is understanding what each pseudocode statement represents in Zig:
 5. **Conditions**: `IF...THEN...ELSE` → if/else statements
 
 **Example Translation:**
-```zig
+```
 PSEUDOCODE:
     READ number
     IF number > 0 THEN

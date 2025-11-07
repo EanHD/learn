@@ -23,7 +23,7 @@ Learn how to store and work with different types of data in MongoDB (NoSQL).
 
 **Copy the following code EXACTLY as shown below into `main.js`**
 
-```javascript
+```
 // MongoDB document with variables
 db.test.insertOne({
     name: "Alex",
@@ -44,12 +44,12 @@ print("Price: $" + doc.price.toFixed(2));
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```javascript
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 mongo < script.js
 ```
 

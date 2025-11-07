@@ -58,14 +58,14 @@ Create a production-ready Automated Testing using Go with:
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    go run hello.go
-   ```go
+   ```
 
 **Expected output:**
-```go
+```
 Hello, World!
-```go
+```
 
 ### How to Approach This
 
@@ -230,7 +230,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```go
+```
 package main
 
 import "fmt"

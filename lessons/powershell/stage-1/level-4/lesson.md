@@ -23,7 +23,7 @@ Make your programs interactive by reading input from users.
 
 **Copy the following code EXACTLY as shown below into `main.ps1`**
 
-```powershell
+```
 $name = Read-Host "Enter your name"
 $age = [int](Read-Host "Enter your age")
 
@@ -52,7 +52,7 @@ Write-Host "Next year you'll be $($age + 1)."
 
 ### The Complete Code
 
-```powershell
+```
 $name = Read-Host "Enter your name"
 $age = [int](Read-Host "Enter your age")
 

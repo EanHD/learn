@@ -23,7 +23,7 @@ Welcome to your first R program! Today, you'll create and run your very first pr
 
 **Copy the following code EXACTLY as shown below into `main.R`**
 
-```r
+```
 print("Hello, World!")
 ```
 
@@ -32,12 +32,12 @@ print("Hello, World!")
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```r
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 Rscript main.R
 ```
 

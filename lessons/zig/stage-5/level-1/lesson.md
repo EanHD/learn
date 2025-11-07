@@ -242,7 +242,7 @@ Follow these stages:
 
 **Your architecture will depend on your chosen project, but should include:**
 
-```zig
+```
 // Main program structure
 // - Data definitions
 // - Core functions

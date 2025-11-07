@@ -48,7 +48,7 @@ Functions are the building blocks of organized code! Today you'll master algorit
 ## Algorithm 1: Calculator Program with Functions
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Modular Calculator Program
 
 Function: display_menu()
@@ -110,7 +110,7 @@ Main Algorithm:
    e. Else:
       i. Display " Invalid choice!"
 3. Display "Thank you for using the calculator! "
-```cpp
+```
 
 **Function Design:**
 - [ ] `display_menu()`: Handles UI display
@@ -125,7 +125,7 @@ Main Algorithm:
 ## Algorithm 2: Student Grade Management System
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Student Grade Management with Functions
 
 Function: display_main_menu()
@@ -215,7 +215,7 @@ Main Algorithm:
    h. Else:
       i. Display " Invalid choice!"
 6. Display "Thank you for using Grade Management System! "
-```cpp
+```
 
 **Function Design:**
 - [ ] `display_main_menu()`: UI function
@@ -231,7 +231,7 @@ Main Algorithm:
 ## Algorithm 3: Library Book System
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Library Management System with Functions
 
 Function: display_library_menu()
@@ -335,7 +335,7 @@ Main Algorithm:
    i. Else:
       i. Display " Invalid choice!"
 7. Display "Thank you for using Library Management System! "
-```cpp
+```
 
 **Function Design:**
 - [ ] `display_library_menu()`: UI function
@@ -351,7 +351,7 @@ Main Algorithm:
 ## Algorithm 4: Math Quiz Game
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Interactive Math Quiz with Functions
 
 Function: generate_question()
@@ -421,7 +421,7 @@ Main Algorithm:
    g. Display blank line
 7. Call display_score(correct_count, num_questions)
 8. Display "Thanks for playing! "
-```cpp
+```
 
 **Function Design:**
 - [ ] `generate_question()`: Random question creation
@@ -438,7 +438,7 @@ Main Algorithm:
 ## Algorithm 5: Bank Account Manager
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Bank Account Management with Functions
 
 Function: display_account_menu()
@@ -525,7 +525,7 @@ Main Algorithm:
    h. Else:
       i. Display " Invalid choice!"
 8. Display "Thank you for banking with us! "
-```cpp
+```
 
 **Function Design:**
 - [ ] `display_account_menu()`: UI function
@@ -541,7 +541,7 @@ Main Algorithm:
 ## Algorithm 6: Text Analyzer
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Text Analysis Tool with Functions
 
 Function: count_words(text)
@@ -621,7 +621,7 @@ Main Algorithm:
 5. Else:
    a. Display " No text entered."
 6. Display "Analysis complete! "
-```cpp
+```
 
 **Function Design:**
 - [ ] `count_words()`: Word counting logic
@@ -648,7 +648,7 @@ int validate_user_input(char* input);
 int calc(float x);
 void process();
 int check(char* str);
-```cpp
+```
 
 **Parameter Design:**
 ```c
@@ -657,7 +657,7 @@ void transfer_money(Account* from, Account* to, float amount);
 
 // Bad - unclear what parameters do
 void process(float a, float b, int c);
-```cpp
+```
 
 **Return Value Design:**
 ```c
@@ -666,7 +666,7 @@ int save_file(const char* filename);  // Returns 0 on success, -1 on error
 
 // Bad - unclear return meaning
 int do_something();
-```cpp
+```
 
 ---
 
@@ -700,13 +700,13 @@ int do_something();
 ## Function Architecture Patterns
 
 ### Layered Architecture
-```cpp
+```
 Presentation Layer (UI functions)
     ↓
 Business Logic Layer (processing functions)
     ↓
 Data Access Layer (storage/retrieval functions)
-```cpp
+```
 
 ### Pipeline Pattern
 ```c
@@ -718,7 +718,7 @@ Result process_data(Input data) {
     data = format_output(data);
     return data;
 }
-```cpp
+```
 
 ### Factory Pattern
 ```c
@@ -730,7 +730,7 @@ Calculator* create_calculator(CalculationType type) {
         default: return NULL;
     }
 }
-```cpp
+```
 
 ---
 
@@ -829,7 +829,7 @@ int main() {
     printf("Thank you for using the calculator! \n");
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Modular function design with single responsibilities
@@ -972,7 +972,7 @@ int main() {
     printf("Thank you for using Grade Management System! \n");
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Array parameters with pointers for modification
@@ -1139,7 +1139,7 @@ int main() {
     printf("Thank you for using Library Management System! \n");
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Complex string handling with fgets and newline removal
@@ -1254,7 +1254,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Random number generation for question creation
@@ -1395,7 +1395,7 @@ int main() {
     printf("Thank you for banking with us! \n");
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Financial transaction processing
@@ -1530,7 +1530,7 @@ int main() {
     printf("Analysis complete! \n");
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Text processing algorithms
@@ -1594,7 +1594,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cpp
+```
 #include <stdio.h>
 
 int main() {

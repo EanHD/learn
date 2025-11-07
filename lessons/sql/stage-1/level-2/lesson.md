@@ -20,7 +20,7 @@ Now that you know how to run Sql programs, let's learn about variables! Variable
 
 Copy the following code EXACTLY as shown into a new file called `variables.sql`:
 
-```sql
+```
 SELECT
     'Alice' AS name,
     25 AS age,
@@ -30,13 +30,13 @@ SELECT
 
 ### How to Execute
 
-```bash
+```
 sqlite3 variables.sql
 ```
 
 Expected output:
 
-```sql
+```
 Hello, Alice!
 You are 25 years old.
 Your height is 5.6 feet.

@@ -51,14 +51,14 @@ Build a complete API Integration application that:
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    lua hello.lua
-   ```lua
+   ```
 
 **Expected output:**
-```lua
+```
 Hello, World!
-```lua
+```
 
 ### How to Approach This
 
@@ -158,13 +158,13 @@ A complete application has these components:
 5. **Error Handling**: Manage problems gracefully
 
 **Code Organization:**
-```lua
+```
 // Setup and initialization
 // Main program loop or flow
 // Helper functions
 // Error handlers
 // Testing/verification
-```lua
+```
 
 Build incrementally - get one feature working before adding the next.
 
@@ -215,7 +215,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```lua
+```
 print("Hello, World!")
 
 ```

@@ -25,7 +25,7 @@ Now let's make our programs interactive! Today you'll learn how to get input fro
 
 **Copy the following code into a new file called `input.go`**
 
-```go
+```
 package main
 
 import (
@@ -166,25 +166,25 @@ func main() {
         fmt.Println("That's not a positive number!")
     }
 }
-```go
+```
 
 ---
 
 ### How to Execute
 
 1. **Create or navigate to a Go module directory** (if not already in one):
-   ```bash
+   ```
    mkdir input-example && cd input-example
    go mod init input
-   ```go
+   ```
 2. **Copy the code into `input.go`**
 3. **Run your program**:
-   ```bash
+   ```
    go run input.go
-   ```bash
+   ```
 
 **Expected interaction:**
-```go
+```
 === Interactive Greeting Program ===
 What's your name? [User types their name and presses Enter]
 Hello, [User's name] ! Nice to meet you!
@@ -199,7 +199,7 @@ What year were you born? [User enters a year]
 [Age calculation is performed and shown]
 
 [Additional prompts will ask for input and respond accordingly...]
-```go
+```
 
 ---
 
@@ -253,23 +253,23 @@ What year were you born? [User enters a year]
 
 ### Code Breakdown
 
-```go
+```
 reader := bufio.NewReader(os.Stdin)
-```go
+```
 - **`bufio.NewReader()`** = Creates a buffered reader for efficient input
 - **`os.Stdin`** = Standard input (keyboard)
 - **Buffered reader** = More efficient than direct input reading
 
-```go
+```
 name, _ := reader.ReadString('\n')
-```go
+```
 - **`reader.ReadString()`** = Reads input until specified delimiter
 - **`'\n'`** = Newline character (Enter key creates this)
 - **`_`** = Blank identifier to ignore error value (not ideal for production)
 
-```go
+```
 name = strings.TrimSpace(name)
-```go
+```
 - **`strings.TrimSpace()`** = Removes leading/trailing whitespace
 - **Important** because input includes the newline character
 - **Alternative**: `strings.TrimSuffix(name, "\n")`
@@ -277,7 +277,7 @@ name = strings.TrimSpace(name)
 ### Input Processing in Go
 
 **Reading different types of input:**
-```go
+```
 // Reading string
 reader := bufio.NewReader(os.Stdin)
 text, _ := reader.ReadString('\n')
@@ -289,13 +289,13 @@ number, err := strconv.Atoi(strings.TrimSpace(input))
 // Reading float
 input, _ := reader.ReadString('\n')
 number, err := strconv.ParseFloat(strings.TrimSpace(input), 64)
-```go
+```
 
 ### Error Handling
 
 It's important to handle errors from input conversion:
 
-```go
+```
 // Proper error handling
 input, err := reader.ReadString('\n')
 if err != nil {
@@ -308,13 +308,13 @@ if err != nil {
     return
 }
 // Now you can safely use 'number'
-```go
+```
 
 ### String Manipulation
 
 Common string operations with input:
 
-```go
+```
 import "strings"
 
 // Remove whitespace
@@ -328,13 +328,13 @@ parts := strings.Split(input, " ")
 
 // Check if string contains substring
 if strings.Contains(input, "hello") { ... }
-```go
+```
 
 ### Converting Strings to Numbers
 
 Go provides several functions to convert strings to numbers:
 
-```go
+```
 import "strconv"
 
 // String to integer
@@ -346,26 +346,26 @@ floatVal, err := strconv.ParseFloat("123.45", 64)  // float64
 
 // String to boolean
 boolVal, err := strconv.ParseBool("true")   // bool
-```go
+```
 
 ### Alternative Input Methods
 
 **Using fmt.Scanf for formatted input:**
-```go
+```
 var name string
 var age int
 fmt.Print("Enter name and age: ")
 fmt.Scanf("%s %d", &name, &age)  // Reads formatted input
-```go
+```
 
 **Note**: `fmt.Scanf` can be trickier to use reliably, so the bufio approach is often preferred.
 
 ### Reading a Single Character
 
-```go
+```
 fmt.Print("Press any key to continue: ")
 char, _, _ := reader.ReadRune()  // Read a single Unicode character
-```go
+```
 
 ### Common Errors & Solutions
 
@@ -379,7 +379,7 @@ char, _, _ := reader.ReadRune()  // Read a single Unicode character
 ### Best Practices for Input
 
 **Always validate user input:**
-```go
+```
 input, _ := reader.ReadString('\n')
 input = strings.TrimSpace(input)
 
@@ -400,10 +400,10 @@ if number < 0 || number > 100 {
     fmt.Println("Number must be between 0 and 100!")
     return
 }
-```go
+```
 
 **Handle errors properly:**
-```go
+```
 // Always check errors, especially for number conversion
 number, err := strconv.Atoi(input)
 if err != nil {
@@ -411,7 +411,7 @@ if err != nil {
     fmt.Println("Invalid input:", err)
     return  // or continue with default value
 }
-```go
+```
 
 ### Security Considerations
 
@@ -424,7 +424,7 @@ When accepting user input:
 
 Try this full interactive program:
 
-```go
+```
 package main
 
 import (
@@ -506,7 +506,7 @@ func main() {
         fmt.Println("You're spending more than you earn. Consider reducing expenses.")
     }
 }
-```go
+```
 
 ---
 
@@ -545,7 +545,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```go
+```
 package main
 
 import "fmt"

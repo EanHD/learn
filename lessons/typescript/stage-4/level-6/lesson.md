@@ -51,7 +51,7 @@ Build a complete Database Operations application that:
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    ts-node hello.ts
    ```type
 
@@ -158,7 +158,7 @@ A complete application has these components:
 5. **Error Handling**: Manage problems gracefully
 
 **Code Organization:**
-```typescript
+```
 // Setup and initialization
 // Main program loop or flow
 // Helper functions
@@ -215,10 +215,10 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```ts
+```
 console.log("Hello, World!");
 
-```ts
+```
 
 ### Code Breakdown
 

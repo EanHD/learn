@@ -59,12 +59,12 @@ Build a complete Calculator Application that supports basic arithmetic operation
 ### How to Compile and Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    zig build-exe hello.zig
    ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
    ```
 
@@ -171,7 +171,7 @@ A complete calculator application has these components:
 5. **Error Handling**: Manage division by zero and invalid input
 
 **Zig Implementation:**
-```zig
+```
 const std = @import("std");
 
 // Function to perform addition

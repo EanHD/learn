@@ -25,7 +25,7 @@ Welcome to your first step into Go programming! Today, you'll learn how to creat
 
 **Copy the following code EXACTLY as shown below into a new file called `hello.go`**
 
-```go
+```
 package main
 
 import "fmt"
@@ -33,7 +33,7 @@ import "fmt"
 func main() {
     fmt.Println("Hello, World!")
 }
-```go
+```
 
 ---
 
@@ -41,22 +41,22 @@ func main() {
 
 1. **Open your terminal** (or command prompt)
 2. **Navigate to where you saved your file**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```go
+   ```
 3. **Create a Go module** (if this is your first program in the directory):
-   ```bash
+   ```
    go mod init hello
-   ```go
+   ```
 4. **Run your program**:
-   ```bash
+   ```
    go run hello.go
-   ```go
+   ```
 
 **Expected output:**
-```go
+```
 Hello, World!
-```go
+```
 
 ---
 
@@ -108,25 +108,25 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ### Code Breakdown
 
-```go
+```
 package main
-```go
+```
 - **`package`** = Keyword that defines a package
 - **`main`** = Special package name that indicates an executable program
 - Every Go program must belong to a package
 
-```go
+```
 import "fmt"
-```go
+```
 - **`import`** = Keyword to include other packages
 - **`"fmt"`** = Format package that provides functions for formatted I/O
 - **Needed for** `fmt.Println()` function
 
-```go
+```
 func main() {
     fmt.Println("Hello, World!")
 }
-```go
+```
 - **`func`** = Keyword to define a function
 - **`main`** = Special function name that's the entry point of every Go program
 - **`()`** = Parameters list (empty means no inputs needed)
@@ -142,10 +142,10 @@ func main() {
 ### Go Modules
 
 Go modules manage dependencies and versions:
-```bash
+```
 go mod init hello        # Creates go.mod file
 go mod tidy             # Downloads required dependencies
-```go
+```
 
 ### Common Errors & Solutions
 
@@ -201,7 +201,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```go
+```
 package main
 
 import "fmt"

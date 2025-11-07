@@ -28,22 +28,22 @@ Functions organize code into reusable pieces! You'll translate pseudocode that d
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    rustc hello.rs -o hello hello.rs
-   ```rust
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
-```rust
+```
 
 ### Pseudocode:
-```rust
+```
 FUNCTION greet(name)
     DISPLAY "Hello, " + name + "!"
 END FUNCTION
@@ -79,7 +79,7 @@ START PROGRAM
     
     DISPLAY "Program complete!"
 END PROGRAM
-```rust
+```
 
 **Your task:** Create a Rust program with functions that match the pseudocode.
 
@@ -88,28 +88,28 @@ END PROGRAM
 ### How to Create Your Solution
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Create your code file**:
-   ```bash
+   ```
    touch function_translation.rs
-   ```rust
+   ```
 3. **Write the Rust code** that matches the pseudocode
 4. **Compile and test**:
-   ```bash
+   ```
    rustc function_translation.rs -o function_translation
    ./function_translation
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
 Hello, Rust Programmer!
 5 + 3 = 8
 7 is odd
 Program complete!
-```rust
+```
 
 ---
 
@@ -160,7 +160,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 ### Step-by-Step Translation
 
 **Pseudocode:**
-```rust
+```
 FUNCTION greet(name)
     DISPLAY "Hello, " + name + "!"
 END FUNCTION
@@ -196,10 +196,10 @@ START PROGRAM
     
     DISPLAY "Program complete!"
 END PROGRAM
-```rust
+```
 
 **Rust Code:**
-```rust
+```
 fn greet(name: &str) {
     println!("Hello, {}!", name);
 }
@@ -233,7 +233,7 @@ fn main() {
     
     println!("Program complete!");
 }
-```rust
+```
 
 ### Translation Guide
 

@@ -54,17 +54,17 @@ Based on your Stage 3 pseudocode, implement a travel recommendation system that:
 ### Implementation Steps
 
 1. **Create the project structure**:
-   ```bash
+   ```
    cd /home/eanhd/LEARN/rust/stage-4-full-problem-solving/level-5-decision-support-application
-   ```rust
+   ```
 
 2. **Create `main.rs`** with your Rust implementation
 
 3. **Test your program**:
-   ```bash
+   ```
    rustc main.rs
    ./main
-   ```rust
+   ```
 
 4. **Create `README.md`** with usage instructions
 
@@ -141,7 +141,7 @@ Practice the code and experiment with variations!
 
 ### Expected Program Behavior
 
-```rust
+```
 Travel Recommendation System
 ===========================
 
@@ -184,11 +184,11 @@ Based on your preferences (Medium budget, Warm climate, Relaxation, Week-long tr
    - Cost estimate: $1200-1800 total
    - Duration: 5-14 days flexible
    - Activities: Beach lounging, bioluminescent bays
-```rust
+```
 
 ### Sample Implementation
 
-```rust
+```
 use std::io::{self, Write};
 
 fn main() {
@@ -419,7 +419,7 @@ fn recommend_warm_culture(budget: u32) {
     display_destination(2, "Rio de Janeiro, Brazil", "Carnival culture and beaches", 
                       "rio", "5-14 days recommended", "Carnival, Christ statue, samba", budget);
 }
-```rust
+```
 
 ### Implementation Analysis
 
@@ -463,7 +463,7 @@ fn recommend_warm_culture(budget: u32) {
 
 ### README.md Template
 
-```markdown
+```
 # Travel Recommendation System
 
 A Rust program that provides personalized travel destination recommendations based on user preferences for budget, climate, activities, and duration.
@@ -471,14 +471,14 @@ A Rust program that provides personalized travel destination recommendations bas
 ## How to Run
 
 1. Compile the program:
-   ```bash
+   ```
    rustc main.rs
-```rust
+```
 
 2. Run the program:
-   ```bash
+   ```
    ./main
-```rust
+```
 
 3. Answer the preference questions to get recommendations.
 
@@ -499,7 +499,7 @@ A Rust program that provides personalized travel destination recommendations bas
 
 ## Example Output
 
-```rust
+```
 Based on your preferences (Medium budget, Warm climate, Relaxation, Week-long trip):
 
  Recommended Destinations:
@@ -509,8 +509,8 @@ Based on your preferences (Medium budget, Warm climate, Relaxation, Week-long tr
    - Cost estimate: $1500-2200 for flights + resort
    - Duration: 7-10 days ideal
    - Activities: Beach, spa, swimming with dolphins
-```rust
-```rust
+```
+```
 
 ### Bonus Challenges
 

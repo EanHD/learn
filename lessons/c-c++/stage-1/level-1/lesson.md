@@ -28,7 +28,7 @@ int main() {
 
 ### How to Compile and Run
 
-```bash
+```
 gcc main.c -o main
 ./main
 ```

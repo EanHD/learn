@@ -23,7 +23,7 @@ Organize your code into reusable functions/methods.
 
 **Copy the following code EXACTLY as shown below into `main.ps1`**
 
-```powershell
+```
 function Greet($name) {
     Write-Host "Hello, $name!"
 }
@@ -67,7 +67,7 @@ Write-Host "5! = $fact"
 
 ### The Complete Code
 
-```powershell
+```
 function Greet($name) {
     Write-Host "Hello, $name!"
 }

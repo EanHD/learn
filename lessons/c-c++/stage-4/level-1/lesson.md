@@ -81,7 +81,7 @@ typedef struct {
     int student_count;
     char filename[100];
 } GradeBook;
-```cpp
+```
 
 ### Function Modules
 - [ ] **File Operations**: `save_data()`, `load_data()`
@@ -135,7 +135,7 @@ void display_menu(void);
 int get_user_choice(void);
 
 # endif
-```cpp
+```
 
 ### Implementation File (gradebook.c)
 ```c
@@ -331,7 +331,7 @@ int get_user_choice(void) {
     scanf("%d", &choice);
     return choice;
 }
-```cpp
+```
 
 ### Main Program (main.c)
 ```c
@@ -411,7 +411,7 @@ int main() {
 
     return 0;
 }
-```cpp
+```
 
 ---
 
@@ -424,7 +424,7 @@ gcc -o gradebook main.c gradebook.c
 
 # Run the program
 ./gradebook
-```cpp
+```
 
 ### Test Scenarios
 1. **Add Students**: Try adding 2-3 students with different IDs
@@ -434,7 +434,7 @@ gcc -o gradebook main.c gradebook.c
 5. **Error Handling**: Test invalid IDs, out-of-range grades
 
 ### Sample Usage
-```cpp
+```
 === Grade Management System ===
 1. Add Student
 2. Add Grade
@@ -461,7 +461,7 @@ Name: Alice Johnson
 Number of grades: 1
 GPA: 95.50
 Grades: 95.50
-```cpp
+```
 
 ---
 
@@ -555,12 +555,12 @@ Grades: 95.50
 5. **Cleanup**: Proper resource management
 
 ### Data Flow
-```cpp
+```
 User Input → Validation → Processing → Storage → Display
               ↓           ↓         ↓        ↓
          Error Messages  Business  File I/O  UI Updates
          and Recovery   Logic     Operations  Feedback
-```cpp
+```
 
 ---
 
@@ -632,7 +632,7 @@ Expected implementation provided.
 
 ### Complete Solution
 
-```cpp
+```
 #include <stdio.h>
 
 int main() {

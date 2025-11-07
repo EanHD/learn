@@ -51,19 +51,19 @@ Build a complete Data Processing application that:
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    kotlinc hello.kt
-   ```kotlin
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    kotlin hello
-   ```kotlin
+   ```
 
 **Expected output:**
-```kotlin
+```
 Hello, World!
-```kotlin
+```
 
 ### How to Approach This
 
@@ -163,13 +163,13 @@ A complete application has these components:
 5. **Error Handling**: Manage problems gracefully
 
 **Code Organization:**
-```kotlin
+```
 // Setup and initialization
 // Main program loop or flow
 // Helper functions
 // Error handlers
 // Testing/verification
-```kotlin
+```
 
 Build incrementally - get one feature working before adding the next.
 

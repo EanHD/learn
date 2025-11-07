@@ -51,14 +51,14 @@ Search Algorithms - Design an algorithm to solve this problem, then implement it
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    node hello.js
-   ```java
+   ```
 
 **Expected output:**
-```javascript
+```
 Hello, World!
-```javascript
+```
 
 ### How to Approach This
 
@@ -155,7 +155,7 @@ Hello, World!
 4. **Edge Cases**: What could go wrong?
 
 **Pseudocode Template:**
-```javascript
+```
 ALGORITHM: [Name]
 INPUT: [What we need]
 OUTPUT: [What we produce]
@@ -169,7 +169,7 @@ BEGIN
         - Step 3
     4. Display results
 END
-```javascript
+```
 
 Then translate this directly to Javascript code.
 

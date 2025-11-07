@@ -23,7 +23,7 @@ Master arithmetic operations and use the language as your calculator.
 
 **Copy the following code EXACTLY as shown below into `main.dart`**
 
-```dart
+```
 void main() {
   int a = 15;
   int b = 4;
@@ -35,7 +35,7 @@ void main() {
   print('Integer Division: $a ~/ $b = ${a ~/ b}');
   print('Remainder: $a % $b = ${a % b}');
 }
-```dart
+```
 
 ---
 
@@ -57,7 +57,7 @@ void main() {
 
 ### The Complete Code
 
-```dart
+```
 void main() {
   int a = 15;
   int b = 4;
@@ -69,7 +69,7 @@ void main() {
   print('Integer Division: $a ~/ $b = ${a ~/ b}');
   print('Remainder: $a % $b = ${a % b}');
 }
-```dart
+```
 
 ### What This Code Does
 
@@ -146,12 +146,12 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```dart
+```
 void main() {
     print("Hello, World!");
 }
 
-```dart
+```
 
 ### Code Breakdown
 

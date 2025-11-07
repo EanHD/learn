@@ -23,7 +23,7 @@ Learn to repeat actions efficiently using loops.
 
 **Copy the following code EXACTLY as shown below into `main.swift`**
 
-```swift
+```
 print("Counting 1 to 10:")
 for i in 1...10 {
     print("\(i) ", terminator: "")
@@ -42,7 +42,7 @@ while count > 0 {
     count -= 1
 }
 print("Liftoff!")
-```swift
+```
 
 ---
 
@@ -64,7 +64,7 @@ print("Liftoff!")
 
 ### The Complete Code
 
-```swift
+```
 print("Counting 1 to 10:")
 for i in 1...10 {
     print("\(i) ", terminator: "")
@@ -83,7 +83,7 @@ while count > 0 {
     count -= 1
 }
 print("Liftoff!")
-```swift
+```
 
 ### What This Code Does
 
@@ -157,7 +157,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```swift
+```
 print("Hello, World!")
 
 ```

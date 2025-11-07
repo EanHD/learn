@@ -23,7 +23,7 @@ Master arithmetic operations and use PHP as your powerful calculator.
 
 **Copy the following code EXACTLY as shown below into `main.php`**
 
-```php
+```
 <?php
 $a = 10;
 $b = 3;
@@ -42,12 +42,12 @@ echo "Float division: " . ($a / $b) . "\n";
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```php
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 php main.php
 ```
 

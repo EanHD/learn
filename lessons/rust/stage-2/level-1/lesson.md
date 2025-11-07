@@ -28,27 +28,27 @@ Welcome to Stage 2! Now that you understand Rust syntax, you'll learn to transla
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    rustc hello.rs -o hello hello.rs
-   ```rust
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
-```rust
+```
 
 ### Pseudocode:
-```rust
+```
 START PROGRAM
     DISPLAY "Welcome to Rust programming!"
     DISPLAY "This is your first pseudocode translation!"
 END PROGRAM
-```rust
+```
 
 **Your task:** Create a Rust program that does exactly what the pseudocode describes.
 
@@ -57,25 +57,25 @@ END PROGRAM
 ### How to Create Your Solution
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Create your code file**:
-   ```bash
+   ```
    touch basic_translation.rs
-   ```rust
+   ```
 3. **Write the Rust code** that matches the pseudocode
 4. **Compile and test**:
-   ```bash
+   ```
    rustc basic_translation.rs -o basic_translation
    ./basic_translation
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Welcome to Rust programming!
 This is your first pseudocode translation!
-```rust
+```
 
 ---
 
@@ -123,20 +123,20 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 ### Step-by-Step Translation
 
 **Pseudocode:**
-```rust
+```
 START PROGRAM
     DISPLAY "Welcome to Rust programming!"
     DISPLAY "This is your first pseudocode translation!"
 END PROGRAM
-```rust
+```
 
 **Rust Code:**
-```rust
+```
 fn main() {
     println!("Welcome to Rust programming!");
     println!("This is your first pseudocode translation!");
 }
-```rust
+```
 
 ### Translation Guide
 

@@ -24,7 +24,7 @@ Functions let you organize code into reusable pieces! You'll learn how to define
 
 **Copy the following code EXACTLY as shown below into a new file called `functions.rs`**
 
-```rust
+```
 // Function that takes a parameter but returns nothing
 fn greet(name: &str) {
     println!("Hello, {}!", name);
@@ -55,33 +55,33 @@ fn main() {
     let total = add(calculate_area(2, 3), add(1, 2));
     println!("Complex calculation: (2*3) + (1+2) = {}", total);
 }
-```rust
+```
 
 ---
 
 ### How to Run
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Compile the code**:
-   ```bash
+   ```
    rustc functions.rs -o functions
-   ```rust
+   ```
 3. **Run your program**:
-   ```bash
+   ```
    ./functions
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
 Hello, Rust!
 5 + 3 = 8
 Area of 10x5 rectangle = 50
 Complex calculation: (2*3) + (1+2) = 11
-```rust
+```
 
 ---
 
@@ -131,44 +131,44 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 
 ### Code Breakdown
 
-```rust
+```
 fn greet(name: &str) {
     println!("Hello, {}!", name);
 }
-```rust
+```
 - **`fn greet`** = Function declaration
 - **`(name: &str)`** = Parameter: `name` of type string slice
 - **`{ ... }`** = Function body
 - **No return type** = Returns `()` (unit type)
 
-```rust
+```
 fn add(a: i32, b: i32) -> i32 {
     a + b
 }
-```rust
+```
 - **`-> i32`** = Returns 32-bit integer
 - **Last expression** `a + b` is returned (no semicolon!)
 - **Parameters** `a` and `b` are both `i32`
 
-```rust
+```
 fn calculate_area(length: i32, width: i32) -> i32 {
     length * width
 }
-```rust
+```
 - **Same pattern** as `add` function
 - **Multiplication** instead of addition
 
-```rust
+```
     let sum = add(5, 3);
     println!("5 + 3 = {}", sum);
-```rust
+```
 - **Function call** `add(5, 3)` returns `8`
 - **Store result** in `sum` variable
 - **Print result**
 
-```rust
+```
     let total = add(calculate_area(2, 3), add(1, 2));
-```rust
+```
 - **Nested calls**: Functions can call other functions
 - **Evaluation order**: Innermost calls first
 - **Result**: `add(6, 3)` → `add(6, 3)` → `9`

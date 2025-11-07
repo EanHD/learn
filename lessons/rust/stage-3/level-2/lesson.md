@@ -28,19 +28,19 @@ Data management involves organizing, storing, and manipulating information. You'
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    rustc hello.rs -o hello hello.rs
-   ```rust
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
-```rust
+```
 
 ### Problem: Student Grade Calculator
 
@@ -66,7 +66,7 @@ Create a program that helps teachers calculate final grades for students. The pr
 - Assignment 3: 35%
 
 **Example Interaction:**
-```rust
+```
 Enter student name: Alice Johnson
 Enter Assignment 1 score (0-100): 85
 Enter Assignment 2 score (0-100): 92
@@ -79,20 +79,20 @@ Assignment 2: 92/100 (35%)
 Assignment 3: 78/100 (35%)
 Final Average: 84.9%
 Letter Grade: B
-```rust
+```
 
 ---
 
 ### How to Create Your Solution
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Create your pseudocode file**:
-   ```bash
+   ```
    touch data_management.md
-   ```rust
+   ```
 3. **Think about data storage** - What variables do you need?
 4. **Plan calculations** - How to compute weighted average?
 5. **Design output** - How to present the information clearly?
@@ -155,7 +155,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 
 ### Sample Pseudocode Solution
 
-```rust
+```
 START PROGRAM
     DISPLAY "Student Grade Calculator"
     DISPLAY "Enter student name:"
@@ -203,7 +203,7 @@ START PROGRAM
     DISPLAY "Final Average: " + final_average + "%"
     DISPLAY "Letter Grade: " + letter_grade
 END PROGRAM
-```rust
+```
 
 ### Analysis Breakdown
 

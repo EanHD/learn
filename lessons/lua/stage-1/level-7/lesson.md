@@ -26,7 +26,7 @@ Welcome to the world of functions! Today you'll learn how to organize your code 
 
 **Copy the following code into a new file called `functions.lua`**
 
-```lua
+```
 print("=== Basic Function Definition ===")
 -- Define a function that greets someone
 function greet_user()
@@ -248,19 +248,19 @@ print("Counter 1: " .. counter1())  -- 2
 print("Counter 2: " .. counter2())  -- 1 (independent counter)
 print("Counter 1: " .. counter1())  -- 3
 print("Counter 2: " .. counter2())  -- 2
-```lua
+```
 
 ---
 
 ### How to Execute
 
 1. **Run your program**:
-   ```bash
+   ```
    lua functions.lua
-   ```lua
+   ```
 
 **Expected output:**
-```lua
+```
 === Basic Function Definition ===
 Hello! Welcome to the wonderful world of functions!
 Hello! Welcome to the wonderful world of functions!
@@ -318,7 +318,7 @@ Counter 1: 2
 Counter 2: 1
 Counter 1: 3
 Counter 2: 2
-```lua
+```
 
 ---
 
@@ -370,29 +370,29 @@ Counter 2: 2
 
 ### Code Breakdown
 
-```lua
+```
 function greet_user()
     print("Hello! Welcome to the wonderful world of functions!")
 end
-```lua
+```
 - **`function`** = Keyword to declare a function
 - **`greet_user`** = Function name (follows variable naming rules)
 - **`()`** = Parameters (empty because no parameters needed)
 - **`end`** = Required to close the function definition
 - **No return** = Function runs code but doesn't return a value
 
-```lua
+```
 function greet_by_name(name)
     print("Hello, " .. name .. "! Nice to meet you!")
 end
-```lua
+```
 - **`name`** = Parameter (variable that receives the argument value)
 - **Parameters** = Variables defined in function declaration
 - **Arguments** = Actual values passed when calling the function
 
-```lua
+```
 local result1 = add_numbers(5, 3)
-```lua
+```
 - **`add_numbers(5, 3)`** = Function call with arguments
 - **`5` and `3`** = Arguments passed to the function
 - **Return value** = Value that function sends back
@@ -401,46 +401,46 @@ local result1 = add_numbers(5, 3)
 ### Function Declaration vs Expression
 
 **Function Declaration (Traditional):**
-```lua
+```
 function add(a, b)
     return a + b
 end
 -- Can be called before or after the declaration
-```lua
+```
 
 **Function Expression:**
-```lua
+```
 local add = function(a, b)
     return a + b
 end
 -- Must be defined before calling
-```lua
+```
 
 ### Multiple Return Values
 
 One unique feature of Lua is that functions can return multiple values:
 
-```lua
+```
 function get_coordinates()
     return 10, 20, 30  -- x, y, z coordinates
 end
 
 local x, y, z = get_coordinates()
 print(x, y, z)  -- Output: 10 20 30
-```lua
+```
 
 ### Function Parameters
 
 **Default parameters** (Lua 5.4+):
-```lua
+```
 function greet(name, greeting) 
     greeting = greeting or "Hello"  -- Use "Hello" if greeting is nil
     print(greeting .. ", " .. name .. "!")
 end
-```lua
+```
 
 **Variadic parameters** (...):
-```lua
+```
 function sum_all(...)
     local args = {...}  -- Create table from all arguments
     local total = 0
@@ -449,27 +449,27 @@ function sum_all(...)
     end
     return total
 end
-```lua
+```
 
 ### Function Scope
 
 **Global scope:**
-```lua
+```
 local global_var = "I'm accessible in functions"
-```lua
+```
 
 **Local scope:**
-```lua
+```
 function my_function()
     local local_var = "I'm only accessible inside this function"
     -- Can access both global_var and local_var
 end
 -- Can access global_var but NOT local_var
-```lua
+```
 
 **Important:** In Lua, variables are global by default unless declared `local`:
 
-```lua
+```
 -- This creates a global variable
 function set_global()
     accidentally_global = "This is global!"
@@ -479,40 +479,40 @@ end
 function set_local()
     local intentionally_local = "This is local!"
 end
-```lua
+```
 
 ### Return Values
 
 **Functions without return:**
-```lua
+```
 function say_hello()
     print("Hello!")
 end
 -- Returns 'nil' implicitly
-```lua
+```
 
 **Functions with return:**
-```lua
+```
 function get_hello()
     return "Hello!"
 end
 -- Returns "Hello!" which can be stored in a variable
-```lua
+```
 
 **Multiple returns:**
-```lua
+```
 function divide_with_remainder(a, b)
     return math.floor(a / b), a % b  -- quotient, remainder
 end
 
 local quotient, remainder = divide_with_remainder(17, 5)  -- 3, 2
-```lua
+```
 
 ### Closures
 
 A closure is a function that captures variables from its outer scope:
 
-```lua
+```
 function create_multiplier(factor)
     return function(number)
         return number * factor  -- 'factor' captured from outer scope
@@ -524,13 +524,13 @@ local triple = create_multiplier(3)
 
 print(double(5))  -- Output: 10
 print(triple(5))  -- Output: 15
-```lua
+```
 
 ### Higher-Order Functions
 
 Functions that take other functions as parameters or return functions:
 
-```lua
+```
 -- Function that takes another function as a parameter
 function execute_twice(func)
     func()
@@ -542,28 +542,28 @@ function say_hello()
 end
 
 execute_twice(say_hello)  -- Will output "Hello!" twice
-```lua
+```
 
 ### Pure vs Impure Functions
 
 **Pure function:**
 - Same input always gives same output
 - No side effects (doesn't modify external state)
-```lua
+```
 function add(a, b)
     return a + b  -- Pure function
 end
-```lua
+```
 
 **Impure function:**
 - May have side effects or depend on external state
-```lua
+```
 local count = 0
 function increment()
     count = count + 1  -- Modifies external variable
     return count
 end  -- Impure function
-```lua
+```
 
 ### Common Errors & Solutions
 
@@ -578,7 +578,7 @@ end  -- Impure function
 ### Best Practices for Functions
 
 **Function naming:**
-```lua
+```
 -- Good - descriptive names
 function calculate_area(length, width) ... end
 function is_valid_email(email) ... end
@@ -587,10 +587,10 @@ function send_notification(message) ... end
 -- Avoid - vague names
 function do_stuff() ... end
 function process() ... end
-```lua
+```
 
 **Use local variables:**
-```lua
+```
 -- Good - limits scope of variables
 function calculate_total(items)
     local total = 0
@@ -600,7 +600,7 @@ function calculate_total(items)
     end
     return total
 end
-```lua
+```
 
 **Function size:**
 - Keep functions focused on a single task
@@ -608,7 +608,7 @@ end
 - If a function gets too long, consider breaking it into smaller ones
 
 **Single Responsibility Principle:**
-```lua
+```
 -- Good - one purpose
 function calculate_tax(amount, rate)
     return amount * rate
@@ -621,13 +621,13 @@ function process_order(order)
     -- ... other processing
     return total
 end
-```lua
+```
 
 ### Advanced Challenge (For the Brave!)
 
 Try this comprehensive function example:
 
-```lua
+```
 print("=== Banking Application with Functions ===")
 
 -- Function to create a bank account object
@@ -722,7 +722,7 @@ check_balance(taylor_account)
 
 print()
 get_transaction_history(alex_account)
-```lua
+```
 
 ---
 
@@ -761,7 +761,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```lua
+```
 print("Hello, World!")
 
 ```

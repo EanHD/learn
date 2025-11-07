@@ -30,7 +30,7 @@ You've mastered the basics! Now you'll learn to translate written algorithms (ps
 
 **Study the pseudocode algorithm below, then implement it in C#:**
 
-```csharp
+```
 ALGORITHM: Mathematical Algorithms
 
 BEGIN
@@ -39,7 +39,7 @@ BEGIN
  // Translate step by step into C#
  // Test with sample inputs
 END
-```csharp
+```
 
 **Implementation Steps:**
 1. Analyze what the algorithm does
@@ -53,19 +53,19 @@ END
 ### How to Compile and Run
 
 1. **Compile the code**:
- ```bash
+ ```
  csc hello.cs
- ```csharp
+ ```
 
 2. **Run your program**:
- ```bash
+ ```
  mono hello
- ```csharp
+ ```
 
 **Expected output:**
-```csharp
+```
 Hello, World!
-```csharp
+```
 
 ### How to Approach This
 
@@ -164,7 +164,7 @@ The key is understanding what each pseudocode statement represents in C#:
 5. **Conditions**: `IF...THEN...ELSE` → if/else statements
 
 **Example Translation:**
-```csharp
+```
 PSEUDOCODE:
  READ number
  IF number > 0 THEN
@@ -172,7 +172,7 @@ PSEUDOCODE:
  ELSE
  PRINT "Not positive"
  END IF
-```csharp
+```
 
 This becomes structured C# code following the language syntax.
 
@@ -227,7 +227,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cs
+```
 using System;
 
 class Program {

@@ -26,24 +26,24 @@ Welcome to Level 4! Today we're focusing on input/output operations in pseudocod
 Input/Output expressions in pseudocode follow these patterns:
 
 **Input operations:**
-```javascript
+```
 INPUT user_name
 INPUT age
 SET email TO INPUT("Enter your email: ")
 SET number TO INPUT_INTEGER("Enter a number: ")
 SET choice TO INPUT_CHOICE("A, B, C")
-```javascript
+```
 
 **Output operations:**
-```javascript
+```
 OUTPUT "Hello, " + user_name
 OUTPUT "Your age is: " + age
 DISPLAY message
 PRINT formatted_output
-```javascript
+```
 
 **Combined I/O:**
-```javascript
+```
 OUTPUT "Enter your name: "
 INPUT name
 IF name IS EMPTY THEN
@@ -51,7 +51,7 @@ IF name IS EMPTY THEN
 ELSE
    OUTPUT "Hello, " + name + "!"
 ENDIF
-```javascript
+```
 
 ---
 
@@ -65,19 +65,19 @@ ENDIF
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    node hello.js
-   ```java
+   ```
 
 **Expected output:**
-```javascript
+```
 Hello, World!
-```javascript
+```
 
 ## Algorithm 1: Simple Input Validation
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Validate User Age
 1. OUTPUT "Please enter your age: "
 2. INPUT age
@@ -86,7 +86,7 @@ Algorithm: Validate User Age
    5. STOP
 5. ENDIF
 6. OUTPUT "Thank you! You are " + age + " years old."
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that validates user age input.
 
@@ -95,7 +95,7 @@ Algorithm: Validate User Age
 ## Algorithm 2: User Information Form
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Collect User Information
 1. OUTPUT "User Information Form"
 2. OUTPUT "==================="
@@ -114,7 +114,7 @@ Algorithm: Collect User Information
 15. OUTPUT "Email: " + email
 16. OUTPUT "Favorite Color: " + color
 17. OUTPUT "Form submitted successfully!"
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that collects and displays user information.
 
@@ -123,7 +123,7 @@ Algorithm: Collect User Information
 ## Algorithm 3: Number Validation Loop
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Get Valid Number
 1. SET valid_input TO FALSE
 2. WHILE NOT valid_input DO
@@ -136,7 +136,7 @@ Algorithm: Get Valid Number
       9. OUTPUT "Invalid! Please enter a positive number."
    10. ENDIF
 11. ENDWHILE
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that keeps asking for input until valid.
 
@@ -145,7 +145,7 @@ Algorithm: Get Valid Number
 ## Algorithm 4: Grade Calculator with Input
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Calculate Letter Grade
 1. OUTPUT "Grade Calculator"
 2. OUTPUT "==============="
@@ -163,7 +163,7 @@ Algorithm: Calculate Letter Grade
 14. OUTPUT "Score: " + score + "/" + total_points
 15. OUTPUT "Percentage: " + percentage + "%"
 16. OUTPUT "Letter Grade: " + letter_grade
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that calculates grades from user input.
 
@@ -172,7 +172,7 @@ Algorithm: Calculate Letter Grade
 ## Algorithm 5: Temperature Converter with Menu
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Temperature Converter Menu
 1. OUTPUT "Temperature Converter"
 2. OUTPUT "1. Celsius to Fahrenheit"
@@ -192,7 +192,7 @@ Algorithm: Temperature Converter Menu
 12. ELSE
    16. OUTPUT "Invalid choice! Please enter 1 or 2."
 17. ENDIF
-```javascript
+```
 
 **Your Task:** Create a JavaScript program with a menu-based temperature converter.
 
@@ -201,7 +201,7 @@ Algorithm: Temperature Converter Menu
 ## Algorithm 6: Input Validation with Multiple Fields
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Validate Contact Information
 1. SET is_valid TO TRUE
 2. OUTPUT "Contact Information Form"
@@ -228,7 +228,7 @@ Algorithm: Validate Contact Information
 23. ELSE
    24. OUTPUT "Form has errors. Please fix and resubmit."
 25. ENDIF
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that validates multiple input fields.
 
@@ -237,7 +237,7 @@ Algorithm: Validate Contact Information
 ## Algorithm 7: Calculator with User Interaction
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Interactive Calculator
 1. OUTPUT "Simple Calculator"
 2. OUTPUT "Enter first number: "
@@ -265,7 +265,7 @@ Algorithm: Interactive Calculator
 24. IF NOT has_error THEN
    25. OUTPUT num1 + " " + operator + " " + num2 + " = " + result
 26. ENDIF
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that simulates a basic calculator with error handling.
 
@@ -323,7 +323,7 @@ Algorithm: Interactive Calculator
 
 ### Algorithm 1: Simple Input Validation
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -336,11 +336,11 @@ if (age < 0 || age > 150) {
 } else {
     console.log("Thank you! You are " + age + " years old.");
 }
-```javascript
+```
 
 ### Algorithm 2: User Information Form
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -367,11 +367,11 @@ console.log("Age: " + age);
 console.log("Email: " + email);
 console.log("Favorite Color: " + color);
 console.log("Form submitted successfully!");
-```javascript
+```
 
 ### Algorithm 3: Number Validation Loop
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -389,11 +389,11 @@ while (!valid_input) {
         console.log("Invalid! Please enter a positive number.");
     }
 }
-```javascript
+```
 
 ### Algorithm 4: Grade Calculator with Input
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -423,11 +423,11 @@ if (percentage >= 90) {
 console.log("Score: " + score + "/" + total_points);
 console.log("Percentage: " + percentage.toFixed(2) + "%");
 console.log("Letter Grade: " + letter_grade);
-```javascript
+```
 
 ### Algorithm 5: Temperature Converter with Menu
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -452,11 +452,11 @@ if (choice === 1) {
 } else {
     console.log("Invalid choice! Please enter 1 or 2.");
 }
-```javascript
+```
 
 ### Algorithm 6: Input Validation with Multiple Fields
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -494,11 +494,11 @@ if (is_valid) {
 } else {
     console.log("Form has errors. Please fix and resubmit.");
 }
-```javascript
+```
 
 ### Algorithm 7: Calculator with User Interaction
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -538,7 +538,7 @@ if (operator === "+") {
 if (!has_error) {
     console.log(num1 + " " + operator + " " + num2 + " = " + result);
 }
-```javascript
+```
 
 ### I/O Operation Translation Patterns
 

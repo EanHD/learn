@@ -23,7 +23,7 @@ Welcome to your first Zig program! Today, you'll create and run your very first 
 
 **Copy the following code EXACTLY as shown below into `main.zig`**
 
-```zig
+```
 const std = @import("std");
 
 pub fn main() !void {
@@ -37,12 +37,12 @@ pub fn main() !void {
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```zig
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 zig build-exe main.zig
 ./main
 ```

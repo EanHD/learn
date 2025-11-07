@@ -28,19 +28,19 @@ Complex system problems require integrating multiple components and managing sys
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    rustc hello.rs -o hello hello.rs
-   ```rust
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
-```rust
+```
 
 ### Problem: Library Management System
 
@@ -76,7 +76,7 @@ Create a comprehensive library management system that handles books, patrons, an
 - Books can be reserved when checked out
 
 **Example Interaction:**
-```rust
+```
 Library Management System
 =========================
 
@@ -145,20 +145,20 @@ Overdue Books: 3
 Total Fines Collected: $12.75
 Most Popular Genre: Technology
 Most Popular Book: The Rust Programming Language (8 checkouts)
-```rust
+```
 
 ---
 
 ### How to Create Your Solution
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Create your pseudocode file**:
-   ```bash
+   ```
    touch complex_system_problems.md
-   ```rust
+   ```
 3. **Design system architecture** - Major components and their interactions
 4. **Plan data structures** - How to store books, patrons, transactions
 5. **Design menu system** - Navigation between different functions
@@ -220,7 +220,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 - Transactions ↔ Time (due dates, overdue calculations)
 
 **System Flow:**
-```rust
+```
 Main Loop:
     Display main menu
     Process user choice
@@ -228,11 +228,11 @@ Main Loop:
     Handle transactions
     Update system state
     Return to main menu
-```rust
+```
 
 ### Sample Pseudocode Solution
 
-```rust
+```
 START PROGRAM
     // Initialize system data structures
     INITIALIZE_BOOK_CATALOG()
@@ -644,7 +644,7 @@ FUNCTION FORMAT_CURRENCY(amount)
     // Format number as currency (e.g., 12.50 -> $12.50)
     RETURN "$" + amount
 END FUNCTION
-```rust
+```
 
 ### Analysis Breakdown
 

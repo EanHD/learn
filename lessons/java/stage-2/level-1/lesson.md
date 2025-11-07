@@ -25,7 +25,7 @@ Welcome to Stage 2! You've mastered copying code - now it's time to think like a
 **Pseudocode** is a way to write programming logic in plain English (or your native language) before writing actual code. It's like writing a recipe or instructions for a task.
 
 **Example:**
-```java
+```
 Algorithm: Make a sandwich
 1. Get bread from pantry
 2. Get peanut butter from fridge
@@ -34,7 +34,7 @@ Algorithm: Make a sandwich
 5. Spread jelly on the other bread slice
 6. Put slices together
 7. Enjoy your sandwich!
-```java
+```
 
 This is much easier to understand than trying to write code first!
 
@@ -50,30 +50,30 @@ This is much easier to understand than trying to write code first!
 ### How to Compile and Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    javac hello.java
    ```
 
 2. **Run your program**:
-   ```bash
+   ```
    java hello
    ```
 
 **Expected output:**
-```java
+```
 Hello, World!
-```java
+```
 
 ## Algorithm 1: Greeting Program
 
 **Pseudocode:**
-```java
+```
 Algorithm: Display Personal Greeting
 1. Display "Hello! What's your name?" to the user
 2. Get the user's name from input
 3. Display "Nice to meet you, " followed by the user's name
 4. Display "Welcome to programming!"
-```java
+```
 
 **Your Task:** Create a Java program that follows these exact steps.
 
@@ -82,7 +82,7 @@ Algorithm: Display Personal Greeting
 ## Algorithm 2: Simple Calculator
 
 **Pseudocode:**
-```java
+```
 Algorithm: Add Two Numbers
 1. Ask user for first number
 2. Get first number from user
@@ -90,7 +90,7 @@ Algorithm: Add Two Numbers
 4. Get second number from user
 5. Calculate sum of the two numbers
 6. Display "The sum is: " followed by the sum
-```java
+```
 
 **Your Task:** Create a Java program that implements this calculator.
 
@@ -99,14 +99,14 @@ Algorithm: Add Two Numbers
 ## Algorithm 3: Age Calculator
 
 **Pseudocode:**
-```java
+```
 Algorithm: Calculate Age in Days
 1. Display "Enter your age in years: "
 2. Get age in years from user
 3. Calculate days = age × 365
 4. Display "You are approximately " + days + " days old"
 5. Display "That's a lot of days!"
-```java
+```
 
 **Your Task:** Create a program that calculates approximate age in days.
 
@@ -115,7 +115,7 @@ Algorithm: Calculate Age in Days
 ## Algorithm 4: Temperature Converter
 
 **Pseudocode:**
-```java
+```
 Algorithm: Celsius to Fahrenheit Converter
 1. Display "Enter temperature in Celsius: "
 2. Get temperature in Celsius from user
@@ -124,7 +124,7 @@ Algorithm: Celsius to Fahrenheit Converter
 5. Display "°C = "
 6. Display the Fahrenheit temperature
 7. Display "°F"
-```java
+```
 
 **Your Task:** Create a temperature conversion program.
 
@@ -133,7 +133,7 @@ Algorithm: Celsius to Fahrenheit Converter
 ## Algorithm 5: Rectangle Area Calculator
 
 **Pseudocode:**
-```java
+```
 Algorithm: Calculate Rectangle Area
 1. Display "Rectangle Area Calculator"
 2. Display "Enter length: "
@@ -144,7 +144,7 @@ Algorithm: Calculate Rectangle Area
 7. Calculate perimeter = 2 × (length + width)
 8. Display "Area: " + area
 9. Display "Perimeter: " + perimeter
-```java
+```
 
 **Your Task:** Create a program that calculates both area and perimeter.
 
@@ -153,7 +153,7 @@ Algorithm: Calculate Rectangle Area
 ## Algorithm 6: Simple Interest Calculator
 
 **Pseudocode:**
-```java
+```
 Algorithm: Calculate Simple Interest
 1. Display "Simple Interest Calculator"
 2. Display "Enter principal amount: $"
@@ -167,7 +167,7 @@ Algorithm: Calculate Simple Interest
 10. Display "Principal: $" + principal
 11. Display "Interest: $" + interest
 12. Display "Total: $" + total
-```java
+```
 
 **Your Task:** Implement the complete interest calculation.
 
@@ -232,7 +232,7 @@ Algorithm: Calculate Simple Interest
 ## Pseudocode Best Practices
 
 ### Good Pseudocode
-```java
+```
 Algorithm: Process User Data
 1. Get user's name
 2. Get user's age
@@ -241,18 +241,18 @@ Algorithm: Process User Data
 Else
    Display "Minor user"
 4. Display "Data processed"
-```java
+```
 
 ### Bad Pseudocode (Too Vague)
-```java
+```
 Algorithm: Do stuff
 1. Get things
 2. Calculate something
 3. Show results
-```java
+```
 
 ### Good Pseudocode (Clear and Specific)
-```java
+```
 Algorithm: Calculate BMI
 1. Display "BMI Calculator"
 2. Display "Enter weight in kg: "
@@ -261,7 +261,7 @@ Algorithm: Calculate BMI
 5. Get height from user
 6. Calculate BMI = weight ÷ (height × height)
 7. Display "Your BMI is: " + BMI
-```java
+```
 
 ---
 
@@ -273,7 +273,7 @@ Algorithm: Calculate BMI
 
 ### Algorithm 1: Greeting Program
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -289,7 +289,7 @@ public class Main {
         input.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - `Scanner input = new Scanner(System.in);` - Create Scanner for user input
@@ -301,7 +301,7 @@ public class Main {
 
 ### Algorithm 2: Simple Calculator
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -321,7 +321,7 @@ public class Main {
         input.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - `int num1 = input.nextInt();` - Read integer from user
@@ -333,7 +333,7 @@ public class Main {
 
 ### Algorithm 3: Age Calculator
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -351,7 +351,7 @@ public class Main {
         input.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Simple multiplication: `ageDays = ageYears * 365;`
@@ -362,7 +362,7 @@ public class Main {
 
 ### Algorithm 4: Temperature Converter
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -379,7 +379,7 @@ public class Main {
         input.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - `double` variables for decimal temperatures
@@ -391,7 +391,7 @@ public class Main {
 
 ### Algorithm 5: Rectangle Area Calculator
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -414,7 +414,7 @@ public class Main {
         input.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Multiple calculations: area and perimeter
@@ -425,7 +425,7 @@ public class Main {
 
 ### Algorithm 6: Simple Interest Calculator
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -452,7 +452,7 @@ public class Main {
         input.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Complex formula: `(principal * rate * time) / 100`
@@ -516,39 +516,39 @@ public class Main {
 ### Input/Output Patterns
 
 **Getting Integers:**
-```java
+```
 Scanner input = new Scanner(System.in);
 System.out.print("Enter age: ");
 int age = input.nextInt();
-```java
+```
 
 **Getting Decimals:**
-```java
+```
 System.out.print("Enter price: $");
 double price = input.nextDouble();
-```java
+```
 
 **Getting Text:**
-```java
+```
 System.out.print("Enter name: ");
 String name = input.nextLine();
-```java
+```
 
 **Displaying Results:**
-```java
+```
 System.out.println("Result: " + result);
 System.out.printf("Price: $%.2f%n", price);
 System.out.println("Hello, " + name + "!");
-```java
+```
 
 **Important Scanner Note:**
 When mixing `nextInt()` or `nextDouble()` with `nextLine()`, you may need to add an extra `input.nextLine()` to clear the buffer:
 
-```java
+```
 int age = input.nextInt();
 input.nextLine();  // Clear the newline
 String name = input.nextLine();  // Now this works correctly
-```java
+```
 
 ---
 

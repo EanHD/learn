@@ -23,7 +23,7 @@ Make your programs interactive by reading input from users.
 
 **Copy the following code EXACTLY as shown below into `main.sh`**
 
-```bash
+```
 #!/bin/bash
 
 read -p "Enter your name: " name
@@ -54,7 +54,7 @@ echo "Next year you'll be $((age + 1))."
 
 ### The Complete Code
 
-```bash
+```
 #!/bin/bash
 
 read -p "Enter your name: " name

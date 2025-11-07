@@ -34,13 +34,13 @@ Write-Host "Student status: $isStudent"
 
 ### How to Execute
 
-```bash
+```
 powershell variables.ps1
 ```
 
 Expected output:
 
-```powershell
+```
 Hello, Alice!
 You are 25 years old.
 Your height is 5.6 feet.

@@ -23,7 +23,7 @@ Master arithmetic operations and use the language as your calculator.
 
 **Copy the following code EXACTLY as shown below into `main.ps1`**
 
-```powershell
+```
 $a = 15
 $b = 4
 
@@ -58,7 +58,7 @@ Write-Host "Precise Division: $x / $y = $($x / $y)"
 
 ### The Complete Code
 
-```powershell
+```
 $a = 15
 $b = 4
 

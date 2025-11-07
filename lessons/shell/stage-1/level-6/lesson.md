@@ -23,7 +23,7 @@ Learn to repeat actions efficiently using loops.
 
 **Copy the following code EXACTLY as shown below into `main.sh`**
 
-```bash
+```
 #!/bin/bash
 
 echo "Counting 1 to 10:"
@@ -66,7 +66,7 @@ echo "Liftoff!"
 
 ### The Complete Code
 
-```bash
+```
 #!/bin/bash
 
 echo "Counting 1 to 10:"

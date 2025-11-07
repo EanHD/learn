@@ -23,7 +23,7 @@ Learn to repeat actions efficiently using loops.
 
 **Copy the following code EXACTLY as shown below into `main.ts`**
 
-```typescript
+```
 console.log('Counting 1 to 10:');
 for (let i: number = 1; i <= 10; i++) {
     process.stdout.write(`${i} `);
@@ -64,7 +64,7 @@ console.log('Liftoff!');
 
 ### The Complete Code
 
-```typescript
+```
 console.log('Counting 1 to 10:');
 for (let i: number = 1; i <= 10; i++) {
     process.stdout.write(`${i} `);
@@ -157,10 +157,10 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```ts
+```
 console.log("Hello, World!");
 
-```ts
+```
 
 ### Code Breakdown
 

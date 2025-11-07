@@ -23,7 +23,7 @@ Make your programs interactive by reading input from users.
 
 **Copy the following code EXACTLY as shown below into `main.sql`**
 
-```sql
+```
 -- User Input Simulation (Using Variables)
 -- In a real SQL environment, you'd use parameters
 DECLARE @name VARCHAR(50) = 'Alice';
@@ -55,7 +55,7 @@ SELECT
 
 ### The Complete Code
 
-```sql
+```
 -- User Input Simulation (Using Variables)
 -- In a real SQL environment, you'd use parameters
 DECLARE @name VARCHAR(50) = 'Alice';

@@ -23,7 +23,7 @@ Add decision-making to your programs with if/else statements.
 
 **Copy the following code EXACTLY as shown below into `main.dart`**
 
-```dart
+```
 import 'dart:io';
 
 void main() {
@@ -44,7 +44,7 @@ void main() {
     print('$num is odd');
   }
 }
-```dart
+```
 
 ---
 
@@ -66,7 +66,7 @@ void main() {
 
 ### The Complete Code
 
-```dart
+```
 import 'dart:io';
 
 void main() {
@@ -87,7 +87,7 @@ void main() {
     print('$num is odd');
   }
 }
-```dart
+```
 
 ### What This Code Does
 
@@ -162,12 +162,12 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```dart
+```
 void main() {
     print("Hello, World!");
 }
 
-```dart
+```
 
 ### Code Breakdown
 

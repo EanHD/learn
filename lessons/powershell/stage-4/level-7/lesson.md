@@ -51,7 +51,7 @@ Build a complete Complete Application application that:
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    powershell -File hello.ps1
    ```
 
@@ -158,7 +158,7 @@ A complete application has these components:
 5. **Error Handling**: Manage problems gracefully
 
 **Code Organization:**
-```powershell
+```
 // Setup and initialization
 // Main program loop or flow
 // Helper functions

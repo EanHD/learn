@@ -23,7 +23,7 @@ Make your programs interactive by reading input from users.
 
 **Copy the following code EXACTLY as shown below into `main.js`**
 
-```javascript
+```
 // MongoDB aggregation example
 db.students.insertMany([
     { name: "Alice", score: 95 },
@@ -43,12 +43,12 @@ students.forEach(function(student) {
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```javascript
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 mongo < script.js
 ```
 

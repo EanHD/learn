@@ -101,7 +101,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cpp
+```
 #include <iostream>
 
 int main() {

@@ -29,13 +29,13 @@ The File Organizer demonstrates automated processing:
 ### Key Components
 
 **File Categorization System:**
-```python
+```
 self.categories = {
     'Documents': ['.pdf', '.doc', '.docx', ...],
     'Images': ['.jpg', '.jpeg', '.png', ...],
     # ...
 }
-```python
+```
 Uses a dictionary to map file extensions to organizational categories.
 
 **Path Handling:**
@@ -45,11 +45,11 @@ Utilizes Python's `pathlib` for cross-platform file operations:
 - Safe handling of different operating systems
 
 **Command-Line Interface:**
-```python
+```
 parser = argparse.ArgumentParser(description='Automatically organize files by type')
 parser.add_argument('directory', help='Directory to organize')
 parser.add_argument('--dry-run', action='store_true', help='Show what would be done')
-```bash
+```
 
 ### Automation Principles
 

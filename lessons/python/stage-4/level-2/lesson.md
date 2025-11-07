@@ -39,24 +39,24 @@ The data processor should handle:
 ### How to Run
 
 1. **Navigate to this level's directory**:
-    ```bash
+    ```
     cd python/stage-4-full-problem-solving/level-2-data-processing-application
-    ```bash
+    ```
 
 2. **Create a sample data file** (or use the provided one):
-    ```bash
+    ```
     # Create sample_data.txt
     Name,Age,City,Salary
     John,25,New York,50000
     Jane,30,London,60000
     Bob,35,Paris,55000
     Alice,28,Berlin,52000
-    ```python
+    ```
 
 3. **Run the program**:
-    ```bash
+    ```
     python3 main.py
-    ```python
+    ```
 
 4. **Test all menu options** with your data
 
@@ -103,11 +103,11 @@ Try these advanced features:
 
 ### Key Data Structures
 
-```python
+```
 # Global data storage
 data = []      # List of lists containing the actual data rows
 headers = []   # List of column headers
-```python
+```
 
 - **`data`**: Each inner list represents one row of data
 - **`headers`**: Column names corresponding to data columns
@@ -115,11 +115,11 @@ headers = []   # List of column headers
 
 ### File I/O Operations
 
-```python
+```
 def load_data(filename):
     with open(filename, 'r') as file:
         lines = file.readlines()
-```python
+```
 
 - **Context Manager**: `with` statement ensures file is properly closed
 - **Read All Lines**: `readlines()` gives us a list of all lines
@@ -127,14 +127,14 @@ def load_data(filename):
 
 ### Data Processing Functions
 
-```python
+```
 def filter_data():
     # Find records matching criteria
     filtered_data = []
     for row in data:
         if col_choice < len(row) and str(row[col_choice]) == filter_value:
             filtered_data.append(row)
-```python
+```
 
 - **List Comprehension Alternative**: Could use `[row for row in data if condition]`
 - **Data Integrity**: Checks ensure we don't access invalid indices
@@ -142,7 +142,7 @@ def filter_data():
 
 ### Statistical Calculations
 
-```python
+```
 def calculate_stats():
     values = []
     for row in data:
@@ -150,7 +150,7 @@ def calculate_stats():
             values.append(float(row[col_idx]))
         except ValueError:
             continue
-```python
+```
 
 - **Type Safety**: Try/except handles non-numeric data gracefully
 - **Robust Statistics**: Only processes valid numeric values
@@ -167,11 +167,11 @@ def calculate_stats():
 ### Data Format Specification
 
 **CSV-like Format Requirements:**
-```python
+```
 Header1,Header2,Header3,...
 Value1,Value2,Value3,...
 Value1,Value2,Value3,...
-```python
+```
 
 - **Header Row**: First line contains column names
 - **Data Rows**: Subsequent lines contain data values
@@ -192,21 +192,21 @@ Value1,Value2,Value3,...
 ### Algorithm Analysis
 
 **Sorting Implementation:**
-```python
+```
 data.sort(key=lambda row: row[col_choice] if col_choice < len(row) else "", reverse=reverse)
-```python
+```
 
 - **Lambda Function**: Anonymous function for sort key
 - **Safety Check**: Prevents index errors with conditional
 - **String Sorting**: Default string comparison for mixed data
 
 **Statistics Calculation:**
-```python
+```
 total = sum(values)
 average = total / len(values)
 minimum = min(values)
 maximum = max(values)
-```python
+```
 
 - **Built-in Functions**: Python's `sum()`, `min()`, `max()` are efficient
 - **Single Pass**: All statistics calculated in one iteration

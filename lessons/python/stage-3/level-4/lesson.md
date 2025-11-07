@@ -51,14 +51,14 @@ Text Processing Problems - Design an algorithm to solve this problem, then imple
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    python3 hello.py
-   ```python
+   ```
 
 **Expected output:**
-```python
+```
 Hello, World!
-```python
+```
 
 ### How to Approach This
 
@@ -155,7 +155,7 @@ Hello, World!
 4. **Edge Cases**: What could go wrong?
 
 **Pseudocode Template:**
-```python
+```
 ALGORITHM: [Name]
 INPUT: [What we need]
 OUTPUT: [What we produce]
@@ -169,7 +169,7 @@ BEGIN
         - Step 3
     4. Display results
 END
-```python
+```
 
 Then translate this directly to Python code.
 

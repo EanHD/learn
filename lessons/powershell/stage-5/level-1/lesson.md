@@ -30,7 +30,7 @@ You're going to build a complete Powershell application. This is a real project 
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    powershell -File hello.ps1
    ```
 

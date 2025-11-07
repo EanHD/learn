@@ -21,19 +21,19 @@ Welcome to PowerShell! Today, you'll create your first PowerShell script. PowerS
 
 Copy the following code EXACTLY as shown into a new file called `hello.ps1`:
 
-```powershell
+```
 Write-Host "Hello, World!"
 ```
 
 ### How to Execute
 
-```powershell
+```
 powershell -File hello.ps1
 ```
 
 Expected output:
 
-```powershell
+```
 Hello, World!
 ```
 

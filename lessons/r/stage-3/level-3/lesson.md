@@ -51,7 +51,7 @@ Mathematical Problems - Design an algorithm to solve this problem, then implemen
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    Rscript hello.R
    ```
 
@@ -155,7 +155,7 @@ Hello, World!
 4. **Edge Cases**: What could go wrong?
 
 **Pseudocode Template:**
-```r
+```
 ALGORITHM: [Name]
 INPUT: [What we need]
 OUTPUT: [What we produce]

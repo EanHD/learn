@@ -23,7 +23,7 @@ Make your programs interactive by reading input from users.
 
 **Copy the following code EXACTLY as shown below into `main.swift`**
 
-```swift
+```
 import Foundation
 
 print("Enter your name: ", terminator: "")
@@ -35,7 +35,7 @@ let age = Int(readLine() ?? "0") ?? 0
 print("Hello, \(name)!")
 print("You are \(age) years old.")
 print("Next year you'll be \(age + 1).")
-```swift
+```
 
 ---
 
@@ -57,7 +57,7 @@ print("Next year you'll be \(age + 1).")
 
 ### The Complete Code
 
-```swift
+```
 import Foundation
 
 print("Enter your name: ", terminator: "")
@@ -69,7 +69,7 @@ let age = Int(readLine() ?? "0") ?? 0
 print("Hello, \(name)!")
 print("You are \(age) years old.")
 print("Next year you'll be \(age + 1).")
-```swift
+```
 
 ### What This Code Does
 
@@ -146,7 +146,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```swift
+```
 print("Hello, World!")
 
 ```

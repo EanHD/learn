@@ -42,7 +42,7 @@ Mathematics is the language of algorithms! Today you'll translate mathematical c
 ## Algorithm 1: Geometry Calculator
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Calculate Circle Properties
 1. Display "Circle Calculator"
 2. Display "Enter radius: "
@@ -54,7 +54,7 @@ Algorithm: Calculate Circle Properties
 8. Display "Diameter: " + diameter
 9. Display "Area: " + area
 10. Display "Circumference: " + circumference
-```cpp
+```
 
 **Mathematical Notes:**
 - [ ] π (pi) ≈ 3.14159
@@ -69,7 +69,7 @@ Algorithm: Calculate Circle Properties
 ## Algorithm 2: Right Triangle Solver
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Solve Right Triangle
 1. Display "Right Triangle Calculator"
 2. Display "Enter side A: "
@@ -84,7 +84,7 @@ Algorithm: Solve Right Triangle
 11. Display "Hypotenuse: " + hypotenuse
 12. Display "Area: " + area
 13. Display "Perimeter: " + perimeter
-```cpp
+```
 
 **Mathematical Notes:**
 - [ ] Pythagorean theorem: c² = a² + b² (where c is hypotenuse)
@@ -98,7 +98,7 @@ Algorithm: Solve Right Triangle
 ## Algorithm 3: Compound Interest Calculator
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Calculate Compound Interest
 1. Display "Compound Interest Calculator"
 2. Display "Enter principal amount: $"
@@ -117,7 +117,7 @@ Algorithm: Calculate Compound Interest
 15. Display "Principal: $" + principal
 16. Display "Final Amount: $" + final_amount
 17. Display "Total Interest: $" + total_interest
-```cpp
+```
 
 **Mathematical Notes:**
 - [ ] Compound interest formula: A = P(1 + r/n)^(nt)
@@ -131,7 +131,7 @@ Algorithm: Calculate Compound Interest
 ## Algorithm 4: Quadratic Equation Solver
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Solve Quadratic Equation
 1. Display "Quadratic Equation Solver"
 2. Display "For equation ax² + bx + c = 0"
@@ -152,7 +152,7 @@ Algorithm: Solve Quadratic Equation
 12. Else:
    a. Display "No real roots (complex solutions)"
 13. Display "Discriminant: " + discriminant
-```cpp
+```
 
 **Mathematical Notes:**
 - [ ] Quadratic formula: x = [-b ± √(b² - 4ac)] / 2a
@@ -166,7 +166,7 @@ Algorithm: Solve Quadratic Equation
 ## Algorithm 5: Fibonacci Sequence Generator
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Generate Fibonacci Sequence
 1. Display "Fibonacci Sequence Generator"
 2. Display "Enter number of terms: "
@@ -186,7 +186,7 @@ Algorithm: Generate Fibonacci Sequence
    d. Set second = next
    e. Add 1 to count
 11. Display "Sequence complete"
-```cpp
+```
 
 **Mathematical Notes:**
 - [ ] Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
@@ -200,7 +200,7 @@ Algorithm: Generate Fibonacci Sequence
 ## Algorithm 6: Statistical Calculator
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Calculate Statistics
 1. Display "Statistical Calculator"
 2. Initialize sum = 0
@@ -226,7 +226,7 @@ Algorithm: Calculate Statistics
    g. Display "Standard Deviation: " + standard_deviation
 8. Else:
    a. Display "No numbers entered"
-```cpp
+```
 
 **Mathematical Notes:**
 - [ ] Mean (average): μ = Σx / n
@@ -241,7 +241,7 @@ Algorithm: Calculate Statistics
 ## Algorithm 7: Distance Calculator (Coordinate Geometry)
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Calculate Distance Between Points
 1. Display "Distance Between Two Points"
 2. Display "Enter coordinates for point 1:"
@@ -260,7 +260,7 @@ Algorithm: Calculate Distance Between Points
 15. Display "Point 1: (" + x1 + ", " + y1 + ")"
 16. Display "Point 2: (" + x2 + ", " + y2 + ")"
 17. Display "Distance: " + distance
-```cpp
+```
 
 **Mathematical Notes:**
 - [ ] Distance formula: d = √[(x₂ - x₁)² + (y₂ - y₁)²]
@@ -277,7 +277,7 @@ Algorithm: Calculate Distance Between Points
 ```c
 # include <stdio.h>
 # include <math.h>  // For mathematical functions
-```cpp
+```
 
 **Common Math Functions:**
 - [ ] `sqrt(x)` - Square root
@@ -370,7 +370,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Constant PI defined as `const float`
@@ -406,7 +406,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] `#include <math.h>` for `sqrt()` function
@@ -448,7 +448,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Complex compound interest formula
@@ -492,7 +492,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Discriminant determines number of roots
@@ -535,7 +535,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Iterative Fibonacci calculation
@@ -584,7 +584,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Statistical formulas implementation
@@ -625,7 +625,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Distance formula implementation
@@ -641,7 +641,7 @@ int main() {
 const float PI = 3.14159265359;
 const float E = 2.71828182846;
 const float GRAVITY = 9.80665;
-```cpp
+```
 
 **Precision Considerations:**
 - [ ] Use `double` for high-precision calculations
@@ -657,7 +657,7 @@ result = 2 + 3 * 4;
 
 // Correct: (2 + 3) * 4 = 20 (parentheses force addition first)
 result = (2 + 3) * 4;
-```cpp
+```
 
 **Integer Division:**
 ```c
@@ -666,7 +666,7 @@ float result = 5 / 2;
 
 // Correct: 5.0 / 2 = 2.5 (float division)
 float result = 5.0 / 2;
-```cpp
+```
 
 **Power Operations:**
 ```c
@@ -675,7 +675,7 @@ result = 2 ^ 3;  // Bitwise XOR, not power!
 
 // Correct: Use pow() function
 result = pow(2, 3);  // 2^3 = 8
-```cpp
+```
 
 ---
 
@@ -713,7 +713,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cpp
+```
 #include <iostream>
 
 int main() {

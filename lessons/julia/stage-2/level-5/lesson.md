@@ -30,7 +30,7 @@ You've mastered the basics! Now you'll learn to translate written algorithms (ps
 
 **Study the pseudocode algorithm below, then implement it in Julia:**
 
-```julia
+```
 ALGORITHM: Decision Algorithms
 
 BEGIN
@@ -39,7 +39,7 @@ BEGIN
     // Translate step by step into Julia
     // Test with sample inputs
 END
-```julia
+```
 
 **Implementation Steps:**
 1. Analyze what the algorithm does
@@ -54,14 +54,14 @@ END
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    julia hello.jl
    ```
 
 **Expected output:**
-```julia
+```
 Hello, World!
-```julia
+```
 
 ### How to Approach This
 
@@ -160,7 +160,7 @@ The key is understanding what each pseudocode statement represents in Julia:
 5. **Conditions**: `IF...THEN...ELSE` → if/else statements
 
 **Example Translation:**
-```julia
+```
 PSEUDOCODE:
     READ number
     IF number > 0 THEN
@@ -168,7 +168,7 @@ PSEUDOCODE:
     ELSE
         PRINT "Not positive"
     END IF
-```julia
+```
 
 This becomes structured Julia code following the language syntax.
 

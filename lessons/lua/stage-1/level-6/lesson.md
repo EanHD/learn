@@ -26,7 +26,7 @@ Time to make your programs repeat actions! Today you'll learn how to write code 
 
 **Copy the following code into a new file called `loops.lua`**
 
-```lua
+```
 print("=== Numeric For Loop - Counting ===")
 -- Basic numeric for loop: for variable = start, stop, step
 for i = 1, 5 do
@@ -182,19 +182,19 @@ for i, num in ipairs(numbers) do
 end
 
 print("Total sum: " .. total)
-```lua
+```
 
 ---
 
 ### How to Execute
 
 1. **Run your program**:
-   ```bash
+   ```
    lua loops.lua
-   ```lua
+   ```
 
 **Expected output:**
-```lua
+```
 === Numeric For Loop - Counting ===
 Count: 1
 Count: 2
@@ -304,7 +304,7 @@ Processing number 3: 30
 Processing number 4: 40
 Processing number 5: 50
 Total sum: 150
-```lua
+```
 *Note: Random numbers will vary each time you run the program*
 
 ---
@@ -356,11 +356,11 @@ Total sum: 150
 
 ### Code Breakdown
 
-```lua
+```
 for i = 1, 5 do
     print("Count: " .. i)
 end
-```lua
+```
 - **`for`** = Loop keyword
 - **`i = 1, 5`** = Loop variable starts at 1, ends at 5 (inclusive)
 - **`, 1`** = Step is optional, defaults to 1
@@ -368,28 +368,28 @@ end
 - **`end`** = Required keyword to end the loop block
 - **Loop execution**: 1, 2, 3, 4, 5 (stops after 5)
 
-```lua
+```
 for i = 10, 1, -1 do
     print("Countdown: " .. i)
 end
-```lua
+```
 - **`10, 1, -1`** = Start at 10, stop at 1, step by -1 (counting backwards)
 
-```lua
+```
 while count <= 5 do
     print("While count: " .. count)
     count = count + 1  -- Critical: must update the counter!
 end
-```lua
+```
 - **`while`** = Loop that continues while condition is true
 - **Condition checked first** before each iteration
 - **`count = count + 1`** = Must update counter inside the loop or it runs forever!
 
-```lua
+```
 repeat
     print("Menu attempt #" .. tries .. ": Option " .. menu_choice)
 until menu_choice == 3
-```lua
+```
 - **`repeat`** = Code block executes first
 - **`until`** = Then condition is checked
 - **Result**: Block runs at least once regardless of condition
@@ -397,7 +397,7 @@ until menu_choice == 3
 ### For Loop Variations
 
 **Numeric for loop variations:**
-```lua
+```
 -- Basic: for variable = start, stop, step
 for i = 1, 5 do          -- i: 1, 2, 3, 4, 5
     print(i)
@@ -410,12 +410,12 @@ end
 for i = 10, 1, -1 do     -- i: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
     print(i)
 end
-```lua
+```
 
 ### Table Iteration Methods
 
 **ipairs() vs pairs():**
-```lua
+```
 -- ipairs() - iterates in numerical order with integer indices
 local arr = {"a", "b", "c"}
 for i, v in ipairs(arr) do
@@ -427,22 +427,22 @@ local t = {name = "Alex", age = 25, [1] = "first"}
 for k, v in pairs(t) do
     print(k, v)  -- Could print in any order
 end
-```lua
+```
 
 ### Loop Control
 
 **break** = Exits the loop completely:
-```lua
+```
 for i = 1, 10 do
     if i == 5 then
         break  -- Loop stops here
     end
     print(i)  -- Prints: 1, 2, 3, 4
 end
-```lua
+```
 
 Lua doesn't have a continue keyword, but you can achieve similar effects with if-then-else:
-```lua
+```
 for i = 1, 5 do
     if i ~= 3 then  -- Skip when i equals 3
         print(i)  -- Prints: 1, 2, 4, 5 (skips 3)
@@ -450,19 +450,19 @@ for i = 1, 5 do
         print("Skipped " .. i)
     end
 end
-```lua
+```
 
 ### Nested Loops
 
-```lua
+```
 for i = 1, 3 do          -- Outer loop
     for j = 1, 3 do      -- Inner loop
         print("i=" .. i .. ", j=" .. j)
     end
 end
-```lua
+```
 **Output:**
-```lua
+```
 i=1, j=1
 i=1, j=2
 i=1, j=3
@@ -472,18 +472,18 @@ i=2, j=3
 i=3, j=1
 i=3, j=2
 i=3, j=3
-```lua
+```
 - **Inner loop** completes all iterations for each outer loop iteration
 - **Total iterations**: 3 × 3 = 9
 
 ### Table Length with #
 
-```lua
+```
 local arr = {"apple", "banana", "orange"}
 for i = 1, #arr do        -- #arr returns 3
     print(arr[i])
 end
-```lua
+```
 **Note**: The `#` operator only works predictably on sequences (arrays with consecutive integer keys starting from 1).
 
 ### Common Errors & Solutions
@@ -522,7 +522,7 @@ end
 
 Try this complex loop program:
 
-```lua
+```
 print("=== Advanced Loop Examples ===")
 
 -- Prime number finder
@@ -577,7 +577,7 @@ for i = 1, 5 do
     end
     print(row)
 end
-```lua
+```
 
 ---
 
@@ -616,7 +616,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```lua
+```
 print("Hello, World!")
 
 ```

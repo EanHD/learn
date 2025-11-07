@@ -30,7 +30,7 @@ You're going to build a complete Shell application. This is a real project that 
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    bash hello.sh
    ```
 

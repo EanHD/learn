@@ -25,7 +25,7 @@ Time to do some math! Today you'll learn how to perform mathematical operations 
 
 **Copy the following code into a new file called `math.lua`**
 
-```lua
+```
 -- Basic arithmetic operations
 print("=== Basic Arithmetic ===")
 
@@ -162,19 +162,19 @@ end
 if not nil and not false then
     print("Only nil and false are considered false")
 end
-```lua
+```
 
 ---
 
 ### How to Execute
 
 1. **Run your program**:
-   ```bash
+   ```
    lua math.lua
-   ```lua
+   ```
 
 **Expected output:**
-```lua
+```
 === Basic Arithmetic ===
 5 + 3 = 8
 10 - 4 = 6
@@ -223,7 +223,7 @@ Negative number: -25
 === Boolean Logic with Numbers ===
 In Lua, 0 is considered true in boolean context
 Only nil and false are considered false
-```lua
+```
 
 *Note: Random numbers will vary each time you run the program*
 
@@ -282,26 +282,26 @@ In Lua math, you saw some operators:
 
 ### Code Breakdown
 
-```lua
+```
 sum = 5 + 3
 print("5 + 3 = " .. sum)
-```lua
+```
 - **`=`** = Assignment operator (stores the result of 5 + 3 into variable 'sum')
 - **`+`** = Addition operator (performs arithmetic addition)
 - **String concatenation**: The `..` operator joins strings and numbers (number automatically converted)
 
-```lua
+```
 remainder = 17 % 5
 print("17 % 5 = " .. remainder .. " (remainder)")
-```lua
+```
 - **`%`** = Modulo operator (returns the remainder after division)
 - 17 ÷ 5 = 3 remainder 2, so 17 % 5 = 2
 - Useful for checking if numbers are even (n % 2 == 0) or cycling through values
 
-```lua
+```
 power = 2 ^ 3
 print("2 ^ 3 = " .. power .. " (2 to the power of 3)")
-```lua
+```
 - **`^`** = Exponentiation operator (raises left number to power of right number)
 - 2 ^ 3 = 2 to the power of 3 = 2 × 2 × 2 = 8
 
@@ -316,19 +316,19 @@ Lua follows the standard mathematical order of operations:
 5. **M**odulo `%` (same precedence as multiplication and division)
 
 Examples:
-```lua
+```
 -- Without parentheses: Multiplication before addition
 result = 10 + 5 * 2  -- = 10 + 10 = 20 (not 30!)
 
 -- With parentheses: Addition before multiplication
 result = (10 + 5) * 2  -- = 15 * 2 = 30
-```lua
+```
 
 ### Lua's Math Library
 
 Lua comes with a built-in math library for advanced operations:
 
-```lua
+```
 -- Basic operations
 math.sqrt(16)     -- Square root: 4
 math.abs(-5)      -- Absolute value: 5
@@ -347,11 +347,11 @@ math.cos(0)          -- Cosine of 0: 1
 -- Constants
 math.pi     -- π: 3.141592653589793
 math.huge   -- Infinity
-```lua
+```
 
 ### Random Number Generation
 
-```lua
+```
 -- Seed the random generator (typically done once at program start)
 math.randomseed(os.time())
 
@@ -363,50 +363,50 @@ random_float = math.random()  -- 0.0 to 1.0
 
 -- Random integer between 1 and N
 random_single = math.random(10)  -- Random 1-10
-```lua
+```
 
 ### Important Lua Math Notes
 
 **Number Type**: Lua has a single number type that handles both integers and floats:
 
-```lua
+```
 integer_val = 42      -- Stored as number
 float_val = 3.14      -- Also stored as number
 print(type(integer_val))  -- Output: "number"
 print(type(float_val))    -- Output: "number"
-```lua
+```
 
 **Division Results**: Division always returns a float:
 
-```lua
+```
 print(6 / 3)     -- Output: 2.0 (not 2)
 print(5 / 2)     -- Output: 2.5
-```lua
+```
 
 **Division by Zero**: In Lua, dividing by zero results in inf (infinity):
 
-```lua
+```
 print(5 / 0)     -- Output: inf
 print(-5 / 0)    -- Output: -inf
-```lua
+```
 
 ### Comparison with Other Languages
 
 **No compound assignment operators**: Lua doesn't have `+=`, `-=`, `*=`, `/=` like other languages:
 
-```lua
+```
 -- Instead of: value += 5
 value = value + 5
 
 -- Instead of: count++
 count = count + 1
-```lua
+```
 
 **No integer division**: Lua doesn't have a special integer division operator like Python's `//`. Use math.floor for integer division:
 
-```lua
+```
 result = math.floor(7 / 2)  -- Result: 3 (integer division)
-```lua
+```
 
 ### Common Errors & Solutions
 
@@ -429,7 +429,7 @@ Lua math is used in various applications:
 
 Try this complex calculation:
 
-```lua
+```
 print("=== Complex Math Example ===")
 
 -- Compound interest calculation
@@ -455,7 +455,7 @@ side_a = 3
 side_b = 4
 hypotenuse = math.sqrt(side_a^2 + side_b^2)
 print("Right triangle with sides " .. side_a .. " and " .. side_b .. " has hypotenuse: " .. hypotenuse)
-```lua
+```
 
 ---
 
@@ -494,7 +494,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```lua
+```
 print("Hello, World!")
 
 ```

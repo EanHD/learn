@@ -23,7 +23,7 @@ Add decision-making to your programs with if/else statements.
 
 **Copy the following code EXACTLY as shown below into `main.R`**
 
-```r
+```
 cat("Enter your score (0-100): ")
 score <- as.integer(readLines("stdin", n=1))
 
@@ -45,12 +45,12 @@ if (score >= 90) {
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```r
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 Rscript main.R
 ```
 

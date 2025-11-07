@@ -26,23 +26,23 @@ Welcome to Level 5! Today we're focusing on decision-making operations in pseudo
 Decision expressions in pseudocode follow these patterns:
 
 **Simple if statements:**
-```javascript
+```
 IF condition THEN
    DO something
 ENDIF
-```javascript
+```
 
 **If-else statements:**
-```javascript
+```
 IF condition THEN
    DO something
 ELSE
    DO something else
 ENDIF
-```javascript
+```
 
 **Multiple conditions:**
-```javascript
+```
 IF condition1 THEN
    DO something
 ELSE IF condition2 THEN
@@ -50,19 +50,19 @@ ELSE IF condition2 THEN
 ELSE
    DO default action
 ENDIF
-```javascript
+```
 
 **Complex conditions:**
-```javascript
+```
 IF (age >= 18) AND (has_license) THEN
    OUTPUT "Can drive"
 ELSE
    OUTPUT "Cannot drive"
 ENDIF
-```javascript
+```
 
 **Nested conditions:**
-```javascript
+```
 IF weather = "sunny" THEN
    IF temperature > 80 THEN
       OUTPUT "Hot and sunny - beach time!"
@@ -72,7 +72,7 @@ IF weather = "sunny" THEN
 ELSE
    OUTPUT "Stay inside"
 ENDIF
-```javascript
+```
 
 ---
 
@@ -86,19 +86,19 @@ ENDIF
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    node hello.js
-   ```java
+   ```
 
 **Expected output:**
-```javascript
+```
 Hello, World!
-```javascript
+```
 
 ## Algorithm 1: Simple Age Check
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Determine Life Stage
 1. INPUT age
 2. IF age < 13 THEN
@@ -110,7 +110,7 @@ Algorithm: Determine Life Stage
 8. ELSE
    9. OUTPUT "Senior"
 10. ENDIF
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that categorizes by age.
 
@@ -119,7 +119,7 @@ Algorithm: Determine Life Stage
 ## Algorithm 2: Grade Determination
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Assign Letter Grade
 1. INPUT numeric_grade
 2. IF numeric_grade >= 97 THEN
@@ -148,7 +148,7 @@ Algorithm: Assign Letter Grade
    24. SET letter_grade TO "F"
 25. ENDIF
 26. OUTPUT "Grade: " + letter_grade
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that determines letter grades.
 
@@ -157,7 +157,7 @@ Algorithm: Assign Letter Grade
 ## Algorithm 3: Shopping Discount Calculator
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Calculate Shopping Discount
 1. INPUT total_amount
 2. INPUT customer_type  // "regular", "premium", "vip"
@@ -188,7 +188,7 @@ Algorithm: Calculate Shopping Discount
 27. OUTPUT "Original: $" + total_amount
 28. OUTPUT "Discount: " + (discount_rate * 100) + "%"
 29. OUTPUT "Final: $" + final_amount
-```javascript
+```
 
 **Your Task:** Create a JavaScript program with nested decision logic for discounts.
 
@@ -197,7 +197,7 @@ Algorithm: Calculate Shopping Discount
 ## Algorithm 4: Weather Advisory
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Weather Advisory System
 1. INPUT temperature
 2. INPUT is_raining
@@ -228,7 +228,7 @@ Algorithm: Weather Advisory System
 27. IF wind_speed > 25 THEN
    28. OUTPUT "High winds - Secure loose objects"
 29. ENDIF
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that gives weather advisory.
 
@@ -237,7 +237,7 @@ Algorithm: Weather Advisory System
 ## Algorithm 5: Password Validator
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Validate Password Strength
 1. INPUT password
 2. SET has_uppercase TO FALSE
@@ -281,7 +281,7 @@ Algorithm: Validate Password Strength
       40. OUTPUT "- Must contain special character"
    41. ENDIF
 42. ENDIF
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that validates password strength.
 
@@ -290,7 +290,7 @@ Algorithm: Validate Password Strength
 ## Algorithm 6: Transportation Advisor
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Recommend Transportation
 1. INPUT distance  // in miles
 2. INPUT weather_condition  // "good", "bad", "severe"
@@ -311,7 +311,7 @@ Algorithm: Recommend Transportation
 17. ELSE
    18. OUTPUT "Consider public transit or taxi"
 19. ENDIF
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that recommends transportation.
 
@@ -320,7 +320,7 @@ Algorithm: Recommend Transportation
 ## Algorithm 7: Complex Business Logic
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Process Order
 1. INPUT order_amount
 2. INPUT customer_type  // "new", "returning", "loyal"
@@ -354,7 +354,7 @@ Algorithm: Process Order
 30. ELSE
    30. OUTPUT "Priority Processing: No"
 31. ENDIF
-```javascript
+```
 
 **Your Task:** Create a JavaScript program with complex business logic.
 
@@ -412,7 +412,7 @@ Algorithm: Process Order
 
 ### Algorithm 1: Simple Age Check
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -428,11 +428,11 @@ if (age < 13) {
 } else {
     console.log("Senior");
 }
-```javascript
+```
 
 ### Algorithm 2: Grade Determination
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -467,11 +467,11 @@ if (numeric_grade >= 97) {
 }
 
 console.log("Grade: " + letter_grade);
-```javascript
+```
 
 ### Algorithm 3: Shopping Discount Calculator
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -509,11 +509,11 @@ let final_amount = total_amount - discount_amount;
 console.log("Original: $" + total_amount.toFixed(2));
 console.log("Discount: " + (discount_rate * 100) + "%");
 console.log("Final: $" + final_amount.toFixed(2));
-```javascript
+```
 
 ### Algorithm 4: Weather Advisory
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -550,11 +550,11 @@ if (temperature > 90) {
 if (wind_speed > 25) {
     console.log("High winds - Secure loose objects");
 }
-```javascript
+```
 
 ### Algorithm 5: Password Validator
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -594,11 +594,11 @@ if (length_ok && has_uppercase && has_lowercase && has_digit && has_special) {
     if (!has_digit) console.log("- Must contain digit");
     if (!has_special) console.log("- Must contain special character");
 }
-```javascript
+```
 
 ### Algorithm 6: Transportation Advisor
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -624,11 +624,11 @@ if (purpose === "emergency") {
 } else {
     console.log("Consider public transit or taxi");
 }
-```javascript
+```
 
 ### Algorithm 7: Complex Business Logic
 
-```javascript
+```
 // For Node.js environment with readline-sync
 const readlineSync = require('readline-sync');
 
@@ -672,7 +672,7 @@ if (is_priority_processing) {
 } else {
     console.log("Priority Processing: No");
 }
-```javascript
+```
 
 ### Decision Operation Translation Patterns
 

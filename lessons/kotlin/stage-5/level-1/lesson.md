@@ -30,19 +30,19 @@ You're going to build a complete Kotlin application. This is a real project that
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    kotlinc hello.kt
-   ```kotlin
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    kotlin hello
-   ```kotlin
+   ```
 
 **Expected output:**
-```kotlin
+```
 Hello, World!
-```kotlin
+```
 
 ### Project Requirements
 

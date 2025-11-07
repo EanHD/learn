@@ -51,7 +51,7 @@ int main() {
 
 ### Compile and Run
 
-```bash
+```
 gcc main.c -o main
 ./main
 ```

@@ -32,7 +32,7 @@ START
     print name
     print age
 END
-```python
+```
 
 **Your mission**: Translate this pseudocode into Python code.
 
@@ -50,23 +50,23 @@ Hints:
 1. **Open your terminal**
 2. **Navigate to your workspace**:
 
-    ```bash
+    ```
     cd ~/.local/share/learn/workspaces/python/stage-2/level-2
-    ```bash
+    ```
 
 3. **Edit main.py**
 4. **Run it**:
 
-    ```bash
+    ```
     python3 main.py
-    ```python
+    ```
 
 **Expected output:**
 
-```python
+```
 Alice
 25
-```python
+```
 
 ---
 
@@ -103,30 +103,30 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ### Solution
 
-```python
+```
 name = "Alice"
 age = 25
 print(name)
 print(age)
-```python
+```
 
 ### Explanation
 
 **Line 1 & 2: Variable Assignment**
 
-```python
+```
 name = "Alice"      # Create variable 'name', store "Alice"
 age = 25            # Create variable 'age', store 25
-```python
+```
 
 The `=` operator assigns values to variables.
 
 **Line 3 & 4: Using Variables**
 
-```python
+```
 print(name)         # Print value IN variable name
 print(age)          # Print value IN variable age
-```python
+```
 
 Without quotes, Python looks up the variable and uses its value.
 
@@ -162,14 +162,14 @@ Without quotes, Python looks up the variable and uses its value.
 
 ### How Variables Work
 
-```python
+```
 Step 1: name = "Alice"
         Memory: [name] → "Alice"
 
 Step 2: print(name)
         Python: Look up "name" → find "Alice" → print it
         Output: Alice
-```python
+```
 
 ---
 

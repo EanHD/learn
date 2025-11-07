@@ -21,21 +21,21 @@ Welcome to Swift! Today, you'll create your first Swift program. Swift is Apple'
 
 Copy the following code EXACTLY as shown into a new file called `hello.swift`:
 
-```swift
+```
 print("Hello, World!")
-```swift
+```
 
 ### How to Execute
 
-```bash
+```
 swift hello.swift
-```swift
+```
 
 Expected output:
 
-```swift
+```
 Hello, World!
-```swift
+```
 
 ### Success Checklist
 
@@ -105,7 +105,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```swift
+```
 print("Hello, World!")
 
 ```

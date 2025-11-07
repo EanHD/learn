@@ -30,7 +30,7 @@ You've mastered the basics! Now you'll learn to translate written algorithms (ps
 
 **Study the pseudocode algorithm below, then implement it in Kotlin:**
 
-```kotlin
+```
 ALGORITHM: Variables in Algorithms
 
 BEGIN
@@ -39,7 +39,7 @@ BEGIN
     // Translate step by step into Kotlin
     // Test with sample inputs
 END
-```kotlin
+```
 
 **Implementation Steps:**
 1. Analyze what the algorithm does
@@ -54,19 +54,19 @@ END
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    kotlinc hello.kt
-   ```kotlin
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    kotlin hello
-   ```kotlin
+   ```
 
 **Expected output:**
-```kotlin
+```
 Hello, World!
-```kotlin
+```
 
 ### How to Approach This
 
@@ -165,7 +165,7 @@ The key is understanding what each pseudocode statement represents in Kotlin:
 5. **Conditions**: `IF...THEN...ELSE` → if/else statements
 
 **Example Translation:**
-```kotlin
+```
 PSEUDOCODE:
     READ number
     IF number > 0 THEN
@@ -173,7 +173,7 @@ PSEUDOCODE:
     ELSE
         PRINT "Not positive"
     END IF
-```kotlin
+```
 
 This becomes structured Kotlin code following the language syntax.
 

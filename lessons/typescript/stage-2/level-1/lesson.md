@@ -20,7 +20,7 @@ Now that you know the basics, it's time to think like a programmer! You'll take 
 
 Here's some pseudocode that describes a simple program:
 
-```typescript
+```
 START
     print "Welcome to the program!"
     print "This is my first real program"
@@ -38,14 +38,14 @@ Hints:
 
 ### How to Run
 
-```bash
+```
 cd ~/.local/share/learn/workspaces/typescript/stage-2/level-1
 ts-node main.ts
 ```type
 
 Expected output:
 
-```typescript
+```
 Welcome to the program!
 This is my first real program
 I'm learning to code!
@@ -71,12 +71,12 @@ If you're stuck, here's what your code should look like (don't peek until you tr
 
 ## ANSWER KEY
 
-```ts
+```
 ```type
 
 (Fill in based on language-specific syntax)
 
-```typescript
+```
 
 ---
 

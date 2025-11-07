@@ -43,24 +43,24 @@ Mathematics is the language of algorithms! Today you'll translate mathematical c
 ### How to Compile and Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    javac hello.java
    ```
 
 2. **Run your program**:
-   ```bash
+   ```
    java hello
    ```
 
 **Expected output:**
-```java
+```
 Hello, World!
-```java
+```
 
 ## Algorithm 1: Geometry Calculator
 
 **Pseudocode:**
-```java
+```
 Algorithm: Calculate Circle Properties
 1. Display "Circle Calculator"
 2. Display "Enter radius: "
@@ -72,7 +72,7 @@ Algorithm: Calculate Circle Properties
 8. Display "Diameter: " + diameter
 9. Display "Area: " + area
 10. Display "Circumference: " + circumference
-```java
+```
 
 **Mathematical Notes:**
 - π (pi) ≈ 3.14159 (or use `Math.PI`)
@@ -86,7 +86,7 @@ Algorithm: Calculate Circle Properties
 ## Algorithm 2: Right Triangle Solver
 
 **Pseudocode:**
-```java
+```
 Algorithm: Solve Right Triangle
 1. Display "Right Triangle Calculator"
 2. Display "Enter side A: "
@@ -101,7 +101,7 @@ Algorithm: Solve Right Triangle
 11. Display "Hypotenuse: " + hypotenuse
 12. Display "Area: " + area
 13. Display "Perimeter: " + perimeter
-```java
+```
 
 **Mathematical Notes:**
 - Pythagorean theorem: c² = a² + b² (where c is hypotenuse)
@@ -115,7 +115,7 @@ Algorithm: Solve Right Triangle
 ## Algorithm 3: Compound Interest Calculator
 
 **Pseudocode:**
-```java
+```
 Algorithm: Calculate Compound Interest
 1. Display "Compound Interest Calculator"
 2. Display "Enter principal amount: $"
@@ -134,7 +134,7 @@ Algorithm: Calculate Compound Interest
 15. Display "Principal: $" + principal
 16. Display "Final Amount: $" + finalAmount
 17. Display "Total Interest: $" + totalInterest
-```java
+```
 
 **Mathematical Notes:**
 - Compound interest formula: A = P(1 + r/n)^(nt)
@@ -148,7 +148,7 @@ Algorithm: Calculate Compound Interest
 ## Algorithm 4: Quadratic Equation Solver
 
 **Pseudocode:**
-```java
+```
 Algorithm: Solve Quadratic Equation
 1. Display "Quadratic Equation Solver"
 2. Display "For equation ax² + bx + c = 0"
@@ -169,7 +169,7 @@ Algorithm: Solve Quadratic Equation
 12. Else:
    a. Display "No real roots (complex solutions)"
 13. Display "Discriminant: " + discriminant
-```java
+```
 
 **Mathematical Notes:**
 - Quadratic formula: x = [-b ± √(b² - 4ac)] / 2a
@@ -183,7 +183,7 @@ Algorithm: Solve Quadratic Equation
 ## Algorithm 5: Fibonacci Sequence Generator
 
 **Pseudocode:**
-```java
+```
 Algorithm: Generate Fibonacci Sequence
 1. Display "Fibonacci Sequence Generator"
 2. Display "Enter number of terms: "
@@ -203,7 +203,7 @@ Algorithm: Generate Fibonacci Sequence
    d. Set second = next
    e. Add 1 to count
 11. Display "Sequence complete"
-```java
+```
 
 **Mathematical Notes:**
 - Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
@@ -217,7 +217,7 @@ Algorithm: Generate Fibonacci Sequence
 ## Algorithm 6: Statistical Calculator
 
 **Pseudocode:**
-```java
+```
 Algorithm: Calculate Statistics
 1. Display "Statistical Calculator"
 2. Initialize sum = 0
@@ -243,7 +243,7 @@ Algorithm: Calculate Statistics
    g. Display "Standard Deviation: " + standardDeviation
 8. Else:
    a. Display "No numbers entered"
-```java
+```
 
 **Mathematical Notes:**
 - Mean (average): μ = Σx / n
@@ -257,7 +257,7 @@ Algorithm: Calculate Statistics
 ## Algorithm 7: Distance Calculator (Coordinate Geometry)
 
 **Pseudocode:**
-```java
+```
 Algorithm: Calculate Distance Between Points
 1. Display "Distance Between Two Points"
 2. Display "Enter coordinates for point 1:"
@@ -276,7 +276,7 @@ Algorithm: Calculate Distance Between Points
 15. Display "Point 1: (" + x1 + ", " + y1 + ")"
 16. Display "Point 2: (" + x2 + ", " + y2 + ")"
 17. Display "Distance: " + distance
-```java
+```
 
 **Mathematical Notes:**
 - Distance formula: d = √[(x₂ - x₁)² + (y₂ - y₁)²]
@@ -359,7 +359,7 @@ Algorithm: Calculate Distance Between Points
 
 ### Algorithm 1: Geometry Calculator
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -382,7 +382,7 @@ public class Main {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - `Math.PI` constant for π
@@ -397,7 +397,7 @@ public class Main {
 
 ### Algorithm 2: Right Triangle Solver
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -423,7 +423,7 @@ public class Main {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - `Math.sqrt()` for square root function
@@ -438,7 +438,7 @@ public class Main {
 
 ### Algorithm 3: Compound Interest Calculator
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -469,7 +469,7 @@ public class Main {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Complex compound interest formula
@@ -484,7 +484,7 @@ public class Main {
 
 ### Algorithm 4: Quadratic Equation Solver
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -518,7 +518,7 @@ public class Main {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Discriminant determines number of roots
@@ -533,7 +533,7 @@ public class Main {
 
 ### Algorithm 5: Fibonacci Sequence Generator
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -569,7 +569,7 @@ public class Main {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Iterative Fibonacci calculation
@@ -585,7 +585,7 @@ public class Main {
 
 ### Algorithm 6: Statistical Calculator
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -627,7 +627,7 @@ public class Main {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Statistical formulas implementation
@@ -643,7 +643,7 @@ public class Main {
 
 ### Algorithm 7: Distance Calculator
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -675,7 +675,7 @@ public class Main {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Distance formula in coordinate geometry
@@ -693,29 +693,29 @@ public class Main {
 ### Common Math Mistakes in Java
 
 **Integer Division:**
-```java
+```
 int result = 5 / 2;  // Result: 2 (not 2.5!)
 double result = 5.0 / 2;  // Result: 2.5 
-```java
+```
 
 **Parentheses Matter:**
-```java
+```
 double wrong = 1 + 2 * 3;  // 7 (multiplication first)
 double right = (1 + 2) * 3;  // 9 (parentheses first)
-```java
+```
 
 **Power vs Multiplication:**
-```java
+```
 double wrong = x * 2;  // This is x × 2, not x²
 double right = x * x;  // This is x²
 double alsoRight = Math.pow(x, 2);  // Also x²
-```java
+```
 
 ---
 
 ### Math Class Quick Reference
 
-```java
+```
 // Constants
 Math.PI          // 3.14159265358979323846
 Math.E           // 2.71828182845904523536
@@ -739,7 +739,7 @@ Math.min(3, 7)   // 3 (minimum)
 Math.sin(x)
 Math.cos(x)
 Math.tan(x)
-```java
+```
 
 ---
 

@@ -23,7 +23,7 @@ Add decision-making to your programs with if/else statements.
 
 **Copy the following code EXACTLY as shown below into `main.swift`**
 
-```swift
+```
 import Foundation
 
 print("Enter a number: ", terminator: "")
@@ -42,7 +42,7 @@ if num % 2 == 0 {
 } else {
     print("\(num) is odd")
 }
-```swift
+```
 
 ---
 
@@ -64,7 +64,7 @@ if num % 2 == 0 {
 
 ### The Complete Code
 
-```swift
+```
 import Foundation
 
 print("Enter a number: ", terminator: "")
@@ -83,7 +83,7 @@ if num % 2 == 0 {
 } else {
     print("\(num) is odd")
 }
-```swift
+```
 
 ### What This Code Does
 
@@ -158,7 +158,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```swift
+```
 print("Hello, World!")
 
 ```

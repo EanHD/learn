@@ -84,7 +84,7 @@ Create an interactive calculator program with a menu that allows users to:
 The program should display a menu, get user choice, perform the selected operation, and return to the menu until the user chooses to exit.
 
 **Example:**
-```cpp
+```
 === Calculator Menu ===
 1. Addition
 2. Subtraction
@@ -98,7 +98,7 @@ Enter second number: 5
 Result: 10 + 5 = 15
 
 Press Enter to continue...
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for menu-driven calculator
@@ -120,7 +120,7 @@ Create a banking system menu that allows users to:
 Maintain a balance and track transactions. Handle insufficient funds for withdrawals.
 
 **Example:**
-```cpp
+```
 === Banking Menu ===
 1. Check Balance
 2. Deposit
@@ -133,7 +133,7 @@ Enter deposit amount: 100
 Deposit successful! New balance: $100.00
 
 Press Enter to continue...
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for banking system
@@ -155,7 +155,7 @@ Create a student grade management system with menu options:
 Store up to 10 student names and grades. Handle cases where no grades are entered.
 
 **Example:**
-```cpp
+```
 === Grade Manager ===
 1. Add Student Grade
 2. View All Grades
@@ -169,7 +169,7 @@ Enter grade (0-100): 95
 Grade added successfully!
 
 Press Enter to continue...
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for grade management
@@ -192,7 +192,7 @@ Create a restaurant menu system with:
 Include at least 5 menu items with prices. Allow multiple items in one order.
 
 **Example:**
-```cpp
+```
 === Restaurant Menu ===
 1. View Menu
 2. Place Order
@@ -210,7 +210,7 @@ Enter choice: 1
 5. Dessert - $4.99
 
 Press Enter to continue...
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for restaurant ordering
@@ -233,7 +233,7 @@ Create a library book management system with:
 Track book availability and borrower names. Handle cases where books are not available.
 
 **Example:**
-```cpp
+```
 === Library System ===
 1. Add Book
 2. Search Books
@@ -248,7 +248,7 @@ Enter author: Kernighan & Ritchie
 Book added successfully!
 
 Press Enter to continue...
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for library system
@@ -270,7 +270,7 @@ Create a simple game menu system with:
 Include a number guessing game for "Start New Game". Track high scores and allow basic settings.
 
 **Example:**
-```cpp
+```
 === Game Menu ===
 1. Start New Game
 2. Load Game
@@ -287,7 +287,7 @@ Too low! Try again: 37
 Correct! You won in 3 guesses!
 
 Press Enter to continue...
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for game menu system
@@ -299,7 +299,7 @@ Press Enter to continue...
 ### Interactive Pseudocode Guidelines
 
 **Menu System Structure:**
-```cpp
+```
 Algorithm: Menu System
 1. Display menu options clearly
 2. Get user choice
@@ -307,10 +307,10 @@ Algorithm: Menu System
 4. Process choice with appropriate action
 5. Return to menu or exit based on choice
 6. Handle invalid inputs gracefully
-```cpp
+```
 
 **Input Validation Loop:**
-```cpp
+```
 While input is invalid:
     Display prompt
     Get user input
@@ -320,7 +320,7 @@ While input is invalid:
     Else:
         Display error message
         Continue loop
-```cpp
+```
 
 ---
 
@@ -390,7 +390,7 @@ While input is invalid:
 - [ ] Loop until user chooses exit
 
 **Menu Structure:**
-```cpp
+```
 While user hasn't chosen exit:
     Display menu
     Get choice
@@ -402,7 +402,7 @@ While user hasn't chosen exit:
         Exit program
     Else:
         Display invalid choice message
-```cpp
+```
 
 ---
 
@@ -549,7 +549,7 @@ Expected implementation provided.
 
 ### Complete Solution
 
-```cpp
+```
 #include <iostream>
 
 int main() {

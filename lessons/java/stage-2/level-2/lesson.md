@@ -43,24 +43,24 @@ Variables are the memory of your programs! Today you'll learn how to use variabl
 ### How to Compile and Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    javac hello.java
    ```
 
 2. **Run your program**:
-   ```bash
+   ```
    java hello
    ```
 
 **Expected output:**
-```java
+```
 Hello, World!
-```java
+```
 
 ## Algorithm 1: Shopping Cart Total
 
 **Pseudocode:**
-```java
+```
 Algorithm: Calculate Shopping Total
 1. Initialize total to 0
 2. Initialize itemCount to 0
@@ -73,7 +73,7 @@ Algorithm: Calculate Shopping Total
    d. Get next price from user
 6. Display "Items purchased: " + itemCount
 7. Display "Total cost: $" + total
-```java
+```
 
 **Variable Analysis:**
 - `total`: Accumulator (starts at 0, adds prices)
@@ -87,7 +87,7 @@ Algorithm: Calculate Shopping Total
 ## Algorithm 2: Password Validation
 
 **Pseudocode:**
-```java
+```
 Algorithm: Validate Password
 1. Initialize attempts to 0
 2. Initialize isValid to false
@@ -102,7 +102,7 @@ Algorithm: Validate Password
    a. Display "Access granted! "
 6. Else:
    a. Display "Access denied! "
-```java
+```
 
 **Variable Analysis:**
 - `attempts`: Counter (tracks login attempts)
@@ -117,7 +117,7 @@ Algorithm: Validate Password
 ## Algorithm 3: Grade Average Calculator
 
 **Pseudocode:**
-```java
+```
 Algorithm: Calculate Class Average
 1. Initialize totalScore to 0
 2. Initialize studentCount to 0
@@ -136,7 +136,7 @@ Algorithm: Calculate Class Average
    c. Display "Total students: " + studentCount
 6. Else:
    a. Display "No students entered"
-```java
+```
 
 **Variable Analysis:**
 - `totalScore`: Accumulator (sums all grades)
@@ -152,7 +152,7 @@ Algorithm: Calculate Class Average
 ## Algorithm 4: Number Guessing Game
 
 **Pseudocode:**
-```java
+```
 Algorithm: Number Guessing Game
 1. Initialize secretNumber to 42
 2. Initialize guessCount to 0
@@ -171,7 +171,7 @@ Algorithm: Number Guessing Game
       ii. Else:
          i. Display "Too low! Try higher."
 6. Display "Thanks for playing!"
-```java
+```
 
 **Variable Analysis:**
 - `secretNumber`: Constant (game target)
@@ -186,7 +186,7 @@ Algorithm: Number Guessing Game
 ## Algorithm 5: Bank Account Simulator
 
 **Pseudocode:**
-```java
+```
 Algorithm: Bank Account Manager
 1. Initialize balance to 1000.00
 2. Initialize transactionCount to 0
@@ -219,7 +219,7 @@ Algorithm: Bank Account Manager
    g. Else:
       i. Display "Invalid choice!"
 7. Display "Thank you for banking with us!"
-```java
+```
 
 **Variable Analysis:**
 - `balance`: Accumulator (changes with deposits/withdrawals)
@@ -235,7 +235,7 @@ Algorithm: Bank Account Manager
 ## Algorithm 6: Temperature Tracker
 
 **Pseudocode:**
-```java
+```
 Algorithm: Daily Temperature Tracker
 1. Initialize dayCount to 0
 2. Initialize totalTemperature to 0
@@ -258,7 +258,7 @@ Algorithm: Daily Temperature Tracker
 11. Display "Highest: " + highestTemp + "°F"
 12. Display "Lowest: " + lowestTemp + "°F"
 13. Display "Readings taken: " + readingCount
-```java
+```
 
 **Variable Analysis:**
 - `totalTemperature`: Accumulator (sum of all readings)
@@ -276,7 +276,7 @@ Algorithm: Daily Temperature Tracker
 **For each algorithm, track how variables change:**
 
 **Example for Algorithm 1:**
-```java
+```
 Initial state:
 total = 0, itemCount = 0
 
@@ -291,7 +291,7 @@ total = 15.75, itemCount = 2
 User enters: 0 (finish)
 Final state:
 total = 15.75, itemCount = 2
-```java
+```
 
 ---
 
@@ -324,25 +324,25 @@ total = 15.75, itemCount = 2
 ## Variable Patterns in Pseudocode
 
 ### Counter Variables
-```java
+```
 Initialize counter to 0
 While condition:
     Add 1 to counter
     // do something
 Display "Count: " + counter
-```java
+```
 
 ### Accumulator Variables
-```java
+```
 Initialize total to 0
 While getting values:
     Get value from user
     Add value to total
 Display "Total: " + total
-```java
+```
 
 ### Flag Variables
-```java
+```
 Initialize isValid to false
 // check conditions
 If condition met:
@@ -351,16 +351,16 @@ If isValid:
     Display "Success"
 Else:
     Display "Failed"
-```java
+```
 
 ### Tracker Variables
-```java
+```
 Initialize maximum to smallest possible value
 Initialize minimum to largest possible value
 For each value:
     If value > maximum: set maximum to value
     If value < minimum: set minimum to value
-```java
+```
 
 ---
 
@@ -372,7 +372,7 @@ For each value:
 
 ### Algorithm 1: Shopping Cart Total
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -399,7 +399,7 @@ public class Main {
         scanner.close();
     }
 }
-```java
+```
 
 **Variable Flow:**
 - `total`: Starts at 0, accumulates prices
@@ -415,7 +415,7 @@ public class Main {
 
 ### Algorithm 2: Password Validation
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -446,7 +446,7 @@ public class Main {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - String comparison with `.equals()` (NOT ==!)
@@ -461,7 +461,7 @@ public class Main {
 
 ### Algorithm 3: Grade Average Calculator
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -495,7 +495,7 @@ public class Main {
         scanner.close();
     }
 }
-```java
+```
 
 **Variable Management:**
 - `totalScore`: Accumulates all grades
@@ -510,7 +510,7 @@ public class Main {
 
 ### Algorithm 4: Number Guessing Game
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -546,7 +546,7 @@ public class Main {
         scanner.close();
     }
 }
-```java
+```
 
 **Game Logic:**
 - `gameWon` flag controls the game loop
@@ -562,7 +562,7 @@ public class Main {
 
 ### Algorithm 5: Bank Account Simulator
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -615,7 +615,7 @@ public class Main {
         scanner.close();
     }
 }
-```java
+```
 
 **Complex Variable Management:**
 - `balance`: Changes with deposits/withdrawals
@@ -631,7 +631,7 @@ public class Main {
 
 ### Algorithm 6: Temperature Tracker
 
-```java
+```
 import java.util.Scanner;
 
 public class Main {
@@ -674,7 +674,7 @@ public class Main {
         scanner.close();
     }
 }
-```java
+```
 
 **Statistical Tracking:**
 - `highestTemp`: Tracks maximum value (initialized to very low)
@@ -691,81 +691,81 @@ public class Main {
 ### Variable Initialization Best Practices
 
 **Counters:** Always start at 0
-```java
+```
 int count = 0;
-```java
+```
 
 **Accumulators:** Usually start at 0
-```java
+```
 double total = 0.0;
-```java
+```
 
 **Flags:** Initialize to false
-```java
+```
 boolean isDone = false;
-```java
+```
 
 **Maximum Trackers:** Initialize to minimum possible value
-```java
+```
 double maxValue = Double.MIN_VALUE;  // or a very small number like -1000
-```java
+```
 
 **Minimum Trackers:** Initialize to maximum possible value
-```java
+```
 double minValue = Double.MAX_VALUE;  // or a very large number like 1000
-```java
+```
 
 ### Common Variable Mistakes in Java
 
 **Forgetting Initialization:**
-```java
+```
 int sum;  // Uninitialized - compiler error in Java!
 sum = sum + 5;  // Won't compile
-```java
+```
 
 **Wrong Data Types:**
-```java
+```
 int average;  // Wrong! Should be double for decimals
 average = 85.5;  // Compiler error - can't assign double to int
-```java
+```
 
 **Scope Issues:**
-```java
+```
 if (condition) {
     int temp = 5;  // Only exists in this block
 }
 // temp is undefined here - compiler error!
-```java
+```
 
 **String Comparison:**
-```java
+```
 String password = "secret";
 if (password == "secret") { }  // WRONG! Compares references
 if (password.equals("secret")) { }  // CORRECT! Compares content
-```java
+```
 
 ---
 
 ### Java Variable Naming Conventions
 
 **camelCase for variables:**
-```java
+```
 int studentCount = 0;        //  Good
 int student_count = 0;       //  Not Java style (that's C/Python)
 int StudentCount = 0;        //  That's for class names
-```java
+```
 
 **Descriptive names:**
-```java
+```
 double total = 0.0;          //  Clear purpose
 double t = 0.0;              //  Too short, unclear
 double totalPriceInDollars;  //  Very clear
-```java
+```
 
 **Constants (final):**
-```java
+```
 final int MAX_ATTEMPTS = 3;  //  UPPERCASE for constants
-```java
+```
 
 ---
 

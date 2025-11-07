@@ -23,13 +23,13 @@ Now that you know the basics, it's time to think like a programmer! You'll take 
 
 Here's some pseudocode that describes a simple program:
 
-```python
+```
 START
  print "Welcome to the program!"
  print "This is my first real program"
  print "I'm learning to code!"
 END
-```python
+```
 
 **Your mission**: Translate this pseudocode into Python code.
 
@@ -46,24 +46,24 @@ Hints:
 1. **Open your terminal**
 2. **Navigate to your workspace folder**:
 
- ```bash
+ ```
  cd ~/.local/share/learn/workspaces/python/stage-2/level-1
- ```bash
+ ```
 
 3. **Edit main.py** with your translated code
 4. **Run your program**:
 
- ```bash
+ ```
  python3 main.py
- ```python
+ ```
 
 **Expected output:**
 
-```python
+```
 Welcome to the program!
 This is my first real program
 I'm learning to code!
-```python
+```
 
 ---
 
@@ -114,11 +114,11 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ### Solution
 
-```python
+```
 print("Welcome to the program!")
 print("This is my first real program")
 print("I'm learning to code!")
-```python
+```
 
 ### Explanation
 
@@ -146,12 +146,12 @@ Each line of pseudocode translates directly:
 
 **3. Pseudocode to Code Mapping**
 
-```python
+```
 Pseudocode: print "message"
 Code: print("message")
  ↑ ↑
  Syntax to use in real Python
-```python
+```
 
 ### Common Mistakes & Solutions
 

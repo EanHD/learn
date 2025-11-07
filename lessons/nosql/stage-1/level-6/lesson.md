@@ -23,7 +23,7 @@ Learn to repeat actions efficiently using loops.
 
 **Copy the following code EXACTLY as shown below into `main.js`**
 
-```javascript
+```
 // Loop operations in MongoDB
 print("Creating documents 1-10:");
 for (var i = 1; i <= 10; i++) {
@@ -50,12 +50,12 @@ for (var i = 1; i <= 10; i++) {
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```javascript
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 mongo < script.js
 ```
 

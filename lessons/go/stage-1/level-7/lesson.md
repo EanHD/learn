@@ -26,7 +26,7 @@ Welcome to the world of functions! Today you'll learn how to organize your code 
 
 **Copy the following code into a new file called `functions.go`**
 
-```go
+```
 package main
 
 import "fmt"
@@ -189,25 +189,25 @@ func formatFullName(firstName, lastName string) string {
 func isNumberEven(number int) bool {
     return number%2 == 0
 }
-```go
+```
 
 ---
 
 ### How to Execute
 
 1. **Create or navigate to a Go module directory** (if not already in one):
-   ```bash
+   ```
    mkdir functions-example && cd functions-example
    go mod init functions
-   ```go
+   ```
 2. **Copy the code into `functions.go`**
 3. **Run your program**:
-   ```bash
+   ```
    go run functions.go
-   ```bash
+   ```
 
 **Expected output:**
-```go
+```
 === Basic Function Definition ===
 Hello! Welcome to the wonderful world of functions!
 Hello! Welcome to the wonderful world of functions!
@@ -251,7 +251,7 @@ Rectangle area (10 x 5): 50
 Circle area (radius 7): 153.94
 Full name: John Doe
 Is 12 even? true
-```go
+```
 
 ---
 
@@ -304,39 +304,39 @@ Is 12 even? true
 
 ### Code Breakdown
 
-```go
+```
 func greetUser() {
     fmt.Println("Hello! Welcome to the wonderful world of functions!")
 }
-```go
+```
 - **`func`** = Keyword to declare a function
 - **`greetUser`** = Function name (follows Go naming conventions)
 - **`()`** = Parameters (empty because no parameters needed)
 - **`{}`** = Function body (code that runs when function is called)
 - **No return** = Function runs code but doesn't return a value
 
-```go
+```
 func greetByName(name string) {
     fmt.Printf("Hello, %s! Nice to meet you!\n", name)
 }
-```go
+```
 - **`name string`** = Parameter (name is the variable, string is the type)
 - **Parameters** = Variables defined in function signature with their types
 - **Arguments** = Actual values passed when calling the function
 
-```go
+```
 func addNumbers(a int, b int) int {
     sum := a + b
     return sum
 }
-```go
+```
 - **`a int, b int`** = Multiple parameters with types
 - **`int`** after parameters = Return type
 - **`return`** = Sends value back to caller
 
-```go
+```
 result1 := addNumbers(5, 3)
-```go
+```
 - **`addNumbers(5, 3)`** = Function call with arguments
 - **`5` and `3`** = Arguments passed to the function
 - **Return value** = Value that function sends back
@@ -345,25 +345,25 @@ result1 := addNumbers(5, 3)
 ### Function Declaration Syntax
 
 **Basic function:**
-```go
+```
 func functionName(paramName paramType) returnType {
     // function body
     return value  // if function returns something
 }
-```go
+```
 
 **Multiple parameters of same type:**
-```go
+```
 func add(a, b int) int {  // a and b are both integers
     return a + b
 }
-```go
+```
 
 ### Multiple Return Values
 
 Go's unique feature - functions can return multiple values:
 
-```go
+```
 func divide(a, b float64) (float64, float64) {
     if b == 0 {
         return 0, 0  // return 2 values
@@ -373,18 +373,18 @@ func divide(a, b float64) (float64, float64) {
 
 // Usage
 quotient, remainder := divide(10, 3)
-```go
+```
 
 **Ignoring return values with blank identifier:**
-```go
+```
 onlyQuotient, _ := divide(10, 3)  // Ignore the remainder
-```go
+```
 
 ### Named Return Values
 
 Go allows you to name return values in the function signature:
 
-```go
+```
 func calculate(a, b int) (sum int, diff int) {
     sum = a + b   // Direct assignment to return variable
     diff = a - b  // Direct assignment to return variable
@@ -397,13 +397,13 @@ func calculate(a, b int) (int, int) {
     diff := a - b
     return sum, diff
 }
-```go
+```
 
 ### Variadic Functions
 
 Functions that accept a variable number of arguments:
 
-```go
+```
 func sum(numbers ...int) int {  // ...int means 0 or more int arguments
     total := 0
     for _, num := range numbers {
@@ -416,18 +416,18 @@ func sum(numbers ...int) int {  // ...int means 0 or more int arguments
 fmt.Println(sum(1, 2, 3))        // 6
 fmt.Println(sum(1, 2, 3, 4, 5))  // 15
 fmt.Println(sum())               // 0
-```go
+```
 
 **Passing a slice to variadic function:**
-```go
+```
 nums := []int{1, 2, 3, 4, 5}
 result := sum(nums...)  // Note the ... to unpack the slice
-```go
+```
 
 ### Function Scope
 
 **Package level:**
-```go
+```
 var globalVar = "I'm accessible everywhere in the package"
 
 func myFunc() {
@@ -436,13 +436,13 @@ func myFunc() {
     fmt.Println(localVar)   // OK: Accessing local variable
 }
 // fmt.Println(localVar)   // Error: localVar is not accessible here
-```go
+```
 
 ### Anonymous Functions
 
 Functions without a name, often used as values:
 
-```go
+```
 // Assign function to variable
 multiply := func(a, b int) int {
     return a * b
@@ -453,13 +453,13 @@ result := multiply(5, 3)  // Use like a regular function
 result := func(x int) int {
     return x * 2
 }(5)  // Function is called immediately with argument 5
-```go
+```
 
 ### First-Class Functions
 
 In Go, functions are first-class values:
 
-```go
+```
 // Function that takes another function as parameter
 func process(numbers []int, operation func(int) int) []int {
     result := make([]int, len(numbers))
@@ -472,13 +472,13 @@ func process(numbers []int, operation func(int) int) []int {
 // Usage
 numbers := []int{1, 2, 3, 4, 5}
 doubled := process(numbers, func(n int) int { return n * 2 })
-```go
+```
 
 ### Error Handling Pattern
 
 A common Go pattern returns a value and an error:
 
-```go
+```
 func divide(a, b float64) (float64, error) {
     if b == 0 {
         return 0, errors.New("division by zero")
@@ -493,7 +493,7 @@ if err != nil {
     return
 }
 fmt.Println("Result:", result)
-```go
+```
 
 ### Common Errors & Solutions
 
@@ -508,7 +508,7 @@ fmt.Println("Result:", result)
 ### Function Best Practices
 
 **Function naming:**
-```go
+```
 // Good - clear and descriptive
 func calculateArea(length, width float64) float64 { ... }
 func isEmailValid(email string) bool { ... }
@@ -516,7 +516,7 @@ func sendNotification(message string) error { ... }
 
 // Go naming conventions: use MixedCaps (camelCase starting with capital)
 func CalculateArea(length, width float64) float64 { ... }  // For exportable functions
-```go
+```
 
 **Function size:**
 - Keep functions focused on a single task
@@ -524,7 +524,7 @@ func CalculateArea(length, width float64) float64 { ... }  // For exportable fun
 - If a function gets too long, consider breaking it into smaller ones
 
 **Single Responsibility Principle:**
-```go
+```
 // Good - one purpose
 func calculateTax(amount, rate float64) float64 {
     return amount * rate
@@ -537,10 +537,10 @@ func processOrder(order Order) (float64, error) {
     // ... other processing
     return total, nil
 }
-```go
+```
 
 **Error handling in functions:**
-```go
+```
 import "errors"
 
 func divide(a, b float64) (float64, error) {
@@ -549,13 +549,13 @@ func divide(a, b float64) (float64, error) {
     }
     return a / b, nil
 }
-```go
+```
 
 ### Advanced Challenge (For the Brave!)
 
 Try this comprehensive function example:
 
-```go
+```
 package main
 
 import (
@@ -660,7 +660,7 @@ func transfer(fromAccount, toAccount *Account, amount float64) error {
                amount, fromAccount.Name, toAccount.Name)
     return nil
 }
-```go
+```
 
 ---
 
@@ -699,7 +699,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```go
+```
 package main
 
 import "fmt"

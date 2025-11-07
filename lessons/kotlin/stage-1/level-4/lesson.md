@@ -23,7 +23,7 @@ Make your programs interactive by reading input from users.
 
 **Copy the following code EXACTLY as shown below into `main.kt`**
 
-```kotlin
+```
 fun main() {
     print("Enter your name: ")
     val name = readLine()
@@ -35,7 +35,7 @@ fun main() {
     println("You are $age years old.")
     println("Next year you'll be ${age + 1}.")
 }
-```kotlin
+```
 
 ---
 
@@ -57,7 +57,7 @@ fun main() {
 
 ### The Complete Code
 
-```kotlin
+```
 fun main() {
     print("Enter your name: ")
     val name = readLine()
@@ -69,7 +69,7 @@ fun main() {
     println("You are $age years old.")
     println("Next year you'll be ${age + 1}.")
 }
-```kotlin
+```
 
 ### What This Code Does
 

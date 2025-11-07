@@ -58,7 +58,7 @@ Create a production-ready Final Capstone Project using Powershell with:
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    powershell -File hello.ps1
    ```
 

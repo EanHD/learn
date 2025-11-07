@@ -235,7 +235,7 @@ Follow these stages:
 
 **Your architecture will depend on your chosen project, but should include:**
 
-```r
+```
 // Main program structure
 // - Data definitions
 // - Core functions

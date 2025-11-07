@@ -22,13 +22,13 @@ You're now ready for Stage 3! This is where you start thinking like a real progr
 
 Step 1: Write the pseudocode first
 
-```dart
+```
 What should happen:
 1. Print "Hello, [name]"
 
 Write your pseudocode in plain English below:
 (Your pseudocode here)
-```dart
+```
 
 Step 2: Implement your pseudocode in Dart
 
@@ -38,14 +38,14 @@ Create `main.dart.dart` with your solution.
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    dart hello.dart
-   ```dart
+   ```
 
 **Expected output:**
-```dart
+```
 Hello, World!
-```dart
+```
 
 ### Success Checklist
 
@@ -128,12 +128,12 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```dart
+```
 void main() {
     print("Hello, World!");
 }
 
-```dart
+```
 
 ### Code Breakdown
 

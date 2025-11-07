@@ -23,7 +23,7 @@ Learn how to perform **mathematical operations** in Java. Math is everywhere in 
 
 **Copy the following code EXACTLY into `main.java`**
 
-```java
+```
 public class Main {
     public static void main(String[] args) {
         int x = 10;
@@ -36,7 +36,7 @@ public class Main {
         System.out.println("Modulo (remainder): " + (x % y));
     }
 }
-```java
+```
 
 ---
 
@@ -45,19 +45,19 @@ public class Main {
 **Vim:** `<Space>r`
 
 **Terminal:**
-```bash
+```
 javac main.java
 java Main
-```java
+```
 
 **Expected output:**
-```java
+```
 Addition: 13
 Subtraction: 7
 Multiplication: 30
 Division: 3
 Modulo (remainder): 1
-```java
+```
 
 ---
 
@@ -100,11 +100,11 @@ The parentheses `(x + y)` ensure the calculation happens before printing!
 
 ### Code Breakdown
 
-```java
+```
 int x = 10;
 int y = 3;
 System.out.println("Addition: " + (x + y));  // 10 + 3 = 13
-```java
+```
 
 The `(x + y)` happens first (operator precedence), then concatenates with the string.
 
@@ -120,10 +120,10 @@ The `(x + y)` happens first (operator precedence), then concatenates with the st
 
 ### Integer vs Floating Point Division
 
-```java
+```
 int a = 10 / 3;      // Result: 3 (not 3.33)
 double b = 10.0 / 3; // Result: 3.333...
-```java
+```
 
 Integer division truncates (cuts off) decimals!
 

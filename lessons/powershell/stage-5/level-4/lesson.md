@@ -58,7 +58,7 @@ Create a production-ready Data Visualization using Powershell with:
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    powershell -File hello.ps1
    ```
 

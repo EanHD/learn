@@ -23,7 +23,7 @@ Master arithmetic operations and use R as your powerful calculator.
 
 **Copy the following code EXACTLY as shown below into `main.R`**
 
-```r
+```
 a <- 10
 b <- 3
 
@@ -40,12 +40,12 @@ cat("Modulus:", a %% b, "\n")
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```r
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 Rscript main.R
 ```
 

@@ -23,7 +23,7 @@ Learn to repeat actions efficiently using loops.
 
 **Copy the following code EXACTLY as shown below into `main.ps1`**
 
-```powershell
+```
 Write-Host "Counting 1 to 10:"
 1..10 | ForEach-Object { Write-Host $_ -NoNewline; Write-Host " " -NoNewline }
 Write-Host ""
@@ -60,7 +60,7 @@ Write-Host "Liftoff!"
 
 ### The Complete Code
 
-```powershell
+```
 Write-Host "Counting 1 to 10:"
 1..10 | ForEach-Object { Write-Host $_ -NoNewline; Write-Host " " -NoNewline }
 Write-Host ""

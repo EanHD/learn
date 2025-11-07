@@ -30,7 +30,7 @@ START
     for i = 1 to 5
         print i
 END
-```python
+```
 
 **Translate to Python. Hints:**
 
@@ -44,13 +44,13 @@ END
 
 Expected output:
 
-```python
+```
 1
 2
 3
 4
 5
-```python
+```
 
 ---
 
@@ -68,10 +68,10 @@ Expected output:
 
 ### Solution
 
-```python
+```
 for i in range(1, 6):
     print(i)
-```python
+```
 
 ### Key Concepts
 
@@ -95,11 +95,11 @@ for i in range(1, 6):
 
 **Why range(1, 6) for "1 to 5"?**
 
-```python
+```
 range(1, 6) = [1, 2, 3, 4, 5]
               ↑           ↑
             start      stop (exclusive)
-```python
+```
 
 ---
 

@@ -23,7 +23,7 @@ Learn to repeat actions efficiently using loops.
 
 **Copy the following code EXACTLY as shown below into `main.dart`**
 
-```dart
+```
 void main() {
   print('Counting 1 to 10:');
   for (int i = 1; i <= 10; i++) {
@@ -44,7 +44,7 @@ void main() {
   }
   print('Liftoff!');
 }
-```dart
+```
 
 ---
 
@@ -66,7 +66,7 @@ void main() {
 
 ### The Complete Code
 
-```dart
+```
 void main() {
   print('Counting 1 to 10:');
   for (int i = 1; i <= 10; i++) {
@@ -87,7 +87,7 @@ void main() {
   }
   print('Liftoff!');
 }
-```dart
+```
 
 ### What This Code Does
 
@@ -161,12 +161,12 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```dart
+```
 void main() {
     print("Hello, World!");
 }
 
-```dart
+```
 
 ### Code Breakdown
 

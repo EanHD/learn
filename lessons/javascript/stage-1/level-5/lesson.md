@@ -25,7 +25,7 @@ Time to make programs that can make decisions! Today you'll learn how to write c
 
 **Copy the following code into a new file called `conditionals.js`**
 
-```javascript
+```
 console.log("=== Simple Age Check ===");
 // Input for age
 let age = 20;
@@ -175,19 +175,19 @@ let greeting = timeOfDay < 12 ? "Good morning!" :
                timeOfDay < 18 ? "Good afternoon!" : 
                "Good evening!";
 console.log("Time: " + timeOfDay + ":00, Greeting: " + greeting);
-```javascript
+```
 
 ---
 
 ### How to Execute
 
 1. **Run your program**:
-   ```bash
+   ```
    node conditionals.js
-   ```java
+   ```
 
 **Expected output:**
-```javascript
+```
 === Simple Age Check ===
 You are an adult (18 or older)
 
@@ -217,7 +217,7 @@ Today is Wednesday - middle of the week
 === Ternary Operator Demo ===
 Score: 88, Result: Pass
 Time: 14:00, Greeting: Good afternoon!
-```javascript
+```
 
 ---
 
@@ -281,19 +281,19 @@ In JavaScript conditionals, you'll use these comparison operators:
 
 ### Code Breakdown
 
-```javascript
+```
 if (age >= 18) {
     console.log("You are an adult (18 or older)");
 } else {
     console.log("You are a minor (under 18)");
 }
-```javascript
+```
 - **`if`** = Start of conditional statement
 - **`(age >= 18)`** = Condition that evaluates to true or false
 - **`{}`** = Code block executed if condition is true
 - **`else`** = Code block executed if condition is false
 
-```javascript
+```
 if (grade >= 90) {
     console.log("Grade: A (90-100)");
 } else if (grade >= 80) {
@@ -305,18 +305,18 @@ if (grade >= 90) {
 } else {
     console.log("Grade: F (below 60)");
 }
-```javascript
+```
 - **`else if`** = Additional condition to check if the first was false
 - **Execution order** matters: JavaScript checks each condition in order and executes the first true one
 - **Only one block** executes, not multiple blocks
 
-```javascript
+```
 if (username === "admin" && password === "secret123") {
     console.log("Login successful! Welcome, admin.");
 } else {
     console.log("Login failed! Invalid username or password.");
 }
-```javascript
+```
 - **`&&`** = Logical AND operator (both conditions must be true)
 - **`===`** = Strict equality (both value AND type must match)
 - **Security** considerations: Never hardcode credentials in real programs
@@ -324,12 +324,12 @@ if (username === "admin" && password === "secret123") {
 ### Comparison Operators Deep Dive
 
 **Loose vs Strict Equality:**
-```javascript
+```
 console.log(5 == "5");   // true (values are the same after conversion)
 console.log(5 === "5");  // false (different types: number vs string)
 console.log(0 == false); // true (0 and false are both "falsy")
 console.log(0 === false); // false (different types)
-```javascript
+```
 
 **Best Practice**: Use `===` (strict equality) in most cases to avoid unexpected type conversions.
 
@@ -342,7 +342,7 @@ console.log(0 === false); // false (different types)
 | NOT | `!` | Reverse condition | `!true` | `false` |
 
 **More Examples:**
-```javascript
+```
 // AND: All conditions must be true
 let age = 21;
 let hasID = true;
@@ -364,11 +364,11 @@ let isLoggedIn = false;
 if (!isLoggedIn) {
     console.log("Please log in first");
 }
-```javascript
+```
 
 ### Nested Conditionals
 
-```javascript
+```
 if (number > 0) {
     console.log("The number is positive");
     if (number % 2 === 0) {        // Nested if
@@ -378,13 +378,13 @@ if (number > 0) {
         }
     }
 }
-```javascript
+```
 - **Inner condition** only evaluated if outer condition is true
 - **Be careful** with nesting - too deep can be hard to read
 
 ### Switch Statement
 
-```javascript
+```
 switch (dayOfWeek) {
     case 1:
         console.log("Today is Monday");
@@ -396,7 +396,7 @@ switch (dayOfWeek) {
         console.log("Invalid day number");
         break;
 }
-```javascript
+```
 - **Alternative to long if/else if** chains
 - **`break`** = Stops execution and exits switch
 - **Without break** = Falls through to next case ("fallthrough")
@@ -404,27 +404,27 @@ switch (dayOfWeek) {
 
 ### Ternary Operator
 
-```javascript
+```
 let result = score >= 60 ? "Pass" : "Fail";
-```javascript
+```
 - **Syntax**: `condition ? valueIfTrue : valueIfFalse`
 - **Same as**:
-```javascript
+```
 let result;
 if (score >= 60) {
     result = "Pass";
 } else {
     result = "Fail";
 }
-```javascript
+```
 
 **Chained Ternary (advanced):**
-```javascript
+```
 let timeOfDay = 14;
 let greeting = timeOfDay < 12 ? "Good morning!" : 
                timeOfDay < 18 ? "Good afternoon!" : 
                "Good evening!";
-```javascript
+```
 
 ### Truthy and Falsy Values
 
@@ -453,7 +453,7 @@ All other values are "truthy", even `"false"` (string) and `[]` (empty array)!
 ### Best Practices for Conditionals
 
 **Use descriptive variable names:**
-```javascript
+```
 // Good
 if (isAdult) { ... }
 if (isValidEmail) { ... }
@@ -461,17 +461,17 @@ if (isValidEmail) { ... }
 // Avoid
 if (x) { ... }
 if (flag) { ... }
-```javascript
+```
 
 **Keep conditions simple:**
-```javascript
+```
 // Good - store complex condition in variable
 let canVote = age >= 18 && isCitizen && !isInPrison;
 if (canVote) { ... }
 
 // Avoid - hard to read
 if (age >= 18 && isCitizen && !isInPrison) { ... }
-```javascript
+```
 
 **Consider switch vs if/else if:**
 - Use `switch` for exact value matching
@@ -481,7 +481,7 @@ if (age >= 18 && isCitizen && !isInPrison) { ... }
 
 Try this complex conditional program:
 
-```javascript
+```
 // A simple grading system with lots of conditions
 let studentName = "Alex";
 let examScore = 88;
@@ -547,7 +547,7 @@ if (overallScore >= 75 && participation) {
 } else {
     console.log("Not eligible for graduation, must repeat course");
 }
-```javascript
+```
 
 ---
 

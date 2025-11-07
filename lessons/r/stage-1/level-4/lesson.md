@@ -23,7 +23,7 @@ Make your programs interactive by reading input from users.
 
 **Copy the following code EXACTLY as shown below into `main.R`**
 
-```r
+```
 cat("Enter your name: ")
 name <- readLines("stdin", n=1)
 
@@ -39,12 +39,12 @@ cat("You are", age, "years old.\n")
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```r
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 Rscript main.R
 ```
 

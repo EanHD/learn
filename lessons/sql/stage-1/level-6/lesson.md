@@ -23,7 +23,7 @@ Learn to repeat actions efficiently using loops.
 
 **Copy the following code EXACTLY as shown below into `main.sql`**
 
-```sql
+```
 -- Loops using Recursive CTE
 WITH Numbers AS (
     SELECT 1 AS n
@@ -73,7 +73,7 @@ SELECT 'Liftoff!' AS count;
 
 ### The Complete Code
 
-```sql
+```
 -- Loops using Recursive CTE
 WITH Numbers AS (
     SELECT 1 AS n

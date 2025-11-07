@@ -26,36 +26,36 @@ Welcome to Level 3! Today we're focusing on mathematical operations in pseudocod
 Mathematical expressions in pseudocode follow standard notation:
 
 **Basic operations:**
-```javascript
+```
 SET result TO 5 + 3
 SET result TO 10 - 4
 SET result TO 6 * 7
 SET result TO 15 / 3
 SET remainder TO 17 MOD 5
-```javascript
+```
 
 **Complex expressions:**
-```javascript
+```
 SET area TO length * width
 SET volume TO length * width * height
 SET average TO (num1 + num2 + num3) / 3
 SET tax TO price * 0.08
 SET discount TO original_price * discount_rate
-```javascript
+```
 
 **Order of operations:**
-```javascript
+```
 SET result TO 2 + 3 * 4     // result = 14 (not 20), multiplication first
 SET result TO (2 + 3) * 4   // result = 20, parentheses override
 SET result TO 10 / 2 + 3    // result = 8, division first
-```javascript
+```
 
 **Mathematical functions:**
-```javascript
+```
 SET result TO POWER(2, 3)    // 2 to the power of 3
 SET result TO SQRT(16)       // square root of 16
 SET result TO ROUND(3.7)     // round to nearest integer
-```javascript
+```
 
 ---
 
@@ -69,19 +69,19 @@ SET result TO ROUND(3.7)     // round to nearest integer
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    node hello.js
-   ```java
+   ```
 
 **Expected output:**
-```javascript
+```
 Hello, World!
-```javascript
+```
 
 ## Algorithm 1: Complex Arithmetic Expression
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Evaluate Complex Expression
 1. SET a TO 10
 2. SET b TO 5
@@ -92,7 +92,7 @@ Algorithm: Evaluate Complex Expression
 7. DISPLAY "Result without parentheses: " + result2
 8. SET result3 TO ((a + b) * c - a) / c
 9. DISPLAY "Result with different grouping: " + result3
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that evaluates complex arithmetic expressions.
 
@@ -101,7 +101,7 @@ Algorithm: Evaluate Complex Expression
 ## Algorithm 2: Quadratic Formula Calculator
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Solve Quadratic Equation
 1. SET a TO 1
 2. SET b TO -5
@@ -112,7 +112,7 @@ Algorithm: Solve Quadratic Equation
 7. SET root2 TO (-b - sqrt_discriminant) / (2 * a)
 8. DISPLAY "Root 1: " + root1
 9. DISPLAY "Root 2: " + root2
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that solves quadratic equations using the quadratic formula.
 
@@ -121,7 +121,7 @@ Algorithm: Solve Quadratic Equation
 ## Algorithm 3: Compound Interest Calculator
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Calculate Compound Interest
 1. SET principal TO 1000
 2. SET rate TO 0.05
@@ -132,7 +132,7 @@ Algorithm: Calculate Compound Interest
 7. DISPLAY "Principal: $" + principal
 8. DISPLAY "Final Amount: $" + amount
 9. DISPLAY "Interest Earned: $" + interest
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that calculates compound interest.
 
@@ -141,7 +141,7 @@ Algorithm: Calculate Compound Interest
 ## Algorithm 4: Geometric Calculations
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Calculate Geometric Properties
 1. SET radius TO 5
 2. SET side TO 4
@@ -155,7 +155,7 @@ Algorithm: Calculate Geometric Properties
 10. DISPLAY "Circle - Area: " + circle_area + ", Circumference: " + circle_circumference
 11. DISPLAY "Square - Area: " + square_area + ", Perimeter: " + square_perimeter
 12. DISPLAY "Triangle - Area: " + triangle_area
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that calculates geometric properties.
 
@@ -164,7 +164,7 @@ Algorithm: Calculate Geometric Properties
 ## Algorithm 5: Physics Formula Calculator
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Physics Calculations
 1. SET mass TO 5.5
 2. SET velocity TO 10
@@ -178,7 +178,7 @@ Algorithm: Physics Calculations
 10. DISPLAY "Force: " + force
 11. DISPLAY "Distance: " + distance
 12. DISPLAY "Momentum: " + momentum
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that calculates physics formulas.
 
@@ -187,7 +187,7 @@ Algorithm: Physics Calculations
 ## Algorithm 6: Temperature Conversion with Multiple Formulas
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Multiple Temperature Conversions
 1. SET celsius TO 25
 2. SET fahrenheit TO celsius * 9 / 5 + 32
@@ -199,7 +199,7 @@ Algorithm: Multiple Temperature Conversions
 8. DISPLAY "Kelvin: " + kelvin
 9. DISPLAY "F to C: " + celsius_from_f
 10. DISPLAY "K to C: " + celsius_from_k
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that performs multiple temperature conversions.
 
@@ -208,7 +208,7 @@ Algorithm: Multiple Temperature Conversions
 ## Algorithm 7: Statistical Calculations
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Calculate Statistics for Three Numbers
 1. SET num1 TO 10
 2. SET num2 TO 20
@@ -225,7 +225,7 @@ Algorithm: Calculate Statistics for Three Numbers
 13. DISPLAY "Range: " + range
 14. DISPLAY "Variance: " + variance
 15. DISPLAY "Standard Deviation: " + std_deviation
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that calculates statistical measures.
 
@@ -282,7 +282,7 @@ Algorithm: Calculate Statistics for Three Numbers
 
 ### Algorithm 1: Complex Arithmetic Expression
 
-```javascript
+```
 // Algorithm: Evaluate Complex Expression
 let a = 10;
 let b = 5;
@@ -296,11 +296,11 @@ console.log("Result without parentheses: " + result2);
 
 let result3 = ((a + b) * c - a) / c;
 console.log("Result with different grouping: " + result3);
-```javascript
+```
 
 ### Algorithm 2: Quadratic Formula Calculator
 
-```javascript
+```
 // Algorithm: Solve Quadratic Equation
 let a = 1;
 let b = -5;
@@ -313,11 +313,11 @@ let root2 = (-b - sqrt_discriminant) / (2 * a);
 
 console.log("Root 1: " + root1);
 console.log("Root 2: " + root2);
-```javascript
+```
 
 ### Algorithm 3: Compound Interest Calculator
 
-```javascript
+```
 // Algorithm: Calculate Compound Interest
 let principal = 1000;
 let rate = 0.05;
@@ -330,11 +330,11 @@ let interest = amount - principal;
 console.log("Principal: $" + principal);
 console.log("Final Amount: $" + amount.toFixed(2));
 console.log("Interest Earned: $" + interest.toFixed(2));
-```javascript
+```
 
 ### Algorithm 4: Geometric Calculations
 
-```javascript
+```
 // Algorithm: Calculate Geometric Properties
 let radius = 5;
 let side = 4;
@@ -350,11 +350,11 @@ let triangle_area = 0.5 * base * height;
 console.log("Circle - Area: " + circle_area.toFixed(2) + ", Circumference: " + circle_circumference.toFixed(2));
 console.log("Square - Area: " + square_area + ", Perimeter: " + square_perimeter);
 console.log("Triangle - Area: " + triangle_area);
-```javascript
+```
 
 ### Algorithm 5: Physics Formula Calculator
 
-```javascript
+```
 // Algorithm: Physics Calculations
 let mass = 5.5;
 let velocity = 10;
@@ -370,11 +370,11 @@ console.log("Kinetic Energy: " + kinetic_energy);
 console.log("Force: " + force);
 console.log("Distance: " + distance);
 console.log("Momentum: " + momentum);
-```javascript
+```
 
 ### Algorithm 6: Temperature Conversion with Multiple Formulas
 
-```javascript
+```
 // Algorithm: Multiple Temperature Conversions
 let celsius = 25;
 let fahrenheit = celsius * 9 / 5 + 32;
@@ -387,11 +387,11 @@ console.log("Fahrenheit: " + fahrenheit);
 console.log("Kelvin: " + kelvin);
 console.log("F to C: " + celsius_from_f);
 console.log("K to C: " + celsius_from_k);
-```javascript
+```
 
 ### Algorithm 7: Statistical Calculations
 
-```javascript
+```
 // Algorithm: Calculate Statistics for Three Numbers
 let num1 = 10;
 let num2 = 20;
@@ -410,7 +410,7 @@ console.log("Average: " + average);
 console.log("Range: " + range);
 console.log("Variance: " + variance);
 console.log("Standard Deviation: " + std_deviation.toFixed(2));
-```javascript
+```
 
 ### Mathematical Operation Translation Patterns
 

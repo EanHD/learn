@@ -42,9 +42,9 @@ The Personal Finance Manager demonstrates full-stack application development:
 - **Automated Processing**: Report generation and budget alert checking
 
 **Data Flow:**
-```python
+```
 User Input → Validation → Business Logic → Data Storage → UI Feedback
-```python
+```
 
 ### Advanced Concepts
 

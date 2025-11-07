@@ -58,7 +58,7 @@ Create a production-ready Automated Testing using Typescript with:
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    ts-node hello.ts
    ```type
 
@@ -230,10 +230,10 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```ts
+```
 console.log("Hello, World!");
 
-```ts
+```
 
 ### Code Breakdown
 

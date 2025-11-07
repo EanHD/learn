@@ -25,7 +25,7 @@ Time to make your programs repeat actions! Today you'll learn how to write code 
 
 **Copy the following code into a new file called `loops.go`**
 
-```go
+```
 package main
 
 import "fmt"
@@ -172,25 +172,25 @@ func main() {
         }
     }
 }
-```go
+```
 
 ---
 
 ### How to Execute
 
 1. **Create or navigate to a Go module directory** (if not already in one):
-   ```bash
+   ```
    mkdir loops-example && cd loops-example
    go mod init loops
-   ```go
+   ```
 2. **Copy the code into `loops.go`**
 3. **Run your program**:
-   ```bash
+   ```
    go run loops.go
-   ```bash
+   ```
 
 **Expected output:**
-```go
+```
 === For Loop - Counting ===
 Count: 1
 Count: 2
@@ -297,7 +297,7 @@ Infinite loop iteration 1
 Infinite loop iteration 2
 Infinite loop iteration 3
 Breaking out of infinite loop
-```go
+```
 
 ---
 
@@ -348,11 +348,11 @@ Breaking out of infinite loop
 
 ### Code Breakdown
 
-```go
+```
 for i := 1; i <= 5; i++ {
     fmt.Println("Count:", i)
 }
-```go
+```
 - **`for`** = Loop keyword (Go's only loop type)
 - **`i := 1`** = Initialization: set up the counter variable
 - **`i <= 5`** = Condition: keep looping while this is true
@@ -360,12 +360,12 @@ for i := 1; i <= 5; i++ {
 - **`{}`** = Code block that runs each iteration
 - **Loop execution**: 1, 2, 3, 4, 5 (stops when i becomes 6)
 
-```go
+```
 for count <= 5 {
     fmt.Println("While count:", count)
     count++
 }
-```go
+```
 - **Go doesn't have** while loops, but this for loop acts like one
 - **No initialization or increment part** - just the condition
 - **Condition checked first** before each iteration
@@ -373,7 +373,7 @@ for count <= 5 {
 ### For Loop Variations
 
 **Different increment patterns:**
-```go
+```
 // Count by 5s
 for i := 0; i <= 25; i += 5 {
     fmt.Println(i) // 0, 5, 10, 15, 20, 25
@@ -390,13 +390,13 @@ for {
     // ... some condition
     // if someCondition { break }
 }
-```go
+```
 
 ### Range Loop
 
 Go's `range` is a special loop for iterating over collections:
 
-```go
+```
 // For slices/arrays
 fruits := []string{"apple", "banana", "orange"}
 for index, fruit := range fruits {
@@ -417,49 +417,49 @@ text := "Go"
 for i, char := range text {
     fmt.Printf("Position %d: %c\n", i, char)
 }
-```go
+```
 
 **Using blank identifier (`_`)** to ignore the index:
-```go
+```
 for _, value := range collection {
     // Only care about values, not indices
     fmt.Println(value)
 }
-```go
+```
 
 ### Break and Continue
 
 **`break`** = Exits the loop completely:
-```go
+```
 for i := 1; i <= 10; i++ {
     if i == 5 {
         break  // Loop stops here
     }
     fmt.Println(i)  // Prints: 1, 2, 3, 4
 }
-```go
+```
 
 **`continue`** = Skips the rest of current iteration:
-```go
+```
 for i := 1; i <= 5; i++ {
     if i == 3 {
         continue  // Skip to next iteration
     }
     fmt.Println(i)  // Prints: 1, 2, 4, 5 (skips 3)
 }
-```go
+```
 
 ### Nested Loops
 
-```go
+```
 for i := 1; i <= 3; i++ {          // Outer loop
     for j := 1; j <= 3; j++ {      // Inner loop
         fmt.Printf("i=%d, j=%d\n", i, j)
     }
 }
-```go
+```
 **Output:**
-```go
+```
 i=1, j=1
 i=1, j=2
 i=1, j=3
@@ -469,7 +469,7 @@ i=2, j=3
 i=3, j=1
 i=3, j=2
 i=3, j=3
-```go
+```
 - **Inner loop** completes all iterations for each outer loop iteration
 - **Total iterations**: 3 × 3 = 9
 
@@ -477,17 +477,17 @@ i=3, j=3
 
 When iterating over strings, Go uses runes (Unicode code points):
 
-```go
+```
 text := "Hello"
 for i, char := range text {
     fmt.Printf("Index: %d, Character: %c, Rune: %d\n", i, char, char)
 }
-```go
+```
 
 ### Loop Performance Considerations
 
 **Minimize work in loops:**
-```go
+```
 // Avoid: Calculating the same thing every iteration
 items := []string{"a", "b", "c"}
 for i := 0; i < len(items); i++ {  // len() called every time
@@ -500,15 +500,15 @@ n := len(items)  // Calculate once
 for i := 0; i < n; i++ {  // Use pre-calculated value
     fmt.Println(items[i])
 }
-```go
+```
 
 **Prefer range loops for collections:**
-```go
+```
 // Range is more idiomatic and often more efficient
 for _, item := range items {
     fmt.Println(item)
 }
-```go
+```
 
 ### Common Errors & Solutions
 
@@ -543,7 +543,7 @@ for _, item := range items {
 
 Try this complex loop program:
 
-```go
+```
 package main
 
 import (
@@ -608,7 +608,7 @@ func main() {
         fmt.Println(row)
     }
 }
-```go
+```
 
 ---
 
@@ -647,7 +647,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```go
+```
 package main
 
 import "fmt"

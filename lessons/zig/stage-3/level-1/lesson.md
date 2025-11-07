@@ -54,12 +54,12 @@ Create a temperature conversion tool that allows users to convert between Celsiu
 ### How to Compile and Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    zig build-exe hello.zig
    ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
    ```
 
@@ -163,7 +163,7 @@ Hello, World!
 4. **Edge Cases**: Invalid input values, non-numeric input
 
 **Pseudocode Design:**
-```zig
+```
 ALGORITHM: Temperature Converter
 INPUT: temperature value (number), conversion choice (C or F)
 OUTPUT: converted temperature value
@@ -181,7 +181,7 @@ END
 ```
 
 **Zig Implementation:**
-```zig
+```
 const std = @import("std");
 
 pub fn main() !void {

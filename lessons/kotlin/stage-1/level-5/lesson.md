@@ -23,7 +23,7 @@ Add decision-making to your programs with if/else statements.
 
 **Copy the following code EXACTLY as shown below into `main.kt`**
 
-```kotlin
+```
 fun main() {
     print("Enter a number: ")
     val num = readLine()!!.toInt()
@@ -42,7 +42,7 @@ fun main() {
         println("$num is odd")
     }
 }
-```kotlin
+```
 
 ---
 
@@ -64,7 +64,7 @@ fun main() {
 
 ### The Complete Code
 
-```kotlin
+```
 fun main() {
     print("Enter a number: ")
     val num = readLine()!!.toInt()
@@ -83,7 +83,7 @@ fun main() {
         println("$num is odd")
     }
 }
-```kotlin
+```
 
 ### What This Code Does
 

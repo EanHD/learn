@@ -21,20 +21,20 @@ Welcome to Shell Scripting! Today, you'll create your first bash script. Shell s
 
 Copy the following code EXACTLY as shown into a new file called `hello.sh`:
 
-```bash
+```
 #!/bin/bash
 echo "Hello, World!"
 ```
 
 ### How to Execute
 
-```bash
+```
 bash hello.sh
 ```
 
 Expected output:
 
-```bash
+```
 Hello, World!
 ```
 

@@ -23,7 +23,7 @@ Make your programs interactive by reading input from users.
 
 **Copy the following code EXACTLY as shown below into `main.ts`**
 
-```typescript
+```
 import * as readline from 'readline';
 
 const rl = readline.createInterface({
@@ -64,7 +64,7 @@ rl.question('Enter your name: ', (name: string) => {
 
 ### The Complete Code
 
-```typescript
+```
 import * as readline from 'readline';
 
 const rl = readline.createInterface({
@@ -160,10 +160,10 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```ts
+```
 console.log("Hello, World!");
 
-```ts
+```
 
 ### Code Breakdown
 

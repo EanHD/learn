@@ -23,7 +23,7 @@ Master arithmetic operations and use the language as your calculator.
 
 **Copy the following code EXACTLY as shown below into `main.sh`**
 
-```bash
+```
 #!/bin/bash
 
 a=15
@@ -60,7 +60,7 @@ echo "Precise Division: $x / $y = $(echo "scale=2; $x / $y" | bc)"
 
 ### The Complete Code
 
-```bash
+```
 #!/bin/bash
 
 a=15

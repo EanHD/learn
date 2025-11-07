@@ -20,7 +20,7 @@ Now that you know how to run Typescript programs, let's learn about variables! V
 
 Copy the following code EXACTLY as shown into a new file called `variables.ts`:
 
-```ts
+```
 const name: string = "Alice";
 const age: number = 25;
 const height: number = 5.6;
@@ -34,13 +34,13 @@ console.log(`Student status: ${isStudent}`);
 
 ### How to Execute
 
-```bash
+```
 ts-node variables.ts
 ```type
 
 Expected output:
 
-```typescript
+```
 Hello, Alice!
 You are 25 years old.
 Your height is 5.6 feet.
@@ -135,10 +135,10 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```ts
+```
 console.log("Hello, World!");
 
-```ts
+```
 
 ### Code Breakdown
 

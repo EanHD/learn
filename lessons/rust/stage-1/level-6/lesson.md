@@ -24,7 +24,7 @@ Sometimes you need to repeat actions! You'll learn different types of loops in R
 
 **Copy the following code EXACTLY as shown below into a new file called `loops.rs`**
 
-```rust
+```
 fn main() {
     // For loop - iterate over a range
     println!("For loop counting:");
@@ -60,27 +60,27 @@ fn main() {
         println!("Odd number: {}", i);
     }
 }
-```rust
+```
 
 ---
 
 ### How to Run
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Compile the code**:
-   ```bash
+   ```
    rustc loops.rs -o loops
-   ```rust
+   ```
 3. **Run your program**:
-   ```bash
+   ```
    ./loops
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 For loop counting:
 Count: 1
 Count: 2
@@ -106,7 +106,7 @@ Odd number: 3
 Odd number: 5
 Odd number: 7
 Odd number: 9
-```rust
+```
 
 ---
 
@@ -156,27 +156,27 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 
 ### Code Breakdown
 
-```rust
+```
     for i in 1..=5 {
         println!("Count: {}", i);
     }
-```rust
+```
 - **`for i in 1..=5`** = `i` takes values 1, 2, 3, 4, 5
 - **`..=`** = Inclusive range (includes 5)
 - **`i`** = Loop variable, different each iteration
 
-```rust
+```
     let mut count = 1;
     while count <= 5 {
         println!("Count: {}", count);
         count = count + 1;
     }
-```rust
+```
 - **`mut count`** = Mutable variable for counting
 - **`while count <= 5`** = Continue while condition true
 - **`count = count + 1`** = Increment counter
 
-```rust
+```
     loop {
         println!("Number: {}", number);
         if number >= 3 {
@@ -184,19 +184,19 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
         }
         number = number + 1;
     }
-```rust
+```
 - **`loop`** = Infinite loop
 - **`break`** = Exit loop when condition met
 - **Must have break** or loop runs forever!
 
-```rust
+```
     for i in 1..=10 {
         if i % 2 == 0 {
             continue;
         }
         println!("Odd number: {}", i);
     }
-```rust
+```
 - **`continue`** = Skip rest of iteration, go to next
 - **Even numbers** skipped, only odds printed
 

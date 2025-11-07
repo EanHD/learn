@@ -23,7 +23,7 @@ Organize your code into reusable functions/methods.
 
 **Copy the following code EXACTLY as shown below into `main.sql`**
 
-```sql
+```
 -- Functions in SQL
 CREATE FUNCTION dbo.Add(@a INT, @b INT)
 RETURNS INT
@@ -76,7 +76,7 @@ SELECT
 
 ### The Complete Code
 
-```sql
+```
 -- Functions in SQL
 CREATE FUNCTION dbo.Add(@a INT, @b INT)
 RETURNS INT

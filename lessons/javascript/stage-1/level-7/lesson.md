@@ -26,7 +26,7 @@ Welcome to the world of functions! Today you'll learn how to organize your code 
 
 **Copy the following code into a new file called `functions.js`**
 
-```javascript
+```
 console.log("=== Basic Function Definition ===");
 // Define a function that greets someone
 function greetUser() {
@@ -229,19 +229,19 @@ console.log("Doubled: " + doubled);
 // Process array using arrow function
 let squared = processArray(numbers, (x) => x * x);
 console.log("Squared: " + squared);
-```javascript
+```
 
 ---
 
 ### How to Execute
 
 1. **Run your program**:
-   ```bash
+   ```
    node functions.js
-   ```java
+   ```
 
 **Expected output:**
-```javascript
+```
 === Basic Function Definition ===
 Hello! Welcome to the wonderful world of functions!
 Hello! Welcome to the wonderful world of functions!
@@ -296,7 +296,7 @@ Greeting: Hello, I'm Taylor
 Original: 1,2,3,4,5
 Doubled: 2,4,6,8,10
 Squared: 1,4,9,16,25
-```javascript
+```
 
 ---
 
@@ -349,29 +349,29 @@ Squared: 1,4,9,16,25
 
 ### Code Breakdown
 
-```javascript
+```
 function greetUser() {
     console.log("Hello! Welcome to the wonderful world of functions!");
 }
-```javascript
+```
 - **`function`** = Keyword to declare a function
 - **`greetUser`** = Function name (follows variable naming rules)
 - **`()`** = Parameters (empty because no parameters needed)
 - **`{}`** = Function body (code that runs when function is called)
 - **No return** = Function runs code but doesn't return a value
 
-```javascript
+```
 function greetByName(name) {
     console.log("Hello, " + name + "! Nice to meet you!");
 }
-```javascript
+```
 - **`name`** = Parameter (variable that receives the argument value)
 - **Parameters** = Variables defined in function declaration
 - **Arguments** = Actual values passed when calling the function
 
-```javascript
+```
 let result1 = addNumbers(5, 3);
-```javascript
+```
 - **`addNumbers(5, 3)`** = Function call with arguments
 - **`5` and `3`** = Arguments passed to the function
 - **Return value** = Value that function sends back
@@ -380,51 +380,51 @@ let result1 = addNumbers(5, 3);
 ### Function Declaration vs Expression
 
 **Function Declaration (Traditional):**
-```javascript
+```
 function add(a, b) {
     return a + b;
 }
 // Can be called before or after the declaration due to hoisting
-```javascript
+```
 
 **Function Expression:**
-```javascript
+```
 let add = function(a, b) {
     return a + b;
 };
 // Must be defined before calling (no hoisting)
-```javascript
+```
 
 ### Arrow Functions
 
 **Full syntax:**
-```javascript
+```
 let add = (a, b) => {
     return a + b;
 };
-```javascript
+```
 
 **Shortened syntax (implicit return):**
-```javascript
+```
 let add = (a, b) => a + b;  // Returns a + b automatically
 let square = x => x * x;    // Single parameter doesn't need parentheses
 let greet = () => "Hello!"; // No parameters need empty parentheses
-```javascript
+```
 
 ### Function Parameters
 
 **Default parameters:**
-```javascript
+```
 function greet(name, greeting = "Hello") {
     console.log(greeting + ", " + name + "!");
 }
 
 greet("Alex");           // "Hello, Alex!" (greeting uses default)
 greet("Taylor", "Hi");   // "Hi, Taylor!" (greeting overridden)
-```javascript
+```
 
 **Rest parameters (for multiple values):**
-```javascript
+```
 function sum(...numbers) {
     let total = 0;
     for (let num of numbers) {
@@ -435,23 +435,23 @@ function sum(...numbers) {
 
 console.log(sum(1, 2, 3));      // 6
 console.log(sum(1, 2, 3, 4, 5)); // 15
-```javascript
+```
 
 ### Function Scope
 
 **Global scope:**
-```javascript
+```
 let globalVar = "I'm accessible everywhere";
-```javascript
+```
 
 **Local scope:**
-```javascript
+```
 function myFunction() {
     let localVar = "I'm only accessible inside this function";
     // Can access both globalVar and localVar
 }
 // Can access globalVar but NOT localVar
-```javascript
+```
 
 **Scope rules:**
 - Functions can access variables in their own scope
@@ -462,23 +462,23 @@ function myFunction() {
 ### Return Values
 
 **Functions without return:**
-```javascript
+```
 function sayHello() {
     console.log("Hello!");
 }
 // Returns 'undefined' implicitly
-```javascript
+```
 
 **Functions with return:**
-```javascript
+```
 function getHello() {
     return "Hello!";
 }
 // Returns "Hello!" which can be stored in a variable
-```javascript
+```
 
 **Early return:**
-```javascript
+```
 function divide(a, b) {
     if (b === 0) {
         console.log("Cannot divide by zero!");
@@ -486,13 +486,13 @@ function divide(a, b) {
     }
     return a / b;
 }
-```javascript
+```
 
 ### Higher-Order Functions
 
 Functions that take other functions as parameters or return functions:
 
-```javascript
+```
 // Function that takes another function as a parameter
 function executeTwice(func) {
     func();
@@ -504,28 +504,28 @@ function sayHello() {
 }
 
 executeTwice(sayHello);  // Will output "Hello!" twice
-```javascript
+```
 
 ### Pure vs Impure Functions
 
 **Pure function:**
 - Same input always gives same output
 - No side effects (doesn't modify external state)
-```javascript
+```
 function add(a, b) {
     return a + b;  // Pure function
 }
-```javascript
+```
 
 **Impure function:**
 - May have side effects or depend on external state
-```javascript
+```
 let count = 0;
 function increment() {
     count++;  // Modifies external variable
     return count;
 }  // Impure function
-```javascript
+```
 
 ### Common Errors & Solutions
 
@@ -540,7 +540,7 @@ function increment() {
 ### Best Practices for Functions
 
 **Function naming:**
-```javascript
+```
 // Good - descriptive names
 function calculateArea(length, width) { ... }
 function isValidEmail(email) { ... }
@@ -549,7 +549,7 @@ function sendNotification(message) { ... }
 // Avoid - vague names
 function doStuff() { ... }
 function process() { ... }
-```javascript
+```
 
 **Function size:**
 - Keep functions focused on a single task
@@ -557,7 +557,7 @@ function process() { ... }
 - If a function gets too long, consider breaking it into smaller ones
 
 **Single Responsibility Principle:**
-```javascript
+```
 // Good - one purpose
 function calculateTax(amount, rate) {
     return amount * rate;
@@ -570,13 +570,13 @@ function processOrder(order) {
     // ... other processing
     return total;
 }
-```javascript
+```
 
 ### Advanced Challenge (For the Brave!)
 
 Try this comprehensive function example:
 
-```javascript
+```
 // A comprehensive banking application using functions
 console.log("=== Banking Application with Functions ===");
 
@@ -672,7 +672,7 @@ checkBalance(taylorAccount);
 
 console.log("");
 getTransactionHistory(alexAccount);
-```javascript
+```
 
 ---
 

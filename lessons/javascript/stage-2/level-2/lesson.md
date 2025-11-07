@@ -26,25 +26,25 @@ Welcome to Level 2! Today we're focusing on how to handle variables in your pseu
 Variables in pseudocode follow simple patterns:
 
 **Declaration and assignment:**
-```javascript
+```
 SET name TO "John"
 SET age TO 25
 SET is_student TO TRUE
-```javascript
+```
 
 **Reassignment:**
-```javascript
+```
 SET age TO age + 1
 SET total TO total + new_value
 SET is_student TO FALSE
-```javascript
+```
 
 **Calculations with variables:**
-```javascript
+```
 SET area TO length * width
 SET average TO (num1 + num2 + num3) / 3
 SET is_adult TO age >= 18
-```javascript
+```
 
 ---
 
@@ -58,19 +58,19 @@ SET is_adult TO age >= 18
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    node hello.js
-   ```java
+   ```
 
 **Expected output:**
-```javascript
+```
 Hello, World!
-```javascript
+```
 
 ## Algorithm 1: Simple Variable Swapping
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Swap Two Variables
 1. SET first_number TO 10
 2. SET second_number TO 20
@@ -79,7 +79,7 @@ Algorithm: Swap Two Variables
 5. SET first_number TO second_number
 6. SET second_number TO temp
 7. DISPLAY "After swap: first=" + first_number + ", second=" + second_number
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that demonstrates variable swapping.
 
@@ -88,7 +88,7 @@ Algorithm: Swap Two Variables
 ## Algorithm 2: Running Total Calculator
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Calculate Running Total
 1. SET total TO 0
 2. SET count TO 0
@@ -105,7 +105,7 @@ Algorithm: Calculate Running Total
 13. DISPLAY "Total: " + total
 14. DISPLAY "Count: " + count
 15. DISPLAY "Average: " + average
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that calculates a running total and average.
 
@@ -114,7 +114,7 @@ Algorithm: Calculate Running Total
 ## Algorithm 3: Temperature Tracker
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Track Temperature Readings
 1. SET min_temp TO 100
 2. SET max_temp TO -100
@@ -136,7 +136,7 @@ Algorithm: Track Temperature Readings
 13. IF current_temp > max_temp THEN
    SET max_temp TO current_temp
 14. DISPLAY "Current: " + current_temp + ", Min: " + min_temp + ", Max: " + max_temp
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that tracks min/max temperatures.
 
@@ -145,7 +145,7 @@ Algorithm: Track Temperature Readings
 ## Algorithm 4: Account Balance Tracker
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Track Bank Account Balance
 1. SET account_balance TO 1000
 2. SET transaction_amount TO -50
@@ -160,7 +160,7 @@ Algorithm: Track Bank Account Balance
 11. SET transaction_amount TO 150.25
 12. SET account_balance TO account_balance + transaction_amount
 13. DISPLAY "Balance after deposit: $" + account_balance
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that tracks account balance changes.
 
@@ -169,7 +169,7 @@ Algorithm: Track Bank Account Balance
 ## Algorithm 5: Student Grade Calculator
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Calculate Student Grade
 1. SET total_points TO 0
 2. SET possible_points TO 0
@@ -195,7 +195,7 @@ Algorithm: Calculate Student Grade
 22. DISPLAY "Possible Points: " + possible_points
 23. DISPLAY "Percentage: " + percentage
 24. DISPLAY "Letter Grade: " + letter_grade
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that calculates student grades.
 
@@ -204,7 +204,7 @@ Algorithm: Calculate Student Grade
 ## Algorithm 6: Counter Patterns
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Different Counter Patterns
 1. SET counter TO 1
 2. SET even_counter TO 2
@@ -221,7 +221,7 @@ Algorithm: Different Counter Patterns
    13. DISPLAY "Odd: " + odd_counter
    14. SET odd_counter TO odd_counter + 2
 15. END WHILE
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that demonstrates different counting patterns.
 
@@ -230,7 +230,7 @@ Algorithm: Different Counter Patterns
 ## Algorithm 7: Accumulator Pattern
 
 **Pseudocode:**
-```javascript
+```
 Algorithm: Calculate Statistics
 1. SET sum TO 0
 2. SET count TO 0
@@ -252,7 +252,7 @@ Algorithm: Calculate Statistics
 18. DISPLAY "Count: " + count
 19. DISPLAY "Product: " + product
 20. DISPLAY "Average: " + average
-```javascript
+```
 
 **Your Task:** Create a JavaScript program that demonstrates accumulator patterns.
 
@@ -308,7 +308,7 @@ Algorithm: Calculate Statistics
 
 ### Algorithm 1: Simple Variable Swapping
 
-```javascript
+```
 // Algorithm: Swap Two Variables
 let first_number = 10;
 let second_number = 20;
@@ -320,11 +320,11 @@ first_number = second_number;
 second_number = temp;
 
 console.log("After swap: first=" + first_number + ", second=" + second_number);
-```javascript
+```
 
 ### Algorithm 2: Running Total Calculator
 
-```javascript
+```
 // Algorithm: Calculate Running Total
 let total = 0;
 let count = 0;
@@ -346,11 +346,11 @@ let average = total / count;
 console.log("Total: " + total);
 console.log("Count: " + count);
 console.log("Average: " + average);
-```javascript
+```
 
 ### Algorithm 3: Temperature Tracker
 
-```javascript
+```
 // Algorithm: Track Temperature Readings
 let min_temp = 100;
 let max_temp = -100;
@@ -381,11 +381,11 @@ if (current_temp > max_temp) {
     max_temp = current_temp;
 }
 console.log("Current: " + current_temp + ", Min: " + min_temp + ", Max: " + max_temp);
-```javascript
+```
 
 ### Algorithm 4: Account Balance Tracker
 
-```javascript
+```
 // Algorithm: Track Bank Account Balance
 let account_balance = 1000;
 
@@ -404,11 +404,11 @@ console.log("Balance after withdrawal: $" + account_balance);
 transaction_amount = 150.25;
 account_balance = account_balance + transaction_amount;
 console.log("Balance after deposit: $" + account_balance);
-```javascript
+```
 
 ### Algorithm 5: Student Grade Calculator
 
-```javascript
+```
 // Algorithm: Calculate Student Grade
 let total_points = 0;
 let possible_points = 0;
@@ -445,11 +445,11 @@ console.log("Total Points: " + total_points);
 console.log("Possible Points: " + possible_points);
 console.log("Percentage: " + percentage);
 console.log("Letter Grade: " + letter_grade);
-```javascript
+```
 
 ### Algorithm 6: Counter Patterns
 
-```javascript
+```
 // Algorithm: Different Counter Patterns
 let counter = 1;
 while (counter <= 5) {
@@ -468,11 +468,11 @@ while (odd_counter <= 10) {
     console.log("Odd: " + odd_counter);
     odd_counter = odd_counter + 2;
 }
-```javascript
+```
 
 ### Algorithm 7: Accumulator Pattern
 
-```javascript
+```
 // Algorithm: Calculate Statistics
 let sum = 0;
 let count = 0;
@@ -499,7 +499,7 @@ console.log("Sum: " + sum);
 console.log("Count: " + count);
 console.log("Product: " + product);
 console.log("Average: " + average);
-```javascript
+```
 
 ### Variable Translation Patterns
 

@@ -26,7 +26,7 @@ Welcome to Stage 2! You've mastered copying code - now it's time to think like a
 **Pseudocode** is a way to write programming logic in plain English (or your native language) before writing actual code. It's like writing a recipe or instructions for a task.
 
 **Example:**
-```go
+```
 Algorithm: Make a sandwich
 1. Get bread from pantry
 2. Get peanut butter from fridge
@@ -35,7 +35,7 @@ Algorithm: Make a sandwich
 5. Spread jelly on the other bread slice
 6. Put slices together
 7. Enjoy your sandwich!
-```go
+```
 
 This is much easier to understand than trying to write code first!
 
@@ -51,25 +51,25 @@ This is much easier to understand than trying to write code first!
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    go run hello.go
-   ```go
+   ```
 
 **Expected output:**
-```go
+```
 Hello, World!
-```go
+```
 
 ## Algorithm 1: Greeting Program
 
 **Pseudocode:**
-```go
+```
 Algorithm: Display Personal Greeting
 1. Display "Hello! What's your name?" to the user
 2. Get the user's name from input
 3. Display "Nice to meet you, " followed by the user's name
 4. Display "Welcome to programming!"
-```go
+```
 
 **Your Task:** Create a Go program that follows these exact steps.
 
@@ -78,7 +78,7 @@ Algorithm: Display Personal Greeting
 ## Algorithm 2: Simple Calculator
 
 **Pseudocode:**
-```go
+```
 Algorithm: Add Two Numbers
 1. Ask user for first number
 2. Get first number from user
@@ -86,7 +86,7 @@ Algorithm: Add Two Numbers
 4. Get second number from user
 5. Calculate sum of the two numbers
 6. Display "The sum is: " followed by the sum
-```go
+```
 
 **Your Task:** Create a Go program that implements this calculator.
 
@@ -95,14 +95,14 @@ Algorithm: Add Two Numbers
 ## Algorithm 3: Age Calculator
 
 **Pseudocode:**
-```go
+```
 Algorithm: Calculate Age in Days
 1. Display "Enter your age in years: "
 2. Get age in years from user
 3. Calculate days = age × 365
 4. Display "You are approximately " + days + " days old"
 5. Display "That's a lot of days!"
-```go
+```
 
 **Your Task:** Create a program that calculates approximate age in days.
 
@@ -111,7 +111,7 @@ Algorithm: Calculate Age in Days
 ## Algorithm 4: Temperature Converter
 
 **Pseudocode:**
-```go
+```
 Algorithm: Celsius to Fahrenheit Converter
 1. Display "Enter temperature in Celsius: "
 2. Get temperature in Celsius from user
@@ -120,7 +120,7 @@ Algorithm: Celsius to Fahrenheit Converter
 5. Display "°C = "
 6. Display the Fahrenheit temperature
 7. Display "°F"
-```go
+```
 
 **Your Task:** Create a temperature conversion program.
 
@@ -129,7 +129,7 @@ Algorithm: Celsius to Fahrenheit Converter
 ## Algorithm 5: Rectangle Area Calculator
 
 **Pseudocode:**
-```go
+```
 Algorithm: Calculate Rectangle Area
 1. Display "Rectangle Area Calculator"
 2. Display "Enter length: "
@@ -140,7 +140,7 @@ Algorithm: Calculate Rectangle Area
 7. Calculate perimeter = 2 × (length + width)
 8. Display "Area: " + area
 9. Display "Perimeter: " + perimeter
-```go
+```
 
 **Your Task:** Create a program that calculates both area and perimeter.
 
@@ -149,7 +149,7 @@ Algorithm: Calculate Rectangle Area
 ## Algorithm 6: Simple Interest Calculator
 
 **Pseudocode:**
-```go
+```
 Algorithm: Calculate Simple Interest
 1. Display "Simple Interest Calculator"
 2. Display "Enter principal amount: $"
@@ -163,7 +163,7 @@ Algorithm: Calculate Simple Interest
 10. Display "Principal: $" + principal
 11. Display "Interest: $" + interest
 12. Display "Total: $" + total
-```go
+```
 
 **Your Task:** Implement the complete interest calculation.
 
@@ -172,7 +172,7 @@ Algorithm: Calculate Simple Interest
 ## Algorithm 7: BMI Calculator
 
 **Pseudocode:**
-```go
+```
 Algorithm: Calculate Body Mass Index
 1. Display "BMI Calculator"
 2. Display "Enter weight in kg: "
@@ -189,7 +189,7 @@ Algorithm: Calculate Body Mass Index
    Display "Category: Overweight"
 11. Else
    Display "Category: Obesity"
-```go
+```
 
 **Your Task:** Create a program that calculates BMI with categorization.
 
@@ -248,7 +248,7 @@ Algorithm: Calculate Body Mass Index
 ## Pseudocode Best Practices
 
 ### Good Pseudocode
-```go
+```
 Algorithm: Process User Data
 1. Get user's name
 2. Get user's age
@@ -257,18 +257,18 @@ Algorithm: Process User Data
 Else
    Display "Minor user"
 4. Display "Data processed"
-```go
+```
 
 ### Bad Pseudocode (Too Vague)
-```go
+```
 Algorithm: Do stuff
 1. Get things
 2. Calculate something
 3. Show results
-```go
+```
 
 ### Good Pseudocode (Clear and Specific)
-```go
+```
 Algorithm: Calculate BMI
 1. Display "BMI Calculator"
 2. Display "Enter weight in kg: "
@@ -277,7 +277,7 @@ Algorithm: Calculate BMI
 5. Get height from user
 6. Calculate BMI = weight ÷ (height × height)
 7. Display "Your BMI is: " + BMI
-```go
+```
 
 ---
 
@@ -289,7 +289,7 @@ Algorithm: Calculate BMI
 
 ### Algorithm 1: Greeting Program
 
-```go
+```
 package main
 
 import (
@@ -315,11 +315,11 @@ func main() {
     // Display "Welcome to programming!"
     fmt.Println("Welcome to programming!")
 }
-```go
+```
 
 ### Algorithm 2: Simple Calculator
 
-```go
+```
 package main
 
 import (
@@ -359,11 +359,11 @@ func main() {
     // Display "The sum is: " followed by the sum
     fmt.Println("The sum is: " + fmt.Sprintf("%g", sum))
 }
-```go
+```
 
 ### Algorithm 3: Age Calculator
 
-```go
+```
 package main
 
 import (
@@ -395,11 +395,11 @@ func main() {
     fmt.Println("You are approximately " + strconv.Itoa(days) + " days old")
     fmt.Println("That's a lot of days!")
 }
-```go
+```
 
 ### Algorithm 4: Temperature Converter
 
-```go
+```
 package main
 
 import (
@@ -430,11 +430,11 @@ func main() {
     // Display the results
     fmt.Printf("%.2f°C = %.2f°F\n", celsius, fahrenheit)
 }
-```go
+```
 
 ### Algorithm 5: Rectangle Area Calculator
 
-```go
+```
 package main
 
 import (
@@ -478,11 +478,11 @@ func main() {
     fmt.Println("Area: " + fmt.Sprintf("%g", area))
     fmt.Println("Perimeter: " + fmt.Sprintf("%g", perimeter))
 }
-```go
+```
 
 ### Algorithm 6: Simple Interest Calculator
 
-```go
+```
 package main
 
 import (
@@ -536,11 +536,11 @@ func main() {
     fmt.Printf("Interest: $%.2f\n", interest)
     fmt.Printf("Total: $%.2f\n", total)
 }
-```go
+```
 
 ### Algorithm 7: BMI Calculator
 
-```go
+```
 package main
 
 import (
@@ -591,7 +591,7 @@ func main() {
         fmt.Println("Category: Obesity")
     }
 }
-```go
+```
 
 ### Common Translation Patterns
 
@@ -636,25 +636,25 @@ func main() {
 ### Input/Output Patterns
 
 **Getting Numbers:**
-```go
+```
 fmt.Print("Enter age: ")
 input, _ := reader.ReadString('\n')
 age, err := strconv.Atoi(strings.TrimSpace(input))
-```go
+```
 
 **Getting Text:**
-```go
+```
 fmt.Print("Enter name: ")
 input, _ := reader.ReadString('\n')
 name := strings.TrimSpace(input)
-```go
+```
 
 **Displaying Results:**
-```go
+```
 fmt.Println("Result: " + result)
 fmt.Printf("Price: $%.2f\n", price)
 fmt.Println("Hello, " + name + "!")
-```go
+```
 
 ---
 
@@ -686,7 +686,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```go
+```
 package main
 
 import "fmt"

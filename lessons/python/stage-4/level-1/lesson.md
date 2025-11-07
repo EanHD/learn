@@ -37,14 +37,14 @@ The temperature converter should:
 ### How to Run
 
 1. **Navigate to this level's directory**:
-    ```bash
+    ```
     cd python/stage-4-full-problem-solving/level-1-simple-application
-    ```bash
+    ```
 
 2. **Run the program**:
-    ```bash
+    ```
     python3 main.py
-    ```bash
+    ```
 
 3. **Test different conversions** and edge cases
 
@@ -90,18 +90,18 @@ Try these improvements to make the program even better:
 
 ### Key Functions
 
-```python
+```
 def celsius_to_fahrenheit(celsius):
     """Convert Celsius to Fahrenheit."""
     return (celsius * 9/5) + 32
-```python
+```
 
 - **Clear naming**: Function name describes exactly what it does
 - **Documentation**: Docstring explains the purpose
 - **Simple logic**: One clear mathematical formula
 - **Return value**: Result is returned for use by caller
 
-```python
+```
 def get_temperature_input(prompt):
     """Get temperature input from user with validation."""
     while True:
@@ -110,7 +110,7 @@ def get_temperature_input(prompt):
             return temp
         except ValueError:
             print(" Invalid input. Please enter a valid number.")
-```python
+```
 
 - **Input validation**: Uses try/except to handle invalid input
 - **User-friendly**: Clear error messages
@@ -119,7 +119,7 @@ def get_temperature_input(prompt):
 
 ### Program Structure
 
-```python
+```
 main.py
 ├── Import statements (if needed)
 ├── Helper functions
@@ -129,7 +129,7 @@ main.py
 │   └── get_menu_choice()
 └── main() function
     └── Program logic and menu
-```python
+```
 
 ---
 
@@ -142,14 +142,14 @@ main.py
 ### Temperature Conversion Formulas
 
 **Celsius to Fahrenheit:**
-```python
+```
 °F = (°C × 9/5) + 32
-```python
+```
 
 **Fahrenheit to Celsius:**
-```python
+```
 °C = (°F - 32) × 5/9
-```python
+```
 
 ### Key Programming Concepts Demonstrated
 

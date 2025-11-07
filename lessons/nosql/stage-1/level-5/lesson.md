@@ -23,7 +23,7 @@ Add decision-making to your programs with if/else statements.
 
 **Copy the following code EXACTLY as shown below into `main.js`**
 
-```javascript
+```
 // Conditional queries in MongoDB
 db.students.insertMany([
     { name: "Alice", score: 95 },
@@ -50,12 +50,12 @@ passing.forEach(function(s) {
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```javascript
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 mongo < script.js
 ```
 

@@ -23,7 +23,7 @@ Add decision-making to your programs with if/else statements.
 
 **Copy the following code EXACTLY as shown below into `main.ts`**
 
-```typescript
+```
 import * as readline from 'readline';
 
 const rl = readline.createInterface({
@@ -72,7 +72,7 @@ rl.question('Enter a number: ', (input: string) => {
 
 ### The Complete Code
 
-```typescript
+```
 import * as readline from 'readline';
 
 const rl = readline.createInterface({
@@ -174,10 +174,10 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```ts
+```
 console.log("Hello, World!");
 
-```ts
+```
 
 ### Code Breakdown
 

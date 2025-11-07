@@ -31,7 +31,7 @@ User interaction is the heart of useful programs! Today you'll master the art of
 ## Algorithm 1: Age Verification System
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Verify User Age
 1. Display "=== Age Verification System ==="
 2. Initialize is_valid_age to false
@@ -51,7 +51,7 @@ Algorithm: Verify User Age
    a. Display " You are an adult!"
 6. Else:
    a. Display " You are a minor."
-```cpp
+```
 
 **Input/Output Focus:**
 - [ ] Input validation (numeric, range checking)
@@ -66,7 +66,7 @@ Algorithm: Verify User Age
 ## Algorithm 2: Restaurant Menu System
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Restaurant Ordering System
 1. Display "=== Welcome to Code Café ==="
 2. Initialize total_cost to 0
@@ -103,7 +103,7 @@ Algorithm: Restaurant Ordering System
 9. Display "Tax (8%): $" + tax
 10. Display "Final total: $" + final_total
 11. Display "Thank you for your order! "
-```cpp
+```
 
 **Input/Output Focus:**
 - [ ] Clear menu formatting
@@ -118,7 +118,7 @@ Algorithm: Restaurant Ordering System
 ## Algorithm 3: Student Grade Manager
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Student Grade Management
 1. Display "=== Student Grade Manager ==="
 2. Initialize grades array (can hold 100 grades)
@@ -177,7 +177,7 @@ Algorithm: Student Grade Management
    i. Else:
       i. Display " Invalid choice! Please select 1-5."
 6. Display "Thank you for using Grade Manager! "
-```cpp
+```
 
 **Input/Output Focus:**
 - [ ] Array data storage
@@ -192,7 +192,7 @@ Algorithm: Student Grade Management
 ## Algorithm 4: Unit Converter
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Unit Conversion Calculator
 1. Display "=== Unit Converter ==="
 2. Initialize is_running to true
@@ -248,7 +248,7 @@ Algorithm: Unit Conversion Calculator
    h. Else:
       i. Display " Invalid conversion type!"
 4. Display "Thank you for using Unit Converter! "
-```cpp
+```
 
 **Input/Output Focus:**
 - [ ] Nested menu systems
@@ -263,7 +263,7 @@ Algorithm: Unit Conversion Calculator
 ## Algorithm 5: Survey Data Collector
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Customer Satisfaction Survey
 1. Display "=== Customer Satisfaction Survey ==="
 2. Initialize responses array (can hold 50 responses)
@@ -301,7 +301,7 @@ Algorithm: Customer Satisfaction Survey
 7. Else:
    a. Display "No survey responses collected."
 8. Display "Thank you for participating! "
-```cpp
+```
 
 **Input/Output Focus:**
 - [ ] Clear survey instructions
@@ -316,7 +316,7 @@ Algorithm: Customer Satisfaction Survey
 ## Algorithm 6: Library Book Tracker
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Library Book Management
 1. Display "=== Library Book Tracker ==="
 2. Initialize books array (can hold 20 book titles)
@@ -381,7 +381,7 @@ Algorithm: Library Book Management
    i. Else:
       i. Display " Invalid choice!"
 6. Display "Thank you for using Library Book Tracker! "
-```cpp
+```
 
 **Input/Output Focus:**
 - [ ] String array management
@@ -403,7 +403,7 @@ if (input >= min_value && input <= max_value) {
 } else {
     // Invalid input - show error
 }
-```cpp
+```
 
 **String Input Validation:**
 ```c
@@ -413,7 +413,7 @@ if (strlen(input_string) > 0) {
 } else {
     // Empty input - show error
 }
-```cpp
+```
 
 ---
 
@@ -448,7 +448,7 @@ if (strlen(input_string) > 0) {
 ## User Interface Design Principles
 
 ### Clear Menu Design
-```cpp
+```
 === Main Menu ===
 1. Add Item      - Add new item to collection
 2. View Items    - Display all items
@@ -457,7 +457,7 @@ if (strlen(input_string) > 0) {
 5. Exit          - Quit the program
 
 Enter choice (1-5):
-```cpp
+```
 
 ### Error Message Best Practices
 - [ ] **Be specific**: "Grade must be between 0-100" not "Invalid input"
@@ -516,7 +516,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Input validation with `scanf()` return value checking
@@ -584,7 +584,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Switch statement for menu handling
@@ -685,7 +685,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Array storage for multiple grades
@@ -768,7 +768,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Nested menu system
@@ -843,7 +843,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Array storage for survey responses
@@ -970,7 +970,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] 2D array for string storage
@@ -988,7 +988,7 @@ int main() {
 // After scanf, clear remaining input
 int c;
 while ((c = getchar()) != '\n' && c != EOF);
-```cpp
+```
 
 **Reading Full Lines:**
 ```c
@@ -996,7 +996,7 @@ char buffer[100];
 fgets(buffer, sizeof(buffer), stdin);
 // Remove trailing newline
 buffer[strcspn(buffer, "\n")] = '\0';
-```cpp
+```
 
 **Input Validation Patterns:**
 ```c
@@ -1012,7 +1012,7 @@ int get_valid_number(int min, int max) {
     } while (value < min || value > max);
     return value;
 }
-```cpp
+```
 
 ---
 
@@ -1050,7 +1050,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cpp
+```
 #include <iostream>
 
 int main() {

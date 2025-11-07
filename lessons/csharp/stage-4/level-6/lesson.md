@@ -50,19 +50,19 @@ Build a complete Database Operations application that:
 ### How to Compile and Run
 
 1. **Compile the code**:
- ```bash
+ ```
  csc hello.cs
- ```csharp
+ ```
 
 2. **Run your program**:
- ```bash
+ ```
  mono hello
- ```csharp
+ ```
 
 **Expected output:**
-```csharp
+```
 Hello, World!
-```csharp
+```
 
 ### How to Approach This
 
@@ -162,13 +162,13 @@ A complete application has these components:
 5. **Error Handling**: Manage problems gracefully
 
 **Code Organization:**
-```csharp
+```
 // Setup and initialization
 // Main program loop or flow
 // Helper functions
 // Error handlers
 // Testing/verification
-```csharp
+```
 
 Build incrementally - get one feature working before adding the next.
 
@@ -223,7 +223,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cs
+```
 using System;
 
 class Program {

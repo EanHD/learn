@@ -51,7 +51,7 @@ Logic Problems - Design an algorithm to solve this problem, then implement it.
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    ts-node hello.ts
    ```type
 
@@ -155,7 +155,7 @@ Hello, World!
 4. **Edge Cases**: What could go wrong?
 
 **Pseudocode Template:**
-```typescript
+```
 ALGORITHM: [Name]
 INPUT: [What we need]
 OUTPUT: [What we produce]
@@ -220,10 +220,10 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```ts
+```
 console.log("Hello, World!");
 
-```ts
+```
 
 ### Code Breakdown
 

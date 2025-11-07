@@ -20,24 +20,24 @@ You're progressing! Now you'll take more complex pseudocode and translate it int
 
 Here's some pseudocode:
 
-```dart
+```
 [Pseudocode will be specific to the level]
-```dart
+```
 
 **Your mission**: Translate this into Dart code in `main.dart.dart`.
 
 ### How to Run
 
-```bash
+```
 cd ~/.local/share/learn/workspaces/dart/stage-2/level-4
-```dart
+```
 
 Then run your program.
 
 **Expected output:**
-```dart
+```
 (Output will vary based on your implementation)
-```dart
+```
 
 ### Success Checklist
 
@@ -112,12 +112,12 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```dart
+```
 void main() {
     print("Hello, World!");
 }
 
-```dart
+```
 
 ### Code Breakdown
 

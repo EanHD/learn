@@ -23,7 +23,7 @@ Organize your code into reusable functions/methods.
 
 **Copy the following code EXACTLY as shown below into `main.sh`**
 
-```bash
+```
 #!/bin/bash
 
 greet() {
@@ -73,7 +73,7 @@ echo "5! = $fact"
 
 ### The Complete Code
 
-```bash
+```
 #!/bin/bash
 
 greet() {

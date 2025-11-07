@@ -23,7 +23,7 @@ Make your programs interactive by reading input from users.
 
 **Copy the following code EXACTLY as shown below into `main.dart`**
 
-```dart
+```
 import 'dart:io';
 
 void main() {
@@ -37,7 +37,7 @@ void main() {
   print('You are $age years old.');
   print('Next year you\'ll be ${age + 1}.');
 }
-```dart
+```
 
 ---
 
@@ -59,7 +59,7 @@ void main() {
 
 ### The Complete Code
 
-```dart
+```
 import 'dart:io';
 
 void main() {
@@ -73,7 +73,7 @@ void main() {
   print('You are $age years old.');
   print('Next year you\'ll be ${age + 1}.');
 }
-```dart
+```
 
 ### What This Code Does
 
@@ -150,12 +150,12 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```dart
+```
 void main() {
     print("Hello, World!");
 }
 
-```dart
+```
 
 ### Code Breakdown
 

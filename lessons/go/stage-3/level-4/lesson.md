@@ -51,14 +51,14 @@ Text Processing Problems - Design an algorithm to solve this problem, then imple
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    go run hello.go
-   ```go
+   ```
 
 **Expected output:**
-```go
+```
 Hello, World!
-```go
+```
 
 ### How to Approach This
 
@@ -155,7 +155,7 @@ Hello, World!
 4. **Edge Cases**: What could go wrong?
 
 **Pseudocode Template:**
-```go
+```
 ALGORITHM: [Name]
 INPUT: [What we need]
 OUTPUT: [What we produce]
@@ -169,7 +169,7 @@ BEGIN
         - Step 3
     4. Display results
 END
-```go
+```
 
 Then translate this directly to Go code.
 
@@ -220,7 +220,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```go
+```
 package main
 
 import "fmt"

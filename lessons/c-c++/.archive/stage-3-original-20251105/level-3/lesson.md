@@ -80,10 +80,10 @@ Create a program that calculates the nth Fibonacci number. The Fibonacci sequenc
 The program should ask for n and display the nth Fibonacci number.
 
 **Example:**
-```cpp
+```
 Enter n: 8
 Fibonacci number 8 is: 21
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for Fibonacci calculation
@@ -98,15 +98,15 @@ Fibonacci number 8 is: 21
 Create a program that determines if a given number is prime. A prime number is a positive integer greater than 1 that has no positive divisors other than 1 and itself.
 
 **Example:**
-```cpp
+```
 Enter a number: 17
 17 is a prime number.
-```cpp
+```
 
-```cpp
+```
 Enter a number: 15
 15 is not a prime number.
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for primality testing
@@ -124,10 +124,10 @@ Create a program that calculates the factorial of a given number. Factorial of n
 - [ ] n! = n × (n-1) × (n-2) × ... × 1
 
 **Example:**
-```cpp
+```
 Enter n: 5
 5! = 120
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for factorial calculation
@@ -150,7 +150,7 @@ Where:
 - [ ] t = time in years
 
 **Example:**
-```cpp
+```
 Enter principal amount: 1000
 Enter annual interest rate (decimal): 0.05
 Enter compounding frequency per year: 12
@@ -158,7 +158,7 @@ Enter time in years: 2
 
 Final amount: $1104.54
 Interest earned: $104.54
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for compound interest calculation
@@ -180,14 +180,14 @@ Where:
 - [ ] n = number of terms
 
 **Example:**
-```cpp
+```
 Enter first term: 3
 Enter common difference: 2
 Enter number of terms: 5
 
 Series: 3, 5, 7, 9, 11
 Sum: 35
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for arithmetic series sum
@@ -204,11 +204,11 @@ Create a program that determines if a number is perfect. A perfect number is a p
 Example: 6 is perfect because 1 + 2 + 3 = 6
 
 **Example:**
-```cpp
+```
 Enter a number: 28
 28 is a perfect number.
 Divisors: 1, 2, 4, 7, 14 (sum = 28)
-```cpp
+```
 
 **Your Task:**
 1. Write pseudocode for perfect number checking
@@ -220,24 +220,24 @@ Divisors: 1, 2, 4, 7, 14 (sum = 28)
 ### Mathematical Pseudocode Guidelines
 
 **Formula Implementation:**
-```cpp
+```
 Algorithm: Formula Calculator
 1. Identify all variables in the formula
 2. Determine the order of operations
 3. Handle special cases (division by zero, etc.)
 4. Calculate step by step
 5. Display results with appropriate precision
-```cpp
+```
 
 **Sequence Generation:**
-```cpp
+```
 Algorithm: Sequence Generator
 1. Initialize first terms
 2. Use loop to generate subsequent terms
 3. Apply the sequence rule
 4. Store or display terms as needed
 5. Handle termination conditions
-```cpp
+```
 
 ---
 
@@ -306,7 +306,7 @@ Algorithm: Sequence Generator
 - [ ] Efficiency: Iterative approach for large n
 
 **Sample Pseudocode:**
-```cpp
+```
 Algorithm: Fibonacci Calculator
 1. Display "Enter n: "
 2. Get n from user
@@ -321,7 +321,7 @@ Algorithm: Fibonacci Calculator
       ii. Set a = b
       iii. Set b = temp
    c. Display "Fibonacci number " + n + " is: " + b
-```cpp
+```
 
 ---
 
@@ -465,7 +465,7 @@ Expected implementation provided.
 
 ### Complete Solution
 
-```cpp
+```
 #include <iostream>
 
 int main() {

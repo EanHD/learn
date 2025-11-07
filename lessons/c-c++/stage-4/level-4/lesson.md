@@ -130,7 +130,7 @@ typedef struct {
     int goal_count;
     char data_file[256];
 } BudgetTracker;
-```cpp
+```
 
 ### Function Modules
 - [ ] **User Interface**: `display_main_menu()`, `handle_navigation()`
@@ -272,7 +272,7 @@ double get_positive_amount(const char *prompt);
 void display_help(void);
 
 # endif
-```cpp
+```
 
 ### Implementation File (budget_tracker.c)
 ```c
@@ -804,7 +804,7 @@ int load_data(BudgetTracker *tracker) {
     printf(" Data loaded successfully!\n");
     return 1;
 }
-```cpp
+```
 
 ### Main Program (main.c)
 ```c
@@ -1077,7 +1077,7 @@ void display_budget_vs_actual(const BudgetTracker *tracker) {
 
     display_budget_status(tracker);
 }
-```cpp
+```
 
 ---
 
@@ -1090,7 +1090,7 @@ gcc -o budget_tracker main.c budget_tracker.c
 
 # Run the program
 ./budget_tracker
-```cpp
+```
 
 ### Test Scenarios
 1. **Setup**: Add a checking account with $1000 balance
@@ -1101,7 +1101,7 @@ gcc -o budget_tracker main.c budget_tracker.c
 6. **Persistence**: Save and reload data
 
 ### Sample Usage Flow
-```cpp
+```
 === Main Menu ===
 1.  View Dashboard
 2.  Manage Accounts
@@ -1122,7 +1122,7 @@ Account type:
 Enter type (1-4): 1
 Enter starting balance: $1000
  Account 'My Checking' added successfully!
-```cpp
+```
 
 ---
 
@@ -1214,20 +1214,20 @@ Enter starting balance: $1000
 ## Code Walkthrough
 
 ### Application Flow
-```cpp
+```
 Start → Load Data → Main Menu Loop → Feature Selection → Sub-Menu Navigation
    ↓         ↓            ↓              ↓                ↓
 Initialize  File I/O    User Choice   Process Request  Context Menus
 Structures  Operations  Validation    Execute Action   User Input
-```cpp
+```
 
 ### Data Management
-```cpp
+```
 User Actions → Input Validation → Data Processing → Storage Update → UI Refresh
      ↓              ↓                ↓              ↓            ↓
 Menu Selection  Constraint  Business Logic  File I/O    Display Update
 and Input       Checking    Calculations    Operations  Results
-```cpp
+```
 
 ---
 
@@ -1299,7 +1299,7 @@ Expected implementation provided.
 
 ### Complete Solution
 
-```cpp
+```
 #include <stdio.h>
 
 int main() {

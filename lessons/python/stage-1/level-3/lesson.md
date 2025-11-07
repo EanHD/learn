@@ -24,7 +24,7 @@ Time to do some math with Python! Programming is great for calculations. Python 
 
 **Copy the following code EXACTLY as shown below into a new file called `math.py`**
 
-```python
+```
 # Some numbers to work with
 a = 10
 b = 3
@@ -37,7 +37,7 @@ print(f"Division: {a} / {b} = {a / b}")
 print(f"Integer Division: {a} // {b} = {a // b}")
 print(f"Modulus (Remainder): {a} % {b} = {a % b}")
 print(f"Exponentiation: {a} ** {b} = {a ** b}")
-```python
+```
 
 ---
 
@@ -45,16 +45,16 @@ print(f"Exponentiation: {a} ** {b} = {a ** b}")
 
 1. **Open your terminal** (or command prompt)
 2. **Navigate to where you saved your file**:
-    ```bash
+    ```
     cd /path/to/your/folder
-    ```python
+    ```
 3. **Run the code**:
-    ```bash
+    ```
     python3 math.py
-    ```bash
+    ```
 
 **Expected output:**
-```python
+```
 Addition: 10 + 3 = 13
 Subtraction: 10 - 3 = 7
 Multiplication: 10 * 3 = 30
@@ -62,7 +62,7 @@ Division: 10 / 3 = 3.3333333333333335
 Integer Division: 10 // 3 = 3
 Modulus (Remainder): 10 % 3 = 1
 Exponentiation: 10 ** 3 = 1000
-```python
+```
 
 ---
 
@@ -113,16 +113,16 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ### Code Breakdown
 
-```python
+```
 # Some numbers to work with
 a = 10
 b = 3
-```python
+```
 
 - **`a = 10`** = Store 10 in variable `a`
 - **`b = 3`** = Store 3 in variable `b`
 
-```python
+```
 # Basic arithmetic operations
 print(f"Addition: {a} + {b} = {a + b}")
 print(f"Subtraction: {a} - {b} = {a - b}")
@@ -131,7 +131,7 @@ print(f"Division: {a} / {b} = {a / b}")
 print(f"Integer Division: {a} // {b} = {a // b}")
 print(f"Modulus (Remainder): {a} % {b} = {a % b}")
 print(f"Exponentiation: {a} ** {b} = {a ** b}")
-```python
+```
 
 - **Each line** = Calculates and displays one operation
 - **`{a + b}`** = Performs calculation and inserts result

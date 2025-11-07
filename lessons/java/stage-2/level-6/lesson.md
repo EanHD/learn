@@ -49,24 +49,24 @@ Loops are the workhorses of programming! Today you'll master algorithms that use
 ### How to Compile and Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    javac hello.java
    ```
 
 2. **Run your program**:
-   ```bash
+   ```
    java hello
    ```
 
 **Expected output:**
-```java
+```
 Hello, World!
-```java
+```
 
 ## Algorithm 1: Sales Data Analyzer
 
 **Pseudocode:**
-```java
+```
 Algorithm: Analyze Monthly Sales Data
 1. Display "=== Sales Data Analyzer ==="
 2. Initialize sales array (can hold 30 values)
@@ -103,7 +103,7 @@ Algorithm: Analyze Monthly Sales Data
       i. Display "Day " + (i + 1) + ": $" + sales[i]
 10. Else:
    a. Display "No sales data entered."
-```java
+```
 
 **Loop Logic:**
 - Input loop with validation
@@ -118,7 +118,7 @@ Algorithm: Analyze Monthly Sales Data
 ## Algorithm 2: Student Attendance Tracker
 
 **Pseudocode:**
-```java
+```
 Algorithm: Track Class Attendance
 1. Display "=== Class Attendance Tracker ==="
 2. Display "Enter number of students: "
@@ -151,7 +151,7 @@ Algorithm: Track Class Attendance
       i. Display "Student " + student + ":  Present"
    b. Else:
       i. Display "Student " + student + ":  Absent"
-```java
+```
 
 **Loop Logic:**
 - Fixed iteration for known number of students
@@ -166,7 +166,7 @@ Algorithm: Track Class Attendance
 ## Algorithm 3: Inventory Management System
 
 **Pseudocode:**
-```java
+```
 Algorithm: Manage Store Inventory
 1. Display "=== Inventory Management System ==="
 2. Initialize itemNames array (can hold 50 items)
@@ -240,7 +240,7 @@ Algorithm: Manage Store Inventory
    i. Else:
       i. Display " Invalid choice!"
 7. Display "Thank you for using Inventory Management System! "
-```java
+```
 
 **Loop Logic:**
 - Menu-driven interface with multiple operations
@@ -255,7 +255,7 @@ Algorithm: Manage Store Inventory
 ## Algorithm 4: Grade Book Calculator
 
 **Pseudocode:**
-```java
+```
 Algorithm: Calculate Final Grades
 1. Display "=== Grade Book Calculator ==="
 2. Display "Enter number of students: "
@@ -312,7 +312,7 @@ Algorithm: Calculate Final Grades
 23. Display "C grades: " + gradeRanges[2]
 24. Display "D grades: " + gradeRanges[3]
 25. Display "F grades: " + gradeRanges[4]
-```java
+```
 
 **Loop Logic:**
 - 2D array processing (nested loops)
@@ -327,7 +327,7 @@ Algorithm: Calculate Final Grades
 ## Algorithm 5: Password Generator
 
 **Pseudocode:**
-```java
+```
 Algorithm: Generate Secure Passwords
 1. Display "=== Password Generator ==="
 2. Display "Enter desired password length (8-20): "
@@ -365,7 +365,7 @@ Algorithm: Generate Secure Passwords
 23. If includeSpecial is "y":
    a. Display " Special characters"
 24. Display " Lowercase letters (always included)"
-```java
+```
 
 **Loop Logic:**
 - Input validation loop
@@ -380,7 +380,7 @@ Algorithm: Generate Secure Passwords
 ## Algorithm 6: Voting System
 
 **Pseudocode:**
-```java
+```
 Algorithm: Conduct Election Voting
 1. Display "=== Election Voting System ==="
 2. Initialize candidateNames array ["Alice", "Bob", "Charlie"]
@@ -425,7 +425,7 @@ Algorithm: Conduct Election Voting
       ii. Display candidateNames[i] + ": " + votes[i] + " votes (" + percentage + "%)"
 8. Else:
    a. Display "No votes were cast."
-```java
+```
 
 **Loop Logic:**
 - Menu-driven voting interface
@@ -483,25 +483,25 @@ Algorithm: Conduct Election Voting
 ## Loop Algorithm Patterns
 
 ### Accumulation Pattern
-```java
+```
 Initialize total to 0
 While getting values:
     Get nextValue
     Add nextValue to total
 Display "Total: " + total
-```java
+```
 
 ### Counting Pattern
-```java
+```
 Initialize count to 0
 For each item:
     If item meets criteria:
         Add 1 to count
 Display "Count: " + count
-```java
+```
 
 ### Search Pattern
-```java
+```
 Initialize found to false
 For each item in collection:
     If item matches target:
@@ -512,10 +512,10 @@ If found:
     Display "Found at location"
 Else:
     Display "Not found"
-```java
+```
 
 ### Validation Pattern
-```java
+```
 Initialize isValid to false
 While not isValid:
     Get userInput
@@ -524,7 +524,7 @@ While not isValid:
     Else:
         Display error message
 Process valid input
-```java
+```
 
 ---
 
@@ -536,7 +536,7 @@ Process valid input
 
 ### Algorithm 1: Sales Data Analyzer
 
-```java
+```
 import java.util.Scanner;
 
 public class SalesAnalyzer {
@@ -592,7 +592,7 @@ public class SalesAnalyzer {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Array storage for sales data
@@ -615,7 +615,7 @@ public class SalesAnalyzer {
 
 ### Algorithm 2: Student Attendance Tracker
 
-```java
+```
 import java.util.Scanner;
 
 public class AttendanceTracker {
@@ -670,7 +670,7 @@ public class AttendanceTracker {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Fixed iteration for known number of students (for loop)
@@ -692,7 +692,7 @@ public class AttendanceTracker {
 
 ### Algorithm 3: Inventory Management System
 
-```java
+```
 import java.util.Scanner;
 
 public class InventoryManager {
@@ -812,7 +812,7 @@ public class InventoryManager {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Parallel arrays (itemNames and itemQuantities at same indices)
@@ -836,7 +836,7 @@ public class InventoryManager {
 
 ### Algorithm 4: Grade Book Calculator
 
-```java
+```
 import java.util.Scanner;
 
 public class GradeBook {
@@ -928,7 +928,7 @@ public class GradeBook {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - 2D array processing with nested loops (rows=students, cols=assignments)
@@ -957,7 +957,7 @@ public class GradeBook {
 
 ### Algorithm 5: Password Generator
 
-```java
+```
 import java.util.Scanner;
 import java.util.Random;
 import java.util.ArrayList;
@@ -1036,7 +1036,7 @@ public class PasswordGenerator {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Input validation loop (while with compound condition)
@@ -1065,7 +1065,7 @@ public class PasswordGenerator {
 
 ### Algorithm 6: Voting System
 
-```java
+```
 import java.util.Scanner;
 
 public class VotingSystem {
@@ -1144,7 +1144,7 @@ public class VotingSystem {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Menu-driven voting interface with while loop
@@ -1174,7 +1174,7 @@ public class VotingSystem {
 ### Loop Efficiency Considerations in Java
 
 **Array Processing:**
-```java
+```
 // Efficient - single pass
 for (int i = 0; i < size; i++) {
     total += array[i];
@@ -1188,10 +1188,10 @@ for (int i = 0; i < size; i++) {
 for (int i = 0; i < size; i++) {
     if (array[i] > max) max = array[i];
 }
-```java
+```
 
 **Early Termination:**
-```java
+```
 // Good - stop when found
 for (int i = 0; i < size; i++) {
     if (array[i] == target) {
@@ -1199,10 +1199,10 @@ for (int i = 0; i < size; i++) {
         break; // Don't continue searching
     }
 }
-```java
+```
 
 **Enhanced For Loop:**
-```java
+```
 // For iteration (no index needed)
 for (String name : studentNames) {
     System.out.println(name);
@@ -1212,7 +1212,7 @@ for (String name : studentNames) {
 for (int i = 0; i < studentNames.length; i++) {
     System.out.println((i + 1) + ". " + studentNames[i]);
 }
-```java
+```
 
 ---
 

@@ -51,19 +51,19 @@ Sorting Algorithms - Design an algorithm to solve this problem, then implement i
 ### How to Compile and Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    javac hello.java
    ```
 
 2. **Run your program**:
-   ```bash
+   ```
    java hello
    ```
 
 **Expected output:**
-```java
+```
 Hello, World!
-```java
+```
 
 ### How to Approach This
 
@@ -160,7 +160,7 @@ Hello, World!
 4. **Edge Cases**: What could go wrong?
 
 **Pseudocode Template:**
-```java
+```
 ALGORITHM: [Name]
 INPUT: [What we need]
 OUTPUT: [What we produce]
@@ -174,7 +174,7 @@ BEGIN
         - Step 3
     4. Display results
 END
-```java
+```
 
 Then translate this directly to Java code.
 

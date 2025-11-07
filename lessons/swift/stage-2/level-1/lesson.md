@@ -20,13 +20,13 @@ Now that you know the basics, it's time to think like a programmer! You'll take 
 
 Here's some pseudocode that describes a simple program:
 
-```swift
+```
 START
     print "Welcome to the program!"
     print "This is my first real program"
     print "I'm learning to code!"
 END
-```swift
+```
 
 **Your mission**: Translate this pseudocode into Swift code and save it as `main.swift`.
 
@@ -38,18 +38,18 @@ Hints:
 
 ### How to Run
 
-```bash
+```
 cd ~/.local/share/learn/workspaces/swift/stage-2/level-1
 swift main.swift
-```swift
+```
 
 Expected output:
 
-```swift
+```
 Welcome to the program!
 This is my first real program
 I'm learning to code!
-```swift
+```
 
 ### Success Checklist
 
@@ -71,12 +71,12 @@ If you're stuck, here's what your code should look like (don't peek until you tr
 
 ## ANSWER KEY
 
-```swift
-```swift
+```
+```
 
 (Fill in based on language-specific syntax)
 
-```swift
+```
 
 ---
 

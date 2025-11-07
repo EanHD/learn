@@ -23,7 +23,7 @@ Make your programs interactive by reading input from users.
 
 **Copy the following code EXACTLY as shown below into `main.jl`**
 
-```julia
+```
 print("Enter your name: ")
 name = readline()
 
@@ -32,26 +32,26 @@ age = parse(Int, readline())
 
 println("Hello, $name!")
 println("You are $age years old.")
-```julia
+```
 
 ---
 
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```julia
+```
 <Space>r
-```julia
+```
 
 **Method 2 (Terminal):**
-```bash
+```
 julia main.jl
-```julia
+```
 
 **Expected output:**
-```julia
+```
 [Interactive - output varies based on user input]
-```julia
+```
 
 
 ---

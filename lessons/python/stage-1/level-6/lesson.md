@@ -24,7 +24,7 @@ Loops let your program do the same thing multiple times automatically! This is p
 
 **Copy the following code EXACTLY as shown below into a new file called `loops.py`**
 
-```python
+```
 # While loop example - countdown
 print("While loop countdown:")
 count = 5
@@ -53,7 +53,7 @@ for i in range(1, 4):
         result = i * j
         print(f"{i} × {j} = {result}")
     print()  # Empty line between rows
-```python
+```
 
 ---
 
@@ -61,16 +61,16 @@ for i in range(1, 4):
 
 1. **Open your terminal** (or command prompt)
 2. **Navigate to where you saved your file**:
-    ```bash
+    ```
     cd /path/to/your/folder
-    ```python
+    ```
 3. **Run the code**:
-    ```bash
+    ```
     python3 loops.py
-    ```bash
+    ```
 
 **Expected output:**
-```python
+```
 While loop countdown:
 Count: 5
 Count: 4
@@ -104,7 +104,7 @@ Multiplication table (3x):
 3 × 1 = 3
 3 × 2 = 6
 3 × 3 = 9
-```python
+```
 
 ---
 
@@ -152,34 +152,34 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ### Code Breakdown
 
-```python
+```
 # While loop example - countdown
 count = 5
 while count > 0:
     print(f"Count: {count}")
     count = count - 1
-```python
+```
 
 - **`while count > 0:`** = Loop while count is greater than 0
 - **`count = count - 1`** = Decrement counter each iteration
 - **Must change condition** = Or loop runs forever!
 
-```python
+```
 # For loop with range - counting up
 for i in range(1, 6):
     print(f"Number: {i}")
-```python
+```
 
 - **`range(1, 6)`** = Numbers 1, 2, 3, 4, 5 (up to but not including 6)
 - **`for i in ...:`** = `i` takes each value in sequence
 - **Automatic counting** = No manual counter needed
 
-```python
+```
 # For loop - iterating through a list
 fruits = ["apple", "banana", "orange", "grape"]
 for fruit in fruits:
     print(f"I like {fruit}s")
-```python
+```
 
 - **List** = Collection of items in square brackets `[]`
 - **`for fruit in fruits:`** = `fruit` becomes each item in list

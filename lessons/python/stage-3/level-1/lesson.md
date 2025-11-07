@@ -22,9 +22,9 @@ Write a program that:
 
 Example: User enters "Alice" and "blue"
 
-```python
+```
 Hi Alice, I like blue too!
-```python
+```
 
 ---
 
@@ -70,17 +70,17 @@ START
     color = get input from user
     print "Hi " + name + ", I like " + color + " too!"
 END
-```python
+```
 
 ### Python Solution
 
-```python
+```
 print("What is your name?")
 name = input()
 print("What is your favorite color?")
 color = input()
 print("Hi " + name + ", I like " + color + " too!")
-```python
+```
 
 ### Explanation
 

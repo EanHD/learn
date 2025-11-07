@@ -30,14 +30,14 @@ You're going to build a complete Swift application. This is a real project that 
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    swift hello.swift
-   ```swift
+   ```
 
 **Expected output:**
-```swift
+```
 Hello, World!
-```swift
+```
 
 ### Project Requirements
 
@@ -164,7 +164,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```swift
+```
 print("Hello, World!")
 
 ```

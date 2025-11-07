@@ -23,7 +23,7 @@ Welcome to your first MongoDB (NoSQL) program! Today, you'll create and run your
 
 **Copy the following code EXACTLY as shown below into `main.js`**
 
-```javascript
+```
 // MongoDB JavaScript shell script
 print("Hello, World!");
 ```
@@ -33,12 +33,12 @@ print("Hello, World!");
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```javascript
+```
 <Space>r
 ```
 
 **Method 2 (Terminal):**
-```bash
+```
 mongo < script.js
 ```
 

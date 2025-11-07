@@ -30,14 +30,14 @@ Requirements:
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    swift hello.swift
-   ```swift
+   ```
 
 **Expected output:**
-```swift
+```
 Hello, World!
-```swift
+```
 
 ### How to Approach This
 
@@ -123,7 +123,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```swift
+```
 print("Hello, World!")
 
 ```

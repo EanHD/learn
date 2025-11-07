@@ -26,25 +26,25 @@ Welcome to Level 2! Today we're focusing on how to handle variables in your pseu
 Variables in pseudocode follow simple patterns:
 
 **Declaration and assignment:**
-```go
+```
 SET name TO "John"
 SET age TO 25
 SET is_student TO TRUE
-```go
+```
 
 **Reassignment:**
-```go
+```
 SET age TO age + 1
 SET total TO total + new_value
 SET is_student TO FALSE
-```go
+```
 
 **Calculations with variables:**
-```go
+```
 SET area TO length * width
 SET average TO (num1 + num2 + num3) / 3
 SET is_adult TO age >= 18
-```go
+```
 
 ---
 
@@ -58,19 +58,19 @@ SET is_adult TO age >= 18
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    go run hello.go
-   ```go
+   ```
 
 **Expected output:**
-```go
+```
 Hello, World!
-```go
+```
 
 ## Algorithm 1: Simple Variable Swapping
 
 **Pseudocode:**
-```go
+```
 Algorithm: Swap Two Variables
 1. SET first_number TO 10
 2. SET second_number TO 20
@@ -79,7 +79,7 @@ Algorithm: Swap Two Variables
 5. SET first_number TO second_number
 6. SET second_number TO temp
 7. DISPLAY "After swap: first=" + first_number + ", second=" + second_number
-```go
+```
 
 **Your Task:** Create a Go program that demonstrates variable swapping.
 
@@ -88,7 +88,7 @@ Algorithm: Swap Two Variables
 ## Algorithm 2: Running Total Calculator
 
 **Pseudocode:**
-```go
+```
 Algorithm: Calculate Running Total
 1. SET total TO 0
 2. SET count TO 0
@@ -105,7 +105,7 @@ Algorithm: Calculate Running Total
 13. DISPLAY "Total: " + total
 14. DISPLAY "Count: " + count
 15. DISPLAY "Average: " + average
-```go
+```
 
 **Your Task:** Create a Go program that calculates a running total and average.
 
@@ -114,7 +114,7 @@ Algorithm: Calculate Running Total
 ## Algorithm 3: Temperature Tracker
 
 **Pseudocode:**
-```go
+```
 Algorithm: Track Temperature Readings
 1. SET min_temp TO 100
 2. SET max_temp TO -100
@@ -136,7 +136,7 @@ Algorithm: Track Temperature Readings
 13. IF current_temp > max_temp THEN
    SET max_temp TO current_temp
 14. DISPLAY "Current: " + current_temp + ", Min: " + min_temp + ", Max: " + max_temp
-```go
+```
 
 **Your Task:** Create a Go program that tracks min/max temperatures.
 
@@ -145,7 +145,7 @@ Algorithm: Track Temperature Readings
 ## Algorithm 4: Account Balance Tracker
 
 **Pseudocode:**
-```go
+```
 Algorithm: Track Bank Account Balance
 1. SET account_balance TO 1000
 2. SET transaction_amount TO -50
@@ -160,7 +160,7 @@ Algorithm: Track Bank Account Balance
 11. SET transaction_amount TO 150.25
 12. SET account_balance TO account_balance + transaction_amount
 13. DISPLAY "Balance after deposit: $" + account_balance
-```go
+```
 
 **Your Task:** Create a Go program that tracks account balance changes.
 
@@ -169,7 +169,7 @@ Algorithm: Track Bank Account Balance
 ## Algorithm 5: Student Grade Calculator
 
 **Pseudocode:**
-```go
+```
 Algorithm: Calculate Student Grade
 1. SET total_points TO 0
 2. SET possible_points TO 0
@@ -195,7 +195,7 @@ Algorithm: Calculate Student Grade
 22. DISPLAY "Possible Points: " + possible_points
 23. DISPLAY "Percentage: " + percentage
 24. DISPLAY "Letter Grade: " + letter_grade
-```go
+```
 
 **Your Task:** Create a Go program that calculates student grades.
 
@@ -204,7 +204,7 @@ Algorithm: Calculate Student Grade
 ## Algorithm 6: Counter Patterns
 
 **Pseudocode:**
-```go
+```
 Algorithm: Different Counter Patterns
 1. SET counter TO 1
 2. SET even_counter TO 2
@@ -221,7 +221,7 @@ Algorithm: Different Counter Patterns
    13. DISPLAY "Odd: " + odd_counter
    14. SET odd_counter TO odd_counter + 2
 15. END WHILE
-```go
+```
 
 **Your Task:** Create a Go program that demonstrates different counting patterns.
 
@@ -230,7 +230,7 @@ Algorithm: Different Counter Patterns
 ## Algorithm 7: Accumulator Pattern
 
 **Pseudocode:**
-```go
+```
 Algorithm: Calculate Statistics
 1. SET sum TO 0
 2. SET count TO 0
@@ -252,7 +252,7 @@ Algorithm: Calculate Statistics
 18. DISPLAY "Count: " + count
 19. DISPLAY "Product: " + product
 20. DISPLAY "Average: " + average
-```go
+```
 
 **Your Task:** Create a Go program that demonstrates accumulator patterns.
 
@@ -309,7 +309,7 @@ Algorithm: Calculate Statistics
 
 ### Algorithm 1: Simple Variable Swapping
 
-```go
+```
 package main
 
 import "fmt"
@@ -327,11 +327,11 @@ func main() {
 
     fmt.Println("After swap: first=" + fmt.Sprintf("%d", first_number) + ", second=" + fmt.Sprintf("%d", second_number))
 }
-```go
+```
 
 ### Algorithm 2: Running Total Calculator
 
-```go
+```
 package main
 
 import "fmt"
@@ -359,11 +359,11 @@ func main() {
     fmt.Println("Count: " + fmt.Sprintf("%d", count))
     fmt.Println("Average: " + fmt.Sprintf("%f", average))
 }
-```go
+```
 
 ### Algorithm 3: Temperature Tracker
 
-```go
+```
 package main
 
 import "fmt"
@@ -400,11 +400,11 @@ func main() {
     }
     fmt.Println("Current: " + fmt.Sprintf("%d", current_temp) + ", Min: " + fmt.Sprintf("%d", min_temp) + ", Max: " + fmt.Sprintf("%d", max_temp))
 }
-```go
+```
 
 ### Algorithm 4: Account Balance Tracker
 
-```go
+```
 package main
 
 import "fmt"
@@ -429,11 +429,11 @@ func main() {
     account_balance = account_balance + transaction_amount
     fmt.Println("Balance after deposit: $" + fmt.Sprintf("%.2f", account_balance))
 }
-```go
+```
 
 ### Algorithm 5: Student Grade Calculator
 
-```go
+```
 package main
 
 import "fmt"
@@ -476,11 +476,11 @@ func main() {
     fmt.Println("Percentage: " + fmt.Sprintf("%.2f", percentage))
     fmt.Println("Letter Grade: " + letter_grade)
 }
-```go
+```
 
 ### Algorithm 6: Counter Patterns
 
-```go
+```
 package main
 
 import "fmt"
@@ -505,11 +505,11 @@ func main() {
         odd_counter = odd_counter + 2
     }
 }
-```go
+```
 
 ### Algorithm 7: Accumulator Pattern
 
-```go
+```
 package main
 
 import "fmt"
@@ -542,7 +542,7 @@ func main() {
     fmt.Println("Product: " + fmt.Sprintf("%d", product))
     fmt.Println("Average: " + fmt.Sprintf("%.2f", average))
 }
-```go
+```
 
 ### Variable Translation Patterns
 
@@ -593,7 +593,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```go
+```
 package main
 
 import "fmt"

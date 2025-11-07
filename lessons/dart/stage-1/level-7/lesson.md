@@ -23,7 +23,7 @@ Organize your code into reusable functions/methods.
 
 **Copy the following code EXACTLY as shown below into `main.dart`**
 
-```dart
+```
 void greet(String name) {
   print('Hello, $name!');
 }
@@ -47,7 +47,7 @@ void main() {
   int fact = factorial(5);
   print('5! = $fact');
 }
-```dart
+```
 
 ---
 
@@ -69,7 +69,7 @@ void main() {
 
 ### The Complete Code
 
-```dart
+```
 void greet(String name) {
   print('Hello, $name!');
 }
@@ -93,7 +93,7 @@ void main() {
   int fact = factorial(5);
   print('5! = $fact');
 }
-```dart
+```
 
 ### What This Code Does
 
@@ -170,12 +170,12 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```dart
+```
 void main() {
     print("Hello, World!");
 }
 
-```dart
+```
 
 ### Code Breakdown
 

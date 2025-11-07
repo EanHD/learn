@@ -27,13 +27,13 @@ The Task Manager application consists of:
 ### Key Components
 
 **Task Data Structure:**
-```python
+```
 task = {
     'id': self.next_id,
     'description': description,
     'completed': False
 }
-```python
+```
 Each task is stored as a dictionary with an ID, description, and completion status.
 
 **Menu System:**

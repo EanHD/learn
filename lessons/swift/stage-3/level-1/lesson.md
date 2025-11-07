@@ -22,13 +22,13 @@ You're now ready for Stage 3! This is where you start thinking like a real progr
 
 Step 1: Write the pseudocode first
 
-```swift
+```
 What should happen:
 1. Print "Hello, [name]"
 
 Write your pseudocode in plain English below:
 (Your pseudocode here)
-```swift
+```
 
 Step 2: Implement your pseudocode in Swift
 
@@ -38,14 +38,14 @@ Create `main.swift.swift` with your solution.
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    swift hello.swift
-   ```swift
+   ```
 
 **Expected output:**
-```swift
+```
 Hello, World!
-```swift
+```
 
 ### Success Checklist
 
@@ -130,7 +130,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```swift
+```
 print("Hello, World!")
 
 ```

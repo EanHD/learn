@@ -49,24 +49,24 @@ Functions (methods in Java) are the building blocks of organized code! Today you
 ### How to Compile and Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    javac hello.java
    ```
 
 2. **Run your program**:
-   ```bash
+   ```
    java hello
    ```
 
 **Expected output:**
-```java
+```
 Hello, World!
-```java
+```
 
 ## Algorithm 1: Calculator Program with Methods
 
 **Pseudocode:**
-```java
+```
 Algorithm: Modular Calculator Program
 
 Method: displayMenu()
@@ -129,7 +129,7 @@ Main Algorithm:
    e. Else:
       i. Display " Invalid choice!"
 4. Display "Thank you for using the calculator! "
-```java
+```
 
 **Method Design:**
 - `displayMenu()`: Handles UI display
@@ -144,7 +144,7 @@ Main Algorithm:
 ## Algorithm 2: Student Grade Management System
 
 **Pseudocode:**
-```java
+```
 Algorithm: Student Grade Management with Methods
 
 Method: displayMainMenu()
@@ -230,7 +230,7 @@ Main Algorithm:
    h. Else:
       i. Display " Invalid choice!"
 7. Display "Thank you for using Grade Management System! "
-```java
+```
 
 **Method Design:**
 - `displayMainMenu()`: UI method
@@ -246,7 +246,7 @@ Main Algorithm:
 ## Algorithm 3: Banking System with Methods
 
 **Pseudocode:**
-```java
+```
 Algorithm: Simple Banking System with Methods
 
 Method: displayBankMenu()
@@ -331,7 +331,7 @@ Main Algorithm:
    h. Else:
       i. Display " Invalid choice!"
 7. Display "Thank you for banking with us! "
-```java
+```
 
 **Method Design:**
 - `displayBankMenu()`: UI method
@@ -346,7 +346,7 @@ Main Algorithm:
 ## Algorithm 4: Statistics Calculator with Methods
 
 **Pseudocode:**
-```java
+```
 Algorithm: Statistical Analysis with Methods
 
 Method: displayStatsMenu()
@@ -451,7 +451,7 @@ Main Algorithm:
    i. Else:
       i. Display " Invalid choice!"
 6. Display "Thank you for using Statistics Calculator! "
-```java
+```
 
 **Method Design:**
 - `displayStatsMenu()`: UI method
@@ -466,7 +466,7 @@ Main Algorithm:
 ## Algorithm 5: Text Analyzer with Methods
 
 **Pseudocode:**
-```java
+```
 Algorithm: Text Analysis with Methods
 
 Method: displayTextMenu()
@@ -558,7 +558,7 @@ Main Algorithm:
    j. Else:
       i. Display " Invalid choice!"
 5. Display "Thank you for using Text Analyzer! "
-```java
+```
 
 **Method Design:**
 - `displayTextMenu()`: UI method
@@ -620,7 +620,7 @@ Main Algorithm:
 ## Method Design Patterns
 
 ### Input-Process-Output Pattern
-```java
+```
 Method: getUserInput(scanner, prompt)
     Display prompt
     Get and return input
@@ -631,10 +631,10 @@ Method: processData(data)
 
 Method: displayOutput(result)
     Format and display result
-```java
+```
 
 ### Validation Pattern
-```java
+```
 Method: isValid(value, min, max)
     Return value >= min && value <= max
 
@@ -645,10 +645,10 @@ Method: getValidInput(scanner, prompt, min, max)
         If isValid(input, min, max):
             Return input
         Display error message
-```java
+```
 
 ### Calculation with Helper Pattern
-```java
+```
 Method: calculateTotal(items, count)
     Sum = 0
     For i from 0 to count:
@@ -657,7 +657,7 @@ Method: calculateTotal(items, count)
 
 Method: calculateItemValue(item)
     Return item.price * item.quantity
-```java
+```
 
 ---
 
@@ -669,7 +669,7 @@ Method: calculateItemValue(item)
 
 ### Algorithm 1: Calculator Program with Methods
 
-```java
+```
 import java.util.Scanner;
 
 public class ModularCalculator {
@@ -758,7 +758,7 @@ public class ModularCalculator {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Static methods for utility functions (no instance needed)
@@ -781,7 +781,7 @@ public class ModularCalculator {
 
 ### Algorithm 2: Student Grade Management System
 
-```java
+```
 import java.util.Scanner;
 
 public class GradeManagement {
@@ -902,7 +902,7 @@ public class GradeManagement {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Methods modifying arrays (arrays passed by reference)
@@ -924,7 +924,7 @@ public class GradeManagement {
 
 ### Algorithm 3: Banking System with Methods
 
-```java
+```
 import java.util.Scanner;
 
 public class BankingSystem {
@@ -1041,7 +1041,7 @@ public class BankingSystem {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Methods returning new balance (double)
@@ -1063,7 +1063,7 @@ public class BankingSystem {
 
 ### Algorithm 4: Statistics Calculator with Methods
 
-```java
+```
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -1215,7 +1215,7 @@ public class StatisticsCalculator {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Statistical calculation methods
@@ -1237,7 +1237,7 @@ public class StatisticsCalculator {
 
 ### Algorithm 5: Text Analyzer with Methods
 
-```java
+```
 import java.util.Scanner;
 
 public class TextAnalyzer {
@@ -1371,7 +1371,7 @@ public class TextAnalyzer {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - String manipulation methods
@@ -1400,7 +1400,7 @@ public class TextAnalyzer {
 ### Method Design Patterns in Java
 
 **Input Validation Method:**
-```java
+```
 public static int getValidInt(Scanner scanner, String prompt, int min, int max) {
     while (true) {
         System.out.print(prompt);
@@ -1415,10 +1415,10 @@ public static int getValidInt(Scanner scanner, String prompt, int min, int max) 
         System.out.printf("Please enter a number between %d and %d\n", min, max);
     }
 }
-```java
+```
 
 **Array Processing Pattern:**
-```java
+```
 public static double processArray(double[] array, int count) {
     double result = 0;
     for (int i = 0; i < count; i++) {
@@ -1431,10 +1431,10 @@ private static double someOperation(double value) {
     // Helper method for complex operation
     return value * 2;
 }
-```java
+```
 
 **Menu-Driven Pattern:**
-```java
+```
 public static void displayMenu() {
     System.out.println("\n=== Menu ===");
     // Display options
@@ -1451,7 +1451,7 @@ public static void handleChoice(int choice, /* parameters */) {
         // etc.
     }
 }
-```java
+```
 
 ---
 

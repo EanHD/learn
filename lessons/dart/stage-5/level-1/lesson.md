@@ -30,14 +30,14 @@ You're going to build a complete Dart application. This is a real project that c
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    dart hello.dart
-   ```dart
+   ```
 
 **Expected output:**
-```dart
+```
 Hello, World!
-```dart
+```
 
 ### Project Requirements
 
@@ -162,12 +162,12 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```dart
+```
 void main() {
     print("Hello, World!");
 }
 
-```dart
+```
 
 ### Code Breakdown
 

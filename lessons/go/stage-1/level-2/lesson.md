@@ -25,7 +25,7 @@ Welcome to the world of variables! Today you'll learn how to store and use data 
 
 **Copy the following code into a new file called `variables.go`**
 
-```go
+```
 package main
 
 import "fmt"
@@ -95,25 +95,25 @@ func main() {
     // The following would cause an error:
     // var number int = "this won't work" // Type mismatch error
 }
-```go
+```
 
 ---
 
 ### How to Execute
 
 1. **Create or navigate to a Go module directory** (if not already in one):
-   ```bash
+   ```
    mkdir variables-example && cd variables-example
    go mod init variables
-   ```go
+   ```
 2. **Copy the code into `variables.go`**
 3. **Run your program**:
-   ```bash
+   ```
    go run variables.go
-   ```bash
+   ```
 
 **Expected output:**
-```go
+```
 === Personal Info ===
 Name: Alex
 City: New York
@@ -138,7 +138,7 @@ Happy: true
 === Multiple Declaration Example ===
 Full Name: John Doe
 Age: 35
-```go
+```
 
 ---
 
@@ -194,25 +194,25 @@ Go has several important concepts about variables:
 
 ### Code Breakdown
 
-```go
+```
 var name string = "Alex"
-```go
+```
 - **`var`** = Keyword to declare a variable
 - **`name`** = Variable name (follows Go naming conventions)
 - **`string`** = Type declaration (Go is statically typed)
 - **`=`** = Assignment operator (stores value on right into variable on left)
 - **`"Alex"`** = String value (text in quotes)
 
-```go
+```
 country := "USA"
-```go
+```
 - **`:=`** = Short variable declaration (declare and initialize)
 - **Available only** inside functions in Go
 - **Type inferred** by Go from the assigned value
 
-```go
+```
 fmt.Println("Name: " + name)
-```go
+```
 - **`+`** = String concatenation operator (joins strings together)
 - The variable `name` gets its value inserted into the output string
 
@@ -221,22 +221,22 @@ fmt.Println("Name: " + name)
 Go has three main ways to declare variables:
 
 1. **Standard declaration**:
-```go
+```
 var name string = "Alex"
 var age int = 25
-```go
+```
 
 2. **Type omitted (inferred)**:
-```go
+```
 var name = "Alex"  // Type inferred as string
 var age = 25       // Type inferred as int
-```go
+```
 
 3. **Short declaration** (inside functions only):
-```go
+```
 name := "Alex"     // Type inferred as string
 age := 25          // Type inferred as int
-```go
+```
 
 ### Variable Naming Rules
 
@@ -272,39 +272,39 @@ age := 25          // Type inferred as int
 
 In Go, every variable has a zero value when declared without initialization:
 
-```go
+```
 var name string    // Zero value: ""
 var age int        // Zero value: 0
 var height float64 // Zero value: 0.0
 var isTrue bool    // Zero value: false
-```go
+```
 
 ### Multiple Variable Declarations
 
 **Group syntax**:
-```go
+```
 var (
     name string = "Alex"
     age  int    = 25
     city string = "New York"
 )
-```go
+```
 
 **Same type on one line**:
-```go
+```
 var name, city string = "Alex", "New York"
 var age1, age2 int = 25, 30
-```go
+```
 
 ### Static Typing
 
 Go's static typing means you must be explicit about types, and type mismatches cause compile errors:
 
-```go
+```
 var age int = 25
 // This will cause a compile error:
 // age = "twenty five"  // Cannot assign string to int variable
-```go
+```
 
 ### Common Errors & Solutions
 
@@ -326,7 +326,7 @@ var age int = 25
 
 Try this modified version:
 
-```go
+```
 package main
 
 import "fmt"
@@ -364,7 +364,7 @@ func main() {
     fmt.Println("Is student AND not employed:", isStudent && !isEmployed)
     fmt.Println("Is employed OR retired:", isEmployed || isRetired)
 }
-```go
+```
 
 ---
 
@@ -403,7 +403,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```go
+```
 package main
 
 import "fmt"

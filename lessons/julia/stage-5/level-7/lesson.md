@@ -235,14 +235,14 @@ Follow these stages:
 
 **Your architecture will depend on your chosen project, but should include:**
 
-```julia
+```
 // Main program structure
 // - Data definitions
 // - Core functions
 // - User interface
 // - File operations
 // - Main program loop
-```julia
+```
 
 **Recommended Organization:**
 1. Separate data structures from logic

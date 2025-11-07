@@ -25,7 +25,7 @@ Welcome to the world of variables! Today you'll learn how to store and use data 
 
 **Copy the following code into a new file called `variables.lua`**
 
-```lua
+```
 -- String variables (text)
 name = "Alex"
 city = "New York"
@@ -85,19 +85,19 @@ print("=== Table Example ===")
 print("Person name: " .. person.name)
 print("Person age: " .. person.age)
 print("First hobby: " .. person.hobbies[1])
-```lua
+```
 
 ---
 
 ### How to Execute
 
 1. **Run your program**:
-   ```bash
+   ```
    lua variables.lua
-   ```lua
+   ```
 
 **Expected output:**
-```lua
+```
 === Personal Info ===
 Name: Alex
 City: New York
@@ -123,7 +123,7 @@ Empty variable: nil
 Person name: Sam
 Person age: 30
 First hobby: reading
-```lua
+```
 
 ---
 
@@ -178,32 +178,32 @@ Lua has several important concepts about variables:
 
 ### Code Breakdown
 
-```lua
+```
 -- String variables (text)
 name = "Alex"
-```lua
+```
 - **`--`** = Single-line comment (ignored by computer)
 - **`name`** = Variable name (no declaration keyword needed in Lua)
 - **`=`** = Assignment operator (stores value on right into variable on left)
 - **`"Alex"`** = String value (text in quotes)
 - No semicolon needed at the end of statements
 
-```lua
+```
 age = 25
-```lua
+```
 - **`age`** = Variable name (numeric variable)
 - **`25`** = Number value (no quotes needed for numbers)
 - Lua treats integers and decimals as the same "number" type
 
-```lua
+```
 is_student = true
-```lua
+```
 - **`is_student`** = Boolean variable name (descriptive naming)
 - **`true`** = Boolean value (one of only two possible values: true or false)
 
-```lua
+```
 print("Name: " .. name)
-```lua
+```
 - **`..`** = String concatenation operator (joins strings together)
 - The variable `name` gets its value inserted into the output string
 
@@ -211,7 +211,7 @@ print("Name: " .. name)
 
 In Lua, variables are global by default unless declared local:
 
-```lua
+```
 -- Global variables (accessible anywhere)
 name = "Global"
 age = 25
@@ -219,7 +219,7 @@ age = 25
 -- Local variables (only accessible in current scope)
 local local_name = "Local"
 local local_age = 30
-```lua
+```
 
 ### Variable Naming Rules
 
@@ -249,7 +249,7 @@ local local_age = 30
 
 Lua is dynamically typed, meaning:
 
-```lua
+```
 dynamic = "I start as a string"
 print(type(dynamic))  -- Output: "string"
 
@@ -258,13 +258,13 @@ print(type(dynamic))  -- Output: "number"
 
 dynamic = true  -- Now it's a boolean
 print(type(dynamic))  -- Output: "boolean"
-```lua
+```
 
 ### String Concatenation
 
 In Lua, use `..` for string concatenation:
 
-```lua
+```
 first_name = "John"
 last_name = "Doe"
 
@@ -275,13 +275,13 @@ print("Full name: " .. full_name)
 -- Note: You can't directly concatenate numbers and strings without conversion
 -- This will cause an error: print("Age: " .. 25)
 -- Instead, convert the number to string: print("Age: " .. tostring(25))
-```lua
+```
 
 ### Tables - Lua's Powerhouse
 
 Tables are Lua's most important data structure:
 
-```lua
+```
 -- Array-like table (numeric indices)
 fruits = {"apple", "banana", "orange"}
 print(fruits[1])  -- Output: "apple" (1-indexed!)
@@ -293,7 +293,7 @@ print(person.name)  -- Output: "Alex"
 -- Mixed table
 mixed = {name = "Bob", years = {2020, 2021, 2022}}
 print(mixed.years[2])  -- Output: 2021
-```lua
+```
 
 ### Common Errors & Solutions
 
@@ -315,7 +315,7 @@ print(mixed.years[2])  -- Output: 2021
 
 Try this modified version:
 
-```lua
+```
 -- Let's explore Lua's dynamic nature!
 print("=== Lua Advanced Variables ===")
 
@@ -339,7 +339,7 @@ person = {name = "Alice", age = 28}
 person.job = "Engineer"  -- Add new field
 person.age = person.age + 1  -- Update field
 print(person.name .. " is " .. person.age .. " years old and works as " .. person.job)
-```lua
+```
 
 ---
 
@@ -378,7 +378,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```lua
+```
 print("Hello, World!")
 
 ```

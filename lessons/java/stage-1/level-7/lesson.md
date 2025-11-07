@@ -23,7 +23,7 @@ Organize your code into reusable functions/methods.
 
 **Copy the following code EXACTLY as shown below into `main.java`**
 
-```java
+```
 public class Main {
     // Function to greet someone
     public static void greet(String name) {
@@ -54,27 +54,27 @@ public class Main {
         System.out.println("5! = " + factorial(5));
     }
 }
-```java
+```
 
 ---
 
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```java
+```
 <Space>r
-```java
+```
 
 **Method 2 (Terminal):**
-```bash
+```
 javac Main.java
 java Main
-```java
+```
 
 **Expected output:**
-```java
+```
 Result: 15
-```java
+```
 
 
 ---

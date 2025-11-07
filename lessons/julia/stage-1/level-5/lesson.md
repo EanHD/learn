@@ -23,7 +23,7 @@ Add decision-making to your programs with if/else statements.
 
 **Copy the following code EXACTLY as shown below into `main.jl`**
 
-```julia
+```
 print("Enter your score (0-100): ")
 score = parse(Int, readline())
 
@@ -38,26 +38,26 @@ elseif score >= 60
 else
     println("Grade: F - Study harder!")
 end
-```julia
+```
 
 ---
 
 ### How to Run
 
 **Method 1 (Vim - Recommended):**
-```julia
+```
 <Space>r
-```julia
+```
 
 **Method 2 (Terminal):**
-```bash
+```
 julia main.jl
-```julia
+```
 
 **Expected output:**
-```julia
+```
 [Output depends on conditions - varies based on input]
-```julia
+```
 
 
 ---

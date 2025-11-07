@@ -58,7 +58,7 @@ Create a production-ready REST API using SQL with:
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    sqlite3 < hello.sql
    ```
 

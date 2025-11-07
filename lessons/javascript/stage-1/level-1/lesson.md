@@ -25,9 +25,9 @@ Welcome to your first step into JavaScript programming! Today, you'll learn how 
 
 **Copy the following code EXACTLY as shown below into a new file called `hello.js`**
 
-```javascript
+```
 console.log("Hello, World!");
-```javascript
+```
 
 ---
 
@@ -35,18 +35,18 @@ console.log("Hello, World!");
 
 1. **Open your terminal** (or command prompt)
 2. **Navigate to where you saved your file**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```java
+   ```
 3. **Run your program**:
-   ```bash
+   ```
    node hello.js
-   ```bash
+   ```
 
 **Expected output:**
-```javascript
+```
 Hello, World!
-```javascript
+```
 
 ---
 
@@ -97,9 +97,9 @@ Remember to check the `VIM_CHEATSHEET.md` in the root directory for basic Vim co
 
 ### Code Breakdown
 
-```javascript
+```
 console.log("Hello, World!");
-```javascript
+```
 - **`console`** = Built-in object that provides access to the browser's debugging console (or Node.js terminal)
 - **`.`** = Property accessor - accesses the log function inside console object
 - **`log`** = Method (function) that prints messages to the console

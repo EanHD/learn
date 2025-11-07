@@ -28,19 +28,19 @@ Mathematical problems often require careful analysis of formulas and algorithms.
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    rustc hello.rs -o hello hello.rs
-   ```rust
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
-```rust
+```
 
 ### Problem: Compound Interest Calculator
 
@@ -55,9 +55,9 @@ Create a program that calculates compound interest for savings accounts. The pro
 6. Display a detailed breakdown
 
 **Compound Interest Formula:**
-```rust
+```
 A = P(1 + r/n)^(nt)
-```rust
+```
 Where:
 - A = Final amount
 - P = Principal amount
@@ -71,7 +71,7 @@ Where:
 - Monthly: n = 12
 
 **Example Interaction:**
-```rust
+```
 Compound Interest Calculator
 Enter principal amount: $1000
 Enter annual interest rate (%): 5
@@ -90,20 +90,20 @@ Years: 3
 Compounding: Quarterly
 Final Amount: $1161.54
 Total Interest: $161.54
-```rust
+```
 
 ---
 
 ### How to Create Your Solution
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Create your pseudocode file**:
-   ```bash
+   ```
    touch mathematical_problems.md
-   ```rust
+   ```
 3. **Break down the formula** - Understand each component
 4. **Plan input validation** - Ensure reasonable values
 5. **Design calculations** - Step-by-step mathematical operations
@@ -161,14 +161,14 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 - Final Amount (A): Result of compound interest formula
 
 **Formula Breakdown:**
-```rust
+```
 A = P(1 + r/n)^(nt)
 Total Interest = A - P
-```rust
+```
 
 ### Sample Pseudocode Solution
 
-```rust
+```
 START PROGRAM
     DISPLAY "Compound Interest Calculator"
     
@@ -221,7 +221,7 @@ START PROGRAM
     DISPLAY "Final Amount: $" + final_amount
     DISPLAY "Total Interest: $" + total_interest
 END PROGRAM
-```rust
+```
 
 ### Analysis Breakdown
 

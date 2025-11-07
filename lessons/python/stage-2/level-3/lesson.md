@@ -38,7 +38,7 @@ START
     print product
     print quotient
 END
-```python
+```
 
 **Your mission**: Translate this into Python code.
 
@@ -48,20 +48,20 @@ END
 
 1. Navigate to workspace:
 
-    ```bash
+    ```
     cd ~/.local/share/learn/workspaces/python/stage-2/level-3
-    ```bash
+    ```
 
 2. Edit and run main.py
 
 **Expected output:**
 
-```python
+```
 15
 5
 50
 2.0
-```python
+```
 
 ---
 
@@ -78,7 +78,7 @@ END
 
 ### Solution
 
-```python
+```
 x = 10
 y = 5
 sum = x + y
@@ -89,7 +89,7 @@ print(sum)
 print(difference)
 print(product)
 print(quotient)
-```python
+```
 
 ### Key Concepts
 
@@ -102,11 +102,11 @@ print(quotient)
 
 **Expression Evaluation:**
 
-```python
+```
 sum = x + y
       ↑    ↑
     variable values are looked up, added, result stored
-```python
+```
 
 **Why 2.0 not 2?**
 In Python 3, division with `/` always returns a float (decimal number).

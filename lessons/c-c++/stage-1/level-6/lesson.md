@@ -17,7 +17,7 @@
 
 Create `main.cpp`:
 
-```cpp
+```
 #include <iostream>
 using namespace std;
 
@@ -68,7 +68,7 @@ int main() {
 
 ### Compile and Run
 
-```bash
+```
 g++ main.cpp -o main
 ./main
 ```
@@ -78,21 +78,21 @@ g++ main.cpp -o main
 ### Loop Types
 
 **FOR** - When you know how many iterations:
-```cpp
+```
 for (initialization; condition; increment) {
     // code
 }
 ```
 
 **WHILE** - When condition is checked first:
-```cpp
+```
 while (condition) {
     // code
 }
 ```
 
 **DO-WHILE** - When code must run at least once:
-```cpp
+```
 do {
     // code
 } while (condition);

@@ -48,7 +48,7 @@ Loops are the workhorses of programming! Today you'll master algorithms that use
 ## Algorithm 1: Sales Data Analyzer
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Analyze Monthly Sales Data
 1. Display "=== Sales Data Analyzer ==="
 2. Initialize sales array (can hold 30 values)
@@ -85,7 +85,7 @@ Algorithm: Analyze Monthly Sales Data
       i. Display "Day " + (i + 1) + ": $" + sales[i]
 10. Else:
    a. Display "No sales data entered."
-```cpp
+```
 
 **Loop Logic:**
 - [ ] Input loop with validation
@@ -100,7 +100,7 @@ Algorithm: Analyze Monthly Sales Data
 ## Algorithm 2: Student Attendance Tracker
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Track Class Attendance
 1. Display "=== Class Attendance Tracker ==="
 2. Display "Enter number of students: "
@@ -133,7 +133,7 @@ Algorithm: Track Class Attendance
       i. Display "Student " + student + ":  Present"
    b. Else:
       i. Display "Student " + student + ":  Absent"
-```cpp
+```
 
 **Loop Logic:**
 - [ ] Fixed iteration for known number of students
@@ -148,7 +148,7 @@ Algorithm: Track Class Attendance
 ## Algorithm 3: Inventory Management System
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Manage Store Inventory
 1. Display "=== Inventory Management System ==="
 2. Initialize item_names array (can hold 50 items)
@@ -222,7 +222,7 @@ Algorithm: Manage Store Inventory
    i. Else:
       i. Display " Invalid choice!"
 7. Display "Thank you for using Inventory Management System! "
-```cpp
+```
 
 **Loop Logic:**
 - [ ] Menu-driven interface with multiple operations
@@ -237,7 +237,7 @@ Algorithm: Manage Store Inventory
 ## Algorithm 4: Grade Book Calculator
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Calculate Final Grades
 1. Display "=== Grade Book Calculator ==="
 2. Display "Enter number of students: "
@@ -294,7 +294,7 @@ Algorithm: Calculate Final Grades
 23. Display "C grades: " + grade_ranges[2]
 24. Display "D grades: " + grade_ranges[3]
 25. Display "F grades: " + grade_ranges[4]
-```cpp
+```
 
 **Loop Logic:**
 - [ ] 2D array processing (nested loops)
@@ -309,7 +309,7 @@ Algorithm: Calculate Final Grades
 ## Algorithm 5: Password Generator
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Generate Secure Passwords
 1. Display "=== Password Generator ==="
 2. Display "Enter desired password length (8-20): "
@@ -347,7 +347,7 @@ Algorithm: Generate Secure Passwords
 23. If include_special is "y":
    a. Display " Special characters"
 24. Display " Lowercase letters (always included)"
-```cpp
+```
 
 **Loop Logic:**
 - [ ] Input validation loop
@@ -362,7 +362,7 @@ Algorithm: Generate Secure Passwords
 ## Algorithm 6: Voting System
 
 **Pseudocode:**
-```cpp
+```
 Algorithm: Conduct Election Voting
 1. Display "=== Election Voting System ==="
 2. Initialize candidate_names array ["Alice", "Bob", "Charlie"]
@@ -407,7 +407,7 @@ Algorithm: Conduct Election Voting
       ii. Display candidate_names[i] + ": " + votes[i] + " votes (" + percentage + "%)"
 8. Else:
    a. Display "No votes were cast."
-```cpp
+```
 
 **Loop Logic:**
 - [ ] Menu-driven voting interface
@@ -465,25 +465,25 @@ Algorithm: Conduct Election Voting
 ## Loop Algorithm Patterns
 
 ### Accumulation Pattern
-```cpp
+```
 Initialize total to 0
 While getting values:
     Get next_value
     Add next_value to total
 Display "Total: " + total
-```cpp
+```
 
 ### Counting Pattern
-```cpp
+```
 Initialize count to 0
 For each item:
     If item meets criteria:
         Add 1 to count
 Display "Count: " + count
-```cpp
+```
 
 ### Search Pattern
-```cpp
+```
 Initialize found to false
 For each item in collection:
     If item matches target:
@@ -494,10 +494,10 @@ If found:
     Display "Found at location"
 Else:
     Display "Not found"
-```cpp
+```
 
 ### Validation Pattern
-```cpp
+```
 Initialize is_valid to false
 While not is_valid:
     Get user_input
@@ -506,7 +506,7 @@ While not is_valid:
     Else:
         Display error message
 Process valid input
-```cpp
+```
 
 ---
 
@@ -572,7 +572,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Array storage for sales data
@@ -638,7 +638,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Fixed iteration for known number of students
@@ -771,7 +771,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] 2D array for string storage
@@ -871,7 +871,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] 2D array processing with nested loops
@@ -963,7 +963,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Input validation loop
@@ -1052,7 +1052,7 @@ int main() {
     
     return 0;
 }
-```cpp
+```
 
 **Key Concepts:**
 - [ ] Menu-driven voting interface
@@ -1079,7 +1079,7 @@ for (int i = 0; i < size; i++) {
 for (int i = 0; i < size; i++) {
     if (array[i] > max) max = array[i];
 }
-```cpp
+```
 
 **Early Termination:**
 ```c
@@ -1090,7 +1090,7 @@ for (int i = 0; i < size; i++) {
         break; // Don't continue searching
     }
 }
-```cpp
+```
 
 ---
 
@@ -1128,7 +1128,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cpp
+```
 #include <stdio.h>
 
 int main() {

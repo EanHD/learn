@@ -32,24 +32,24 @@ User interaction is the heart of useful programs! Today you'll master the art of
 ### How to Compile and Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    javac hello.java
    ```
 
 2. **Run your program**:
-   ```bash
+   ```
    java hello
    ```
 
 **Expected output:**
-```java
+```
 Hello, World!
-```java
+```
 
 ## Algorithm 1: Age Verification System
 
 **Pseudocode:**
-```java
+```
 Algorithm: Verify User Age
 1. Display "=== Age Verification System ==="
 2. Initialize isValidAge to false
@@ -69,7 +69,7 @@ Algorithm: Verify User Age
    a. Display " You are an adult!"
 6. Else:
    a. Display " You are a minor."
-```java
+```
 
 **Input/Output Focus:**
 - Input validation (numeric, range checking)
@@ -84,7 +84,7 @@ Algorithm: Verify User Age
 ## Algorithm 2: Restaurant Menu System
 
 **Pseudocode:**
-```java
+```
 Algorithm: Restaurant Ordering System
 1. Display "=== Welcome to Code Café ==="
 2. Initialize totalCost to 0
@@ -121,7 +121,7 @@ Algorithm: Restaurant Ordering System
 9. Display "Tax (8%): $" + tax
 10. Display "Final total: $" + finalTotal
 11. Display "Thank you for your order! "
-```java
+```
 
 **Input/Output Focus:**
 - Clear menu formatting
@@ -136,7 +136,7 @@ Algorithm: Restaurant Ordering System
 ## Algorithm 3: Student Grade Manager
 
 **Pseudocode:**
-```java
+```
 Algorithm: Student Grade Management
 1. Display "=== Student Grade Manager ==="
 2. Initialize grades array (can hold 100 grades)
@@ -195,7 +195,7 @@ Algorithm: Student Grade Management
    i. Else:
       i. Display " Invalid choice! Please select 1-5."
 6. Display "Thank you for using Grade Manager! "
-```java
+```
 
 **Input/Output Focus:**
 - Array data storage
@@ -210,7 +210,7 @@ Algorithm: Student Grade Management
 ## Algorithm 4: Unit Converter
 
 **Pseudocode:**
-```java
+```
 Algorithm: Unit Conversion Calculator
 1. Display "=== Unit Converter ==="
 2. Initialize isRunning to true
@@ -266,7 +266,7 @@ Algorithm: Unit Conversion Calculator
    h. Else:
       i. Display " Invalid conversion type!"
 4. Display "Thank you for using Unit Converter! "
-```java
+```
 
 **Input/Output Focus:**
 - Nested menu systems
@@ -281,7 +281,7 @@ Algorithm: Unit Conversion Calculator
 ## Algorithm 5: Survey Data Collector
 
 **Pseudocode:**
-```java
+```
 Algorithm: Customer Satisfaction Survey
 1. Display "=== Customer Satisfaction Survey ==="
 2. Initialize responses array (can hold 50 responses)
@@ -319,7 +319,7 @@ Algorithm: Customer Satisfaction Survey
 7. Else:
    a. Display "No survey responses collected."
 8. Display "Thank you for participating! "
-```java
+```
 
 **Input/Output Focus:**
 - Clear survey instructions
@@ -334,7 +334,7 @@ Algorithm: Customer Satisfaction Survey
 ## Algorithm 6: Library Book Tracker
 
 **Pseudocode:**
-```java
+```
 Algorithm: Library Book Management
 1. Display "=== Library Book Tracker ==="
 2. Initialize books array (can hold 20 book titles)
@@ -399,7 +399,7 @@ Algorithm: Library Book Management
    i. Else:
       i. Display " Invalid choice!"
 6. Display "Thank you for using Library Book Tracker! "
-```java
+```
 
 **Input/Output Focus:**
 - String array management
@@ -414,27 +414,27 @@ Algorithm: Library Book Management
 ### Input Validation Techniques
 
 **Numeric Input Validation:**
-```java
+```
 // Check if input is within range
 if (input >= minValue && input <= maxValue) {
     // Valid input
 } else {
     // Invalid input - show error
 }
-```java
+```
 
 **String Input Validation:**
-```java
+```
 // Check if string is not empty
 if (!inputString.isEmpty()) {
     // Valid input
 } else {
     // Empty input - show error
 }
-```java
+```
 
 **Scanner Exception Handling:**
-```java
+```
 Scanner scanner = new Scanner(System.in);
 
 try {
@@ -444,7 +444,7 @@ try {
     scanner.nextLine(); // Clear invalid input
     System.out.println("Invalid input! Please enter a number.");
 }
-```java
+```
 
 ---
 
@@ -479,7 +479,7 @@ try {
 ## User Interface Design Principles
 
 ### Clear Menu Design
-```java
+```
 === Main Menu ===
 1. Add Item      - Add new item to collection
 2. View Items    - Display all items
@@ -488,7 +488,7 @@ try {
 5. Exit          - Quit the program
 
 Enter choice (1-5):
-```java
+```
 
 ### Error Message Best Practices
 - **Be specific**: "Grade must be between 0-100" not "Invalid input"
@@ -512,7 +512,7 @@ Enter choice (1-5):
 
 ### Algorithm 1: Age Verification System
 
-```java
+```
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
@@ -554,7 +554,7 @@ public class AgeVerification {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Input validation with try-catch for InputMismatchException
@@ -571,7 +571,7 @@ public class AgeVerification {
 
 ### Algorithm 2: Restaurant Menu System
 
-```java
+```
 import java.util.Scanner;
 
 public class RestaurantMenu {
@@ -631,7 +631,7 @@ public class RestaurantMenu {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Switch statement for menu handling
@@ -654,7 +654,7 @@ public class RestaurantMenu {
 
 ### Algorithm 3: Student Grade Manager
 
-```java
+```
 import java.util.Scanner;
 
 public class GradeManager {
@@ -745,7 +745,7 @@ public class GradeManager {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Array storage for multiple grades
@@ -770,7 +770,7 @@ public class GradeManager {
 
 ### Algorithm 4: Unit Converter
 
-```java
+```
 import java.util.Scanner;
 
 public class UnitConverter {
@@ -846,7 +846,7 @@ public class UnitConverter {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Nested menu system (two levels of choices)
@@ -869,7 +869,7 @@ public class UnitConverter {
 
 ### Algorithm 5: Survey Data Collector
 
-```java
+```
 import java.util.Scanner;
 
 public class SurveyCollector {
@@ -935,7 +935,7 @@ public class SurveyCollector {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - Array storage for survey responses
@@ -959,7 +959,7 @@ public class SurveyCollector {
 
 ### Algorithm 6: Library Book Tracker
 
-```java
+```
 import java.util.Scanner;
 
 public class LibraryTracker {
@@ -1068,7 +1068,7 @@ public class LibraryTracker {
         scanner.close();
     }
 }
-```java
+```
 
 **Key Concepts:**
 - String array management
@@ -1099,19 +1099,19 @@ public class LibraryTracker {
 ### Advanced Input Techniques in Java
 
 **Clearing Scanner Buffer:**
-```java
+```
 // After nextInt(), consume leftover newline
 scanner.nextInt();
 scanner.nextLine(); // Clears the '\n'
-```java
+```
 
 **Reading Full Lines Safely:**
-```java
+```
 String line = scanner.nextLine().trim(); // Remove leading/trailing whitespace
-```java
+```
 
 **Input Validation Patterns:**
-```java
+```
 // Numeric range validation with exception handling
 public static int getValidNumber(Scanner scanner, int min, int max) {
     while (true) {
@@ -1130,7 +1130,7 @@ public static int getValidNumber(Scanner scanner, int min, int max) {
         }
     }
 }
-```java
+```
 
 **Scanner vs BufferedReader:**
 - Scanner: Easier for mixed types (nextInt, nextDouble, nextLine)

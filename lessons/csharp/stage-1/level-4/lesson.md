@@ -23,7 +23,7 @@ Make your programs interactive by reading input from users.
 
 **Copy the following code EXACTLY as shown below into `main.cs`**
 
-```csharp
+```
 using System;
 
 class Program {
@@ -39,7 +39,7 @@ class Program {
  Console.WriteLine($"Next year you'll be {age + 1}.");
  }
 }
-```csharp
+```
 
 ---
 
@@ -61,7 +61,7 @@ class Program {
 
 ### The Complete Code
 
-```csharp
+```
 using System;
 
 class Program {
@@ -77,7 +77,7 @@ class Program {
  Console.WriteLine($"Next year you'll be {age + 1}.");
  }
 }
-```csharp
+```
 
 ### What This Code Does
 
@@ -152,7 +152,7 @@ Key functions and their purpose:
 
 ### Complete Solution
 
-```cs
+```
 using System;
 
 class Program {

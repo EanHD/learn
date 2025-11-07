@@ -21,24 +21,24 @@ Welcome to Kotlin! Today, you'll create your first Kotlin program. Kotlin is a m
 
 Copy the following code EXACTLY as shown into a new file called `hello.kt`:
 
-```kotlin
+```
 fun main() {
     println("Hello, World!")
 }
-```kotlin
+```
 
 ### How to Execute
 
-```bash
+```
 kotlinc hello.kt -include-runtime -d hello.jar
 java -jar hello.jar
-```kotlin
+```
 
 Expected output:
 
-```kotlin
+```
 Hello, World!
-```kotlin
+```
 
 ### Success Checklist
 

@@ -28,22 +28,22 @@ Variables are essential for storing and manipulating data. In this lesson, you'l
 ### How to Run
 
 1. **Compile the code**:
-   ```bash
+   ```
    rustc hello.rs -o hello hello.rs
-   ```rust
+   ```
 
 2. **Run your program**:
-   ```bash
+   ```
    ./hello hello
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Hello, World!
-```rust
+```
 
 ### Pseudocode:
-```rust
+```
 START PROGRAM
     DECLARE name AS TEXT
     SET name TO "Alice"
@@ -58,7 +58,7 @@ START PROGRAM
     DISPLAY "Age: " + age
     DISPLAY "Is student: " + is_student
 END PROGRAM
-```rust
+```
 
 **Your task:** Create a Rust program that implements this pseudocode exactly.
 
@@ -67,26 +67,26 @@ END PROGRAM
 ### How to Create Your Solution
 
 1. **Navigate to your working directory**:
-   ```bash
+   ```
    cd /path/to/your/folder
-   ```rust
+   ```
 2. **Create your code file**:
-   ```bash
+   ```
    touch variables_translation.rs
-   ```rust
+   ```
 3. **Write the Rust code** that matches the pseudocode
 4. **Compile and test**:
-   ```bash
+   ```
    rustc variables_translation.rs -o variables_translation
    ./variables_translation
-   ```rust
+   ```
 
 **Expected output:**
-```rust
+```
 Name: Alice
 Age: 25
 Is student: true
-```rust
+```
 
 ---
 
@@ -136,7 +136,7 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 ### Step-by-Step Translation
 
 **Pseudocode:**
-```rust
+```
 START PROGRAM
     DECLARE name AS TEXT
     SET name TO "Alice"
@@ -151,10 +151,10 @@ START PROGRAM
     DISPLAY "Age: " + age
     DISPLAY "Is student: " + is_student
 END PROGRAM
-```rust
+```
 
 **Rust Code:**
-```rust
+```
 fn main() {
     let name = "Alice";
     let age = 25;
@@ -164,7 +164,7 @@ fn main() {
     println!("Age: {}", age);
     println!("Is student: {}", is_student);
 }
-```rust
+```
 
 ### Translation Guide
 

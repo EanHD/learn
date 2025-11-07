@@ -58,7 +58,7 @@ Create a production-ready CLI Tool using Shell with:
 ### How to Run
 
 1. **Run the code**:
-   ```bash
+   ```
    bash hello.sh
    ```
 
