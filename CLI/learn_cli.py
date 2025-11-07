@@ -2195,6 +2195,8 @@ class InteractiveCLI:
                     "  [cyan]3[/cyan]  Reset progress",
                     "  [cyan]4[/cyan]  Show configuration",
                     "  [cyan]5[/cyan]  Install dependencies",
+                    "  [cyan]6[/cyan]  Reset all data (progress + workspaces)",
+                    "  [cyan]7[/cyan]  Uninstall LEARN CLI",
                     "  [cyan]b[/cyan]  Back"
                 ]
                 for item in diag_items:
@@ -2207,6 +2209,8 @@ class InteractiveCLI:
                 print("  3  Reset progress")
                 print("  4  Show configuration")
                 print("  5  Install dependencies")
+                print("  6  Reset all data (progress + workspaces)")
+                print("  7  Uninstall LEARN CLI")
                 print("  b  Back")
 
             choice = input("\n→ Select option: ").strip().lower()
@@ -2251,6 +2255,24 @@ class InteractiveCLI:
 
             elif choice == "5":
                 self._install_dependencies()
+
+            elif choice == "6":
+                # Reset all data
+                self._clear_screen()
+                reset_user_data(self.learn_dir)
+                input("\nPress Enter to continue...")
+
+            elif choice == "7":
+                # Uninstall
+                self._clear_screen()
+                uninstall_learn(self.learn_dir)
+                # If user completes uninstall, exit the program
+                if console:
+                    console.print("\n[bold yellow]Exiting LEARN CLI...[/bold yellow]")
+                else:
+                    print("\nExiting LEARN CLI...")
+                import sys
+                sys.exit(0)
 
             elif choice == "b" or choice == "":
                 break
