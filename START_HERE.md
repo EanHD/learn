@@ -6,6 +6,8 @@ Learn programming through **hands-on lessons** in **20 programming languages**.
 
 ## 🚀 Quick Start
 
+> **🪟 Windows Users:** First-time setup? See **[MODE_VIM/WINDOWS_SETUP.md](MODE_VIM/WINDOWS_SETUP.md)** for complete instructions including installing Chocolatey, CMake, and MinGW.
+
 ### Option 1: Interactive Mode (Recommended)
 
 ```bash

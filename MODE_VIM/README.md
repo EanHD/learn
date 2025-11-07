@@ -2,6 +2,8 @@
 
 **Learn programming in a beautiful, professional Neovim environment.**
 
+> **🪟 Windows Users:** See **[WINDOWS_SETUP.md](WINDOWS_SETUP.md)** for complete installation guide including Chocolatey, CMake, and MinGW setup.
+
 ---
 
 ## ✨ What You Get

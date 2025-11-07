@@ -56,6 +56,8 @@ irm https://raw.githubusercontent.com/EanHD/learn/main/install.ps1 | iex
 
 This installs everything: CLI, Neovim config, and all dependencies.
 
+> **⚠️ Windows Users:** You need **CMake** and **MinGW** for full functionality. See **[MODE_VIM/WINDOWS_SETUP.md](MODE_VIM/WINDOWS_SETUP.md)** for complete setup instructions including Chocolatey installation.
+
 ### Update anytime
 
 **Simple update (recommended):**
@@ -451,9 +453,11 @@ Students can track their own progress with the built-in progress system!
 |----------|--------|-----------|
 | 🐧 **Linux** | ✅ Fully Supported | \`install.sh\` |
 | 🍎 **macOS** | ✅ Fully Supported | \`install.sh\` |
-| 🪟 **Windows** | ✅ Fully Supported | \`install.ps1\` |
+| 🪟 **Windows** | ✅ Fully Supported | \`install.ps1\` • [Setup Guide](MODE_VIM/WINDOWS_SETUP.md) |
 
 **All platforms include:** One-shot install, auto-update, CLI, and full Neovim IDE.
+
+**Windows users:** See **[MODE_VIM/WINDOWS_SETUP.md](MODE_VIM/WINDOWS_SETUP.md)** for prerequisites (CMake, MinGW via Chocolatey).
 
 ### Common Issues
 

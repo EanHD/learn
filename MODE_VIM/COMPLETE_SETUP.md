@@ -14,6 +14,8 @@ Everything happens within Neovim. No context-switching to external editors or ma
 
 ## Installation
 
+> **🪟 Windows Users:** See **[WINDOWS_SETUP.md](WINDOWS_SETUP.md)** for complete Windows installation guide including Chocolatey, CMake, and MinGW setup.
+
 ### Step 1: Ensure Neovim is Installed
 
 ```bash
@@ -29,11 +31,13 @@ sudo apt install neovim
 # macOS
 brew install neovim
 
-# Other systems
-visit: https://neovim.io/
+# Windows (PowerShell as Admin)
+choco install neovim
+
+# Or visit: https://neovim.io/
 ```
 
-### Step 2: Ensure Compilers are Installed
+### Step 2: Ensure Compilers and Build Tools are Installed
 
 For C++:
 
@@ -47,15 +51,26 @@ For Rust:
 rustc --version
 ```
 
+For Neovim plugins (CMake required):
+
+```bash
+cmake --version
+```
+
 If missing:
 
 ```bash
 # Ubuntu/Debian
-sudo apt install build-essential rustc
+sudo apt install build-essential rustc cmake
 
 # macOS
-brew install gcc rust
+brew install gcc rust cmake
+
+# Windows (PowerShell as Admin)
+choco install mingw rust cmake
 ```
+
+**Windows users:** CMake and MinGW are **required** for telescope-fzf-native plugin. See [WINDOWS_SETUP.md](WINDOWS_SETUP.md).
 
 ### Step 3: Make the CLI Tool Executable
 

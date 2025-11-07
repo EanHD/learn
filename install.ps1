@@ -16,11 +16,45 @@ Write-Host "║  This will install:                                          ║
 Write-Host "║  • LEARN CLI command                                         ║" -ForegroundColor Cyan
 Write-Host "║  • Neovim configuration (learning mode)                      ║" -ForegroundColor Cyan
 Write-Host "║  • Required dependencies                                     ║" -ForegroundColor Cyan
+Write-Host "║                                                              ║" -ForegroundColor Cyan
+Write-Host "║  📖 Full setup guide: MODE_VIM/WINDOWS_SETUP.md              ║" -ForegroundColor Cyan
 Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Cyan
 Write-Host ""
 
 if ($Update) {
     Write-Host "🔄 Running in UPDATE mode" -ForegroundColor Yellow
+    Write-Host ""
+}
+
+# Check for CMake and MinGW (needed for telescope-fzf-native)
+$cmakeInstalled = Get-Command cmake -ErrorAction SilentlyContinue
+$gccInstalled = Get-Command gcc -ErrorAction SilentlyContinue
+
+if (-not $cmakeInstalled -or -not $gccInstalled) {
+    Write-Host "⚠️  Missing build tools for full functionality" -ForegroundColor Yellow
+    Write-Host ""
+    Write-Host "   CMake: $(if ($cmakeInstalled) { "✅ Installed" } else { "❌ Missing" })" -ForegroundColor Yellow
+    Write-Host "   MinGW (gcc): $(if ($gccInstalled) { "✅ Installed" } else { "❌ Missing" })" -ForegroundColor Yellow
+    Write-Host ""
+    Write-Host "   These are needed for telescope-fzf-native plugin." -ForegroundColor Yellow
+    Write-Host ""
+    
+    if (Get-Command choco -ErrorAction SilentlyContinue) {
+        Write-Host "📦 Install with Chocolatey:" -ForegroundColor Cyan
+        Write-Host "   choco install cmake mingw -y" -ForegroundColor White
+    } else {
+        Write-Host "📦 Install Chocolatey first (recommended):" -ForegroundColor Cyan
+        Write-Host "   See: https://chocolatey.org/install" -ForegroundColor White
+        Write-Host "   Or see: MODE_VIM/WINDOWS_SETUP.md for complete guide" -ForegroundColor White
+    }
+    Write-Host ""
+    
+    $continue = Read-Host "Continue installation anyway? (y/n)"
+    if ($continue -ne "y" -and $continue -ne "Y") {
+        Write-Host "Installation cancelled. Please install build tools first." -ForegroundColor Yellow
+        Write-Host "See MODE_VIM/WINDOWS_SETUP.md for detailed instructions." -ForegroundColor Cyan
+        exit 0
+    }
     Write-Host ""
 }
 
