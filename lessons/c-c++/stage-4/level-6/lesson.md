@@ -1204,7 +1204,7 @@ Identification Comparison      Task Selection  Resources     & Update
 
 ---
 
- **Congratulations! You've built a comprehensive automation system!** 
+ **Congratulations! You've built a comprehensive automation system!**
 
 *Next: Capstone project - bringing together all skills in a major application! *
 

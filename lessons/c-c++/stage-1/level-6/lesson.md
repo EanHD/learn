@@ -27,7 +27,7 @@ int main() {
     for (int i = 1; i <= 5; i++) {
         cout << "Count: " << i << "\n";
     }
-    
+
     // WHILE LOOP - keep asking until valid input
     cout << "\nWhile loop example:\n";
     int number = 0;
@@ -39,7 +39,7 @@ int main() {
         }
     }
     cout << "You entered: " << number << "\n";
-    
+
     // DO-WHILE - runs at least once
     cout << "\nDo-while loop:\n";
     char again;
@@ -48,7 +48,7 @@ int main() {
         cout << "Run again? (y/n): ";
         cin >> again;
     } while (again == 'y' || again == 'Y');
-    
+
     // BREAK and CONTINUE
     cout << "\nLoop control:\n";
     for (int i = 1; i <= 10; i++) {
@@ -61,7 +61,7 @@ int main() {
         cout << i << " ";
     }
     cout << "\n";
-    
+
     return 0;
 }
 ```

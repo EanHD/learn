@@ -25,9 +25,9 @@ By the end of this level:
 
 ### Project Scope
 
-**Complexity**: Advanced (7-10 features) 
-**Code Size**: 2000-4000 lines 
-**Time Estimate**: 20-25 hours 
+**Complexity**: Advanced (7-10 features)
+**Code Size**: 2000-4000 lines
+**Time Estimate**: 20-25 hours
 **Purpose**: Showcase deep expertise in a specific domain
 
 ---
@@ -118,7 +118,7 @@ Choose a domain where you have **genuine interest or expertise**:
 5. **Build with excellence** in mind
 6. **Validate with real users** in that domain
 
-**Ready to become a domain expert?** 
+**Ready to become a domain expert?**
 
 
 

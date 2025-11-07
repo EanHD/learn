@@ -48,7 +48,7 @@ START PROGRAM
     DISPLAY "Number Classifier"
     DISPLAY "Enter a number:"
     READ number AS NUMBER
-    
+
     IF number > 0 THEN
         DISPLAY number + " is positive"
     ELSE IF number < 0 THEN
@@ -56,13 +56,13 @@ START PROGRAM
     ELSE
         DISPLAY number + " is zero"
     END IF
-    
+
     IF number % 2 == 0 THEN
         DISPLAY number + " is even"
     ELSE
         DISPLAY number + " is odd"
     END IF
-    
+
     IF number >= 10 THEN
         DISPLAY "That's a big number!"
     ELSE IF number >= 0 THEN
@@ -158,7 +158,7 @@ START PROGRAM
     DISPLAY "Number Classifier"
     DISPLAY "Enter a number:"
     READ number AS NUMBER
-    
+
     IF number > 0 THEN
         DISPLAY number + " is positive"
     ELSE IF number < 0 THEN
@@ -166,13 +166,13 @@ START PROGRAM
     ELSE
         DISPLAY number + " is zero"
     END IF
-    
+
     IF number % 2 == 0 THEN
         DISPLAY number + " is even"
     ELSE
         DISPLAY number + " is odd"
     END IF
-    
+
     IF number >= 10 THEN
         DISPLAY "That's a big number!"
     ELSE IF number >= 0 THEN
@@ -190,11 +190,11 @@ use std::io;
 fn main() {
     println!("Number Classifier");
     println!("Enter a number:");
-    
+
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Failed to read line");
     let number: i32 = input.trim().parse().expect("Please enter a number");
-    
+
     if number > 0 {
         println!("{} is positive", number);
     } else if number < 0 {
@@ -202,13 +202,13 @@ fn main() {
     } else {
         println!("{} is zero", number);
     }
-    
+
     if number % 2 == 0 {
         println!("{} is even", number);
     } else {
         println!("{} is odd", number);
     }
-    
+
     if number >= 10 {
         println!("That's a big number!");
     } else if number >= 0 {
@@ -247,7 +247,7 @@ fn main() {
 
 ---
 
- **Excellent! You can handle decision-making pseudocode!** 
+ **Excellent! You can handle decision-making pseudocode!**
 
 *Next: Loop Pseudocode!*
 
@@ -267,42 +267,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```rs
-fn main() {
-    println!("Hello, World!");
-}
-
-```rs
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard rust conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

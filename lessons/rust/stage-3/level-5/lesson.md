@@ -209,7 +209,7 @@ START PROGRAM
     DISPLAY "Travel Recommendation System"
     DISPLAY "==========================="
     DISPLAY ""
-    
+
     // Get budget preference
     DISPLAY "What's your budget range?"
     DISPLAY "1. Low (under $1000)"
@@ -217,7 +217,7 @@ START PROGRAM
     DISPLAY "3. High (over $3000)"
     DISPLAY "Enter choice (1-3):"
     READ budget_choice AS NUMBER
-    
+
     // Get climate preference
     DISPLAY "What's your preferred climate?"
     DISPLAY "1. Cold"
@@ -225,7 +225,7 @@ START PROGRAM
     DISPLAY "3. Warm"
     DISPLAY "Enter choice (1-3):"
     READ climate_choice AS NUMBER
-    
+
     // Get activity preference
     DISPLAY "What's your activity preference?"
     DISPLAY "1. Relaxation"
@@ -233,7 +233,7 @@ START PROGRAM
     DISPLAY "3. Culture"
     DISPLAY "Enter choice (1-3):"
     READ activity_choice AS NUMBER
-    
+
     // Get duration preference
     DISPLAY "How long do you want to travel?"
     DISPLAY "1. Weekend (2-3 days)"
@@ -241,34 +241,34 @@ START PROGRAM
     DISPLAY "3. Month (30 days)"
     DISPLAY "Enter choice (1-3):"
     READ duration_choice AS NUMBER
-    
+
     // Convert choices to descriptive names
     SET budget_name TO ""
     IF budget_choice == 1 THEN SET budget_name TO "Low"
     ELSE IF budget_choice == 2 THEN SET budget_name TO "Medium"
     ELSE IF budget_choice == 3 THEN SET budget_name TO "High"
-    
+
     SET climate_name TO ""
     IF climate_choice == 1 THEN SET climate_name TO "Cold"
     ELSE IF climate_choice == 2 THEN SET climate_name TO "Temperate"
     ELSE IF climate_choice == 3 THEN SET climate_name TO "Warm"
-    
+
     SET activity_name TO ""
     IF activity_choice == 1 THEN SET activity_name TO "Relaxation"
     ELSE IF activity_choice == 2 THEN SET activity_name TO "Adventure"
     ELSE IF activity_choice == 3 THEN SET activity_name TO "Culture"
-    
+
     SET duration_name TO ""
     IF duration_choice == 1 THEN SET duration_name TO "Weekend"
     ELSE IF duration_choice == 2 THEN SET duration_name TO "Week"
     ELSE IF duration_choice == 3 THEN SET duration_name TO "Month"
-    
+
     // Display preferences summary
     DISPLAY "Based on your preferences (" + budget_name + " budget, " + climate_name + " climate, " + activity_name + ", " + duration_name + "-long trip):"
     DISPLAY ""
     DISPLAY " Recommended Destinations:"
     DISPLAY ""
-    
+
     // Complex decision logic based on climate and activity (primary factors)
     IF climate_choice == 1 THEN  // Cold climate
         IF activity_choice == 1 THEN  // Relaxation + Cold
@@ -283,7 +283,7 @@ START PROGRAM
             DISPLAY "   - Cost estimate: $" + GET_COST_ESTIMATE(budget_choice, "aspen")
             DISPLAY "   - Duration: 4-10 days recommended"
             DISPLAY "   - Activities: Spas, fine dining, skiing optional"
-            
+
         ELSE IF activity_choice == 2 THEN  // Adventure + Cold
             DISPLAY "1. **Alaska**"
             DISPLAY "   - Why: Extreme outdoor adventures"
@@ -296,7 +296,7 @@ START PROGRAM
             DISPLAY "   - Cost estimate: $" + GET_COST_ESTIMATE(budget_choice, "iceland")
             DISPLAY "   - Duration: 5-10 days recommended"
             DISPLAY "   - Activities: Hiking, hot springs, ice caves"
-            
+
         ELSE  // Culture + Cold
             DISPLAY "1. **Prague, Czech Republic**"
             DISPLAY "   - Why: Historic architecture in cooler climate"
@@ -310,7 +310,7 @@ START PROGRAM
             DISPLAY "   - Duration: 3-7 days recommended"
             DISPLAY "   - Activities: Castle visits, whiskey tours, festivals"
         END IF
-        
+
     ELSE IF climate_choice == 2 THEN  // Temperate climate
         IF activity_choice == 1 THEN  // Relaxation + Temperate
             DISPLAY "1. **San Francisco, California**"
@@ -324,7 +324,7 @@ START PROGRAM
             DISPLAY "   - Cost estimate: $" + GET_COST_ESTIMATE(budget_choice, "portland")
             DISPLAY "   - Duration: 4-10 days recommended"
             DISPLAY "   - Activities: Coffee culture, gardens, light hiking"
-            
+
         ELSE IF activity_choice == 2 THEN  // Adventure + Temperate
             DISPLAY "1. **New Zealand South Island**"
             DISPLAY "   - Why: Diverse outdoor adventures"
@@ -337,7 +337,7 @@ START PROGRAM
             DISPLAY "   - Cost estimate: $" + GET_COST_ESTIMATE(budget_choice, "colorado")
             DISPLAY "   - Duration: 5-10 days recommended"
             DISPLAY "   - Activities: Mountain biking, rock climbing, fishing"
-            
+
         ELSE  // Culture + Temperate
             DISPLAY "1. **Paris, France**"
             DISPLAY "   - Why: World-class museums and cuisine"
@@ -351,7 +351,7 @@ START PROGRAM
             DISPLAY "   - Duration: 5-10 days recommended"
             DISPLAY "   - Activities: Colosseum, Vatican, gelato tours"
         END IF
-        
+
     ELSE  // Warm climate
         IF activity_choice == 1 THEN  // Relaxation + Warm
             DISPLAY "1. **Cancun, Mexico**"
@@ -365,7 +365,7 @@ START PROGRAM
             DISPLAY "   - Cost estimate: $" + GET_COST_ESTIMATE(budget_choice, "puerto_rico")
             DISPLAY "   - Duration: 5-14 days flexible"
             DISPLAY "   - Activities: Beach lounging, bioluminescent bays"
-            
+
         ELSE IF activity_choice == 2 THEN  // Adventure + Warm
             DISPLAY "1. **Costa Rica**"
             DISPLAY "   - Why: Rainforest and beach adventures"
@@ -378,7 +378,7 @@ START PROGRAM
             DISPLAY "   - Cost estimate: $" + GET_COST_ESTIMATE(budget_choice, "hawaii")
             DISPLAY "   - Duration: 7-10 days recommended"
             DISPLAY "   - Activities: Volcano tours, snorkeling, hiking"
-            
+
         ELSE  // Culture + Warm
             DISPLAY "1. **Machu Picchu, Peru**"
             DISPLAY "   - Why: Ancient Incan civilization"
@@ -393,7 +393,7 @@ START PROGRAM
             DISPLAY "   - Activities: Carnival, Christ statue, samba"
         END IF
     END IF
-    
+
     DISPLAY ""
     DISPLAY "Safe travels! "
 END PROGRAM
@@ -446,7 +446,7 @@ END FUNCTION
 
 ---
 
- **Great! You designed a complex travel recommendation system!** 
+ **Great! You designed a complex travel recommendation system!**
 
 *Next: Repetitive Problems!*
 
@@ -466,42 +466,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```rs
-fn main() {
-    println!("Hello, World!");
-}
-
-```rs
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard rust conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

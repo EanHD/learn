@@ -354,20 +354,20 @@ Algorithm: Calculate Distance Between Points
 int main() {
     float radius, area, circumference, diameter;
     const float PI = 3.14159;
-    
+
     printf("Circle Calculator\n");
     printf("Enter radius: ");
     scanf("%f", &radius);
-    
+
     area = PI * radius * radius;
     circumference = 2 * PI * radius;
     diameter = 2 * radius;
-    
+
     printf("Radius: %.2f\n", radius);
     printf("Diameter: %.2f\n", diameter);
     printf("Area: %.2f\n", area);
     printf("Circumference: %.2f\n", circumference);
-    
+
     return 0;
 }
 ```
@@ -387,23 +387,23 @@ int main() {
 
 int main() {
     float side_a, side_b, hypotenuse, area, perimeter;
-    
+
     printf("Right Triangle Calculator\n");
     printf("Enter side A: ");
     scanf("%f", &side_a);
     printf("Enter side B: ");
     scanf("%f", &side_b);
-    
+
     hypotenuse = sqrt(side_a * side_a + side_b * side_b);
     area = (side_a * side_b) / 2;
     perimeter = side_a + side_b + hypotenuse;
-    
+
     printf("Side A: %.2f\n", side_a);
     printf("Side B: %.2f\n", side_b);
     printf("Hypotenuse: %.2f\n", hypotenuse);
     printf("Area: %.2f\n", area);
     printf("Perimeter: %.2f\n", perimeter);
-    
+
     return 0;
 }
 ```
@@ -424,7 +424,7 @@ int main() {
 int main() {
     float principal, rate, years, frequency;
     float rate_decimal, total_compounds, compound_rate, final_amount, total_interest;
-    
+
     printf("Compound Interest Calculator\n");
     printf("Enter principal amount: $");
     scanf("%f", &principal);
@@ -434,18 +434,18 @@ int main() {
     scanf("%f", &years);
     printf("Enter compounding frequency (1=annual, 12=monthly): ");
     scanf("%f", &frequency);
-    
+
     rate_decimal = rate / 100;
     total_compounds = years * frequency;
     compound_rate = rate_decimal / frequency;
-    
+
     final_amount = principal * pow(1 + compound_rate, total_compounds);
     total_interest = final_amount - principal;
-    
+
     printf("Principal: $%.2f\n", principal);
     printf("Final Amount: $%.2f\n", final_amount);
     printf("Total Interest: $%.2f\n", total_interest);
-    
+
     return 0;
 }
 ```
@@ -465,7 +465,7 @@ int main() {
 
 int main() {
     float a, b, c, discriminant, root1, root2, root;
-    
+
     printf("Quadratic Equation Solver\n");
     printf("For equation ax² + bx + c = 0\n");
     printf("Enter coefficient a: ");
@@ -474,11 +474,11 @@ int main() {
     scanf("%f", &b);
     printf("Enter coefficient c: ");
     scanf("%f", &c);
-    
+
     discriminant = b * b - 4 * a * c;
-    
+
     printf("Discriminant: %.2f\n", discriminant);
-    
+
     if (discriminant > 0) {
         root1 = (-b + sqrt(discriminant)) / (2 * a);
         root2 = (-b - sqrt(discriminant)) / (2 * a);
@@ -489,7 +489,7 @@ int main() {
     } else {
         printf("No real roots (complex solutions)\n");
     }
-    
+
     return 0;
 }
 ```
@@ -508,31 +508,31 @@ int main() {
 
 int main() {
     int n, first = 0, second = 1, next, count = 3;
-    
+
     printf("Fibonacci Sequence Generator\n");
     printf("Enter number of terms: ");
     scanf("%d", &n);
-    
+
     printf("Fibonacci sequence:\n");
-    
+
     if (n >= 1) {
         printf("%d ", first);
     }
     if (n >= 2) {
         printf("%d ", second);
     }
-    
+
     while (count <= n) {
         next = first + second;
         printf("%d ", next);
-        
+
         first = second;
         second = next;
         count++;
     }
-    
+
     printf("\nSequence complete\n");
-    
+
     return 0;
 }
 ```
@@ -553,13 +553,13 @@ int main() {
 int main() {
     float sum = 0, sum_squares = 0, number, mean, variance, std_dev;
     int count = 0, has_more = 1;
-    
+
     printf("Statistical Calculator\n");
-    
+
     while (has_more) {
         printf("Enter number %d (or 0 to finish): ", count + 1);
         scanf("%f", &number);
-        
+
         if (number == 0) {
             has_more = 0;
         } else {
@@ -568,12 +568,12 @@ int main() {
             sum_squares += number * number;
         }
     }
-    
+
     if (count > 0) {
         mean = sum / count;
         variance = (sum_squares / count) - (mean * mean);
         std_dev = sqrt(variance);
-        
+
         printf("Count: %d\n", count);
         printf("Sum: %.2f\n", sum);
         printf("Mean: %.2f\n", mean);
@@ -581,7 +581,7 @@ int main() {
     } else {
         printf("No numbers entered\n");
     }
-    
+
     return 0;
 }
 ```
@@ -601,28 +601,28 @@ int main() {
 
 int main() {
     float x1, y1, x2, y2, delta_x, delta_y, distance;
-    
+
     printf("Distance Between Two Points\n");
     printf("Enter coordinates for point 1:\n");
     printf("X1: ");
     scanf("%f", &x1);
     printf("Y1: ");
     scanf("%f", &y1);
-    
+
     printf("Enter coordinates for point 2:\n");
     printf("X2: ");
     scanf("%f", &x2);
     printf("Y2: ");
     scanf("%f", &y2);
-    
+
     delta_x = x2 - x1;
     delta_y = y2 - y1;
     distance = sqrt(delta_x * delta_x + delta_y * delta_y);
-    
+
     printf("Point 1: (%.2f, %.2f)\n", x1, y1);
     printf("Point 2: (%.2f, %.2f)\n", x2, y2);
     printf("Distance: %.2f\n", distance);
-    
+
     return 0;
 }
 ```
@@ -679,7 +679,7 @@ result = pow(2, 3);  // 2^3 = 8
 
 ---
 
- **Fantastic! You've mastered mathematical algorithms in code!** 
+ **Fantastic! You've mastered mathematical algorithms in code!**
 
 *Mathematics and programming are perfect partners. Next: Input/Output operations in pseudocode! *
 
@@ -705,50 +705,3 @@ Key functions and their purpose:
 
 - [ ] Main function: Entry point
 - [ ] Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```
-#include <stdio.h>
-
-int main() {
-    printf("Hello, World!\n");
-    return 0;
-}
-```
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses printf to print messages to the console
-3. **Standard Library**: Includes stdio.h for input/output operations
-4. **Return Value**: Returns 0 to indicate successful execution
-5. **Best Practices**: Code is readable and uses C++ idioms
-
-### Testing Your Solution
-
-1. **Compile**: `gcc main.c -o main`
-2. **Run**: `./hello`
-3. **Expected Output**: `Hello, World!`
-
-### Common Errors & Solutions
-
-| Error | Cause | Solution |
-|-------|-------|----------|
-| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
-| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
-
-### Tips for Learning
-
-- C uses stdio.h for input/output with additional features
-- `printf` is the C standard for formatted output
-- `\n` adds a newline character in format strings
-- Format specifiers control how data is displayed (%d, %f, %s, etc.)

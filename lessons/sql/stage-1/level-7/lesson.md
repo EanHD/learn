@@ -38,18 +38,18 @@ AS
 BEGIN
     DECLARE @result INT = 1;
     DECLARE @i INT = 1;
-    
+
     WHILE @i <= @n
     BEGIN
         SET @result = @result * @i;
         SET @i = @i + 1;
     END;
-    
+
     RETURN @result;
 END;
 
 -- Using the functions
-SELECT 
+SELECT
     'Hello, Alice!' AS greeting1,
     'Hello, Bob!' AS greeting2,
     dbo.Add(15, 7) AS sum,
@@ -91,18 +91,18 @@ AS
 BEGIN
     DECLARE @result INT = 1;
     DECLARE @i INT = 1;
-    
+
     WHILE @i <= @n
     BEGIN
         SET @result = @result * @i;
         SET @i = @i + 1;
     END;
-    
+
     RETURN @result;
 END;
 
 -- Using the functions
-SELECT 
+SELECT
     'Hello, Alice!' AS greeting1,
     'Hello, Bob!' AS greeting2,
     dbo.Add(15, 7) AS sum,

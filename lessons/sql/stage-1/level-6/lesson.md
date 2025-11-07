@@ -38,7 +38,7 @@ WITH Multiplier AS (
     UNION ALL
     SELECT i + 1 FROM Multiplier WHERE i < 10
 )
-SELECT 
+SELECT
     '7 × ' + CAST(i AS VARCHAR) + ' = ' + CAST(7 * i AS VARCHAR) AS result
 FROM Multiplier;
 
@@ -88,7 +88,7 @@ WITH Multiplier AS (
     UNION ALL
     SELECT i + 1 FROM Multiplier WHERE i < 10
 )
-SELECT 
+SELECT
     '7 × ' + CAST(i AS VARCHAR) + ' = ' + CAST(7 * i AS VARCHAR) AS result
 FROM Multiplier;
 

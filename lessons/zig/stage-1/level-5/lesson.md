@@ -29,13 +29,13 @@ const std = @import("std");
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
     const stdin = std.io.getStdIn().reader();
-    
+
     try stdout.print("Enter your score (0-100): ", .{});
-    
+
     var buf: [10]u8 = undefined;
     const input = try stdin.readUntilDelimiter(&buf, '\n');
     const score = try std.fmt.parseInt(i32, input, 10);
-    
+
     if (score >= 90) {
         try stdout.print("Grade: A - Excellent!\n", .{});
     } else if (score >= 80) {

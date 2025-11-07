@@ -26,7 +26,7 @@ Learn to **collaborate professionally** and **review code** like production team
 
 **Focus**: Taking an existing project and preparing it for team collaboration
 
-**Time Estimate**: 10-15 hours 
+**Time Estimate**: 10-15 hours
 **Purpose**: Learn professional software development practices
 
 ---
@@ -53,7 +53,7 @@ Learn to **collaborate professionally** and **review code** like production team
 - [ ] Conflict resolution
 - [ ] Knowledge sharing
 
-Ready to work with others professionally? 
+Ready to work with others professionally?
 
 
 

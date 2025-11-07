@@ -487,12 +487,12 @@ Enter choice (1-5):
 int main() {
     int age_input;
     int is_valid_age = 0;
-    
+
     printf("=== Age Verification System ===\n");
-    
+
     while (!is_valid_age) {
         printf("Please enter your age (0-120): ");
-        
+
         if (scanf("%d", &age_input) != 1) {
             // Clear invalid input
             while (getchar() != '\n');
@@ -505,15 +505,15 @@ int main() {
             is_valid_age = 1;
         }
     }
-    
+
     printf(" Age verified: %d years old\n", age_input);
-    
+
     if (age_input >= 18) {
         printf(" You are an adult!\n");
     } else {
         printf(" You are a minor.\n");
     }
-    
+
     return 0;
 }
 ```
@@ -534,9 +534,9 @@ int main() {
     float total_cost = 0.0;
     int order_complete = 0;
     int choice;
-    
+
     printf("=== Welcome to Code Café ===\n");
-    
+
     while (!order_complete) {
         printf("\n1. Coffee - $3.50\n");
         printf("2. Sandwich - $8.75\n");
@@ -545,7 +545,7 @@ int main() {
         printf("5. Complete Order\n");
         printf("Enter your choice (1-5): ");
         scanf("%d", &choice);
-        
+
         switch (choice) {
             case 1:
                 total_cost += 3.50;
@@ -571,17 +571,17 @@ int main() {
                 break;
         }
     }
-    
+
     printf("\n=== Order Summary ===\n");
     printf("Total cost: $%.2f\n", total_cost);
-    
+
     float tax = total_cost * 0.08;
     float final_total = total_cost + tax;
-    
+
     printf("Tax (8%%): $%.2f\n", tax);
     printf("Final total: $%.2f\n", final_total);
     printf("Thank you for your order! \n");
-    
+
     return 0;
 }
 ```
@@ -603,9 +603,9 @@ int main() {
     int grade_count = 0;
     int is_running = 1;
     int choice;
-    
+
     printf("=== Student Grade Manager ===\n");
-    
+
     while (is_running) {
         printf("\n1. Add Grade\n");
         printf("2. View All Grades\n");
@@ -614,14 +614,14 @@ int main() {
         printf("5. Exit\n");
         printf("Choose an option (1-5): ");
         scanf("%d", &choice);
-        
+
         switch (choice) {
             case 1: {
                 if (grade_count < 100) {
                     float new_grade;
                     printf("Enter grade (0-100): ");
                     scanf("%f", &new_grade);
-                    
+
                     if (new_grade >= 0 && new_grade <= 100) {
                         grades[grade_count] = new_grade;
                         grade_count++;
@@ -660,12 +660,12 @@ int main() {
                 if (grade_count > 0) {
                     float highest = grades[0];
                     float lowest = grades[0];
-                    
+
                     for (int i = 1; i < grade_count; i++) {
                         if (grades[i] > highest) highest = grades[i];
                         if (grades[i] < lowest) lowest = grades[i];
                     }
-                    
+
                     printf(" Highest: %.1f%%\n", highest);
                     printf(" Lowest: %.1f%%\n", lowest);
                 } else {
@@ -680,9 +680,9 @@ int main() {
                 break;
         }
     }
-    
+
     printf("Thank you for using Grade Manager! \n");
-    
+
     return 0;
 }
 ```
@@ -704,9 +704,9 @@ int main() {
     int is_running = 1;
     int conversion_type, direction;
     float value, result;
-    
+
     printf("=== Unit Converter ===\n");
-    
+
     while (is_running) {
         printf("\n1. Temperature (°F ↔ °C)\n");
         printf("2. Length (Feet ↔ Meters)\n");
@@ -714,14 +714,14 @@ int main() {
         printf("4. Exit\n");
         printf("Select conversion type (1-4): ");
         scanf("%d", &conversion_type);
-        
+
         if (conversion_type == 1) {
             printf("1. °F to °C\n2. °C to °F\n");
             printf("Choose direction: ");
             scanf("%d", &direction);
             printf("Enter temperature: ");
             scanf("%f", &value);
-            
+
             if (direction == 1) {
                 result = (value - 32) * 5 / 9;
                 printf("%.1f°F = %.1f°C\n", value, result);
@@ -735,7 +735,7 @@ int main() {
             scanf("%d", &direction);
             printf("Enter length: ");
             scanf("%f", &value);
-            
+
             if (direction == 1) {
                 result = value * 0.3048;
                 printf("%.2f ft = %.2f m\n", value, result);
@@ -749,7 +749,7 @@ int main() {
             scanf("%d", &direction);
             printf("Enter weight: ");
             scanf("%f", &value);
-            
+
             if (direction == 1) {
                 result = value * 0.4536;
                 printf("%.2f lbs = %.2f kg\n", value, result);
@@ -763,9 +763,9 @@ int main() {
             printf(" Invalid conversion type!\n");
         }
     }
-    
+
     printf("Thank you for using Unit Converter! \n");
-    
+
     return 0;
 }
 ```
@@ -788,9 +788,9 @@ int main() {
     int response_count = 0;
     int survey_complete = 0;
     int rating;
-    
+
     printf("=== Customer Satisfaction Survey ===\n");
-    
+
     while (!survey_complete) {
         printf("\nParticipant #%d\n", response_count + 1);
         printf("Rate your satisfaction (1-5):\n");
@@ -801,7 +801,7 @@ int main() {
         printf("5 = Very Satisfied\n");
         printf("Enter rating (1-5, or 0 to finish survey): ");
         scanf("%d", &rating);
-        
+
         if (rating == 0) {
             survey_complete = 1;
         } else if (rating >= 1 && rating <= 5) {
@@ -812,35 +812,35 @@ int main() {
             printf(" Invalid rating! Please enter 1-5 or 0 to finish.\n");
         }
     }
-    
+
     if (response_count > 0) {
         printf("\n=== Survey Results ===\n");
         printf("Total responses: %d\n", response_count);
-        
+
         int counts[6] = {0}; // Index 1-5 for ratings
-        
+
         for (int i = 0; i < response_count; i++) {
             counts[responses[i]]++;
         }
-        
+
         for (int rating = 1; rating <= 5; ratingcc) {
             float percentage = (float)counts[rating] / response_count * 100;
             printf("%d: %d responses (%.1f%%)\n", rating, counts[rating], percentage);
         }
-        
+
         float sum = 0;
         for (int i = 0; i < response_count; i++) {
             sum += responses[i];
         }
         float average = sum / response_count;
-        
+
         printf("Average satisfaction: %.1f/5.0\n", average);
     } else {
         printf("No survey responses collected.\n");
     }
-    
+
     printf("Thank you for participating! \n");
-    
+
     return 0;
 }
 ```
@@ -864,9 +864,9 @@ int main() {
     int book_count = 0;
     int is_running = 1;
     int choice;
-    
+
     printf("=== Library Book Tracker ===\n");
-    
+
     while (is_running) {
         printf("\n1. Add Book\n");
         printf("2. List All Books\n");
@@ -875,7 +875,7 @@ int main() {
         printf("5. Exit\n");
         printf("Choose option (1-5): ");
         scanf("%d", &choice);
-        
+
         switch (choice) {
             case 1: {
                 if (book_count < 20) {
@@ -883,10 +883,10 @@ int main() {
                     printf("Enter book title: ");
                     getchar(); // Clear newline
                     fgets(book_title, sizeof(book_title), stdin);
-                    
+
                     // Remove trailing newline
                     book_title[strcspn(book_title, "\n")] = '\0';
-                    
+
                     if (strlen(book_title) > 0) {
                         strcpy(books[book_count], book_title);
                         book_count++;
@@ -916,7 +916,7 @@ int main() {
                     getchar(); // Clear newline
                     fgets(search_term, sizeof(search_term), stdin);
                     search_term[strcspn(search_term, "\n")] = '\0';
-                    
+
                     int found_count = 0;
                     for (int i = 0; i < book_count; i++) {
                         if (strstr(books[i], search_term) != NULL) {
@@ -924,7 +924,7 @@ int main() {
                             found_count++;
                         }
                     }
-                    
+
                     if (found_count == 0) {
                         printf(" No books found matching '%s'\n", search_term);
                     }
@@ -938,15 +938,15 @@ int main() {
                     int book_number;
                     printf("Enter book number to remove (1-%d): ", book_count);
                     scanf("%d", &book_number);
-                    
+
                     if (book_number >= 1 && book_number <= book_count) {
                         printf("Removing: '%s'\n", books[book_number - 1]);
-                        
+
                         // Shift remaining books left
                         for (int i = book_number - 1; i < book_count - 1; i++) {
                             strcpy(books[i], books[i + 1]);
                         }
-                        
+
                         book_count--;
                         printf(" Book removed successfully!\n");
                     } else {
@@ -965,9 +965,9 @@ int main() {
                 break;
         }
     }
-    
+
     printf("Thank you for using Library Book Tracker! \n");
-    
+
     return 0;
 }
 ```
@@ -1016,7 +1016,7 @@ int get_valid_number(int min, int max) {
 
 ---
 
- **Excellent! You've mastered user interaction and I/O operations!** 
+ **Excellent! You've mastered user interaction and I/O operations!**
 
 *Programs that talk to users are much more useful. Next: Decision-making in pseudocode! *
 
@@ -1042,50 +1042,3 @@ Key functions and their purpose:
 
 - [ ] Main function: Entry point
 - [ ] Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```
-#include <stdio.h>
-
-int main() {
-    printf("Hello, World!\n");
-    return 0;
-}
-```
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses printf to print messages to the console
-3. **Standard Library**: Includes stdio.h for input/output operations
-4. **Return Value**: Returns 0 to indicate successful execution
-5. **Best Practices**: Code is readable and uses C++ idioms
-
-### Testing Your Solution
-
-1. **Compile**: `gcc main.c -o main`
-2. **Run**: `./hello`
-3. **Expected Output**: `Hello, World!`
-
-### Common Errors & Solutions
-
-| Error | Cause | Solution |
-|-------|-------|----------|
-| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
-| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
-
-### Tips for Learning
-
-- C uses stdio.h for input/output with additional features
-- `printf` is the C standard for formatted output
-- `\n` adds a newline character in format strings
-- Format specifiers control how data is displayed (%d, %f, %s, etc.)

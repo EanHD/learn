@@ -47,29 +47,29 @@ Hello, World!
 START PROGRAM
     DECLARE a AS NUMBER
     SET a TO 10
-    
+
     DECLARE b AS NUMBER
     SET b TO 3
-    
+
     DECLARE sum AS NUMBER
     SET sum TO a + b
-    
+
     DECLARE difference AS NUMBER
     SET difference TO a - b
-    
+
     DECLARE product AS NUMBER
     SET product TO a * b
-    
+
     DECLARE quotient AS NUMBER
     SET quotient TO a / b
-    
+
     DISPLAY "a = " + a
     DISPLAY "b = " + b
     DISPLAY "Sum: " + sum
     DISPLAY "Difference: " + difference
     DISPLAY "Product: " + product
     DISPLAY "Quotient: " + quotient
-    
+
     DECLARE complex AS NUMBER
     SET complex TO (a + b) * 2 - quotient
     DISPLAY "Complex calculation: " + complex
@@ -160,29 +160,29 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 START PROGRAM
     DECLARE a AS NUMBER
     SET a TO 10
-    
+
     DECLARE b AS NUMBER
     SET b TO 3
-    
+
     DECLARE sum AS NUMBER
     SET sum TO a + b
-    
+
     DECLARE difference AS NUMBER
     SET difference TO a - b
-    
+
     DECLARE product AS NUMBER
     SET product TO a * b
-    
+
     DECLARE quotient AS NUMBER
     SET quotient TO a / b
-    
+
     DISPLAY "a = " + a
     DISPLAY "b = " + b
     DISPLAY "Sum: " + sum
     DISPLAY "Difference: " + difference
     DISPLAY "Product: " + product
     DISPLAY "Quotient: " + quotient
-    
+
     DECLARE complex AS NUMBER
     SET complex TO (a + b) * 2 - quotient
     DISPLAY "Complex calculation: " + complex
@@ -194,19 +194,19 @@ END PROGRAM
 fn main() {
     let a = 10;
     let b = 3;
-    
+
     let sum = a + b;
     let difference = a - b;
     let product = a * b;
     let quotient = a / b;
-    
+
     println!("a = {}", a);
     println!("b = {}", b);
     println!("Sum: {}", sum);
     println!("Difference: {}", difference);
     println!("Product: {}", product);
     println!("Quotient: {}", quotient);
-    
+
     let complex = (a + b) * 2 - quotient;
     println!("Complex calculation: {}", complex);
 }
@@ -242,7 +242,7 @@ fn main() {
 
 ---
 
- **Great! You can handle mathematical pseudocode!** 
+ **Great! You can handle mathematical pseudocode!**
 
 *Next: Input/Output Pseudocode!*
 
@@ -262,42 +262,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```rs
-fn main() {
-    println!("Hello, World!");
-}
-
-```rs
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard rust conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

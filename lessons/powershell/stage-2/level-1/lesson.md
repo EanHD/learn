@@ -69,8 +69,7 @@ If you're stuck, here's what your code should look like (don't peek until you tr
 
 ## ANSWER KEY
 
-```ps1
-```
+
 
 (Fill in based on language-specific syntax)
 

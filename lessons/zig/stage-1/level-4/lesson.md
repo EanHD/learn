@@ -29,12 +29,12 @@ const std = @import("std");
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
     const stdin = std.io.getStdIn().reader();
-    
+
     var name_buf: [100]u8 = undefined;
-    
+
     try stdout.print("Enter your name: ", .{});
     const name = try stdin.readUntilDelimiter(&name_buf, '\n');
-    
+
     try stdout.print("Hello, {s}!\n", .{name});
 }
 ```

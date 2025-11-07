@@ -26,30 +26,30 @@ int main() {
     int age;
     float height;
     string name;  // New! C++ has built-in strings
-    
+
     // C++ style output (no printf!)
     cout << "Enter your name: ";
     cin >> name;
-    
+
     cout << "Enter your age: ";
     cin >> age;
-    
+
     cout << "Enter your height (feet): ";
     cin >> height;
-    
+
     // Output with cout (replaces printf)
     cout << "\n--- Your Info ---\n";
     cout << "Name: " << name << "\n";
     cout << "Age: " << age << " years\n";
     cout << "Height: " << height << " feet\n";
-    
+
     // Conditionals work the same!
     if (age >= 18) {
         cout << "You're an adult!\n";
     } else {
         cout << "You're a minor.\n";
     }
-    
+
     return 0;
 }
 ```

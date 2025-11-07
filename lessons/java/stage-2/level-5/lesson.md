@@ -606,7 +606,7 @@ public class LoanApproval {
         double income, loanAmount;
         String approvalStatus = "PENDING";
         double maxLoanAmount = 0.0;
-        
+
         System.out.println("=== Loan Approval System ===");
         System.out.print("Enter applicant's age: ");
         age = scanner.nextInt();
@@ -616,7 +616,7 @@ public class LoanApproval {
         creditScore = scanner.nextInt();
         System.out.print("Enter loan amount requested: $");
         loanAmount = scanner.nextDouble();
-        
+
         if (age < 18) {
             approvalStatus = "DENIED - Underage";
         } else if (age > 70) {
@@ -634,7 +634,7 @@ public class LoanApproval {
                 } else {
                     maxLoanAmount = income * 1;
                 }
-                
+
                 if (loanAmount > maxLoanAmount) {
                     approvalStatus = "DENIED - Loan amount exceeds limit";
                 } else if (loanAmount > income * 0.5) {
@@ -644,13 +644,13 @@ public class LoanApproval {
                 }
             }
         }
-        
+
         System.out.println("\n=== Loan Decision ===");
         System.out.println("Applicant age: " + age);
         System.out.printf("Annual income: $%.2f\n", income);
         System.out.println("Credit score: " + creditScore);
         System.out.printf("Loan requested: $%.2f\n", loanAmount);
-        
+
         if (approvalStatus.equals("APPROVED")) {
             System.out.println(" LOAN APPROVED!");
             System.out.printf("Maximum approved amount: $%.2f\n", maxLoanAmount);
@@ -661,7 +661,7 @@ public class LoanApproval {
             System.out.println(" LOAN DENIED");
             System.out.println("Reason: " + approvalStatus);
         }
-        
+
         scanner.close();
     }
 }
@@ -697,7 +697,7 @@ public class HealthRiskAssessment {
         double bmi;
         String smokingStatus, exerciseStatus, familyHistory;
         String riskLevel = "LOW";
-        
+
         System.out.println("=== Health Risk Assessment ===");
         System.out.print("Enter your age: ");
         age = scanner.nextInt();
@@ -710,27 +710,27 @@ public class HealthRiskAssessment {
         exerciseStatus = scanner.nextLine();
         System.out.print("Family history of heart disease? (yes/no): ");
         familyHistory = scanner.nextLine();
-        
+
         // Age risk
         if (age >= 65) riskPoints += 3;
         else if (age >= 45) riskPoints += 2;
         else if (age >= 30) riskPoints += 1;
-        
+
         // BMI risk
         if (bmi >= 30) riskPoints += 3;
         else if (bmi >= 25) riskPoints += 2;
         else if (bmi >= 23) riskPoints += 1;
-        
+
         // Lifestyle risk
         if (smokingStatus.equalsIgnoreCase("yes")) riskPoints += 3;
         if (exerciseStatus.equalsIgnoreCase("no")) riskPoints += 2;
         if (familyHistory.equalsIgnoreCase("yes")) riskPoints += 2;
-        
+
         // Determine risk level
         if (riskPoints >= 8) riskLevel = "HIGH";
         else if (riskPoints >= 5) riskLevel = "MODERATE";
         else if (riskPoints >= 3) riskLevel = "ELEVATED";
-        
+
         System.out.println("\n=== Health Risk Assessment Results ===");
         System.out.println("Age: " + age + " years");
         System.out.printf("BMI: %.1f\n", bmi);
@@ -739,7 +739,7 @@ public class HealthRiskAssessment {
         System.out.println("Family history: " + familyHistory);
         System.out.println("Risk points: " + riskPoints + "/12");
         System.out.println("Risk level: " + riskLevel);
-        
+
         if (riskLevel.equals("HIGH")) {
             System.out.println(" HIGH RISK - Consult doctor immediately");
             System.out.println("Recommendations: Lifestyle changes, medical evaluation");
@@ -753,7 +753,7 @@ public class HealthRiskAssessment {
             System.out.println(" LOW RISK - Maintain healthy lifestyle");
             System.out.println("Recommendations: Continue current healthy habits");
         }
-        
+
         scanner.close();
     }
 }
@@ -790,7 +790,7 @@ public class AcademicStanding {
         String probationStatus;
         String standing = "UNDETERMINED";
         String eligibilityStatus = "ELIGIBLE";
-        
+
         System.out.println("=== Academic Standing Calculator ===");
         System.out.print("Enter GPA (0.0-4.0): ");
         gpa = scanner.nextDouble();
@@ -801,7 +801,7 @@ public class AcademicStanding {
         scanner.nextLine(); // Consume newline
         System.out.print("Any academic probation? (yes/no): ");
         probationStatus = scanner.nextLine();
-        
+
         if (probationStatus.equalsIgnoreCase("yes")) {
             standing = "ACADEMIC PROBATION";
             eligibilityStatus = "RESTRICTED";
@@ -829,7 +829,7 @@ public class AcademicStanding {
                 eligibilityStatus = "COUNSELING REQUIRED";
             }
         }
-        
+
         System.out.println("\n=== Academic Assessment ===");
         System.out.printf("GPA: %.2f\n", gpa);
         System.out.println("Credit Hours: " + creditHours);
@@ -837,7 +837,7 @@ public class AcademicStanding {
         System.out.println("Probation Status: " + probationStatus);
         System.out.println("Academic Standing: " + standing);
         System.out.println("Eligibility Status: " + eligibilityStatus);
-        
+
         if (eligibilityStatus.equals("ELIGIBLE")) {
             System.out.println(" Eligible for all academic activities");
         } else if (eligibilityStatus.equals("RESTRICTED")) {
@@ -845,7 +845,7 @@ public class AcademicStanding {
         } else {
             System.out.println(" Counseling required - Contact academic advisor");
         }
-        
+
         scanner.close();
     }
 }
@@ -877,7 +877,7 @@ public class InsurancePremium {
         int age, experience, mileage;
         String vehicleType, accidentHistory;
         double basePremium = 500.0, riskMultiplier = 1.0, finalPremium;
-        
+
         System.out.println("=== Auto Insurance Premium Calculator ===");
         System.out.print("Enter driver's age: ");
         age = scanner.nextInt();
@@ -890,29 +890,29 @@ public class InsurancePremium {
         accidentHistory = scanner.nextLine();
         System.out.print("Annual mileage: ");
         mileage = scanner.nextInt();
-        
+
         // Age risk
         if (age < 25) riskMultiplier *= 1.5;
         else if (age > 65) riskMultiplier *= 1.2;
-        
+
         // Experience risk
         if (experience < 3) riskMultiplier *= 1.4;
         else if (experience > 10) riskMultiplier *= 0.9;
-        
+
         // Vehicle type risk
         if (vehicleType.equalsIgnoreCase("sports")) riskMultiplier *= 1.8;
         else if (vehicleType.equalsIgnoreCase("suv")) riskMultiplier *= 1.3;
         else if (vehicleType.equalsIgnoreCase("truck")) riskMultiplier *= 1.1;
-        
+
         // Accident history
         if (accidentHistory.equalsIgnoreCase("yes")) riskMultiplier *= 1.6;
-        
+
         // Mileage risk
         if (mileage > 15000) riskMultiplier *= 1.2;
         else if (mileage < 5000) riskMultiplier *= 0.95;
-        
+
         finalPremium = basePremium * riskMultiplier;
-        
+
         System.out.println("\n=== Premium Calculation ===");
         System.out.println("Driver Age: " + age);
         System.out.println("Driving Experience: " + experience + " years");
@@ -922,7 +922,7 @@ public class InsurancePremium {
         System.out.printf("Base Premium: $%.2f\n", basePremium);
         System.out.printf("Risk Multiplier: %.2f\n", riskMultiplier);
         System.out.printf("Final Premium: $%.2f\n", finalPremium);
-        
+
         if (riskMultiplier > 2.0) {
             System.out.println(" HIGH RISK PROFILE");
             System.out.println("Consider defensive driving courses");
@@ -933,7 +933,7 @@ public class InsurancePremium {
             System.out.println(" LOW RISK PROFILE");
             System.out.println("Eligible for premium discounts");
         }
-        
+
         scanner.close();
     }
 }
@@ -969,7 +969,7 @@ public class TravelPlanner {
         int tripDays, groupSize, activityCount = 0;
         double dailyBudget, totalCost = 0.0;
         double accommodationCost, foodCost, activityCost, transportationCost, miscellaneousCost, totalBudget;
-        
+
         System.out.println("=== Travel Itinerary Planner ===");
         System.out.print("Enter destination city: ");
         destination = scanner.nextLine();
@@ -982,7 +982,7 @@ public class TravelPlanner {
         season = scanner.nextLine();
         System.out.print("Group size: ");
         groupSize = scanner.nextInt();
-        
+
         // Seasonal activity planning
         if (season.equalsIgnoreCase("summer")) {
             if (destination.toLowerCase().contains("beach")) {
@@ -1009,7 +1009,7 @@ public class TravelPlanner {
             totalCost += 35;
             activityCount = 4;
         }
-        
+
         // Cost calculations
         accommodationCost = dailyBudget * 0.4 * tripDays;
         foodCost = dailyBudget * 0.3 * tripDays;
@@ -1017,14 +1017,14 @@ public class TravelPlanner {
         transportationCost = dailyBudget * 0.2 * tripDays;
         miscellaneousCost = dailyBudget * 0.1 * tripDays;
         totalBudget = accommodationCost + foodCost + activityCost + transportationCost + miscellaneousCost;
-        
+
         // Group discount
         if (groupSize > 4) {
             double groupDiscount = totalBudget * 0.1;
             totalBudget -= groupDiscount;
             System.out.printf(" Group discount applied: $%.2f\n", groupDiscount);
         }
-        
+
         System.out.println("\n=== Travel Itinerary ===");
         System.out.println("Destination: " + destination);
         System.out.println("Duration: " + tripDays + " days");
@@ -1038,14 +1038,14 @@ public class TravelPlanner {
         System.out.printf("Transportation: $%.2f\n", transportationCost);
         System.out.printf("Miscellaneous: $%.2f\n", miscellaneousCost);
         System.out.printf("Total Estimated Cost: $%.2f\n", totalBudget);
-        
+
         double budgetLimit = dailyBudget * tripDays;
         if (totalBudget > budgetLimit) {
             System.out.printf(" Budget exceeded by $%.2f\n", totalBudget - budgetLimit);
         } else {
             System.out.printf(" Within budget - $%.2f remaining\n", budgetLimit - totalBudget);
         }
-        
+
         scanner.close();
     }
 }
@@ -1082,7 +1082,7 @@ public class PerformanceReview {
         int yearsService, productivity, quality, teamwork;
         double averageScore, salaryAdjustment = 0.0;
         String performanceRating = "UNDETERMINED";
-        
+
         System.out.println("=== Employee Performance Review ===");
         System.out.print("Enter employee name: ");
         employeeName = scanner.nextLine();
@@ -1097,9 +1097,9 @@ public class PerformanceReview {
         scanner.nextLine(); // Consume newline
         System.out.print("Any disciplinary actions? (yes/no): ");
         disciplinaryStatus = scanner.nextLine();
-        
+
         averageScore = (productivity + quality + teamwork) / 3.0;
-        
+
         if (disciplinaryStatus.equalsIgnoreCase("yes")) {
             performanceRating = "UNSATISFACTORY";
             salaryAdjustment = -5.0;
@@ -1126,7 +1126,7 @@ public class PerformanceReview {
                 salaryAdjustment = 0.0;
             }
         }
-        
+
         System.out.println("\n=== Performance Review Results ===");
         System.out.println("Employee: " + employeeName);
         System.out.println("Years of Service: " + yearsService);
@@ -1137,7 +1137,7 @@ public class PerformanceReview {
         System.out.println("Disciplinary Actions: " + disciplinaryStatus);
         System.out.println("Performance Rating: " + performanceRating);
         System.out.printf("Salary Adjustment: %.1f%%\n", salaryAdjustment);
-        
+
         if (performanceRating.equals("OUTSTANDING")) {
             System.out.println(" EMPLOYEE OF THE YEAR CANDIDATE");
             System.out.println("Eligible for bonus and promotion consideration");
@@ -1148,7 +1148,7 @@ public class PerformanceReview {
             System.out.println(" Performance review complete");
             System.out.println("Continue professional development");
         }
-        
+
         scanner.close();
     }
 }
@@ -1234,6 +1234,6 @@ else if (riskPoints >= 3) level = RiskLevel.ELEVATED;
 
 ---
 
- **Brilliant! You've mastered complex decision-making in code!** 
+ **Brilliant! You've mastered complex decision-making in code!**
 
 *Programs can now make intelligent decisions like real applications. Next: Loop algorithms in pseudocode! *

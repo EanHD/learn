@@ -1257,7 +1257,7 @@ and Input       Checking    Calculations    Operations  Results
 
 ---
 
- **Congratulations! You've built a professional interactive application!** 
+ **Congratulations! You've built a professional interactive application!**
 
 *Next: Decision support applications with intelligent recommendations! *
 

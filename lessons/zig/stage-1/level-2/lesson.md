@@ -28,17 +28,17 @@ const std = @import("std");
 
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
-    
+
     // Integer variables
     const age: i32 = 25;
     const score: i32 = 100;
-    
+
     // Floating point
     const price: f64 = 29.99;
-    
+
     // String
     const name = "Alex";
-    
+
     // Display
     try stdout.print("Name: {s}\n", .{name});
     try stdout.print("Age: {}\n", .{age});

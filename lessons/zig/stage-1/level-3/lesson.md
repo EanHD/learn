@@ -28,16 +28,16 @@ const std = @import("std");
 
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
-    
+
     const a: i32 = 10;
     const b: i32 = 3;
-    
+
     try stdout.print("Addition: {}\n", .{a + b});
     try stdout.print("Subtraction: {}\n", .{a - b});
     try stdout.print("Multiplication: {}\n", .{a * b});
     try stdout.print("Division: {}\n", .{@divTrunc(a, b)});
     try stdout.print("Modulus: {}\n", .{@mod(a, b)});
-    
+
     const x: f64 = 10.0;
     const y: f64 = 3.0;
     try stdout.print("Float division: {d:.2}\n", .{x / y});

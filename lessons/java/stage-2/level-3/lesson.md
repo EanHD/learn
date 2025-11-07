@@ -365,20 +365,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.println("Circle Calculator");
         System.out.print("Enter radius: ");
         double radius = scanner.nextDouble();
-        
+
         double area = Math.PI * radius * radius;
         double circumference = 2 * Math.PI * radius;
         double diameter = 2 * radius;
-        
+
         System.out.printf("Radius: %.2f\n", radius);
         System.out.printf("Diameter: %.2f\n", diameter);
         System.out.printf("Area: %.2f\n", area);
         System.out.printf("Circumference: %.2f\n", circumference);
-        
+
         scanner.close();
     }
 }
@@ -403,23 +403,23 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.println("Right Triangle Calculator");
         System.out.print("Enter side A: ");
         double sideA = scanner.nextDouble();
         System.out.print("Enter side B: ");
         double sideB = scanner.nextDouble();
-        
+
         double hypotenuse = Math.sqrt(sideA * sideA + sideB * sideB);
         double area = (sideA * sideB) / 2;
         double perimeter = sideA + sideB + hypotenuse;
-        
+
         System.out.printf("Side A: %.2f\n", sideA);
         System.out.printf("Side B: %.2f\n", sideB);
         System.out.printf("Hypotenuse: %.2f\n", hypotenuse);
         System.out.printf("Area: %.2f\n", area);
         System.out.printf("Perimeter: %.2f\n", perimeter);
-        
+
         scanner.close();
     }
 }
@@ -444,7 +444,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.println("Compound Interest Calculator");
         System.out.print("Enter principal amount: $");
         double principal = scanner.nextDouble();
@@ -454,18 +454,18 @@ public class Main {
         double years = scanner.nextDouble();
         System.out.print("Enter compounding frequency (1=annual, 12=monthly): ");
         double frequency = scanner.nextDouble();
-        
+
         double rateDecimal = rate / 100;
         double totalCompounds = years * frequency;
         double compoundRate = rateDecimal / frequency;
-        
+
         double finalAmount = principal * Math.pow(1 + compoundRate, totalCompounds);
         double totalInterest = finalAmount - principal;
-        
+
         System.out.printf("Principal: $%.2f\n", principal);
         System.out.printf("Final Amount: $%.2f\n", finalAmount);
         System.out.printf("Total Interest: $%.2f\n", totalInterest);
-        
+
         scanner.close();
     }
 }
@@ -490,7 +490,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.println("Quadratic Equation Solver");
         System.out.println("For equation ax² + bx + c = 0");
         System.out.print("Enter coefficient a: ");
@@ -499,11 +499,11 @@ public class Main {
         double b = scanner.nextDouble();
         System.out.print("Enter coefficient c: ");
         double c = scanner.nextDouble();
-        
+
         double discriminant = b * b - 4 * a * c;
-        
+
         System.out.printf("Discriminant: %.2f\n", discriminant);
-        
+
         if (discriminant > 0) {
             double root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
             double root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
@@ -514,7 +514,7 @@ public class Main {
         } else {
             System.out.println("No real roots (complex solutions)");
         }
-        
+
         scanner.close();
     }
 }
@@ -539,33 +539,33 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.println("Fibonacci Sequence Generator");
         System.out.print("Enter number of terms: ");
         int n = scanner.nextInt();
-        
+
         int first = 0, second = 1, count = 3;
-        
+
         System.out.println("Fibonacci sequence:");
-        
+
         if (n >= 1) {
             System.out.print(first + " ");
         }
         if (n >= 2) {
             System.out.print(second + " ");
         }
-        
+
         while (count <= n) {
             int next = first + second;
             System.out.print(next + " ");
-            
+
             first = second;
             second = next;
             count++;
         }
-        
+
         System.out.println("\nSequence complete");
-        
+
         scanner.close();
     }
 }
@@ -591,17 +591,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         double sum = 0, sumSquares = 0;
         int count = 0;
         boolean hasMore = true;
-        
+
         System.out.println("Statistical Calculator");
-        
+
         while (hasMore) {
             System.out.print("Enter number " + (count + 1) + " (or 0 to finish): ");
             double number = scanner.nextDouble();
-            
+
             if (number == 0) {
                 hasMore = false;
             } else {
@@ -610,12 +610,12 @@ public class Main {
                 sumSquares += number * number;
             }
         }
-        
+
         if (count > 0) {
             double mean = sum / count;
             double variance = (sumSquares / count) - (mean * mean);
             double stdDev = Math.sqrt(variance);
-            
+
             System.out.println("Count: " + count);
             System.out.printf("Sum: %.2f\n", sum);
             System.out.printf("Mean: %.2f\n", mean);
@@ -623,7 +623,7 @@ public class Main {
         } else {
             System.out.println("No numbers entered");
         }
-        
+
         scanner.close();
     }
 }
@@ -649,29 +649,29 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.println("Distance Between Two Points");
-        
+
         System.out.println("Enter coordinates for point 1:");
         System.out.print("X1: ");
         double x1 = scanner.nextDouble();
         System.out.print("Y1: ");
         double y1 = scanner.nextDouble();
-        
+
         System.out.println("Enter coordinates for point 2:");
         System.out.print("X2: ");
         double x2 = scanner.nextDouble();
         System.out.print("Y2: ");
         double y2 = scanner.nextDouble();
-        
+
         double deltaX = x2 - x1;
         double deltaY = y2 - y1;
         double distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-        
+
         System.out.println("Point 1: (" + x1 + ", " + y1 + ")");
         System.out.println("Point 2: (" + x2 + ", " + y2 + ")");
         System.out.printf("Distance: %.2f\n", distance);
-        
+
         scanner.close();
     }
 }
@@ -695,7 +695,7 @@ public class Main {
 **Integer Division:**
 ```
 int result = 5 / 2;  // Result: 2 (not 2.5!)
-double result = 5.0 / 2;  // Result: 2.5 
+double result = 5.0 / 2;  // Result: 2.5
 ```
 
 **Parentheses Matter:**

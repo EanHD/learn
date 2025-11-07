@@ -1026,7 +1026,7 @@ Classification Selection         & Debugging   & Accuracy  Tuning
 
 ---
 
- **Congratulations! You've built a comprehensive mathematical application!** 
+ **Congratulations! You've built a comprehensive mathematical application!**
 
 *Next: Interactive applications with advanced user interfaces! *
 

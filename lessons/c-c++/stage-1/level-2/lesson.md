@@ -24,25 +24,25 @@ int main() {
     // Integer variables
     int age = 25;
     int year = 2025;
-    
+
     // Floating point
     float height = 5.9;
     float price = 19.99;
-    
+
     // Character
     char grade = 'A';
-    
+
     // Print them all
     printf("Age: %d\n", age);
     printf("Year: %d\n", year);
     printf("Height: %.1f feet\n", height);
     printf("Price: $%.2f\n", price);
     printf("Grade: %c\n", grade);
-    
+
     // Basic arithmetic
     int sum = age + 5;
     printf("In 5 years you'll be: %d\n", sum);
-    
+
     return 0;
 }
 ```

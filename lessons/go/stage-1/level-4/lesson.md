@@ -38,14 +38,14 @@ import (
 
 func main() {
     reader := bufio.NewReader(os.Stdin)
-    
+
     fmt.Println("=== Interactive Greeting Program ===")
     // Get input from user
     fmt.Print("What's your name? ")
     name, _ := reader.ReadString('\n')
     name = strings.TrimSpace(name)  // Remove newline character
     fmt.Println("Hello,", name, "! Nice to meet you!")
-    
+
     fmt.Println()
     fmt.Println("=== Simple Calculator ===")
     // Get two numbers from user
@@ -57,7 +57,7 @@ func main() {
         fmt.Println("Invalid number entered!")
         return
     }
-    
+
     fmt.Print("Enter second number: ")
     input2, _ := reader.ReadString('\n')
     input2 = strings.TrimSpace(input2)
@@ -66,19 +66,19 @@ func main() {
         fmt.Println("Invalid number entered!")
         return
     }
-    
+
     // Perform calculations
     sum := num1 + num2
     difference := num1 - num2
     product := num1 * num2
     quotient := num1 / num2
-    
+
     // Display results
     fmt.Printf("%.2f + %.2f = %.2f\n", num1, num2, sum)
     fmt.Printf("%.2f - %.2f = %.2f\n", num1, num2, difference)
     fmt.Printf("%.2f * %.2f = %.2f\n", num1, num2, product)
     fmt.Printf("%.2f / %.2f = %.2f\n", num1, num2, quotient)
-    
+
     fmt.Println()
     fmt.Println("=== Age Calculator ===")
     // Ask for birth year and calculate age
@@ -90,45 +90,45 @@ func main() {
         fmt.Println("Please enter a valid year!")
         return
     }
-    
+
     // Simple age calculation (assuming current year is 2025)
     currentYear := 2025
     age := currentYear - birthYear
     fmt.Printf("If you were born in %d, you are about %d years old.\n", birthYear, age)
-    
+
     fmt.Println()
     fmt.Println("=== Simple Quiz ===")
     // Create a simple quiz
     fmt.Print("What is the capital of France? ")
     answer, _ := reader.ReadString('\n')
     answer = strings.TrimSpace(strings.ToLower(answer))
-    
+
     if answer == "paris" {
         fmt.Println("Correct! Well done!")
     } else {
         fmt.Println("Not quite! The answer is Paris.")
     }
-    
+
     fmt.Println()
     fmt.Println("=== Yes/No Question ===")
     // Get a yes/no response (as text)
     fmt.Print("Do you like Go programming? (yes/no): ")
     response, _ := reader.ReadString('\n')
     response = strings.TrimSpace(strings.ToLower(response))
-    
+
     if response == "yes" || response == "y" {
         fmt.Println("Great! Go is a fantastic language!")
     } else {
         fmt.Println("That's okay, everyone has different preferences!")
     }
-    
+
     fmt.Println()
     fmt.Println("=== Multiple Inputs ===")
     // Collect multiple pieces of information
     fmt.Print("What's your favorite color? ")
     color, _ := reader.ReadString('\n')
     color = strings.TrimSpace(color)
-    
+
     fmt.Print("How many pets do you have? ")
     petStr, _ := reader.ReadString('\n')
     petStr = strings.TrimSpace(petStr)
@@ -137,18 +137,18 @@ func main() {
         fmt.Println("Please enter a valid number for pets!")
         petCount = 0  // Default value
     }
-    
+
     fmt.Print("What's your favorite food? ")
     food, _ := reader.ReadString('\n')
     food = strings.TrimSpace(food)
-    
+
     fmt.Println()
     fmt.Println("=== Your Profile ===")
     fmt.Printf("Favorite color: %s\n", color)
     fmt.Printf("Number of pets: %d\n", petCount)
     fmt.Printf("Favorite food: %s\n", food)
     fmt.Printf("Thanks for sharing, %s!\n", name)
-    
+
     fmt.Println()
     fmt.Println("=== Input Validation Example ===")
     // Demonstrate input validation
@@ -156,7 +156,7 @@ func main() {
     userInput, _ := reader.ReadString('\n')
     userInput = strings.TrimSpace(userInput)
     number, err := strconv.ParseFloat(userInput, 64)
-    
+
     if err != nil {
         fmt.Println("Invalid input! That wasn't a number.")
     } else if number > 0 {
@@ -437,9 +437,9 @@ import (
 
 func main() {
     reader := bufio.NewReader(os.Stdin)
-    
+
     fmt.Println("=== Personal Finance Calculator ===")
-    
+
     // Get user's income
     fmt.Print("Enter your monthly income: $")
     incomeStr, _ := reader.ReadString('\n')
@@ -449,7 +449,7 @@ func main() {
         fmt.Println("Invalid income amount!")
         return
     }
-    
+
     // Get expenses
     fmt.Print("Enter monthly rent: $")
     rentStr, _ := reader.ReadString('\n')
@@ -459,7 +459,7 @@ func main() {
         fmt.Println("Invalid rent amount!")
         return
     }
-    
+
     fmt.Print("Enter monthly grocery cost: $")
     groceriesStr, _ := reader.ReadString('\n')
     groceriesStr = strings.TrimSpace(groceriesStr)
@@ -468,7 +468,7 @@ func main() {
         fmt.Println("Invalid grocery cost!")
         return
     }
-    
+
     fmt.Print("Enter monthly utilities: $")
     utilitiesStr, _ := reader.ReadString('\n')
     utilitiesStr = strings.TrimSpace(utilitiesStr)
@@ -477,7 +477,7 @@ func main() {
         fmt.Println("Invalid utilities amount!")
         return
     }
-    
+
     fmt.Print("Enter monthly transportation: $")
     transportStr, _ := reader.ReadString('\n')
     transportStr = strings.TrimSpace(transportStr)
@@ -486,12 +486,12 @@ func main() {
         fmt.Println("Invalid transportation amount!")
         return
     }
-    
+
     // Calculate totals
     totalExpenses := rent + groceries + utilities + transportation
     remaining := monthlyIncome - totalExpenses
     savingsPercentage := (remaining / monthlyIncome) * 100
-    
+
     // Display results
     fmt.Println()
     fmt.Println("=== FINANCIAL SUMMARY ===")
@@ -499,7 +499,7 @@ func main() {
     fmt.Printf("Total Expenses: $%.2f\n", totalExpenses)
     fmt.Printf("Remaining: $%.2f\n", remaining)
     fmt.Printf("Savings Rate: %.1f%%\n", savingsPercentage)
-    
+
     if remaining > 0 {
         fmt.Println("Great! You're saving money each month.")
     } else {
@@ -510,7 +510,7 @@ func main() {
 
 ---
 
- **Excellent work! You now know how to make interactive programs that respond to user input!** 
+ **Excellent work! You now know how to make interactive programs that respond to user input!**
 
 *Ready for the next challenge? Let's make programs that make decisions!*
 
@@ -537,46 +537,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello, World!")
-}
-
-```
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard go conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

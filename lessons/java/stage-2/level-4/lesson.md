@@ -521,15 +521,15 @@ public class AgeVerification {
         Scanner scanner = new Scanner(System.in);
         int ageInput = 0;
         boolean isValidAge = false;
-        
+
         System.out.println("=== Age Verification System ===");
-        
+
         while (!isValidAge) {
             System.out.print("Please enter your age (0-120): ");
-            
+
             try {
                 ageInput = scanner.nextInt();
-                
+
                 if (ageInput < 0) {
                     System.out.println(" Age cannot be negative!");
                 } else if (ageInput > 120) {
@@ -542,15 +542,15 @@ public class AgeVerification {
                 System.out.println(" Invalid input! Please enter a number.");
             }
         }
-        
+
         System.out.println(" Age verified: " + ageInput + " years old");
-        
+
         if (ageInput >= 18) {
             System.out.println(" You are an adult!");
         } else {
             System.out.println(" You are a minor.");
         }
-        
+
         scanner.close();
     }
 }
@@ -580,9 +580,9 @@ public class RestaurantMenu {
         double totalCost = 0.0;
         boolean orderComplete = false;
         int choice;
-        
+
         System.out.println("=== Welcome to Code Café ===");
-        
+
         while (!orderComplete) {
             System.out.println("\n1. Coffee - $3.50");
             System.out.println("2. Sandwich - $8.75");
@@ -591,7 +591,7 @@ public class RestaurantMenu {
             System.out.println("5. Complete Order");
             System.out.print("Enter your choice (1-5): ");
             choice = scanner.nextInt();
-            
+
             switch (choice) {
                 case 1:
                     totalCost += 3.50;
@@ -617,17 +617,17 @@ public class RestaurantMenu {
                     break;
             }
         }
-        
+
         System.out.println("\n=== Order Summary ===");
         System.out.printf("Total cost: $%.2f\n", totalCost);
-        
+
         double tax = totalCost * 0.08;
         double finalTotal = totalCost + tax;
-        
+
         System.out.printf("Tax (8%%): $%.2f\n", tax);
         System.out.printf("Final total: $%.2f\n", finalTotal);
         System.out.println("Thank you for your order! ");
-        
+
         scanner.close();
     }
 }
@@ -664,9 +664,9 @@ public class GradeManager {
         int gradeCount = 0;
         boolean isRunning = true;
         int choice;
-        
+
         System.out.println("=== Student Grade Manager ===");
-        
+
         while (isRunning) {
             System.out.println("\n1. Add Grade");
             System.out.println("2. View All Grades");
@@ -675,13 +675,13 @@ public class GradeManager {
             System.out.println("5. Exit");
             System.out.print("Choose an option (1-5): ");
             choice = scanner.nextInt();
-            
+
             switch (choice) {
                 case 1: {
                     if (gradeCount < 100) {
                         System.out.print("Enter grade (0-100): ");
                         double newGrade = scanner.nextDouble();
-                        
+
                         if (newGrade >= 0 && newGrade <= 100) {
                             grades[gradeCount] = newGrade;
                             gradeCount++;
@@ -720,12 +720,12 @@ public class GradeManager {
                     if (gradeCount > 0) {
                         double highest = grades[0];
                         double lowest = grades[0];
-                        
+
                         for (int i = 1; i < gradeCount; i++) {
                             if (grades[i] > highest) highest = grades[i];
                             if (grades[i] < lowest) lowest = grades[i];
                         }
-                        
+
                         System.out.printf("⬆ Highest: %.1f%%\n", highest);
                         System.out.printf("⬇ Lowest: %.1f%%\n", lowest);
                     } else {
@@ -740,7 +740,7 @@ public class GradeManager {
                     break;
             }
         }
-        
+
         System.out.println("Thank you for using Grade Manager! ");
         scanner.close();
     }
@@ -779,9 +779,9 @@ public class UnitConverter {
         boolean isRunning = true;
         int conversionType, direction;
         double value, result;
-        
+
         System.out.println("=== Unit Converter ===");
-        
+
         while (isRunning) {
             System.out.println("\n1. Temperature (°F ↔ °C)");
             System.out.println("2. Length (Feet ↔ Meters)");
@@ -789,7 +789,7 @@ public class UnitConverter {
             System.out.println("4. Exit");
             System.out.print("Select conversion type (1-4): ");
             conversionType = scanner.nextInt();
-            
+
             if (conversionType == 1) {
                 System.out.println("1. °F to °C");
                 System.out.println("2. °C to °F");
@@ -797,7 +797,7 @@ public class UnitConverter {
                 direction = scanner.nextInt();
                 System.out.print("Enter temperature: ");
                 value = scanner.nextDouble();
-                
+
                 if (direction == 1) {
                     result = (value - 32) * 5 / 9;
                     System.out.printf("%.1f°F = %.1f°C\n", value, result);
@@ -812,7 +812,7 @@ public class UnitConverter {
                 direction = scanner.nextInt();
                 System.out.print("Enter length: ");
                 value = scanner.nextDouble();
-                
+
                 if (direction == 1) {
                     result = value * 0.3048;
                     System.out.printf("%.2f ft = %.2f m\n", value, result);
@@ -827,7 +827,7 @@ public class UnitConverter {
                 direction = scanner.nextInt();
                 System.out.print("Enter weight: ");
                 value = scanner.nextDouble();
-                
+
                 if (direction == 1) {
                     result = value * 0.4536;
                     System.out.printf("%.2f lbs = %.2f kg\n", value, result);
@@ -841,7 +841,7 @@ public class UnitConverter {
                 System.out.println(" Invalid conversion type!");
             }
         }
-        
+
         System.out.println("Thank you for using Unit Converter! ");
         scanner.close();
     }
@@ -879,9 +879,9 @@ public class SurveyCollector {
         int responseCount = 0;
         boolean surveyComplete = false;
         int rating;
-        
+
         System.out.println("=== Customer Satisfaction Survey ===");
-        
+
         while (!surveyComplete) {
             System.out.println("\nParticipant #" + (responseCount + 1));
             System.out.println("Rate your satisfaction (1-5):");
@@ -892,7 +892,7 @@ public class SurveyCollector {
             System.out.println("5 = Very Satisfied");
             System.out.print("Enter rating (1-5, or 0 to finish survey): ");
             rating = scanner.nextInt();
-            
+
             if (rating == 0) {
                 surveyComplete = true;
             } else if (rating >= 1 && rating <= 5) {
@@ -903,34 +903,34 @@ public class SurveyCollector {
                 System.out.println(" Invalid rating! Please enter 1-5 or 0 to finish.");
             }
         }
-        
+
         if (responseCount > 0) {
             System.out.println("\n=== Survey Results ===");
             System.out.println("Total responses: " + responseCount);
-            
+
             int[] counts = new int[6]; // Index 0-5, use 1-5 for ratings
-            
+
             for (int i = 0; i < responseCount; i++) {
                 counts[responses[i]]++;
             }
-            
+
             for (int ratingLevel = 1; ratingLevel <= 5; ratingLevel++) {
                 double percentage = (double) counts[ratingLevel] / responseCount * 100;
-                System.out.printf("%d: %d responses (%.1f%%)\n", 
+                System.out.printf("%d: %d responses (%.1f%%)\n",
                     ratingLevel, counts[ratingLevel], percentage);
             }
-            
+
             int sum = 0;
             for (int i = 0; i < responseCount; i++) {
                 sum += responses[i];
             }
             double average = (double) sum / responseCount;
-            
+
             System.out.printf("Average satisfaction: %.1f/5.0\n", average);
         } else {
             System.out.println("No survey responses collected.");
         }
-        
+
         System.out.println("Thank you for participating! ");
         scanner.close();
     }
@@ -969,9 +969,9 @@ public class LibraryTracker {
         int bookCount = 0;
         boolean isRunning = true;
         int choice;
-        
+
         System.out.println("=== Library Book Tracker ===");
-        
+
         while (isRunning) {
             System.out.println("\n1. Add Book");
             System.out.println("2. List All Books");
@@ -981,13 +981,13 @@ public class LibraryTracker {
             System.out.print("Choose option (1-5): ");
             choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline after nextInt()
-            
+
             switch (choice) {
                 case 1: {
                     if (bookCount < 20) {
                         System.out.print("Enter book title: ");
                         String bookTitle = scanner.nextLine();
-                        
+
                         if (!bookTitle.isEmpty()) {
                             books[bookCount] = bookTitle;
                             bookCount++;
@@ -1014,7 +1014,7 @@ public class LibraryTracker {
                     if (bookCount > 0) {
                         System.out.print("Enter search term: ");
                         String searchTerm = scanner.nextLine();
-                        
+
                         int foundCount = 0;
                         for (int i = 0; i < bookCount; i++) {
                             if (books[i].toLowerCase().contains(searchTerm.toLowerCase())) {
@@ -1022,7 +1022,7 @@ public class LibraryTracker {
                                 foundCount++;
                             }
                         }
-                        
+
                         if (foundCount == 0) {
                             System.out.println("ℹ No books found matching '" + searchTerm + "'");
                         }
@@ -1036,15 +1036,15 @@ public class LibraryTracker {
                         System.out.print("Enter book number to remove (1-" + bookCount + "): ");
                         int bookNumber = scanner.nextInt();
                         scanner.nextLine(); // Consume newline
-                        
+
                         if (bookNumber >= 1 && bookNumber <= bookCount) {
                             System.out.println("Removing: '" + books[bookNumber - 1] + "'");
-                            
+
                             // Shift remaining books left
                             for (int i = bookNumber - 1; i < bookCount - 1; i++) {
                                 books[i] = books[i + 1];
                             }
-                            
+
                             bookCount--;
                             System.out.println(" Book removed successfully!");
                         } else {
@@ -1063,7 +1063,7 @@ public class LibraryTracker {
                     break;
             }
         }
-        
+
         System.out.println("Thank you for using Library Book Tracker! ");
         scanner.close();
     }
@@ -1119,7 +1119,7 @@ public static int getValidNumber(Scanner scanner, int min, int max) {
             System.out.printf("Enter number (%d-%d): ", min, max);
             int value = scanner.nextInt();
             scanner.nextLine(); // Clear buffer
-            
+
             if (value >= min && value <= max) {
                 return value;
             }
@@ -1138,6 +1138,6 @@ public static int getValidNumber(Scanner scanner, int min, int max) {
 
 ---
 
- **Excellent! You've mastered user interaction and I/O operations!** 
+ **Excellent! You've mastered user interaction and I/O operations!**
 
 *Programs that talk to users are much more useful. Next: Decision-making in pseudocode! ��*

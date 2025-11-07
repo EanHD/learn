@@ -524,7 +524,7 @@ Else:
 
 ---
 
- **Congratulations! You've built intelligent decision systems!** 
+ **Congratulations! You've built intelligent decision systems!**
 
 *Next: Repetitive problems with loop-based algorithms and patterns! *
 

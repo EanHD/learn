@@ -34,7 +34,7 @@ Time to think like a programmer! You'll analyze real problems and design solutio
 Create a temperature conversion tool that allows users to convert between Celsius and Fahrenheit. The program should provide a simple menu interface where users can choose the conversion direction and input the temperature value.
 
 **Your Process:**
-1. **Understand**: 
+1. **Understand**:
    - Input: Temperature value and conversion choice (C→F or F→C)
    - Output: Converted temperature value
    - Formulas: C to F: (C * 9/5) + 32, F to C: (F - 32) * 5/9
@@ -174,7 +174,7 @@ BEGIN
     3. Get temperature value from user
     4. IF choice is 1 (C to F)
         THEN apply formula: (C * 9/5) + 32
-    5. ELSE IF choice is 2 (F to C) 
+    5. ELSE IF choice is 2 (F to C)
         THEN apply formula: (F - 32) * 5/9
     6. Display result
 END
@@ -187,21 +187,21 @@ const std = @import("std");
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
     const stdin = std.io.getStdIn().reader();
-    
+
     try stdout.print("Temperature Converter\\n", .{});
     try stdout.print("1. Celsius to Fahrenheit\\n", .{});
     try stdout.print("2. Fahrenheit to Celsius\\n", .{});
     try stdout.print("Choose (1 or 2): ", .{});
-    
+
     var buf: [10]u8 = undefined;
     _ = try stdin.readUntilDelimiterOrEof(&buf, '\n');
-    
+
     const choice = std.fmt.parseInt(u8, std.mem.trimRight(u8, &buf, "\n\r"), 10) catch 0;
-    
+
     try stdout.print("Enter temperature: ", .{});
     _ = try stdin.readUntilDelimiterOrEof(&buf, '\n');
     const temp = std.fmt.parseFloat(f64, std.mem.trimRight(u8, &buf, "\n\r")) catch 0.0;
-    
+
     var result: f64 = 0.0;
     if (choice == 1) {
         result = (temp * 9.0 / 5.0) + 32.0;

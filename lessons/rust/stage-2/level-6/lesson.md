@@ -46,28 +46,28 @@ Hello, World!
 ```
 START PROGRAM
     DISPLAY "Countdown Program"
-    
+
     DECLARE counter AS NUMBER
     SET counter TO 5
-    
+
     WHILE counter > 0 DO
         DISPLAY "Count: " + counter
         SET counter TO counter - 1
     END WHILE
-    
+
     DISPLAY "Blast off!"
-    
+
     DISPLAY "Even numbers from 1 to 10:"
     FOR i FROM 1 TO 10 DO
         IF i % 2 == 0 THEN
             DISPLAY i
         END IF
     END FOR
-    
+
     DISPLAY "Loop with break:"
     DECLARE num AS NUMBER
     SET num TO 1
-    
+
     WHILE TRUE DO
         DISPLAY "Number: " + num
         IF num >= 4 THEN
@@ -172,28 +172,28 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 ```
 START PROGRAM
     DISPLAY "Countdown Program"
-    
+
     DECLARE counter AS NUMBER
     SET counter TO 5
-    
+
     WHILE counter > 0 DO
         DISPLAY "Count: " + counter
         SET counter TO counter - 1
     END WHILE
-    
+
     DISPLAY "Blast off!"
-    
+
     DISPLAY "Even numbers from 1 to 10:"
     FOR i FROM 1 TO 10 DO
         IF i % 2 == 0 THEN
             DISPLAY i
         END IF
     END FOR
-    
+
     DISPLAY "Loop with break:"
     DECLARE num AS NUMBER
     SET num TO 1
-    
+
     WHILE TRUE DO
         DISPLAY "Number: " + num
         IF num >= 4 THEN
@@ -208,26 +208,26 @@ END PROGRAM
 ```
 fn main() {
     println!("Countdown Program");
-    
+
     let mut counter = 5;
-    
+
     while counter > 0 {
         println!("Count: {}", counter);
         counter = counter - 1;
     }
-    
+
     println!("Blast off!");
-    
+
     println!("Even numbers from 1 to 10:");
     for i in 1..=10 {
         if i % 2 == 0 {
             println!("{}", i);
         }
     }
-    
+
     println!("Loop with break:");
     let mut num = 1;
-    
+
     loop {
         println!("Number: {}", num);
         if num >= 4 {
@@ -267,7 +267,7 @@ fn main() {
 
 ---
 
- **Fantastic! You can handle looping pseudocode!** 
+ **Fantastic! You can handle looping pseudocode!**
 
 *Next: Function Pseudocode!*
 
@@ -287,42 +287,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```rs
-fn main() {
-    println!("Hello, World!");
-}
-
-```rs
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard rust conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

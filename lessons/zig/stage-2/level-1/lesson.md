@@ -35,13 +35,13 @@ ALGORITHM: Greeting Generator
 
 BEGIN
     INPUT: user's name (string)
-    
+
     PROCESSING:
         1. Create a personalized greeting message
-        2. Append the current date to the message  
+        2. Append the current date to the message
         3. Calculate the length of the greeting
-    
-    OUTPUT: 
+
+    OUTPUT:
         - Display the personalized greeting
         - Show the length of the message
         - Print a border of asterisks matching the greeting length
@@ -177,21 +177,21 @@ const std = @import("std");
 
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
-    
+
     // Sample name (in a complete program, you'd get user input)
     const name = "Alex";
-    
+
     // Create personalized greeting
     var greeting = try std.fmt.allocPrint(std.heap.page_allocator, "Hello, {s}! Welcome!", .{name});
     defer std.heap.page_allocator.free(greeting);
-    
+
     // Calculate length
     const greeting_length = greeting.len;
-    
+
     // Print greeting
     try stdout.print("{s}\n", .{greeting});
     try stdout.print("Message length: {d} characters\n", .{greeting_length});
-    
+
     // Print border of asterisks
     var i: usize = 0;
     while (i < greeting_length) : (i += 1) {

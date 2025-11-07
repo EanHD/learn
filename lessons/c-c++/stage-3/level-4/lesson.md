@@ -507,7 +507,7 @@ While user hasn't chosen exit:
 
 ---
 
- **Congratulations! You've created interactive user interfaces!** 
+ **Congratulations! You've created interactive user interfaces!**
 
 *Next: Decision-based problems with rule engines and eligibility systems! *
 

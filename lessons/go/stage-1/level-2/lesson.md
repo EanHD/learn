@@ -35,25 +35,25 @@ func main() {
     var name string = "Alex"
     var city string = "New York"
     var hobby string = "programming"
-    
+
     // You can also use short declaration (available inside functions only)
     country := "USA"
-    
+
     // Number variables (integers)
     var age int = 25
     var height int = 175
     var score int = 100
-    
+
     // Number variables (floating point)
     var temperature float64 = 98.6
     var price float64 = 29.99
     var weight float64 = 150.5
-    
+
     // Boolean variables (true/false)
     var isStudent bool = true
     var isEmployed bool = false
     var isHappy bool = true
-    
+
     // Print all the variables
     fmt.Println("=== Personal Info ===")
     fmt.Println("Name: " + name)
@@ -61,36 +61,36 @@ func main() {
     fmt.Println("Hobby: " + hobby)
     fmt.Println("Country: " + country)
     fmt.Println()
-    
+
     fmt.Println("=== Measurements ===")
     fmt.Println("Age:", age, "years old")
     fmt.Println("Height:", height, "cm")
     fmt.Println("Score:", score, "points")
     fmt.Println()
-    
+
     fmt.Println("=== Decimal Measurements ===")
     fmt.Println("Temperature:", temperature, "degrees")
     fmt.Println("Price: $", price)
     fmt.Println("Weight:", weight, "lbs")
     fmt.Println()
-    
+
     fmt.Println("=== Status ===")
     fmt.Println("Student:", isStudent)
     fmt.Println("Employed:", isEmployed)
     fmt.Println("Happy:", isHappy)
-    
+
     // Multiple variable declarations
     var (
         firstName string = "John"
         lastName  string = "Doe"
         age2      int    = 35
     )
-    
+
     fmt.Println()
     fmt.Println("=== Multiple Declaration Example ===")
     fmt.Println("Full Name:", firstName, lastName)
     fmt.Println("Age:", age2)
-    
+
     // Go's static typing prevents type mismatches
     // The following would cause an error:
     // var number int = "this won't work" // Type mismatch error
@@ -336,31 +336,31 @@ func main() {
     var currentYear int = 2025
     var birthYear int = 2000
     var calculatedAge int = currentYear - birthYear
-    
+
     fmt.Println("Born in", birthYear, ", now it's", currentYear)
     fmt.Println("Calculated age:", calculatedAge, "years old")
-    
+
     // Working with different number types
     var integerNum int = 10
     var floatNum float64 = 3.5
     var result float64 = float64(integerNum) + floatNum  // Type conversion needed
-    
+
     fmt.Println("Integer:", integerNum)
     fmt.Println("Float:", floatNum)
     fmt.Println("Result:", result)
-    
+
     // Working with strings and characters
     var firstName string = "Jane"
     var lastName string = "Smith"
     var fullName string = firstName + " " + lastName
-    
+
     fmt.Println("Full name:", fullName)
-    
+
     // Using different boolean operations
     var isStudent bool = true
     var isEmployed bool = false
     var isRetired bool = false
-    
+
     fmt.Println("Is student AND not employed:", isStudent && !isEmployed)
     fmt.Println("Is employed OR retired:", isEmployed || isRetired)
 }
@@ -368,7 +368,7 @@ func main() {
 
 ---
 
- **Excellent work! You now understand variables - the foundation of all programming!** 
+ **Excellent work! You now understand variables - the foundation of all programming!**
 
 *Ready for the next challenge? Let's do some math with our variables!*
 
@@ -395,46 +395,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello, World!")
-}
-
-```
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard go conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

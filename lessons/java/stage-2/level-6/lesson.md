@@ -545,21 +545,21 @@ public class SalesAnalyzer {
         double[] sales = new double[30];
         int salesCount = 0;
         double totalSales = 0.0, highestSale = 0.0, lowestSale = 999999.0;
-        
+
         System.out.println("=== Sales Data Analyzer ===");
         System.out.println("Enter daily sales (enter -1 to finish):");
-        
+
         while (salesCount < 30) {
             System.out.print("Day " + (salesCount + 1) + ": $");
             double dailySale = scanner.nextDouble();
-            
+
             if (dailySale == -1) {
                 break;
             } else if (dailySale >= 0) {
                 sales[salesCount] = dailySale;
                 totalSales += dailySale;
                 salesCount++;
-                
+
                 if (dailySale > highestSale) {
                     highestSale = dailySale;
                 }
@@ -570,17 +570,17 @@ public class SalesAnalyzer {
                 System.out.println(" Invalid sale amount! Please enter positive number.");
             }
         }
-        
+
         if (salesCount > 0) {
             double averageSale = totalSales / salesCount;
-            
+
             System.out.println("\n=== Sales Summary ===");
             System.out.println("Total days: " + salesCount);
             System.out.printf("Total sales: $%.2f\n", totalSales);
             System.out.printf("Average daily sales: $%.2f\n", averageSale);
             System.out.printf("Highest sale: $%.2f\n", highestSale);
             System.out.printf("Lowest sale: $%.2f\n", lowestSale);
-            
+
             System.out.println("\n=== Daily Breakdown ===");
             for (int i = 0; i < salesCount; i++) {
                 System.out.printf("Day %d: $%.2f\n", i + 1, sales[i]);
@@ -588,7 +588,7 @@ public class SalesAnalyzer {
         } else {
             System.out.println("No sales data entered.");
         }
-        
+
         scanner.close();
     }
 }
@@ -622,18 +622,18 @@ public class AttendanceTracker {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int numStudents, presentCount = 0;
-        
+
         System.out.println("=== Class Attendance Tracker ===");
         System.out.print("Enter number of students: ");
         numStudents = scanner.nextInt();
         scanner.nextLine(); // Consume newline
-        
+
         boolean[] attendance = new boolean[numStudents];
-        
+
         for (int student = 1; student <= numStudents; student++) {
             System.out.print("Student " + student + " present? (y/n): ");
             String attendanceStatus = scanner.nextLine();
-            
+
             if (attendanceStatus.equalsIgnoreCase("y")) {
                 attendance[student - 1] = true;
                 presentCount++;
@@ -641,15 +641,15 @@ public class AttendanceTracker {
                 attendance[student - 1] = false;
             }
         }
-        
+
         double attendancePercentage = (double) presentCount / numStudents * 100;
-        
+
         System.out.println("\n=== Attendance Report ===");
         System.out.println("Total students: " + numStudents);
         System.out.println("Present: " + presentCount);
         System.out.println("Absent: " + (numStudents - presentCount));
         System.out.printf("Attendance rate: %.1f%%\n", attendancePercentage);
-        
+
         if (attendancePercentage >= 90) {
             System.out.println(" Excellent attendance!");
         } else if (attendancePercentage >= 75) {
@@ -657,7 +657,7 @@ public class AttendanceTracker {
         } else {
             System.out.println(" Poor attendance - follow up required");
         }
-        
+
         System.out.println("\n=== Individual Status ===");
         for (int student = 1; student <= numStudents; student++) {
             if (attendance[student - 1]) {
@@ -666,7 +666,7 @@ public class AttendanceTracker {
                 System.out.println("Student " + student + ":  Absent");
             }
         }
-        
+
         scanner.close();
     }
 }
@@ -703,9 +703,9 @@ public class InventoryManager {
         int itemCount = 0;
         boolean isRunning = true;
         int choice;
-        
+
         System.out.println("=== Inventory Management System ===");
-        
+
         while (isRunning) {
             System.out.println("\n1. Add Item");
             System.out.println("2. Update Quantity");
@@ -715,7 +715,7 @@ public class InventoryManager {
             System.out.print("Choose option (1-5): ");
             choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
-            
+
             switch (choice) {
                 case 1: {
                     if (itemCount < 50) {
@@ -724,7 +724,7 @@ public class InventoryManager {
                         System.out.print("Enter initial quantity: ");
                         int newQuantity = scanner.nextInt();
                         scanner.nextLine(); // Consume newline
-                        
+
                         if (newQuantity >= 0) {
                             itemNames[itemCount] = newItemName;
                             itemQuantities[itemCount] = newQuantity;
@@ -742,7 +742,7 @@ public class InventoryManager {
                     if (itemCount > 0) {
                         System.out.print("Enter item name to update: ");
                         String searchName = scanner.nextLine();
-                        
+
                         boolean found = false;
                         for (int i = 0; i < itemCount; i++) {
                             if (itemNames[i].equalsIgnoreCase(searchName)) {
@@ -750,7 +750,7 @@ public class InventoryManager {
                                 System.out.print("Enter new quantity: ");
                                 int newQuantity = scanner.nextInt();
                                 scanner.nextLine(); // Consume newline
-                                
+
                                 if (newQuantity >= 0) {
                                     itemQuantities[i] = newQuantity;
                                     System.out.println(" Quantity updated!");
@@ -761,7 +761,7 @@ public class InventoryManager {
                                 break;
                             }
                         }
-                        
+
                         if (!found) {
                             System.out.println(" Item not found!");
                         }
@@ -784,14 +784,14 @@ public class InventoryManager {
                     if (itemCount > 0) {
                         System.out.println("=== Low Stock Alert (≤5 units) ===");
                         int lowStockCount = 0;
-                        
+
                         for (int i = 0; i < itemCount; i++) {
                             if (itemQuantities[i] <= 5) {
                                 System.out.println(itemNames[i] + ": " + itemQuantities[i] + " units ");
                                 lowStockCount++;
                             }
                         }
-                        
+
                         if (lowStockCount == 0) {
                             System.out.println(" All items have sufficient stock.");
                         }
@@ -807,7 +807,7 @@ public class InventoryManager {
                     break;
             }
         }
-        
+
         System.out.println("Thank you for using Inventory Management System! ");
         scanner.close();
     }
@@ -843,50 +843,50 @@ public class GradeBook {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int numStudents, numAssignments;
-        
+
         System.out.println("=== Grade Book Calculator ===");
         System.out.print("Enter number of students: ");
         numStudents = scanner.nextInt();
         System.out.print("Enter number of assignments: ");
         numAssignments = scanner.nextInt();
         scanner.nextLine(); // Consume newline
-        
+
         String[] studentNames = new String[numStudents];
         double[][] grades = new double[numStudents][numAssignments];
-        
+
         // Input student data
         for (int student = 0; student < numStudents; student++) {
             System.out.print("Enter name for student " + (student + 1) + ": ");
             studentNames[student] = scanner.nextLine();
-            
+
             double studentTotal = 0.0;
             for (int assignment = 0; assignment < numAssignments; assignment++) {
-                System.out.print("Enter grade for " + studentNames[student] + 
+                System.out.print("Enter grade for " + studentNames[student] +
                                " assignment " + (assignment + 1) + ": ");
                 grades[student][assignment] = scanner.nextDouble();
                 studentTotal += grades[student][assignment];
             }
             scanner.nextLine(); // Consume newline after grades
-            
+
             double studentAverage = studentTotal / numAssignments;
             System.out.printf("%s's average: %.1f\n", studentNames[student], studentAverage);
         }
-        
+
         // Calculate class statistics
         System.out.println("\n=== Class Statistics ===");
         double classTotal = 0.0;
         double highestAverage = 0.0;
         double lowestAverage = 100.0;
-        
+
         for (int student = 0; student < numStudents; student++) {
             double studentTotal = 0.0;
             for (int assignment = 0; assignment < numAssignments; assignment++) {
                 studentTotal += grades[student][assignment];
             }
-            
+
             double studentAverage = studentTotal / numAssignments;
             classTotal += studentAverage;
-            
+
             if (studentAverage > highestAverage) {
                 highestAverage = studentAverage;
             }
@@ -894,37 +894,37 @@ public class GradeBook {
                 lowestAverage = studentAverage;
             }
         }
-        
+
         double classAverage = classTotal / numStudents;
         System.out.printf("Class average: %.1f\n", classAverage);
         System.out.printf("Highest student average: %.1f\n", highestAverage);
         System.out.printf("Lowest student average: %.1f\n", lowestAverage);
-        
+
         // Grade distribution
         System.out.println("\n=== Grade Distribution ===");
         int[] gradeRanges = new int[5]; // A, B, C, D, F
-        
+
         for (int student = 0; student < numStudents; student++) {
             double studentTotal = 0.0;
             for (int assignment = 0; assignment < numAssignments; assignment++) {
                 studentTotal += grades[student][assignment];
             }
-            
+
             double studentAverage = studentTotal / numAssignments;
-            
+
             if (studentAverage >= 90) gradeRanges[0]++;
             else if (studentAverage >= 80) gradeRanges[1]++;
             else if (studentAverage >= 70) gradeRanges[2]++;
             else if (studentAverage >= 60) gradeRanges[3]++;
             else gradeRanges[4]++;
         }
-        
+
         System.out.println("A grades: " + gradeRanges[0]);
         System.out.println("B grades: " + gradeRanges[1]);
         System.out.println("C grades: " + gradeRanges[2]);
         System.out.println("D grades: " + gradeRanges[3]);
         System.out.println("F grades: " + gradeRanges[4]);
-        
+
         scanner.close();
     }
 }
@@ -967,36 +967,36 @@ public class PasswordGenerator {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int passwordLength;
-        
+
         System.out.println("=== Password Generator ===");
         System.out.print("Enter desired password length (8-20): ");
         passwordLength = scanner.nextInt();
         scanner.nextLine(); // Consume newline
-        
+
         while (passwordLength < 8 || passwordLength > 20) {
             System.out.println(" Length must be between 8-20 characters!");
             System.out.print("Enter desired password length (8-20): ");
             passwordLength = scanner.nextInt();
             scanner.nextLine();
         }
-        
+
         System.out.print("Include uppercase letters? (y/n): ");
         String includeUpper = scanner.nextLine();
         System.out.print("Include numbers? (y/n): ");
         String includeNumbers = scanner.nextLine();
         System.out.print("Include special characters? (y/n): ");
         String includeSpecial = scanner.nextLine();
-        
+
         // Character sets
         String lowercase = "abcdefghijklmnopqrstuvwxyz";
         String uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String numbers = "0123456789";
         String special = "!@#$%^&*()_+-=[]{}|;:,.<>?";
-        
+
         // Build available character sets
         ArrayList<String> charSets = new ArrayList<>();
         charSets.add(lowercase); // Always include lowercase
-        
+
         if (includeUpper.equalsIgnoreCase("y")) {
             charSets.add(uppercase);
         }
@@ -1006,19 +1006,19 @@ public class PasswordGenerator {
         if (includeSpecial.equalsIgnoreCase("y")) {
             charSets.add(special);
         }
-        
+
         // Generate password
         StringBuilder password = new StringBuilder();
         for (int i = 0; i < passwordLength; i++) {
             // Pick random character set
             int setIndex = random.nextInt(charSets.size());
             String selectedSet = charSets.get(setIndex);
-            
+
             // Pick random character from set
             int charIndex = random.nextInt(selectedSet.length());
             password.append(selectedSet.charAt(charIndex));
         }
-        
+
         System.out.println("Generated Password: " + password.toString());
         System.out.println("Password length: " + passwordLength);
         System.out.println("Character sets used:");
@@ -1032,7 +1032,7 @@ public class PasswordGenerator {
             System.out.println(" Special characters");
         }
         System.out.println(" Lowercase letters (always included)");
-        
+
         scanner.close();
     }
 }
@@ -1076,9 +1076,9 @@ public class VotingSystem {
         int totalVotes = 0;
         boolean votingActive = true;
         int choice;
-        
+
         System.out.println("=== Election Voting System ===");
-        
+
         while (votingActive) {
             System.out.println("\n=== Vote Menu ===");
             System.out.println("Candidates:");
@@ -1089,7 +1089,7 @@ public class VotingSystem {
             System.out.println("5. End Voting");
             System.out.print("Enter your choice (1-5): ");
             choice = scanner.nextInt();
-            
+
             if (choice >= 1 && choice <= 3) {
                 votes[choice - 1]++;
                 totalVotes++;
@@ -1097,11 +1097,11 @@ public class VotingSystem {
             } else if (choice == 4) {
                 System.out.println("=== Current Results ===");
                 System.out.println("Total votes: " + totalVotes);
-                
+
                 if (totalVotes > 0) {
                     for (int i = 0; i < 3; i++) {
                         double percentage = (double) votes[i] / totalVotes * 100;
-                        System.out.printf("%s: %d votes (%.1f%%)\n", 
+                        System.out.printf("%s: %d votes (%.1f%%)\n",
                                         candidateNames[i], votes[i], percentage);
                     }
                 } else {
@@ -1113,34 +1113,34 @@ public class VotingSystem {
                 System.out.println(" Invalid choice!");
             }
         }
-        
+
         if (totalVotes > 0) {
             System.out.println("\n=== Final Election Results ===");
-            
+
             // Find winner
             int winnerIndex = 0;
             int maxVotes = votes[0];
-            
+
             for (int i = 1; i < 3; i++) {
                 if (votes[i] > maxVotes) {
                     maxVotes = votes[i];
                     winnerIndex = i;
                 }
             }
-            
-            System.out.println(" Winner: " + candidateNames[winnerIndex] + 
+
+            System.out.println(" Winner: " + candidateNames[winnerIndex] +
                              " with " + maxVotes + " votes!");
             System.out.println("Total votes cast: " + totalVotes);
-            
+
             for (int i = 0; i < 3; i++) {
                 double percentage = (double) votes[i] / totalVotes * 100;
-                System.out.printf("%s: %d votes (%.1f%%)\n", 
+                System.out.printf("%s: %d votes (%.1f%%)\n",
                                 candidateNames[i], votes[i], percentage);
             }
         } else {
             System.out.println("No votes were cast.");
         }
-        
+
         scanner.close();
     }
 }
@@ -1216,6 +1216,6 @@ for (int i = 0; i < studentNames.length; i++) {
 
 ---
 
- **Fantastic! You've mastered loop-based algorithms!** 
+ **Fantastic! You've mastered loop-based algorithms!**
 
 *Loops are the engines of computation. Next: Function pseudocode for modular programming! *

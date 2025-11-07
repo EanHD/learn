@@ -101,9 +101,7 @@ Create a program that determines if a given number is prime. A prime number is a
 ```
 Enter a number: 17
 17 is a prime number.
-```
 
-```
 Enter a number: 15
 15 is not a prime number.
 ```
@@ -423,7 +421,7 @@ Algorithm: Fibonacci Calculator
 
 ---
 
- **Congratulations! You've mastered mathematical algorithms!** 
+ **Congratulations! You've mastered mathematical algorithms!**
 
 *Next: Interactive problems with user interfaces and menus! *
 

@@ -204,16 +204,16 @@ typedef struct {
     double monthly_spending_trend;
     double income_stability_index;
     char spending_personality[50];
-    
+
     // Predictive Modeling
     double next_month_prediction;
     double savings_potential;
     char risk_profile[20];
-    
+
     // Anomaly Detection
     Transaction anomalies[100];
     int anomaly_count;
-    
+
     // Insights
     char top_insights[10][200];
     int insight_count;
@@ -223,11 +223,11 @@ typedef struct {
     // Automated Tasks
     ScheduledTask tasks[20];
     int task_count;
-    
+
     // Alert Rules
     AlertRule alerts[50];
     int alert_count;
-    
+
     // Recurring Transactions
     RecurringTransaction recurring[100];
     int recurring_count;
@@ -340,7 +340,7 @@ int update_account_balance(FinanceData *data, int account_id, double amount, Tra
 void display_accounts(const FinanceData *data);
 
 // Transaction management
-int add_transaction(FinanceData *data, const char *date, const char *description, 
+int add_transaction(FinanceData *data, const char *date, const char *description,
                    TransactionType type, double amount, int account_id, int category_id);
 void display_transactions(const FinanceData *data, int limit);
 double calculate_account_balance(const FinanceData *data, int account_id);
@@ -356,7 +356,7 @@ void update_goal_progress(FinanceData *data, int goal_id, double amount);
 void display_goals(const FinanceData *data);
 
 // Investment tracking
-int add_investment(FinanceData *data, const char *symbol, const char *name, 
+int add_investment(FinanceData *data, const char *symbol, const char *name,
                   double shares, double avg_cost, double current_price);
 void update_investment_prices(FinanceData *data);
 void display_portfolio(const FinanceData *data);
@@ -443,7 +443,7 @@ void display_accounts(const FinanceData *data) {
 
         char balance_str[20];
         format_currency(balance_str, acc->balance);
-        
+
         printf("%-3d %-20s %-12s %-15s %-15s\n",
                acc->id, acc->name, type_str, balance_str, acc->institution);
     }
@@ -584,7 +584,7 @@ void display_budget_status(const FinanceData *data) {
     for (int i = 0; i < data->budget_count; i++) {
         const Budget *budget = &data->budgets[i];
         double percent_used = calculate_percentage(budget->spent_amount, budget->budgeted_amount);
-        
+
         char allocated_str[20], spent_str[20], remaining_str[20];
         format_currency(allocated_str, budget->budgeted_amount);
         format_currency(spent_str, budget->spent_amount);
@@ -628,7 +628,7 @@ void update_goal_progress(FinanceData *data, int goal_id, double amount) {
             data->goals[i].current_amount += amount;
             data->goals[i].progress_percentage = calculate_percentage(
                 data->goals[i].current_amount, data->goals[i].target_amount);
-            
+
             if (data->goals[i].current_amount >= data->goals[i].target_amount && !data->goals[i].achieved) {
                 data->goals[i].achieved = 1;
                 get_current_date(data->goals[i].achieved_date);
@@ -647,7 +647,7 @@ void display_goals(const FinanceData *data) {
 
     printf("\n FINANCIAL GOALS\n");
     printf("═══════════════════════════════════════════════════════════════════════════════\n");
-    printf("%-25s %-12s %-12s %-10s %-12s %-10s\n", 
+    printf("%-25s %-12s %-12s %-10s %-12s %-10s\n",
            "Goal", "Target", "Current", "Progress", "Monthly", "Status");
     printf("───────────────────────────────────────────────────────────────────────────────\n");
 
@@ -661,7 +661,7 @@ void display_goals(const FinanceData *data) {
         const char *status = goal->achieved ? " Achieved" : "⏳ In Progress";
 
         printf("%-25s %-12s %-12s %6.1f%%    %-12s %-10s\n",
-               goal->name, target_str, current_str, goal->progress_percentage, 
+               goal->name, target_str, current_str, goal->progress_percentage,
                monthly_str, status);
     }
 }
@@ -716,7 +716,7 @@ void display_portfolio(const FinanceData *data) {
         format_currency(gain_str, inv->gain_loss);
 
         printf("%-8s %-20s %6.2f   %-12s %-12s %-10s %-10s\n",
-               inv->symbol, inv->name, inv->shares_owned, cost_str, price_str, 
+               inv->symbol, inv->name, inv->shares_owned, cost_str, price_str,
                value_str, gain_str);
 
         total_value += inv->current_value;
@@ -802,7 +802,7 @@ void generate_financial_report(const FinanceData *data) {
         }
         fprintf(report, "Total Portfolio Value: $%.2f\n", total_portfolio_value);
         fprintf(report, "Total Gain/Loss: $%.2f\n", total_portfolio_gain);
-        fprintf(report, "Portfolio Return: %.2f%%\n", 
+        fprintf(report, "Portfolio Return: %.2f%%\n",
                calculate_percentage(total_portfolio_gain, total_portfolio_value - total_portfolio_gain));
     }
 
@@ -826,7 +826,7 @@ void analyze_spending_patterns(const FinanceData *data) {
             strncpy(month_str, trans->date + 5, 2);
             month_str[2] = '\0';
             int month = atoi(month_str) - 1; // 0-based
-            
+
             if (month >= 0 && month < 12) {
                 monthly_totals[month] += trans->amount;
                 transaction_counts[month]++;
@@ -837,10 +837,10 @@ void analyze_spending_patterns(const FinanceData *data) {
     printf("Monthly Spending Summary:\n");
     const char *months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
                            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
-    
+
     for (int i = 0; i < 12; i++) {
         if (transaction_counts[i] > 0) {
-            printf("%s: $%.2f (%d transactions)\n", 
+            printf("%s: $%.2f (%d transactions)\n",
                    months[i], monthly_totals[i], transaction_counts[i]);
         }
     }
@@ -854,11 +854,11 @@ void analyze_spending_patterns(const FinanceData *data) {
             months_with_data++;
         }
     }
-    
+
     if (months_with_data > 0) {
         avg_monthly /= months_with_data;
         printf("\nAverage Monthly Spending: $%.2f\n", avg_monthly);
-        
+
         // Simple personality analysis
         if (avg_monthly < 1000) {
             printf(" Spending Personality: Conservative spender\n");
@@ -887,16 +887,16 @@ int save_financial_data(const FinanceData *data) {
 
     // Write accounts
     fwrite(data->accounts, sizeof(Account), data->account_count, file);
-    
+
     // Write transactions
     fwrite(data->transactions, sizeof(Transaction), data->transaction_count, file);
-    
+
     // Write budgets
     fwrite(data->budgets, sizeof(Budget), data->budget_count, file);
-    
+
     // Write goals
     fwrite(data->goals, sizeof(Goal), data->goal_count, file);
-    
+
     // Write investments
     fwrite(data->investments, sizeof(Investment), data->investment_count, file);
 
@@ -921,16 +921,16 @@ int load_financial_data(FinanceData *data) {
 
     // Read accounts
     fread(data->accounts, sizeof(Account), data->account_count, file);
-    
+
     // Read transactions
     fread(data->transactions, sizeof(Transaction), data->transaction_count, file);
-    
+
     // Read budgets
     fread(data->budgets, sizeof(Budget), data->budget_count, file);
-    
+
     // Read goals
     fread(data->goals, sizeof(Goal), data->goal_count, file);
-    
+
     // Read investments
     fread(data->investments, sizeof(Investment), data->investment_count, file);
 
@@ -986,11 +986,11 @@ void display_dashboard(const FinanceData *data) {
     // Quick insights
     printf("\n QUICK INSIGHTS\n");
     printf("═══════════════════\n");
-    
+
     if (data->budget_count > 0) {
         int budgets_on_track = 0;
         for (int i = 0; i < data->budget_count; i++) {
-            double utilization = calculate_percentage(data->budgets[i].spent_amount, 
+            double utilization = calculate_percentage(data->budgets[i].spent_amount,
                                                     data->budgets[i].budgeted_amount);
             if (utilization <= 100.0) budgets_on_track++;
         }
@@ -1041,7 +1041,7 @@ int validate_date(const char *date) {
     // Basic date validation (YYYY-MM-DD format)
     if (strlen(date) != 10) return 0;
     if (date[4] != '-' || date[7] != '-') return 0;
-    
+
     // Could add more sophisticated validation
     return 1;
 }
@@ -1062,7 +1062,7 @@ void format_currency(char *buffer, double amount) {
 int main() {
     FinanceData finance_data;
     strcpy(finance_data.data_file, "finance_data.dat");
-    
+
     // Initialize data
     finance_data.account_count = 0;
     finance_data.transaction_count = 0;
@@ -1100,12 +1100,12 @@ int main() {
                 if (acc_choice == 1) {
                     char name[100], institution[100];
                     int type_choice;
-                    
+
                     printf("Enter account name: ");
                     scanf(" %[^\n]", name);
                     printf("Account type (1-Checking, 2-Savings, 3-Credit Card, 4-Investment, 5-Loan, 6-Retirement): ");
                     scanf("%d", &type_choice);
-                    
+
                     AccountType type;
                     switch (type_choice) {
                         case 1: type = CHECKING; break;
@@ -1116,15 +1116,15 @@ int main() {
                         case 6: type = RETIREMENT; break;
                         default: printf("Invalid type!\n"); continue;
                     }
-                    
+
                     printf("Enter institution: ");
                     scanf(" %[^\n]", institution);
-                    
+
                     add_account(&finance_data, name, type, institution);
                 } else if (acc_choice == 2) {
                     display_accounts(&finance_data);
                 }
-                
+
                 printf("\nPress Enter to continue...");
                 getchar(); getchar();
                 break;
@@ -1141,25 +1141,25 @@ int main() {
                     char date[11], description[200];
                     int type_choice, account_id, category_id;
                     double amount;
-                    
+
                     printf("Enter date (YYYY-MM-DD): ");
                     scanf("%s", date);
                     printf("Enter description: ");
                     scanf(" %[^\n]", description);
                     printf("Transaction type (1-Income, 2-Expense, 3-Transfer): ");
                     scanf("%d", &type_choice);
-                    
-                    TransactionType type = (type_choice == 1) ? INCOME : 
+
+                    TransactionType type = (type_choice == 1) ? INCOME :
                                           (type_choice == 2) ? EXPENSE : TRANSFER;
-                    
+
                     printf("Enter amount: $");
                     scanf("%lf", &amount);
                     printf("Enter account ID: ");
                     scanf("%d", &account_id);
-                    
+
                     // For simplicity, use category_id = 1 (would have category management)
                     category_id = 1;
-                    
+
                     add_transaction(&finance_data, date, description, type, amount, account_id, category_id);
                 } else if (trans_choice == 2) {
                     printf("Enter number of transactions to view (0 for all): ");
@@ -1167,7 +1167,7 @@ int main() {
                     scanf("%d", &limit);
                     display_transactions(&finance_data, limit);
                 }
-                
+
                 printf("\nPress Enter to continue...");
                 getchar(); getchar();
                 break;
@@ -1184,23 +1184,23 @@ int main() {
                     char name[100], period[20];
                     double amount;
                     int category_id;
-                    
+
                     printf("Enter budget name: ");
                     scanf(" %[^\n]", name);
                     printf("Enter budgeted amount: $");
                     scanf("%lf", &amount);
                     printf("Enter period (Monthly/Weekly): ");
                     scanf("%s", period);
-                    
+
                     // For simplicity, use category_id = 1
                     category_id = 1;
-                    
+
                     create_budget(&finance_data, name, amount, period, category_id);
                 } else if (budget_choice == 2) {
                     update_budget_spending(&finance_data);
                     display_budget_status(&finance_data);
                 }
-                
+
                 printf("\nPress Enter to continue...");
                 getchar(); getchar();
                 break;
@@ -1217,7 +1217,7 @@ int main() {
                 if (goal_choice == 1) {
                     char name[200], target_date[11];
                     double target, monthly;
-                    
+
                     printf("Enter goal name: ");
                     scanf(" %[^\n]", name);
                     printf("Enter target amount: $");
@@ -1226,7 +1226,7 @@ int main() {
                     scanf("%s", target_date);
                     printf("Enter monthly contribution: $");
                     scanf("%lf", &monthly);
-                    
+
                     add_goal(&finance_data, name, target, target_date, monthly);
                 } else if (goal_choice == 2) {
                     display_goals(&finance_data);
@@ -1237,10 +1237,10 @@ int main() {
                     printf("Enter amount to add: $");
                     double amount;
                     scanf("%lf", &amount);
-                    
+
                     update_goal_progress(&finance_data, goal_id, amount);
                 }
-                
+
                 printf("\nPress Enter to continue...");
                 getchar(); getchar();
                 break;
@@ -1256,7 +1256,7 @@ int main() {
                 if (inv_choice == 1) {
                     char symbol[10], name[100];
                     double shares, avg_cost, current_price;
-                    
+
                     printf("Enter symbol: ");
                     scanf("%s", symbol);
                     printf("Enter name: ");
@@ -1267,12 +1267,12 @@ int main() {
                     scanf("%lf", &avg_cost);
                     printf("Enter current price per share: $");
                     scanf("%lf", &current_price);
-                    
+
                     add_investment(&finance_data, symbol, name, shares, avg_cost, current_price);
                 } else if (inv_choice == 2) {
                     display_portfolio(&finance_data);
                 }
-                
+
                 printf("\nPress Enter to continue...");
                 getchar(); getchar();
                 break;
@@ -1290,7 +1290,7 @@ int main() {
                 } else if (report_choice == 2) {
                     analyze_spending_patterns(&finance_data);
                 }
-                
+
                 printf("\nPress Enter to continue...");
                 getchar(); getchar();
                 break;
@@ -1311,7 +1311,7 @@ int main() {
                 } else if (data_choice == 3) {
                     export_to_csv(&finance_data, "finance_export.csv");
                 }
-                
+
                 printf("\nPress Enter to continue...");
                 getchar(); getchar();
                 break;
@@ -1538,15 +1538,15 @@ Checking       Enforcement      Algorithms     & Persistence                & Al
 
 ---
 
- **CONGRATULATIONS! You have completed the comprehensive C/C++ programming curriculum!** 
+ **CONGRATULATIONS! You have completed the comprehensive C/C++ programming curriculum!**
 
- **You are now a MASTER PROGRAMMER!** 
+ **You are now a MASTER PROGRAMMER!**
 
 *This capstone project demonstrates your complete mastery of programming concepts, from basic syntax to advanced system design. You can now build any application you can imagine!*
 
-**Your journey doesn't end here - continue learning, building projects, and pushing the boundaries of what you can create!** 
+**Your journey doesn't end here - continue learning, building projects, and pushing the boundaries of what you can create!**
 
-*Remember: The best programmers are those who never stop learning and never stop creating!* 
+*Remember: The best programmers are those who never stop learning and never stop creating!*
 
 ### How to Run
 

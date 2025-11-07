@@ -600,7 +600,7 @@ int count = 0;
 
 ---
 
- **Excellent! You're mastering data management and organization!** 
+ **Excellent! You're mastering data management and organization!**
 
 *Data structures are the foundation of all software. Next: Mathematical problem solving! *
 

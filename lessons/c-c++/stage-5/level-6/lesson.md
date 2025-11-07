@@ -26,7 +26,7 @@
 
 **Focus**: Contributing to real open source projects or starting your own
 
-**Time Estimate**: 15-20+ hours 
+**Time Estimate**: 15-20+ hours
 **Purpose**: Gain real-world experience with professional projects
 
 ---
@@ -65,7 +65,7 @@
 - [ ] Long-term project maintenance
 - [ ] Community leadership
 
-Ready to make a difference in open source? 
+Ready to make a difference in open source?
 
 
 

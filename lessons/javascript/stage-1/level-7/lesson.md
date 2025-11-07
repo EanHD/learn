@@ -157,7 +157,7 @@ function scopeDemo() {
     let localVariable = "I'm local!";
     console.log("Inside function: " + globalVariable);
     console.log("Inside function: " + localVariable);
-    
+
     // Functions can modify global variables
     globalVariable = "Modified from inside function!";
 }
@@ -177,7 +177,7 @@ function outerFunction(name) {
     function innerFunction() {
         return "Hello from inside!";
     }
-    
+
     return name + ", " + innerFunction();
 }
 
@@ -595,7 +595,7 @@ function deposit(account, amount) {
         console.log("Deposit amount must be positive!");
         return false;
     }
-    
+
     account.balance += amount;
     account.transactions.push({
         type: "deposit",
@@ -603,7 +603,7 @@ function deposit(account, amount) {
         date: new Date().toLocaleDateString(),
         balanceAfter: account.balance
     });
-    
+
     console.log("$" + amount + " deposited. New balance: $" + account.balance);
     return true;
 }
@@ -614,12 +614,12 @@ function withdraw(account, amount) {
         console.log("Withdrawal amount must be positive!");
         return false;
     }
-    
+
     if (amount > account.balance) {
         console.log("Insufficient funds! Current balance: $" + account.balance);
         return false;
     }
-    
+
     account.balance -= amount;
     account.transactions.push({
         type: "withdrawal",
@@ -627,7 +627,7 @@ function withdraw(account, amount) {
         date: new Date().toLocaleDateString(),
         balanceAfter: account.balance
     });
-    
+
     console.log("$" + amount + " withdrawn. New balance: $" + account.balance);
     return true;
 }
@@ -643,7 +643,7 @@ function getTransactionHistory(account) {
     console.log(account.name + "'s Transaction History:");
     for (let i = 0; i < account.transactions.length; i++) {
         let transaction = account.transactions[i];
-        console.log(transaction.date + " - " + transaction.type + ": $" + 
+        console.log(transaction.date + " - " + transaction.type + ": $" +
                    transaction.amount + " - Balance: $" + transaction.balanceAfter);
     }
 }
@@ -652,7 +652,7 @@ function getTransactionHistory(account) {
 function transfer(fromAccount, toAccount, amount) {
     if (withdraw(fromAccount, amount)) {
         deposit(toAccount, amount);
-        console.log("Transfer of $" + amount + " from " + fromAccount.name + 
+        console.log("Transfer of $" + amount + " from " + fromAccount.name +
                    " to " + toAccount.name + " completed!");
         return true;
     }
@@ -676,7 +676,7 @@ getTransactionHistory(alexAccount);
 
 ---
 
- **Excellent work! You now understand how to organize code using functions - a fundamental skill for all programmers!** 
+ **Excellent work! You now understand how to organize code using functions - a fundamental skill for all programmers!**
 
 *This completes Stage 1 of JavaScript learning! You've mastered the fundamentals of JavaScript programming. Great job!*
 
@@ -703,40 +703,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```js
-console.log("Hello, World!");
-
-```js
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard javascript conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

@@ -497,7 +497,7 @@ Else:
 
 ---
 
- **Congratulations! You've created your first independent algorithms!** 
+ **Congratulations! You've created your first independent algorithms!**
 
 *Problem analysis is the foundation of programming. Next: Data management problems! *
 

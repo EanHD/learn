@@ -151,7 +151,7 @@ func main() {
     multiply := func(a, b int) int {
         return a * b
     }
-    
+
     result := multiply(4, 5)
     fmt.Printf("4 * 5 = %d\n", result)
 
@@ -159,7 +159,7 @@ func main() {
     func() {
         fmt.Println("This anonymous function runs immediately!")
     }()
-    
+
     fmt.Println()
     fmt.Println("=== Practical Function Examples ===")
     rectangleArea := calculateAreaRectangle(10, 5)
@@ -608,14 +608,14 @@ func deposit(account *Account, amount float64) error {
     if amount <= 0 {
         return errors.New("deposit amount must be positive")
     }
-    
+
     account.Balance += amount
     account.History = append(account.History, Transaction{
         Type: "deposit",
         Amount: amount,
         BalanceAfter: account.Balance,
     })
-    
+
     fmt.Printf("$%.2f deposited. New balance: $%.2f\n", amount, account.Balance)
     return nil
 }
@@ -625,18 +625,18 @@ func withdraw(account *Account, amount float64) error {
     if amount <= 0 {
         return errors.New("withdrawal amount must be positive")
     }
-    
+
     if amount > account.Balance {
         return errors.New("insufficient funds")
     }
-    
+
     account.Balance -= amount
     account.History = append(account.History, Transaction{
         Type: "withdrawal",
         Amount: amount,
         BalanceAfter: account.Balance,
     })
-    
+
     fmt.Printf("$%.2f withdrawn. New balance: $%.2f\n", amount, account.Balance)
     return nil
 }
@@ -656,7 +656,7 @@ func transfer(fromAccount, toAccount *Account, amount float64) error {
         deposit(fromAccount, amount) // Attempt to reverse
         return fmt.Errorf("transfer failed: %v", err)
     }
-    fmt.Printf("Transfer of $%.2f from %s to %s completed!\n", 
+    fmt.Printf("Transfer of $%.2f from %s to %s completed!\n",
                amount, fromAccount.Name, toAccount.Name)
     return nil
 }
@@ -664,7 +664,7 @@ func transfer(fromAccount, toAccount *Account, amount float64) error {
 
 ---
 
- **Excellent work! You now understand how to organize code using functions - a fundamental skill for all programmers!** 
+ **Excellent work! You now understand how to organize code using functions - a fundamental skill for all programmers!**
 
 *This completes Stage 1 of Go learning! You've mastered the fundamentals of Go programming. Great job!*
 
@@ -691,46 +691,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello, World!")
-}
-
-```
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard go conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

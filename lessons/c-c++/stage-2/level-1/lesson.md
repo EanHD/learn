@@ -257,13 +257,13 @@ Algorithm: Calculate BMI
 
 int main() {
     char name[50];
-    
+
     printf("Hello! What's your name? ");
     scanf("%s", name);
-    
+
     printf("Nice to meet you, %s\n", name);
     printf("Welcome to programming!\n");
-    
+
     return 0;
 }
 ```
@@ -282,17 +282,17 @@ int main() {
 
 int main() {
     int num1, num2, sum;
-    
+
     printf("Enter first number: ");
     scanf("%d", &num1);
-    
+
     printf("Enter second number: ");
     scanf("%d", &num2);
-    
+
     sum = num1 + num2;
-    
+
     printf("The sum is: %d\n", sum);
-    
+
     return 0;
 }
 ```
@@ -311,15 +311,15 @@ int main() {
 
 int main() {
     int age_years, age_days;
-    
+
     printf("Enter your age in years: ");
     scanf("%d", &age_years);
-    
+
     age_days = age_years * 365;
-    
+
     printf("You are approximately %d days old\n", age_days);
     printf("That's a lot of days!\n");
-    
+
     return 0;
 }
 ```
@@ -338,14 +338,14 @@ int main() {
 
 int main() {
     float celsius, fahrenheit;
-    
+
     printf("Enter temperature in Celsius: ");
     scanf("%f", &celsius);
-    
+
     fahrenheit = (celsius * 9.0/5.0) + 32;
-    
+
     printf("%.1f°C = %.1f°F\n", celsius, fahrenheit);
-    
+
     return 0;
 }
 ```
@@ -364,20 +364,20 @@ int main() {
 
 int main() {
     float length, width, area, perimeter;
-    
+
     printf("Rectangle Area Calculator\n");
     printf("Enter length: ");
     scanf("%f", &length);
-    
+
     printf("Enter width: ");
     scanf("%f", &width);
-    
+
     area = length * width;
     perimeter = 2 * (length + width);
-    
+
     printf("Area: %.2f\n", area);
     printf("Perimeter: %.2f\n", perimeter);
-    
+
     return 0;
 }
 ```
@@ -396,24 +396,24 @@ int main() {
 
 int main() {
     float principal, rate, time, interest, total;
-    
+
     printf("Simple Interest Calculator\n");
     printf("Enter principal amount: $");
     scanf("%f", &principal);
-    
+
     printf("Enter interest rate (%%): ");
     scanf("%f", &rate);
-    
+
     printf("Enter time in years: ");
     scanf("%f", &time);
-    
+
     interest = (principal * rate * time) / 100;
     total = principal + interest;
-    
+
     printf("Principal: $%.2f\n", principal);
     printf("Interest: $%.2f\n", interest);
     printf("Total: $%.2f\n", total);
-    
+
     return 0;
 }
 ```
@@ -496,7 +496,7 @@ printf("Hello, %s!\n", name);
 
 ---
 
-**Congratulations! You've translated your first pseudocode algorithms into working C programs!** 
+**Congratulations! You've translated your first pseudocode algorithms into working C programs!**
 
 *This is a major milestone - you're now thinking like a programmer! Next up: Variables in pseudocode!*
 

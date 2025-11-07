@@ -29,12 +29,12 @@ public class Main {
     public static void greet(String name) {
         System.out.println("Hello, " + name + "!");
     }
-    
+
     // Function that returns a value
     public static int add(int a, int b) {
         return a + b;
     }
-    
+
     // Function to calculate factorial
     public static long factorial(int n) {
         long result = 1;
@@ -43,14 +43,14 @@ public class Main {
         }
         return result;
     }
-    
+
     public static void main(String[] args) {
         greet("Alice");
         greet("Bob");
-        
+
         int sum = add(5, 3);
         System.out.println("5 + 3 = " + sum);
-        
+
         System.out.println("5! = " + factorial(5));
     }
 }

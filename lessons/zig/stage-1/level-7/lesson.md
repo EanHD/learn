@@ -46,13 +46,13 @@ fn factorial(n: i32) i64 {
 
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
-    
+
     try greet("Alice");
     try greet("Bob");
-    
+
     const sum = add(5, 3);
     try stdout.print("5 + 3 = {}\n", .{sum});
-    
+
     try stdout.print("5! = {}\n", .{factorial(5)});
 }
 ```

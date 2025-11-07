@@ -279,13 +279,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
+
         System.out.print("Hello! What's your name? ");
         String name = input.nextLine();
-        
+
         System.out.println("Nice to meet you, " + name);
         System.out.println("Welcome to programming!");
-        
+
         input.close();
     }
 }
@@ -307,17 +307,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
+
         System.out.print("Enter first number: ");
         int num1 = input.nextInt();
-        
+
         System.out.print("Enter second number: ");
         int num2 = input.nextInt();
-        
+
         int sum = num1 + num2;
-        
+
         System.out.println("The sum is: " + sum);
-        
+
         input.close();
     }
 }
@@ -339,15 +339,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
+
         System.out.print("Enter your age in years: ");
         int ageYears = input.nextInt();
-        
+
         int ageDays = ageYears * 365;
-        
+
         System.out.println("You are approximately " + ageDays + " days old");
         System.out.println("That's a lot of days!");
-        
+
         input.close();
     }
 }
@@ -368,14 +368,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
+
         System.out.print("Enter temperature in Celsius: ");
         double celsius = input.nextDouble();
-        
+
         double fahrenheit = (celsius * 9.0/5.0) + 32;
-        
+
         System.out.printf("%.1f°C = %.1f°F%n", celsius, fahrenheit);
-        
+
         input.close();
     }
 }
@@ -397,20 +397,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
+
         System.out.println("Rectangle Area Calculator");
         System.out.print("Enter length: ");
         double length = input.nextDouble();
-        
+
         System.out.print("Enter width: ");
         double width = input.nextDouble();
-        
+
         double area = length * width;
         double perimeter = 2 * (length + width);
-        
+
         System.out.printf("Area: %.2f%n", area);
         System.out.printf("Perimeter: %.2f%n", perimeter);
-        
+
         input.close();
     }
 }
@@ -431,24 +431,24 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
+
         System.out.println("Simple Interest Calculator");
         System.out.print("Enter principal amount: $");
         double principal = input.nextDouble();
-        
+
         System.out.print("Enter interest rate (%): ");
         double rate = input.nextDouble();
-        
+
         System.out.print("Enter time in years: ");
         double time = input.nextDouble();
-        
+
         double interest = (principal * rate * time) / 100;
         double total = principal + interest;
-        
+
         System.out.printf("Principal: $%.2f%n", principal);
         System.out.printf("Interest: $%.2f%n", interest);
         System.out.printf("Total: $%.2f%n", total);
-        
+
         input.close();
     }
 }

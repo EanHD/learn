@@ -374,8 +374,7 @@ Years: 3
 Compounding: Quarterly
 Final Amount: $1161.54
 Total Interest: $161.54
-```
-```
+
 
 ### Bonus Challenges
 
@@ -386,7 +385,7 @@ Total Interest: $161.54
 
 ---
 
- **Excellent! You built a mathematical financial application!** 
+ **Excellent! You built a mathematical financial application!**
 
 *Next: Interactive Application (Simple Banking System)!*
 
@@ -406,149 +405,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```rs
-use std::io::{self, Write};
-
-fn main() {
-    println!("Compound Interest Calculator");
-    println!("============================");
-
-    // Get principal amount
-    let principal = get_positive_number("Enter principal amount: $");
-
-    // Get annual interest rate
-    let rate_percent = get_valid_rate("Enter annual interest rate (%): ");
-    let rate = rate_percent / 100.0; // Convert to decimal
-
-    // Get number of years
-    let years = get_positive_integer("Enter number of years: ");
-
-    // Get compounding frequency
-    println!("Compounding frequency:");
-    println!("1. Yearly");
-    println!("2. Quarterly");
-    println!("3. Monthly");
-    let frequency_choice = get_valid_choice("Enter choice (1-3): ", 1, 3);
-
-    // Set compounding frequency values
-    let (n, frequency_name) = match frequency_choice {
-        1 => (1.0, "Yearly"),
-        2 => (4.0, "Quarterly"),
-        3 => (12.0, "Monthly"),
-        _ => (1.0, "Yearly"), // Default fallback
-    };
-
-    // Calculate compound interest
-    let base = 1.0 + (rate / n);
-    let exponent = n * years as f64;
-    let final_amount = principal * base.powf(exponent);
-    let total_interest = final_amount - principal;
-
-    // Display results
-    println!("\nInvestment Summary");
-    println!("------------------");
-    println!("Principal: ${:.2}", principal);
-    println!("Interest Rate: {:.2}%", rate_percent);
-    println!("Years: {}", years);
-    println!("Compounding: {}", frequency_name);
-    println!("Final Amount: ${:.2}", final_amount);
-    println!("Total Interest: ${:.2}", total_interest);
-}
-
-fn get_positive_number(prompt: &str) -> f64 {
-    loop {
-        print!("{}", prompt);
-        io::stdout().flush().unwrap();
-
-        let mut input = String::new();
-        io::stdin().read_line(&mut input).unwrap();
-
-        match input.trim().parse::<f64>() {
-            Ok(num) if num > 0.0 => return num,
-            Ok(_) => println!("Please enter a positive number."),
-            Err(_) => println!("Please enter a valid number."),
-        }
-    }
-}
-
-fn get_valid_rate(prompt: &str) -> f64 {
-    loop {
-        print!("{}", prompt);
-        io::stdout().flush().unwrap();
-
-        let mut input = String::new();
-        io::stdin().read_line(&mut input).unwrap();
-
-        match input.trim().parse::<f64>() {
-            Ok(rate) if rate >= 0.0 && rate <= 100.0 => return rate,
-            Ok(_) => println!("Rate must be between 0% and 100%."),
-            Err(_) => println!("Please enter a valid number."),
-        }
-    }
-}
-
-fn get_positive_integer(prompt: &str) -> u32 {
-    loop {
-        print!("{}", prompt);
-        io::stdout().flush().unwrap();
-
-        let mut input = String::new();
-        io::stdin().read_line(&mut input).unwrap();
-
-        match input.trim().parse::<u32>() {
-            Ok(num) if num > 0 => return num,
-            Ok(_) => println!("Please enter a positive number."),
-            Err(_) => println!("Please enter a valid integer."),
-        }
-    }
-}
-
-fn get_valid_choice(prompt: &str, min: u32, max: u32) -> u32 {
-    loop {
-        print!("{}", prompt);
-        io::stdout().flush().unwrap();
-
-        let mut input = String::new();
-        io::stdin().read_line(&mut input).unwrap();
-
-        match input.trim().parse::<u32>() {
-            Ok(choice) if choice >= min && choice <= max => return choice,
-            Ok(_) => println!("Please enter a number between {} and {}.", min, max),
-            Err(_) => println!("Please enter a valid number."),
-        }
-    }
-}
-```rs
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard rust conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

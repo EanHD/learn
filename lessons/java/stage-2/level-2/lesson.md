@@ -378,24 +378,24 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         double total = 0.0;
         int itemCount = 0;
-        
+
         System.out.print("Enter price of item 1 (or 0 to finish): ");
         double price = scanner.nextDouble();
-        
+
         while (price != 0) {
             total = total + price;
             itemCount = itemCount + 1;
-            
+
             System.out.print("Enter price of item " + (itemCount + 1) + " (or 0 to finish): ");
             price = scanner.nextDouble();
         }
-        
+
         System.out.println("Items purchased: " + itemCount);
         System.out.printf("Total cost: $%.2f\n", total);
-        
+
         scanner.close();
     }
 }
@@ -421,28 +421,28 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         int attempts = 0;
         boolean isValid = false;
         String correctPassword = "secret123";
-        
+
         while (attempts < 3 && !isValid) {
             attempts = attempts + 1;
-            
+
             System.out.print("Enter password (attempt " + attempts + "/3): ");
             String userInput = scanner.nextLine();
-            
+
             if (userInput.equals(correctPassword)) {
                 isValid = true;
             }
         }
-        
+
         if (isValid) {
             System.out.println("Access granted! ");
         } else {
             System.out.println("Access denied! ");
         }
-        
+
         scanner.close();
     }
 }
@@ -467,15 +467,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         double totalScore = 0.0;
         int studentCount = 0;
         boolean hasMoreStudents = true;
-        
+
         while (hasMoreStudents) {
             System.out.print("Enter score for student " + (studentCount + 1) + " (or -1 to finish): ");
             double score = scanner.nextDouble();
-            
+
             if (score == -1) {
                 hasMoreStudents = false;
             } else {
@@ -483,7 +483,7 @@ public class Main {
                 studentCount = studentCount + 1;
             }
         }
-        
+
         if (studentCount > 0) {
             double average = totalScore / studentCount;
             System.out.printf("Class average: %.1f%%\n", average);
@@ -491,7 +491,7 @@ public class Main {
         } else {
             System.out.println("No students entered");
         }
-        
+
         scanner.close();
     }
 }
@@ -516,19 +516,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         int secretNumber = 42;
         int guessCount = 0;
         boolean gameWon = false;
-        
+
         System.out.println("I'm thinking of a number between 1-100!");
-        
+
         while (!gameWon) {
             guessCount = guessCount + 1;
-            
+
             System.out.print("Guess #" + guessCount + ": ");
             int userGuess = scanner.nextInt();
-            
+
             if (userGuess == secretNumber) {
                 gameWon = true;
                 System.out.println("Correct! You won in " + guessCount + " guesses! ");
@@ -540,9 +540,9 @@ public class Main {
                 }
             }
         }
-        
+
         System.out.println("Thanks for playing!");
-        
+
         scanner.close();
     }
 }
@@ -568,14 +568,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         double balance = 1000.00;
         int transactionCount = 0;
         boolean isRunning = true;
-        
+
         System.out.println("Welcome to Bank Account Manager");
         System.out.printf("Initial balance: $%.2f\n", balance);
-        
+
         while (isRunning) {
             System.out.println("\n1. Deposit");
             System.out.println("2. Withdraw");
@@ -583,7 +583,7 @@ public class Main {
             System.out.println("4. Exit");
             System.out.print("Enter choice: ");
             int userChoice = scanner.nextInt();
-            
+
             if (userChoice == 1) {
                 System.out.print("Enter deposit amount: $");
                 double amount = scanner.nextDouble();
@@ -609,9 +609,9 @@ public class Main {
                 System.out.println("Invalid choice!");
             }
         }
-        
+
         System.out.println("Thank you for banking with us!");
-        
+
         scanner.close();
     }
 }
@@ -637,40 +637,40 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         int dayCount = 0;  // Not used in this version, but could be for multiple days
         double totalTemperature = 0.0;
         double highestTemp = -1000.0;
         double lowestTemp = 1000.0;
         int readingCount = 0;
-        
+
         System.out.println("Daily Temperature Tracker");
-        
+
         while (readingCount < 24) {
             readingCount = readingCount + 1;
-            
+
             System.out.print("Enter temperature reading #" + readingCount + " (°F): ");
             double temperature = scanner.nextDouble();
-            
+
             totalTemperature = totalTemperature + temperature;
-            
+
             if (temperature > highestTemp) {
                 highestTemp = temperature;
             }
-            
+
             if (temperature < lowestTemp) {
                 lowestTemp = temperature;
             }
         }
-        
+
         double averageTemp = totalTemperature / 24;
-        
+
         System.out.println("\nTemperature Summary:");
         System.out.printf("Average: %.1f°F\n", averageTemp);
         System.out.printf("Highest: %.1f°F\n", highestTemp);
         System.out.printf("Lowest: %.1f°F\n", lowestTemp);
         System.out.println("Readings taken: " + readingCount);
-        
+
         scanner.close();
     }
 }

@@ -32,7 +32,7 @@ public:
     int multiply(int a, int b) {
         return a * b;
     }
-    
+
     float divide(float a, float b) {
         if (b != 0) {
             return a / b;
@@ -44,31 +44,31 @@ public:
 int main() {
     // Using functions
     cout << "=== Functions Demo ===\n";
-    
+
     string name;
     cout << "Enter your name: ";
     cin >> name;
     printWelcome(name);
-    
+
     int x = 10, y = 5;
     int sum = add(x, y);
     cout << x << " + " << y << " = " << sum << "\n";
-    
+
     float weight, height;
     cout << "\nEnter weight (kg): ";
     cin >> weight;
     cout << "Enter height (m): ";
     cin >> height;
-    
+
     float bmi = calculateBMI(weight, height);
     cout << "Your BMI: " << bmi << "\n";
-    
+
     // Using a class (preview!)
     cout << "\n=== Class Demo ===\n";
     Calculator calc;
     cout << "15 * 3 = " << calc.multiply(15, 3) << "\n";
     cout << "20 / 4 = " << calc.divide(20, 4) << "\n";
-    
+
     return 0;
 }
 

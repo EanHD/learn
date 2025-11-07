@@ -27,14 +27,14 @@ Add decision-making to your programs with if/else statements.
 -- Conditional Logic with CASE
 DECLARE @num INT = 15;
 
-SELECT 
+SELECT
     @num AS number,
-    CASE 
+    CASE
         WHEN @num > 0 THEN 'positive'
         WHEN @num < 0 THEN 'negative'
         ELSE 'zero'
     END AS sign,
-    CASE 
+    CASE
         WHEN @num % 2 = 0 THEN 'even'
         ELSE 'odd'
     END AS parity;
@@ -64,14 +64,14 @@ SELECT
 -- Conditional Logic with CASE
 DECLARE @num INT = 15;
 
-SELECT 
+SELECT
     @num AS number,
-    CASE 
+    CASE
         WHEN @num > 0 THEN 'positive'
         WHEN @num < 0 THEN 'negative'
         ELSE 'zero'
     END AS sign,
-    CASE 
+    CASE
         WHEN @num % 2 = 0 THEN 'even'
         ELSE 'odd'
     END AS parity;

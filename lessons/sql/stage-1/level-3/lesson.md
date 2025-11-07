@@ -25,7 +25,7 @@ Master arithmetic operations and use the language as your calculator.
 
 ```
 -- Math Operations in SQL
-SELECT 
+SELECT
     15 + 4 AS addition,
     15 - 4 AS subtraction,
     15 * 4 AS multiplication,
@@ -56,7 +56,7 @@ SELECT
 
 ```
 -- Math Operations in SQL
-SELECT 
+SELECT
     15 + 4 AS addition,
     15 - 4 AS subtraction,
     15 * 4 AS multiplication,

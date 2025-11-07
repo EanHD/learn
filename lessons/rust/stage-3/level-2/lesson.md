@@ -160,27 +160,27 @@ START PROGRAM
     DISPLAY "Student Grade Calculator"
     DISPLAY "Enter student name:"
     READ student_name AS TEXT
-    
+
     DISPLAY "Enter Assignment 1 score (0-100):"
     READ score1 AS NUMBER
-    
+
     DISPLAY "Enter Assignment 2 score (0-100):"
     READ score2 AS NUMBER
-    
+
     DISPLAY "Enter Assignment 3 score (0-100):"
     READ score3 AS NUMBER
-    
+
     // Calculate weighted average
     SET weight1 TO 0.30
     SET weight2 TO 0.35
     SET weight3 TO 0.35
-    
+
     SET weighted_score1 TO score1 * weight1
     SET weighted_score2 TO score2 * weight2
     SET weighted_score3 TO score3 * weight3
-    
+
     SET final_average TO weighted_score1 + weighted_score2 + weighted_score3
-    
+
     // Determine letter grade
     IF final_average >= 90 THEN
         SET letter_grade TO "A"
@@ -193,7 +193,7 @@ START PROGRAM
     ELSE
         SET letter_grade TO "F"
     END IF
-    
+
     // Display report
     DISPLAY "Student Report for " + student_name
     DISPLAY "--------------------------"
@@ -242,7 +242,7 @@ END PROGRAM
 
 ---
 
- **Excellent! You managed multiple data points effectively!** 
+ **Excellent! You managed multiple data points effectively!**
 
 *Next: Mathematical Problems!*
 
@@ -262,42 +262,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```rs
-fn main() {
-    println!("Hello, World!");
-}
-
-```rs
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard rust conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

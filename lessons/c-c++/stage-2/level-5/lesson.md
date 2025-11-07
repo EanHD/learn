@@ -596,7 +596,7 @@ int main() {
     float income, loan_amount;
     char approval_status[50] = "PENDING";
     float max_loan_amount = 0.0;
-    
+
     printf("=== Loan Approval System ===\n");
     printf("Enter applicant's age: ");
     scanf("%d", &age);
@@ -606,7 +606,7 @@ int main() {
     scanf("%d", &credit_score);
     printf("Enter loan amount requested: $");
     scanf("%f", &loan_amount);
-    
+
     if (age < 18) {
         strcpy(approval_status, "DENIED - Underage");
     } else if (age > 70) {
@@ -624,7 +624,7 @@ int main() {
             } else {
                 max_loan_amount = income * 1;
             }
-            
+
             if (loan_amount > max_loan_amount) {
                 strcpy(approval_status, "DENIED - Loan amount exceeds limit");
             } else if (loan_amount > income * 0.5) {
@@ -634,13 +634,13 @@ int main() {
             }
         }
     }
-    
+
     printf("\n=== Loan Decision ===\n");
     printf("Applicant age: %d\n", age);
     printf("Annual income: $%.2f\n", income);
     printf("Credit score: %d\n", credit_score);
     printf("Loan requested: $%.2f\n", loan_amount);
-    
+
     if (strcmp(approval_status, "APPROVED") == 0) {
         printf(" LOAN APPROVED!\n");
         printf("Maximum approved amount: $%.2f\n", max_loan_amount);
@@ -651,7 +651,7 @@ int main() {
         printf(" LOAN DENIED\n");
         printf("Reason: %s\n", approval_status);
     }
-    
+
     return 0;
 }
 ```
@@ -675,7 +675,7 @@ int main() {
     float bmi;
     char smoking_status[10], exercise_status[10], family_history[10];
     char risk_level[20] = "LOW";
-    
+
     printf("=== Health Risk Assessment ===\n");
     printf("Enter your age: ");
     scanf("%d", &age);
@@ -687,27 +687,27 @@ int main() {
     scanf("%s", exercise_status);
     printf("Family history of heart disease? (yes/no): ");
     scanf("%s", family_history);
-    
+
     // Age risk
     if (age >= 65) risk_points += 3;
     else if (age >= 45) risk_points += 2;
     else if (age >= 30) risk_points += 1;
-    
+
     // BMI risk
     if (bmi >= 30) risk_points += 3;
     else if (bmi >= 25) risk_points += 2;
     else if (bmi >= 23) risk_points += 1;
-    
+
     // Lifestyle risk
     if (strcmp(smoking_status, "yes") == 0) risk_points += 3;
     if (strcmp(exercise_status, "no") == 0) risk_points += 2;
     if (strcmp(family_history, "yes") == 0) risk_points += 2;
-    
+
     // Determine risk level
     if (risk_points >= 8) strcpy(risk_level, "HIGH");
     else if (risk_points >= 5) strcpy(risk_level, "MODERATE");
     else if (risk_points >= 3) strcpy(risk_level, "ELEVATED");
-    
+
     printf("\n=== Health Risk Assessment Results ===\n");
     printf("Age: %d years\n", age);
     printf("BMI: %.1f\n", bmi);
@@ -716,7 +716,7 @@ int main() {
     printf("Family history: %s\n", family_history);
     printf("Risk points: %d/12\n", risk_points);
     printf("Risk level: %s\n", risk_level);
-    
+
     if (strcmp(risk_level, "HIGH") == 0) {
         printf(" HIGH RISK - Consult doctor immediately\n");
         printf("Recommendations: Lifestyle changes, medical evaluation\n");
@@ -730,7 +730,7 @@ int main() {
         printf(" LOW RISK - Maintain healthy lifestyle\n");
         printf("Recommendations: Continue current healthy habits\n");
     }
-    
+
     return 0;
 }
 ```
@@ -755,7 +755,7 @@ int main() {
     char probation_status[10];
     char standing[50] = "UNDETERMINED";
     char eligibility_status[30] = "ELIGIBLE";
-    
+
     printf("=== Academic Standing Calculator ===\n");
     printf("Enter GPA (0.0-4.0): ");
     scanf("%f", &gpa);
@@ -765,7 +765,7 @@ int main() {
     scanf("%d", &semesters);
     printf("Any academic probation? (yes/no): ");
     scanf("%s", probation_status);
-    
+
     if (strcmp(probation_status, "yes") == 0) {
         strcpy(standing, "ACADEMIC PROBATION");
         strcpy(eligibility_status, "RESTRICTED");
@@ -793,7 +793,7 @@ int main() {
             strcpy(eligibility_status, "COUNSELING REQUIRED");
         }
     }
-    
+
     printf("\n=== Academic Assessment ===\n");
     printf("GPA: %.2f\n", gpa);
     printf("Credit Hours: %d\n", credit_hours);
@@ -801,7 +801,7 @@ int main() {
     printf("Probation Status: %s\n", probation_status);
     printf("Academic Standing: %s\n", standing);
     printf("Eligibility Status: %s\n", eligibility_status);
-    
+
     if (strcmp(eligibility_status, "ELIGIBLE") == 0) {
         printf(" Eligible for all academic activities\n");
     } else if (strcmp(eligibility_status, "RESTRICTED") == 0) {
@@ -809,7 +809,7 @@ int main() {
     } else {
         printf(" Counseling required - Contact academic advisor\n");
     }
-    
+
     return 0;
 }
 ```
@@ -832,7 +832,7 @@ int main() {
     int age, experience, mileage;
     char vehicle_type[20], accident_history[10];
     float base_premium = 500.0, risk_multiplier = 1.0, final_premium;
-    
+
     printf("=== Auto Insurance Premium Calculator ===\n");
     printf("Enter driver's age: ");
     scanf("%d", &age);
@@ -844,29 +844,29 @@ int main() {
     scanf("%s", accident_history);
     printf("Annual mileage: ");
     scanf("%d", &mileage);
-    
+
     // Age risk
     if (age < 25) risk_multiplier *= 1.5;
     else if (age > 65) risk_multiplier *= 1.2;
-    
+
     // Experience risk
     if (experience < 3) risk_multiplier *= 1.4;
     else if (experience > 10) risk_multiplier *= 0.9;
-    
+
     // Vehicle type risk
     if (strcmp(vehicle_type, "sports") == 0) risk_multiplier *= 1.8;
     else if (strcmp(vehicle_type, "suv") == 0) risk_multiplier *= 1.3;
     else if (strcmp(vehicle_type, "truck") == 0) risk_multiplier *= 1.1;
-    
+
     // Accident history
     if (strcmp(accident_history, "yes") == 0) risk_multiplier *= 1.6;
-    
+
     // Mileage risk
     if (mileage > 15000) risk_multiplier *= 1.2;
     else if (mileage < 5000) risk_multiplier *= 0.95;
-    
+
     final_premium = base_premium * risk_multiplier;
-    
+
     printf("\n=== Premium Calculation ===\n");
     printf("Driver Age: %d\n", age);
     printf("Driving Experience: %d years\n", experience);
@@ -876,7 +876,7 @@ int main() {
     printf("Base Premium: $%.2f\n", base_premium);
     printf("Risk Multiplier: %.2f\n", risk_multiplier);
     printf("Final Premium: $%.2f\n", final_premium);
-    
+
     if (risk_multiplier > 2.0) {
         printf(" HIGH RISK PROFILE\n");
         printf("Consider defensive driving courses\n");
@@ -887,7 +887,7 @@ int main() {
         printf(" LOW RISK PROFILE\n");
         printf("Eligible for premium discounts\n");
     }
-    
+
     return 0;
 }
 ```
@@ -911,7 +911,7 @@ int main() {
     int trip_days, group_size, activity_count = 0;
     float daily_budget, total_cost = 0.0;
     float accommodation_cost, food_cost, activity_cost, transportation_cost, miscellaneous_cost, total_budget;
-    
+
     printf("=== Travel Itinerary Planner ===\n");
     printf("Enter destination city: ");
     scanf("%s", destination);
@@ -923,7 +923,7 @@ int main() {
     scanf("%s", season);
     printf("Group size: ");
     scanf("%d", &group_size);
-    
+
     // Seasonal activity planning
     if (strcmp(season, "summer") == 0) {
         if (strstr(destination, "beach") != NULL || strstr(destination, "Beach") != NULL) {
@@ -950,7 +950,7 @@ int main() {
         total_cost += 35;
         activity_count = 4;
     }
-    
+
     // Cost calculations
     accommodation_cost = daily_budget * 0.4 * trip_days;
     food_cost = daily_budget * 0.3 * trip_days;
@@ -958,14 +958,14 @@ int main() {
     transportation_cost = daily_budget * 0.2 * trip_days;
     miscellaneous_cost = daily_budget * 0.1 * trip_days;
     total_budget = accommodation_cost + food_cost + activity_cost + transportation_cost + miscellaneous_cost;
-    
+
     // Group discount
     if (group_size > 4) {
         float group_discount = total_budget * 0.1;
         total_budget -= group_discount;
         printf(" Group discount applied: $%.2f\n", group_discount);
     }
-    
+
     printf("\n=== Travel Itinerary ===\n");
     printf("Destination: %s\n", destination);
     printf("Duration: %d days\n", trip_days);
@@ -979,14 +979,14 @@ int main() {
     printf("Transportation: $%.2f\n", transportation_cost);
     printf("Miscellaneous: $%.2f\n", miscellaneous_cost);
     printf("Total Estimated Cost: $%.2f\n", total_budget);
-    
+
     float budget_limit = daily_budget * trip_days;
     if (total_budget > budget_limit) {
         printf(" Budget exceeded by $%.2f\n", total_budget - budget_limit);
     } else {
         printf(" Within budget - $%.2f remaining\n", budget_limit - total_budget);
     }
-    
+
     return 0;
 }
 ```
@@ -1010,7 +1010,7 @@ int main() {
     int years_service, productivity, quality, teamwork;
     float average_score, salary_adjustment = 0.0;
     char performance_rating[30] = "UNDETERMINED";
-    
+
     printf("=== Employee Performance Review ===\n");
     printf("Enter employee name: ");
     scanf("%s", employee_name);
@@ -1024,9 +1024,9 @@ int main() {
     scanf("%d", &teamwork);
     printf("Any disciplinary actions? (yes/no): ");
     scanf("%s", disciplinary_status);
-    
+
     average_score = (productivity + quality + teamwork) / 3.0;
-    
+
     if (strcmp(disciplinary_status, "yes") == 0) {
         strcpy(performance_rating, "UNSATISFACTORY");
         salary_adjustment = -5.0;
@@ -1053,7 +1053,7 @@ int main() {
             salary_adjustment = 0.0;
         }
     }
-    
+
     printf("\n=== Performance Review Results ===\n");
     printf("Employee: %s\n", employee_name);
     printf("Years of Service: %d\n", years_service);
@@ -1064,7 +1064,7 @@ int main() {
     printf("Disciplinary Actions: %s\n", disciplinary_status);
     printf("Performance Rating: %s\n", performance_rating);
     printf("Salary Adjustment: %.1f%%\n", salary_adjustment);
-    
+
     if (strcmp(performance_rating, "OUTSTANDING") == 0) {
         printf(" EMPLOYEE OF THE YEAR CANDIDATE\n");
         printf("Eligible for bonus and promotion consideration\n");
@@ -1075,7 +1075,7 @@ int main() {
         printf(" Performance review complete\n");
         printf("Continue professional development\n");
     }
-    
+
     return 0;
 }
 ```
@@ -1131,7 +1131,7 @@ if (invalid_input) {
 
 ---
 
- **Brilliant! You've mastered complex decision-making in code!** 
+ **Brilliant! You've mastered complex decision-making in code!**
 
 *Programs can now make intelligent decisions like real applications. Next: Loop algorithms in pseudocode! *
 
@@ -1157,50 +1157,3 @@ Key functions and their purpose:
 
 - [ ] Main function: Entry point
 - [ ] Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```
-#include <stdio.h>
-
-int main() {
-    printf("Hello, World!\n");
-    return 0;
-}
-```
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses printf to print messages to the console
-3. **Standard Library**: Includes stdio.h for input/output operations
-4. **Return Value**: Returns 0 to indicate successful execution
-5. **Best Practices**: Code is readable and uses C++ idioms
-
-### Testing Your Solution
-
-1. **Compile**: `gcc main.c -o main`
-2. **Run**: `./hello`
-3. **Expected Output**: `Hello, World!`
-
-### Common Errors & Solutions
-
-| Error | Cause | Solution |
-|-------|-------|----------|
-| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
-| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
-
-### Tips for Learning
-
-- C uses stdio.h for input/output with additional features
-- `printf` is the C standard for formatted output
-- `\n` adds a newline character in format strings
-- Format specifiers control how data is displayed (%d, %f, %s, etc.)

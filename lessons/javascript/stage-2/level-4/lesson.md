@@ -381,7 +381,7 @@ let valid_input = false;
 while (!valid_input) {
     console.log("Enter a positive number: ");
     let number = parseFloat(readlineSync.question());
-    
+
     if (number > 0) {
         valid_input = true;
         console.log("Valid number entered: " + number);
@@ -564,7 +564,7 @@ if (!has_error) {
 
 ---
 
- **Excellent work! You've mastered translating input/output operations from pseudocode to JavaScript!** 
+ **Excellent work! You've mastered translating input/output operations from pseudocode to JavaScript!**
 
 *Next up: Decision pseudocode!*
 
@@ -584,40 +584,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```js
-console.log("Hello, World!");
-
-```js
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard javascript conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

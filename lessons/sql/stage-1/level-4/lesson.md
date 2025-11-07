@@ -29,7 +29,7 @@ Make your programs interactive by reading input from users.
 DECLARE @name VARCHAR(50) = 'Alice';
 DECLARE @age INT = 25;
 
-SELECT 
+SELECT
     'Hello, ' + @name + '!' AS greeting,
     'You are ' + CAST(@age AS VARCHAR) + ' years old.' AS age_message,
     'Next year you''ll be ' + CAST(@age + 1 AS VARCHAR) + '.' AS next_year;
@@ -61,7 +61,7 @@ SELECT
 DECLARE @name VARCHAR(50) = 'Alice';
 DECLARE @age INT = 25;
 
-SELECT 
+SELECT
     'Hello, ' + @name + '!' AS greeting,
     'You are ' + CAST(@age AS VARCHAR) + ' years old.' AS age_message,
     'Next year you''ll be ' + CAST(@age + 1 AS VARCHAR) + '.' AS next_year;

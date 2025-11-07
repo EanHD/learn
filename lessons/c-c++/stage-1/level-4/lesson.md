@@ -24,17 +24,17 @@ int main() {
     int age;
     float temperature;
     char hasUmbrella;
-    
+
     // Get input
     printf("Enter your age: ");
     scanf("%d", &age);
-    
+
     printf("Enter temperature (F): ");
     scanf("%f", &temperature);
-    
+
     printf("Do you have an umbrella? (y/n): ");
     scanf(" %c", &hasUmbrella);
-    
+
     // Age-based message
     printf("\n--- Analysis ---\n");
     if (age < 13) {
@@ -46,7 +46,7 @@ int main() {
     } else {
         printf("You're a senior!\n");
     }
-    
+
     // Weather advice
     if (temperature > 85) {
         printf("It's hot! Stay hydrated.\n");
@@ -55,17 +55,17 @@ int main() {
     } else {
         printf("Weather is nice!\n");
     }
-    
+
     // Multiple conditions
     if (temperature < 50 && hasUmbrella == 'n') {
         printf("Warning: Cold and no umbrella!\n");
     }
-    
+
     // Logical NOT
     if (!(age >= 18)) {
         printf("You're not an adult yet.\n");
     }
-    
+
     return 0;
 }
 ```

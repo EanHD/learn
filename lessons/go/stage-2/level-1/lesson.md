@@ -301,17 +301,17 @@ import (
 
 func main() {
     reader := bufio.NewReader(os.Stdin)
-    
+
     fmt.Println("Algorithm 1: Greeting Program")
-    
+
     // Display "Hello! What's your name?" to the user
     fmt.Print("Hello! What's your name? ")
     name, _ := reader.ReadString('\n')
     name = strings.TrimSpace(name)
-    
+
     // Display "Nice to meet you, " followed by the user's name
     fmt.Println("Nice to meet you, " + name)
-    
+
     // Display "Welcome to programming!"
     fmt.Println("Welcome to programming!")
 }
@@ -332,9 +332,9 @@ import (
 
 func main() {
     reader := bufio.NewReader(os.Stdin)
-    
+
     fmt.Println("Algorithm 2: Simple Calculator")
-    
+
     // Ask user for first number
     fmt.Print("Enter first number: ")
     firstInput, _ := reader.ReadString('\n')
@@ -343,7 +343,7 @@ func main() {
         fmt.Println("Invalid number entered!")
         return
     }
-    
+
     // Ask user for second number
     fmt.Print("Enter second number: ")
     secondInput, _ := reader.ReadString('\n')
@@ -352,10 +352,10 @@ func main() {
         fmt.Println("Invalid number entered!")
         return
     }
-    
+
     // Calculate sum of the two numbers
     sum := firstNum + secondNum
-    
+
     // Display "The sum is: " followed by the sum
     fmt.Println("The sum is: " + fmt.Sprintf("%g", sum))
 }
@@ -376,9 +376,9 @@ import (
 
 func main() {
     reader := bufio.NewReader(os.Stdin)
-    
+
     fmt.Println("Algorithm 3: Age Calculator")
-    
+
     // Display "Enter your age in years: "
     fmt.Print("Enter your age in years: ")
     ageInput, _ := reader.ReadString('\n')
@@ -387,10 +387,10 @@ func main() {
         fmt.Println("Invalid number entered!")
         return
     }
-    
+
     // Calculate days = age × 365
     days := age * 365
-    
+
     // Display messages
     fmt.Println("You are approximately " + strconv.Itoa(days) + " days old")
     fmt.Println("That's a lot of days!")
@@ -412,9 +412,9 @@ import (
 
 func main() {
     reader := bufio.NewReader(os.Stdin)
-    
+
     fmt.Println("Algorithm 4: Temperature Converter")
-    
+
     // Display "Enter temperature in Celsius: "
     fmt.Print("Enter temperature in Celsius: ")
     celsiusInput, _ := reader.ReadString('\n')
@@ -423,10 +423,10 @@ func main() {
         fmt.Println("Invalid number entered!")
         return
     }
-    
+
     // Calculate Fahrenheit = (Celsius × 9/5) + 32
     fahrenheit := (celsius * 9/5) + 32
-    
+
     // Display the results
     fmt.Printf("%.2f°C = %.2f°F\n", celsius, fahrenheit)
 }
@@ -447,9 +447,9 @@ import (
 
 func main() {
     reader := bufio.NewReader(os.Stdin)
-    
+
     fmt.Println("Rectangle Area Calculator")
-    
+
     // Get length from user
     fmt.Print("Enter length: ")
     lengthInput, _ := reader.ReadString('\n')
@@ -458,7 +458,7 @@ func main() {
         fmt.Println("Invalid number entered!")
         return
     }
-    
+
     // Get width from user
     fmt.Print("Enter width: ")
     widthInput, _ := reader.ReadString('\n')
@@ -467,13 +467,13 @@ func main() {
         fmt.Println("Invalid number entered!")
         return
     }
-    
+
     // Calculate area = length × width
     area := length * width
-    
+
     // Calculate perimeter = 2 × (length + width)
     perimeter := 2 * (length + width)
-    
+
     // Display results
     fmt.Println("Area: " + fmt.Sprintf("%g", area))
     fmt.Println("Perimeter: " + fmt.Sprintf("%g", perimeter))
@@ -495,9 +495,9 @@ import (
 
 func main() {
     reader := bufio.NewReader(os.Stdin)
-    
+
     fmt.Println("Simple Interest Calculator")
-    
+
     // Get principal from user
     fmt.Print("Enter principal amount: $")
     principalInput, _ := reader.ReadString('\n')
@@ -506,7 +506,7 @@ func main() {
         fmt.Println("Invalid number entered!")
         return
     }
-    
+
     // Get rate from user
     fmt.Print("Enter interest rate (%): ")
     rateInput, _ := reader.ReadString('\n')
@@ -515,7 +515,7 @@ func main() {
         fmt.Println("Invalid number entered!")
         return
     }
-    
+
     // Get time from user
     fmt.Print("Enter time in years: ")
     timeInput, _ := reader.ReadString('\n')
@@ -524,13 +524,13 @@ func main() {
         fmt.Println("Invalid number entered!")
         return
     }
-    
+
     // Calculate interest = (principal × rate × time) ÷ 100
     interest := (principal * rate * time) / 100
-    
+
     // Calculate total = principal + interest
     total := principal + interest
-    
+
     // Display results
     fmt.Printf("Principal: $%.2f\n", principal)
     fmt.Printf("Interest: $%.2f\n", interest)
@@ -553,9 +553,9 @@ import (
 
 func main() {
     reader := bufio.NewReader(os.Stdin)
-    
+
     fmt.Println("BMI Calculator")
-    
+
     // Get weight from user
     fmt.Print("Enter weight in kg: ")
     weightInput, _ := reader.ReadString('\n')
@@ -564,7 +564,7 @@ func main() {
         fmt.Println("Invalid number entered!")
         return
     }
-    
+
     // Get height from user
     fmt.Print("Enter height in meters: ")
     heightInput, _ := reader.ReadString('\n')
@@ -573,13 +573,13 @@ func main() {
         fmt.Println("Invalid number entered!")
         return
     }
-    
+
     // Calculate bmi = weight ÷ (height × height)
     bmi := weight / (height * height)
-    
+
     // Display the BMI
     fmt.Printf("Your BMI is: %.2f\n", bmi)
-    
+
     // Category determination
     if bmi < 18.5 {
         fmt.Println("Category: Underweight")
@@ -658,7 +658,7 @@ fmt.Println("Hello, " + name + "!")
 
 ---
 
- **Congratulations! You've translated your first pseudocode algorithms into working Go programs!** 
+ **Congratulations! You've translated your first pseudocode algorithms into working Go programs!**
 
 *This is a major milestone - you're now thinking like a programmer! Next up: Variables in pseudocode!*
 
@@ -678,46 +678,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello, World!")
-}
-
-```
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard go conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

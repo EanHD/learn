@@ -525,22 +525,22 @@ int main() {
     float sales[30];
     int sales_count = 0;
     float total_sales = 0.0, highest_sale = 0.0, lowest_sale = 999999.0;
-    
+
     printf("=== Sales Data Analyzer ===\n");
     printf("Enter daily sales (enter -1 to finish):\n");
-    
+
     while (sales_count < 30) {
         printf("Day %d: $", sales_count + 1);
         float daily_sale;
         scanf("%f", &daily_sale);
-        
+
         if (daily_sale == -1) {
             break;
         } else if (daily_sale >= 0) {
             sales[sales_count] = daily_sale;
             total_sales += daily_sale;
             sales_count++;
-            
+
             if (daily_sale > highest_sale) {
                 highest_sale = daily_sale;
             }
@@ -551,17 +551,17 @@ int main() {
             printf(" Invalid sale amount! Please enter positive number.\n");
         }
     }
-    
+
     if (sales_count > 0) {
         float average_sale = total_sales / sales_count;
-        
+
         printf("\n=== Sales Summary ===\n");
         printf("Total days: %d\n", sales_count);
         printf("Total sales: $%.2f\n", total_sales);
         printf("Average daily sales: $%.2f\n", average_sale);
         printf("Highest sale: $%.2f\n", highest_sale);
         printf("Lowest sale: $%.2f\n", lowest_sale);
-        
+
         printf("\n=== Daily Breakdown ===\n");
         for (int i = 0; i < sales_count; i++) {
             printf("Day %d: $%.2f\n", i + 1, sales[i]);
@@ -569,7 +569,7 @@ int main() {
     } else {
         printf("No sales data entered.\n");
     }
-    
+
     return 0;
 }
 ```
@@ -591,18 +591,18 @@ int main() {
 int main() {
     int num_students, present_count = 0;
     char attendance_status[10];
-    
+
     printf("=== Class Attendance Tracker ===\n");
     printf("Enter number of students: ");
     scanf("%d", &num_students);
-    
+
     // Using array for attendance (1 = present, 0 = absent)
     int attendance[100]; // Assuming max 100 students
-    
+
     for (int student = 1; student <= num_students; student++) {
         printf("Student %d present? (y/n): ", student);
         scanf("%s", attendance_status);
-        
+
         if (strcmp(attendance_status, "y") == 0 || strcmp(attendance_status, "Y") == 0) {
             attendance[student - 1] = 1;
             present_count++;
@@ -610,15 +610,15 @@ int main() {
             attendance[student - 1] = 0;
         }
     }
-    
+
     float attendance_percentage = (float)present_count / num_students * 100;
-    
+
     printf("\n=== Attendance Report ===\n");
     printf("Total students: %d\n", num_students);
     printf("Present: %d\n", present_count);
     printf("Absent: %d\n", num_students - present_count);
     printf("Attendance rate: %.1f%%\n", attendance_percentage);
-    
+
     if (attendance_percentage >= 90) {
         printf(" Excellent attendance!\n");
     } else if (attendance_percentage >= 75) {
@@ -626,7 +626,7 @@ int main() {
     } else {
         printf(" Poor attendance - follow up required\n");
     }
-    
+
     printf("\n=== Individual Status ===\n");
     for (int student = 1; student <= num_students; student++) {
         if (attendance[student - 1] == 1) {
@@ -635,7 +635,7 @@ int main() {
             printf("Student %d:  Absent\n", student);
         }
     }
-    
+
     return 0;
 }
 ```
@@ -660,9 +660,9 @@ int main() {
     int item_count = 0;
     int is_running = 1;
     int choice;
-    
+
     printf("=== Inventory Management System ===\n");
-    
+
     while (is_running) {
         printf("\n1. Add Item\n");
         printf("2. Update Quantity\n");
@@ -671,18 +671,18 @@ int main() {
         printf("5. Exit\n");
         printf("Choose option (1-5): ");
         scanf("%d", &choice);
-        
+
         switch (choice) {
             case 1: {
                 if (item_count < 50) {
                     char new_item_name[50];
                     int new_quantity;
-                    
+
                     printf("Enter item name: ");
                     scanf("%s", new_item_name);
                     printf("Enter initial quantity: ");
                     scanf("%d", &new_quantity);
-                    
+
                     if (new_quantity >= 0) {
                         strcpy(item_names[item_count], new_item_name);
                         item_quantities[item_count] = new_quantity;
@@ -701,7 +701,7 @@ int main() {
                     char search_name[50];
                     printf("Enter item name to update: ");
                     scanf("%s", search_name);
-                    
+
                     int found = 0;
                     for (int i = 0; i < item_count; i++) {
                         if (strcmp(item_names[i], search_name) == 0) {
@@ -709,7 +709,7 @@ int main() {
                             printf("Enter new quantity: ");
                             int new_quantity;
                             scanf("%d", &new_quantity);
-                            
+
                             if (new_quantity >= 0) {
                                 item_quantities[i] = new_quantity;
                                 printf(" Quantity updated!\n");
@@ -720,7 +720,7 @@ int main() {
                             break;
                         }
                     }
-                    
+
                     if (!found) {
                         printf(" Item not found!\n");
                     }
@@ -743,14 +743,14 @@ int main() {
                 if (item_count > 0) {
                     printf("=== Low Stock Alert (≤5 units) ===\n");
                     int low_stock_count = 0;
-                    
+
                     for (int i = 0; i < item_count; i++) {
                         if (item_quantities[i] <= 5) {
                             printf("%s: %d units \n", item_names[i], item_quantities[i]);
                             low_stock_count++;
                         }
                     }
-                    
+
                     if (low_stock_count == 0) {
                         printf(" All items have sufficient stock.\n");
                     }
@@ -766,9 +766,9 @@ int main() {
                 break;
         }
     }
-    
+
     printf("Thank you for using Inventory Management System! \n");
-    
+
     return 0;
 }
 ```
@@ -789,48 +789,48 @@ int main() {
 
 int main() {
     int num_students, num_assignments;
-    
+
     printf("=== Grade Book Calculator ===\n");
     printf("Enter number of students: ");
     scanf("%d", &num_students);
     printf("Enter number of assignments: ");
     scanf("%d", &num_assignments);
-    
+
     char student_names[50][50]; // Max 50 students, names up to 50 chars
     float grades[50][20]; // Max 50 students, 20 assignments
-    
+
     // Input student data
     for (int student = 0; student < num_students; student++) {
         printf("Enter name for student %d: ", student + 1);
         scanf("%s", student_names[student]);
-        
+
         float student_total = 0.0;
         for (int assignment = 0; assignment < num_assignments; assignment++) {
-            printf("Enter grade for %s assignment %d: ", 
+            printf("Enter grade for %s assignment %d: ",
                    student_names[student], assignment + 1);
             scanf("%f", &grades[student][assignment]);
             student_total += grades[student][assignment];
         }
-        
+
         float student_average = student_total / num_assignments;
         printf("%s's average: %.1f\n", student_names[student], student_average);
     }
-    
+
     // Calculate class statistics
     printf("\n=== Class Statistics ===\n");
     float class_total = 0.0;
     float highest_average = 0.0;
     float lowest_average = 100.0;
-    
+
     for (int student = 0; student < num_students; student++) {
         float student_total = 0.0;
         for (int assignment = 0; assignment < num_assignments; assignment++) {
             student_total += grades[student][assignment];
         }
-        
+
         float student_average = student_total / num_assignments;
         class_total += student_average;
-        
+
         if (student_average > highest_average) {
             highest_average = student_average;
         }
@@ -838,37 +838,37 @@ int main() {
             lowest_average = student_average;
         }
     }
-    
+
     float class_average = class_total / num_students;
     printf("Class average: %.1f\n", class_average);
     printf("Highest student average: %.1f\n", highest_average);
     printf("Lowest student average: %.1f\n", lowest_average);
-    
+
     // Grade distribution
     printf("\n=== Grade Distribution ===\n");
     int grade_ranges[5] = {0, 0, 0, 0, 0}; // A, B, C, D, F
-    
+
     for (int student = 0; student < num_students; student++) {
         float student_total = 0.0;
         for (int assignment = 0; assignment < num_assignments; assignment++) {
             student_total += grades[student][assignment];
         }
-        
+
         float student_average = student_total / num_assignments;
-        
+
         if (student_average >= 90) grade_ranges[0]++;
         else if (student_average >= 80) grade_ranges[1]++;
         else if (student_average >= 70) grade_ranges[2]++;
         else if (student_average >= 60) grade_ranges[3]++;
         else grade_ranges[4]++;
     }
-    
+
     printf("A grades: %d\n", grade_ranges[0]);
     printf("B grades: %d\n", grade_ranges[1]);
     printf("C grades: %d\n", grade_ranges[2]);
     printf("D grades: %d\n", grade_ranges[3]);
     printf("F grades: %d\n", grade_ranges[4]);
-    
+
     return 0;
 }
 ```
@@ -892,35 +892,35 @@ int main() {
 int main() {
     int password_length;
     char include_upper[10], include_numbers[10], include_special[10];
-    
+
     printf("=== Password Generator ===\n");
     printf("Enter desired password length (8-20): ");
     scanf("%d", &password_length);
-    
+
     while (password_length < 8 || password_length > 20) {
         printf(" Length must be between 8-20 characters!\n");
         printf("Enter desired password length (8-20): ");
         scanf("%d", &password_length);
     }
-    
+
     printf("Include uppercase letters? (y/n): ");
     scanf("%s", include_upper);
     printf("Include numbers? (y/n): ");
     scanf("%s", include_numbers);
     printf("Include special characters? (y/n): ");
     scanf("%s", include_special);
-    
+
     // Character sets
     char lowercase[] = "abcdefghijklmnopqrstuvwxyz";
     char uppercase[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     char numbers[] = "0123456789";
     char special[] = "!@#$%^&*()_+-=[]{}|;:,.<>?";
-    
+
     // Build available character sets
     char* char_sets[10];
     int set_count = 1;
     char_sets[0] = lowercase; // Always include lowercase
-    
+
     if (strcmp(include_upper, "y") == 0 || strcmp(include_upper, "Y") == 0) {
         char_sets[set_count++] = uppercase;
     }
@@ -930,23 +930,23 @@ int main() {
     if (strcmp(include_special, "y") == 0 || strcmp(include_special, "Y") == 0) {
         char_sets[set_count++] = special;
     }
-    
+
     // Seed random number generator
     srand(time(NULL));
-    
+
     // Generate password
     char password[21]; // Max length 20 + null terminator
     for (int i = 0; i < password_length; i++) {
         // Pick random character set
         int set_index = rand() % set_count;
         char* selected_set = char_sets[set_index];
-        
+
         // Pick random character from set
         int char_index = rand() % strlen(selected_set);
         password[i] = selected_set[char_index];
     }
     password[password_length] = '\0'; // Null terminate
-    
+
     printf("Generated Password: %s\n", password);
     printf("Password length: %d\n", password_length);
     printf("Character sets used:\n");
@@ -960,7 +960,7 @@ int main() {
         printf(" Special characters\n");
     }
     printf(" Lowercase letters (always included)\n");
-    
+
     return 0;
 }
 ```
@@ -985,9 +985,9 @@ int main() {
     int total_votes = 0;
     int voting_active = 1;
     int choice;
-    
+
     printf("=== Election Voting System ===\n");
-    
+
     while (voting_active) {
         printf("\n=== Vote Menu ===\n");
         printf("Candidates:\n");
@@ -998,7 +998,7 @@ int main() {
         printf("5. End Voting\n");
         printf("Enter your choice (1-5): ");
         scanf("%d", &choice);
-        
+
         if (choice >= 1 && choice <= 3) {
             votes[choice - 1]++;
             total_votes++;
@@ -1006,11 +1006,11 @@ int main() {
         } else if (choice == 4) {
             printf("=== Current Results ===\n");
             printf("Total votes: %d\n", total_votes);
-            
+
             if (total_votes > 0) {
                 for (int i = 0; i < 3; i++) {
                     float percentage = (float)votes[i] / total_votes * 100;
-                    printf("%s: %d votes (%.1f%%)\n", 
+                    printf("%s: %d votes (%.1f%%)\n",
                            candidate_names[i], votes[i], percentage);
                 }
             } else {
@@ -1022,34 +1022,34 @@ int main() {
             printf(" Invalid choice!\n");
         }
     }
-    
+
     if (total_votes > 0) {
         printf("\n=== Final Election Results ===\n");
-        
+
         // Find winner
         int winner_index = 0;
         int max_votes = votes[0];
-        
+
         for (int i = 1; i < 3; i++) {
             if (votes[i] > max_votes) {
                 max_votes = votes[i];
                 winner_index = i;
             }
         }
-        
-        printf(" Winner: %s with %d votes!\n", 
+
+        printf(" Winner: %s with %d votes!\n",
                candidate_names[winner_index], max_votes);
         printf("Total votes cast: %d\n", total_votes);
-        
+
         for (int i = 0; i < 3; i++) {
             float percentage = (float)votes[i] / total_votes * 100;
-            printf("%s: %d votes (%.1f%%)\n", 
+            printf("%s: %d votes (%.1f%%)\n",
                    candidate_names[i], votes[i], percentage);
         }
     } else {
         printf("No votes were cast.\n");
     }
-    
+
     return 0;
 }
 ```
@@ -1094,7 +1094,7 @@ for (int i = 0; i < size; i++) {
 
 ---
 
- **Fantastic! You've mastered loop-based algorithms!** 
+ **Fantastic! You've mastered loop-based algorithms!**
 
 *Loops are the engines of computation. Next: Function pseudocode for modular programming! *
 
@@ -1120,50 +1120,3 @@ Key functions and their purpose:
 
 - [ ] Main function: Entry point
 - [ ] Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```
-#include <stdio.h>
-
-int main() {
-    printf("Hello, World!\n");
-    return 0;
-}
-```
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses printf to print messages to the console
-3. **Standard Library**: Includes stdio.h for input/output operations
-4. **Return Value**: Returns 0 to indicate successful execution
-5. **Best Practices**: Code is readable and uses C++ idioms
-
-### Testing Your Solution
-
-1. **Compile**: `gcc main.c -o main`
-2. **Run**: `./hello`
-3. **Expected Output**: `Hello, World!`
-
-### Common Errors & Solutions
-
-| Error | Cause | Solution |
-|-------|-------|----------|
-| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
-| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
-
-### Tips for Learning
-
-- C uses stdio.h for input/output with additional features
-- `printf` is the C standard for formatted output
-- `\n` adds a newline character in format strings
-- Format specifiers control how data is displayed (%d, %f, %s, etc.)

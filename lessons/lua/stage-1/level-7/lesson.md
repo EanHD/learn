@@ -159,7 +159,7 @@ function scope_demo()
     local local_variable = "I'm local!"
     print("Inside function: " .. global_variable)
     print("Inside function: " .. local_variable)
-    
+
     -- Functions can modify global variables (though not recommended)
     global_variable = "Modified from inside function!"
 end
@@ -179,7 +179,7 @@ function outer_function(name)
     local function inner_function()
         return "Hello from inside!"
     end
-    
+
     return name .. ", " .. inner_function()
 end
 
@@ -433,7 +433,7 @@ print(x, y, z)  -- Output: 10 20 30
 
 **Default parameters** (Lua 5.4+):
 ```
-function greet(name, greeting) 
+function greet(name, greeting)
     greeting = greeting or "Hello"  -- Use "Hello" if greeting is nil
     print(greeting .. ", " .. name .. "!")
 end
@@ -646,7 +646,7 @@ function deposit(account, amount)
         print("Deposit amount must be positive!")
         return false
     end
-    
+
     account.balance = account.balance + amount
     table.insert(account.transactions, {
         type = "deposit",
@@ -654,7 +654,7 @@ function deposit(account, amount)
         date = os.date("%Y-%m-%d"),
         balance_after = account.balance
     })
-    
+
     print("$" .. amount .. " deposited. New balance: $" .. account.balance)
     return true
 end
@@ -665,20 +665,20 @@ function withdraw(account, amount)
         print("Withdrawal amount must be positive!")
         return false
     end
-    
+
     if amount > account.balance then
         print("Insufficient funds! Current balance: $" .. account.balance)
         return false
     end
-    
+
     account.balance = account.balance - amount
     table.insert(account.transactions, {
-        type = "withdrawal", 
+        type = "withdrawal",
         amount = amount,
         date = os.date("%Y-%m-%d"),
         balance_after = account.balance
     })
-    
+
     print("$" .. amount .. " withdrawn. New balance: $" .. account.balance)
     return true
 end
@@ -693,7 +693,7 @@ end
 function get_transaction_history(account)
     print(account.name .. "'s Transaction History:")
     for i, transaction in ipairs(account.transactions) do
-        print(transaction.date .. " - " .. transaction.type .. ": $" .. 
+        print(transaction.date .. " - " .. transaction.type .. ": $" ..
               transaction.amount .. " - Balance: $" .. transaction.balance_after)
     end
 end
@@ -702,7 +702,7 @@ end
 function transfer(from_account, to_account, amount)
     if withdraw(from_account, amount) then
         deposit(to_account, amount)
-        print("Transfer of $" .. amount .. " from " .. from_account.name .. 
+        print("Transfer of $" .. amount .. " from " .. from_account.name ..
               " to " .. to_account.name .. " completed!")
         return true
     end
@@ -726,7 +726,7 @@ get_transaction_history(alex_account)
 
 ---
 
- **Excellent work! You now understand how to organize code using functions - a fundamental skill for all programmers!** 
+ **Excellent work! You now understand how to organize code using functions - a fundamental skill for all programmers!**
 
 *This completes Stage 1 of Lua learning! You've mastered the fundamentals of Lua programming. Great job!*
 
@@ -753,40 +753,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```
-print("Hello, World!")
-
-```
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard lua conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

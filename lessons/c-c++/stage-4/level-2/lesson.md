@@ -806,7 +806,7 @@ Validation      & Averages           Analysis         & File Export
 
 ---
 
- **Congratulations! You've built a powerful data processing application!** 
+ **Congratulations! You've built a powerful data processing application!**
 
 *Next: Mathematical applications with advanced formula implementations! *
 

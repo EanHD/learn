@@ -239,7 +239,7 @@ START PROGRAM
     INITIALIZE_PATRON_REGISTRY()
     INITIALIZE_CIRCULATION_RECORDS()
     INITIALIZE_RESERVATION_SYSTEM()
-    
+
     SET running TO true
     WHILE running == true DO
         DISPLAY "Library Management System"
@@ -254,7 +254,7 @@ START PROGRAM
         DISPLAY ""
         DISPLAY "Enter choice (1-5):"
         READ main_choice AS NUMBER
-        
+
         IF main_choice == 1 THEN
             HANDLE_BOOK_MANAGEMENT()
         ELSE IF main_choice == 2 THEN
@@ -286,7 +286,7 @@ PROCEDURE HANDLE_BOOK_MANAGEMENT()
         DISPLAY ""
         DISPLAY "Enter choice (1-5):"
         READ book_choice AS NUMBER
-        
+
         IF book_choice == 1 THEN
             ADD_NEW_BOOK()
         ELSE IF book_choice == 2 THEN
@@ -306,34 +306,34 @@ END PROCEDURE
 PROCEDURE ADD_NEW_BOOK()
     DISPLAY "Add New Book"
     DISPLAY "------------"
-    
+
     DISPLAY "Enter ISBN:"
     READ isbn AS STRING
-    
+
     // Check if book already exists
     IF BOOK_EXISTS(isbn) THEN
         DISPLAY "Book with this ISBN already exists!"
         RETURN
     END IF
-    
+
     DISPLAY "Enter title:"
     READ title AS STRING
-    
+
     DISPLAY "Enter author:"
     READ author AS STRING
-    
+
     DISPLAY "Enter genre:"
     READ genre AS STRING
-    
+
     DISPLAY "Enter publication year:"
     READ year AS NUMBER
-    
+
     // Generate unique book ID
     SET book_id TO GENERATE_BOOK_ID()
-    
+
     // Add to catalog
     ADD_BOOK_TO_CATALOG(book_id, isbn, title, author, genre, year, "available")
-    
+
     DISPLAY "Book added successfully! ID: " + book_id
 END PROCEDURE
 
@@ -346,12 +346,12 @@ PROCEDURE SEARCH_BOOKS()
     DISPLAY "3. Genre"
     DISPLAY "4. ISBN"
     READ search_type AS NUMBER
-    
+
     DISPLAY "Enter search term:"
     READ search_term AS STRING
-    
+
     SET results TO SEARCH_BOOK_CATALOG(search_type, search_term)
-    
+
     IF results IS EMPTY THEN
         DISPLAY "No books found matching your search."
     ELSE
@@ -375,7 +375,7 @@ PROCEDURE HANDLE_PATRON_MANAGEMENT()
         DISPLAY ""
         DISPLAY "Enter choice (1-5):"
         READ patron_choice AS NUMBER
-        
+
         IF patron_choice == 1 THEN
             REGISTER_PATRON()
         ELSE IF patron_choice == 2 THEN
@@ -395,22 +395,22 @@ END PROCEDURE
 PROCEDURE REGISTER_PATRON()
     DISPLAY "Register New Patron"
     DISPLAY "-------------------"
-    
+
     DISPLAY "Enter full name:"
     READ name AS STRING
-    
+
     DISPLAY "Enter email:"
     READ email AS STRING
-    
+
     DISPLAY "Enter phone:"
     READ phone AS STRING
-    
+
     // Generate unique patron ID
     SET patron_id TO GENERATE_PATRON_ID()
-    
+
     // Add to registry
     ADD_PATRON_TO_REGISTRY(patron_id, name, email, phone, "active", 0.00)
-    
+
     DISPLAY "Patron registered successfully! ID: " + patron_id
 END PROCEDURE
 
@@ -428,7 +428,7 @@ PROCEDURE HANDLE_CIRCULATION()
         DISPLAY ""
         DISPLAY "Enter choice (1-6):"
         READ circulation_choice AS NUMBER
-        
+
         IF circulation_choice == 1 THEN
             CHECK_OUT_BOOK()
         ELSE IF circulation_choice == 2 THEN
@@ -450,34 +450,34 @@ END PROCEDURE
 PROCEDURE CHECK_OUT_BOOK()
     DISPLAY "Check Out Book"
     DISPLAY "--------------"
-    
+
     DISPLAY "Enter patron ID:"
     READ patron_id AS STRING
-    
+
     IF NOT PATRON_EXISTS(patron_id) THEN
         DISPLAY "Patron not found!"
         RETURN
     END IF
-    
+
     // Check patron status and limits
     IF GET_PATRON_STATUS(patron_id) != "active" THEN
         DISPLAY "Patron account is not active."
         RETURN
     END IF
-    
+
     IF GET_PATRON_CHECKOUT_COUNT(patron_id) >= 3 THEN
         DISPLAY "Patron has reached maximum checkout limit (3 books)."
         RETURN
     END IF
-    
+
     DISPLAY "Enter book ID:"
     READ book_id AS STRING
-    
+
     IF NOT BOOK_EXISTS_BY_ID(book_id) THEN
         DISPLAY "Book not found!"
         RETURN
     END IF
-    
+
     IF GET_BOOK_STATUS(book_id) != "available" THEN
         DISPLAY "Book is not available for checkout."
         // Offer reservation
@@ -489,14 +489,14 @@ PROCEDURE CHECK_OUT_BOOK()
         END IF
         RETURN
     END IF
-    
+
     // Calculate due date (14 days from today)
     SET due_date TO CALCULATE_DUE_DATE(14)
-    
+
     // Process checkout
     CHECKOUT_BOOK(patron_id, book_id, due_date)
     UPDATE_BOOK_STATUS(book_id, "checked_out")
-    
+
     DISPLAY "Checkout Summary:"
     DISPLAY "Patron: " + GET_PATRON_NAME(patron_id)
     DISPLAY "Book: " + GET_BOOK_TITLE(book_id)
@@ -507,49 +507,49 @@ END PROCEDURE
 PROCEDURE RETURN_BOOK()
     DISPLAY "Return Book"
     DISPLAY "-----------"
-    
+
     DISPLAY "Enter book ID:"
     READ book_id AS STRING
-    
+
     IF NOT BOOK_EXISTS_BY_ID(book_id) THEN
         DISPLAY "Book not found!"
         RETURN
     END IF
-    
+
     IF GET_BOOK_STATUS(book_id) != "checked_out" THEN
         DISPLAY "This book is not checked out."
         RETURN
     END IF
-    
+
     // Get checkout record
     SET checkout_record TO GET_CHECKOUT_RECORD(book_id)
     SET patron_id TO checkout_record.patron_id
     SET due_date TO checkout_record.due_date
-    
+
     // Calculate any fines
     SET days_overdue TO CALCULATE_DAYS_OVERDUE(due_date)
     SET fine_amount TO 0.00
-    
+
     IF days_overdue > 0 THEN
         SET fine_amount TO days_overdue * 0.25
         DISPLAY "Book is " + days_overdue + " days overdue."
         DISPLAY "Fine amount: $" + FORMAT_CURRENCY(fine_amount)
-        
+
         // Add fine to patron account
         ADD_FINE_TO_PATRON(patron_id, fine_amount)
     END IF
-    
+
     // Process return
     RETURN_BOOK_TRANSACTION(book_id)
     UPDATE_BOOK_STATUS(book_id, "available")
-    
+
     // Check for reservations
     IF BOOK_HAS_RESERVATIONS(book_id) THEN
         SET next_reservation TO GET_NEXT_RESERVATION(book_id)
         NOTIFY_PATRON_OF_AVAILABLE_BOOK(next_reservation.patron_id, book_id)
         DISPLAY "Book is now reserved for another patron."
     END IF
-    
+
     DISPLAY "Book returned successfully!"
     IF fine_amount > 0 THEN
         DISPLAY "Please pay fine amount at the circulation desk."
@@ -569,7 +569,7 @@ PROCEDURE HANDLE_REPORTS()
         DISPLAY ""
         DISPLAY "Enter choice (1-5):"
         READ reports_choice AS NUMBER
-        
+
         IF reports_choice == 1 THEN
             GENERATE_CIRCULATION_STATISTICS()
         ELSE IF reports_choice == 2 THEN
@@ -589,9 +589,9 @@ END PROCEDURE
 PROCEDURE GENERATE_CIRCULATION_STATISTICS()
     DISPLAY "Circulation Statistics (Last 30 Days)"
     DISPLAY "====================================="
-    
+
     SET stats TO CALCULATE_CIRCULATION_STATS(30)
-    
+
     DISPLAY "Total Checkouts: " + stats.total_checkouts
     DISPLAY "Total Returns: " + stats.total_returns
     DISPLAY "Currently Checked Out: " + stats.currently_checked_out
@@ -684,7 +684,7 @@ END FUNCTION
 
 ---
 
- **Congratulations! You've designed a comprehensive library management system!** 
+ **Congratulations! You've designed a comprehensive library management system!**
 
 *This completes Stage 3: Problem to Pseudocode! Ready for Stage 4: Full Problem Solving?*
 
@@ -704,42 +704,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```rs
-fn main() {
-    println!("Hello, World!");
-}
-
-```rs
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard rust conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

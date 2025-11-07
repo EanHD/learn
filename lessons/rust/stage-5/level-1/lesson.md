@@ -7,7 +7,7 @@
 
 ### Today's Mission
 
-**Welcome to Stage 5!** 
+**Welcome to Stage 5!**
 
 You've completed Stages 1-4 and learned to:
 - Copy and understand code (Stage 1)
@@ -38,9 +38,9 @@ By completing this capstone level, you will:
 
 Your Level 1 Capstone should:
 
-**Complexity**: Moderate (3-5 main features) 
-**Code Size**: 500-1500 lines (depending on scope) 
-**Time Estimate**: 10-15 hours of focused work 
+**Complexity**: Moderate (3-5 main features)
+**Code Size**: 500-1500 lines (depending on scope)
+**Time Estimate**: 10-15 hours of focused work
 **Purpose**: Demonstrate mastery of Core Programming Concepts & Rust Principles
 
 ---
@@ -310,10 +310,10 @@ Once your core capstone is complete, consider these extensions:
 
 **Concepts You'll Need:**
 
-From **Stage 1**: Syntax, operators, basic I/O 
-From **Stage 2**: Loops, conditionals, algorithms 
-From **Stage 3**: Functions, modularity, code organization 
-From **Stage 4**: File I/O, data structures, system design 
+From **Stage 1**: Syntax, operators, basic I/O
+From **Stage 2**: Loops, conditionals, algorithms
+From **Stage 3**: Functions, modularity, code organization
+From **Stage 4**: File I/O, data structures, system design
 
 **Rust-Specific Concepts:**
 - Ownership and borrowing
@@ -437,11 +437,11 @@ Practice the code and experiment with variations!
  MUST HAVE (critical):
  - Feature A
  - Feature B
- 
+
  SHOULD HAVE (important):
  - Feature C
  - Feature D
- 
+
  NICE TO HAVE (bonus):
  - Feature E
  ```
@@ -454,7 +454,7 @@ Practice the code and experiment with variations!
  pub name: String,
  // ... other fields
  }
- 
+
  pub struct Company {
  pub employees: Vec<Person>,
  pub name: String,
@@ -484,7 +484,7 @@ Practice the code and experiment with variations!
  4. Add to collection
  5. Save to file
  6. Return success
- 
+
  Function: search_records(collection, criteria)
  1. Filter collection by criteria
  2. Return matching records
@@ -535,24 +535,24 @@ impl EntityManager {
  filename: filename.to_string(),
  }
  }
- 
+
  pub fn add(&mut self, entity: Entity) -> Result<(), Box<dyn Error>> {
  // Validation
  self.entities.push(entity);
  self.save()?;
  Ok(())
  }
- 
+
  pub fn save(&self) -> Result<(), Box<dyn Error>> {
  // Serialization
  Ok(())
  }
- 
+
  pub fn load(&mut self) -> Result<(), Box<dyn Error>> {
  // Deserialization
  Ok(())
  }
- 
+
  pub fn search(&self, criteria: &str) -> Vec<&Entity> {
  self.entities.iter()
  .filter(|e| e.name.contains(criteria))
@@ -610,14 +610,14 @@ Result: PASS / FAIL
 #[cfg(test)]
 mod tests {
  use super::*;
- 
+
  #[test]
  fn test_add_entity() {
  let mut manager = EntityManager::new("test.json");
  let entity = Entity { id: 1, name: "Test".to_string() };
  assert!(manager.add(entity).is_ok());
  }
- 
+
  #[test]
  fn test_search_empty() {
  let manager = EntityManager::new("test.json");
@@ -697,14 +697,14 @@ mod tests {
 
 **An excellent capstone has:**
 
- **Clear Purpose**: Solves a real or interesting problem 
- **Complete Implementation**: All features work, no partial functionality 
- **Robust Error Handling**: Uses Result types, handles edge cases 
- **Professional Code**: Follows Rust conventions, no warnings 
- **Thoughtful Design**: Data structures fit the problem 
- **Thorough Testing**: Unit tests + documented test cases 
- **Great Documentation**: README, doc comments, usage guide 
- **Personal Touch**: Shows creativity and individuality 
+ **Clear Purpose**: Solves a real or interesting problem
+ **Complete Implementation**: All features work, no partial functionality
+ **Robust Error Handling**: Uses Result types, handles edge cases
+ **Professional Code**: Follows Rust conventions, no warnings
+ **Thoughtful Design**: Data structures fit the problem
+ **Thorough Testing**: Unit tests + documented test cases
+ **Great Documentation**: README, doc comments, usage guide
+ **Personal Touch**: Shows creativity and individuality
 
 ---
 
@@ -739,7 +739,7 @@ mod tests {
 ### Example 1: Personal Finance Manager
 ```
 PURPOSE: Help track personal spending and savings goals
-FEATURES: 
+FEATURES:
  - Add/categorize expenses
  - Set and track savings goals
  - Generate spending reports
@@ -772,11 +772,11 @@ COMPLEXITY: Moderate to Advanced (8-12 hours)
 
 ---
 
- **Congratulations on reaching Stage 5!** 
+ **Congratulations on reaching Stage 5!**
 
 You've completed your programming education journey. Now create something amazing!
 
-*Your capstone project is your proof to the world that you can program.* 
+*Your capstone project is your proof to the world that you can program.*
 
 
 
@@ -809,42 +809,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```rs
-fn main() {
-    println!("Hello, World!");
-}
-
-```rs
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard rust conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

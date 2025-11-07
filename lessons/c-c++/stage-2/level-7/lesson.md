@@ -604,7 +604,7 @@ Function: display_analysis(text)
     Set avg_word_length = calculate_average_word_length(text, word_count)
     Call find_most_frequent_character(text)
     Get most_frequent and freq_count from result
-    
+
     Display "=== Text Analysis Results ==="
     Display "Characters: " + char_count
     Display "Words: " + word_count
@@ -788,17 +788,17 @@ void display_result(const char* operation, float a, float b, float result) {
 
 int main() {
     int running = 1;
-    
+
     while (running) {
         display_menu();
         int choice;
         scanf("%d", &choice);
-        
+
         if (choice >= 1 && choice <= 4) {
             float num1 = get_number("Enter first number: ");
             float num2 = get_number("Enter second number: ");
             float result;
-            
+
             switch (choice) {
                 case 1:
                     result = perform_addition(num1, num2);
@@ -825,7 +825,7 @@ int main() {
             printf(" Invalid choice!\n");
         }
     }
-    
+
     printf("Thank you for using the calculator! \n");
     return 0;
 }
@@ -859,12 +859,12 @@ int add_student(char students[50][50], float grades[50], int* count) {
     if (*count < 50) {
         char name[50];
         float grade;
-        
+
         printf("Enter student name: ");
         scanf("%s", name);
         printf("Enter grade (0-100): ");
         scanf("%f", &grade);
-        
+
         if (grade >= 0 && grade <= 100) {
             strcpy(students[*count], name);
             grades[*count] = grade;
@@ -903,12 +903,12 @@ float calculate_class_average(float grades[50], int count) {
     return 0;
 }
 
-void find_top_performer(char students[50][50], float grades[50], int count, 
+void find_top_performer(char students[50][50], float grades[50], int count,
                        char* top_student, float* max_grade) {
     if (count > 0) {
         *max_grade = grades[0];
         strcpy(top_student, students[0]);
-        
+
         for (int i = 1; i < count; i++) {
             if (grades[i] > *max_grade) {
                 *max_grade = grades[i];
@@ -926,12 +926,12 @@ int main() {
     float grades[50];
     int student_count = 0;
     int running = 1;
-    
+
     while (running) {
         display_main_menu();
         int choice;
         scanf("%d", &choice);
-        
+
         switch (choice) {
             case 1:
                 add_student(students, grades, &student_count);
@@ -952,7 +952,7 @@ int main() {
                 char top_student[50];
                 float max_grade;
                 find_top_performer(students, grades, student_count, top_student, &max_grade);
-                
+
                 if (strcmp(top_student, "No students") != 0) {
                     printf(" Top Performer: %s (%.1f%%)\n", top_student, max_grade);
                 } else {
@@ -968,7 +968,7 @@ int main() {
                 break;
         }
     }
-    
+
     printf("Thank you for using Grade Management System! \n");
     return 0;
 }
@@ -1002,21 +1002,21 @@ void display_library_menu() {
 int add_book(char titles[100][100], char authors[100][50], int available[100], int* count) {
     if (*count < 100) {
         char title[100], author[50];
-        
+
         printf("Enter book title: ");
         getchar(); // Clear newline
         fgets(title, sizeof(title), stdin);
         title[strcspn(title, "\n")] = '\0'; // Remove newline
-        
+
         printf("Enter author name: ");
         fgets(author, sizeof(author), stdin);
         author[strcspn(author, "\n")] = '\0';
-        
+
         strcpy(titles[*count], title);
         strcpy(authors[*count], author);
         available[*count] = 1; // true
         (*count)++;
-        
+
         printf(" Book added successfully!\n");
         return 1;
     } else {
@@ -1025,11 +1025,11 @@ int add_book(char titles[100][100], char authors[100][50], int available[100], i
     }
 }
 
-int search_books(char titles[100][100], char authors[100][50], int available[100], 
+int search_books(char titles[100][100], char authors[100][50], int available[100],
                 int count, const char* search_term) {
     int found_count = 0;
     printf("=== Search Results for '%s' ===\n", search_term);
-    
+
     for (int i = 0; i < count; i++) {
         if (strstr(titles[i], search_term) != NULL || strstr(authors[i], search_term) != NULL) {
             printf(" %s by %s\n", titles[i], authors[i]);
@@ -1037,11 +1037,11 @@ int search_books(char titles[100][100], char authors[100][50], int available[100
             found_count++;
         }
     }
-    
+
     if (found_count == 0) {
         printf(" No books found matching '%s'\n", search_term);
     }
-    
+
     return found_count;
 }
 
@@ -1087,12 +1087,12 @@ int main() {
     int available[100];
     int book_count = 0;
     int running = 1;
-    
+
     while (running) {
         display_library_menu();
         int choice;
         scanf("%d", &choice);
-        
+
         switch (choice) {
             case 1:
                 add_book(titles, authors, available, &book_count);
@@ -1135,7 +1135,7 @@ int main() {
                 break;
         }
     }
-    
+
     printf("Thank you for using Library Management System! \n");
     return 0;
 }
@@ -1158,10 +1158,10 @@ int main() {
 
 void generate_question(int* num1, char* operation, int* num2) {
     *operation = "+-*/"[rand() % 4]; // Random operation
-    
+
     *num1 = rand() % 20 + 1;
     *num2 = rand() % 20 + 1;
-    
+
     // Ensure clean division
     if (*operation == '/') {
         *num1 = *num2 * (rand() % 10 + 1);
@@ -1202,10 +1202,10 @@ int check_answer(int user_answer, int correct_answer) {
 
 void display_score(int correct_answers, int total_questions) {
     float percentage = (float)correct_answers / total_questions * 100;
-    
+
     printf("=== Quiz Complete ===\n");
     printf("Score: %d/%d (%.1f%%)\n", correct_answers, total_questions, percentage);
-    
+
     if (percentage >= 90) {
         printf(" Excellent! Math Master!\n");
     } else if (percentage >= 70) {
@@ -1219,39 +1219,39 @@ void display_score(int correct_answers, int total_questions) {
 
 int main() {
     srand(time(NULL)); // Seed random number generator
-    
+
     printf("=== Math Quiz Game ===\n");
     printf("How many questions? (1-20): ");
     int num_questions;
     scanf("%d", &num_questions);
-    
+
     while (num_questions < 1 || num_questions > 20) {
         printf(" Please enter 1-20 questions.\n");
         scanf("%d", &num_questions);
     }
-    
+
     int correct_count = 0;
-    
+
     for (int question_num = 1; question_num <= num_questions; question_num++) {
         int num1, num2;
         char operation;
-        
+
         generate_question(&num1, &operation, &num2);
         display_question(num1, operation, num2, question_num);
-        
+
         int correct_answer = calculate_answer(num1, operation, num2);
         int user_answer = get_user_answer();
-        
+
         if (check_answer(user_answer, correct_answer)) {
             correct_count++;
         }
-        
+
         printf("\n");
     }
-    
+
     display_score(correct_count, num_questions);
     printf("Thanks for playing! \n");
-    
+
     return 0;
 }
 ```
@@ -1311,8 +1311,8 @@ float withdraw_money(float balance, float amount) {
     }
 }
 
-int add_transaction(char transactions[100][20], float amounts[100], 
-                   char descriptions[100][30], int* count, float amount, 
+int add_transaction(char transactions[100][20], float amounts[100],
+                   char descriptions[100][30], int* count, float amount,
                    const char* description) {
     if (*count < 100) {
         // Simplified transaction recording
@@ -1327,7 +1327,7 @@ int add_transaction(char transactions[100][20], float amounts[100],
     }
 }
 
-void display_transaction_history(char transactions[100][20], float amounts[100], 
+void display_transaction_history(char transactions[100][20], float amounts[100],
                                char descriptions[100][30], int count) {
     if (count > 0) {
         printf("=== Transaction History ===\n");
@@ -1346,12 +1346,12 @@ int main() {
     char descriptions[100][30];
     int transaction_count = 0;
     int running = 1;
-    
+
     while (running) {
         display_account_menu();
         int choice;
         scanf("%d", &choice);
-        
+
         switch (choice) {
             case 1:
                 display_balance(balance);
@@ -1363,7 +1363,7 @@ int main() {
                 float old_balance = balance;
                 balance = deposit_money(balance, amount);
                 if (amount > 0) {
-                    add_transaction(transactions, amounts, descriptions, 
+                    add_transaction(transactions, amounts, descriptions,
                                    &transaction_count, amount, "Deposit");
                 }
                 break;
@@ -1375,7 +1375,7 @@ int main() {
                 float old_balance = balance;
                 balance = withdraw_money(balance, amount);
                 if (amount > 0 && amount <= old_balance) {
-                    add_transaction(transactions, amounts, descriptions, 
+                    add_transaction(transactions, amounts, descriptions,
                                    &transaction_count, -amount, "Withdrawal");
                 }
                 break;
@@ -1391,7 +1391,7 @@ int main() {
                 break;
         }
     }
-    
+
     printf("Thank you for banking with us! \n");
     return 0;
 }
@@ -1415,7 +1415,7 @@ int main() {
 int count_words(const char* text) {
     int word_count = 0;
     int in_word = 0;
-    
+
     for (int i = 0; text[i] != '\0'; i++) {
         if (isalpha(text[i]) && !in_word) {
             in_word = 1;
@@ -1424,19 +1424,19 @@ int count_words(const char* text) {
             in_word = 0;
         }
     }
-    
+
     return word_count;
 }
 
 int count_sentences(const char* text) {
     int sentence_count = 0;
-    
+
     for (int i = 0; text[i] != '\0'; i++) {
         if (text[i] == '.' || text[i] == '!' || text[i] == '?') {
             sentence_count++;
         }
     }
-    
+
     return sentence_count;
 }
 
@@ -1446,11 +1446,11 @@ int count_characters(const char* text) {
 
 float calculate_average_word_length(const char* text, int word_count) {
     if (word_count == 0) return 0.0;
-    
+
     int total_length = 0;
     int current_word_length = 0;
     int in_word = 0;
-    
+
     for (int i = 0; text[i] != '\0'; i++) {
         if (isalpha(text[i])) {
             in_word = 1;
@@ -1461,34 +1461,34 @@ float calculate_average_word_length(const char* text, int word_count) {
             in_word = 0;
         }
     }
-    
+
     // Handle last word
     if (in_word) {
         total_length += current_word_length;
     }
-    
+
     return (float)total_length / word_count;
 }
 
 void find_most_frequent_character(const char* text, char* most_frequent, int* freq_count) {
     int char_counts[256] = {0};
-    
+
     for (int i = 0; text[i] != '\0'; i++) {
         if (text[i] != ' ') {
             char_counts[(unsigned char)text[i]]++;
         }
     }
-    
+
     int max_count = 0;
     char most_freq = ' ';
-    
+
     for (int i = 0; i < 256; i++) {
         if (char_counts[i] > max_count) {
             max_count = char_counts[i];
             most_freq = (char)i;
         }
     }
-    
+
     *most_frequent = most_freq;
     *freq_count = max_count;
 }
@@ -1498,11 +1498,11 @@ void display_analysis(const char* text) {
     int sentence_count = count_sentences(text);
     int char_count = count_characters(text);
     float avg_word_length = calculate_average_word_length(text, word_count);
-    
+
     char most_frequent;
     int freq_count;
     find_most_frequent_character(text, &most_frequent, &freq_count);
-    
+
     printf("=== Text Analysis Results ===\n");
     printf("Characters: %d\n", char_count);
     printf("Words: %d\n", word_count);
@@ -1514,19 +1514,19 @@ void display_analysis(const char* text) {
 int main() {
     printf("=== Text Analyzer ===\n");
     printf("Enter text to analyze (max 1000 characters):\n");
-    
+
     char text[1001];
     fgets(text, sizeof(text), stdin);
-    
+
     // Remove trailing newline
     text[strcspn(text, "\n")] = '\0';
-    
+
     if (strlen(text) > 0) {
         display_analysis(text);
     } else {
         printf(" No text entered.\n");
     }
-    
+
     printf("Analysis complete! \n");
     return 0;
 }
@@ -1560,7 +1560,7 @@ int main() {
 
 ---
 
- **Congratulations! You've mastered function-based programming!** 
+ **Congratulations! You've mastered function-based programming!**
 
 *Functions are the cornerstone of good software design. Next: Stage 3 - Problem to Pseudocode! *
 
@@ -1586,50 +1586,3 @@ Key functions and their purpose:
 
 - [ ] Main function: Entry point
 - [ ] Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```
-#include <stdio.h>
-
-int main() {
-    printf("Hello, World!\n");
-    return 0;
-}
-```
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses printf to print messages to the console
-3. **Standard Library**: Includes stdio.h for input/output operations
-4. **Return Value**: Returns 0 to indicate successful execution
-5. **Best Practices**: Code is readable and uses C++ idioms
-
-### Testing Your Solution
-
-1. **Compile**: `gcc main.c -o main`
-2. **Run**: `./hello`
-3. **Expected Output**: `Hello, World!`
-
-### Common Errors & Solutions
-
-| Error | Cause | Solution |
-|-------|-------|----------|
-| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
-| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
-
-### Tips for Learning
-
-- C++ is a superset of C with additional features
-- `printf` is the C standard for formatted output
-- `\n` adds a newline character in format strings
-- Format specifiers control how data is displayed (%d, %f, %s, etc.)

@@ -673,7 +673,7 @@ Method: calculateItemValue(item)
 import java.util.Scanner;
 
 public class ModularCalculator {
-    
+
     public static void displayMenu() {
         System.out.println("\n=== Calculator Menu ===");
         System.out.println("1. Addition");
@@ -683,24 +683,24 @@ public class ModularCalculator {
         System.out.println("5. Exit");
         System.out.print("Choose operation (1-5): ");
     }
-    
+
     public static double getNumber(Scanner scanner, String prompt) {
         System.out.print(prompt);
         return scanner.nextDouble();
     }
-    
+
     public static double performAddition(double a, double b) {
         return a + b;
     }
-    
+
     public static double performSubtraction(double a, double b) {
         return a - b;
     }
-    
+
     public static double performMultiplication(double a, double b) {
         return a * b;
     }
-    
+
     public static double performDivision(double a, double b) {
         if (b == 0) {
             System.out.println(" Error: Division by zero!");
@@ -709,24 +709,24 @@ public class ModularCalculator {
             return a / b;
         }
     }
-    
+
     public static void displayResult(String operation, double a, double b, double result) {
         System.out.printf("Result: %.2f %s %.2f = %.2f\n", a, operation, b, result);
     }
-    
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
-        
+
         while (running) {
             displayMenu();
             int choice = scanner.nextInt();
-            
+
             if (choice >= 1 && choice <= 4) {
                 double num1 = getNumber(scanner, "Enter first number: ");
                 double num2 = getNumber(scanner, "Enter second number: ");
                 double result;
-                
+
                 switch (choice) {
                     case 1:
                         result = performAddition(num1, num2);
@@ -753,7 +753,7 @@ public class ModularCalculator {
                 System.out.println(" Invalid choice!");
             }
         }
-        
+
         System.out.println("Thank you for using the calculator! ");
         scanner.close();
     }
@@ -785,7 +785,7 @@ public class ModularCalculator {
 import java.util.Scanner;
 
 public class GradeManagement {
-    
+
     public static void displayMainMenu() {
         System.out.println("\n=== Grade Management System ===");
         System.out.println("1. Add Student");
@@ -795,7 +795,7 @@ public class GradeManagement {
         System.out.println("5. Exit");
         System.out.print("Choose option (1-5): ");
     }
-    
+
     public static int addStudent(String[] students, double[] grades, int count, Scanner scanner) {
         if (count < 50) {
             scanner.nextLine(); // Consume newline
@@ -803,7 +803,7 @@ public class GradeManagement {
             String name = scanner.nextLine();
             System.out.print("Enter grade (0-100): ");
             double grade = scanner.nextDouble();
-            
+
             if (grade >= 0 && grade <= 100) {
                 students[count] = name;
                 grades[count] = grade;
@@ -818,7 +818,7 @@ public class GradeManagement {
             return count;
         }
     }
-    
+
     public static void displayAllStudents(String[] students, double[] grades, int count) {
         if (count > 0) {
             System.out.println("\n=== Student List ===");
@@ -829,7 +829,7 @@ public class GradeManagement {
             System.out.println("ℹ No students in the system.");
         }
     }
-    
+
     public static double calculateClassAverage(double[] grades, int count) {
         if (count > 0) {
             double sum = 0;
@@ -841,36 +841,36 @@ public class GradeManagement {
             return 0;
         }
     }
-    
+
     public static void findTopPerformer(String[] students, double[] grades, int count) {
         if (count > 0) {
             double maxGrade = grades[0];
             String topStudent = students[0];
-            
+
             for (int i = 1; i < count; i++) {
                 if (grades[i] > maxGrade) {
                     maxGrade = grades[i];
                     topStudent = students[i];
                 }
             }
-            
+
             System.out.printf(" Top Performer: %s (%.1f%%)\n", topStudent, maxGrade);
         } else {
             System.out.println("ℹ No students in the system.");
         }
     }
-    
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String[] students = new String[50];
         double[] grades = new double[50];
         int studentCount = 0;
         boolean running = true;
-        
+
         while (running) {
             displayMainMenu();
             int choice = scanner.nextInt();
-            
+
             switch (choice) {
                 case 1:
                     studentCount = addStudent(students, grades, studentCount, scanner);
@@ -897,7 +897,7 @@ public class GradeManagement {
                     break;
             }
         }
-        
+
         System.out.println("Thank you for using Grade Management System! ");
         scanner.close();
     }
@@ -928,7 +928,7 @@ public class GradeManagement {
 import java.util.Scanner;
 
 public class BankingSystem {
-    
+
     public static void displayBankMenu() {
         System.out.println("\n=== Banking System ===");
         System.out.println("1. Deposit");
@@ -938,7 +938,7 @@ public class BankingSystem {
         System.out.println("5. Exit");
         System.out.print("Choose option (1-5): ");
     }
-    
+
     public static double deposit(double balance, double amount) {
         if (amount > 0) {
             double newBalance = balance + amount;
@@ -950,7 +950,7 @@ public class BankingSystem {
             return balance;
         }
     }
-    
+
     public static double withdraw(double balance, double amount) {
         if (amount > 0 && amount <= balance) {
             double newBalance = balance - amount;
@@ -965,11 +965,11 @@ public class BankingSystem {
             return balance;
         }
     }
-    
+
     public static void displayBalance(double balance) {
         System.out.printf(" Current Balance: $%.2f\n", balance);
     }
-    
+
     public static int addTransaction(String[] transactions, int count, String type, double amount) {
         if (count < 100) {
             transactions[count] = String.format("%s $%.2f", type, amount);
@@ -978,7 +978,7 @@ public class BankingSystem {
             return count;
         }
     }
-    
+
     public static void displayTransactions(String[] transactions, int count) {
         if (count > 0) {
             System.out.println("\n=== Transaction History ===");
@@ -989,18 +989,18 @@ public class BankingSystem {
             System.out.println("ℹ No transactions yet.");
         }
     }
-    
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double balance = 1000.00;
         String[] transactions = new String[100];
         int transactionCount = 0;
         boolean running = true;
-        
+
         while (running) {
             displayBankMenu();
             int choice = scanner.nextInt();
-            
+
             switch (choice) {
                 case 1:
                     System.out.print("Enter deposit amount: $");
@@ -1008,7 +1008,7 @@ public class BankingSystem {
                     double oldBalance = balance;
                     balance = deposit(balance, depositAmount);
                     if (balance != oldBalance) {
-                        transactionCount = addTransaction(transactions, transactionCount, 
+                        transactionCount = addTransaction(transactions, transactionCount,
                                                         "Deposit", depositAmount);
                     }
                     break;
@@ -1018,7 +1018,7 @@ public class BankingSystem {
                     oldBalance = balance;
                     balance = withdraw(balance, withdrawAmount);
                     if (balance != oldBalance) {
-                        transactionCount = addTransaction(transactions, transactionCount, 
+                        transactionCount = addTransaction(transactions, transactionCount,
                                                         "Withdrawal", withdrawAmount);
                     }
                     break;
@@ -1036,7 +1036,7 @@ public class BankingSystem {
                     break;
             }
         }
-        
+
         System.out.println("Thank you for banking with us! ");
         scanner.close();
     }
@@ -1068,7 +1068,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class StatisticsCalculator {
-    
+
     public static void displayStatsMenu() {
         System.out.println("\n=== Statistics Calculator ===");
         System.out.println("1. Enter Data");
@@ -1079,11 +1079,11 @@ public class StatisticsCalculator {
         System.out.println("6. Exit");
         System.out.print("Choose option (1-6): ");
     }
-    
+
     public static int enterData(double[] data, Scanner scanner) {
         System.out.print("How many numbers to enter? ");
         int count = scanner.nextInt();
-        
+
         if (count > 0 && count <= 100) {
             for (int i = 0; i < count; i++) {
                 System.out.print("Enter number " + (i + 1) + ": ");
@@ -1096,7 +1096,7 @@ public class StatisticsCalculator {
             return 0;
         }
     }
-    
+
     public static double calculateMean(double[] data, int count) {
         if (count > 0) {
             double sum = 0;
@@ -1108,13 +1108,13 @@ public class StatisticsCalculator {
             return 0;
         }
     }
-    
+
     public static double calculateMedian(double[] data, int count) {
         if (count > 0) {
             // Create copy to avoid modifying original
             double[] sorted = Arrays.copyOf(data, count);
             Arrays.sort(sorted);
-            
+
             if (count % 2 == 1) {
                 return sorted[count / 2];
             } else {
@@ -1126,12 +1126,12 @@ public class StatisticsCalculator {
             return 0;
         }
     }
-    
+
     public static double calculateMode(double[] data, int count) {
         if (count > 0) {
             int maxFrequency = 0;
             double mode = data[0];
-            
+
             for (int i = 0; i < count; i++) {
                 int frequency = 0;
                 for (int j = 0; j < count; j++) {
@@ -1139,19 +1139,19 @@ public class StatisticsCalculator {
                         frequency++;
                     }
                 }
-                
+
                 if (frequency > maxFrequency) {
                     maxFrequency = frequency;
                     mode = data[i];
                 }
             }
-            
+
             return mode;
         } else {
             return 0;
         }
     }
-    
+
     public static void displayAllStats(double[] data, int count) {
         if (count > 0) {
             System.out.println("\n=== Statistical Summary ===");
@@ -1163,17 +1163,17 @@ public class StatisticsCalculator {
             System.out.println("ℹ No data entered yet.");
         }
     }
-    
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double[] data = new double[100];
         int dataCount = 0;
         boolean running = true;
-        
+
         while (running) {
             displayStatsMenu();
             int choice = scanner.nextInt();
-            
+
             switch (choice) {
                 case 1:
                     dataCount = enterData(data, scanner);
@@ -1210,7 +1210,7 @@ public class StatisticsCalculator {
                     break;
             }
         }
-        
+
         System.out.println("Thank you for using Statistics Calculator! ");
         scanner.close();
     }
@@ -1241,7 +1241,7 @@ public class StatisticsCalculator {
 import java.util.Scanner;
 
 public class TextAnalyzer {
-    
+
     public static void displayTextMenu() {
         System.out.println("\n=== Text Analyzer ===");
         System.out.println("1. Enter Text");
@@ -1253,7 +1253,7 @@ public class TextAnalyzer {
         System.out.println("7. Exit");
         System.out.print("Choose option (1-7): ");
     }
-    
+
     public static String enterText(Scanner scanner) {
         scanner.nextLine(); // Consume newline
         System.out.print("Enter text: ");
@@ -1261,12 +1261,12 @@ public class TextAnalyzer {
         System.out.println(" Text entered successfully!");
         return text;
     }
-    
+
     public static int countWords(String text) {
         if (text.isEmpty()) {
             return 0;
         }
-        
+
         int count = 1;
         for (int i = 0; i < text.length(); i++) {
             if (text.charAt(i) == ' ') {
@@ -1275,15 +1275,15 @@ public class TextAnalyzer {
         }
         return count;
     }
-    
+
     public static int countCharacters(String text) {
         return text.length();
     }
-    
+
     public static int countVowels(String text) {
         int count = 0;
         String vowels = "aeiouAEIOU";
-        
+
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
             if (vowels.indexOf(c) != -1) {
@@ -1292,7 +1292,7 @@ public class TextAnalyzer {
         }
         return count;
     }
-    
+
     public static String reverseText(String text) {
         StringBuilder reversed = new StringBuilder();
         for (int i = text.length() - 1; i >= 0; i--) {
@@ -1300,7 +1300,7 @@ public class TextAnalyzer {
         }
         return reversed.toString();
     }
-    
+
     public static void displayAllAnalysis(String text) {
         if (!text.isEmpty()) {
             System.out.println("\n=== Text Analysis Results ===");
@@ -1313,16 +1313,16 @@ public class TextAnalyzer {
             System.out.println("ℹ No text entered yet.");
         }
     }
-    
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String text = "";
         boolean running = true;
-        
+
         while (running) {
             displayTextMenu();
             int choice = scanner.nextInt();
-            
+
             switch (choice) {
                 case 1:
                     text = enterText(scanner);
@@ -1366,7 +1366,7 @@ public class TextAnalyzer {
                     break;
             }
         }
-        
+
         System.out.println("Thank you for using Text Analyzer! ");
         scanner.close();
     }
@@ -1455,6 +1455,6 @@ public static void handleChoice(int choice, /* parameters */) {
 
 ---
 
- **Congratulations! You've mastered method-based programming in Java!** 
+ **Congratulations! You've mastered method-based programming in Java!**
 
 *You've completed Stage 2! You can now translate pseudocode into well-organized, modular Java programs. Next stages will challenge you with problem-solving and algorithm design! *

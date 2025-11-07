@@ -160,7 +160,7 @@ print("=== Alternative: Using Table as Switch ===")
 local days = {
     [1] = "Monday - start of the work week",
     [2] = "Tuesday",
-    [3] = "Wednesday - middle of the week", 
+    [3] = "Wednesday - middle of the week",
     [4] = "Thursday",
     [5] = "Friday - weekend is almost here!",
     [6] = "Saturday - weekend fun!",
@@ -565,7 +565,7 @@ end
 
 ---
 
- **Excellent work! You now understand how to make your programs make intelligent decisions!** 
+ **Excellent work! You now understand how to make your programs make intelligent decisions!**
 
 *Ready for the next challenge? Let's learn about loops and repetition!*
 
@@ -592,40 +592,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```
-print("Hello, World!")
-
-```
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard lua conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

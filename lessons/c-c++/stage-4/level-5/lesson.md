@@ -1031,7 +1031,7 @@ Collection    & Trend Analysis     Analysis & Scoring  & Prioritization      Gui
 
 ---
 
- **Congratulations! You've built an intelligent decision support system!** 
+ **Congratulations! You've built an intelligent decision support system!**
 
 *Next: Automated applications with task scheduling and batch processing! *
 

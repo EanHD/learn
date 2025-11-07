@@ -361,21 +361,21 @@ int main() {
     float total = 0.0;
     int item_count = 0;
     float price;
-    
+
     printf("Enter price of item 1 (or 0 to finish): ");
     scanf("%f", &price);
-    
+
     while (price != 0) {
         total = total + price;
         item_count = item_count + 1;
-        
+
         printf("Enter price of item %d (or 0 to finish): ", item_count + 1);
         scanf("%f", &price);
     }
-    
+
     printf("Items purchased: %d\n", item_count);
     printf("Total cost: $%.2f\n", total);
-    
+
     return 0;
 }
 ```
@@ -398,24 +398,24 @@ int main() {
     int is_valid = 0;  // 0 = false, 1 = true
     char correct_password[] = "secret123";
     char user_input[50];
-    
+
     while (attempts < 3 && is_valid == 0) {
         attempts = attempts + 1;
-        
+
         printf("Enter password (attempt %d/3): ", attempts);
         scanf("%s", user_input);
-        
+
         if (strcmp(user_input, correct_password) == 0) {
             is_valid = 1;
         }
     }
-    
+
     if (is_valid == 1) {
         printf("Access granted! \n");
     } else {
         printf("Access denied! \n");
     }
-    
+
     return 0;
 }
 ```
@@ -437,11 +437,11 @@ int main() {
     int student_count = 0;
     int has_more_students = 1;  // 1 = true, 0 = false
     float score;
-    
+
     while (has_more_students == 1) {
         printf("Enter score for student %d (or -1 to finish): ", student_count + 1);
         scanf("%f", &score);
-        
+
         if (score == -1) {
             has_more_students = 0;
         } else {
@@ -449,7 +449,7 @@ int main() {
             student_count = student_count + 1;
         }
     }
-    
+
     if (student_count > 0) {
         float average = total_score / student_count;
         printf("Class average: %.1f%%\n", average);
@@ -457,7 +457,7 @@ int main() {
     } else {
         printf("No students entered\n");
     }
-    
+
     return 0;
 }
 ```
@@ -479,15 +479,15 @@ int main() {
     int guess_count = 0;
     int game_won = 0;  // 0 = false, 1 = true
     int user_guess;
-    
+
     printf("I'm thinking of a number between 1-100!\n");
-    
+
     while (game_won == 0) {
         guess_count = guess_count + 1;
-        
+
         printf("Guess #%d: ", guess_count);
         scanf("%d", &user_guess);
-        
+
         if (user_guess == secret_number) {
             game_won = 1;
             printf("Correct! You won in %d guesses! \n", guess_count);
@@ -499,9 +499,9 @@ int main() {
             }
         }
     }
-    
+
     printf("Thanks for playing!\n");
-    
+
     return 0;
 }
 ```
@@ -524,15 +524,15 @@ int main() {
     int is_running = 1;  // 1 = true, 0 = false
     int user_choice;
     float amount;
-    
+
     printf("Welcome to Bank Account Manager\n");
     printf("Initial balance: $%.2f\n", balance);
-    
+
     while (is_running == 1) {
         printf("\n1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit\n");
         printf("Enter choice: ");
         scanf("%d", &user_choice);
-        
+
         if (user_choice == 1) {
             printf("Enter deposit amount: $");
             scanf("%f", &amount);
@@ -558,9 +558,9 @@ int main() {
             printf("Invalid choice!\n");
         }
     }
-    
+
     printf("Thank you for banking with us!\n");
-    
+
     return 0;
 }
 ```
@@ -584,34 +584,34 @@ int main() {
     float lowest_temp = 1000.0;
     int reading_count = 0;
     float temperature;
-    
+
     printf("Daily Temperature Tracker\n");
-    
+
     while (reading_count < 24) {
         reading_count = reading_count + 1;
-        
+
         printf("Enter temperature reading #%d (°F): ", reading_count);
         scanf("%f", &temperature);
-        
+
         total_temperature = total_temperature + temperature;
-        
+
         if (temperature > highest_temp) {
             highest_temp = temperature;
         }
-        
+
         if (temperature < lowest_temp) {
             lowest_temp = temperature;
         }
     }
-    
+
     float average_temp = total_temperature / 24;
-    
+
     printf("\nTemperature Summary:\n");
     printf("Average: %.1f°F\n", average_temp);
     printf("Highest: %.1f°F\n", highest_temp);
     printf("Lowest: %.1f°F\n", lowest_temp);
     printf("Readings taken: %d\n", reading_count);
-    
+
     return 0;
 }
 ```
@@ -674,7 +674,7 @@ if (condition) {
 
 ---
 
- **Excellent! You now understand how variables work in algorithms and code!** 
+ **Excellent! You now understand how variables work in algorithms and code!**
 
 *Variables are the foundation of programming logic. Next: Mathematical operations in pseudocode! *
 
@@ -700,50 +700,3 @@ Key functions and their purpose:
 
 - [ ] Main function: Entry point
 - [ ] Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```
-#include <stdio.h>
-
-int main() {
-    printf("Hello, World!\n");
-    return 0;
-}
-```
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard C++ conventions with proper imports and main function
-2. **Output**: Uses printf to print messages to the console
-3. **Standard Library**: Includes stdio.h for input/output operations
-4. **Return Value**: Returns 0 to indicate successful execution
-5. **Best Practices**: Code is readable and uses C++ idioms
-
-### Testing Your Solution
-
-1. **Compile**: `gcc main.c -o main`
-2. **Run**: `./hello`
-3. **Expected Output**: `Hello, World!`
-
-### Common Errors & Solutions
-
-| Error | Cause | Solution |
-|-------|-------|----------|
-| `command not found: gcc` | Compiler not installed | `sudo apt install gcc` (Ubuntu) |
-| `undefined reference to main` | Missing main function | Ensure `int main()` exists |
-| `error: implicit declaration of function 'printf'` | Missing stdio.h | Add `#include <stdio.h>` |
-
-### Tips for Learning
-
-- C uses stdio.h for input/output with additional features
-- `printf` is the C standard for formatted output
-- `\n` adds a newline character in format strings
-- Format specifiers control how data is displayed (%d, %f, %s, etc.)

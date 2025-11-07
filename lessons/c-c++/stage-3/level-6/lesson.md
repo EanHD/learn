@@ -506,7 +506,7 @@ For month from 1 to (years * 12):
 
 ---
 
- **Congratulations! You've mastered repetitive algorithms!** 
+ **Congratulations! You've mastered repetitive algorithms!**
 
 *Next: Complex system problems with multi-component integration! *
 

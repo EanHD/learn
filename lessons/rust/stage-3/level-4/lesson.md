@@ -198,7 +198,7 @@ Display exit message
 ```
 START PROGRAM
     SET balance TO 1000.00
-    
+
     SET running TO true
     WHILE running == true DO
         // Display menu
@@ -214,18 +214,18 @@ START PROGRAM
         DISPLAY ""
         DISPLAY "Enter your choice (1-4):"
         READ choice AS NUMBER
-        
+
         // Process choice
         IF choice == 1 THEN
             // Check balance
             DISPLAY "Your current balance is: $" + balance
             DISPLAY ""
-            
+
         ELSE IF choice == 2 THEN
             // Deposit
             DISPLAY "Enter deposit amount:"
             READ deposit_amount AS NUMBER
-            
+
             IF deposit_amount > 0 THEN
                 SET balance TO balance + deposit_amount
                 DISPLAY "Deposit successful! New balance: $" + balance
@@ -233,12 +233,12 @@ START PROGRAM
                 DISPLAY "Invalid deposit amount. Please enter a positive number."
             END IF
             DISPLAY ""
-            
+
         ELSE IF choice == 3 THEN
             // Withdraw
             DISPLAY "Enter withdrawal amount:"
             READ withdrawal_amount AS NUMBER
-            
+
             IF withdrawal_amount > 0 AND withdrawal_amount <= balance THEN
                 SET balance TO balance - withdrawal_amount
                 DISPLAY "Withdrawal successful! New balance: $" + balance
@@ -248,12 +248,12 @@ START PROGRAM
                 DISPLAY "Insufficient funds. Your balance is $" + balance
             END IF
             DISPLAY ""
-            
+
         ELSE IF choice == 4 THEN
             // Exit
             SET running TO false
             DISPLAY "Thank you for using Simple Bank System!"
-            
+
         ELSE
             // Invalid choice
             DISPLAY "Invalid choice. Please select 1-4."
@@ -302,7 +302,7 @@ END PROGRAM
 
 ---
 
- **Great! You designed an interactive banking system!** 
+ **Great! You designed an interactive banking system!**
 
 *Next: Decision-Based Problems!*
 
@@ -322,42 +322,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```rs
-fn main() {
-    println!("Hello, World!");
-}
-
-```rs
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard rust conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

@@ -46,19 +46,19 @@ Hello, World!
 ```
 START PROGRAM
     DISPLAY "Welcome to the calculator!"
-    
+
     DISPLAY "Enter first number:"
     READ first_number AS NUMBER
-    
+
     DISPLAY "Enter second number:"
     READ second_number AS NUMBER
-    
+
     DECLARE sum AS NUMBER
     SET sum TO first_number + second_number
-    
+
     DECLARE product AS NUMBER
     SET product TO first_number * second_number
-    
+
     DISPLAY "Numbers entered: " + first_number + " and " + second_number
     DISPLAY "Sum: " + sum
     DISPLAY "Product: " + product
@@ -150,19 +150,19 @@ Check the `VIM_CHEATSHEET.md` for editing commands!
 ```
 START PROGRAM
     DISPLAY "Welcome to the calculator!"
-    
+
     DISPLAY "Enter first number:"
     READ first_number AS NUMBER
-    
+
     DISPLAY "Enter second number:"
     READ second_number AS NUMBER
-    
+
     DECLARE sum AS NUMBER
     SET sum TO first_number + second_number
-    
+
     DECLARE product AS NUMBER
     SET product TO first_number * second_number
-    
+
     DISPLAY "Numbers entered: " + first_number + " and " + second_number
     DISPLAY "Sum: " + sum
     DISPLAY "Product: " + product
@@ -176,20 +176,20 @@ use std::io;
 
 fn main() {
     println!("Welcome to the calculator!");
-    
+
     println!("Enter first number:");
     let mut first_input = String::new();
     io::stdin().read_line(&mut first_input).expect("Failed to read line");
     let first_number: i32 = first_input.trim().parse().expect("Please enter a number");
-    
+
     println!("Enter second number:");
     let mut second_input = String::new();
     io::stdin().read_line(&mut second_input).expect("Failed to read line");
     let second_number: i32 = second_input.trim().parse().expect("Please enter a number");
-    
+
     let sum = first_number + second_number;
     let product = first_number * second_number;
-    
+
     println!("Numbers entered: {} and {}", first_number, second_number);
     println!("Sum: {}", sum);
     println!("Product: {}", product);
@@ -224,7 +224,7 @@ fn main() {
 
 ---
 
- **Awesome! You can handle interactive pseudocode!** 
+ **Awesome! You can handle interactive pseudocode!**
 
 *Next: Decision Pseudocode!*
 
@@ -244,42 +244,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```rs
-fn main() {
-    println!("Hello, World!");
-}
-
-```rs
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard rust conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

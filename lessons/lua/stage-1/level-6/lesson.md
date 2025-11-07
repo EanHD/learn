@@ -110,7 +110,7 @@ repeat
     tries = tries + 1
     menu_choice = math.random(1, 4)  -- Random 1-4
     print("Menu attempt #" .. tries .. ": Option " .. menu_choice)
-    
+
     if menu_choice == 3 then
         print("Option 3 selected! Exiting menu.")
     end
@@ -213,7 +213,7 @@ Countdown: 4
 Countdown: 3
 Countdown: 2
 Countdown: 1
-Blast off! 
+Blast off!
 
 === Numeric For Loop - Even Numbers ===
 Even number: 2
@@ -278,16 +278,16 @@ Odd number: 7
 Odd number: 9
 
 === Nested Loops - Multiplication Table ===
-1	2	3	
-2	4	6	
-3	6	9	
+1	2	3
+2	4	6
+3	6	9
 
 === Pattern - Stars ===
-* 
-* * 
-* * * 
-* * * * 
-* * * * * 
+*
+* *
+* * *
+* * * *
+* * * * *
 
 === Looping with Table Length ===
 Color 1: red
@@ -529,7 +529,7 @@ print("=== Advanced Loop Examples ===")
 print("Prime numbers from 2 to 30:")
 for num = 2, 30 do
     local is_prime = true
-    
+
     -- Check if num is divisible by any number from 2 to sqrt(num)
     for divisor = 2, math.sqrt(num) do
         if num % divisor == 0 then
@@ -537,7 +537,7 @@ for num = 2, 30 do
             break  -- Found a divisor, not prime
         end
     end
-    
+
     if is_prime then
         print(num .. " is prime")
     end
@@ -581,7 +581,7 @@ end
 
 ---
 
- **Excellent work! You now understand how to repeat actions efficiently with loops!** 
+ **Excellent work! You now understand how to repeat actions efficiently with loops!**
 
 *Ready for the next challenge? Let's learn about functions - the building blocks of reusable code!*
 
@@ -608,40 +608,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```
-print("Hello, World!")
-
-```
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard lua conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

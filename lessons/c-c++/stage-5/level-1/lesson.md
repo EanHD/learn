@@ -28,7 +28,7 @@
 
 ### Today's Mission
 
-**Welcome to Stage 5!** 
+**Welcome to Stage 5!**
 
 You've completed Stages 1-4 and learned to:
 - [ ] Copy and understand code (Stage 1)
@@ -59,9 +59,9 @@ By completing this capstone level, you will:
 
 Your Level 1 Capstone should:
 
-**Complexity**: Moderate (3-5 main features) 
-**Code Size**: 500-1500 lines (depending on scope) 
-**Time Estimate**: 10-15 hours of focused work 
+**Complexity**: Moderate (3-5 main features)
+**Code Size**: 500-1500 lines (depending on scope)
+**Time Estimate**: 10-15 hours of focused work
 **Purpose**: Demonstrate mastery of Core Programming Concepts
 
 ---
@@ -318,10 +318,10 @@ Once your core capstone is complete, consider these extensions:
 
 **Concepts You'll Need:**
 
-From **Stage 1**: Syntax, operators, basic I/O 
-From **Stage 2**: Loops, conditionals, algorithms 
-From **Stage 3**: Functions, modularity, code organization 
-From **Stage 4**: File I/O, data structures, system design 
+From **Stage 1**: Syntax, operators, basic I/O
+From **Stage 2**: Loops, conditionals, algorithms
+From **Stage 3**: Functions, modularity, code organization
+From **Stage 4**: File I/O, data structures, system design
 
 **Review as needed:**
 - [ ] String manipulation and parsing
@@ -420,11 +420,11 @@ From **Stage 4**: File I/O, data structures, system design
  MUST HAVE (critical):
  - Feature A
  - Feature B
- 
+
  SHOULD HAVE (important):
  - Feature C
  - Feature D
- 
+
  NICE TO HAVE (bonus):
  - Feature E
  ```
@@ -436,7 +436,7 @@ From **Stage 4**: File I/O, data structures, system design
  char name[100];
  // ... other fields
  };
- 
+
  struct Company {
  Person employees[100];
  int employee_count;
@@ -466,7 +466,7 @@ From **Stage 4**: File I/O, data structures, system design
  4. Add to collection
  5. Save to file
  6. Display confirmation
- 
+
  Algorithm: SearchRecords
  1. Get search criteria from user
  2. Loop through all records
@@ -628,14 +628,14 @@ Result: PASS / FAIL
 
 **An excellent capstone has:**
 
- **Clear Purpose**: Solves a real or interesting problem 
- **Complete Implementation**: All features work, no partial functionality 
- **Robust Error Handling**: Handles edge cases gracefully 
- **Professional Code**: Well-organized, readable, maintainable 
- **Thoughtful Design**: Data structures fit the problem 
- **Thorough Testing**: Documented test cases and results 
- **Great Documentation**: README, comments, usage guide 
- **Personal Touch**: Shows creativity and individuality 
+ **Clear Purpose**: Solves a real or interesting problem
+ **Complete Implementation**: All features work, no partial functionality
+ **Robust Error Handling**: Handles edge cases gracefully
+ **Professional Code**: Well-organized, readable, maintainable
+ **Thoughtful Design**: Data structures fit the problem
+ **Thorough Testing**: Documented test cases and results
+ **Great Documentation**: README, comments, usage guide
+ **Personal Touch**: Shows creativity and individuality
 
 ---
 
@@ -670,7 +670,7 @@ Result: PASS / FAIL
 ### Example 1: Personal Finance Manager
 ```
 PURPOSE: Help track personal spending and savings goals
-FEATURES: 
+FEATURES:
  - Add/categorize expenses
  - Set and track savings goals
  - Generate spending reports
@@ -703,11 +703,11 @@ COMPLEXITY: Moderate to Advanced (8-12 hours)
 
 ---
 
- **Congratulations on reaching Stage 5!** 
+ **Congratulations on reaching Stage 5!**
 
 You've completed your programming education journey. Now create something amazing!
 
-*Your capstone project is your proof to the world that you can program.* 
+*Your capstone project is your proof to the world that you can program.*
 
 
 

@@ -121,7 +121,7 @@ Now that you've completed your capstone journey:
 
 ---
 
-### Congratulations! 
+### Congratulations!
 
 You've completed a comprehensive programming education:
 
@@ -131,7 +131,7 @@ You've completed a comprehensive programming education:
 - [ ] **Stage 4**: Created problems independently
 - [ ] **Stage 5**: Built capstone projects professionally
 
-**You are now a programmer.** 
+**You are now a programmer.**
 
 The journey doesn't end here—it's just beginning. Use your skills to:
 - [ ] Solve real problems
@@ -168,7 +168,7 @@ The journey doesn't end here—it's just beginning. Use your skills to:
 
 ---
 
-**You did it! Now go build something amazing!** 
+**You did it! Now go build something amazing!**
 
 
 

@@ -167,10 +167,10 @@ fn main() {
     println!("1. Celsius to Fahrenheit");
     println!("2. Fahrenheit to Celsius");
     print!("Enter choice (1 or 2): ");
-    
+
     // Flush stdout to ensure prompt appears
     io::Write::flush(&mut io::stdout()).unwrap();
-    
+
     let mut choice = String::new();
     io::stdin().read_line(&mut choice).unwrap();
     let choice: u32 = match choice.trim().parse() {
@@ -180,12 +180,12 @@ fn main() {
             return;
         }
     };
-    
+
     if choice == 1 {
         // Celsius to Fahrenheit
         print!("Enter temperature in Celsius: ");
         io::Write::flush(&mut io::stdout()).unwrap();
-        
+
         let mut celsius = String::new();
         io::stdin().read_line(&mut celsius).unwrap();
         let celsius: f64 = match celsius.trim().parse() {
@@ -195,15 +195,15 @@ fn main() {
                 return;
             }
         };
-        
+
         let fahrenheit = (celsius * 9.0 / 5.0) + 32.0;
         println!("{:.1}°C is equal to {:.1}°F", celsius, fahrenheit);
-        
+
     } else if choice == 2 {
         // Fahrenheit to Celsius
         print!("Enter temperature in Fahrenheit: ");
         io::Write::flush(&mut io::stdout()).unwrap();
-        
+
         let mut fahrenheit = String::new();
         io::stdin().read_line(&mut fahrenheit).unwrap();
         let fahrenheit: f64 = match fahrenheit.trim().parse() {
@@ -213,10 +213,10 @@ fn main() {
                 return;
             }
         };
-        
+
         let celsius = (fahrenheit - 32.0) * 5.0 / 9.0;
         println!("{:.1}°F is equal to {:.1}°C", fahrenheit, celsius);
-        
+
     } else {
         println!("Invalid choice. Please enter 1 or 2.");
     }
@@ -305,8 +305,7 @@ What conversion do you want?
 Enter choice (1 or 2): 1
 Enter temperature in Celsius: 25
 25.0°C is equal to 77.0°F
-```
-```
+
 
 ### Bonus Challenges
 
@@ -317,7 +316,7 @@ Enter temperature in Celsius: 25
 
 ---
 
- **Congratulations! You built your first complete Rust application!** 
+ **Congratulations! You built your first complete Rust application!**
 
 *Next: Data Processing Application (Student Grade Calculator)!*
 
@@ -337,101 +336,3 @@ Key functions and their purpose:
 
 - Main function: Entry point
 - Helper functions: Support logic
-
-
-<div style="page-break-after: always;"></div>
-
-## Answer Key
-
-### Complete Solution
-
-```rs
-use std::io::{self, Write};
-
-fn main() {
-    println!("Temperature Converter");
-    println!("=====================");
-    println!("What conversion do you want?");
-    println!("1. Celsius to Fahrenheit");
-    println!("2. Fahrenheit to Celsius");
-    print!("Enter choice (1 or 2): ");
-
-    // Flush stdout to ensure prompt appears
-    io::stdout().flush().unwrap();
-
-    let mut choice = String::new();
-    io::stdin().read_line(&mut choice).unwrap();
-    let choice: u32 = match choice.trim().parse() {
-        Ok(num) => num,
-        Err(_) => {
-            println!("Invalid choice. Please enter 1 or 2.");
-            return;
-        }
-    };
-
-    if choice == 1 {
-        // Celsius to Fahrenheit
-        print!("Enter temperature in Celsius: ");
-        io::stdout().flush().unwrap();
-
-        let mut celsius = String::new();
-        io::stdin().read_line(&mut celsius).unwrap();
-        let celsius: f64 = match celsius.trim().parse() {
-            Ok(num) => num,
-            Err(_) => {
-                println!("Invalid temperature. Please enter a number.");
-                return;
-            }
-        };
-
-        let fahrenheit = (celsius * 9.0 / 5.0) + 32.0;
-        println!("{:.1}°C is equal to {:.1}°F", celsius, fahrenheit);
-
-    } else if choice == 2 {
-        // Fahrenheit to Celsius
-        print!("Enter temperature in Fahrenheit: ");
-        io::stdout().flush().unwrap();
-
-        let mut fahrenheit = String::new();
-        io::stdin().read_line(&mut fahrenheit).unwrap();
-        let fahrenheit: f64 = match fahrenheit.trim().parse() {
-            Ok(num) => num,
-            Err(_) => {
-                println!("Invalid temperature. Please enter a number.");
-                return;
-            }
-        };
-
-        let celsius = (fahrenheit - 32.0) * 5.0 / 9.0;
-        println!("{:.1}°F is equal to {:.1}°C", fahrenheit, celsius);
-
-    } else {
-        println!("Invalid choice. Please enter 1 or 2.");
-    }
-}
-```rs
-
-### Code Breakdown
-
-This solution demonstrates the key concepts from this lesson:
-
-1. **Structure**: The program follows standard rust conventions with proper imports and main function
-2. **Variables**: Data types are correctly declared and initialized
-3. **Logic**: The program implements the required functionality
-4. **Output**: Results are displayed clearly to the user
-5. **Best Practices**: Code is readable and follows naming conventions
-
-### Testing Your Solution
-
-Try these test cases to verify your code works correctly:
-
-1. **Basic Test**: Run the program with standard inputs
-2. **Edge Cases**: Test with boundary values (0, -1, very large numbers)
-3. **Error Handling**: Verify the program handles invalid inputs gracefully
-
-### Tips for Understanding
-
-- Review each section carefully
-- Try modifying values to see how output changes
-- Add your own printf/print statements to trace execution
-- Experiment with different inputs

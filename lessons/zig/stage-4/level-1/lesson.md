@@ -200,10 +200,10 @@ fn divide(x: f64, y: f64) !f64 {
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
     const stdin = std.io.getStdIn().reader();
-    
+
     var continue_calc: bool = true;
     var input_buf: [100]u8 = undefined;
-    
+
     while (continue_calc) {
         // Display menu
         try stdout.print("\\n--- Calculator ---\\n", .{});
@@ -213,31 +213,31 @@ pub fn main() !void {
         try stdout.print("4. Divide (/)\\n", .{});
         try stdout.print("5. Exit\\n", .{});
         try stdout.print("Choose operation (1-5): ", .{});
-        
+
         // Get user choice
         _ = try stdin.readUntilDelimiterOrEof(&input_buf, '\n');
         const choice = std.fmt.parseInt(u8, std.mem.trimRight(u8, &input_buf, "\n\r"), 10) catch 0;
-        
+
         if (choice == 5) {
             continue_calc = false;
             try stdout.print("Goodbye!\\n", .{});
             break;
         }
-        
+
         if (choice < 1 or choice > 4) {
             try stdout.print("Invalid choice. Please select 1-5.\\n", .{});
             continue;
         }
-        
+
         // Get numbers
         try stdout.print("Enter first number: ", .{});
         _ = try stdin.readUntilDelimiterOrEof(&input_buf, '\n');
         const num1 = std.fmt.parseFloat(f64, std.mem.trimRight(u8, &input_buf, "\n\r")) catch 0.0;
-        
+
         try stdout.print("Enter second number: ", .{});
         _ = try stdin.readUntilDelimiterOrEof(&input_buf, '\n');
         const num2 = std.fmt.parseFloat(f64, std.mem.trimRight(u8, &input_buf, "\n\r")) catch 0.0;
-        
+
         // Perform operation
         var result: f64 = 0.0;
         switch (choice) {
@@ -252,7 +252,7 @@ pub fn main() !void {
             },
             else => try stdout.print("Invalid operation\\n", .{}),
         }
-        
+
         // Display result
         try stdout.print("Result: {d}\\n", .{result});
     }

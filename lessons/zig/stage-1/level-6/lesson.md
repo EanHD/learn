@@ -28,7 +28,7 @@ const std = @import("std");
 
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
-    
+
     // For loop
     try stdout.print("Counting 1 to 10:\n", .{});
     var i: i32 = 1;
@@ -36,7 +36,7 @@ pub fn main() !void {
         try stdout.print("{} ", .{i});
     }
     try stdout.print("\n", .{});
-    
+
     // While loop
     try stdout.print("\nCountdown:\n", .{});
     var count: i32 = 5;
@@ -45,7 +45,7 @@ pub fn main() !void {
         count -= 1;
     }
     try stdout.print("Blastoff!\n", .{});
-    
+
     // Multiplication table
     const num: i32 = 7;
     try stdout.print("\n{} times table:\n", .{num});
